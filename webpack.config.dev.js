@@ -1,8 +1,5 @@
-const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-
-const srcDir = path.resolve(__dirname, 'src')
 
 const rules = [
   {
@@ -55,7 +52,7 @@ const rules = [
 
 module.exports = {
   entry: [
-    `${srcDir}/index.js`
+    './index.js'
   ],
   mode: 'development',
   devtool: 'source-map',
@@ -68,6 +65,6 @@ module.exports = {
   },
   plugins: [
     new ReactRefreshWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: 'src/index.html' })
+    new HtmlWebpackPlugin({ template: 'index.html' })
   ]
 }
