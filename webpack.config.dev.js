@@ -27,9 +27,12 @@ const rules = [
       {
         loader: 'css-loader',
         options: {
-          modules: true,
-          camelCase: true,
-          localIdentName: '[name]__[local]__[hash:base64:6]'
+          modules: {
+            exportLocalsConvention: 'camelCase',
+            localIdentName: '[name]__[local]__[hash:base64:6]'
+          },
+          import: true,
+          importLoaders: true
         }
       },
       'resolve-url-loader',

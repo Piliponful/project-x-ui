@@ -42,7 +42,9 @@
     "webpack-cli": "^4.4.0"
   },
   "bit": {
-    "env": {},
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.21"
+    },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   }

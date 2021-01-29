@@ -1,3 +1,5 @@
 import React from 'react'
 
-export default () => <h1>Text</h1>
+import styles from './style.styl'
+
+export default ({ children }) => <div className={styles.Body}>{children}</div>
