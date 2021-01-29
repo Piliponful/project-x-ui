@@ -48,8 +48,12 @@ const rules = [
     ]
   },
   {
-    test: /\.(jpe?g|png|gif|svg|ttf|ico)$/i,
+    test: /\.(jpe?g|png|gif|ttf|ico)$/i,
     use: 'file-loader'
+  },
+  {
+    test: /\.svg$/,
+    use: [{ loader: '@svgr/webpack', options: { svgoConfig: { plugins: [{ cleanupIDs: false }] } } }]
   }
 ]
 

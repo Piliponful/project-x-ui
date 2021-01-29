@@ -19,5 +19,23 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "piliponful.project-x-ui/main-screen@0.0.1": {
+        "files": [
+            {
+                "relativePath": "components/MainScreen/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "components/MainScreen/style.styl",
+                "test": false,
+                "name": "style.styl"
+            }
+        ],
+        "mainFile": "components/MainScreen/index.js",
+        "trackDir": "components/MainScreen",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "version": "14.8.8"
 }
