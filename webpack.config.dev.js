@@ -59,7 +59,7 @@ const rules = [
 
 module.exports = {
   entry: [
-    './index.js'
+    './src/mock/index.js'
   ],
   mode: 'development',
   devtool: 'source-map',
