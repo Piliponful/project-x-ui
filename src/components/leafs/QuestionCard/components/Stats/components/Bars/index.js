@@ -11,14 +11,14 @@ export default ({ yes, no, onHover, createNewGroup }) => {
         className={cn(styles.bar, styles.yesBar)}
         onMouseEnter={() => onHover('yes')}
         onMouseLeave={() => onHover()}
-        onClick={createNewGroup('yes')}
+        onClick={() => createNewGroup('yes')}
       />
       <div
         style={{ width: `${no}%` }}
         className={cn(styles.bar, styles.noBar)}
         onMouseEnter={() => onHover('no')}
         onMouseLeave={() => onHover()}
-        onClick={createNewGroup('no')}
+        onClick={() => createNewGroup('no')}
       />
     </div>
   )
