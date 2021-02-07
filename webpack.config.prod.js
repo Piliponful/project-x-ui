@@ -58,7 +58,7 @@ module.exports = {
   output: {
     path: distDir,
     filename: 'bundle.js',
-    library: 'components',
+    library: 'project-x-ui',
     libraryTarget: 'umd'
   },
   mode: 'production',
