@@ -1,0 +1,26 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import * as React from "react";
+
+var _ref = /*#__PURE__*/React.createElement("ellipse", {
+  id: "Circle_svg__second-circle",
+  cx: 111,
+  cy: 109.906,
+  rx: 110,
+  ry: 108.906,
+  fill: "none",
+  stroke: "#d24b42",
+  strokeMiterlimit: 10,
+  strokeWidth: 2
+});
+
+function SvgCircle(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    id: "Circle_svg__circles",
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 222,
+    height: 219.812
+  }, props), _ref);
+}
+
+export default SvgCircle;

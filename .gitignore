@@ -63,9 +63,6 @@ package-lock.json
 # jetbrains
 .idea
 
-# build files
-dist
-
 # IDE configuration
 .vscode
 
