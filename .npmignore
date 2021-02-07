@@ -1,0 +1,8 @@
+node_modules
+src
+.git
+index.html
+webpack.config*
+package*
+.gitignore
+.babelrc
