@@ -19,6 +19,10 @@ export default ({ yes, no, createNewGroup }) => {
   const yesPercentage = calcPercent(yes, yes + no)
   const noPercentage = calcPercent(no, yes + no)
 
+  if (!userReplyCount) {
+    return null
+  }
+
   return (
     <div className={styles.stats}>
       <Text secondary><Number x={userReplyCount} /> people answered</Text>
