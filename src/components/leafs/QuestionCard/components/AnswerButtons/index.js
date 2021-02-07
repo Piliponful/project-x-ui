@@ -7,8 +7,8 @@ import styles from './style.styl'
 export default ({ respond }) => {
   return (
     <div className={styles.answerButtons}>
-      <Button answer='Yes' respond={respond('yes')} />
-      <Button answer='No' respond={respond('no')} />
+      <Button answer='Yes' respond={() => respond('yes')} />
+      <Button answer='No' respond={() => respond('no')} />
     </div>
   )
 }
