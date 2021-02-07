@@ -65,5 +65,8 @@ module.exports = {
   devtool: 'source-map',
   module: {
     rules
+  },
+  externals: {
+    react: 'react'
   }
 }
