@@ -5,9 +5,9 @@ import Input from './components/Input'
 
 import styles from './style.styl'
 
-export default ({ onTitleInput, save }) => (
+export default ({ onTitleInput, save, value }) => (
   <div className={styles.container}>
-    <Input onTitleInput={onTitleInput} />
+    <Input onTitleInput={onTitleInput} value={value} />
     <Save save={save} />
   </div>
 )
