@@ -58,7 +58,8 @@ module.exports = {
   output: {
     path: distDir,
     filename: 'bundle.js',
-    publicPath: '/'
+    library: 'components',
+    libraryTarget: 'umd'
   },
   mode: 'production',
   devtool: 'source-map',
