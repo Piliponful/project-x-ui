@@ -22,7 +22,7 @@ export default ({ yes, no, createNewGroup }) => {
   return (
     <div className={styles.stats}>
       <Text secondary><Number x={userReplyCount} /> people answered</Text>
-      <Bars yes={yesPercentage} no={noPercentage} onHover={setState} />
+      <Bars yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
       <div className={styles.textContainer}>
         <Text className={styles.text} style={{ width: `${yesPercentage}%` }}>{yesPercentage}%</Text>
         <Text className={styles.text} style={{ width: `${noPercentage}%` }}>{noPercentage}%</Text>

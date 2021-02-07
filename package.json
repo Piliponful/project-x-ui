@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
   "dependencies": {
@@ -38,6 +38,7 @@
   },
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack build --config webpack.config.prod.js",
     "lint": "standard src/*"
   },
   "standard": {

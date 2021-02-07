@@ -8,12 +8,12 @@ import Title from './components/Title'
 
 import styles from './style.styl'
 
-export default ({ title, userCount, selected, color, save, onTitleInput, deselect, select, combine }) => {
+export default ({ name, userCount, selected, color, save, onTitleInput, deselect, select, combine }) => {
   return (
     <article className={styles.card}>
       <div className={styles.leftSideContainer}>
-        {title
-          ? <Title>{title}</Title>
+        {name
+          ? <Title>{name}</Title>
           : <NewGroupTitle onTitleInput={onTitleInput} save={save} />
         }
         <UserCount userCount={userCount} />
@@ -21,7 +21,7 @@ export default ({ title, userCount, selected, color, save, onTitleInput, deselec
 
       {selected
         ? <CheckboxIcon color={color} deselect={deselect} />
-        : (title ? <Buttons select={select} combine={combine} /> : null)}
+        : (name ? <Buttons select={select} combine={combine} /> : null)}
     </article>
   )
 }
