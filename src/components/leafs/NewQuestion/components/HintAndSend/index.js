@@ -5,8 +5,8 @@ import Send from './components/Send'
 
 import styles from './style.styl'
 
-export default ({ onSend }) => (
+export default ({ send }) => (
   <div className={styles.hintAndSend}>
-    <Hint /><Send onClick={onSend} />
+    <Hint /><Send onClick={send} />
   </div>
 )

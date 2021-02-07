@@ -5,9 +5,9 @@ import HintAndSend from './components/HintAndSend'
 
 import styles from './style.styl'
 
-export default ({ children }) => (
+export default ({ value, onChange, send }) => (
   <div className={styles.newQuestion}>
-    <Input />
-    <HintAndSend />
+    <Input value={value} onChange={onChange} />
+    <HintAndSend send={send} />
   </div>
 )
