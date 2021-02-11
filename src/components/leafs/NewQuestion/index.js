@@ -7,10 +7,10 @@ import styles from './style.styl'
 export default ({ saveQuestion }) => {
   const [state, setState] = useState('')
 
-  const onChange = ({ e }) => {
+  const onChange = (e) => {
     const question = e.target.value
 
-    if (question[question.length - 1]) {
+    if (question[question.length - 1] === '?') {
       saveQuestion()
       setState('')
     }
