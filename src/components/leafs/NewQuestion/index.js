@@ -11,7 +11,7 @@ export default ({ saveQuestion }) => {
     const question = e.target.value
 
     if (question[question.length - 1] === '?') {
-      saveQuestion()
+      saveQuestion(question)
       setState('')
     }
 
