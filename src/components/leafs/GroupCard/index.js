@@ -8,13 +8,13 @@ import Title from './components/Title'
 
 import styles from './style.styl'
 
-export default ({ name, userCount, selected, color, save, onTitleInput, toggleSelection, combine }) => {
+export default ({ name, userCount, selected, color, save, toggleSelection, combine }) => {
   return (
     <article className={styles.card}>
       <div className={styles.leftSideContainer}>
         {name
           ? <Title>{name}</Title>
-          : <NewGroupTitle onTitleInput={onTitleInput} save={save} value={name} />
+          : <NewGroupTitle save={save} />
         }
         <UserCount userCount={userCount} />
       </div>
