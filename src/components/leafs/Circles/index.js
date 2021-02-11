@@ -40,7 +40,7 @@ export default ({ selectedGroups, selectedCircleParts, onSelect }) => {
     intersection.click(changeOpacity(intersection, 'intersection'))
     rightWing.click(changeOpacity(rightWing, 'right-wing'))
     leftWing.click(changeOpacity(leftWing, 'left-wing'))
-  }, [])
+  }, [selectedGroups.length])
 
   return (
     <div className={styles.circles} >
