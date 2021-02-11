@@ -56,10 +56,10 @@ ReactDOM.render(
       <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} />
       <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map((i, key) => (
-          <GroupCard key={i.name} withoutBottomMargin={key === groups.length - 1} {...i} />
+          <GroupCard key={i.name} {...i} />
         ))}
       </GroupsContainer>
-      <NewQuestion />
+      <NewQuestion saveQuestion={() => {}} />
     </Sidebar>
     <MainScreen>
       <QuestionCardsRow title='Most answered'>

@@ -5,22 +5,22 @@ import Input from './components/Input'
 import styles from './style.styl'
 
 export default ({ saveQuestion }) => {
-  const [state, setState] = useState('')
+  const [question, setQuestion] = useState('')
 
   const onChange = (e) => {
-    const question = e.target.value
+    const newQuestion = e.target.value
 
-    if (question[question.length - 1] === '?') {
-      saveQuestion(question)
-      setState('')
+    if (newQuestion[newQuestion.length - 1] === '?') {
+      saveQuestion(newQuestion)
+      setQuestion('')
+    } else {
+      setQuestion(newQuestion)
     }
-
-    setState(e.target.value)
   }
 
   return (
     <div className={styles.newQuestion}>
-      <Input value={state} onChange={onChange} />
+      <Input value={question} onChange={onChange} />
     </div>
   )
 }
