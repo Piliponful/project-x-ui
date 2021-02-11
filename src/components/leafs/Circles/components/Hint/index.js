@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Text from '../../../../shared/Text'
+
 import styles from './style.styl'
 
 export default ({ selectedGroups, selectedCircleParts }) => {
@@ -9,12 +11,12 @@ export default ({ selectedGroups, selectedCircleParts }) => {
   }
 
   return (
-    <span className={styles.hint}>
+    <Text className={styles.hint}>
       {
         selectedCircleParts.length === 1
           ? '(click on selected area again to deselect)'
           : lengthToHint[selectedGroups.length]
       }
-    </span>
+    </Text>
   )
 }
