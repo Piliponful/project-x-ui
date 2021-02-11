@@ -5,7 +5,7 @@ import Body from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
 import Sidebar from '../components/shallow/Sidebar'
 import GroupCard from '../components/leafs/GroupCard'
-import GroupContainer from '../components/shallow/GroupContainer'
+import GroupsContainer from '../components/shallow/GroupsContainer'
 import NewQuestion from '../components/leafs/NewQuestion'
 import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
@@ -35,30 +35,30 @@ const groups = [
 ]
 
 const mostAnsweredQuestions = [ // eslint-disable-line
-  { name: 'Have you watched new season of attack on titan?', answer: 'Yes', statistics: { yes: 383343, no: 23450 } },
-  { name: 'Will Luffy find one piece?', answer: null, statistics: { yes: 112342, no: 311323 } },
-  { name: 'Do you like naruto?', answer: null, statistics: { yes: 240325, no: 101333 } },
-  { name: 'Do you like battle between Sasuke and Naruto?', answer: 'No', statistics: { yes: 80341, no: 280341 } },
-  { name: 'Do you wanna see HxH continuation?', answer: 'Yes', statistics: { yes: 231031, no: 30328 } }
+  { name: 'Have you watched new season of attack on titan?', currentUserAnswer: 'Yes', answersCount: { yes: 383343, no: 23450 } },
+  { name: 'Will Luffy find one piece?', currentUserAnswer: null, answersCount: { yes: 112342, no: 311323 } },
+  { name: 'Do you like naruto?', currentUserAnswer: null, answersCount: { yes: 240325, no: 101333 } },
+  { name: 'Do you like battle between Sasuke and Naruto?', currentUserAnswer: 'No', answersCount: { yes: 80341, no: 280341 } },
+  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 } }
 ]
 
 const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
-  { name: 'Do you like how attack on titan ended?', answer: false, statistics: { yes: 2809, no: 1238 } },
-  { name: 'Have you watched last episode of Jijitsu Kaison?', answer: null, statistics: { yes: 738, no: 503 } },
-  { name: 'Will you go to animeexpo 2021?', answer: null, statistics: { yes: 501, no: 308 } },
-  { name: 'Is Last episode of Yakusoku no Neverland good?', answer: null, statistics: { yes: 329, no: 440 } },
-  { name: 'Will Luffy beat Kaido?', answer: null, statistics: { yes: 128, no: 232 } }
+  { name: 'Do you like how attack on titan ended?', currentUserAnswer: false, answersCount: { yes: 2809, no: 1238 } },
+  { name: 'Have you watched last episode of Jijitsu Kaison?', currentUserAnswer: null, answersCount: { yes: 738, no: 503 } },
+  { name: 'Will you go to animeexpo 2021?', currentUserAnswer: null, answersCount: { yes: 501, no: 308 } },
+  { name: 'Is Last episode of Yakusoku no Neverland good?', currentUserAnswer: null, answersCount: { yes: 329, no: 440 } },
+  { name: 'Will Luffy beat Kaido?', currentUserAnswer: null, answersCount: { yes: 128, no: 232 } }
 ]
 
 ReactDOM.render(
   <Body>
     <Sidebar>
       <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} />
-      <GroupContainer>
+      <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map((i, key) => (
           <GroupCard key={i.name} withoutBottomMargin={key === groups.length - 1} {...i} />
         ))}
-      </GroupContainer>
+      </GroupsContainer>
       <NewQuestion />
     </Sidebar>
     <MainScreen>
