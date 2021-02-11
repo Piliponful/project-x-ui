@@ -21,7 +21,7 @@ export default ({ selectedGroups, onSelect }) => {
       'fill-opacity': isElementSelected ? '0' : '1'
     })
 
-    const newSelectedParts = isElementSelected ? selectedParts.filter(i => i === partName) : [...selectedPartsReference, partName]
+    const newSelectedParts = isElementSelected ? selectedPartsReference.filter(i => i === partName) : [...selectedPartsReference, partName]
 
     setFill(!fill)
     setParts(newSelectedParts)
