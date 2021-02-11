@@ -44,7 +44,7 @@ const rules = [
     ]
   },
   {
-    test: /\.(jpe?g|png|gif|svg|ttf)$/i,
+    test: /\.(jpe?g|png|gif|ttf)$/i,
     use: 'file-loader'
   },
   {
