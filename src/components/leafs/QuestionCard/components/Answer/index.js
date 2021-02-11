@@ -11,11 +11,11 @@ export default ({ answer }) => (
     <span>{' '}</span>
     <span
       className={cn(styles.text, {
-        [styles.yes]: answer === 'Yes',
-        [styles.no]: answer === 'No'
+        [styles.yes]: answer.toLowerCase() === 'yes',
+        [styles.no]: answer.toLowerCase() === 'no'
       })}
     >
-      {answer}
+      {answer.toUpperCase()}
     </span>
   </Text>
 )
