@@ -1,5 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
+import { capitalize } from 'lodash'
 
 import Text from '../../../../shared/Text'
 
@@ -15,7 +16,7 @@ export default ({ answer }) => (
         [styles.no]: answer.toLowerCase() === 'no'
       })}
     >
-      {answer.toUpperCase()}
+      {capitalize(answer)}
     </span>
   </Text>
 )
