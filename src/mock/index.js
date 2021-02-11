@@ -64,12 +64,12 @@ ReactDOM.render(
     <MainScreen>
       <QuestionCardsRow title='Most answered'>
         {mostAnsweredQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={() => {}} />
+          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} />
         ))}
       </QuestionCardsRow>
       <QuestionCardsRow title='Most answered in last 7 days'>
         {mostAnsweredInLast7DaysQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={() => {}} />
+          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} />
         ))}
       </QuestionCardsRow>
     </MainScreen>
