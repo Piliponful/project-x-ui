@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Input from './components/Input'
-import HintAndSend from './components/HintAndSend'
 
 import styles from './style.styl'
 
-export default ({ value, onChange, send }) => (
-  <div className={styles.newQuestion}>
-    <Input value={value} onChange={onChange} />
-    <HintAndSend send={send} />
-  </div>
-)
+export default ({ saveQuestion }) => {
+  const [state, setState] = useState('')
+
+  const onChange = ({ e }) => {
+    const question = e.target.value
+
+    if (question[question.length - 1]) {
+      saveQuestion()
+      setState('')
+    }
+
+    setState(e.target.value)
+  }
+
+  return (
+    <div className={styles.newQuestion}>
+      <Input value={state} onChange={onChange} />
+    </div>
+  )
+}

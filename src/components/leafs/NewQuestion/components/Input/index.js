@@ -6,6 +6,6 @@ import styles from './style.styl'
 
 export default ({ onChange, value }) => (
   <Text className={styles.text}>
-    <textarea className={styles.textarea} onChange={onChange} value={value} />
+    <textarea placeholder='Type your question here...' className={styles.textarea} onChange={onChange} value={value} />
   </Text>
 )
