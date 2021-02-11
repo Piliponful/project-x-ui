@@ -11,7 +11,7 @@ import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 
-const groupCombination = true
+const groupCombination = false
 
 const selectedForCombinationGroups = [
   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
@@ -26,8 +26,8 @@ const groupCombinationResult = { userCount: 31308, selected: true, color: '#9227
 
 const selectedCircleParts = []
 
+/* { userCount: 31308 }, */
 const groups = [
-  { userCount: 31308 },
   { name: 'Anime-watchers', userCount: 42355, selected: true },
   { name: 'BlackUFA subscribers', userCount: 18344 },
   { name: 'Gamers', userCount: 46344 },
@@ -53,10 +53,10 @@ const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
 ReactDOM.render(
   <Body>
     <Sidebar>
-      <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} />
+      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} /> : null}
       <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map((i, key) => (
-          <GroupCard key={i.name} {...i} />
+          <GroupCard key={i.name} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
       <NewQuestion saveQuestion={() => {}} />

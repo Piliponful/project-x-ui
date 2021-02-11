@@ -4,7 +4,7 @@ import { faCheckCircle as check, faTimesCircle as uncheck } from '@fortawesome/f
 
 import styles from './style.styl'
 
-export default ({ color = '#bebebe' }) => {
+export default ({ color = '#bebebe', deselect }) => {
   const [icon, setIcon] = useState(check)
 
   return <FontAwesomeIcon
@@ -14,5 +14,6 @@ export default ({ color = '#bebebe' }) => {
     icon={icon}
     onMouseEnter={() => setIcon(uncheck)}
     onMouseLeave={() => setIcon(check)}
+    onClick={deselect}
   />
 }
