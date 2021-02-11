@@ -11,7 +11,7 @@ import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 
-const groupCombination = false
+const groupCombination = true
 
 const selectedForCombinationGroups = [
   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
