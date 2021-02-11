@@ -20,6 +20,7 @@ export default ({ selectedGroups, selectedCircleParts, onSelect }) => {
     })
 
     const newSelectedParts = isElementSelected ? selectedParts.filter(i => i === partName) : [...selectedParts, partName]
+    console.log(newSelectedParts, isElementSelected, selectedParts.filter(i => i === partName), [...selectedParts, partName])
 
     setFill(!fill)
     setParts(newSelectedParts)
