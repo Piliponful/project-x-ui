@@ -7,12 +7,12 @@ import AnswerButtons from './components/AnswerButtons'
 
 import styles from './style.styl'
 
-export default ({ name, answersCount, currentUserAnswer: answer, respond, createNewGroup }) => {
+export default ({ yourOwnQuestion, name, answersCount, currentUserAnswer: answer, respond, createNewGroup }) => {
   return (
     <article className={styles.card}>
       <Title>{name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
-      {answer ? <Answer answer={answer} /> : <AnswerButtons respond={respond} />}
+      {!yourOwnQuestion ? (answer ? <Answer answer={answer} /> : <AnswerButtons respond={respond} />) : null}
     </article>
   )
 }
