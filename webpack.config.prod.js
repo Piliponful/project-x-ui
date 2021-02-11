@@ -67,6 +67,7 @@ module.exports = {
     rules
   },
   externals: {
-    react: 'react'
+    react: 'React',
+    'react-dom': 'ReactDOM'
   }
 }
