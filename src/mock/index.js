@@ -13,9 +13,9 @@ import QuestionCard from '../components/leafs/QuestionCard'
 
 const groupCombination = true
 
-const selectedForCombinationGroups = [
-  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
-]
+// const selectedForCombinationGroups = [
+//   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
+// ]
 
 const selectedForCombinationGroups2 = [ // eslint-disable-line
   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' },
@@ -53,9 +53,9 @@ const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
 ReactDOM.render(
   <Body>
     <Sidebar>
-      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} /> : null}
+      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups2} selectedCircleParts={selectedCircleParts} onSelect={console.log} /> : null}
       <GroupsContainer>
-        {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map((i, key) => (
+        {(groupCombination ? [...selectedForCombinationGroups2, groupCombinationResult] : groups).map((i, key) => (
           <GroupCard key={i.name} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
