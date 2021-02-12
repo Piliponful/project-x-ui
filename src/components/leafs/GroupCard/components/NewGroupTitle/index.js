@@ -11,7 +11,7 @@ export default ({ save, readyToSave }) => {
   return (
     <div className={styles.container}>
       <Input onTitleInput={setNewGroupTitle} value={newGroupTitle} />
-      <Save save={() => save(newGroupTitle)} readyToSave={readyToSave} />
+      <Save save={() => save(newGroupTitle)} readyToSave={newGroupTitle && readyToSave} />
     </div>
   )
 }
