@@ -50,6 +50,14 @@ const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
   { name: 'Will Luffy beat Kaido?', currentUserAnswer: null, answersCount: { yes: 128, no: 232 } }
 ]
 
+const latest = [ // eslint-disable-line
+  { name: 'Will Oda finish One Piece?', currentUserAnswer: false, answersCount: { yes: 197, no: 5 } },
+  { name: 'Do you wanna see adaptation of Vagabond?', currentUserAnswer: null, answersCount: { yes: 98, no: 0 } },
+  { name: 'Do you wanna new season of SAO?', currentUserAnswer: null, answersCount: { yes: 0, no: 81 } },
+  { name: 'Should I watch Boruto?', currentUserAnswer: null, answersCount: { yes: 9, no: 4 }, yourOwnQuestion: true },
+  { name: 'Is Boruto stronger than Naruto?', currentUserAnswer: null, answersCount: { yes: 0, no: 0 } }
+]
+
 ReactDOM.render(
   <Body>
     <Sidebar>
@@ -64,12 +72,17 @@ ReactDOM.render(
     <MainScreen>
       <QuestionCardsRow title='Most answered'>
         {mostAnsweredQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} />
+          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
         ))}
       </QuestionCardsRow>
       <QuestionCardsRow title='Most answered in last 7 days'>
         {mostAnsweredInLast7DaysQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} />
+          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
+        ))}
+      </QuestionCardsRow>
+      <QuestionCardsRow title='Latest'>
+        {latest.map(i => (
+          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
         ))}
       </QuestionCardsRow>
     </MainScreen>
