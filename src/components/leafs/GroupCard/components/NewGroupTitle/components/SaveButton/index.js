@@ -5,6 +5,6 @@ import Text from '../../../../../../shared/Text'
 
 import styles from './style.styl'
 
-export default ({ save }) => (
-  <Button className={styles.saveButton} onClick={save}><Text>Save</Text></Button>
+export default ({ save, readyToSave }) => (
+  <Button disabled={!readyToSave} className={styles.saveButton} onClick={save}><Text>Save</Text></Button>
 )

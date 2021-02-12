@@ -3,9 +3,9 @@ import cn from 'classnames'
 
 import styles from './style.styl'
 
-export default ({ children, className, onClick }) => {
+export default ({ children, className, onClick, disabled }) => {
   return (
-    <button className={cn(className, styles.button)} onClick={onClick}>
+    <button disabled={disabled} className={cn(className, styles.button)} onClick={onClick}>
       {children}
     </button>
   )
