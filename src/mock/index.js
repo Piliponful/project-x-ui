@@ -18,8 +18,8 @@ const groupCombination = true
 // ]
 
 const selectedForCombinationGroups2 = [ // eslint-disable-line
-  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' },
-  { name: 'Gamers', userCount: 46344, selected: true, color: '#3eb5f1' }
+  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#3eb5f1' },
+  { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
 ]
 
 const groupCombinationResult = { userCount: 31308, selected: true, color: '#92278f' }

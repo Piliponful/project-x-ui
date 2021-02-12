@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, {
+  useEffect,
+  useState
+} from 'react'
 import Snap from 'snapsvg-cjs'
 
 import Hint from './components/Hint'
@@ -6,7 +9,9 @@ import Hint from './components/Hint'
 import styles from './style.styl'
 
 import Circles from './Circles.svg'
+import CirclesMirror from './CirclesMirror.svg'
 import Circle from './Circle.svg'
+import CircleBlue from './CircleBlue.svg'
 
 let selectedPartsReference = []
 
@@ -34,7 +39,7 @@ export default ({ selectedGroups, onSelect }) => {
       return
     }
 
-    const baseSvgName = 'Circles_svg__'
+    const baseSvgName = selectedGroups[0].color === '#3eb5f1' ? 'CirclesMirror_svg__' : 'Circles_svg__'
 
     const intersection = Snap(`#${baseSvgName}intersection`)
     const rightWing = Snap(`#${baseSvgName}right-wing`)
@@ -48,7 +53,13 @@ export default ({ selectedGroups, onSelect }) => {
   return (
     <div className={styles.circles} >
       <div className={styles.circlesContainer} >
-        {selectedGroups.length === 1 ? <Circle /> : <Circles className={styles.cirlcesSvg} />}
+        {selectedGroups.length === 1
+          ? (selectedGroups[0].color === '#3eb5f1' ? <CircleBlue /> : <Circle />)
+          : (selectedGroups[0].color === '#3eb5f1'
+            ? <CirclesMirror className={styles.cirlcesSvg} />
+            : <Circles className={styles.cirlcesSvg} />
+          )
+        }
       </div>
       <Hint selectedGroups={selectedGroups} selectedCircleParts={selectedParts} />
     </div>
