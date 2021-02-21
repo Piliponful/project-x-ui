@@ -9,6 +9,7 @@ import MainScreen from './src/components/shallow/MainScreen'
 import Sidebar from './src/components/shallow/Sidebar'
 import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
 import Authorization from './src/components/leafs/Authorization'
+import ActionsPanel from './src/components/leafs/ActionsPanel'
 
 export default {
   shallow: {
@@ -23,6 +24,7 @@ export default {
     GroupCard,
     QuestionCard,
     NewQuestion,
-    Authorization
+    Authorization,
+    ActionsPanel
   }
 }
