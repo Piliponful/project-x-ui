@@ -8,6 +8,7 @@ import GroupsContainer from './src/components/shallow/GroupsContainer'
 import MainScreen from './src/components/shallow/MainScreen'
 import Sidebar from './src/components/shallow/Sidebar'
 import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
+import Authorization from './src/components/leafs/Authorization'
 
 export default {
   shallow: {
@@ -21,6 +22,7 @@ export default {
     Circles,
     GroupCard,
     QuestionCard,
-    NewQuestion
+    NewQuestion,
+    Authorization
   }
 }
