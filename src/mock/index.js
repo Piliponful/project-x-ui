@@ -10,6 +10,8 @@ import NewQuestion from '../components/leafs/NewQuestion'
 import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
+import Authorization from '../components/leafs/Authorization' // eslint-disable-line
+import ActionsPanel from '../components/leafs/ActionsPanel'
 
 const groupCombination = true
 
@@ -58,8 +60,8 @@ const latest = [ // eslint-disable-line
   { name: 'Is Boruto stronger than Naruto?', currentUserAnswer: null, answersCount: { yes: 0, no: 0 } }
 ]
 
-ReactDOM.render(
-  <Body>
+const Authorized = () => ( // eslint-disable-line
+  <>
     <Sidebar>
       {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups2} selectedCircleParts={selectedCircleParts} onSelect={console.log} /> : null}
       <GroupsContainer>
@@ -68,6 +70,7 @@ ReactDOM.render(
         ))}
       </GroupsContainer>
       <NewQuestion saveQuestion={() => {}} />
+      <ActionsPanel logout={() => console.log('logout')} />
     </Sidebar>
     <MainScreen>
       <QuestionCardsRow title='Most answered'>
@@ -86,4 +89,11 @@ ReactDOM.render(
         ))}
       </QuestionCardsRow>
     </MainScreen>
+  </>
+)
+
+ReactDOM.render(
+  <Body>
+    <Authorized />
+    {/* <Authorization showVerification /> */}
   </Body>, document.getElementById('app'))
