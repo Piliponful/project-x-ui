@@ -5,7 +5,7 @@ import Button from '../../shared/Button'
 
 import styles from './style.styl'
 
-export default ({ createUser, verifyUser, getUserToken }) => {
+export default ({ createUser: a, verifyUser, getUserToken }) => {
   const [{
     username,
     password,
@@ -15,10 +15,13 @@ export default ({ createUser, verifyUser, getUserToken }) => {
   const [selectedTab, setSelectedTab] = useState('signIn')
   const [showVerification, setShowVerification] = useState(false)
 
-  const onFieldChange = e => setFields({ [e.target.name]: e.target.value })
+  const onFieldChange = e => {
+    e.preventDefault()
+    setFields(state => ({ ...state, [e.target.name]: e.target.value }))
+  }
 
-  const createUserWD = async () => {
-    await createUser({ username, password, phoneNumber })
+  const createUser = async () => {
+    await a({ username, password, phoneNumber })
     setShowVerification(true)
   }
 
@@ -42,6 +45,7 @@ export default ({ createUser, verifyUser, getUserToken }) => {
 
         <input value={username} onChange={onFieldChange} placeholder='username' name='username' className={styles.input} />
         <input
+          type='password'
           value={password}
           onChange={onFieldChange}
           placeholder='password'
@@ -72,7 +76,7 @@ export default ({ createUser, verifyUser, getUserToken }) => {
         <Button
           className={styles.button}
           onClick={() => selectedTab === 'signUp'
-            ? (showVerification ? verifyUser({ verificationCode }) : createUserWD({ username, password, phoneNumber }))
+            ? (showVerification ? verifyUser({ verificationCode }) : createUser({ username, password, phoneNumber }))
             : getUserToken({ username, password })
           }
         >
