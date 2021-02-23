@@ -5,7 +5,7 @@ import Button from '../../shared/Button'
 
 import styles from './style.styl'
 
-export default ({ signIn, signUp, showVerification }) => {
+export default ({ createUser, verifyUser, getUserToken }) => {
   const [{
     username,
     password,
@@ -13,8 +13,14 @@ export default ({ signIn, signUp, showVerification }) => {
     verificationCode
   }, setFields] = useState({ username: '', password: '', phoneNumber: '', verificationCode: '' })
   const [selectedTab, setSelectedTab] = useState('signIn')
+  const [showVerification, setShowVerification] = useState(false)
 
   const onFieldChange = e => setFields({ [e.target.name]: e.target.value })
+
+  const createUserWD = async () => {
+    await createUser({ username, password, phoneNumber })
+    setShowVerification(true)
+  }
 
   return (
     <div className={styles.containersContainer}>
@@ -65,7 +71,10 @@ export default ({ signIn, signUp, showVerification }) => {
         }
         <Button
           className={styles.button}
-          onClick={() => selectedTab === 'signUp' ? signUp({ username, password, phoneNumber }) : signIn({ username, password })}
+          onClick={() => selectedTab === 'signUp'
+            ? (showVerification ? verifyUser({ verificationCode }) : createUserWD({ username, password, phoneNumber }))
+            : getUserToken({ username, password })
+          }
         >
           {selectedTab === 'signUp' ? (showVerification ? 'Sign Up' : 'Get Code') : 'Sign In'}
         </Button>
