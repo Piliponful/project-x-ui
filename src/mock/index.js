@@ -94,6 +94,6 @@ const Authorized = () => ( // eslint-disable-line
 
 ReactDOM.render(
   <Body>
-    <Authorized />
-    {/* <Authorization showVerification /> */}
+    {/* <Authorized /> */}
+    <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
   </Body>, document.getElementById('app'))
