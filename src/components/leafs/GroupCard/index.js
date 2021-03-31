@@ -19,7 +19,7 @@ export default ({ name, userCount, selected, color, save, toggleSelection, combi
         <UserCount userCount={userCount} />
       </div>
 
-      {selected
+      {(color || selected)
         ? <CheckboxIcon color={color} deselect={toggleSelection} />
         : (name ? <Buttons select={toggleSelection} combine={combine} /> : null)}
     </article>
