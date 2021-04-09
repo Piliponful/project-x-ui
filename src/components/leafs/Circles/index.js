@@ -1,8 +1,6 @@
-import React, {
-  useEffect,
-  useState
-} from 'react'
+import React, { useEffect } from 'react'
 import Snap from 'snapsvg-cjs'
+import { isEqual } from 'lodash'
 
 import Hint from './components/Hint'
 
@@ -13,25 +11,60 @@ import CirclesMirror from './CirclesMirror.svg'
 import Circle from './Circle.svg'
 import CircleBlue from './CircleBlue.svg'
 
-let selectedPartsReference = []
+const circlePartsToCompositionType = circleParts => {
+  if (isEqual(circleParts, ['intersection'])) {
+    return 'intersection'
+  }
+  if (isEqual(circleParts, ['leftWing'])) {
+    return 'difference'
+  }
+  if (isEqual(circleParts, ['rightWing'])) {
+    return 'difference'
+  }
+  if (isEqual(circleParts, ['leftWing', 'intersection', 'rightWing'])) {
+    return 'union'
+  }
+}
 
-export default ({ selectedGroups, onSelect }) => {
-  const [fill, setFill] = useState(false)
-  const [selectedParts, setParts] = useState([])
+const isAllowedToClick = (element, partName) => {
+  const isElementSelected = element.attr('fill-opacity') === '1'
 
-  const changeOpacity = (element, partName) => {
+  if (isElementSelected) {
+    return true
+  }
+
+  return circlePartsToCompositionType([...selectedParts, partName])
+}
+
+const setCursorStyle = (element, partName) => {
+  const allowedToClick = isAllowedToClick(element, partName)
+  const newStyle = allowedToClick ? 'pointer' : 'not-allowed'
+  element.attr({
+    cursor: newStyle
+  })
+}
+
+let selectedParts = []
+
+export default ({ selectedGroups, handleCompositionTypeChange }) => {
+  const changeOpacity = (element, partName, parts) => {
+    if (!isAllowedToClick(element, partName)) {
+      return
+    }
+
     const isElementSelected = element.attr('fill-opacity') === '1'
 
     element.attr({
       'fill-opacity': isElementSelected ? '0' : '1'
     })
 
-    const newSelectedParts = isElementSelected ? selectedPartsReference.filter(i => i !== partName) : [...selectedPartsReference, partName]
+    const newSelectedParts = isElementSelected ? selectedParts.filter(i => i !== partName) : [...selectedParts, partName]
+    const newCompositionType = circlePartsToCompositionType(newSelectedParts)
 
-    setFill(!fill)
-    setParts(newSelectedParts)
-    onSelect(newSelectedParts)
-    selectedPartsReference = newSelectedParts
+    selectedParts = newSelectedParts
+    Object.entries(parts).forEach(([partName, element]) => setCursorStyle(element, partName))
+
+    handleCompositionTypeChange(newCompositionType)
   }
 
   useEffect(() => {
@@ -45,20 +78,22 @@ export default ({ selectedGroups, onSelect }) => {
     const rightWing = Snap(`#${baseSvgName}right-wing`)
     const leftWing = Snap(`#${baseSvgName}left-wing`)
 
-    intersection.click(() => changeOpacity(intersection, 'intersection'))
-    rightWing.click(() => changeOpacity(rightWing, 'right-wing'))
-    leftWing.click(() => changeOpacity(leftWing, 'left-wing'))
+    const parts = { intersection, rightWing, leftWing }
+
+    Object.entries(parts).forEach(([partName, element]) => element.click(() => changeOpacity(element, partName, parts)))
   }, [selectedGroups.length])
 
   return (
-    <div className={styles.circles} >
-      <div className={styles.circlesContainer} >
-        {selectedGroups.length === 1
-          ? (selectedGroups[0].color === '#3eb5f1' ? <CircleBlue /> : <Circle />)
-          : (selectedGroups[0].color === '#3eb5f1'
-            ? <CirclesMirror className={styles.cirlcesSvg} />
-            : <Circles className={styles.cirlcesSvg} />
-          )
+    <div className={styles.circles}>
+      <div className={styles.circlesContainer}>
+        {
+          selectedGroups.length === 1
+            ? (selectedGroups[0].color === '#3eb5f1' ? <CircleBlue /> : <Circle />)
+            : (
+                selectedGroups[0].color === '#3eb5f1'
+                  ? <CirclesMirror style={{ cursor: 'pointer' }} />
+                  : <Circles style={{ cursor: 'pointer' }} />
+              )
         }
       </div>
       <Hint selectedGroups={selectedGroups} selectedCircleParts={selectedParts} />
