@@ -64,6 +64,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
+    contentBase: './src',
     port: 8082,
     hot: true
   },

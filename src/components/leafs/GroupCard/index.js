@@ -12,9 +12,10 @@ export default ({ name, userCount, selected, color, save, toggleSelection, combi
   return (
     <article className={styles.card}>
       <div className={styles.leftSideContainer}>
-        {name
-          ? <Title>{name}</Title>
-          : <NewGroupTitle save={save} readyToSave={readyToSave} />
+        {
+          name
+            ? <Title>{name}</Title>
+            : <NewGroupTitle save={save} readyToSave={readyToSave} />
         }
         <UserCount userCount={userCount} />
       </div>

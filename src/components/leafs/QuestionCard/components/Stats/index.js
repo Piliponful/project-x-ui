@@ -32,7 +32,8 @@ export default ({ yes, no, createNewGroup }) => {
                 <Text className={styles.text} style={{ width: `${noPercentage}%` }}>{noPercentage}%</Text>
               </div>
             </>
-          ) : null
+            )
+          : null
       }
     </div>
   )

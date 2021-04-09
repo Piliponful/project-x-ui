@@ -52,33 +52,40 @@ export default ({ createUser: a, verifyUser, getUserToken }) => {
           name='password'
           className={cn(styles.input, { [styles.lastInput]: selectedTab === 'signIn' })}
         />
-        {selectedTab === 'signUp'
-          ? (
-            <input
-              value={phoneNumber}
-              onChange={onFieldChange}
-              placeholder='phone number'
-              name='phoneNumber'
-              className={cn(styles.input, { [styles.lastInput]: !showVerification })}
-            />
-          )
-          : null
+        {
+          selectedTab === 'signUp'
+            ? (
+              <input
+                value={phoneNumber}
+                onChange={onFieldChange}
+                placeholder='phone number'
+                name='phoneNumber'
+                className={cn(styles.input, { [styles.lastInput]: !showVerification })}
+              />
+              )
+            : null
         }
-        {(selectedTab === 'signUp' && showVerification)
-          ? (
+        {
+          (selectedTab === 'signUp' && showVerification)
+            ? (
               <>
-                <input value={verificationCode} onChange={onFieldChange} placeholder='verification code' name='verificationCode' className={styles.input} />
+                <input
+                  value={verificationCode}
+                  onChange={onFieldChange}
+                  placeholder='verification code'
+                  name='verificationCode'
+                  className={styles.input}
+                />
                 <span className={styles.hint}>*you'll get verificaiton code on this phone number</span>
               </>
-          )
-          : null
+              )
+            : null
         }
         <Button
           className={styles.button}
           onClick={() => selectedTab === 'signUp'
             ? (showVerification ? verifyUser({ verificationCode }) : createUser({ username, password, phoneNumber }))
-            : getUserToken({ username, password })
-          }
+            : getUserToken({ username, password })}
         >
           {selectedTab === 'signUp' ? (showVerification ? 'Sign Up' : 'Get Code') : 'Sign In'}
         </Button>

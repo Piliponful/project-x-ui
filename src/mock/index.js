@@ -63,10 +63,10 @@ const latest = [ // eslint-disable-line
 const Authorized = () => ( // eslint-disable-line
   <>
     <Sidebar>
-      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups2} selectedCircleParts={selectedCircleParts} onSelect={console.log} /> : null}
+      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups2} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
       <GroupsContainer>
-        {(groupCombination ? [...selectedForCombinationGroups2, groupCombinationResult] : groups).map((i, key) => (
-          <GroupCard key={i.name} {...i} toggleSelection={() => console.log('toogle selection')} />
+        {(groupCombination ? [...selectedForCombinationGroups2, groupCombinationResult] : groups).map(i => (
+          <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
       <NewQuestion saveQuestion={() => {}} />
