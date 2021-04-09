@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import Input from './components/Input'
+import Text from '../../../../shared/Text'
 
 import styles from './style.styl'
 
-export default ({ save, readyToSave, cancel }) => {
-  const [newGroupTitle, setNewGroupTitle] = useState('')
-
-  return (
-    <div className={styles.container}>
-      <Input onTitleInput={setNewGroupTitle} value={newGroupTitle} />
-    </div>
-  )
-}
+export default ({ onTitleInput, value }) => (
+  <Text className={styles.text}>
+    <input className={styles.input} onChange={e => onTitleInput(e.target.value)} value={value} />
+  </Text>
+)
