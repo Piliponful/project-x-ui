@@ -13,23 +13,23 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authorization from '../components/leafs/Authorization' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 
-const groupCombination = true
+const groupCombination = false
 
-// const selectedForCombinationGroups = [
-//   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
-// ]
-
-const selectedForCombinationGroups2 = [ // eslint-disable-line
-  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#3eb5f1' },
-  { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
+const selectedForCombinationGroups = [
+  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
 ]
+
+// const selectedForCombinationGroups = [ // eslint-disable-line
+//   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#3eb5f1' },
+//   { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
+// ]
 
 const groupCombinationResult = { userCount: 31308, selected: true, color: '#92278f' }
 
 const selectedCircleParts = []
 
-/* { userCount: 31308 }, */
 const groups = [
+  { userCount: 31308 },
   { name: 'Anime-watchers', userCount: 42355, selected: true },
   { name: 'BlackUFA subscribers', userCount: 18344 },
   { name: 'Gamers', userCount: 46344 },
@@ -63,9 +63,9 @@ const latest = [ // eslint-disable-line
 const Authorized = () => ( // eslint-disable-line
   <>
     <Sidebar>
-      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups2} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
+      {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
       <GroupsContainer>
-        {(groupCombination ? [...selectedForCombinationGroups2, groupCombinationResult] : groups).map(i => (
+        {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map(i => (
           <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>

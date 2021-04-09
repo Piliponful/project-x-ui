@@ -1,6 +1,6 @@
 {
   "name": "project-x-ui",
-  "version": "1.0.61",
+  "version": "1.0.62",
   "description": "",
   "main": "dist/bundle.js",
   "author": "Maksim Pylypenko/piliponful",
