@@ -24,6 +24,8 @@ const circlePartsToCompositionType = circleParts => {
   if (isEqual(circleParts, ['leftWing', 'intersection', 'rightWing'])) {
     return 'union'
   }
+
+  return null
 }
 
 const isAllowedToClick = (element, partName) => {
