@@ -7,6 +7,6 @@ import styles from './style.styl'
 
 export default ({ userCount }) => (
   <Text className={styles.userCount}>
-    <Number x={userCount} /> people
+    {userCount ? (<><Number x={userCount} /> people</>) : <>select new group parts</>}
   </Text>
 )
