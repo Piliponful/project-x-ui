@@ -13,16 +13,16 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authorization from '../components/leafs/Authorization' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 
-const groupCombination = false
+const groupCombination = true
 
-const selectedForCombinationGroups = [
-  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
-]
-
-// const selectedForCombinationGroups = [ // eslint-disable-line
-//   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#3eb5f1' },
-//   { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
+// const selectedForCombinationGroups = [
+//   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
 // ]
+
+const selectedForCombinationGroups = [ // eslint-disable-line
+  { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#3eb5f1' },
+  { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
+]
 
 const groupCombinationResult = { userCount: 31308, selected: true, color: '#92278f' }
 
@@ -70,7 +70,7 @@ const Authorized = () => ( // eslint-disable-line
         ))}
       </GroupsContainer>
       <NewQuestion saveQuestion={() => {}} />
-      <ActionsPanel logout={() => console.log('logout')} />
+      <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
     </Sidebar>
     <MainScreen>
       <QuestionCardsRow title='Most answered'>
