@@ -1,7 +1,5 @@
 .circlesContainer {
-  height: 220px;
   width: 100%;
-  margin-top: 25px;
   display: flex;
   justify-content: center;
 }
@@ -9,4 +7,12 @@
 .circles {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+  .circlesContainer {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 }

@@ -50,5 +50,9 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "react-media": "^1.10.0",
+    "react-swipeable": "^6.1.0"
   }
 }

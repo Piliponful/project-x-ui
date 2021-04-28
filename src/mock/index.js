@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
 
 import Body from '../components/shallow/Body'
@@ -12,6 +12,8 @@ import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 import Authorization from '../components/leafs/Authorization' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
+
+import { MainScreenSwipeProvider, MainScreenSwipeContext } from '../context/MainScreenSwipeContext'
 
 const groupCombination = true
 
@@ -60,9 +62,13 @@ const latest = [ // eslint-disable-line
   { name: 'Is Boruto stronger than Naruto?', currentUserAnswer: null, answersCount: { yes: 0, no: 0 } }
 ]
 
-const Authorized = () => ( // eslint-disable-line
-  <>
-    <Sidebar>
+const mostAnsweredQuestionsComponents = mostAnsweredQuestions.map(i => (
+  <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
+))
+
+const SidebarWithGroups = () => {
+  return (
+    <Sidebar title='Groups'>
       {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
       <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map(i => (
@@ -72,28 +78,51 @@ const Authorized = () => ( // eslint-disable-line
       <NewQuestion saveQuestion={() => {}} />
       <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
     </Sidebar>
-    <MainScreen>
-      <QuestionCardsRow title='Most answered'>
-        {mostAnsweredQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
-        ))}
-      </QuestionCardsRow>
-      <QuestionCardsRow title='Most answered in last 7 days'>
-        {mostAnsweredInLast7DaysQuestions.map(i => (
-          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
-        ))}
-      </QuestionCardsRow>
-      <QuestionCardsRow title='Latest'>
-        {latest.map(i => (
-          <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
-        ))}
-      </QuestionCardsRow>
-    </MainScreen>
-  </>
+  )
+}
+
+const SidebarWithQuestions = () => {
+  return (
+    <Sidebar title='Questions'>
+      {mostAnsweredQuestionsComponents}
+    </Sidebar>
+  )
+}
+
+const MainScreenWithQuestions = () => (
+  <MainScreen>
+    <QuestionCardsRow title='Most answered'>
+      {mostAnsweredQuestionsComponents}
+    </QuestionCardsRow>
+    <QuestionCardsRow title='Most answered in last 7 days'>
+      {mostAnsweredInLast7DaysQuestions.map(i => (
+        <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
+      ))}
+    </QuestionCardsRow>
+    <QuestionCardsRow title='Latest'>
+      {latest.map(i => (
+        <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
+      ))}
+    </QuestionCardsRow>
+  </MainScreen>
 )
 
+const Authorized = () => {
+  const { mainScreen } = useContext(MainScreenSwipeContext)
+
+  return (
+    <>
+      {mainScreen ? <SidebarWithGroups /> : <SidebarWithQuestions />}
+      {mainScreen ? <MainScreenWithQuestions /> : null}
+    </>
+  )
+}
+
 ReactDOM.render(
-  <Body>
-    <Authorized />
-    {/* <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} /> */}
-  </Body>, document.getElementById('app'))
+  <MainScreenSwipeProvider>
+    <Body>
+      <Authorized />
+      {/* <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} /> */}
+    </Body>
+  </MainScreenSwipeProvider>
+  , document.getElementById('app'))

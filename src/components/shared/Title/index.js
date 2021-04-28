@@ -1,5 +1,6 @@
 import React from 'react'
+import cn from 'classnames'
 
 import styles from './style.styl'
 
-export default ({ children, color }) => <h1 style={{ color }} className={styles.title}>{children}</h1>
+export default ({ children, className, color }) => <h1 style={{ color }} className={cn(styles.title, className)}>{children}</h1>

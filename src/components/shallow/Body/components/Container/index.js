@@ -1,5 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useSwipeable } from 'react-swipeable'
+
+import { MainScreenSwipeContext } from '../../../../../context/MainScreenSwipeContext'
 
 import styles from './style.styl'
 
-export default ({ children }) => <aside className={styles.container}>{children}</aside>
+export default ({ children }) => {
+  const value = useContext(MainScreenSwipeContext)
+
+  const handlers = useSwipeable({
+    onSwiped: eventData => value.toggleMainScreen()
+  })
+
+  return <aside {...handlers} className={styles.container}>{children}</aside>
+}
