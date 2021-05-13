@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useSwipeable } from 'react-swipeable'
 
-import { MainScreenSwipeContext } from '../../../../../context/MainScreenSwipeContext'
+import { MainScreenSwipeContext } from '../../'
 
 import styles from './style.styl'
 
