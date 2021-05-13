@@ -1,19 +1,37 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Container from './components/Container'
 
-import { MainScreenSwipeContext } from '../../../context/MainScreenSwipeContext'
-
 import styles from './style.styl'
 
+import { sidebarWidth, smallMainScreenWidth } from '../../../constants'
+
+export const MainScreenSwipeContext = React.createContext({ mainScreen: true, toggleMainScreen: null })
+
 export default ({ children }) => {
-  const { mainScreen } = useContext(MainScreenSwipeContext)
+  const [mainScreen, toggleMainScreen] = useState(true)
+
+  useEffect(() => {
+    const handler = () => {
+      const { innerWidth: width } = window
+
+      if (mainScreen && width > sidebarWidth + smallMainScreenWidth) {
+        toggleMainScreen(width)
+      }
+    }
+
+    window.addEventListener('resize', handler)
+
+    return () => window.removeEventListener('resize', handler)
+  }, [])
 
   return (
-    <div style={{ height: mainScreen ? '100%' : 'auto' }} className={styles.body}>
-      <Container>
-        {children}
-      </Container>
-    </div>
+    <MainScreenSwipeContext.Provider value={{ mainScreen, toggleMainScreen: () => toggleMainScreen(!mainScreen) }}>
+      <div style={{ height: mainScreen ? '100%' : 'auto' }} className={styles.body}>
+        <Container>
+          {children}
+        </Container>
+      </div>
+    </MainScreenSwipeContext.Provider>
   )
 }

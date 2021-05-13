@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
 
-import Body from '../components/shallow/Body'
+import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
 import Sidebar from '../components/shallow/Sidebar'
 import GroupCard from '../components/leafs/GroupCard'
@@ -12,8 +12,6 @@ import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 import Authorization from '../components/leafs/Authorization' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
-
-import { MainScreenSwipeProvider, MainScreenSwipeContext } from '../context/MainScreenSwipeContext'
 
 const groupCombination = true
 
@@ -119,10 +117,8 @@ const Authorized = () => {
 }
 
 ReactDOM.render(
-  <MainScreenSwipeProvider>
-    <Body>
-      <Authorized />
-      {/* <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} /> */}
-    </Body>
-  </MainScreenSwipeProvider>
+  <Body>
+    <Authorized />
+    {/* <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} /> */}
+  </Body>
   , document.getElementById('app'))
