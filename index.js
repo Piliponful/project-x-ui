@@ -3,7 +3,7 @@ import GroupCard from './src/components/leafs/GroupCard'
 import QuestionCard from './src/components/leafs/QuestionCard'
 import NewQuestion from './src/components/leafs/NewQuestion'
 
-import Body from './src/components/shallow/Body'
+import Body, { MainScreenSwipeContext } from './src/components/shallow/Body'
 import GroupsContainer from './src/components/shallow/GroupsContainer'
 import MainScreen from './src/components/shallow/MainScreen'
 import Sidebar from './src/components/shallow/Sidebar'
@@ -26,5 +26,8 @@ export default {
     NewQuestion,
     Authorization,
     ActionsPanel
+  },
+  context: {
+    MainScreenSwipeContext
   }
 }
