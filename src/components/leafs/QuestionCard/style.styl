@@ -5,7 +5,6 @@
   width: calc(100% - 12px);
   min-height: 180px;
   margin-bottom: 10px;
-  margin-left: 6px;
   padding: 15px 15px 10px;
   box-sizing: border-box;
 
@@ -13,10 +12,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.cardWithoutBottomMargin {
-  margin-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .hint {
