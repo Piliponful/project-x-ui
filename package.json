@@ -1,6 +1,6 @@
 {
   "name": "project-x-ui",
-  "version": "1.0.67",
+  "version": "1.0.68",
   "description": "",
   "main": "dist/bundle.js",
   "author": "Maksim Pylypenko/piliponful",
@@ -50,5 +50,9 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "react-media": "^1.10.0",
+    "react-swipeable": "^6.1.0"
   }
 }
