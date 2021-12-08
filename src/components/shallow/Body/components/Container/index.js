@@ -18,7 +18,7 @@ export default ({ children }) => {
     preventDefaultTouchmoveEvent: true
   })
 
-  return <ContainerWithoutSwipes {...handlers}>{children}</ContainerWithoutSwipes>
+  return <main {...handlers} className={styles.container}>{children}</main>
 }
 
-export const ContainerWithoutSwipes = ({ children, ...props }) => <main {...props} className={styles.container}>{children}</main>
+export const ContainerWithoutSwipes = ({ children }) => <main className={styles.container}>{children}</main>
