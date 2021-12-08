@@ -5,7 +5,7 @@ import { MainScreenSwipeContext } from '../../'
 
 import styles from './style.styl'
 
-export default ({ children }) => {
+export default ({ children, includeSwipes }) => {
   const value = useContext(MainScreenSwipeContext)
 
   const handlers = useSwipeable({
@@ -18,5 +18,5 @@ export default ({ children }) => {
     preventDefaultTouchmoveEvent: true
   })
 
-  return <aside {...handlers} className={styles.container}>{children}</aside>
+  return <main {...(includeSwipes ? handlers : {})} className={styles.container}>{children}</main>
 }
