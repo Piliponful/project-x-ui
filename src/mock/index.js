@@ -116,11 +116,11 @@ const Authorized = () => {
   )
 }
 
-// console.log(<Authorized />)
+console.log(<Authorized />)
 
 ReactDOM.render(
   <Body includeSwipes>
-    <Authorized />
-    {/* <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} /> */}
+    {/* <Authorized /> */}
+    <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
   </Body>
   , document.getElementById('app'))

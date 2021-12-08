@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import cn from 'classnames'
+import PhoneInput from 'react-phone-number-input'
 
 import Button from '../../shared/Button'
 
 import styles from './style.styl'
+import 'react-phone-number-input/style.css'
+import './style.css'
 
 export default ({ createUser: a, verifyUser, getUserToken }) => {
   const [{
     username,
     password,
     phoneNumber,
+    country,
     verificationCode
-  }, setFields] = useState({ username: '', password: '', phoneNumber: '', verificationCode: '' })
+  }, setFields] = useState({ username: '', password: '', phoneNumber: '', country: '', verificationCode: '' })
   const [selectedTab, setSelectedTab] = useState('signIn')
   const [showVerification, setShowVerification] = useState(false)
 
@@ -21,7 +25,7 @@ export default ({ createUser: a, verifyUser, getUserToken }) => {
   }
 
   const createUser = async () => {
-    await a({ username, password, phoneNumber })
+    await a({ username, password, phoneNumber, country })
     setShowVerification(true)
   }
 
@@ -55,11 +59,12 @@ export default ({ createUser: a, verifyUser, getUserToken }) => {
         {
           selectedTab === 'signUp'
             ? (
-              <input
-                value={phoneNumber}
-                onChange={onFieldChange}
+              <PhoneInput
                 placeholder='phone number'
                 name='phoneNumber'
+                value={phoneNumber}
+                onCountryChange={country => setFields(state => ({ ...state, country }))}
+                onChange={value => setFields(state => ({ ...state, phoneNumber: value }))}
                 className={cn(styles.input, { [styles.lastInput]: !showVerification })}
               />
               )

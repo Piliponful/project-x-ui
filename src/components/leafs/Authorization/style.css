@@ -1,0 +1,9 @@
+.PhoneInputInput {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+
+  caret-color: #969696;
+  color: #969696;
+  background: #f7f7f7;
+}
