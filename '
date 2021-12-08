@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Container, { ContainerWithoutSwipes } from './components/Container'
+import Container from './components/Container'
 
 import styles from './style.styl'
 
@@ -39,9 +39,9 @@ export default ({ children, includeSwipes }) => {
 
   return (
     <div style={{ height: mainScreen ? '100%' : 'auto' }} className={styles.body}>
-      <ContainerWithoutSwipes>
+      <Container >
         {children}
-      </ContainerWithoutSwipes>
+      </Container>
     </div>
   )
 }
