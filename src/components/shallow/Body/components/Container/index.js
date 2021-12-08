@@ -18,5 +18,7 @@ export default ({ children, includeSwipes }) => {
     preventDefaultTouchmoveEvent: true
   })
 
-  return <main {...(includeSwipes ? handlers : {})} className={styles.container}>{children}</main>
+  return includeSwipes
+    ? <main {...handlers} className={styles.container}>{children}</main>
+    : <main className={styles.container}>{children}</main>
 }
