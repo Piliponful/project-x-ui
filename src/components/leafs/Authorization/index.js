@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import cn from 'classnames'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 
 import Button from '../../shared/Button'
 
@@ -8,7 +8,7 @@ import styles from './style.styl'
 import 'react-phone-number-input/style.css'
 import './style.css'
 
-export default ({ createUser: a, verifyUser, getUserToken }) => {
+export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
   const [{
     username,
     password,
@@ -26,10 +26,14 @@ export default ({ createUser: a, verifyUser, getUserToken }) => {
 
   const createUser = async () => {
     try {
+      if (!isValidPhoneNumber(phoneNumber)) {
+        onError('Phone number is invalid')
+        return
+      }
       await a({ username, password, phoneNumber, country })
       setShowVerification(true)
     } catch (e) {
-      console.log(e)
+      onError(e.message)
     }
   }
 
