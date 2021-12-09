@@ -1,100 +1,99 @@
-import React, { useEffect } from 'react'
-import Snap from 'snapsvg-cjs'
-import { isEqual } from 'lodash'
+import React from 'react'
+// import { isEqual } from 'lodash'
 
 import Hint from './components/Hint'
 
 import styles from './style.styl'
+//
+// import Circles from './Circles.svg'
+// import CirclesMirror from './CirclesMirror.svg'
+// import Circle from './Circle.svg'
+// import CircleBlue from './CircleBlue.svg'
 
-import Circles from './Circles.svg'
-import CirclesMirror from './CirclesMirror.svg'
-import Circle from './Circle.svg'
-import CircleBlue from './CircleBlue.svg'
+// const circlePartsToCompositionType = circleParts => {
+//   if (isEqual(circleParts, ['intersection'])) {
+//     return 'intersection'
+//   }
+//   if (isEqual(circleParts, ['leftWing'])) {
+//     return 'difference'
+//   }
+//   if (isEqual(circleParts, ['rightWing'])) {
+//     return 'difference'
+//   }
+//   if (isEqual(circleParts, ['leftWing', 'intersection', 'rightWing'])) {
+//     return 'union'
+//   }
+//
+//   return null
+// }
 
-const circlePartsToCompositionType = circleParts => {
-  if (isEqual(circleParts, ['intersection'])) {
-    return 'intersection'
-  }
-  if (isEqual(circleParts, ['leftWing'])) {
-    return 'difference'
-  }
-  if (isEqual(circleParts, ['rightWing'])) {
-    return 'difference'
-  }
-  if (isEqual(circleParts, ['leftWing', 'intersection', 'rightWing'])) {
-    return 'union'
-  }
+// const isAllowedToClick = (element, partName) => {
+//   const isElementSelected = element.attr('fill-opacity') === '1'
+//
+//   if (isElementSelected) {
+//     return true
+//   }
+//
+//   return circlePartsToCompositionType([...selectedParts, partName])
+// }
 
-  return null
-}
+// const setCursorStyle = (element, partName) => {
+//   const allowedToClick = isAllowedToClick(element, partName)
+//   const newStyle = allowedToClick ? 'pointer' : 'not-allowed'
+//   element.attr({
+//     cursor: newStyle
+//   })
+// }
 
-const isAllowedToClick = (element, partName) => {
-  const isElementSelected = element.attr('fill-opacity') === '1'
-
-  if (isElementSelected) {
-    return true
-  }
-
-  return circlePartsToCompositionType([...selectedParts, partName])
-}
-
-const setCursorStyle = (element, partName) => {
-  const allowedToClick = isAllowedToClick(element, partName)
-  const newStyle = allowedToClick ? 'pointer' : 'not-allowed'
-  element.attr({
-    cursor: newStyle
-  })
-}
-
-let selectedParts = []
+const selectedParts = []
 
 export default ({ selectedGroups, handleCompositionTypeChange }) => {
-  const changeOpacity = (element, partName, parts) => {
-    if (!isAllowedToClick(element, partName)) {
-      return
-    }
+  // const changeOpacity = (element, partName, parts) => {
+  //   if (!isAllowedToClick(element, partName)) {
+  //     return
+  //   }
+  //
+  //   const isElementSelected = element.attr('fill-opacity') === '1'
+  //
+  //   element.attr({
+  //     'fill-opacity': isElementSelected ? '0' : '1'
+  //   })
+  //
+  //   const newSelectedParts = isElementSelected ? selectedParts.filter(i => i !== partName) : [...selectedParts, partName]
+  //   const newCompositionType = circlePartsToCompositionType(newSelectedParts)
+  //
+  //   selectedParts = newSelectedParts
+  //   Object.entries(parts).forEach(([partName, element]) => setCursorStyle(element, partName))
+  //
+  //   handleCompositionTypeChange(newCompositionType)
+  // }
 
-    const isElementSelected = element.attr('fill-opacity') === '1'
-
-    element.attr({
-      'fill-opacity': isElementSelected ? '0' : '1'
-    })
-
-    const newSelectedParts = isElementSelected ? selectedParts.filter(i => i !== partName) : [...selectedParts, partName]
-    const newCompositionType = circlePartsToCompositionType(newSelectedParts)
-
-    selectedParts = newSelectedParts
-    Object.entries(parts).forEach(([partName, element]) => setCursorStyle(element, partName))
-
-    handleCompositionTypeChange(newCompositionType)
-  }
-
-  useEffect(() => {
-    if (selectedGroups.length !== 2) {
-      return
-    }
-
-    const baseSvgName = selectedGroups[0].color === '#3eb5f1' ? 'CirclesMirror_svg__' : 'Circles_svg__'
-
-    const intersection = Snap(`#${baseSvgName}intersection`)
-    const rightWing = Snap(`#${baseSvgName}right-wing`)
-    const leftWing = Snap(`#${baseSvgName}left-wing`)
-
-    const parts = { intersection, rightWing, leftWing }
-
-    Object.entries(parts).forEach(([partName, element]) => element.click(() => changeOpacity(element, partName, parts)))
-  }, [selectedGroups.length])
+  // useEffect(() => {
+  //   if (selectedGroups.length !== 2) {
+  //     return
+  //   }
+  //
+  //   const baseSvgName = selectedGroups[0].color === '#3eb5f1' ? 'CirclesMirror_svg__' : 'Circles_svg__'
+  //
+  //   const intersection = Snap(`#${baseSvgName}intersection`)
+  //   const rightWing = Snap(`#${baseSvgName}right-wing`)
+  //   const leftWing = Snap(`#${baseSvgName}left-wing`)
+  //
+  //   const parts = { intersection, rightWing, leftWing }
+  //
+  //   Object.entries(parts).forEach(([partName, element]) => element.click(() => changeOpacity(element, partName, parts)))
+  // }, [selectedGroups.length])
 
   return (
     <div className={styles.circles}>
       <div className={styles.circlesContainer}>
         {
           selectedGroups.length === 1
-            ? (selectedGroups[0].color === '#3eb5f1' ? <CircleBlue /> : <Circle />)
+            ? (selectedGroups[0].color === '#3eb5f1' ? <img src='https://project-x.fra1.digitaloceanspaces.com/CircleBlue.svg' /> : <img src='https://project-x.fra1.digitaloceanspaces.com/Circle.svg' />)
             : (
                 selectedGroups[0].color === '#3eb5f1'
-                  ? <CirclesMirror style={{ cursor: 'pointer' }} />
-                  : <Circles style={{ cursor: 'pointer' }} />
+                  ? <img src='https://project-x.fra1.digitaloceanspaces.com/CirclesMirror.svg' style={{ cursor: 'pointer' }} />
+                  : <img src='https://project-x.fra1.digitaloceanspaces.com/Circles.svg' style={{ cursor: 'pointer' }} />
               )
         }
       </div>
