@@ -33,11 +33,11 @@ export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
       }
       setLoading(true)
       await a({ username, password, phoneNumber, country })
-      setLoading(false)
       setShowVerification(true)
     } catch (e) {
       onError(e.message)
     }
+    setLoading(false)
   }
 
   return (
