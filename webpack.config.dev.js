@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const path = require('path')
 
 const rules = [
   {
     test: /\.jsx?$/,
-    exclude: /node_modules/,
+    exclude: ['/node_modules/', path.resolve(__dirname, './dist')],
     enforce: 'pre',
     use: [{
       loader: 'babel-loader',
@@ -64,7 +65,6 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    contentBase: './src',
     port: 8082,
     hot: true
   },

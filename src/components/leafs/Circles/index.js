@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react'
 import Snap from 'snapsvg-cjs'
 import { isEqual } from 'lodash'
@@ -6,10 +7,10 @@ import Hint from './components/Hint'
 
 import styles from './style.styl'
 
-import Circles from './Circles.svg'
-import CirclesMirror from './CirclesMirror.svg'
-import Circle from './Circle.svg'
-import CircleBlue from './CircleBlue.svg'
+import Circles from './Circles'
+import CirclesMirror from './CirclesMirror'
+import Circle from './Circle'
+import CircleBlue from './CircleBlue'
 
 const circlePartsToCompositionType = circleParts => {
   if (isEqual(circleParts, ['intersection'])) {
@@ -29,7 +30,7 @@ const circlePartsToCompositionType = circleParts => {
 }
 
 const isAllowedToClick = (element, partName) => {
-  const isElementSelected = element.attr('fill-opacity') === '1'
+  const isElementSelected = element.attr('fillOpacity') === '1'
 
   if (isElementSelected) {
     return true
@@ -54,10 +55,10 @@ export default ({ selectedGroups, handleCompositionTypeChange }) => {
       return
     }
 
-    const isElementSelected = element.attr('fill-opacity') === '1'
+    const isElementSelected = element.attr('fillOpacity') === '1'
 
     element.attr({
-      'fill-opacity': isElementSelected ? '0' : '1'
+      'fillOpacity': isElementSelected ? '0' : '1'
     })
 
     const newSelectedParts = isElementSelected ? selectedParts.filter(i => i !== partName) : [...selectedParts, partName]
@@ -74,11 +75,9 @@ export default ({ selectedGroups, handleCompositionTypeChange }) => {
       return
     }
 
-    const baseSvgName = selectedGroups[0].color === '#3eb5f1' ? 'CirclesMirror_svg__' : 'Circles_svg__'
-
-    const intersection = Snap(`#${baseSvgName}intersection`)
-    const rightWing = Snap(`#${baseSvgName}right-wing`)
-    const leftWing = Snap(`#${baseSvgName}left-wing`)
+    const intersection = Snap('#intersection')
+    const rightWing = Snap('#right-wing')
+    const leftWing = Snap('#left-wing')
 
     const parts = { intersection, rightWing, leftWing }
 
