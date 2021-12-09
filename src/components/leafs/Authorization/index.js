@@ -9,6 +9,7 @@ import 'react-phone-number-input/style.css'
 import './style.css'
 
 export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
+  const [loading, setLoading] = useState(null)
   const [{
     username,
     password,
@@ -30,7 +31,9 @@ export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
         onError('Phone number is invalid')
         return
       }
+      setLoading(true)
       await a({ username, password, phoneNumber, country })
+      setLoading(false)
       setShowVerification(true)
     } catch (e) {
       onError(e.message)
@@ -95,6 +98,7 @@ export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
             : null
         }
         <Button
+          loading={loading}
           className={styles.button}
           onClick={() => selectedTab === 'signUp'
             ? (showVerification ? verifyUser({ verificationCode }) : createUser({ username, password, phoneNumber }))

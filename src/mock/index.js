@@ -118,9 +118,10 @@ const Authorized = () => {
 
 console.log(<Authorized />)
 
+const createUser = () => new Promise((resolve, reject) => setTimeout(resolve, 5000))
 ReactDOM.render(
   <Body includeSwipes>
     {/* <Authorized /> */}
-    <Authorization createUser={() => console.log('createUser')} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
+    <Authorization createUser={() => createUser().then(() => console.log('createuser'))} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
   </Body>
   , document.getElementById('app'))
