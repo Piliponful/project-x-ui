@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-const path = require('path')
 
 const rules = [
   {
@@ -65,7 +64,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    static: true,
+    contentBase: './src',
     port: 8082,
     hot: true
   },
