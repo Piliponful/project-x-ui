@@ -26,17 +26,13 @@ export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
   }
 
   const createUser = async () => {
-    try {
-      if (!isValidPhoneNumber(phoneNumber)) {
-        onError('Phone number is invalid')
-        return
-      }
-      setLoading(true)
-      await a({ username, password, phoneNumber, country })
-      setShowVerification(true)
-    } catch (e) {
-      onError(e.message)
+    if (!isValidPhoneNumber(phoneNumber)) {
+      onError('Phone number is invalid')
+      return
     }
+    setLoading(true)
+    await a({ username, password, phoneNumber, country })
+    setShowVerification(true)
     setLoading(false)
   }
 
