@@ -84,16 +84,13 @@ export default ({ createUser: a, verifyUser, getUserToken, onError }) => {
         {
           (selectedTab === 'signUp' && showVerification)
             ? (
-              <>
-                <input
-                  value={verificationCode}
-                  onChange={onFieldChange}
-                  placeholder='verification code'
-                  name='verificationCode'
-                  className={styles.input}
-                />
-                <span className={styles.hint}>*you'll get verificaiton code on this phone number</span>
-              </>
+              <input
+                value={verificationCode}
+                onChange={onFieldChange}
+                placeholder='verification code'
+                name='verificationCode'
+                className={styles.input}
+              />
               )
             : null
         }
