@@ -1208,28 +1208,23 @@ var $fad5f341416586e4$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
-
 var $41fa4a951da2c775$exports = {};
 
 $parcel$export($41fa4a951da2c775$exports, "input", () => $41fa4a951da2c775$export$b7e3ae3d7c15e42e, (v) => $41fa4a951da2c775$export$b7e3ae3d7c15e42e = v);
-$parcel$export($41fa4a951da2c775$exports, "lastInput", () => $41fa4a951da2c775$export$20b74936b6634d41, (v) => $41fa4a951da2c775$export$20b74936b6634d41 = v);
 $parcel$export($41fa4a951da2c775$exports, "button", () => $41fa4a951da2c775$export$2ba01fb71ed41cb6, (v) => $41fa4a951da2c775$export$2ba01fb71ed41cb6 = v);
 var $41fa4a951da2c775$export$b7e3ae3d7c15e42e;
-var $41fa4a951da2c775$export$20b74936b6634d41;
 var $41fa4a951da2c775$export$2ba01fb71ed41cb6;
 $41fa4a951da2c775$export$b7e3ae3d7c15e42e = "_input_33e8f5";
-$41fa4a951da2c775$export$20b74936b6634d41 = "_lastInput_33e8f5";
 $41fa4a951da2c775$export$2ba01fb71ed41cb6 = "_button_33e8f5";
 
 
-var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: getUserToken  })=>{
-    const [{ username: username , password: password  }, setFields] = $cDsoM$useState({
+var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: verifyUser  })=>{
+    const [{ username: username , password: password , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
         password: '',
-        phoneNumber: '',
-        country: '',
         verificationCode: ''
     });
+    const [showVerification, setShowVerification] = $cDsoM$useState(false);
     const onFieldChange = (e)=>{
         e.preventDefault();
         setFields((state)=>({
@@ -1237,6 +1232,13 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: getUserToken  })
                 [e.target.name]: e.target.value
             })
         );
+    };
+    const getUserToken = async ()=>{
+        const user = await f({
+            username: username,
+            password: password
+        });
+        if (!user.verificationCompleted) setShowVerification(true);
     };
     return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
         children: [
@@ -1253,14 +1255,20 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: getUserToken  })
                 onChange: onFieldChange,
                 placeholder: "password",
                 name: "password",
-                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input, (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).lastInput)
+                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
             }),
+            showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
+                value: verificationCode,
+                onChange: onFieldChange,
+                placeholder: "verification code",
+                name: "verificationCode",
+                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
+            }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).button,
-                onClick: ()=>getUserToken({
-                        username: username,
-                        password: password
-                    })
+                onClick: ()=>showVerification ? verifyUser({
+                        verificationCode: verificationCode
+                    }) : getUserToken()
                 ,
                 children: "Sign In"
             })
@@ -1280,14 +1288,14 @@ var $68841d5e5354d0a2$export$2e2bcd8739ae039 = $7a29cf0ed35d3b93$export$2e2bcd87
 var $c3796a9068202221$exports = {};
 
 $parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
-$parcel$export($c3796a9068202221$exports, "lastInput", () => $c3796a9068202221$export$20b74936b6634d41, (v) => $c3796a9068202221$export$20b74936b6634d41 = v);
 $parcel$export($c3796a9068202221$exports, "button", () => $c3796a9068202221$export$2ba01fb71ed41cb6, (v) => $c3796a9068202221$export$2ba01fb71ed41cb6 = v);
+$parcel$export($c3796a9068202221$exports, "withoutMargin", () => $c3796a9068202221$export$8a433e5b2d459900, (v) => $c3796a9068202221$export$8a433e5b2d459900 = v);
 var $c3796a9068202221$export$b7e3ae3d7c15e42e;
-var $c3796a9068202221$export$20b74936b6634d41;
 var $c3796a9068202221$export$2ba01fb71ed41cb6;
+var $c3796a9068202221$export$8a433e5b2d459900;
 $c3796a9068202221$export$b7e3ae3d7c15e42e = "_input_07e23d";
-$c3796a9068202221$export$20b74936b6634d41 = "_lastInput_07e23d";
 $c3796a9068202221$export$2ba01fb71ed41cb6 = "_button_07e23d";
+$c3796a9068202221$export$8a433e5b2d459900 = "_withoutMargin_07e23d";
 
 
 var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: verifyUser , onError: onError  })=>{
@@ -1363,7 +1371,7 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                     )
                 ,
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, {
-                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).lastInput]: !showVerification
+                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).withoutMargin]: !showVerification
                 })
             }),
             showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
@@ -1371,7 +1379,7 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                 onChange: onFieldChange,
                 placeholder: "verification code",
                 name: "verificationCode",
-                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).withoutMargin)
             }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 loading: loading,
@@ -1447,7 +1455,8 @@ var $23bf439265f65302$export$2e2bcd8739ae039 = ({ createUser: createUser , verif
                     ]
                 }),
                 selectedTab === 'signIn' ? /*#__PURE__*/ $cDsoM$jsx($68841d5e5354d0a2$export$2e2bcd8739ae039, {
-                    getUserToken: getUserToken
+                    getUserToken: getUserToken,
+                    verifyUser: verifyUser
                 }) : /*#__PURE__*/ $cDsoM$jsx($c700cb5c44efda05$export$2e2bcd8739ae039, {
                     createUser: createUser,
                     verifyUser: verifyUser,
