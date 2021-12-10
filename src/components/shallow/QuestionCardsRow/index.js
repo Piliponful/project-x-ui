@@ -3,7 +3,7 @@ import { Scrollbars } from 'react-custom-scrollbars'
 
 import Title from './components/Title'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ title, children }) => {
   return (

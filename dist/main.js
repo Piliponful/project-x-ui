@@ -35,26 +35,26 @@ $parcel$export(module.exports, "default", () => $4fa0c73a46e81912$export$2e2bcd8
 
 
 
-var $41e8da52a2d9e3a9$exports = {};
+var $5a3333a34cb1affd$exports = {};
 
-$parcel$export($41e8da52a2d9e3a9$exports, "text", () => $41e8da52a2d9e3a9$export$6f093cfa640b7166, (v) => $41e8da52a2d9e3a9$export$6f093cfa640b7166 = v);
-var $41e8da52a2d9e3a9$export$6f093cfa640b7166;
-$41e8da52a2d9e3a9$export$6f093cfa640b7166 = "style__text__2IeXLv";
+$parcel$export($5a3333a34cb1affd$exports, "text", () => $5a3333a34cb1affd$export$6f093cfa640b7166, (v) => $5a3333a34cb1affd$export$6f093cfa640b7166 = v);
+var $5a3333a34cb1affd$export$6f093cfa640b7166;
+$5a3333a34cb1affd$export$6f093cfa640b7166 = "_text_3b2a0f";
 
 
 var $6b1bd0c54623bfc1$export$2e2bcd8739ae039 = ({ children: children , className: className , style: style  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("span", {
         style: style,
-        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($41e8da52a2d9e3a9$exports)).text),
+        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($5a3333a34cb1affd$exports)).text),
         children: children
     })
 ;
 
 
-var $89f0140ed85a3e0d$exports = {};
+var $2ec1f5dd93f7e915$exports = {};
 
-$parcel$export($89f0140ed85a3e0d$exports, "hint", () => $89f0140ed85a3e0d$export$464c821cd4347539, (v) => $89f0140ed85a3e0d$export$464c821cd4347539 = v);
-var $89f0140ed85a3e0d$export$464c821cd4347539;
-$89f0140ed85a3e0d$export$464c821cd4347539 = "style__hint__2TMc8d";
+$parcel$export($2ec1f5dd93f7e915$exports, "hint", () => $2ec1f5dd93f7e915$export$464c821cd4347539, (v) => $2ec1f5dd93f7e915$export$464c821cd4347539 = v);
+var $2ec1f5dd93f7e915$export$464c821cd4347539;
+$2ec1f5dd93f7e915$export$464c821cd4347539 = "_hint_eb2471";
 
 
 var $536534c05231b4ee$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups , selectedCircleParts: selectedCircleParts  })=>{
@@ -63,20 +63,20 @@ var $536534c05231b4ee$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         2: '(click on area to select what goes to new group)'
     };
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($89f0140ed85a3e0d$exports)).hint,
+        className: (/*@__PURE__*/$parcel$interopDefault($2ec1f5dd93f7e915$exports)).hint,
         children: selectedCircleParts.length === 1 ? '(click on selected area again to deselect)' : lengthToHint[selectedGroups.length]
     }));
 };
 
 
-var $2c539cb681d7e0e2$exports = {};
+var $30e722a3c9f4a5a2$exports = {};
 
-$parcel$export($2c539cb681d7e0e2$exports, "circlesContainer", () => $2c539cb681d7e0e2$export$293c75fa7ed5ee8d, (v) => $2c539cb681d7e0e2$export$293c75fa7ed5ee8d = v);
-$parcel$export($2c539cb681d7e0e2$exports, "circles", () => $2c539cb681d7e0e2$export$c958aa0cc90a067, (v) => $2c539cb681d7e0e2$export$c958aa0cc90a067 = v);
-var $2c539cb681d7e0e2$export$293c75fa7ed5ee8d;
-var $2c539cb681d7e0e2$export$c958aa0cc90a067;
-$2c539cb681d7e0e2$export$293c75fa7ed5ee8d = "style__circlesContainer__32f6hF";
-$2c539cb681d7e0e2$export$c958aa0cc90a067 = "style__circles__12ajfU";
+$parcel$export($30e722a3c9f4a5a2$exports, "circlesContainer", () => $30e722a3c9f4a5a2$export$293c75fa7ed5ee8d, (v) => $30e722a3c9f4a5a2$export$293c75fa7ed5ee8d = v);
+$parcel$export($30e722a3c9f4a5a2$exports, "circles", () => $30e722a3c9f4a5a2$export$c958aa0cc90a067, (v) => $30e722a3c9f4a5a2$export$c958aa0cc90a067 = v);
+var $30e722a3c9f4a5a2$export$293c75fa7ed5ee8d;
+var $30e722a3c9f4a5a2$export$c958aa0cc90a067;
+$30e722a3c9f4a5a2$export$293c75fa7ed5ee8d = "_circlesContainer_266008";
+$30e722a3c9f4a5a2$export$c958aa0cc90a067 = "_circles_266008";
 
 
 
@@ -296,10 +296,10 @@ var $61ea7430f12deac2$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         selectedGroups.length
     ]);
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($2c539cb681d7e0e2$exports)).circles,
+        className: (/*@__PURE__*/$parcel$interopDefault($30e722a3c9f4a5a2$exports)).circles,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
-                className: (/*@__PURE__*/$parcel$interopDefault($2c539cb681d7e0e2$exports)).circlesContainer,
+                className: (/*@__PURE__*/$parcel$interopDefault($30e722a3c9f4a5a2$exports)).circlesContainer,
                 children: selectedGroups.length === 1 ? selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($f4bf248e2e15f9a7$export$2e2bcd8739ae039, {
                 }) : /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($8d91577ed9eb46fc$export$2e2bcd8739ae039, {
                 }) : selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($9465b8194adbd11c$export$2e2bcd8739ae039, {
@@ -326,20 +326,20 @@ var $61ea7430f12deac2$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
 
 
 
-var $baf545cd24be6d91$exports = {};
+var $11612f69b4053603$exports = {};
 
-$parcel$export($baf545cd24be6d91$exports, "input", () => $baf545cd24be6d91$export$b7e3ae3d7c15e42e, (v) => $baf545cd24be6d91$export$b7e3ae3d7c15e42e = v);
-$parcel$export($baf545cd24be6d91$exports, "text", () => $baf545cd24be6d91$export$6f093cfa640b7166, (v) => $baf545cd24be6d91$export$6f093cfa640b7166 = v);
-var $baf545cd24be6d91$export$b7e3ae3d7c15e42e;
-var $baf545cd24be6d91$export$6f093cfa640b7166;
-$baf545cd24be6d91$export$b7e3ae3d7c15e42e = "style__input__3BRxhk";
-$baf545cd24be6d91$export$6f093cfa640b7166 = "style__text__1UuF-L";
+$parcel$export($11612f69b4053603$exports, "input", () => $11612f69b4053603$export$b7e3ae3d7c15e42e, (v) => $11612f69b4053603$export$b7e3ae3d7c15e42e = v);
+$parcel$export($11612f69b4053603$exports, "text", () => $11612f69b4053603$export$6f093cfa640b7166, (v) => $11612f69b4053603$export$6f093cfa640b7166 = v);
+var $11612f69b4053603$export$b7e3ae3d7c15e42e;
+var $11612f69b4053603$export$6f093cfa640b7166;
+$11612f69b4053603$export$b7e3ae3d7c15e42e = "_input_bd52b2";
+$11612f69b4053603$export$6f093cfa640b7166 = "_text_bd52b2";
 
 
 var $e2521c60f876a428$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput , value: value  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($baf545cd24be6d91$exports)).text,
+        className: (/*@__PURE__*/$parcel$interopDefault($11612f69b4053603$exports)).text,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("input", {
-            className: (/*@__PURE__*/$parcel$interopDefault($baf545cd24be6d91$exports)).input,
+            className: (/*@__PURE__*/$parcel$interopDefault($11612f69b4053603$exports)).input,
             onChange: (e)=>onTitleInput(e.target.value)
             ,
             value: value
@@ -357,17 +357,17 @@ var $e2521c60f876a428$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput , v
 
 
 
-var $822b80487ac8f90a$exports = {};
+var $596aa2f89d1ce74c$exports = {};
 
-$parcel$export($822b80487ac8f90a$exports, "button", () => $822b80487ac8f90a$export$2ba01fb71ed41cb6, (v) => $822b80487ac8f90a$export$2ba01fb71ed41cb6 = v);
-var $822b80487ac8f90a$export$2ba01fb71ed41cb6;
-$822b80487ac8f90a$export$2ba01fb71ed41cb6 = "style__button__1slKNm";
+$parcel$export($596aa2f89d1ce74c$exports, "button", () => $596aa2f89d1ce74c$export$2ba01fb71ed41cb6, (v) => $596aa2f89d1ce74c$export$2ba01fb71ed41cb6 = v);
+var $596aa2f89d1ce74c$export$2ba01fb71ed41cb6;
+$596aa2f89d1ce74c$export$2ba01fb71ed41cb6 = "_button_ce85ea";
 
 
 var $bbeeee79c4874bd1$export$2e2bcd8739ae039 = ({ children: children , className: className , onClick: onClick , disabled: disabled , loading: loading  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("button", {
         disabled: Boolean(disabled),
-        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($822b80487ac8f90a$exports)).button),
+        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($596aa2f89d1ce74c$exports)).button),
         onClick: onClick,
         children: loading ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx(($parcel$interopDefault($klFNZ$reactspinnersBeatLoader)), {
             color: "#969696"
@@ -377,25 +377,25 @@ var $bbeeee79c4874bd1$export$2e2bcd8739ae039 = ({ children: children , className
 
 
 
-var $37c7596f4739d6d0$exports = {};
+var $f7179316101b3542$exports = {};
 
-$parcel$export($37c7596f4739d6d0$exports, "button", () => $37c7596f4739d6d0$export$2ba01fb71ed41cb6, (v) => $37c7596f4739d6d0$export$2ba01fb71ed41cb6 = v);
-$parcel$export($37c7596f4739d6d0$exports, "primary", () => $37c7596f4739d6d0$export$9ad721cf3b3debe0, (v) => $37c7596f4739d6d0$export$9ad721cf3b3debe0 = v);
-$parcel$export($37c7596f4739d6d0$exports, "secondary", () => $37c7596f4739d6d0$export$745c6f71a1e0e6f7, (v) => $37c7596f4739d6d0$export$745c6f71a1e0e6f7 = v);
-var $37c7596f4739d6d0$export$2ba01fb71ed41cb6;
-var $37c7596f4739d6d0$export$9ad721cf3b3debe0;
-var $37c7596f4739d6d0$export$745c6f71a1e0e6f7;
-$37c7596f4739d6d0$export$2ba01fb71ed41cb6 = "style__button__1un5HO";
-$37c7596f4739d6d0$export$9ad721cf3b3debe0 = "style__primary__FyvT7t";
-$37c7596f4739d6d0$export$745c6f71a1e0e6f7 = "style__secondary__3Xqiz2";
+$parcel$export($f7179316101b3542$exports, "button", () => $f7179316101b3542$export$2ba01fb71ed41cb6, (v) => $f7179316101b3542$export$2ba01fb71ed41cb6 = v);
+$parcel$export($f7179316101b3542$exports, "primary", () => $f7179316101b3542$export$9ad721cf3b3debe0, (v) => $f7179316101b3542$export$9ad721cf3b3debe0 = v);
+$parcel$export($f7179316101b3542$exports, "secondary", () => $f7179316101b3542$export$745c6f71a1e0e6f7, (v) => $f7179316101b3542$export$745c6f71a1e0e6f7 = v);
+var $f7179316101b3542$export$2ba01fb71ed41cb6;
+var $f7179316101b3542$export$9ad721cf3b3debe0;
+var $f7179316101b3542$export$745c6f71a1e0e6f7;
+$f7179316101b3542$export$2ba01fb71ed41cb6 = "_button_ba9be0";
+$f7179316101b3542$export$9ad721cf3b3debe0 = "_primary_ba9be0";
+$f7179316101b3542$export$745c6f71a1e0e6f7 = "_secondary_ba9be0";
 
 
 var $0beb78ce768a9f0a$export$2e2bcd8739ae039 = ({ children: children , primary: primary , secondary: secondary , onClick: onClick , disabled: disabled  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($bbeeee79c4874bd1$export$2e2bcd8739ae039, {
         disabled: disabled,
         onClick: onClick,
-        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($37c7596f4739d6d0$exports)).button, {
-            [(/*@__PURE__*/$parcel$interopDefault($37c7596f4739d6d0$exports)).primary]: primary,
-            [(/*@__PURE__*/$parcel$interopDefault($37c7596f4739d6d0$exports)).secondary]: secondary
+        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($f7179316101b3542$exports)).button, {
+            [(/*@__PURE__*/$parcel$interopDefault($f7179316101b3542$exports)).primary]: primary,
+            [(/*@__PURE__*/$parcel$interopDefault($f7179316101b3542$exports)).secondary]: secondary
         }),
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
             children: children
@@ -404,15 +404,15 @@ var $0beb78ce768a9f0a$export$2e2bcd8739ae039 = ({ children: children , primary: 
 ;
 
 
-var $0d8deccf7164b919$exports = {};
+var $6500b11622e2b337$exports = {};
 
-$parcel$export($0d8deccf7164b919$exports, "buttons", () => $0d8deccf7164b919$export$bbea856fdb3e3c5f, (v) => $0d8deccf7164b919$export$bbea856fdb3e3c5f = v);
-var $0d8deccf7164b919$export$bbea856fdb3e3c5f;
-$0d8deccf7164b919$export$bbea856fdb3e3c5f = "style__buttons__15GA3h";
+$parcel$export($6500b11622e2b337$exports, "buttons", () => $6500b11622e2b337$export$bbea856fdb3e3c5f, (v) => $6500b11622e2b337$export$bbea856fdb3e3c5f = v);
+var $6500b11622e2b337$export$bbea856fdb3e3c5f;
+$6500b11622e2b337$export$bbea856fdb3e3c5f = "_buttons_7bee74";
 
 
 var $124b528c224b1f7a$export$2e2bcd8739ae039 = ({ select: select , combine: combine  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($0d8deccf7164b919$exports)).buttons,
+        className: (/*@__PURE__*/$parcel$interopDefault($6500b11622e2b337$exports)).buttons,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($0beb78ce768a9f0a$export$2e2bcd8739ae039, {
                 primary: true,
@@ -432,15 +432,15 @@ var $124b528c224b1f7a$export$2e2bcd8739ae039 = ({ select: select , combine: comb
 
 
 
-var $904537df03669edd$exports = {};
+var $b61974cc8e4b4154$exports = {};
 
-$parcel$export($904537df03669edd$exports, "buttons", () => $904537df03669edd$export$bbea856fdb3e3c5f, (v) => $904537df03669edd$export$bbea856fdb3e3c5f = v);
-var $904537df03669edd$export$bbea856fdb3e3c5f;
-$904537df03669edd$export$bbea856fdb3e3c5f = "style__buttons__rT6de3";
+$parcel$export($b61974cc8e4b4154$exports, "buttons", () => $b61974cc8e4b4154$export$bbea856fdb3e3c5f, (v) => $b61974cc8e4b4154$export$bbea856fdb3e3c5f = v);
+var $b61974cc8e4b4154$export$bbea856fdb3e3c5f;
+$b61974cc8e4b4154$export$bbea856fdb3e3c5f = "_buttons_d74f78";
 
 
 var $ccf0ed2c8ac3a87d$export$2e2bcd8739ae039 = ({ readyToSave: readyToSave , save: save , cancel: cancel  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($904537df03669edd$exports)).buttons,
+        className: (/*@__PURE__*/$parcel$interopDefault($b61974cc8e4b4154$exports)).buttons,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($0beb78ce768a9f0a$export$2e2bcd8739ae039, {
                 disabled: !readyToSave,
@@ -465,15 +465,15 @@ var $4ac0c9b29ef51951$export$2e2bcd8739ae039 = ({ x: x  })=>x.toLocaleString()
 ;
 
 
-var $ad68109725054118$exports = {};
+var $123425e113694acd$exports = {};
 
-$parcel$export($ad68109725054118$exports, "userCount", () => $ad68109725054118$export$72bd514aa1799057, (v) => $ad68109725054118$export$72bd514aa1799057 = v);
-var $ad68109725054118$export$72bd514aa1799057;
-$ad68109725054118$export$72bd514aa1799057 = "style__userCount__R5_PS0";
+$parcel$export($123425e113694acd$exports, "userCount", () => $123425e113694acd$export$72bd514aa1799057, (v) => $123425e113694acd$export$72bd514aa1799057 = v);
+var $123425e113694acd$export$72bd514aa1799057;
+$123425e113694acd$export$72bd514aa1799057 = "_userCount_5c96a9";
 
 
 var $1cfb7e9345b761a0$export$2e2bcd8739ae039 = ({ userCount: userCount  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($ad68109725054118$exports)).userCount,
+        className: (/*@__PURE__*/$parcel$interopDefault($123425e113694acd$exports)).userCount,
         children: userCount === null ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($klFNZ$reactjsxruntime.Fragment, {
             children: "select new group parts"
         }) : /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs($klFNZ$reactjsxruntime.Fragment, {
@@ -492,17 +492,17 @@ var $1cfb7e9345b761a0$export$2e2bcd8739ae039 = ({ userCount: userCount  })=>/*#_
 
 
 
-var $88e441429d918842$exports = {};
+var $b5fd55387ed81591$exports = {};
 
-$parcel$export($88e441429d918842$exports, "icon", () => $88e441429d918842$export$1ca1ec8b29a4ce27, (v) => $88e441429d918842$export$1ca1ec8b29a4ce27 = v);
-var $88e441429d918842$export$1ca1ec8b29a4ce27;
-$88e441429d918842$export$1ca1ec8b29a4ce27 = "style__icon__3Pq7pu";
+$parcel$export($b5fd55387ed81591$exports, "icon", () => $b5fd55387ed81591$export$1ca1ec8b29a4ce27, (v) => $b5fd55387ed81591$export$1ca1ec8b29a4ce27 = v);
+var $b5fd55387ed81591$export$1ca1ec8b29a4ce27;
+$b5fd55387ed81591$export$1ca1ec8b29a4ce27 = "_icon_8d86af";
 
 
 var $3ac2dbca350b9e6f$export$2e2bcd8739ae039 = ({ color: color = '#bebebe' , deselect: deselect  })=>{
     const [icon, setIcon] = $klFNZ$react.useState($klFNZ$fortawesomefreesolidsvgicons.faCheckCircle);
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($klFNZ$fortawesomereactfontawesome.FontAwesomeIcon, {
-        className: (/*@__PURE__*/$parcel$interopDefault($88e441429d918842$exports)).icon,
+        className: (/*@__PURE__*/$parcel$interopDefault($b5fd55387ed81591$exports)).icon,
         size: "2x",
         color: color,
         icon: icon,
@@ -518,37 +518,37 @@ var $3ac2dbca350b9e6f$export$2e2bcd8739ae039 = ({ color: color = '#bebebe' , des
 
 
 
-var $46946f6e0ce51c2e$exports = {};
+var $b6a98c6939b80947$exports = {};
 
-$parcel$export($46946f6e0ce51c2e$exports, "title", () => $46946f6e0ce51c2e$export$fb184b623420d9be, (v) => $46946f6e0ce51c2e$export$fb184b623420d9be = v);
-var $46946f6e0ce51c2e$export$fb184b623420d9be;
-$46946f6e0ce51c2e$export$fb184b623420d9be = "style__title__3f9Nav";
+$parcel$export($b6a98c6939b80947$exports, "title", () => $b6a98c6939b80947$export$fb184b623420d9be, (v) => $b6a98c6939b80947$export$fb184b623420d9be = v);
+var $b6a98c6939b80947$export$fb184b623420d9be;
+$b6a98c6939b80947$export$fb184b623420d9be = "_title_81adf0";
 
 
 var $ef0f4ddb49513b7b$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($46946f6e0ce51c2e$exports)).title,
+        className: (/*@__PURE__*/$parcel$interopDefault($b6a98c6939b80947$exports)).title,
         children: children
     })
 ;
 
 
-var $2fc6dad47a55a697$exports = {};
+var $29df6b5c8f1d244a$exports = {};
 
-$parcel$export($2fc6dad47a55a697$exports, "card", () => $2fc6dad47a55a697$export$aa3e815946b80764, (v) => $2fc6dad47a55a697$export$aa3e815946b80764 = v);
-$parcel$export($2fc6dad47a55a697$exports, "leftSideContainer", () => $2fc6dad47a55a697$export$59b1d651044d302, (v) => $2fc6dad47a55a697$export$59b1d651044d302 = v);
-var $2fc6dad47a55a697$export$aa3e815946b80764;
-var $2fc6dad47a55a697$export$59b1d651044d302;
-$2fc6dad47a55a697$export$aa3e815946b80764 = "style__card__3GICcq";
-$2fc6dad47a55a697$export$59b1d651044d302 = "style__leftSideContainer__8mtpJy";
+$parcel$export($29df6b5c8f1d244a$exports, "card", () => $29df6b5c8f1d244a$export$aa3e815946b80764, (v) => $29df6b5c8f1d244a$export$aa3e815946b80764 = v);
+$parcel$export($29df6b5c8f1d244a$exports, "leftSideContainer", () => $29df6b5c8f1d244a$export$59b1d651044d302, (v) => $29df6b5c8f1d244a$export$59b1d651044d302 = v);
+var $29df6b5c8f1d244a$export$aa3e815946b80764;
+var $29df6b5c8f1d244a$export$59b1d651044d302;
+$29df6b5c8f1d244a$export$aa3e815946b80764 = "_card_f0e9fb";
+$29df6b5c8f1d244a$export$59b1d651044d302 = "_leftSideContainer_f0e9fb";
 
 
 var $61e75dde1af98c77$export$2e2bcd8739ae039 = ({ name: name , userCount: userCount , selected: selected , color: color , save: save , toggleSelection: toggleSelection , combine: combine , readyToSave: readyToSave , cancel: cancel  })=>{
     const [newGroupTitle, setNewGroupTitle] = $klFNZ$react.useState('');
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("article", {
-        className: (/*@__PURE__*/$parcel$interopDefault($2fc6dad47a55a697$exports)).card,
+        className: (/*@__PURE__*/$parcel$interopDefault($29df6b5c8f1d244a$exports)).card,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-                className: (/*@__PURE__*/$parcel$interopDefault($2fc6dad47a55a697$exports)).leftSideContainer,
+                className: (/*@__PURE__*/$parcel$interopDefault($29df6b5c8f1d244a$exports)).leftSideContainer,
                 children: [
                     name ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($ef0f4ddb49513b7b$export$2e2bcd8739ae039, {
                         children: name
@@ -582,15 +582,15 @@ var $61e75dde1af98c77$export$2e2bcd8739ae039 = ({ name: name , userCount: userCo
 
 
 
-var $a56e326dd4b6d89c$exports = {};
+var $a5cef5765909aa3c$exports = {};
 
-$parcel$export($a56e326dd4b6d89c$exports, "title", () => $a56e326dd4b6d89c$export$fb184b623420d9be, (v) => $a56e326dd4b6d89c$export$fb184b623420d9be = v);
-var $a56e326dd4b6d89c$export$fb184b623420d9be;
-$a56e326dd4b6d89c$export$fb184b623420d9be = "style__title__8SpOOk";
+$parcel$export($a5cef5765909aa3c$exports, "title", () => $a5cef5765909aa3c$export$fb184b623420d9be, (v) => $a5cef5765909aa3c$export$fb184b623420d9be = v);
+var $a5cef5765909aa3c$export$fb184b623420d9be;
+$a5cef5765909aa3c$export$fb184b623420d9be = "_title_ffee34";
 
 
 var $194a15bef69f42d6$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($a56e326dd4b6d89c$exports)).title,
+        className: (/*@__PURE__*/$parcel$interopDefault($a5cef5765909aa3c$exports)).title,
         children: children
     })
 ;
@@ -603,16 +603,16 @@ var $194a15bef69f42d6$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__P
 
 
 
-var $340241a6f20fa029$exports = {};
+var $d5b447f71be6a19d$exports = {};
 
-$parcel$export($340241a6f20fa029$exports, "text", () => $340241a6f20fa029$export$6f093cfa640b7166, (v) => $340241a6f20fa029$export$6f093cfa640b7166 = v);
-var $340241a6f20fa029$export$6f093cfa640b7166;
-$340241a6f20fa029$export$6f093cfa640b7166 = "style__text__2k8gu1";
+$parcel$export($d5b447f71be6a19d$exports, "text", () => $d5b447f71be6a19d$export$6f093cfa640b7166, (v) => $d5b447f71be6a19d$export$6f093cfa640b7166 = v);
+var $d5b447f71be6a19d$export$6f093cfa640b7166;
+$d5b447f71be6a19d$export$6f093cfa640b7166 = "_text_1f301a";
 
 
 var $c08901f0816a98d4$export$2e2bcd8739ae039 = ({ children: children , style: style , className: className  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
         style: style,
-        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($340241a6f20fa029$exports)).text),
+        className: ($parcel$interopDefault($klFNZ$classnames))(className, (/*@__PURE__*/$parcel$interopDefault($d5b447f71be6a19d$exports)).text),
         children: children
     })
 ;
@@ -621,31 +621,31 @@ var $c08901f0816a98d4$export$2e2bcd8739ae039 = ({ children: children , style: st
 
 
 
-var $389639f2a8480dce$exports = {};
+var $3ca0ad569aed56c0$exports = {};
 
-$parcel$export($389639f2a8480dce$exports, "bars", () => $389639f2a8480dce$export$60912654947077e3, (v) => $389639f2a8480dce$export$60912654947077e3 = v);
-$parcel$export($389639f2a8480dce$exports, "bar", () => $389639f2a8480dce$export$d927737047eb3867, (v) => $389639f2a8480dce$export$d927737047eb3867 = v);
-$parcel$export($389639f2a8480dce$exports, "yesBar", () => $389639f2a8480dce$export$6a31b2d83bf3b7ff, (v) => $389639f2a8480dce$export$6a31b2d83bf3b7ff = v);
-$parcel$export($389639f2a8480dce$exports, "noBar", () => $389639f2a8480dce$export$e2b71f7b582462e, (v) => $389639f2a8480dce$export$e2b71f7b582462e = v);
-var $389639f2a8480dce$export$60912654947077e3;
-var $389639f2a8480dce$export$d927737047eb3867;
-var $389639f2a8480dce$export$6a31b2d83bf3b7ff;
-var $389639f2a8480dce$export$e2b71f7b582462e;
-$389639f2a8480dce$export$60912654947077e3 = "style__bars__LlyQwv";
-$389639f2a8480dce$export$d927737047eb3867 = "style__bar__3zgX4d";
-$389639f2a8480dce$export$6a31b2d83bf3b7ff = "style__yesBar__2ziebD";
-$389639f2a8480dce$export$e2b71f7b582462e = "style__noBar__23uV5H";
+$parcel$export($3ca0ad569aed56c0$exports, "bars", () => $3ca0ad569aed56c0$export$60912654947077e3, (v) => $3ca0ad569aed56c0$export$60912654947077e3 = v);
+$parcel$export($3ca0ad569aed56c0$exports, "bar", () => $3ca0ad569aed56c0$export$d927737047eb3867, (v) => $3ca0ad569aed56c0$export$d927737047eb3867 = v);
+$parcel$export($3ca0ad569aed56c0$exports, "yesBar", () => $3ca0ad569aed56c0$export$6a31b2d83bf3b7ff, (v) => $3ca0ad569aed56c0$export$6a31b2d83bf3b7ff = v);
+$parcel$export($3ca0ad569aed56c0$exports, "noBar", () => $3ca0ad569aed56c0$export$e2b71f7b582462e, (v) => $3ca0ad569aed56c0$export$e2b71f7b582462e = v);
+var $3ca0ad569aed56c0$export$60912654947077e3;
+var $3ca0ad569aed56c0$export$d927737047eb3867;
+var $3ca0ad569aed56c0$export$6a31b2d83bf3b7ff;
+var $3ca0ad569aed56c0$export$e2b71f7b582462e;
+$3ca0ad569aed56c0$export$60912654947077e3 = "_bars_413fe9";
+$3ca0ad569aed56c0$export$d927737047eb3867 = "_bar_413fe9";
+$3ca0ad569aed56c0$export$6a31b2d83bf3b7ff = "_yesBar_413fe9";
+$3ca0ad569aed56c0$export$e2b71f7b582462e = "_noBar_413fe9";
 
 
 var $ea0aac0946cf69ac$export$2e2bcd8739ae039 = ({ yes: yes , no: no , onHover: onHover , createNewGroup: createNewGroup  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($389639f2a8480dce$exports)).bars,
+        className: (/*@__PURE__*/$parcel$interopDefault($3ca0ad569aed56c0$exports)).bars,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
                 style: {
                     width: `${yes}%`
                 },
-                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($389639f2a8480dce$exports)).bar, (/*@__PURE__*/$parcel$interopDefault($389639f2a8480dce$exports)).yesBar),
+                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($3ca0ad569aed56c0$exports)).bar, (/*@__PURE__*/$parcel$interopDefault($3ca0ad569aed56c0$exports)).yesBar),
                 onMouseEnter: ()=>onHover('yes')
                 ,
                 onMouseLeave: ()=>onHover()
@@ -656,7 +656,7 @@ var $ea0aac0946cf69ac$export$2e2bcd8739ae039 = ({ yes: yes , no: no , onHover: o
                 style: {
                     width: `${no}%`
                 },
-                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($389639f2a8480dce$exports)).bar, (/*@__PURE__*/$parcel$interopDefault($389639f2a8480dce$exports)).noBar),
+                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($3ca0ad569aed56c0$exports)).bar, (/*@__PURE__*/$parcel$interopDefault($3ca0ad569aed56c0$exports)).noBar),
                 onMouseEnter: ()=>onHover('no')
                 ,
                 onMouseLeave: ()=>onHover()
@@ -668,17 +668,17 @@ var $ea0aac0946cf69ac$export$2e2bcd8739ae039 = ({ yes: yes , no: no , onHover: o
 };
 
 
-var $378b420f84c8008e$exports = {};
+var $d6d91ce42cf9d02e$exports = {};
 
-$parcel$export($378b420f84c8008e$exports, "stats", () => $378b420f84c8008e$export$7804429c45dff272, (v) => $378b420f84c8008e$export$7804429c45dff272 = v);
-$parcel$export($378b420f84c8008e$exports, "textContainer", () => $378b420f84c8008e$export$2cedfd664bb3bd01, (v) => $378b420f84c8008e$export$2cedfd664bb3bd01 = v);
-$parcel$export($378b420f84c8008e$exports, "text", () => $378b420f84c8008e$export$6f093cfa640b7166, (v) => $378b420f84c8008e$export$6f093cfa640b7166 = v);
-var $378b420f84c8008e$export$7804429c45dff272;
-var $378b420f84c8008e$export$2cedfd664bb3bd01;
-var $378b420f84c8008e$export$6f093cfa640b7166;
-$378b420f84c8008e$export$7804429c45dff272 = "style__stats__3HtL2c";
-$378b420f84c8008e$export$2cedfd664bb3bd01 = "style__textContainer__10azLR";
-$378b420f84c8008e$export$6f093cfa640b7166 = "style__text__3r7kpQ";
+$parcel$export($d6d91ce42cf9d02e$exports, "stats", () => $d6d91ce42cf9d02e$export$7804429c45dff272, (v) => $d6d91ce42cf9d02e$export$7804429c45dff272 = v);
+$parcel$export($d6d91ce42cf9d02e$exports, "textContainer", () => $d6d91ce42cf9d02e$export$2cedfd664bb3bd01, (v) => $d6d91ce42cf9d02e$export$2cedfd664bb3bd01 = v);
+$parcel$export($d6d91ce42cf9d02e$exports, "text", () => $d6d91ce42cf9d02e$export$6f093cfa640b7166, (v) => $d6d91ce42cf9d02e$export$6f093cfa640b7166 = v);
+var $d6d91ce42cf9d02e$export$7804429c45dff272;
+var $d6d91ce42cf9d02e$export$2cedfd664bb3bd01;
+var $d6d91ce42cf9d02e$export$6f093cfa640b7166;
+$d6d91ce42cf9d02e$export$7804429c45dff272 = "_stats_8d605a";
+$d6d91ce42cf9d02e$export$2cedfd664bb3bd01 = "_textContainer_8d605a";
+$d6d91ce42cf9d02e$export$6f093cfa640b7166 = "_text_8d605a";
 
 
 const $57a54752ed551bc0$var$calcPercent = (x, sum)=>Math.floor(x / sum * 100)
@@ -693,7 +693,7 @@ var $57a54752ed551bc0$export$2e2bcd8739ae039 = ({ yes: yes , no: no , createNewG
     const yesPercentage = $57a54752ed551bc0$var$calcPercent(yes, yes + no);
     const noPercentage = $57a54752ed551bc0$var$calcPercent(no, yes + no);
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($378b420f84c8008e$exports)).stats,
+        className: (/*@__PURE__*/$parcel$interopDefault($d6d91ce42cf9d02e$exports)).stats,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs($c08901f0816a98d4$export$2e2bcd8739ae039, {
                 secondary: true,
@@ -713,10 +713,10 @@ var $57a54752ed551bc0$export$2e2bcd8739ae039 = ({ yes: yes , no: no , createNewG
                         createNewGroup: createNewGroup
                     }),
                     /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-                        className: (/*@__PURE__*/$parcel$interopDefault($378b420f84c8008e$exports)).textContainer,
+                        className: (/*@__PURE__*/$parcel$interopDefault($d6d91ce42cf9d02e$exports)).textContainer,
                         children: [
                             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs($c08901f0816a98d4$export$2e2bcd8739ae039, {
-                                className: (/*@__PURE__*/$parcel$interopDefault($378b420f84c8008e$exports)).text,
+                                className: (/*@__PURE__*/$parcel$interopDefault($d6d91ce42cf9d02e$exports)).text,
                                 style: {
                                     width: `${yesPercentage}%`
                                 },
@@ -726,7 +726,7 @@ var $57a54752ed551bc0$export$2e2bcd8739ae039 = ({ yes: yes , no: no , createNewG
                                 ]
                             }),
                             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs($c08901f0816a98d4$export$2e2bcd8739ae039, {
-                                className: (/*@__PURE__*/$parcel$interopDefault($378b420f84c8008e$exports)).text,
+                                className: (/*@__PURE__*/$parcel$interopDefault($d6d91ce42cf9d02e$exports)).text,
                                 style: {
                                     width: `${noPercentage}%`
                                 },
@@ -749,30 +749,30 @@ var $57a54752ed551bc0$export$2e2bcd8739ae039 = ({ yes: yes , no: no , createNewG
 
 
 
-var $8b3dfc43b771ba76$exports = {};
+var $788b5cd68a8acaa5$exports = {};
 
-$parcel$export($8b3dfc43b771ba76$exports, "text", () => $8b3dfc43b771ba76$export$6f093cfa640b7166, (v) => $8b3dfc43b771ba76$export$6f093cfa640b7166 = v);
-$parcel$export($8b3dfc43b771ba76$exports, "yes", () => $8b3dfc43b771ba76$export$7a668e70ea2210d9, (v) => $8b3dfc43b771ba76$export$7a668e70ea2210d9 = v);
-$parcel$export($8b3dfc43b771ba76$exports, "no", () => $8b3dfc43b771ba76$export$401451a107dc42ce, (v) => $8b3dfc43b771ba76$export$401451a107dc42ce = v);
-var $8b3dfc43b771ba76$export$6f093cfa640b7166;
-var $8b3dfc43b771ba76$export$7a668e70ea2210d9;
-var $8b3dfc43b771ba76$export$401451a107dc42ce;
-$8b3dfc43b771ba76$export$6f093cfa640b7166 = "style__text__jBVfXn";
-$8b3dfc43b771ba76$export$7a668e70ea2210d9 = "style__yes__1sM0pG";
-$8b3dfc43b771ba76$export$401451a107dc42ce = "style__no__8WZwRt";
+$parcel$export($788b5cd68a8acaa5$exports, "text", () => $788b5cd68a8acaa5$export$6f093cfa640b7166, (v) => $788b5cd68a8acaa5$export$6f093cfa640b7166 = v);
+$parcel$export($788b5cd68a8acaa5$exports, "yes", () => $788b5cd68a8acaa5$export$7a668e70ea2210d9, (v) => $788b5cd68a8acaa5$export$7a668e70ea2210d9 = v);
+$parcel$export($788b5cd68a8acaa5$exports, "no", () => $788b5cd68a8acaa5$export$401451a107dc42ce, (v) => $788b5cd68a8acaa5$export$401451a107dc42ce = v);
+var $788b5cd68a8acaa5$export$6f093cfa640b7166;
+var $788b5cd68a8acaa5$export$7a668e70ea2210d9;
+var $788b5cd68a8acaa5$export$401451a107dc42ce;
+$788b5cd68a8acaa5$export$6f093cfa640b7166 = "_text_096ef8";
+$788b5cd68a8acaa5$export$7a668e70ea2210d9 = "_yes_096ef8";
+$788b5cd68a8acaa5$export$401451a107dc42ce = "_no_096ef8";
 
 
 var $daeacf9d8b98618b$export$2e2bcd8739ae039 = ({ answer: answer  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($8b3dfc43b771ba76$exports)).text,
+        className: (/*@__PURE__*/$parcel$interopDefault($788b5cd68a8acaa5$exports)).text,
         children: [
             "Your answer:",
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("span", {
                 children: ' '
             }),
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("span", {
-                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($8b3dfc43b771ba76$exports)).text, {
-                    [(/*@__PURE__*/$parcel$interopDefault($8b3dfc43b771ba76$exports)).yes]: answer.toLowerCase() === 'yes',
-                    [(/*@__PURE__*/$parcel$interopDefault($8b3dfc43b771ba76$exports)).no]: answer.toLowerCase() === 'no'
+                className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($788b5cd68a8acaa5$exports)).text, {
+                    [(/*@__PURE__*/$parcel$interopDefault($788b5cd68a8acaa5$exports)).yes]: answer.toLowerCase() === 'yes',
+                    [(/*@__PURE__*/$parcel$interopDefault($788b5cd68a8acaa5$exports)).no]: answer.toLowerCase() === 'no'
                 }),
                 children: $klFNZ$lodash.capitalize(answer)
             })
@@ -787,24 +787,24 @@ var $daeacf9d8b98618b$export$2e2bcd8739ae039 = ({ answer: answer  })=>/*#__PURE_
 
 
 
-var $49ae03d4bf36f5da$exports = {};
+var $9d5e321cebdac1dc$exports = {};
 
-$parcel$export($49ae03d4bf36f5da$exports, "button", () => $49ae03d4bf36f5da$export$2ba01fb71ed41cb6, (v) => $49ae03d4bf36f5da$export$2ba01fb71ed41cb6 = v);
-$parcel$export($49ae03d4bf36f5da$exports, "yes", () => $49ae03d4bf36f5da$export$7a668e70ea2210d9, (v) => $49ae03d4bf36f5da$export$7a668e70ea2210d9 = v);
-$parcel$export($49ae03d4bf36f5da$exports, "no", () => $49ae03d4bf36f5da$export$401451a107dc42ce, (v) => $49ae03d4bf36f5da$export$401451a107dc42ce = v);
-var $49ae03d4bf36f5da$export$2ba01fb71ed41cb6;
-var $49ae03d4bf36f5da$export$7a668e70ea2210d9;
-var $49ae03d4bf36f5da$export$401451a107dc42ce;
-$49ae03d4bf36f5da$export$2ba01fb71ed41cb6 = "style__button__1fN5w9";
-$49ae03d4bf36f5da$export$7a668e70ea2210d9 = "style__yes__2fIEJv";
-$49ae03d4bf36f5da$export$401451a107dc42ce = "style__no__5U6bkK";
+$parcel$export($9d5e321cebdac1dc$exports, "button", () => $9d5e321cebdac1dc$export$2ba01fb71ed41cb6, (v) => $9d5e321cebdac1dc$export$2ba01fb71ed41cb6 = v);
+$parcel$export($9d5e321cebdac1dc$exports, "yes", () => $9d5e321cebdac1dc$export$7a668e70ea2210d9, (v) => $9d5e321cebdac1dc$export$7a668e70ea2210d9 = v);
+$parcel$export($9d5e321cebdac1dc$exports, "no", () => $9d5e321cebdac1dc$export$401451a107dc42ce, (v) => $9d5e321cebdac1dc$export$401451a107dc42ce = v);
+var $9d5e321cebdac1dc$export$2ba01fb71ed41cb6;
+var $9d5e321cebdac1dc$export$7a668e70ea2210d9;
+var $9d5e321cebdac1dc$export$401451a107dc42ce;
+$9d5e321cebdac1dc$export$2ba01fb71ed41cb6 = "_button_0dae0a";
+$9d5e321cebdac1dc$export$7a668e70ea2210d9 = "_yes_0dae0a";
+$9d5e321cebdac1dc$export$401451a107dc42ce = "_no_0dae0a";
 
 
 var $3164c83b2ba22f63$export$2e2bcd8739ae039 = ({ answer: answer , respond: respond  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("button", {
-        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($49ae03d4bf36f5da$exports)).button, {
-            [(/*@__PURE__*/$parcel$interopDefault($49ae03d4bf36f5da$exports)).yes]: answer.toLowerCase() === 'yes',
-            [(/*@__PURE__*/$parcel$interopDefault($49ae03d4bf36f5da$exports)).no]: answer.toLowerCase() === 'no'
+        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($9d5e321cebdac1dc$exports)).button, {
+            [(/*@__PURE__*/$parcel$interopDefault($9d5e321cebdac1dc$exports)).yes]: answer.toLowerCase() === 'yes',
+            [(/*@__PURE__*/$parcel$interopDefault($9d5e321cebdac1dc$exports)).no]: answer.toLowerCase() === 'no'
         }),
         onClick: respond,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
@@ -814,16 +814,16 @@ var $3164c83b2ba22f63$export$2e2bcd8739ae039 = ({ answer: answer , respond: resp
 };
 
 
-var $c483756bbc24227b$exports = {};
+var $35e5d7349ea6d680$exports = {};
 
-$parcel$export($c483756bbc24227b$exports, "answerButtons", () => $c483756bbc24227b$export$33b0e16035b753e, (v) => $c483756bbc24227b$export$33b0e16035b753e = v);
-var $c483756bbc24227b$export$33b0e16035b753e;
-$c483756bbc24227b$export$33b0e16035b753e = "style__answerButtons__25_AeN";
+$parcel$export($35e5d7349ea6d680$exports, "answerButtons", () => $35e5d7349ea6d680$export$33b0e16035b753e, (v) => $35e5d7349ea6d680$export$33b0e16035b753e = v);
+var $35e5d7349ea6d680$export$33b0e16035b753e;
+$35e5d7349ea6d680$export$33b0e16035b753e = "_answerButtons_f0c862";
 
 
 var $9ad36611c1075068$export$2e2bcd8739ae039 = ({ respond: respond  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($c483756bbc24227b$exports)).answerButtons,
+        className: (/*@__PURE__*/$parcel$interopDefault($35e5d7349ea6d680$exports)).answerButtons,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($3164c83b2ba22f63$export$2e2bcd8739ae039, {
                 answer: "Yes",
@@ -839,19 +839,19 @@ var $9ad36611c1075068$export$2e2bcd8739ae039 = ({ respond: respond  })=>{
 
 
 
-var $9eb4ade9f8f1fe3d$exports = {};
+var $6807b5120e7c7a46$exports = {};
 
-$parcel$export($9eb4ade9f8f1fe3d$exports, "card", () => $9eb4ade9f8f1fe3d$export$aa3e815946b80764, (v) => $9eb4ade9f8f1fe3d$export$aa3e815946b80764 = v);
-$parcel$export($9eb4ade9f8f1fe3d$exports, "hint", () => $9eb4ade9f8f1fe3d$export$464c821cd4347539, (v) => $9eb4ade9f8f1fe3d$export$464c821cd4347539 = v);
-var $9eb4ade9f8f1fe3d$export$aa3e815946b80764;
-var $9eb4ade9f8f1fe3d$export$464c821cd4347539;
-$9eb4ade9f8f1fe3d$export$aa3e815946b80764 = "style__card__2rKmvz";
-$9eb4ade9f8f1fe3d$export$464c821cd4347539 = "style__hint__FjdNMS";
+$parcel$export($6807b5120e7c7a46$exports, "card", () => $6807b5120e7c7a46$export$aa3e815946b80764, (v) => $6807b5120e7c7a46$export$aa3e815946b80764 = v);
+$parcel$export($6807b5120e7c7a46$exports, "hint", () => $6807b5120e7c7a46$export$464c821cd4347539, (v) => $6807b5120e7c7a46$export$464c821cd4347539 = v);
+var $6807b5120e7c7a46$export$aa3e815946b80764;
+var $6807b5120e7c7a46$export$464c821cd4347539;
+$6807b5120e7c7a46$export$aa3e815946b80764 = "_card_3d0cdf";
+$6807b5120e7c7a46$export$464c821cd4347539 = "_hint_3d0cdf";
 
 
 var $df71309407d515a9$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion , name: name , answersCount: answersCount , currentUserAnswer: answer , respond: respond , createNewGroup: createNewGroup  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("article", {
-        className: (/*@__PURE__*/$parcel$interopDefault($9eb4ade9f8f1fe3d$exports)).card,
+        className: (/*@__PURE__*/$parcel$interopDefault($6807b5120e7c7a46$exports)).card,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($194a15bef69f42d6$export$2e2bcd8739ae039, {
                 children: name
@@ -861,7 +861,7 @@ var $df71309407d515a9$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
                 createNewGroup: createNewGroup
             }),
             yourOwnQuestion ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-                className: (/*@__PURE__*/$parcel$interopDefault($9eb4ade9f8f1fe3d$exports)).hint,
+                className: (/*@__PURE__*/$parcel$interopDefault($6807b5120e7c7a46$exports)).hint,
                 children: "You cannot answer your own question"
             }) : answer ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($daeacf9d8b98618b$export$2e2bcd8739ae039, {
                 answer: answer
@@ -878,21 +878,21 @@ var $df71309407d515a9$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
 
 
 
-var $2e1240b63b3afdab$exports = {};
+var $01a57ec41b8a9247$exports = {};
 
-$parcel$export($2e1240b63b3afdab$exports, "textarea", () => $2e1240b63b3afdab$export$a3574df893ffa88d, (v) => $2e1240b63b3afdab$export$a3574df893ffa88d = v);
-$parcel$export($2e1240b63b3afdab$exports, "text", () => $2e1240b63b3afdab$export$6f093cfa640b7166, (v) => $2e1240b63b3afdab$export$6f093cfa640b7166 = v);
-var $2e1240b63b3afdab$export$a3574df893ffa88d;
-var $2e1240b63b3afdab$export$6f093cfa640b7166;
-$2e1240b63b3afdab$export$a3574df893ffa88d = "style__textarea__1T00ud";
-$2e1240b63b3afdab$export$6f093cfa640b7166 = "style__text__348HQ6";
+$parcel$export($01a57ec41b8a9247$exports, "textarea", () => $01a57ec41b8a9247$export$a3574df893ffa88d, (v) => $01a57ec41b8a9247$export$a3574df893ffa88d = v);
+$parcel$export($01a57ec41b8a9247$exports, "text", () => $01a57ec41b8a9247$export$6f093cfa640b7166, (v) => $01a57ec41b8a9247$export$6f093cfa640b7166 = v);
+var $01a57ec41b8a9247$export$a3574df893ffa88d;
+var $01a57ec41b8a9247$export$6f093cfa640b7166;
+$01a57ec41b8a9247$export$a3574df893ffa88d = "_textarea_36b97b";
+$01a57ec41b8a9247$export$6f093cfa640b7166 = "_text_36b97b";
 
 
 var $ea01694ccbc54f0e$export$2e2bcd8739ae039 = ({ onChange: onChange , value: value  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-        className: (/*@__PURE__*/$parcel$interopDefault($2e1240b63b3afdab$exports)).text,
+        className: (/*@__PURE__*/$parcel$interopDefault($01a57ec41b8a9247$exports)).text,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("textarea", {
             placeholder: "Type your question here...",
-            className: (/*@__PURE__*/$parcel$interopDefault($2e1240b63b3afdab$exports)).textarea,
+            className: (/*@__PURE__*/$parcel$interopDefault($01a57ec41b8a9247$exports)).textarea,
             onChange: onChange,
             value: value
         })
@@ -900,11 +900,11 @@ var $ea01694ccbc54f0e$export$2e2bcd8739ae039 = ({ onChange: onChange , value: va
 ;
 
 
-var $d815052f679a24bd$exports = {};
+var $caff8b7e83075118$exports = {};
 
-$parcel$export($d815052f679a24bd$exports, "newQuestion", () => $d815052f679a24bd$export$9ad540bb5fc131aa, (v) => $d815052f679a24bd$export$9ad540bb5fc131aa = v);
-var $d815052f679a24bd$export$9ad540bb5fc131aa;
-$d815052f679a24bd$export$9ad540bb5fc131aa = "style__newQuestion__1XmxtO";
+$parcel$export($caff8b7e83075118$exports, "newQuestion", () => $caff8b7e83075118$export$9ad540bb5fc131aa, (v) => $caff8b7e83075118$export$9ad540bb5fc131aa = v);
+var $caff8b7e83075118$export$9ad540bb5fc131aa;
+$caff8b7e83075118$export$9ad540bb5fc131aa = "_newQuestion_4a75b1";
 
 
 var $65d2e36683ed403b$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion  })=>{
@@ -917,7 +917,7 @@ var $65d2e36683ed403b$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion  })
         } else setQuestion(newQuestion);
     };
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($d815052f679a24bd$exports)).newQuestion,
+        className: (/*@__PURE__*/$parcel$interopDefault($caff8b7e83075118$exports)).newQuestion,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($ea01694ccbc54f0e$export$2e2bcd8739ae039, {
             value: question,
             onChange: onChange
@@ -932,11 +932,11 @@ var $65d2e36683ed403b$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion  })
 
 
 
-var $9fcb8f904d85e247$exports = {};
+var $1fe39892076d0e58$exports = {};
 
-$parcel$export($9fcb8f904d85e247$exports, "container", () => $9fcb8f904d85e247$export$34e0f9847d4c02dd, (v) => $9fcb8f904d85e247$export$34e0f9847d4c02dd = v);
-var $9fcb8f904d85e247$export$34e0f9847d4c02dd;
-$9fcb8f904d85e247$export$34e0f9847d4c02dd = "style__container__1L8x_J";
+$parcel$export($1fe39892076d0e58$exports, "container", () => $1fe39892076d0e58$export$34e0f9847d4c02dd, (v) => $1fe39892076d0e58$export$34e0f9847d4c02dd = v);
+var $1fe39892076d0e58$export$34e0f9847d4c02dd;
+$1fe39892076d0e58$export$34e0f9847d4c02dd = "_container_9612d8";
 
 
 var $346d3c9e2eaf59bb$export$2e2bcd8739ae039 = ({ children: children  })=>{
@@ -950,22 +950,22 @@ var $346d3c9e2eaf59bb$export$2e2bcd8739ae039 = ({ children: children  })=>{
     });
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("main", {
         ...handlers,
-        className: (/*@__PURE__*/$parcel$interopDefault($9fcb8f904d85e247$exports)).container,
+        className: (/*@__PURE__*/$parcel$interopDefault($1fe39892076d0e58$exports)).container,
         children: children
     }));
 };
 const $346d3c9e2eaf59bb$export$97295e60e7f371e1 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("main", {
-        className: (/*@__PURE__*/$parcel$interopDefault($9fcb8f904d85e247$exports)).container,
+        className: (/*@__PURE__*/$parcel$interopDefault($1fe39892076d0e58$exports)).container,
         children: children
     })
 ;
 
 
-var $719dc0cfcd05f2c6$exports = {};
+var $5cf1d9bd19cbc1c0$exports = {};
 
-$parcel$export($719dc0cfcd05f2c6$exports, "body", () => $719dc0cfcd05f2c6$export$32180ef41b15b513, (v) => $719dc0cfcd05f2c6$export$32180ef41b15b513 = v);
-var $719dc0cfcd05f2c6$export$32180ef41b15b513;
-$719dc0cfcd05f2c6$export$32180ef41b15b513 = "style__body__1gUc8D";
+$parcel$export($5cf1d9bd19cbc1c0$exports, "body", () => $5cf1d9bd19cbc1c0$export$32180ef41b15b513, (v) => $5cf1d9bd19cbc1c0$export$32180ef41b15b513 = v);
+var $5cf1d9bd19cbc1c0$export$32180ef41b15b513;
+$5cf1d9bd19cbc1c0$export$32180ef41b15b513 = "_body_30bc21";
 
 
 const $13451d956f5eeda4$export$2515d253ab459c32 = 450;
@@ -998,7 +998,7 @@ var $b892b0156e6f0d23$export$2e2bcd8739ae039 = ({ children: children , includeSw
             style: {
                 height: mainScreen ? '100%' : 'auto'
             },
-            className: (/*@__PURE__*/$parcel$interopDefault($719dc0cfcd05f2c6$exports)).body,
+            className: (/*@__PURE__*/$parcel$interopDefault($5cf1d9bd19cbc1c0$exports)).body,
             children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($346d3c9e2eaf59bb$export$2e2bcd8739ae039, {
                 children: children
             })
@@ -1008,7 +1008,7 @@ var $b892b0156e6f0d23$export$2e2bcd8739ae039 = ({ children: children , includeSw
         style: {
             height: mainScreen ? '100%' : 'auto'
         },
-        className: (/*@__PURE__*/$parcel$interopDefault($719dc0cfcd05f2c6$exports)).body,
+        className: (/*@__PURE__*/$parcel$interopDefault($5cf1d9bd19cbc1c0$exports)).body,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($346d3c9e2eaf59bb$export$97295e60e7f371e1, {
             children: children
         })
@@ -1019,15 +1019,15 @@ var $b892b0156e6f0d23$export$2e2bcd8739ae039 = ({ children: children , includeSw
 
 
 
-var $6a4fad94e7edd529$exports = {};
+var $270ad0ca56a2a0ba$exports = {};
 
-$parcel$export($6a4fad94e7edd529$exports, "groupContainer", () => $6a4fad94e7edd529$export$f36792cb9bd81925, (v) => $6a4fad94e7edd529$export$f36792cb9bd81925 = v);
-var $6a4fad94e7edd529$export$f36792cb9bd81925;
-$6a4fad94e7edd529$export$f36792cb9bd81925 = "style__groupContainer__1CkDrB";
+$parcel$export($270ad0ca56a2a0ba$exports, "groupContainer", () => $270ad0ca56a2a0ba$export$f36792cb9bd81925, (v) => $270ad0ca56a2a0ba$export$f36792cb9bd81925 = v);
+var $270ad0ca56a2a0ba$export$f36792cb9bd81925;
+$270ad0ca56a2a0ba$export$f36792cb9bd81925 = "_groupContainer_335d37";
 
 
 var $4df27299f125c82f$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($6a4fad94e7edd529$exports)).groupContainer,
+        className: (/*@__PURE__*/$parcel$interopDefault($270ad0ca56a2a0ba$exports)).groupContainer,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($klFNZ$reactcustomscrollbars.Scrollbars, {
             style: {
                 width: '100%',
@@ -1046,21 +1046,21 @@ var $4df27299f125c82f$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__P
 
 
 
-var $c68ad62351c0323c$exports = {};
+var $4023315c3c408fbe$exports = {};
 
-$parcel$export($c68ad62351c0323c$exports, "title", () => $c68ad62351c0323c$export$fb184b623420d9be, (v) => $c68ad62351c0323c$export$fb184b623420d9be = v);
-$parcel$export($c68ad62351c0323c$exports, "secondary", () => $c68ad62351c0323c$export$745c6f71a1e0e6f7, (v) => $c68ad62351c0323c$export$745c6f71a1e0e6f7 = v);
-var $c68ad62351c0323c$export$fb184b623420d9be;
-var $c68ad62351c0323c$export$745c6f71a1e0e6f7;
-$c68ad62351c0323c$export$fb184b623420d9be = "style__title__36TKr-";
-$c68ad62351c0323c$export$745c6f71a1e0e6f7 = "style__secondary__2eIokH";
+$parcel$export($4023315c3c408fbe$exports, "title", () => $4023315c3c408fbe$export$fb184b623420d9be, (v) => $4023315c3c408fbe$export$fb184b623420d9be = v);
+$parcel$export($4023315c3c408fbe$exports, "secondary", () => $4023315c3c408fbe$export$745c6f71a1e0e6f7, (v) => $4023315c3c408fbe$export$745c6f71a1e0e6f7 = v);
+var $4023315c3c408fbe$export$fb184b623420d9be;
+var $4023315c3c408fbe$export$745c6f71a1e0e6f7;
+$4023315c3c408fbe$export$fb184b623420d9be = "_title_3bf580";
+$4023315c3c408fbe$export$745c6f71a1e0e6f7 = "_secondary_3bf580";
 
 
 var $67920020b20febf4$export$2e2bcd8739ae039 = ({ children: children , className: className , color: color  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("h1", {
         style: {
             color: color
         },
-        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($c68ad62351c0323c$exports)).title, className),
+        className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($4023315c3c408fbe$exports)).title, className),
         children: children
     })
 ;
@@ -1068,31 +1068,31 @@ var $67920020b20febf4$export$2e2bcd8739ae039 = ({ children: children , className
 
 
 
-var $66b6507a0fec1e4d$exports = {};
+var $bd60e00a3a745b29$exports = {};
 
-$parcel$export($66b6507a0fec1e4d$exports, "container", () => $66b6507a0fec1e4d$export$34e0f9847d4c02dd, (v) => $66b6507a0fec1e4d$export$34e0f9847d4c02dd = v);
-var $66b6507a0fec1e4d$export$34e0f9847d4c02dd;
-$66b6507a0fec1e4d$export$34e0f9847d4c02dd = "style__container__1d6MQu";
+$parcel$export($bd60e00a3a745b29$exports, "container", () => $bd60e00a3a745b29$export$34e0f9847d4c02dd, (v) => $bd60e00a3a745b29$export$34e0f9847d4c02dd = v);
+var $bd60e00a3a745b29$export$34e0f9847d4c02dd;
+$bd60e00a3a745b29$export$34e0f9847d4c02dd = "_container_0ef682";
 
 
 var $1ea2ee3bd8693617$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($66b6507a0fec1e4d$exports)).container,
+        className: (/*@__PURE__*/$parcel$interopDefault($bd60e00a3a745b29$exports)).container,
         children: children
     })
 ;
 
 
-var $e8cc94f29213afb4$exports = {};
+var $8669e9038b613132$exports = {};
 
-$parcel$export($e8cc94f29213afb4$exports, "mainScreen", () => $e8cc94f29213afb4$export$e962ae2959462fd2, (v) => $e8cc94f29213afb4$export$e962ae2959462fd2 = v);
-var $e8cc94f29213afb4$export$e962ae2959462fd2;
-$e8cc94f29213afb4$export$e962ae2959462fd2 = "style__mainScreen__2CxoRS";
+$parcel$export($8669e9038b613132$exports, "mainScreen", () => $8669e9038b613132$export$e962ae2959462fd2, (v) => $8669e9038b613132$export$e962ae2959462fd2 = v);
+var $8669e9038b613132$export$e962ae2959462fd2;
+$8669e9038b613132$export$e962ae2959462fd2 = "_mainScreen_a47f27";
 
 
 
 var $518716977d13fe13$export$2e2bcd8739ae039 = ({ children: children , style: style  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("section", {
         style: style,
-        className: (/*@__PURE__*/$parcel$interopDefault($e8cc94f29213afb4$exports)).mainScreen,
+        className: (/*@__PURE__*/$parcel$interopDefault($8669e9038b613132$exports)).mainScreen,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($67920020b20febf4$export$2e2bcd8739ae039, {
                 color: "#3d465e",
@@ -1136,22 +1136,22 @@ var $518716977d13fe13$export$2e2bcd8739ae039 = ({ children: children , style: st
 
 
 
-var $a591e7a9805c0de7$exports = {};
+var $8eb49d52494d8072$exports = {};
 
-$parcel$export($a591e7a9805c0de7$exports, "sidebar", () => $a591e7a9805c0de7$export$6fbb9cd2843e91b2, (v) => $a591e7a9805c0de7$export$6fbb9cd2843e91b2 = v);
-$parcel$export($a591e7a9805c0de7$exports, "title", () => $a591e7a9805c0de7$export$fb184b623420d9be, (v) => $a591e7a9805c0de7$export$fb184b623420d9be = v);
-var $a591e7a9805c0de7$export$6fbb9cd2843e91b2;
-var $a591e7a9805c0de7$export$fb184b623420d9be;
-$a591e7a9805c0de7$export$6fbb9cd2843e91b2 = "style__sidebar__-TfDI3";
-$a591e7a9805c0de7$export$fb184b623420d9be = "style__title__3HQRMO";
+$parcel$export($8eb49d52494d8072$exports, "sidebar", () => $8eb49d52494d8072$export$6fbb9cd2843e91b2, (v) => $8eb49d52494d8072$export$6fbb9cd2843e91b2 = v);
+$parcel$export($8eb49d52494d8072$exports, "title", () => $8eb49d52494d8072$export$fb184b623420d9be, (v) => $8eb49d52494d8072$export$fb184b623420d9be = v);
+var $8eb49d52494d8072$export$6fbb9cd2843e91b2;
+var $8eb49d52494d8072$export$fb184b623420d9be;
+$8eb49d52494d8072$export$6fbb9cd2843e91b2 = "_sidebar_df38d0";
+$8eb49d52494d8072$export$fb184b623420d9be = "_title_df38d0";
 
 
 var $f7e695decee1351a$export$2e2bcd8739ae039 = ({ children: children , title: title , style: style  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
         style: style,
-        className: (/*@__PURE__*/$parcel$interopDefault($a591e7a9805c0de7$exports)).sidebar,
+        className: (/*@__PURE__*/$parcel$interopDefault($8eb49d52494d8072$exports)).sidebar,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($67920020b20febf4$export$2e2bcd8739ae039, {
-                className: (/*@__PURE__*/$parcel$interopDefault($a591e7a9805c0de7$exports)).title,
+                className: (/*@__PURE__*/$parcel$interopDefault($8eb49d52494d8072$exports)).title,
                 color: "#b1b8c7",
                 children: title
             }),
@@ -1166,40 +1166,40 @@ var $f7e695decee1351a$export$2e2bcd8739ae039 = ({ children: children , title: ti
 
 
 
-var $64ab8800f570d34b$exports = {};
+var $ea65fa46f19245a8$exports = {};
 
-$parcel$export($64ab8800f570d34b$exports, "title", () => $64ab8800f570d34b$export$fb184b623420d9be, (v) => $64ab8800f570d34b$export$fb184b623420d9be = v);
-var $64ab8800f570d34b$export$fb184b623420d9be;
-$64ab8800f570d34b$export$fb184b623420d9be = "style__title__36gfBx";
+$parcel$export($ea65fa46f19245a8$exports, "title", () => $ea65fa46f19245a8$export$fb184b623420d9be, (v) => $ea65fa46f19245a8$export$fb184b623420d9be = v);
+var $ea65fa46f19245a8$export$fb184b623420d9be;
+$ea65fa46f19245a8$export$fb184b623420d9be = "_title_6e8dfe";
 
 
 var $87d20942e8dd7c23$export$2e2bcd8739ae039 = ({ children: children  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("h2", {
-        className: (/*@__PURE__*/$parcel$interopDefault($64ab8800f570d34b$exports)).title,
+        className: (/*@__PURE__*/$parcel$interopDefault($ea65fa46f19245a8$exports)).title,
         children: children
     })
 ;
 
 
-var $59ab44be5b3f1f38$exports = {};
+var $4b581a50150e8acf$exports = {};
 
-$parcel$export($59ab44be5b3f1f38$exports, "cardsRow", () => $59ab44be5b3f1f38$export$3ffd594349b5aa88, (v) => $59ab44be5b3f1f38$export$3ffd594349b5aa88 = v);
-$parcel$export($59ab44be5b3f1f38$exports, "scrollContainer", () => $59ab44be5b3f1f38$export$fad3c8302a7540c6, (v) => $59ab44be5b3f1f38$export$fad3c8302a7540c6 = v);
-var $59ab44be5b3f1f38$export$3ffd594349b5aa88;
-var $59ab44be5b3f1f38$export$fad3c8302a7540c6;
-$59ab44be5b3f1f38$export$3ffd594349b5aa88 = "style__cardsRow__3a_Evk";
-$59ab44be5b3f1f38$export$fad3c8302a7540c6 = "style__scrollContainer__3FTwv4";
+$parcel$export($4b581a50150e8acf$exports, "cardsRow", () => $4b581a50150e8acf$export$3ffd594349b5aa88, (v) => $4b581a50150e8acf$export$3ffd594349b5aa88 = v);
+$parcel$export($4b581a50150e8acf$exports, "scrollContainer", () => $4b581a50150e8acf$export$fad3c8302a7540c6, (v) => $4b581a50150e8acf$export$fad3c8302a7540c6 = v);
+var $4b581a50150e8acf$export$3ffd594349b5aa88;
+var $4b581a50150e8acf$export$fad3c8302a7540c6;
+$4b581a50150e8acf$export$3ffd594349b5aa88 = "_cardsRow_07bbce";
+$4b581a50150e8acf$export$fad3c8302a7540c6 = "_scrollContainer_07bbce";
 
 
 var $55eb28eb8f26523e$export$2e2bcd8739ae039 = ({ title: title , children: children  })=>{
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($59ab44be5b3f1f38$exports)).cardsRow,
+        className: (/*@__PURE__*/$parcel$interopDefault($4b581a50150e8acf$exports)).cardsRow,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($87d20942e8dd7c23$export$2e2bcd8739ae039, {
                 children: title
             }),
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($klFNZ$reactcustomscrollbars.Scrollbars, {
                 autoHide: true,
-                className: (/*@__PURE__*/$parcel$interopDefault($59ab44be5b3f1f38$exports)).scrollContainer,
+                className: (/*@__PURE__*/$parcel$interopDefault($4b581a50150e8acf$exports)).scrollContainer,
                 children: children
             })
         ]
@@ -1212,40 +1212,37 @@ var $55eb28eb8f26523e$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
-var $a6e8af150c8089d5$exports = {};
+var $52e35097c3783023$exports = {};
 
-$parcel$export($a6e8af150c8089d5$exports, "containersContainer", () => $a6e8af150c8089d5$export$6eb0125b0ff89eda, (v) => $a6e8af150c8089d5$export$6eb0125b0ff89eda = v);
-$parcel$export($a6e8af150c8089d5$exports, "container", () => $a6e8af150c8089d5$export$34e0f9847d4c02dd, (v) => $a6e8af150c8089d5$export$34e0f9847d4c02dd = v);
-$parcel$export($a6e8af150c8089d5$exports, "header", () => $a6e8af150c8089d5$export$38e42c68cf43b5d4, (v) => $a6e8af150c8089d5$export$38e42c68cf43b5d4 = v);
-$parcel$export($a6e8af150c8089d5$exports, "signUp", () => $a6e8af150c8089d5$export$cf64224bcd829024, (v) => $a6e8af150c8089d5$export$cf64224bcd829024 = v);
-$parcel$export($a6e8af150c8089d5$exports, "signIn", () => $a6e8af150c8089d5$export$9670d83f11d4b64a, (v) => $a6e8af150c8089d5$export$9670d83f11d4b64a = v);
-$parcel$export($a6e8af150c8089d5$exports, "active", () => $a6e8af150c8089d5$export$89da14300d534261, (v) => $a6e8af150c8089d5$export$89da14300d534261 = v);
-$parcel$export($a6e8af150c8089d5$exports, "input", () => $a6e8af150c8089d5$export$b7e3ae3d7c15e42e, (v) => $a6e8af150c8089d5$export$b7e3ae3d7c15e42e = v);
-$parcel$export($a6e8af150c8089d5$exports, "lastInput", () => $a6e8af150c8089d5$export$20b74936b6634d41, (v) => $a6e8af150c8089d5$export$20b74936b6634d41 = v);
-$parcel$export($a6e8af150c8089d5$exports, "button", () => $a6e8af150c8089d5$export$2ba01fb71ed41cb6, (v) => $a6e8af150c8089d5$export$2ba01fb71ed41cb6 = v);
-var $a6e8af150c8089d5$export$6eb0125b0ff89eda;
-var $a6e8af150c8089d5$export$34e0f9847d4c02dd;
-var $a6e8af150c8089d5$export$38e42c68cf43b5d4;
-var $a6e8af150c8089d5$export$cf64224bcd829024;
-var $a6e8af150c8089d5$export$9670d83f11d4b64a;
-var $a6e8af150c8089d5$export$89da14300d534261;
-var $a6e8af150c8089d5$export$b7e3ae3d7c15e42e;
-var $a6e8af150c8089d5$export$20b74936b6634d41;
-var $a6e8af150c8089d5$export$2ba01fb71ed41cb6;
-$a6e8af150c8089d5$export$6eb0125b0ff89eda = "style__containersContainer__3BpyL9";
-$a6e8af150c8089d5$export$34e0f9847d4c02dd = "style__container__3rHhE0";
-$a6e8af150c8089d5$export$38e42c68cf43b5d4 = "style__header__2YVhBu";
-$a6e8af150c8089d5$export$cf64224bcd829024 = "style__signUp__2k2SRB";
-$a6e8af150c8089d5$export$9670d83f11d4b64a = "style__signIn__yt7DQT";
-$a6e8af150c8089d5$export$89da14300d534261 = "style__active__2g0yi_";
-$a6e8af150c8089d5$export$b7e3ae3d7c15e42e = "style__input__1N8coV";
-$a6e8af150c8089d5$export$20b74936b6634d41 = "style__lastInput__3bZdx9";
-$a6e8af150c8089d5$export$2ba01fb71ed41cb6 = "style__button__WAt39_";
+$parcel$export($52e35097c3783023$exports, "containersContainer", () => $52e35097c3783023$export$6eb0125b0ff89eda, (v) => $52e35097c3783023$export$6eb0125b0ff89eda = v);
+$parcel$export($52e35097c3783023$exports, "container", () => $52e35097c3783023$export$34e0f9847d4c02dd, (v) => $52e35097c3783023$export$34e0f9847d4c02dd = v);
+$parcel$export($52e35097c3783023$exports, "header", () => $52e35097c3783023$export$38e42c68cf43b5d4, (v) => $52e35097c3783023$export$38e42c68cf43b5d4 = v);
+$parcel$export($52e35097c3783023$exports, "signUp", () => $52e35097c3783023$export$cf64224bcd829024, (v) => $52e35097c3783023$export$cf64224bcd829024 = v);
+$parcel$export($52e35097c3783023$exports, "signIn", () => $52e35097c3783023$export$9670d83f11d4b64a, (v) => $52e35097c3783023$export$9670d83f11d4b64a = v);
+$parcel$export($52e35097c3783023$exports, "active", () => $52e35097c3783023$export$89da14300d534261, (v) => $52e35097c3783023$export$89da14300d534261 = v);
+$parcel$export($52e35097c3783023$exports, "input", () => $52e35097c3783023$export$b7e3ae3d7c15e42e, (v) => $52e35097c3783023$export$b7e3ae3d7c15e42e = v);
+$parcel$export($52e35097c3783023$exports, "lastInput", () => $52e35097c3783023$export$20b74936b6634d41, (v) => $52e35097c3783023$export$20b74936b6634d41 = v);
+$parcel$export($52e35097c3783023$exports, "button", () => $52e35097c3783023$export$2ba01fb71ed41cb6, (v) => $52e35097c3783023$export$2ba01fb71ed41cb6 = v);
+var $52e35097c3783023$export$6eb0125b0ff89eda;
+var $52e35097c3783023$export$34e0f9847d4c02dd;
+var $52e35097c3783023$export$38e42c68cf43b5d4;
+var $52e35097c3783023$export$cf64224bcd829024;
+var $52e35097c3783023$export$9670d83f11d4b64a;
+var $52e35097c3783023$export$89da14300d534261;
+var $52e35097c3783023$export$b7e3ae3d7c15e42e;
+var $52e35097c3783023$export$20b74936b6634d41;
+var $52e35097c3783023$export$2ba01fb71ed41cb6;
+$52e35097c3783023$export$6eb0125b0ff89eda = "_containersContainer_7a3855";
+$52e35097c3783023$export$34e0f9847d4c02dd = "_container_7a3855";
+$52e35097c3783023$export$38e42c68cf43b5d4 = "_header_7a3855";
+$52e35097c3783023$export$cf64224bcd829024 = "_signUp_7a3855";
+$52e35097c3783023$export$9670d83f11d4b64a = "_signIn_7a3855";
+$52e35097c3783023$export$89da14300d534261 = "_active_7a3855";
+$52e35097c3783023$export$b7e3ae3d7c15e42e = "_input_7a3855";
+$52e35097c3783023$export$20b74936b6634d41 = "_lastInput_7a3855";
+$52e35097c3783023$export$2ba01fb71ed41cb6 = "_button_7a3855";
 
 
-
-var $9704f6ac55d5def2$export$5279d79106c47224;
-$9704f6ac55d5def2$export$5279d79106c47224 = "style__PhoneInputInput__wKyRu7";
 
 
 var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: verifyUser , getUserToken: getUserToken , onError: onError  })=>{
@@ -1287,24 +1284,24 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
         setLoading(false);
     };
     return(/*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).containersContainer,
+        className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).containersContainer,
         children: /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-            className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).container,
+            className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).container,
             children: [
                 /*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-                    className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).header,
+                    className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).header,
                     children: [
                         /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("span", {
-                            className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).signUp, {
-                                [(/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).active]: selectedTab === 'signUp'
+                            className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).signUp, {
+                                [(/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).active]: selectedTab === 'signUp'
                             }),
                             onClick: ()=>setSelectedTab('signUp')
                             ,
                             children: "Sign Up"
                         }),
                         /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("span", {
-                            className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).signIn, {
-                                [(/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).active]: selectedTab === 'signIn'
+                            className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).signIn, {
+                                [(/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).active]: selectedTab === 'signIn'
                             }),
                             onClick: ()=>setSelectedTab('signIn')
                             ,
@@ -1317,7 +1314,7 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                     onChange: onFieldChange,
                     placeholder: "username",
                     name: "username",
-                    className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).input
+                    className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).input
                 }),
                 /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("input", {
                     type: "password",
@@ -1325,8 +1322,8 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                     onChange: onFieldChange,
                     placeholder: "password",
                     name: "password",
-                    className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).input, {
-                        [(/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).lastInput]: selectedTab === 'signIn'
+                    className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).input, {
+                        [(/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).lastInput]: selectedTab === 'signIn'
                     })
                 }),
                 selectedTab === 'signUp' ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx(($parcel$interopDefault($klFNZ$reactphonenumberinput)), {
@@ -1345,8 +1342,8 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                             })
                         )
                     ,
-                    className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).input, {
-                        [(/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).lastInput]: !showVerification
+                    className: ($parcel$interopDefault($klFNZ$classnames))((/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).input, {
+                        [(/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).lastInput]: !showVerification
                     })
                 }) : null,
                 selectedTab === 'signUp' && showVerification ? /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx("input", {
@@ -1354,11 +1351,11 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                     onChange: onFieldChange,
                     placeholder: "verification code",
                     name: "verificationCode",
-                    className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).input
+                    className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).input
                 }) : null,
                 /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($bbeeee79c4874bd1$export$2e2bcd8739ae039, {
                     loading: loading,
-                    className: (/*@__PURE__*/$parcel$interopDefault($a6e8af150c8089d5$exports)).button,
+                    className: (/*@__PURE__*/$parcel$interopDefault($52e35097c3783023$exports)).button,
                     onClick: ()=>selectedTab === 'signUp' ? showVerification ? verifyUser({
                             verificationCode: verificationCode
                         }) : createUser({
@@ -1383,28 +1380,28 @@ var $1dd813e006a85247$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
 
 
 
-var $64e6e765d4de7464$exports = {};
+var $96415e088af69c4d$exports = {};
 
-$parcel$export($64e6e765d4de7464$exports, "container", () => $64e6e765d4de7464$export$34e0f9847d4c02dd, (v) => $64e6e765d4de7464$export$34e0f9847d4c02dd = v);
-$parcel$export($64e6e765d4de7464$exports, "icon", () => $64e6e765d4de7464$export$1ca1ec8b29a4ce27, (v) => $64e6e765d4de7464$export$1ca1ec8b29a4ce27 = v);
-$parcel$export($64e6e765d4de7464$exports, "username", () => $64e6e765d4de7464$export$5e1be761f603d585, (v) => $64e6e765d4de7464$export$5e1be761f603d585 = v);
-var $64e6e765d4de7464$export$34e0f9847d4c02dd;
-var $64e6e765d4de7464$export$1ca1ec8b29a4ce27;
-var $64e6e765d4de7464$export$5e1be761f603d585;
-$64e6e765d4de7464$export$34e0f9847d4c02dd = "style__container__3rJXPi";
-$64e6e765d4de7464$export$1ca1ec8b29a4ce27 = "style__icon__1wqq6p";
-$64e6e765d4de7464$export$5e1be761f603d585 = "style__username__2Yp4VR";
+$parcel$export($96415e088af69c4d$exports, "container", () => $96415e088af69c4d$export$34e0f9847d4c02dd, (v) => $96415e088af69c4d$export$34e0f9847d4c02dd = v);
+$parcel$export($96415e088af69c4d$exports, "icon", () => $96415e088af69c4d$export$1ca1ec8b29a4ce27, (v) => $96415e088af69c4d$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($96415e088af69c4d$exports, "username", () => $96415e088af69c4d$export$5e1be761f603d585, (v) => $96415e088af69c4d$export$5e1be761f603d585 = v);
+var $96415e088af69c4d$export$34e0f9847d4c02dd;
+var $96415e088af69c4d$export$1ca1ec8b29a4ce27;
+var $96415e088af69c4d$export$5e1be761f603d585;
+$96415e088af69c4d$export$34e0f9847d4c02dd = "_container_150dcb";
+$96415e088af69c4d$export$1ca1ec8b29a4ce27 = "_icon_150dcb";
+$96415e088af69c4d$export$5e1be761f603d585 = "_username_150dcb";
 
 
 var $8cf07228007ba6cc$export$2e2bcd8739ae039 = ({ logout: logout , username: username  })=>/*#__PURE__*/ $klFNZ$reactjsxruntime.jsxs("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($64e6e765d4de7464$exports)).container,
+        className: (/*@__PURE__*/$parcel$interopDefault($96415e088af69c4d$exports)).container,
         children: [
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($6b1bd0c54623bfc1$export$2e2bcd8739ae039, {
-                className: (/*@__PURE__*/$parcel$interopDefault($64e6e765d4de7464$exports)).username,
+                className: (/*@__PURE__*/$parcel$interopDefault($96415e088af69c4d$exports)).username,
                 children: username
             }),
             /*#__PURE__*/ $klFNZ$reactjsxruntime.jsx($klFNZ$fortawesomereactfontawesome.FontAwesomeIcon, {
-                className: (/*@__PURE__*/$parcel$interopDefault($64e6e765d4de7464$exports)).icon,
+                className: (/*@__PURE__*/$parcel$interopDefault($96415e088af69c4d$exports)).icon,
                 size: "1x",
                 color: "#bebebe",
                 icon: $klFNZ$fortawesomefreesolidsvgicons.faSignOutAlt,

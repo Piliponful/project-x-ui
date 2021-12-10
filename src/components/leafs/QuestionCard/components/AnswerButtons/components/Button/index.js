@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import Text from '../../../../../../shared/Text'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ answer, respond }) => {
   return (

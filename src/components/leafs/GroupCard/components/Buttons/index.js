@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '../../shared/components/Button'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ select, combine }) => (
   <div className={styles.buttons}>

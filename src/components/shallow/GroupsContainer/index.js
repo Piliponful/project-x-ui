@@ -1,7 +1,7 @@
 import React from 'react'
 import { Scrollbars } from 'react-custom-scrollbars'
 
-import style from './style.styl'
+import style from './style.module.styl'
 
 export default ({ children }) => (
   <div className={style.groupContainer}>

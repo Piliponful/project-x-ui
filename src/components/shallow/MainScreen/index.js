@@ -5,7 +5,7 @@ import Title from '../../shared/Title'
 
 import Container from './components/Container'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 import { sidebarWidth, smallMainScreenWidth, mediumMainScreenWidth, largeMainScreenWidth } from '../../../constants'
 

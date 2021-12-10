@@ -4,7 +4,7 @@ import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 
 import Button from '../../shared/Button'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 import 'react-phone-number-input/style.css'
 import './style.css'
 

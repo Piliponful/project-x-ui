@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle as check, faTimesCircle as uncheck } from '@fortawesome/free-solid-svg-icons'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ color = '#bebebe', deselect }) => {
   const [icon, setIcon] = useState(check)

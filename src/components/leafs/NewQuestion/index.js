@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Input from './components/Input'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ saveQuestion }) => {
   const [question, setQuestion] = useState('')

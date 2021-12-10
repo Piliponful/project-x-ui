@@ -4,7 +4,7 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Text from '../../shared/Text'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ logout, username }) => (
   <div className={styles.container}>

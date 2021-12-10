@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import Container, { ContainerWithoutSwipes } from './components/Container'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 import { sidebarWidth, smallMainScreenWidth } from '../../../constants'
 

@@ -5,7 +5,7 @@ import Number from '../../../../shared/Number'
 import Text from './components/Text'
 import Bars from './components/Bars'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 const calcPercent = (x, sum) => Math.floor(x / sum * 100)
 

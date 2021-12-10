@@ -7,7 +7,7 @@ import AnswerButtons from './components/AnswerButtons'
 
 import Text from '../../shared/Text'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ yourOwnQuestion, name, answersCount, currentUserAnswer: answer, respond, createNewGroup }) => {
   return (

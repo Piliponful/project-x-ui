@@ -68,3 +68,4 @@ package-lock.json
 
 # config.js
 config/local-*
+.parcel-cache

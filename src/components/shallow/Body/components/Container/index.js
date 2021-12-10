@@ -3,7 +3,7 @@ import { useSwipeable } from 'react-swipeable'
 
 import { MainScreenSwipeContext } from '../../'
 
-import styles from './style.styl'
+import styles from './style.module.styl'
 
 export default ({ children }) => {
   const value = useContext(MainScreenSwipeContext)

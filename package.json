@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel serve index.html --port 8082 --no-cache",
-    "build": "parcel build --profile",
+    "build": "parcel build",
     "lint": "standard src/*"
   },
   "dependencies": {
