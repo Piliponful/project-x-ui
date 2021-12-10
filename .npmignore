@@ -6,3 +6,6 @@ webpack.config*
 package*
 .gitignore
 .babelrc
+.parcel-cache
+.dist/index*
+.dist/logo*
