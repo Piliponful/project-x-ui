@@ -1207,6 +1207,15 @@ var $fad5f341416586e4$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
+const $7fad49db999c486c$export$2ace633c12663f1e = (fn)=>{
+    return Promise.all([
+        fn(),
+        new Promise((resolve, reject)=>setTimeout(resolve, 600)
+        )
+    ]);
+};
+
+
 
 var $41fa4a951da2c775$exports = {};
 
@@ -1218,13 +1227,14 @@ $41fa4a951da2c775$export$b7e3ae3d7c15e42e = "_input_33e8f5";
 $41fa4a951da2c775$export$2ba01fb71ed41cb6 = "_button_33e8f5";
 
 
-var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: verifyUser  })=>{
+var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: f2  })=>{
     const [{ username: username , password: password , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
         password: '',
         verificationCode: ''
     });
     const [showVerification, setShowVerification] = $cDsoM$useState(false);
+    const [loading, setLoading] = $cDsoM$useState(null);
     const onFieldChange = (e)=>{
         e.preventDefault();
         setFields((state)=>({
@@ -1234,11 +1244,22 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
         );
     };
     const getUserToken = async ()=>{
-        const user = await f({
-            username: username,
-            password: password
-        });
+        setLoading(true);
+        const user = await $7fad49db999c486c$export$2ace633c12663f1e(()=>f({
+                username: username,
+                password: password
+            })
+        );
         if (!user.verificationCompleted) setShowVerification(true);
+        setLoading(false);
+    };
+    const verifyUser = async ()=>{
+        setLoading(true);
+        await $7fad49db999c486c$export$2ace633c12663f1e(()=>f2({
+                verificationCode: verificationCode
+            })
+        );
+        setLoading(false);
     };
     return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
         children: [
@@ -1265,6 +1286,7 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
                 className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
             }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
+                loading: loading,
                 className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).button,
                 onClick: ()=>showVerification ? verifyUser({
                         verificationCode: verificationCode
@@ -1285,6 +1307,7 @@ var $68841d5e5354d0a2$export$2e2bcd8739ae039 = $7a29cf0ed35d3b93$export$2e2bcd87
 
 
 
+
 var $c3796a9068202221$exports = {};
 
 $parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
@@ -1298,7 +1321,7 @@ $c3796a9068202221$export$2ba01fb71ed41cb6 = "_button_07e23d";
 $c3796a9068202221$export$8a433e5b2d459900 = "_withoutMargin_07e23d";
 
 
-var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: verifyUser , onError: onError  })=>{
+var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2 , onError: onError  })=>{
     const [loading, setLoading] = $cDsoM$useState(null);
     const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
@@ -1323,16 +1346,25 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
         }
         setLoading(true);
         try {
-            await a({
-                username: username,
-                password: password,
-                phoneNumber: phoneNumber,
-                country: country1
-            });
+            await $7fad49db999c486c$export$2ace633c12663f1e(()=>f({
+                    username: username,
+                    password: password,
+                    phoneNumber: phoneNumber,
+                    country: country1
+                })
+            );
             setShowVerification(true);
         } catch (e) {
             onError(e.message);
         }
+        setLoading(false);
+    };
+    const verifyUser = async ()=>{
+        setLoading(true);
+        await $7fad49db999c486c$export$2ace633c12663f1e(()=>f2({
+                verificationCode: verificationCode
+            })
+        );
         setLoading(false);
     };
     return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
