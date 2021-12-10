@@ -1,7 +1,7 @@
 {
   "name": "project-x-ui",
   "source": "./index.js",
-  "main": "./dist/main.js",
+  "main": "./index.js",
   "version": "1.0.95",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
