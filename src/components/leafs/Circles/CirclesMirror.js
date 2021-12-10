@@ -2,7 +2,7 @@
 import React from 'react'
 
 export default () => (
-  <svg id="circles-mirror" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 377.85394 219.81177">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 377.85394 219.81177" width="100%" height="100%">
     <path id="left-wing" d="M157.8764,110.04071a108.01882,108.01882,0,0,1,32.07306-76.86078,110.209,110.209,0,0,0-77.927-32.0451c-60.75128,0-110,48.75885-110,108.90588,0,60.1471,49.24872,108.90588,110,108.90588a110.20871,110.20871,0,0,0,77.927-32.045A108.019,108.019,0,0,1,157.8764,110.04071Z" transform="translate(-1.02246 -0.13483)" fill="#91288d" fillOpacity="0" stroke="#3eb5f1" strokeMiterlimit="10" strokeWidth="2"/>
     <path id="right-wing" d="M267.8764,1.13483a110.20887,110.20887,0,0,0-77.92694,32.0451,108.13241,108.13241,0,0,1,0,153.72162,110.20857,110.20857,0,0,0,77.92694,32.045c60.75135,0,110-48.75878,110-108.90588C377.8764,49.89368,328.62775,1.13483,267.8764,1.13483Z" transform="translate(-1.02246 -0.13483)" fill="#91288d" fillOpacity="0" stroke="#d24a43" strokeMiterlimit="10" strokeWidth="2"/>
     <g id="intersection" fill="#91288d" fillOpacity="0">
