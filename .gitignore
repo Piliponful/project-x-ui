@@ -69,3 +69,5 @@ package-lock.json
 # config.js
 config/local-*
 .parcel-cache
+dist/index*
+dist/logo*
