@@ -30,7 +30,7 @@ export default ({ createUser, verifyUser, getUserToken, onError }) => {
         </div>
         {
           selectedTab === 'signIn'
-            ? <SignInInputs getUserToken={getUserToken} />
+            ? <SignInInputs getUserToken={getUserToken} verifyUser={verifyUser} />
             : <SignUpInputs createUser={createUser} verifyUser={verifyUser} onError={onError} />
         }
       </div>

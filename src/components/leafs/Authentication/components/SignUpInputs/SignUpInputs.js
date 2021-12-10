@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import cn from 'classnames'
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
+import cn from 'classnames'
 
 import Button from '../../../../shared/Button'
 
@@ -55,7 +55,7 @@ export default ({ createUser: a, verifyUser, onError }) => {
         value={phoneNumber}
         onCountryChange={country => setFields(state => ({ ...state, country }))}
         onChange={value => setFields(state => ({ ...state, phoneNumber: value }))}
-        className={cn(styles.input, { [styles.lastInput]: !showVerification })}
+        className={cn(styles.input, { [styles.withoutMargin]: !showVerification })}
       />
       {
         showVerification
@@ -65,7 +65,7 @@ export default ({ createUser: a, verifyUser, onError }) => {
               onChange={onFieldChange}
               placeholder='verification code'
               name='verificationCode'
-              className={styles.input}
+              className={cn(styles.input, styles.withoutMargin)}
             />
             )
           : null
