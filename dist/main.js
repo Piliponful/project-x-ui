@@ -1334,7 +1334,8 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                 onChange: onFieldChange,
                 placeholder: "username",
                 name: "username",
-                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input,
+                autoComplete: "nope"
             }),
             /*#__PURE__*/ $cDsoM$jsx("input", {
                 type: "password",
@@ -1342,7 +1343,8 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                 onChange: onFieldChange,
                 placeholder: "password",
                 name: "password",
-                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input,
+                autoComplete: "new-password"
             }),
             /*#__PURE__*/ $cDsoM$jsx($cDsoM$reactphonenumberinput, {
                 placeholder: "phone number",
