@@ -8,7 +8,7 @@ import GroupsContainer from './src/components/shallow/GroupsContainer'
 import MainScreen from './src/components/shallow/MainScreen'
 import Sidebar from './src/components/shallow/Sidebar'
 import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
-import Authorization from './src/components/leafs/Authorization'
+import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
 
 export default {
@@ -24,7 +24,7 @@ export default {
     GroupCard,
     QuestionCard,
     NewQuestion,
-    Authorization,
+    Authentication,
     ActionsPanel
   },
   context: {

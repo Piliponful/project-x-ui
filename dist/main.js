@@ -10,8 +10,8 @@ import {faCheckCircle as $cDsoM$faCheckCircle, faTimesCircle as $cDsoM$faTimesCi
 import {useSwipeable as $cDsoM$useSwipeable} from "react-swipeable";
 import {Scrollbars as $cDsoM$Scrollbars} from "react-custom-scrollbars";
 import $cDsoM$reactmedia from "react-media";
-import $cDsoM$reactphonenumberinput, {isValidPhoneNumber as $cDsoM$isValidPhoneNumber} from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import $cDsoM$reactphonenumberinput, {isValidPhoneNumber as $cDsoM$isValidPhoneNumber} from "react-phone-number-input";
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
@@ -1207,40 +1207,90 @@ var $fad5f341416586e4$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
-var $2c32537bc77c23e8$exports = {};
-
-$parcel$export($2c32537bc77c23e8$exports, "containersContainer", () => $2c32537bc77c23e8$export$6eb0125b0ff89eda, (v) => $2c32537bc77c23e8$export$6eb0125b0ff89eda = v);
-$parcel$export($2c32537bc77c23e8$exports, "container", () => $2c32537bc77c23e8$export$34e0f9847d4c02dd, (v) => $2c32537bc77c23e8$export$34e0f9847d4c02dd = v);
-$parcel$export($2c32537bc77c23e8$exports, "header", () => $2c32537bc77c23e8$export$38e42c68cf43b5d4, (v) => $2c32537bc77c23e8$export$38e42c68cf43b5d4 = v);
-$parcel$export($2c32537bc77c23e8$exports, "signUp", () => $2c32537bc77c23e8$export$cf64224bcd829024, (v) => $2c32537bc77c23e8$export$cf64224bcd829024 = v);
-$parcel$export($2c32537bc77c23e8$exports, "signIn", () => $2c32537bc77c23e8$export$9670d83f11d4b64a, (v) => $2c32537bc77c23e8$export$9670d83f11d4b64a = v);
-$parcel$export($2c32537bc77c23e8$exports, "active", () => $2c32537bc77c23e8$export$89da14300d534261, (v) => $2c32537bc77c23e8$export$89da14300d534261 = v);
-$parcel$export($2c32537bc77c23e8$exports, "input", () => $2c32537bc77c23e8$export$b7e3ae3d7c15e42e, (v) => $2c32537bc77c23e8$export$b7e3ae3d7c15e42e = v);
-$parcel$export($2c32537bc77c23e8$exports, "lastInput", () => $2c32537bc77c23e8$export$20b74936b6634d41, (v) => $2c32537bc77c23e8$export$20b74936b6634d41 = v);
-$parcel$export($2c32537bc77c23e8$exports, "button", () => $2c32537bc77c23e8$export$2ba01fb71ed41cb6, (v) => $2c32537bc77c23e8$export$2ba01fb71ed41cb6 = v);
-var $2c32537bc77c23e8$export$6eb0125b0ff89eda;
-var $2c32537bc77c23e8$export$34e0f9847d4c02dd;
-var $2c32537bc77c23e8$export$38e42c68cf43b5d4;
-var $2c32537bc77c23e8$export$cf64224bcd829024;
-var $2c32537bc77c23e8$export$9670d83f11d4b64a;
-var $2c32537bc77c23e8$export$89da14300d534261;
-var $2c32537bc77c23e8$export$b7e3ae3d7c15e42e;
-var $2c32537bc77c23e8$export$20b74936b6634d41;
-var $2c32537bc77c23e8$export$2ba01fb71ed41cb6;
-$2c32537bc77c23e8$export$6eb0125b0ff89eda = "_containersContainer_7a3855";
-$2c32537bc77c23e8$export$34e0f9847d4c02dd = "_container_7a3855";
-$2c32537bc77c23e8$export$38e42c68cf43b5d4 = "_header_7a3855";
-$2c32537bc77c23e8$export$cf64224bcd829024 = "_signUp_7a3855";
-$2c32537bc77c23e8$export$9670d83f11d4b64a = "_signIn_7a3855";
-$2c32537bc77c23e8$export$89da14300d534261 = "_active_7a3855";
-$2c32537bc77c23e8$export$b7e3ae3d7c15e42e = "_input_7a3855";
-$2c32537bc77c23e8$export$20b74936b6634d41 = "_lastInput_7a3855";
-$2c32537bc77c23e8$export$2ba01fb71ed41cb6 = "_button_7a3855";
 
 
+var $41fa4a951da2c775$exports = {};
+
+$parcel$export($41fa4a951da2c775$exports, "input", () => $41fa4a951da2c775$export$b7e3ae3d7c15e42e, (v) => $41fa4a951da2c775$export$b7e3ae3d7c15e42e = v);
+$parcel$export($41fa4a951da2c775$exports, "lastInput", () => $41fa4a951da2c775$export$20b74936b6634d41, (v) => $41fa4a951da2c775$export$20b74936b6634d41 = v);
+$parcel$export($41fa4a951da2c775$exports, "button", () => $41fa4a951da2c775$export$2ba01fb71ed41cb6, (v) => $41fa4a951da2c775$export$2ba01fb71ed41cb6 = v);
+var $41fa4a951da2c775$export$b7e3ae3d7c15e42e;
+var $41fa4a951da2c775$export$20b74936b6634d41;
+var $41fa4a951da2c775$export$2ba01fb71ed41cb6;
+$41fa4a951da2c775$export$b7e3ae3d7c15e42e = "_input_33e8f5";
+$41fa4a951da2c775$export$20b74936b6634d41 = "_lastInput_33e8f5";
+$41fa4a951da2c775$export$2ba01fb71ed41cb6 = "_button_33e8f5";
 
 
-var $93c74a6a952edf14$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: verifyUser , getUserToken: getUserToken , onError: onError  })=>{
+var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: getUserToken  })=>{
+    const [{ username: username , password: password  }, setFields] = $cDsoM$useState({
+        username: '',
+        password: '',
+        phoneNumber: '',
+        country: '',
+        verificationCode: ''
+    });
+    const onFieldChange = (e)=>{
+        e.preventDefault();
+        setFields((state)=>({
+                ...state,
+                [e.target.name]: e.target.value
+            })
+        );
+    };
+    return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
+        children: [
+            /*#__PURE__*/ $cDsoM$jsx("input", {
+                value: username,
+                onChange: onFieldChange,
+                placeholder: "username",
+                name: "username",
+                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
+            }),
+            /*#__PURE__*/ $cDsoM$jsx("input", {
+                type: "password",
+                value: password,
+                onChange: onFieldChange,
+                placeholder: "password",
+                name: "password",
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input, (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).lastInput)
+            }),
+            /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
+                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).button,
+                onClick: ()=>getUserToken({
+                        username: username,
+                        password: password
+                    })
+                ,
+                children: "Sign In"
+            })
+        ]
+    }));
+};
+
+
+var $68841d5e5354d0a2$export$2e2bcd8739ae039 = $7a29cf0ed35d3b93$export$2e2bcd8739ae039;
+
+
+
+
+
+
+
+var $c3796a9068202221$exports = {};
+
+$parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
+$parcel$export($c3796a9068202221$exports, "lastInput", () => $c3796a9068202221$export$20b74936b6634d41, (v) => $c3796a9068202221$export$20b74936b6634d41 = v);
+$parcel$export($c3796a9068202221$exports, "button", () => $c3796a9068202221$export$2ba01fb71ed41cb6, (v) => $c3796a9068202221$export$2ba01fb71ed41cb6 = v);
+var $c3796a9068202221$export$b7e3ae3d7c15e42e;
+var $c3796a9068202221$export$20b74936b6634d41;
+var $c3796a9068202221$export$2ba01fb71ed41cb6;
+$c3796a9068202221$export$b7e3ae3d7c15e42e = "_input_07e23d";
+$c3796a9068202221$export$20b74936b6634d41 = "_lastInput_07e23d";
+$c3796a9068202221$export$2ba01fb71ed41cb6 = "_button_07e23d";
+
+
+var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: verifyUser , onError: onError  })=>{
     const [loading, setLoading] = $cDsoM$useState(null);
     const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
@@ -1249,7 +1299,6 @@ var $93c74a6a952edf14$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
         country: '',
         verificationCode: ''
     });
-    const [selectedTab, setSelectedTab] = $cDsoM$useState('signIn');
     const [showVerification, setShowVerification] = $cDsoM$useState(false);
     const onFieldChange = (e)=>{
         e.preventDefault();
@@ -1278,25 +1327,116 @@ var $93c74a6a952edf14$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
         }
         setLoading(false);
     };
+    return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
+        children: [
+            /*#__PURE__*/ $cDsoM$jsx("input", {
+                value: username,
+                onChange: onFieldChange,
+                placeholder: "username",
+                name: "username",
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+            }),
+            /*#__PURE__*/ $cDsoM$jsx("input", {
+                type: "password",
+                value: password,
+                onChange: onFieldChange,
+                placeholder: "password",
+                name: "password",
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+            }),
+            /*#__PURE__*/ $cDsoM$jsx($cDsoM$reactphonenumberinput, {
+                placeholder: "phone number",
+                name: "phoneNumber",
+                value: phoneNumber,
+                onCountryChange: (country)=>setFields((state)=>({
+                            ...state,
+                            country: country
+                        })
+                    )
+                ,
+                onChange: (value)=>setFields((state)=>({
+                            ...state,
+                            phoneNumber: value
+                        })
+                    )
+                ,
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, {
+                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).lastInput]: !showVerification
+                })
+            }),
+            showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
+                value: verificationCode,
+                onChange: onFieldChange,
+                placeholder: "verification code",
+                name: "verificationCode",
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input
+            }) : null,
+            /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
+                loading: loading,
+                className: (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).button,
+                onClick: ()=>showVerification ? verifyUser({
+                        verificationCode: verificationCode
+                    }) : createUser({
+                        username: username,
+                        password: password,
+                        phoneNumber: phoneNumber
+                    })
+                ,
+                children: showVerification ? 'Sign Up' : 'Get Code'
+            })
+        ]
+    }));
+};
+
+
+var $c700cb5c44efda05$export$2e2bcd8739ae039 = $8c25ad23d0e74291$export$2e2bcd8739ae039;
+
+
+var $a97ed870d150ce32$exports = {};
+
+$parcel$export($a97ed870d150ce32$exports, "containersContainer", () => $a97ed870d150ce32$export$6eb0125b0ff89eda, (v) => $a97ed870d150ce32$export$6eb0125b0ff89eda = v);
+$parcel$export($a97ed870d150ce32$exports, "container", () => $a97ed870d150ce32$export$34e0f9847d4c02dd, (v) => $a97ed870d150ce32$export$34e0f9847d4c02dd = v);
+$parcel$export($a97ed870d150ce32$exports, "header", () => $a97ed870d150ce32$export$38e42c68cf43b5d4, (v) => $a97ed870d150ce32$export$38e42c68cf43b5d4 = v);
+$parcel$export($a97ed870d150ce32$exports, "signUp", () => $a97ed870d150ce32$export$cf64224bcd829024, (v) => $a97ed870d150ce32$export$cf64224bcd829024 = v);
+$parcel$export($a97ed870d150ce32$exports, "signIn", () => $a97ed870d150ce32$export$9670d83f11d4b64a, (v) => $a97ed870d150ce32$export$9670d83f11d4b64a = v);
+$parcel$export($a97ed870d150ce32$exports, "active", () => $a97ed870d150ce32$export$89da14300d534261, (v) => $a97ed870d150ce32$export$89da14300d534261 = v);
+var $a97ed870d150ce32$export$6eb0125b0ff89eda;
+var $a97ed870d150ce32$export$34e0f9847d4c02dd;
+var $a97ed870d150ce32$export$38e42c68cf43b5d4;
+var $a97ed870d150ce32$export$cf64224bcd829024;
+var $a97ed870d150ce32$export$9670d83f11d4b64a;
+var $a97ed870d150ce32$export$89da14300d534261;
+$a97ed870d150ce32$export$6eb0125b0ff89eda = "_containersContainer_23b07c";
+$a97ed870d150ce32$export$34e0f9847d4c02dd = "_container_23b07c";
+$a97ed870d150ce32$export$38e42c68cf43b5d4 = "_header_23b07c";
+$a97ed870d150ce32$export$cf64224bcd829024 = "_signUp_23b07c";
+$a97ed870d150ce32$export$9670d83f11d4b64a = "_signIn_23b07c";
+$a97ed870d150ce32$export$89da14300d534261 = "_active_23b07c";
+
+
+
+
+var $23bf439265f65302$export$2e2bcd8739ae039 = ({ createUser: createUser , verifyUser: verifyUser , getUserToken: getUserToken , onError: onError  })=>{
+    const [selectedTab, setSelectedTab] = $cDsoM$useState('signIn');
     return(/*#__PURE__*/ $cDsoM$jsx("div", {
-        className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).containersContainer,
+        className: (/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).containersContainer,
         children: /*#__PURE__*/ $cDsoM$jsxs("div", {
-            className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).container,
+            className: (/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).container,
             children: [
                 /*#__PURE__*/ $cDsoM$jsxs("div", {
-                    className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).header,
+                    className: (/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).header,
                     children: [
                         /*#__PURE__*/ $cDsoM$jsx("span", {
-                            className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).signUp, {
-                                [(/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).active]: selectedTab === 'signUp'
+                            className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).signUp, {
+                                [(/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).active]: selectedTab === 'signUp'
                             }),
                             onClick: ()=>setSelectedTab('signUp')
                             ,
                             children: "Sign Up"
                         }),
                         /*#__PURE__*/ $cDsoM$jsx("span", {
-                            className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).signIn, {
-                                [(/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).active]: selectedTab === 'signIn'
+                            className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).signIn, {
+                                [(/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).active]: selectedTab === 'signIn'
                             }),
                             onClick: ()=>setSelectedTab('signIn')
                             ,
@@ -1304,65 +1444,12 @@ var $93c74a6a952edf14$export$2e2bcd8739ae039 = ({ createUser: a , verifyUser: ve
                         })
                     ]
                 }),
-                /*#__PURE__*/ $cDsoM$jsx("input", {
-                    value: username,
-                    onChange: onFieldChange,
-                    placeholder: "username",
-                    name: "username",
-                    className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).input
-                }),
-                /*#__PURE__*/ $cDsoM$jsx("input", {
-                    type: "password",
-                    value: password,
-                    onChange: onFieldChange,
-                    placeholder: "password",
-                    name: "password",
-                    className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).input, {
-                        [(/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).lastInput]: selectedTab === 'signIn'
-                    })
-                }),
-                selectedTab === 'signUp' ? /*#__PURE__*/ $cDsoM$jsx($cDsoM$reactphonenumberinput, {
-                    placeholder: "phone number",
-                    name: "phoneNumber",
-                    value: phoneNumber,
-                    onCountryChange: (country)=>setFields((state)=>({
-                                ...state,
-                                country: country
-                            })
-                        )
-                    ,
-                    onChange: (value)=>setFields((state)=>({
-                                ...state,
-                                phoneNumber: value
-                            })
-                        )
-                    ,
-                    className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).input, {
-                        [(/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).lastInput]: !showVerification
-                    })
-                }) : null,
-                selectedTab === 'signUp' && showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
-                    value: verificationCode,
-                    onChange: onFieldChange,
-                    placeholder: "verification code",
-                    name: "verificationCode",
-                    className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).input
-                }) : null,
-                /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
-                    loading: loading,
-                    className: (/*@__PURE__*/$parcel$interopDefault($2c32537bc77c23e8$exports)).button,
-                    onClick: ()=>selectedTab === 'signUp' ? showVerification ? verifyUser({
-                            verificationCode: verificationCode
-                        }) : createUser({
-                            username: username,
-                            password: password,
-                            phoneNumber: phoneNumber
-                        }) : getUserToken({
-                            username: username,
-                            password: password
-                        })
-                    ,
-                    children: selectedTab === 'signUp' ? showVerification ? 'Sign Up' : 'Get Code' : 'Sign In'
+                selectedTab === 'signIn' ? /*#__PURE__*/ $cDsoM$jsx($68841d5e5354d0a2$export$2e2bcd8739ae039, {
+                    getUserToken: getUserToken
+                }) : /*#__PURE__*/ $cDsoM$jsx($c700cb5c44efda05$export$2e2bcd8739ae039, {
+                    createUser: createUser,
+                    verifyUser: verifyUser,
+                    onError: onError
                 })
             ]
         })
@@ -1420,7 +1507,7 @@ var $90d837742dadb587$export$2e2bcd8739ae039 = {
         GroupCard: $26f3a8f41a44a259$export$2e2bcd8739ae039,
         QuestionCard: $0abbb239c0ff3331$export$2e2bcd8739ae039,
         NewQuestion: $eb7f9113f210ffb5$export$2e2bcd8739ae039,
-        Authorization: $93c74a6a952edf14$export$2e2bcd8739ae039,
+        Authentication: $23bf439265f65302$export$2e2bcd8739ae039,
         ActionsPanel: $089835c2a4e498f7$export$2e2bcd8739ae039
     },
     context: {
