@@ -75,9 +75,10 @@ $85525e85d6917841$export$c958aa0cc90a067 = "_circles_266008";
 
 
 var $e0360a83f4f71397$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ $cDsoM$jsxs("svg", {
-        id: "circles",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 377.85394 219.81177",
+        width: "100%",
+        height: "100%",
         children: [
             /*#__PURE__*/ $cDsoM$jsx("path", {
                 id: "left-wing",
@@ -128,9 +129,10 @@ var $e0360a83f4f71397$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ $cDsoM$jsxs("sv
 
 
 var $8b628673d6bb8108$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ $cDsoM$jsxs("svg", {
-        id: "circles-mirror",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 377.85394 219.81177",
+        width: "100%",
+        height: "100%",
         children: [
             /*#__PURE__*/ $cDsoM$jsx("path", {
                 id: "left-wing",
@@ -182,11 +184,11 @@ var $8b628673d6bb8108$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ $cDsoM$jsxs("sv
 
 var $a2fa4cba8cbdacb4$export$2e2bcd8739ae039 = ()=>{
     return(/*#__PURE__*/ $cDsoM$jsx("svg", {
-        id: "circle",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 222 219.8118",
+        width: "100%",
+        height: "100%",
         children: /*#__PURE__*/ $cDsoM$jsx("ellipse", {
-            id: "second-circle",
             cx: "111",
             cy: "109.9059",
             rx: "110",
@@ -203,11 +205,11 @@ var $a2fa4cba8cbdacb4$export$2e2bcd8739ae039 = ()=>{
 
 
 var $a980a69aef80c08b$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ $cDsoM$jsx("svg", {
-        id: "circles-blue",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 222 219.8118",
+        width: "100%",
+        height: "100%",
         children: /*#__PURE__*/ $cDsoM$jsx("ellipse", {
-            id: "second-circle",
             cx: "111",
             cy: "109.9059",
             rx: "110",
