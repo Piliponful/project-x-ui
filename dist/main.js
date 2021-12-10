@@ -1207,15 +1207,6 @@ var $fad5f341416586e4$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
-const $7fad49db999c486c$export$2ace633c12663f1e = (fn)=>{
-    return Promise.all([
-        fn(),
-        new Promise((resolve, reject)=>setTimeout(resolve, 600)
-        )
-    ]);
-};
-
-
 
 var $41fa4a951da2c775$exports = {};
 
@@ -1245,20 +1236,18 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
     };
     const getUserToken = async ()=>{
         setLoading(true);
-        const user = await $7fad49db999c486c$export$2ace633c12663f1e(()=>f({
-                username: username,
-                password: password
-            })
-        );
+        const user = await f({
+            username: username,
+            password: password
+        });
         if (!user.verificationCompleted) setShowVerification(true);
         setLoading(false);
     };
     const verifyUser = async ()=>{
         setLoading(true);
-        await $7fad49db999c486c$export$2ace633c12663f1e(()=>f2({
-                verificationCode: verificationCode
-            })
-        );
+        await f2({
+            verificationCode: verificationCode
+        });
         setLoading(false);
     };
     return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
@@ -1307,7 +1296,6 @@ var $68841d5e5354d0a2$export$2e2bcd8739ae039 = $7a29cf0ed35d3b93$export$2e2bcd87
 
 
 
-
 var $c3796a9068202221$exports = {};
 
 $parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
@@ -1346,7 +1334,7 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
         }
         setLoading(true);
         try {
-            await $7fad49db999c486c$export$2ace633c12663f1e(()=>f({
+            await parallelDelay(()=>f({
                     username: username,
                     password: password,
                     phoneNumber: phoneNumber,
@@ -1361,10 +1349,9 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
     };
     const verifyUser = async ()=>{
         setLoading(true);
-        await $7fad49db999c486c$export$2ace633c12663f1e(()=>f2({
-                verificationCode: verificationCode
-            })
-        );
+        await f2({
+            verificationCode: verificationCode
+        });
         setLoading(false);
     };
     return(/*#__PURE__*/ $cDsoM$jsxs($cDsoM$Fragment, {
