@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 
+import { parallelDelay } from '../../functions'
+
 import Button from '../../../../shared/Button'
 
 import styles from './style.module.styl'
 
-export default ({ getUserToken: f, verifyUser }) => {
+export default ({ getUserToken: f, verifyUser: f2 }) => {
   const [{
     username,
     password,
     verificationCode
   }, setFields] = useState({ username: '', password: '', verificationCode: '' })
   const [showVerification, setShowVerification] = useState(false)
+  const [loading, setLoading] = useState(null)
 
   const onFieldChange = e => {
     e.preventDefault()
@@ -18,10 +21,23 @@ export default ({ getUserToken: f, verifyUser }) => {
   }
 
   const getUserToken = async () => {
-    const user = await f({ username, password })
+    setLoading(true)
+
+    const user = await parallelDelay(() => f({ username, password }))
+
     if (!user.verificationCompleted) {
       setShowVerification(true)
     }
+
+    setLoading(false)
+  }
+
+  const verifyUser = async () => {
+    setLoading(true)
+
+    await parallelDelay(() => f2({ verificationCode }))
+
+    setLoading(false)
   }
 
   return (
@@ -49,8 +65,13 @@ export default ({ getUserToken: f, verifyUser }) => {
           : null
       }
       <Button
+        loading={loading}
         className={styles.button}
-        onClick={() => showVerification ? verifyUser({ verificationCode }) : getUserToken()}
+        onClick={
+          () => showVerification
+            ? verifyUser({ verificationCode })
+            : getUserToken()
+        }
       >
         Sign In
       </Button>
