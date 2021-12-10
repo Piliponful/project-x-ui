@@ -12,13 +12,23 @@
     "lint": "standard src/*"
   },
   "dependencies": {
+    "@emotion/babel-plugin": "^11.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@parcel/transformer-stylus": "^2.0.1",
     "classnames": "^2.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "npm": "^7.8.0",
+    "parcel": "^2.0.1",
     "react": "^17.0.2",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.2",
@@ -27,15 +37,6 @@
     "react-spinners": "^0.11.0",
     "react-swipeable": "^6.1.0",
     "snapsvg-cjs": "0.0.6",
-    "@emotion/babel-plugin": "^11.3.0",
-    "parcel": "^2.0.1",
-    "standard": "^16.0.4",
-    "@parcel/transformer-stylus": "^2.0.1",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-react": "^7.27.1"
+    "standard": "^16.0.4"
   }
 }

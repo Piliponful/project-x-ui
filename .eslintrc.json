@@ -4,7 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "standard"
+    "standard",
+    "standard-jsx"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,9 +16,5 @@
   },
   "plugins": [
     "react"
-  ],
-  "rules": {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
-  }
+  ]
 }
