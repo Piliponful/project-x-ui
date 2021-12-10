@@ -39,7 +39,7 @@ export default ({ createUser: a, verifyUser, onError }) => {
 
   return (
     <>
-      <input value={username} onChange={onFieldChange} placeholder='username' name='username' className={styles.input} />
+      <input value={username} onChange={onFieldChange} placeholder='username' name='username' className={styles.input} autoComplete='nope' />
       <input
         type='password'
         value={password}
@@ -47,6 +47,7 @@ export default ({ createUser: a, verifyUser, onError }) => {
         placeholder='password'
         name='password'
         className={styles.input}
+        autoComplete='new-password'
       />
       <PhoneInput
         placeholder='phone number'
