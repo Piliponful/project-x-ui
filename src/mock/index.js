@@ -10,7 +10,7 @@ import NewQuestion from '../components/leafs/NewQuestion'
 import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
-import Authorization from '../components/leafs/Authorization' // eslint-disable-line
+import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 
 const groupCombination = true
@@ -120,6 +120,6 @@ const createUser = () => new Promise((resolve, reject) => setTimeout(resolve, 50
 ReactDOM.render(
   <Body includeSwipes>
     {/* <Authorized /> */}
-    <Authorization createUser={() => createUser().then(() => console.log('createuser'))} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
+    <Authentication createUser={() => createUser().then(() => console.log('createuser'))} verifyUser={() => console.log('verifyUser')} getUserToken={user => console.log('getUserToken', user)} />
   </Body>
   , document.getElementById('app'))
