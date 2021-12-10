@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import cn from 'classnames'
 
-import { parallelDelay } from '../../functions'
-
 import Button from '../../../../shared/Button'
 
 import styles from './style.module.styl'
@@ -29,7 +27,9 @@ export default ({ createUser: f, verifyUser: f2, onError }) => {
       onError('Phone number is invalid')
       return
     }
+
     setLoading(true)
+
     try {
       await parallelDelay(() => f({ username, password, phoneNumber, country }))
       setShowVerification(true)
@@ -42,7 +42,7 @@ export default ({ createUser: f, verifyUser: f2, onError }) => {
   const verifyUser = async () => {
     setLoading(true)
 
-    await parallelDelay(() => f2({ verificationCode }))
+    await f2({ verificationCode })
 
     setLoading(false)
   }

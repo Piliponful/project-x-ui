@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import { parallelDelay } from '../../functions'
-
 import Button from '../../../../shared/Button'
 
 import styles from './style.module.styl'
@@ -23,7 +21,7 @@ export default ({ getUserToken: f, verifyUser: f2 }) => {
   const getUserToken = async () => {
     setLoading(true)
 
-    const user = await parallelDelay(() => f({ username, password }))
+    const user = await f({ username, password })
 
     if (!user.verificationCompleted) {
       setShowVerification(true)
@@ -35,7 +33,7 @@ export default ({ getUserToken: f, verifyUser: f2 }) => {
   const verifyUser = async () => {
     setLoading(true)
 
-    await parallelDelay(() => f2({ verificationCode }))
+    await f2({ verificationCode })
 
     setLoading(false)
   }
