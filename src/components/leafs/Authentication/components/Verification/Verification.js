@@ -5,7 +5,7 @@ import Button from '../../../../shared/Button'
 
 import styles from './styles.module.styl'
 
-export const Verification = ({ className, resend, verificationCode, onFieldChange }) => (
+export const Verification = ({ resend, verificationCode, onFieldChange }) => (
   <div className={styles.verificationCodeContainer}>
     <input
       value={verificationCode}

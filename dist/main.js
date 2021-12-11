@@ -1226,7 +1226,7 @@ $2699a27faf875e29$export$a55e320eda64329d = "_verificationCodeContainer_88fbaa";
 $2699a27faf875e29$export$b7e3ae3d7c15e42e = "_input_88fbaa";
 
 
-const $529787a0229557e2$export$2affb37eeb4d3983 = ({ className: className , resend: resend , verificationCode: verificationCode , onFieldChange: onFieldChange  })=>/*#__PURE__*/ $cDsoM$jsxs("div", {
+const $529787a0229557e2$export$2affb37eeb4d3983 = ({ resend: resend , verificationCode: verificationCode , onFieldChange: onFieldChange  })=>/*#__PURE__*/ $cDsoM$jsxs("div", {
         className: (/*@__PURE__*/$parcel$interopDefault($2699a27faf875e29$exports)).verificationCodeContainer,
         children: [
             /*#__PURE__*/ $cDsoM$jsx("input", {
@@ -1316,8 +1316,7 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
             showVerification ? /*#__PURE__*/ $cDsoM$jsx($46ef07c7033ae8f1$export$2e2bcd8739ae039, {
                 verificationCode: verificationCode,
                 onFieldChange: onFieldChange,
-                resend: ()=>{
-                }
+                resend: resend
             }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 loading: loading,

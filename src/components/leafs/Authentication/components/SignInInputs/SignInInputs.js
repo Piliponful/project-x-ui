@@ -57,7 +57,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
             <Verification
               verificationCode={verificationCode}
               onFieldChange={onFieldChange}
-              resend={() => {}}
+              resend={resend}
             />
             )
           : null
