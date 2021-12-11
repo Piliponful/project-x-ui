@@ -1238,7 +1238,8 @@ const $529787a0229557e2$export$2affb37eeb4d3983 = ({ resend: resend , verificati
             }),
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2699a27faf875e29$exports)).button),
-                onClick: resend,
+                onClick: ()=>resend()
+                ,
                 children: "Resend"
             })
         ]
