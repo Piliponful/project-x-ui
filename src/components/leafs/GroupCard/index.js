@@ -23,7 +23,7 @@ export default ({ name, userCount, selected, color, save, toggleSelection, combi
         <UserCount userCount={userCount} />
       </div>
 
-      {((color && !newGroupTitle) || (selected && name))
+      {((color && !newGroupTitle) || (color && selected && name))
         ? <CheckboxIcon color={color} deselect={toggleSelection} />
         : (
             name
