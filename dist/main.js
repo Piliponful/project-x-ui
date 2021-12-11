@@ -1374,6 +1374,10 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
         );
     };
     const createUser = async ()=>{
+        if (!country1) {
+            onError('Country is not selected');
+            return;
+        }
         if (!$cDsoM$isValidPhoneNumber(phoneNumber)) {
             onError('Phone number is invalid');
             return;
