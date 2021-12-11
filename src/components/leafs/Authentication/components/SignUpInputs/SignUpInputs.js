@@ -7,15 +7,14 @@ import Verification from '../Verification'
 
 import styles from './style.module.styl'
 
-export default ({ createUser: f, verifyUser: f2, onError }) => {
+export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
   const [loading, setLoading] = useState(null)
   const [{
     username,
     password,
     phoneNumber,
     country,
-    verificationCode,
-    resend
+    verificationCode
   }, setFields] = useState({ username: '', password: '', phoneNumber: '', country: '', verificationCode: '' })
   const [showVerification, setShowVerification] = useState(false)
 

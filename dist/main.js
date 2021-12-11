@@ -1355,9 +1355,9 @@ $c3796a9068202221$export$2ba01fb71ed41cb6 = "_button_07e23d";
 $c3796a9068202221$export$8a433e5b2d459900 = "_withoutMargin_07e23d";
 
 
-var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2 , onError: onError  })=>{
+var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2 , onError: onError , resend: resend  })=>{
     const [loading, setLoading] = $cDsoM$useState(null);
-    const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode , resend: resend  }, setFields] = $cDsoM$useState({
+    const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
         password: '',
         phoneNumber: '',
