@@ -24,7 +24,7 @@ const selectedForCombinationGroups = [ // eslint-disable-line
   { name: 'Gamers', userCount: 46344, selected: true, color: '#d24a43' }
 ]
 
-const groupCombinationResult = { userCount: 31308, selected: true, color: '#92278f' }
+const groupCombinationResult = { userCount: 31308, color: '#92278f', readyToSave: true }
 
 const selectedCircleParts = []
 
@@ -126,13 +126,13 @@ const getUserToken = () => {
 
 ReactDOM.render(
   <Body includeSwipes>
-    {/* <Authorized /> */}
-    <Authentication
-      createUser={createUser}
-      verifyUser={() => console.log('verifyUser')}
-      getUserToken={getUserToken}
-      resend={() => console.log('resend')}
-      onError={console.log}
-    />
+    <Authorized />
+    {/* <Authentication */}
+    {/*   createUser={createUser} */}
+    {/*   verifyUser={() => console.log('verifyUser')} */}
+    {/*   getUserToken={getUserToken} */}
+    {/*   resend={() => console.log('resend')} */}
+    {/*   onError={console.log} */}
+    {/* /> */}
   </Body>
   , document.getElementById('app'))

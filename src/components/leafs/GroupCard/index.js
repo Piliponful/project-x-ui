@@ -23,12 +23,12 @@ export default ({ name, userCount, selected, color, save, toggleSelection, combi
         <UserCount userCount={userCount} />
       </div>
 
-      {(color || selected)
+      {((color && !newGroupTitle) || (selected && name))
         ? <CheckboxIcon color={color} deselect={toggleSelection} />
         : (
             name
               ? <Buttons select={toggleSelection} combine={combine} />
-              : <NewGroupButtons save={() => save(newGroupTitle)} cancel={cancel} readyToSave={newGroupTitle && readyToSave} />
+              : <NewGroupButtons save={() => save(newGroupTitle)} cancel={cancel} readyToSave={color ? readyToSave : newGroupTitle} />
           )}
     </article>
   )
