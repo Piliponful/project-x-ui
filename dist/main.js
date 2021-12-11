@@ -1208,17 +1208,61 @@ var $fad5f341416586e4$export$2e2bcd8739ae039 = ({ title: title , children: child
 
 
 
+
+
+
+
+
+var $2699a27faf875e29$exports = {};
+
+$parcel$export($2699a27faf875e29$exports, "button", () => $2699a27faf875e29$export$2ba01fb71ed41cb6, (v) => $2699a27faf875e29$export$2ba01fb71ed41cb6 = v);
+$parcel$export($2699a27faf875e29$exports, "verificationCodeContainer", () => $2699a27faf875e29$export$a55e320eda64329d, (v) => $2699a27faf875e29$export$a55e320eda64329d = v);
+$parcel$export($2699a27faf875e29$exports, "input", () => $2699a27faf875e29$export$b7e3ae3d7c15e42e, (v) => $2699a27faf875e29$export$b7e3ae3d7c15e42e = v);
+var $2699a27faf875e29$export$2ba01fb71ed41cb6;
+var $2699a27faf875e29$export$a55e320eda64329d;
+var $2699a27faf875e29$export$b7e3ae3d7c15e42e;
+$2699a27faf875e29$export$2ba01fb71ed41cb6 = "_button_88fbaa";
+$2699a27faf875e29$export$a55e320eda64329d = "_verificationCodeContainer_88fbaa";
+$2699a27faf875e29$export$b7e3ae3d7c15e42e = "_input_88fbaa";
+
+
+const $529787a0229557e2$export$2affb37eeb4d3983 = ({ className: className , resend: resend , verificationCode: verificationCode , onFieldChange: onFieldChange  })=>/*#__PURE__*/ $cDsoM$jsxs("div", {
+        className: (/*@__PURE__*/$parcel$interopDefault($2699a27faf875e29$exports)).verificationCodeContainer,
+        children: [
+            /*#__PURE__*/ $cDsoM$jsx("input", {
+                value: verificationCode,
+                onChange: onFieldChange,
+                placeholder: "verification code",
+                name: "verificationCode",
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2699a27faf875e29$exports)).input)
+            }),
+            /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($2699a27faf875e29$exports)).button),
+                onClick: resend,
+                children: "Resend"
+            })
+        ]
+    })
+;
+
+
+var $46ef07c7033ae8f1$export$2e2bcd8739ae039 = $529787a0229557e2$export$2affb37eeb4d3983;
+
+
 var $41fa4a951da2c775$exports = {};
 
 $parcel$export($41fa4a951da2c775$exports, "input", () => $41fa4a951da2c775$export$b7e3ae3d7c15e42e, (v) => $41fa4a951da2c775$export$b7e3ae3d7c15e42e = v);
 $parcel$export($41fa4a951da2c775$exports, "button", () => $41fa4a951da2c775$export$2ba01fb71ed41cb6, (v) => $41fa4a951da2c775$export$2ba01fb71ed41cb6 = v);
+$parcel$export($41fa4a951da2c775$exports, "withoutMargin", () => $41fa4a951da2c775$export$8a433e5b2d459900, (v) => $41fa4a951da2c775$export$8a433e5b2d459900 = v);
 var $41fa4a951da2c775$export$b7e3ae3d7c15e42e;
 var $41fa4a951da2c775$export$2ba01fb71ed41cb6;
+var $41fa4a951da2c775$export$8a433e5b2d459900;
 $41fa4a951da2c775$export$b7e3ae3d7c15e42e = "_input_33e8f5";
 $41fa4a951da2c775$export$2ba01fb71ed41cb6 = "_button_33e8f5";
+$41fa4a951da2c775$export$8a433e5b2d459900 = "_withoutMargin_33e8f5";
 
 
-var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: f2  })=>{
+var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: f2 , resend: resend  })=>{
     const [{ username: username , password: password , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
         username: '',
         password: '',
@@ -1265,14 +1309,15 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
                 onChange: onFieldChange,
                 placeholder: "password",
                 name: "password",
-                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
+                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input, {
+                    [(/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).withoutMargin]: !showVerification
+                })
             }),
-            showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
-                value: verificationCode,
-                onChange: onFieldChange,
-                placeholder: "verification code",
-                name: "verificationCode",
-                className: (/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input
+            showVerification ? /*#__PURE__*/ $cDsoM$jsx($46ef07c7033ae8f1$export$2e2bcd8739ae039, {
+                verificationCode: verificationCode,
+                onFieldChange: onFieldChange,
+                resend: ()=>{
+                }
             }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 loading: loading,
@@ -1296,6 +1341,7 @@ var $68841d5e5354d0a2$export$2e2bcd8739ae039 = $7a29cf0ed35d3b93$export$2e2bcd87
 
 
 
+
 var $c3796a9068202221$exports = {};
 
 $parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
@@ -1311,7 +1357,7 @@ $c3796a9068202221$export$8a433e5b2d459900 = "_withoutMargin_07e23d";
 
 var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2 , onError: onError  })=>{
     const [loading, setLoading] = $cDsoM$useState(null);
-    const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode  }, setFields] = $cDsoM$useState({
+    const [{ username: username , password: password , phoneNumber: phoneNumber , country: country1 , verificationCode: verificationCode , resend: resend  }, setFields] = $cDsoM$useState({
         username: '',
         password: '',
         phoneNumber: '',
@@ -1392,12 +1438,10 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
                     [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).withoutMargin]: !showVerification
                 })
             }),
-            showVerification ? /*#__PURE__*/ $cDsoM$jsx("input", {
-                value: verificationCode,
-                onChange: onFieldChange,
-                placeholder: "verification code",
-                name: "verificationCode",
-                className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, (/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).withoutMargin)
+            showVerification ? /*#__PURE__*/ $cDsoM$jsx($46ef07c7033ae8f1$export$2e2bcd8739ae039, {
+                verificationCode: verificationCode,
+                onFieldChange: onFieldChange,
+                resend: resend
             }) : null,
             /*#__PURE__*/ $cDsoM$jsx($524d8b04c727df08$export$2e2bcd8739ae039, {
                 loading: loading,
@@ -1444,7 +1488,7 @@ $a97ed870d150ce32$export$89da14300d534261 = "_active_23b07c";
 
 
 
-var $23bf439265f65302$export$2e2bcd8739ae039 = ({ createUser: createUser , verifyUser: verifyUser , getUserToken: getUserToken , onError: onError  })=>{
+var $23bf439265f65302$export$2e2bcd8739ae039 = ({ createUser: createUser , verifyUser: verifyUser , getUserToken: getUserToken , resend: resend , onError: onError  })=>{
     const [selectedTab, setSelectedTab] = $cDsoM$useState('signIn');
     return(/*#__PURE__*/ $cDsoM$jsx("div", {
         className: (/*@__PURE__*/$parcel$interopDefault($a97ed870d150ce32$exports)).containersContainer,
@@ -1474,11 +1518,13 @@ var $23bf439265f65302$export$2e2bcd8739ae039 = ({ createUser: createUser , verif
                 }),
                 selectedTab === 'signIn' ? /*#__PURE__*/ $cDsoM$jsx($68841d5e5354d0a2$export$2e2bcd8739ae039, {
                     getUserToken: getUserToken,
-                    verifyUser: verifyUser
+                    verifyUser: verifyUser,
+                    resend: resend
                 }) : /*#__PURE__*/ $cDsoM$jsx($c700cb5c44efda05$export$2e2bcd8739ae039, {
                     createUser: createUser,
                     verifyUser: verifyUser,
-                    onError: onError
+                    onError: onError,
+                    resend: resend
                 })
             ]
         })
