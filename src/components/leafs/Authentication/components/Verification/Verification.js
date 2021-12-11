@@ -17,7 +17,7 @@ export const Verification = ({ resend, verificationCode, onFieldChange }) => (
 
     <Button
       className={cn(styles.button)}
-      onClick={resend}
+      onClick={() => resend()}
     >
       Resend
     </Button>

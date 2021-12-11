@@ -127,6 +127,6 @@ const getUserToken = () => {
 ReactDOM.render(
   <Body includeSwipes>
     {/* <Authorized /> */}
-    <Authentication createUser={createUser} verifyUser={() => console.log('verifyUser')} getUserToken={getUserToken} />
+    <Authentication createUser={createUser} verifyUser={() => console.log('verifyUser')} getUserToken={getUserToken} resend={() => console.log('resend')} />
   </Body>
   , document.getElementById('app'))
