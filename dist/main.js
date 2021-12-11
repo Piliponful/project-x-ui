@@ -560,7 +560,7 @@ var $26f3a8f41a44a259$export$2e2bcd8739ae039 = ({ name: name , userCount: userCo
                     })
                 ]
             }),
-            color && !newGroupTitle || selected && name ? /*#__PURE__*/ $cDsoM$jsx($24f020c6d416b009$export$2e2bcd8739ae039, {
+            color && !newGroupTitle || color && selected && name ? /*#__PURE__*/ $cDsoM$jsx($24f020c6d416b009$export$2e2bcd8739ae039, {
                 color: color,
                 deselect: toggleSelection
             }) : name ? /*#__PURE__*/ $cDsoM$jsx($3ff1d60894ab583f$export$2e2bcd8739ae039, {
