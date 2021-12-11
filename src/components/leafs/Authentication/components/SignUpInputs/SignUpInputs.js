@@ -40,6 +40,12 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
       return
     }
 
+    if (!phoneNumber) {
+      setError('phone')
+      onError('Phone number cannot be empty')
+      return
+    }
+
     if (!country) {
       setError('phone')
       onError('Country is not selected')
