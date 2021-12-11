@@ -355,17 +355,22 @@ var $200335818cdff514$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput , v
 var $9f79897e5e39f87f$exports = {};
 
 $parcel$export($9f79897e5e39f87f$exports, "button", () => $9f79897e5e39f87f$export$2ba01fb71ed41cb6, (v) => $9f79897e5e39f87f$export$2ba01fb71ed41cb6 = v);
+$parcel$export($9f79897e5e39f87f$exports, "loader", () => $9f79897e5e39f87f$export$f4c5de44377d2946, (v) => $9f79897e5e39f87f$export$f4c5de44377d2946 = v);
 var $9f79897e5e39f87f$export$2ba01fb71ed41cb6;
+var $9f79897e5e39f87f$export$f4c5de44377d2946;
 $9f79897e5e39f87f$export$2ba01fb71ed41cb6 = "_button_ce85ea";
+$9f79897e5e39f87f$export$f4c5de44377d2946 = "_loader_ce85ea";
 
 
 var $524d8b04c727df08$export$2e2bcd8739ae039 = ({ children: children , className: className , onClick: onClick , disabled: disabled , loading: loading  })=>{
     return(/*#__PURE__*/ $cDsoM$jsx("button", {
         disabled: Boolean(disabled),
-        className: $cDsoM$classnames(className, (/*@__PURE__*/$parcel$interopDefault($9f79897e5e39f87f$exports)).button),
+        className: $cDsoM$classnames(className, (/*@__PURE__*/$parcel$interopDefault($9f79897e5e39f87f$exports)).button, {
+            [(/*@__PURE__*/$parcel$interopDefault($9f79897e5e39f87f$exports)).loader]: loading
+        }),
         onClick: onClick,
         children: loading ? /*#__PURE__*/ $cDsoM$jsx($cDsoM$reactspinnersBeatLoader, {
-            color: "#969696"
+            color: "#ebedf2"
         }) : children
     }));
 };

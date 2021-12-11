@@ -60,6 +60,9 @@
   cursor: pointer;
   outline: none;
 }
+._loader_ce85ea span:first-child {
+  display: flex;
+}
 
 ._button_ba9be0 {
   width: 103px;
