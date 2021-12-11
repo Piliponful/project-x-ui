@@ -6,9 +6,9 @@ import styles from './style.module.styl'
 
 export default ({ children, className, onClick, disabled, loading }) => {
   return (
-    <button disabled={Boolean(disabled)} className={cn(className, styles.button)} onClick={onClick}>
+    <button disabled={Boolean(disabled)} className={cn(className, styles.button, { [styles.loader]: loading })} onClick={onClick}>
       {loading
-        ? <BeatLoader color='#969696' />
+        ? <BeatLoader color='#ebedf2' />
         : children}
     </button>
   )
