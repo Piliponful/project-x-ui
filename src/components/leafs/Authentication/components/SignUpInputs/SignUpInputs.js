@@ -31,7 +31,7 @@ export default ({ createUser: f, verifyUser: f2, onError }) => {
     setLoading(true)
 
     try {
-      await parallelDelay(() => f({ username, password, phoneNumber, country }))
+      await f({ username, password, phoneNumber, country })
       setShowVerification(true)
     } catch (e) {
       onError(e.message)
