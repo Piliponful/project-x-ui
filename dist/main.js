@@ -1334,13 +1334,12 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
         }
         setLoading(true);
         try {
-            await parallelDelay(()=>f({
-                    username: username,
-                    password: password,
-                    phoneNumber: phoneNumber,
-                    country: country1
-                })
-            );
+            await f({
+                username: username,
+                password: password,
+                phoneNumber: phoneNumber,
+                country: country1
+            });
             setShowVerification(true);
         } catch (e) {
             onError(e.message);
