@@ -6,7 +6,7 @@ import Verification from '../Verification'
 
 import styles from './style.module.styl'
 
-export default ({ getUserToken: f, verifyUser: f2, resend }) => {
+export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
   const [{
     username,
     password,
@@ -14,6 +14,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
   }, setFields] = useState({ username: '', password: '', verificationCode: '' })
   const [showVerification, setShowVerification] = useState(false)
   const [loading, setLoading] = useState(null)
+  const [error, setError] = useState({})
 
   const onFieldChange = e => {
     e.preventDefault()
@@ -21,6 +22,19 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
   }
 
   const getUserToken = async () => {
+    if (!username) {
+      setError('username')
+      onError('Username cannot be empty')
+      return
+    }
+
+    if (!password) {
+      setError('password')
+      onError('Password cannot be empty')
+      return
+    }
+
+    setError()
     setLoading(true)
 
     const user = await f({ username, password })
@@ -33,6 +47,14 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
   }
 
   const verifyUser = async () => {
+    if (!verificationCode) {
+      setError('verificationCode')
+      onError('Verification code cannot be empty')
+      return
+    }
+
+    setError()
+
     setLoading(true)
 
     await f2({ verificationCode })
@@ -42,14 +64,20 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
 
   return (
     <>
-      <input value={username} onChange={onFieldChange} placeholder='username' name='username' className={styles.input} />
+      <input
+        value={username}
+        onChange={onFieldChange}
+        placeholder='username'
+        name='username'
+        className={cn(styles.input, { [styles.inputError]: error === 'username' })}
+      />
       <input
         type='password'
         value={password}
         onChange={onFieldChange}
         placeholder='password'
         name='password'
-        className={cn(styles.input, { [styles.withoutMargin]: !showVerification })}
+        className={cn(styles.input, { [styles.withoutMargin]: !showVerification, [styles.inputError]: error === 'password' })}
       />
       {
         showVerification
@@ -58,6 +86,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend }) => {
               verificationCode={verificationCode}
               onFieldChange={onFieldChange}
               resend={resend}
+              className={cn({ [styles.inputError]: error === 'verificationCode' })}
             />
             )
           : null
