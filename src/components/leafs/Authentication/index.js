@@ -8,7 +8,7 @@ import styles from './style.module.styl'
 import 'react-phone-number-input/style.css'
 import './style.css'
 
-export default ({ createUser, verifyUser, getUserToken, onError }) => {
+export default ({ createUser, verifyUser, getUserToken, resend, onError }) => {
   const [selectedTab, setSelectedTab] = useState('signIn')
 
   return (
@@ -30,8 +30,8 @@ export default ({ createUser, verifyUser, getUserToken, onError }) => {
         </div>
         {
           selectedTab === 'signIn'
-            ? <SignInInputs getUserToken={getUserToken} verifyUser={verifyUser} />
-            : <SignUpInputs createUser={createUser} verifyUser={verifyUser} onError={onError} />
+            ? <SignInInputs getUserToken={getUserToken} verifyUser={verifyUser} resend={resend} />
+            : <SignUpInputs createUser={createUser} verifyUser={verifyUser} onError={onError} resend={resend} />
         }
       </div>
     </div>

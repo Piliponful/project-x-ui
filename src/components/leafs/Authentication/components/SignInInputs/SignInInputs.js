@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import cn from 'classnames'
 
 import Button from '../../../../shared/Button'
+import Verification from '../Verification'
 
 import styles from './style.module.styl'
 
-export default ({ getUserToken: f, verifyUser: f2 }) => {
+export default ({ getUserToken: f, verifyUser: f2, resend }) => {
   const [{
     username,
     password,
@@ -47,17 +49,15 @@ export default ({ getUserToken: f, verifyUser: f2 }) => {
         onChange={onFieldChange}
         placeholder='password'
         name='password'
-        className={styles.input}
+        className={cn(styles.input, { [styles.withoutMargin]: !showVerification })}
       />
       {
         showVerification
           ? (
-            <input
-              value={verificationCode}
-              onChange={onFieldChange}
-              placeholder='verification code'
-              name='verificationCode'
-              className={styles.input}
+            <Verification
+              verificationCode={verificationCode}
+              onFieldChange={onFieldChange}
+              resend={() => {}}
             />
             )
           : null

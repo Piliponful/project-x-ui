@@ -3,6 +3,7 @@ import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import cn from 'classnames'
 
 import Button from '../../../../shared/Button'
+import Verification from '../Verification'
 
 import styles from './style.module.styl'
 
@@ -13,7 +14,8 @@ export default ({ createUser: f, verifyUser: f2, onError }) => {
     password,
     phoneNumber,
     country,
-    verificationCode
+    verificationCode,
+    resend
   }, setFields] = useState({ username: '', password: '', phoneNumber: '', country: '', verificationCode: '' })
   const [showVerification, setShowVerification] = useState(false)
 
@@ -70,12 +72,10 @@ export default ({ createUser: f, verifyUser: f2, onError }) => {
       {
         showVerification
           ? (
-            <input
-              value={verificationCode}
-              onChange={onFieldChange}
-              placeholder='verification code'
-              name='verificationCode'
-              className={cn(styles.input, styles.withoutMargin)}
+            <Verification
+              verificationCode={verificationCode}
+              onFieldChange={onFieldChange}
+              resend={resend}
             />
             )
           : null
