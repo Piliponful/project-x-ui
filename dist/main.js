@@ -1282,6 +1282,7 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
     });
     const [showVerification, setShowVerification] = $cDsoM$useState(false);
     const [loading, setLoading] = $cDsoM$useState(null);
+    const [disabled, setDisabled] = $cDsoM$useState(null);
     const [error, setError] = $cDsoM$useState({
     });
     const onFieldChange = (e)=>{
@@ -1309,7 +1310,10 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
             username: username,
             password: password
         });
-        if (!user.verificationCompleted) setShowVerification(true);
+        if (!user.verificationCompleted) {
+            setShowVerification(true);
+            setDisabled(true);
+        }
         setLoading(false);
     };
     const verifyUser = async ()=>{
@@ -1334,7 +1338,8 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
                 name: "username",
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input, {
                     [(/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).inputError]: error === 'username'
-                })
+                }),
+                disabled: disabled
             }),
             /*#__PURE__*/ $cDsoM$jsx("input", {
                 type: "password",
@@ -1345,7 +1350,8 @@ var $7a29cf0ed35d3b93$export$2e2bcd8739ae039 = ({ getUserToken: f , verifyUser: 
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).input, {
                     [(/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).withoutMargin]: !showVerification,
                     [(/*@__PURE__*/$parcel$interopDefault($41fa4a951da2c775$exports)).inputError]: error === 'password'
-                })
+                }),
+                disabled: disabled
             }),
             showVerification ? /*#__PURE__*/ $cDsoM$jsx($46ef07c7033ae8f1$export$2e2bcd8739ae039, {
                 verificationCode: verificationCode,
@@ -1383,16 +1389,19 @@ var $c3796a9068202221$exports = {};
 $parcel$export($c3796a9068202221$exports, "input", () => $c3796a9068202221$export$b7e3ae3d7c15e42e, (v) => $c3796a9068202221$export$b7e3ae3d7c15e42e = v);
 $parcel$export($c3796a9068202221$exports, "inputError", () => $c3796a9068202221$export$ad080a00b79f0160, (v) => $c3796a9068202221$export$ad080a00b79f0160 = v);
 $parcel$export($c3796a9068202221$exports, "shake", () => $c3796a9068202221$export$267b06a7460aa7d3, (v) => $c3796a9068202221$export$267b06a7460aa7d3 = v);
+$parcel$export($c3796a9068202221$exports, "disabled", () => $c3796a9068202221$export$683472f6198a076e, (v) => $c3796a9068202221$export$683472f6198a076e = v);
 $parcel$export($c3796a9068202221$exports, "button", () => $c3796a9068202221$export$2ba01fb71ed41cb6, (v) => $c3796a9068202221$export$2ba01fb71ed41cb6 = v);
 $parcel$export($c3796a9068202221$exports, "withoutMargin", () => $c3796a9068202221$export$8a433e5b2d459900, (v) => $c3796a9068202221$export$8a433e5b2d459900 = v);
 var $c3796a9068202221$export$b7e3ae3d7c15e42e;
 var $c3796a9068202221$export$ad080a00b79f0160;
 var $c3796a9068202221$export$267b06a7460aa7d3;
+var $c3796a9068202221$export$683472f6198a076e;
 var $c3796a9068202221$export$2ba01fb71ed41cb6;
 var $c3796a9068202221$export$8a433e5b2d459900;
 $c3796a9068202221$export$b7e3ae3d7c15e42e = "_input_07e23d";
 $c3796a9068202221$export$ad080a00b79f0160 = "_inputError_07e23d";
 $c3796a9068202221$export$267b06a7460aa7d3 = "_shake_07e23d";
+$c3796a9068202221$export$683472f6198a076e = "_disabled_07e23d";
 $c3796a9068202221$export$2ba01fb71ed41cb6 = "_button_07e23d";
 $c3796a9068202221$export$8a433e5b2d459900 = "_withoutMargin_07e23d";
 
@@ -1409,6 +1418,7 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
     const [error, setError] = $cDsoM$useState({
     });
     const [showVerification, setShowVerification] = $cDsoM$useState(false);
+    const [disabled, setDisabled] = $cDsoM$useState(null);
     const onFieldChange = (e)=>{
         if (e.target.name === error) setError();
         e.preventDefault();
@@ -1453,6 +1463,7 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
                 phoneNumber: phoneNumber,
                 country: country1
             });
+            setDisabled(true);
             setShowVerification(true);
         } catch (e) {
             onError(e.message);
@@ -1482,7 +1493,8 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, {
                     [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).inputError]: error === 'username'
                 }),
-                autoComplete: "nope"
+                autoComplete: "nope",
+                disabled: disabled
             }),
             /*#__PURE__*/ $cDsoM$jsx("input", {
                 type: "password",
@@ -1493,7 +1505,8 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, {
                     [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).inputError]: error === 'password'
                 }),
-                autoComplete: "new-password"
+                autoComplete: "new-password",
+                disabled: disabled
             }),
             /*#__PURE__*/ $cDsoM$jsx($cDsoM$reactphonenumberinput, {
                 placeholder: "phone number",
@@ -1513,8 +1526,10 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
                 ,
                 className: $cDsoM$classnames((/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).input, {
                     [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).withoutMargin]: !showVerification,
-                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).inputError]: error === 'phone'
-                })
+                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).inputError]: error === 'phone',
+                    [(/*@__PURE__*/$parcel$interopDefault($c3796a9068202221$exports)).disabled]: disabled
+                }),
+                disabled: disabled
             }),
             showVerification ? /*#__PURE__*/ $cDsoM$jsx($46ef07c7033ae8f1$export$2e2bcd8739ae039, {
                 verificationCode: verificationCode,
