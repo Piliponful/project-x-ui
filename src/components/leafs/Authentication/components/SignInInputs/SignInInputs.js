@@ -14,6 +14,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
   }, setFields] = useState({ username: '', password: '', verificationCode: '' })
   const [showVerification, setShowVerification] = useState(false)
   const [loading, setLoading] = useState(null)
+  const [disabled, setDisabled] = useState(null)
   const [error, setError] = useState({})
 
   const onFieldChange = e => {
@@ -41,6 +42,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
 
     if (!user.verificationCompleted) {
       setShowVerification(true)
+      setDisabled(true)
     }
 
     setLoading(false)
@@ -70,6 +72,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
         placeholder='username'
         name='username'
         className={cn(styles.input, { [styles.inputError]: error === 'username' })}
+        disabled={disabled}
       />
       <input
         type='password'
@@ -78,6 +81,7 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
         placeholder='password'
         name='password'
         className={cn(styles.input, { [styles.withoutMargin]: !showVerification, [styles.inputError]: error === 'password' })}
+        disabled={disabled}
       />
       {
         showVerification

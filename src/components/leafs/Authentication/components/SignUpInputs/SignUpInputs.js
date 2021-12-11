@@ -18,6 +18,7 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
   }, setFields] = useState({ username: '', password: '', phoneNumber: '', country: '', verificationCode: '' })
   const [error, setError] = useState({})
   const [showVerification, setShowVerification] = useState(false)
+  const [disabled, setDisabled] = useState(null)
 
   const onFieldChange = e => {
     if (e.target.name === error) {
@@ -63,6 +64,7 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
 
     try {
       await f({ username, password, phoneNumber, country })
+      setDisabled(true)
       setShowVerification(true)
     } catch (e) {
       onError(e.message)
@@ -95,6 +97,7 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
         name='username'
         className={cn(styles.input, { [styles.inputError]: error === 'username' })}
         autoComplete='nope'
+        disabled={disabled}
       />
       <input
         type='password'
@@ -104,6 +107,7 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
         name='password'
         className={cn(styles.input, { [styles.inputError]: error === 'password' })}
         autoComplete='new-password'
+        disabled={disabled}
       />
       <PhoneInput
         placeholder='phone number'
@@ -111,7 +115,8 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
         value={phoneNumber}
         onCountryChange={country => setFields(state => ({ ...state, country }))}
         onChange={value => setFields(state => ({ ...state, phoneNumber: value }))}
-        className={cn(styles.input, { [styles.withoutMargin]: !showVerification, [styles.inputError]: error === 'phone' })}
+        className={cn(styles.input, { [styles.withoutMargin]: !showVerification, [styles.inputError]: error === 'phone', [styles.disabled]: disabled })}
+        disabled={disabled}
       />
       {
         showVerification
