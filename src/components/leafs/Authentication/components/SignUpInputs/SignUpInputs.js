@@ -24,6 +24,11 @@ export default ({ createUser: f, verifyUser: f2, onError, resend }) => {
   }
 
   const createUser = async () => {
+    if (!country) {
+      onError('Country is not selected')
+      return
+    }
+
     if (!isValidPhoneNumber(phoneNumber)) {
       onError('Phone number is invalid')
       return

@@ -7,7 +7,7 @@
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel serve index.html --port 8082 --no-cache",
+    "dev": "parcel serve index.html --port 8082 --no-cache --no-hmr",
     "build": "parcel build",
     "lint": "standard src/*"
   },
