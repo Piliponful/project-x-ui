@@ -1424,6 +1424,11 @@ var $8c25ad23d0e74291$export$2e2bcd8739ae039 = ({ createUser: f , verifyUser: f2
             onError('Password cannot be empty');
             return;
         }
+        if (!phoneNumber) {
+            setError('phone');
+            onError('Phone number cannot be empty');
+            return;
+        }
         if (!country1) {
             setError('phone');
             onError('Country is not selected');
