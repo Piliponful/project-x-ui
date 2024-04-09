@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -8,7 +8,7 @@ var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactmedia = require("react-media");
-require("react-phone-number-input/style.css");
+// require("react-phone-number-input/style.css");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
 
 
