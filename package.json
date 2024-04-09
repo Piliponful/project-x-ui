@@ -38,5 +38,9 @@
     "react-swipeable": "^6.1.0",
     "snapsvg-cjs": "0.0.6",
     "standard": "^16.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "process": "^0.11.10"
   }
 }
