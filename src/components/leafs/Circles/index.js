@@ -73,7 +73,6 @@ export default ({ selectedGroups, handleCompositionTypeChange }) => {
     if (selectedGroups.length !== 2) {
       return
     }
-    const Snap = require('snapsvg-cjs')
 
     const intersection = Snap('#intersection')
     const rightWing = Snap('#right-wing')

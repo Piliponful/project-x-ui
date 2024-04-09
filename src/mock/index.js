@@ -12,8 +12,11 @@ import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
+import Snap from 'snapsvg-cjs'
 
 import '../../styles.css'
+
+window.Snap = Snap
 
 const groupCombination = true
 

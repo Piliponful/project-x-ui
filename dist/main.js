@@ -2,7 +2,6 @@
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
-var $c5L0i$snapsvgcjs = require("snapsvg-cjs");
 var $c5L0i$classnames = require("classnames");
 var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
@@ -260,7 +259,6 @@ const $16c888d17a78a645$var$setCursorStyle = (element, partName)=>{
     });
 };
 let $16c888d17a78a645$var$selectedParts = [];
-
 var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups, handleCompositionTypeChange: handleCompositionTypeChange })=>{
     const changeOpacity = (element, partName, parts)=>{
         if (!$16c888d17a78a645$var$isAllowedToClick(element, partName)) return;
@@ -279,7 +277,6 @@ var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
     };
     (0, $c5L0i$react.useEffect)(()=>{
         if (selectedGroups.length !== 2) return;
-        const Snap = $c5L0i$snapsvgcjs;
         const intersection = Snap("#intersection");
         const rightWing = Snap("#right-wing");
         const leftWing = Snap("#left-wing");
