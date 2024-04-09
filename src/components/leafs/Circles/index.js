@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, { useEffect } from 'react'
-import Snap from 'snapsvg-cjs'
 import { isEqual } from 'lodash'
 
 import Hint from './components/Hint'
@@ -74,6 +73,7 @@ export default ({ selectedGroups, handleCompositionTypeChange }) => {
     if (selectedGroups.length !== 2) {
       return
     }
+    const Snap = require('snapsvg-cjs')
 
     const intersection = Snap('#intersection')
     const rightWing = Snap('#right-wing')
