@@ -13,6 +13,8 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 
+import '../../styles.css'
+
 const groupCombination = true
 
 // const selectedForCombinationGroups = [

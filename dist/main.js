@@ -8,7 +8,6 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$reactswipeable = require("react-swipeable");
-var $c5L0i$reactcustomscrollbars = require("react-custom-scrollbars");
 var $c5L0i$reactmedia = require("react-media");
 require("react-phone-number-input/style.css");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
@@ -996,7 +995,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 
 
 
-
 var $6be3d19ca593c163$exports = {};
 
 $parcel$export($6be3d19ca593c163$exports, "groupContainer", () => $6be3d19ca593c163$export$f36792cb9bd81925, (v) => $6be3d19ca593c163$export$f36792cb9bd81925 = v);
@@ -1006,12 +1004,11 @@ $6be3d19ca593c163$export$f36792cb9bd81925 = `E0-4eG_groupContainer`;
 
 var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer,
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactcustomscrollbars.Scrollbars), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {
                 width: "100%",
                 height: "100%"
             },
-            autoHide: true,
             children: children
         })
     });
@@ -1138,7 +1135,6 @@ var $caa6e61676dd60dd$export$2e2bcd8739ae039 = ({ children: children, title: tit
 
 
 
-
 var $819a1b46ae18ad3b$exports = {};
 
 $parcel$export($819a1b46ae18ad3b$exports, "title", () => $819a1b46ae18ad3b$export$fb184b623420d9be, (v) => $819a1b46ae18ad3b$export$fb184b623420d9be = v);
@@ -1169,8 +1165,7 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = ({ title: title, children: childr
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aa8ebe5b2f60f9e8$export$2e2bcd8739ae039), {
                 children: title
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactcustomscrollbars.Scrollbars), {
-                autoHide: true,
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
                 children: children
             })
@@ -1623,6 +1618,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
             })
         ]
     });
+
 
 
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {

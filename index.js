@@ -11,6 +11,8 @@ import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
 import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
 
+import './styles.css'
+
 export default {
   shallow: {
     Body,

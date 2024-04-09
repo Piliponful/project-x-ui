@@ -6,7 +6,6 @@
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
-  
   "scripts": {
     "dev": "parcel serve index.html --port 8082",
     "build": "parcel build",
@@ -31,7 +30,6 @@
     "npm": "^7.8.0",
     "parcel": "^2.0.1",
     "react": "^17.0.2",
-    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.2",
     "react-media": "^1.10.0",
     "react-phone-number-input": "^3.1.42",
