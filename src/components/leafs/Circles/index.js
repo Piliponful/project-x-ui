@@ -66,7 +66,7 @@ export default ({ selectedGroups, handleCompositionTypeChange }) => {
     selectedParts = newSelectedParts
     Object.entries(parts).forEach(([partName, element]) => setCursorStyle(element, partName))
 
-    handleCompositionTypeChange(newCompositionType)
+    handleCompositionTypeChange(selectedParts)
   }
 
   useEffect(() => {

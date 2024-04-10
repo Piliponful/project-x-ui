@@ -274,7 +274,7 @@ var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         const newCompositionType = $16c888d17a78a645$var$circlePartsToCompositionType(newSelectedParts);
         $16c888d17a78a645$var$selectedParts = newSelectedParts;
         Object.entries(parts).forEach(([partName, element])=>$16c888d17a78a645$var$setCursorStyle(element, partName));
-        handleCompositionTypeChange(newCompositionType);
+        handleCompositionTypeChange($16c888d17a78a645$var$selectedParts);
     };
     (0, $c5L0i$react.useEffect)(()=>{
         if (selectedGroups.length !== 2) return;
