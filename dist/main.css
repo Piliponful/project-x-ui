@@ -321,6 +321,7 @@
   justify-content: center;
   width: 100vw;
   min-height: 100dvh;
+  max-height: 100dvh;
   display: flex;
 }
 
