@@ -7,9 +7,10 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$reactswipeable = require("react-swipeable");
-var $c5L0i$reactmedia = require("react-media");
 // require("react-phone-number-input/style.css");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
+var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
+var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -375,22 +376,26 @@ var $f6386e79966b60e2$export$2e2bcd8739ae039 = ({ children: children, className:
 var $f1cbc9f8eab75aad$exports = {};
 
 $parcel$export($f1cbc9f8eab75aad$exports, "button", () => $f1cbc9f8eab75aad$export$2ba01fb71ed41cb6, (v) => $f1cbc9f8eab75aad$export$2ba01fb71ed41cb6 = v);
+$parcel$export($f1cbc9f8eab75aad$exports, "nobold", () => $f1cbc9f8eab75aad$export$a9c364a443888bb7, (v) => $f1cbc9f8eab75aad$export$a9c364a443888bb7 = v);
 $parcel$export($f1cbc9f8eab75aad$exports, "primary", () => $f1cbc9f8eab75aad$export$9ad721cf3b3debe0, (v) => $f1cbc9f8eab75aad$export$9ad721cf3b3debe0 = v);
 $parcel$export($f1cbc9f8eab75aad$exports, "secondary", () => $f1cbc9f8eab75aad$export$745c6f71a1e0e6f7, (v) => $f1cbc9f8eab75aad$export$745c6f71a1e0e6f7 = v);
 var $f1cbc9f8eab75aad$export$2ba01fb71ed41cb6;
+var $f1cbc9f8eab75aad$export$a9c364a443888bb7;
 var $f1cbc9f8eab75aad$export$9ad721cf3b3debe0;
 var $f1cbc9f8eab75aad$export$745c6f71a1e0e6f7;
 $f1cbc9f8eab75aad$export$2ba01fb71ed41cb6 = `GNms6q_button`;
+$f1cbc9f8eab75aad$export$a9c364a443888bb7 = `GNms6q_nobold`;
 $f1cbc9f8eab75aad$export$9ad721cf3b3debe0 = `GNms6q_primary`;
 $f1cbc9f8eab75aad$export$745c6f71a1e0e6f7 = `GNms6q_secondary`;
 
 
-var $0ccf9c474dfd3877$export$2e2bcd8739ae039 = ({ children: children, primary: primary, secondary: secondary, onClick: onClick, disabled: disabled })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $f6386e79966b60e2$export$2e2bcd8739ae039), {
+var $0ccf9c474dfd3877$export$2e2bcd8739ae039 = ({ children: children, primary: primary, secondary: secondary, onClick: onClick, disabled: disabled, nobold: nobold })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $f6386e79966b60e2$export$2e2bcd8739ae039), {
         disabled: disabled,
         onClick: onClick,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($f1cbc9f8eab75aad$exports))).button, {
             [(0, (/*@__PURE__*/$parcel$interopDefault($f1cbc9f8eab75aad$exports))).primary]: primary,
-            [(0, (/*@__PURE__*/$parcel$interopDefault($f1cbc9f8eab75aad$exports))).secondary]: secondary
+            [(0, (/*@__PURE__*/$parcel$interopDefault($f1cbc9f8eab75aad$exports))).secondary]: secondary,
+            [(0, (/*@__PURE__*/$parcel$interopDefault($f1cbc9f8eab75aad$exports))).nobold]: nobold
         }),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
             children: children
@@ -409,11 +414,13 @@ var $54d79e7011b4fc31$export$2e2bcd8739ae039 = ({ select: select, combine: combi
         className: (0, (/*@__PURE__*/$parcel$interopDefault($03d19b4ea4a6700f$exports))).buttons,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
-                primary: true,
+                nobold: true,
+                secondary: true,
                 onClick: select,
                 children: "Select"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
+                nobold: true,
                 secondary: true,
                 onClick: combine,
                 children: "Combine"
@@ -436,12 +443,15 @@ var $e9d51867d4acf951$export$2e2bcd8739ae039 = ({ readyToSave: readyToSave, save
         className: (0, (/*@__PURE__*/$parcel$interopDefault($8c4380dcf4c2ce94$exports))).buttons,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
+                nobold: true,
+                secondary: true,
                 disabled: !readyToSave,
                 primary: true,
                 onClick: save,
                 children: "Save"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
+                nobold: true,
                 secondary: true,
                 onClick: cancel,
                 children: "Cancel"
@@ -1016,29 +1026,6 @@ var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PU
 
 
 
-
-
-var $92655c5138d5e9d6$exports = {};
-
-$parcel$export($92655c5138d5e9d6$exports, "secondary", () => $92655c5138d5e9d6$export$745c6f71a1e0e6f7, (v) => $92655c5138d5e9d6$export$745c6f71a1e0e6f7 = v);
-$parcel$export($92655c5138d5e9d6$exports, "title", () => $92655c5138d5e9d6$export$fb184b623420d9be, (v) => $92655c5138d5e9d6$export$fb184b623420d9be = v);
-var $92655c5138d5e9d6$export$745c6f71a1e0e6f7;
-var $92655c5138d5e9d6$export$fb184b623420d9be;
-$92655c5138d5e9d6$export$745c6f71a1e0e6f7 = `KQ3FEG_secondary`;
-$92655c5138d5e9d6$export$fb184b623420d9be = `KQ3FEG_title`;
-
-
-var $f7b07a4e82dbe7ac$export$2e2bcd8739ae039 = ({ children: children, className: className, color: color })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
-        style: {
-            color: color
-        },
-        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($92655c5138d5e9d6$exports))).title, className),
-        children: children
-    });
-
-
-
-
 var $25f6686bebec2027$exports = {};
 
 $parcel$export($25f6686bebec2027$exports, "container", () => $25f6686bebec2027$export$34e0f9847d4c02dd, (v) => $25f6686bebec2027$export$34e0f9847d4c02dd = v);
@@ -1059,48 +1046,13 @@ var $0dca14a056f81668$export$e962ae2959462fd2;
 $0dca14a056f81668$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
 
 
-
-var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("section", {
+var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen,
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $f7b07a4e82dbe7ac$export$2e2bcd8739ae039), {
-                color: "#3d465e",
-                children: "Questions"
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
-                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactmedia))), {
-                    queries: {
-                        small: {
-                            minWidth: (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$120137d2fb34488f),
-                            maxWidth: (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$5d27a029e0b63495)
-                        },
-                        medium: {
-                            minWidth: (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$5d27a029e0b63495),
-                            maxWidth: (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$310e42f8685040c9)
-                        },
-                        large: {
-                            minWidth: (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$310e42f8685040c9)
-                        }
-                    },
-                    children: (matches)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-                            children: [
-                                matches.small ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
-                                    children: children.slice(0, 1)
-                                }) : null,
-                                matches.medium ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
-                                    children: children.slice(0, 2)
-                                }) : null,
-                                matches.large ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
-                                    children: children.slice(0, 3)
-                                }) : null
-                            ]
-                        })
-                })
-            })
-        ]
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
+            children: children.slice(0, 1)
+        })
     });
-
 
 
 
@@ -1115,35 +1067,13 @@ $f28eb578a4c1e5c1$export$6fbb9cd2843e91b2 = `HFaEpW_sidebar`;
 $f28eb578a4c1e5c1$export$fb184b623420d9be = `HFaEpW_title`;
 
 
-var $caa6e61676dd60dd$export$2e2bcd8739ae039 = ({ children: children, title: title, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+var $caa6e61676dd60dd$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($f28eb578a4c1e5c1$exports))).sidebar,
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $f7b07a4e82dbe7ac$export$2e2bcd8739ae039), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($f28eb578a4c1e5c1$exports))).title,
-                color: "#b1b8c7",
-                children: title
-            }),
-            children
-        ]
-    });
-
-
-
-
-
-
-var $819a1b46ae18ad3b$exports = {};
-
-$parcel$export($819a1b46ae18ad3b$exports, "title", () => $819a1b46ae18ad3b$export$fb184b623420d9be, (v) => $819a1b46ae18ad3b$export$fb184b623420d9be = v);
-var $819a1b46ae18ad3b$export$fb184b623420d9be;
-$819a1b46ae18ad3b$export$fb184b623420d9be = `L5hfma_title`;
-
-
-var $aa8ebe5b2f60f9e8$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($819a1b46ae18ad3b$exports))).title,
         children: children
     });
+
+
 
 
 var $5a9d2af86b1e1e16$exports = {};
@@ -1156,18 +1086,10 @@ $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
 $5a9d2af86b1e1e16$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
 
 
-var $f6827b11255bd55d$export$2e2bcd8739ae039 = ({ title: title, children: children })=>{
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).cardsRow,
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aa8ebe5b2f60f9e8$export$2e2bcd8739ae039), {
-                children: title
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
-                children: children
-            })
-        ]
+var $f6827b11255bd55d$export$2e2bcd8739ae039 = ({ children: children })=>{
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
+        children: children
     });
 };
 
@@ -1590,32 +1512,57 @@ var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verify
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
+$parcel$export($13058157b3244d01$exports, "dropdown", () => $13058157b3244d01$export$81207e5cc4186890, (v) => $13058157b3244d01$export$81207e5cc4186890 = v);
 $parcel$export($13058157b3244d01$exports, "icon", () => $13058157b3244d01$export$1ca1ec8b29a4ce27, (v) => $13058157b3244d01$export$1ca1ec8b29a4ce27 = v);
 $parcel$export($13058157b3244d01$exports, "username", () => $13058157b3244d01$export$5e1be761f603d585, (v) => $13058157b3244d01$export$5e1be761f603d585 = v);
 var $13058157b3244d01$export$34e0f9847d4c02dd;
+var $13058157b3244d01$export$81207e5cc4186890;
 var $13058157b3244d01$export$1ca1ec8b29a4ce27;
 var $13058157b3244d01$export$5e1be761f603d585;
 $13058157b3244d01$export$34e0f9847d4c02dd = `rzmFQq_container`;
+$13058157b3244d01$export$81207e5cc4186890 = `rzmFQq_dropdown`;
 $13058157b3244d01$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username })=>{
+    const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
+    const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
+        onTriggered: ()=>setShowDropdown(false)
+    });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+        onClick: ()=>setShowDropdown(!showDropdown),
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                children: username
+                children: "Settings"
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$fortawesomereactfontawesome.FontAwesomeIcon), {
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                style: {
+                    display: showDropdown ? "flex" : "none"
+                },
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).dropdown,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: logout,
+                        children: "Log out"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        children: "Rewards"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
-                size: "1x",
-                color: "#bebebe",
-                icon: (0, $c5L0i$fortawesomefreesolidsvgicons.faSignOutAlt),
-                onClick: logout
+                sx: {
+                    color: "#bebebe"
+                }
             })
         ]
     });
+};
 
 
 
