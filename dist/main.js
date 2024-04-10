@@ -1535,9 +1535,13 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
         onClick: ()=>setShowDropdown(!showDropdown),
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                children: "Settings"
+                children: [
+                    "Settings (",
+                    username,
+                    ")"
+                ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {

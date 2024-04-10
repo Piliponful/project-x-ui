@@ -12,7 +12,7 @@ export default ({ logout, username }) => {
 
   return (
     <div ref={ref} className={styles.container} onClick={() => setShowDropdown(!showDropdown)}>
-      <Text className={styles.username}>Settings</Text>
+      <Text className={styles.username}>Settings ({username})</Text>
       <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
         <div onClick={logout}>Log out</div>
         <div>Rewards</div>
