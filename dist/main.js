@@ -837,12 +837,24 @@ $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, name: name, answersCount: answersCount, currentUserAnswer: answer, respond: respond, createNewGroup: createNewGroup })=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, respond: respond, createNewGroup: createNewGroup })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
-                children: name
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                        style: {
+                            color: "#00000063"
+                        },
+                        children: [
+                            username,
+                            ":"
+                        ]
+                    }),
+                    " ",
+                    name
+                ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
                 ...answersCount,

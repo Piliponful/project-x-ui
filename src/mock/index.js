@@ -42,11 +42,11 @@ const groups = [
 ]
 
 const mostAnsweredQuestions = [ // eslint-disable-line
-  { name: 'Have you watched new season of attack on titan?', currentUserAnswer: 'Yes', answersCount: { yes: 383343, no: 23450 } },
-  { name: 'Will Luffy find one piece?', currentUserAnswer: null, answersCount: { yes: 112342, no: 311323 } },
-  { name: 'Do you like naruto?', currentUserAnswer: null, answersCount: { yes: 240325, no: 101333 } },
-  { name: 'Do you like battle between Sasuke and Naruto?', currentUserAnswer: 'No', answersCount: { yes: 80341, no: 280341 } },
-  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 } }
+  { name: 'Have you watched new season of attack on titan?', currentUserAnswer: 'Yes', answersCount: { yes: 383343, no: 23450 }, username: 'piliponful' },
+  { name: 'Will Luffy find one piece?', currentUserAnswer: null, answersCount: { yes: 112342, no: 311323 }, username: 'piliponful' },
+  { name: 'Do you like naruto?', currentUserAnswer: null, answersCount: { yes: 240325, no: 101333 }, username: 'piliponful' },
+  { name: 'Do you like battle between Sasuke and Naruto?', currentUserAnswer: 'No', answersCount: { yes: 80341, no: 280341 }, username: 'piliponful' },
+  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' }
 ]
 
 const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
