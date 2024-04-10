@@ -401,7 +401,7 @@
 ._7kO5aG_scrollContainer {
   flex-direction: column;
   width: 100%;
-  height: calc(100% - 92px);
+  height: 100%;
   display: flex;
   overflow-y: auto;
 }

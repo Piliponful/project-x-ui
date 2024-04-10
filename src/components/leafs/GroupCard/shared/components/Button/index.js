@@ -6,8 +6,8 @@ import Text from '../../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ children, primary, secondary, onClick, disabled }) => (
-  <Button disabled={disabled} onClick={onClick} className={cn(styles.button, { [styles.primary]: primary, [styles.secondary]: secondary })}>
+export default ({ children, primary, secondary, onClick, disabled, nobold }) => (
+  <Button disabled={disabled} onClick={onClick} className={cn(styles.button, { [styles.primary]: primary, [styles.secondary]: secondary, [styles.nobold]: nobold })}>
     <Text>
       {children}
     </Text>
