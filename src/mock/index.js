@@ -113,10 +113,10 @@ const MainScreenWithQuestions = () => (
 )
 
 const Authorized = () => {
-  const { screenName, setSkipScreen } = useContext(MainScreenSwipeContext)
-  useEffect(() => {
-    setSkipScreen('groupContent')
-  }, [])
+  const { screenName } = useContext(MainScreenSwipeContext)
+  // useEffect(() => {
+  //   setSkipScreen('groupContent')
+  // }, [])
 
   return (
     <>
