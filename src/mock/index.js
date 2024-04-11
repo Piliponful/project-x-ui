@@ -19,7 +19,7 @@ import '../../styles.css'
 
 window.Snap = Snap
 
-const groupCombination = true
+const groupCombination = false
 
 // const selectedForCombinationGroups = [
 //   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
