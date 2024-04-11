@@ -10,6 +10,7 @@ import Sidebar from './src/components/shallow/Sidebar'
 import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
 import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
+import GroupContentScreen from './src/components/leafs/GroupContentScreen'
 
 import './styles.css'
 
@@ -27,7 +28,8 @@ export default {
     QuestionCard,
     NewQuestion,
     Authentication,
-    ActionsPanel
+    ActionsPanel,
+    GroupContentScreen
   },
   context: {
     MainScreenSwipeContext

@@ -7,7 +7,6 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$reactswipeable = require("react-swipeable");
-// require("react-phone-number-input/style.css");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
@@ -1488,7 +1487,6 @@ $77776f143bd76580$export$cf64224bcd829024 = `P5LmWG_signUp`;
 
 
 
-
 var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verifyUser: verifyUser, getUserToken: getUserToken, resend: resend, onError: onError })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("signIn");
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -1598,6 +1596,28 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
 
 
 
+
+var $fc6e17f49e58291a$exports = {};
+
+$parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e17f49e58291a$export$de3da254965f2f43, (v) => $fc6e17f49e58291a$export$de3da254965f2f43 = v);
+var $fc6e17f49e58291a$export$de3da254965f2f43;
+$fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
+
+
+var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        style: show && {
+            display: "flex"
+        },
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).screenWithGroupContent,
+        children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                children: user.name
+            }, user._id))
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -1612,7 +1632,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         QuestionCard: $fde06a1540536d1e$export$2e2bcd8739ae039,
         NewQuestion: $2d4c76ea0fc231a4$export$2e2bcd8739ae039,
         Authentication: $9cd36ad568230ef5$export$2e2bcd8739ae039,
-        ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039
+        ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039,
+        GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee
