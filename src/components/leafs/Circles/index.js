@@ -12,16 +12,19 @@ import Circle from './Circle'
 import CircleBlue from './CircleBlue'
 
 const circlePartsToCompositionType = circleParts => {
-  if (isEqual(circleParts, ['intersection'])) {
+  if (circleParts.includes('intersection') && circleParts.length === 1) {
     return 'intersection'
   }
-  if (isEqual(circleParts, ['leftWing'])) {
+  if (circleParts.includes('leftWing') && circleParts.length === 1) {
     return 'difference'
   }
-  if (isEqual(circleParts, ['rightWing'])) {
+  if (circleParts.includes('rightWing') && circleParts.length === 1) {
     return 'difference'
   }
-  if (isEqual(circleParts, ['leftWing', 'intersection', 'rightWing'])) {
+  if (circleParts.includes('rightWing') && circleParts.includes('leftWing') && circleParts.length === 2) {
+    return 'symmetric-difference'
+  }
+  if (['leftWing', 'intersection', 'rightWing'].every(i => circleParts.includes(i))) {
     return 'union'
   }
 

@@ -228,20 +228,15 @@ var $3f03f2f51f594f55$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ (0, $c5L0i$reac
 
 
 const $16c888d17a78a645$var$circlePartsToCompositionType = (circleParts)=>{
-    if ((0, $c5L0i$lodash.isEqual)(circleParts, [
-        "intersection"
-    ])) return "intersection";
-    if ((0, $c5L0i$lodash.isEqual)(circleParts, [
-        "leftWing"
-    ])) return "difference";
-    if ((0, $c5L0i$lodash.isEqual)(circleParts, [
-        "rightWing"
-    ])) return "difference";
-    if ((0, $c5L0i$lodash.isEqual)(circleParts, [
+    if (circleParts.includes("intersection") && circleParts.length === 1) return "intersection";
+    if (circleParts.includes("leftWing") && circleParts.length === 1) return "difference";
+    if (circleParts.includes("rightWing") && circleParts.length === 1) return "difference";
+    if (circleParts.includes("rightWing") && circleParts.includes("leftWing") && circleParts.length === 2) return "symmetric-difference";
+    if ([
         "leftWing",
         "intersection",
         "rightWing"
-    ])) return "union";
+    ].every((i)=>circleParts.includes(i))) return "union";
     return null;
 };
 const $16c888d17a78a645$var$isAllowedToClick = (element, partName)=>{
