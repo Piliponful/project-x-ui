@@ -96,6 +96,7 @@
 }
 
 .DHSumq_buttons {
+  justify-content: center;
   gap: 10px;
   display: flex;
 }
@@ -715,6 +716,10 @@
 ::-webkit-scrollbar {
   background: none;
   width: 0;
+}
+
+* {
+  scrollbar-width: none;
 }
 
 .screen-with-group-content {
