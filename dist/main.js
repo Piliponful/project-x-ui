@@ -933,11 +933,26 @@ var $61bbaaf79dd60fe4$export$34e0f9847d4c02dd;
 $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = `mrTbNq_container`;
 
 
+// eslint-disable-next-line no-extend-native
+Number.prototype.mod = function(n) {
+    return (this % n + n) % n;
+};
 var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
     const value = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const [swipeCount, setSwipeCount] = (0, $c5L0i$react.useState)(0);
+    const screenBySwipeCount = {
+        0: "groups",
+        1: "groupContent",
+        2: "questions"
+    };
     const handlers = (0, $c5L0i$reactswipeable.useSwipeable)({
         onSwiped: (eventData)=>{
-            if (eventData.dir === "Right" || eventData.dir === "Left") value.toggleMainScreen();
+            if (eventData.dir === "Right" || eventData.dir === "Left") {
+                const plus = eventData.dir === "Left" ? 1 : -1;
+                const newSwipeCount = (swipeCount + plus).mod(3);
+                setSwipeCount(newSwipeCount);
+                value.toggleScreen(screenBySwipeCount[newSwipeCount]);
+            }
         },
         delta: 40,
         preventDefaultTouchmoveEvent: true
@@ -968,27 +983,32 @@ const $be6f0e84320366a7$export$120137d2fb34488f = 467;
 
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
-    mainScreen: true,
-    toggleMainScreen: null
+    toggleScreen: null
 });
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes })=>{
-    const [mainScreen, toggleMainScreen] = (0, $c5L0i$react.useState)(true);
+    const [screenName, toggleScreen] = (0, $c5L0i$react.useState)();
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
-            if (mainScreen && width > (0, $be6f0e84320366a7$export$2515d253ab459c32) + (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleMainScreen(width);
+            console.log("resize handler", screenName && width > (0, $be6f0e84320366a7$export$120137d2fb34488f));
+            if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) {
+                console.log("inside screen name reset to undefined");
+                toggleScreen();
+            }
+            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("groups");
         };
+        handler();
         window.addEventListener("resize", handler);
         return ()=>window.removeEventListener("resize", handler);
     }, []);
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
         value: {
-            mainScreen: mainScreen,
-            toggleMainScreen: ()=>toggleMainScreen(!mainScreen)
+            screenName: screenName,
+            toggleScreen: toggleScreen
         },
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {
-                height: mainScreen ? "100%" : "auto"
+                height: screenName ? "100%" : "auto"
             },
             className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$2e2bcd8739ae039), {
@@ -998,7 +1018,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: {
-            height: mainScreen ? "100%" : "auto"
+            height: screenName ? "100%" : "auto"
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$97295e60e7f371e1), {
@@ -1033,6 +1053,7 @@ var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PU
 
 
 
+
 var $25f6686bebec2027$exports = {};
 
 $parcel$export($25f6686bebec2027$exports, "container", () => $25f6686bebec2027$export$34e0f9847d4c02dd, (v) => $25f6686bebec2027$export$34e0f9847d4c02dd = v);
@@ -1053,11 +1074,11 @@ var $0dca14a056f81668$export$e962ae2959462fd2;
 $0dca14a056f81668$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
 
 
-var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
+var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
-            children: children.slice(0, 1)
+            children: children
         })
     });
 

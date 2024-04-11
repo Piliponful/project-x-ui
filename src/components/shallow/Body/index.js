@@ -4,21 +4,27 @@ import Container, { ContainerWithoutSwipes } from './components/Container'
 
 import styles from './style.module.styl'
 
-import { sidebarWidth, smallMainScreenWidth } from '../../../constants'
+import { smallMainScreenWidth } from '../../../constants'
 
-export const MainScreenSwipeContext = React.createContext({ mainScreen: true, toggleMainScreen: null })
+export const MainScreenSwipeContext = React.createContext({ toggleScreen: null })
 
 export default ({ children, includeSwipes }) => {
-  const [mainScreen, toggleMainScreen] = useState(true)
+  const [screenName, toggleScreen] = useState()
 
   useEffect(() => {
     const handler = () => {
       const { innerWidth: width } = window
+      console.log('resize handler', screenName && width > smallMainScreenWidth)
 
-      if (mainScreen && width > sidebarWidth + smallMainScreenWidth) {
-        toggleMainScreen(width)
+      if (width > smallMainScreenWidth) {
+        console.log('inside screen name reset to undefined')
+        toggleScreen()
+      }
+      if (!screenName && width < smallMainScreenWidth) {
+        toggleScreen('groups')
       }
     }
+    handler()
 
     window.addEventListener('resize', handler)
 
@@ -27,8 +33,8 @@ export default ({ children, includeSwipes }) => {
 
   if (includeSwipes) {
     return (
-      <MainScreenSwipeContext.Provider value={{ mainScreen, toggleMainScreen: () => toggleMainScreen(!mainScreen) }}>
-        <div style={{ height: mainScreen ? '100%' : 'auto' }} className={styles.body}>
+      <MainScreenSwipeContext.Provider value={{ screenName, toggleScreen }}>
+        <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
           <Container>
             {children}
           </Container>
@@ -38,7 +44,7 @@ export default ({ children, includeSwipes }) => {
   }
 
   return (
-    <div style={{ height: mainScreen ? '100%' : 'auto' }} className={styles.body}>
+    <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
       <ContainerWithoutSwipes>
         {children}
       </ContainerWithoutSwipes>

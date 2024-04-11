@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
+import Snap from 'snapsvg-cjs'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -12,13 +13,13 @@ import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
-import Snap from 'snapsvg-cjs'
+import GroupContentScreen from '../components/leafs/GroupContentScreen'
 
 import '../../styles.css'
 
 window.Snap = Snap
 
-const groupCombination = false
+const groupCombination = true
 
 // const selectedForCombinationGroups = [
 //   { name: 'Anime-watchers', userCount: 42355, selected: true, color: '#d24a43' }
@@ -46,9 +47,9 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   { name: 'Will Luffy find one piece?', currentUserAnswer: null, answersCount: { yes: 112342, no: 311323 }, username: 'piliponful' },
   { name: 'Do you like naruto?', currentUserAnswer: null, answersCount: { yes: 240325, no: 101333 }, username: 'piliponful' },
   { name: 'Do you like battle between Sasuke and Naruto?', currentUserAnswer: 'No', answersCount: { yes: 80341, no: 280341 }, username: 'piliponful' },
-  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' },
-  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' },
-  { name: 'Do you wanna see HxH continuation?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' }
+  { name: 'Do you believe Israel is genociding Gaza?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' },
+  { name: 'Do you believe in free speech?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' },
+  { name: 'Do you you support Trump?', currentUserAnswer: 'Yes', answersCount: { yes: 231031, no: 30328 }, username: 'piliponful' }
 ]
 
 const mostAnsweredInLast7DaysQuestions = [ // eslint-disable-line
@@ -88,37 +89,45 @@ const SidebarWithGroups = () => {
 
 const SidebarWithQuestions = () => {
   return (
-    <Sidebar title='Questions'>
+    <Sidebar>
       {mostAnsweredQuestionsComponents}
     </Sidebar>
   )
 }
 
+const users = [
+  { _id: 1, name: 'user1' },
+  { _id: 2, name: 'user2' },
+  { _id: 3, name: 'user3' },
+  { _id: 4, name: 'user4' }
+]
+
 const MainScreenWithQuestions = () => (
-  <MainScreen>
-    <QuestionCardsRow title='Most answered'>
-      {mostAnsweredQuestionsComponents}
-    </QuestionCardsRow>
-    <QuestionCardsRow title='Most answered in last 7 days'>
-      {mostAnsweredInLast7DaysQuestions.map(i => (
-        <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
-      ))}
-    </QuestionCardsRow>
-    <QuestionCardsRow title='Latest'>
-      {latest.map(i => (
-        <QuestionCard key={i.name} {...i} respond={response => console.log('respond ' + response)} createNewGroup={content => console.log('create new group ' + content)} />
-      ))}
-    </QuestionCardsRow>
-  </MainScreen>
+  <>
+    <MainScreen>
+      <QuestionCardsRow>
+        {mostAnsweredQuestionsComponents}
+      </QuestionCardsRow>
+    </MainScreen>
+  </>
 )
 
 const Authorized = () => {
-  const { mainScreen } = useContext(MainScreenSwipeContext)
+  const { screenName } = useContext(MainScreenSwipeContext)
 
   return (
     <>
-      {mainScreen ? <SidebarWithGroups /> : <SidebarWithQuestions />}
-      {mainScreen ? <MainScreenWithQuestions /> : null}
+      {screenName === 'groups' && <SidebarWithGroups />}
+      {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
+      {screenName === 'questions' && <SidebarWithQuestions />}
+
+      {!screenName && (
+        <>
+          <SidebarWithGroups />
+          <GroupContentScreen users={users} />
+          <MainScreenWithQuestions />
+        </>
+      )}
     </>
   )
 }
@@ -130,8 +139,8 @@ const createUser = () => {
 const getUserToken = () => {
   return new Promise((resolve, reject) => setTimeout(() => { console.log('createuser'); resolve({ verificationCompleted: false }) }, 900))
 }
-
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('app'))
+root.render(
   <Body includeSwipes>
     <Authorized />
     {/* <Authentication */}
@@ -142,4 +151,4 @@ ReactDOM.render(
     {/*   onError={console.log} */}
     {/* /> */}
   </Body>
-  , document.getElementById('app'))
+)

@@ -1,13 +1,14 @@
 import React from 'react'
+import cn from 'classnames'
 
 import Container from './components/Container'
 
 import styles from './style.module.styl'
 
-export default ({ children, style }) => (
-  <section style={style} className={styles.mainScreen}>
+export default ({ children, className, style }) => (
+  <section style={style} className={cn(styles.mainScreen, className)}>
     <Container>
-      {children.slice(0, 1)}
+      {children}
     </Container>
   </section>
 )

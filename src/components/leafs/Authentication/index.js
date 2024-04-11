@@ -5,7 +5,6 @@ import SignInInputs from './components/SignInInputs'
 import SignUpInputs from './components/SignUpInputs'
 
 import styles from './style.module.styl'
-import 'react-phone-number-input/style.css'
 import './style.css'
 
 export default ({ createUser, verifyUser, getUserToken, resend, onError }) => {
