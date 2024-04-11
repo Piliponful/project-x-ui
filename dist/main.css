@@ -320,6 +320,7 @@
   background: #000 linear-gradient(90deg, #accbee63, #49333e);
   justify-content: center;
   width: 100vw;
+  min-height: 100dvh;
   max-height: 100dvh;
   display: flex;
 }
