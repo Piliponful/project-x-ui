@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 
@@ -113,7 +113,10 @@ const MainScreenWithQuestions = () => (
 )
 
 const Authorized = () => {
-  const { screenName } = useContext(MainScreenSwipeContext)
+  const { screenName, setSkipScreen } = useContext(MainScreenSwipeContext)
+  useEffect(() => {
+    setSkipScreen('groupContent')
+  }, [])
 
   return (
     <>

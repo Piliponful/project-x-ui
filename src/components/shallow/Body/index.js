@@ -6,18 +6,17 @@ import styles from './style.module.styl'
 
 import { smallMainScreenWidth } from '../../../constants'
 
-export const MainScreenSwipeContext = React.createContext({ toggleScreen: null })
+export const MainScreenSwipeContext = React.createContext({ toggleScreen: null, setSkipScreen: null })
 
 export default ({ children, includeSwipes }) => {
   const [screenName, toggleScreen] = useState()
+  const [skipScreen, setSkipScreen] = useState()
 
   useEffect(() => {
     const handler = () => {
       const { innerWidth: width } = window
-      console.log('resize handler', screenName && width > smallMainScreenWidth)
 
       if (width > smallMainScreenWidth) {
-        console.log('inside screen name reset to undefined')
         toggleScreen()
       }
       if (!screenName && width < smallMainScreenWidth) {
@@ -33,7 +32,7 @@ export default ({ children, includeSwipes }) => {
 
   if (includeSwipes) {
     return (
-      <MainScreenSwipeContext.Provider value={{ screenName, toggleScreen }}>
+      <MainScreenSwipeContext.Provider value={{ screenName, skipScreen, toggleScreen, setSkipScreen }}>
         <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
           <Container>
             {children}

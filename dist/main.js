@@ -939,16 +939,17 @@ Number.prototype.mod = function(n) {
 var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
     const value = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const [swipeCount, setSwipeCount] = (0, $c5L0i$react.useState)(0);
-    const screenBySwipeCount = {
-        0: "groups",
-        1: "groupContent",
-        2: "questions"
-    };
+    const screens = [
+        "groups",
+        "groupContent",
+        "questions"
+    ];
+    const screenBySwipeCount = Object.fromEntries(Object.entries(screens.filter((i)=>value.skipScreen ? i !== value.skipScreen : true)));
     const handlers = (0, $c5L0i$reactswipeable.useSwipeable)({
         onSwiped: (eventData)=>{
             if (eventData.dir === "Right" || eventData.dir === "Left") {
                 const plus = eventData.dir === "Left" ? 1 : -1;
-                const newSwipeCount = (swipeCount + plus).mod(3);
+                const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length);
                 setSwipeCount(newSwipeCount);
                 value.toggleScreen(screenBySwipeCount[newSwipeCount]);
             }
@@ -982,18 +983,16 @@ const $be6f0e84320366a7$export$120137d2fb34488f = 467;
 
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
-    toggleScreen: null
+    toggleScreen: null,
+    setSkipScreen: null
 });
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)();
+    const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
-            console.log("resize handler", screenName && width > (0, $be6f0e84320366a7$export$120137d2fb34488f));
-            if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) {
-                console.log("inside screen name reset to undefined");
-                toggleScreen();
-            }
+            if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen();
             if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("groups");
         };
         handler();
@@ -1003,7 +1002,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
         value: {
             screenName: screenName,
-            toggleScreen: toggleScreen
+            skipScreen: skipScreen,
+            toggleScreen: toggleScreen,
+            setSkipScreen: setSkipScreen
         },
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {

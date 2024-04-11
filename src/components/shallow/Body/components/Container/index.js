@@ -14,17 +14,14 @@ export default ({ children }) => {
   const value = useContext(MainScreenSwipeContext)
   const [swipeCount, setSwipeCount] = useState(0)
 
-  const screenBySwipeCount = {
-    0: 'groups',
-    1: 'groupContent',
-    2: 'questions'
-  }
+  const screens = ['groups', 'groupContent', 'questions']
+  const screenBySwipeCount = Object.fromEntries(Object.entries(screens.filter(i => value.skipScreen ? i !== value.skipScreen : true)))
 
   const handlers = useSwipeable({
     onSwiped: eventData => {
       if (eventData.dir === 'Right' || eventData.dir === 'Left') {
         const plus = (eventData.dir === 'Left' ? 1 : (-1))
-        const newSwipeCount = (swipeCount + plus).mod(3)
+        const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)
         setSwipeCount(newSwipeCount)
         value.toggleScreen(screenBySwipeCount[newSwipeCount])
       }
