@@ -417,12 +417,6 @@ var $54d79e7011b4fc31$export$2e2bcd8739ae039 = ({ select: select, combine: combi
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
                 nobold: true,
                 secondary: true,
-                onClick: select,
-                children: "Apply To Answers"
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $0ccf9c474dfd3877$export$2e2bcd8739ae039), {
-                nobold: true,
-                secondary: true,
                 onClick: combine,
                 children: "Combine"
             })

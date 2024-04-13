@@ -5,14 +5,23 @@
   margin-bottom: 10px;
   padding: 10px 15px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
   min-height: 122px;
-  gap: 32px;
+  flex-wrap: wrap;
+  // gap: 32px;
 }
 
 .leftSideContainer {
   display: flex;
   flex-direction: column;
+
+  & > span {
+    width: 145px;
+    text-overflow: ellipsis;
+    // text-wrap: nowrap;
+    // white-space: nowrap;
+    overflow: hidden;
+  }
 }
