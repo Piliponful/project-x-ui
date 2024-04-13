@@ -6,6 +6,7 @@ var $c5L0i$classnames = require("classnames");
 var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
+var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
@@ -931,6 +932,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
 
 
 
+
 var $61bbaaf79dd60fe4$exports = {};
 
 $parcel$export($61bbaaf79dd60fe4$exports, "container", () => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd, (v) => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = v);
@@ -990,11 +992,26 @@ const $be6f0e84320366a7$export$120137d2fb34488f = 467;
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
     toggleScreen: null,
-    setSkipScreen: null
+    setSkipScreen: null,
+    setIsModalOpen: null
 });
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes })=>{
+const $0c70feff32ca6a2b$var$customStyles = {
+    content: {
+        top: "50%",
+        left: "50%",
+        right: "auto",
+        bottom: "auto",
+        marginRight: "-50%",
+        transform: "translate(-50%, -50%)",
+        display: "flex",
+        flexDirection: "column"
+    }
+};
+(0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)();
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
+    const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1010,16 +1027,60 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
             screenName: screenName,
             skipScreen: skipScreen,
             toggleScreen: toggleScreen,
-            setSkipScreen: setSkipScreen
+            setSkipScreen: setSkipScreen,
+            setIsModalOpen: setIsModalOpen
         },
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
             style: {
                 height: screenName ? "100%" : "auto"
             },
             className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
-            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$2e2bcd8739ae039), {
-                children: children
-            })
+            children: [
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                    isOpen: isModalOpen,
+                    onRequestClose: ()=>setIsModalOpen(false),
+                    style: $0c70feff32ca6a2b$var$customStyles,
+                    contentLabel: "Example Modal",
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                            children: "Rewards"
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                    children: "your address: "
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: address
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                    children: "your payout: "
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    children: [
+                                        payout,
+                                        " "
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                    children: "ASK"
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            onClick: ()=>setIsModalOpen(false),
+                            children: "close"
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$2e2bcd8739ae039), {
+                    children: children
+                })
+            ]
         })
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -1494,8 +1555,33 @@ $77776f143bd76580$export$cf64224bcd829024 = `P5LmWG_signUp`;
 
 
 
+const $9cd36ad568230ef5$export$a3b54f03f3789fbd = "twitter-increaser-state";
+const $9cd36ad568230ef5$var$TWITTER_CODE_CHALLENGE = "challenge";
+const $9cd36ad568230ef5$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
+const $9cd36ad568230ef5$var$TWITTER_SCOPE = [
+    "tweet.read",
+    "users.read",
+    "offline.access"
+].join(" ");
+const $9cd36ad568230ef5$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$9cd36ad568230ef5$export$31cc7ffb9b60a46f($9cd36ad568230ef5$var$TWITTER_AUTH_URL, {
+        response_type: "code",
+        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
+        redirect_uri: redirectUri,
+        scope: $9cd36ad568230ef5$var$TWITTER_SCOPE,
+        state: $9cd36ad568230ef5$export$a3b54f03f3789fbd,
+        code_challenge: $9cd36ad568230ef5$var$TWITTER_CODE_CHALLENGE,
+        code_challenge_method: "plain"
+    });
+const $9cd36ad568230ef5$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
+    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
+    return `${baseUrl}?${query}`;
+};
 var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verifyUser: verifyUser, getUserToken: getUserToken, resend: resend, onError: onError })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("signIn");
+    const redirect_uri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
+    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+    const twitterAuthUrl = $9cd36ad568230ef5$export$9b5acf6f7fc8a7d2(redirect_uri);
+    console.log("twitter auth url: ", twitterAuthUrl);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($77776f143bd76580$exports))).containersContainer,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -1530,11 +1616,16 @@ var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verify
                     verifyUser: verifyUser,
                     onError: onError,
                     resend: resend
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                    href: twitterAuthUrl,
+                    children: "login via twitter"
                 })
             ]
         })
     });
 };
+
 
 
 
@@ -1563,6 +1654,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
     });
+    const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
@@ -1587,6 +1679,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
                         children: "Log out"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>setIsModalOpen(true),
                         children: "Rewards"
                     })
                 ]

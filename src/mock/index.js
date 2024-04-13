@@ -144,14 +144,14 @@ const getUserToken = () => {
 }
 const root = ReactDOM.createRoot(document.getElementById('app'))
 root.render(
-  <Body includeSwipes>
+  <Body address='0x105Cc09CA22e3cD746D8d6c4e2f8cfBcf97207Be' payout={155} includeSwipes>
     <Authorized />
-    {/* <Authentication */}
-    {/*   createUser={createUser} */}
-    {/*   verifyUser={() => console.log('verifyUser')} */}
-    {/*   getUserToken={getUserToken} */}
-    {/*   resend={() => console.log('resend')} */}
-    {/*   onError={console.log} */}
-    {/* /> */}
+    {/* <Authentication
+      createUser={createUser}
+      verifyUser={() => console.log('verifyUser')}
+      getUserToken={getUserToken}
+      resend={() => console.log('resend')}
+      onError={console.log}
+    /> */}
   </Body>
 )
