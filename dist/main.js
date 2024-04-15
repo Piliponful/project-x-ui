@@ -978,14 +978,17 @@ const $1e3dbd7e69fec1c4$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 var $941289f31472d1d3$exports = {};
 
 $parcel$export($941289f31472d1d3$exports, "address", () => $941289f31472d1d3$export$f7d3c097ceca6c15, (v) => $941289f31472d1d3$export$f7d3c097ceca6c15 = v);
+$parcel$export($941289f31472d1d3$exports, "amount", () => $941289f31472d1d3$export$802cfe72001a1ee, (v) => $941289f31472d1d3$export$802cfe72001a1ee = v);
 $parcel$export($941289f31472d1d3$exports, "body", () => $941289f31472d1d3$export$32180ef41b15b513, (v) => $941289f31472d1d3$export$32180ef41b15b513 = v);
 $parcel$export($941289f31472d1d3$exports, "close", () => $941289f31472d1d3$export$8360e631d277ea4d, (v) => $941289f31472d1d3$export$8360e631d277ea4d = v);
 $parcel$export($941289f31472d1d3$exports, "row", () => $941289f31472d1d3$export$120ff0929b202a6d, (v) => $941289f31472d1d3$export$120ff0929b202a6d = v);
 var $941289f31472d1d3$export$f7d3c097ceca6c15;
+var $941289f31472d1d3$export$802cfe72001a1ee;
 var $941289f31472d1d3$export$32180ef41b15b513;
 var $941289f31472d1d3$export$8360e631d277ea4d;
 var $941289f31472d1d3$export$120ff0929b202a6d;
 $941289f31472d1d3$export$f7d3c097ceca6c15 = `sLin6a_address`;
+$941289f31472d1d3$export$802cfe72001a1ee = `sLin6a_amount`;
 $941289f31472d1d3$export$32180ef41b15b513 = `sLin6a_body`;
 $941289f31472d1d3$export$8360e631d277ea4d = `sLin6a_close`;
 $941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
@@ -1077,6 +1080,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     children: "your payout: "
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).amount,
                                     children: [
                                         payout,
                                         " "

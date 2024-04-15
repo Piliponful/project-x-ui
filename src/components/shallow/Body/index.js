@@ -59,7 +59,7 @@ export default ({ children, includeSwipes, address, payout }) => {
           >
             <div onClick={() => setIsModalOpen(false)} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
             <div className={styles.row}><b>your address: </b><span className={styles.address}>{address}</span></div>
-            <div className={styles.row}><b>your payout: </b><span>{payout} </span><b>ASK</b></div>
+            <div className={styles.row}><b>your payout: </b><span className={styles.amount}>{payout} </span><b>ASK</b></div>
           </Modal>
           <Container>
             {children}
