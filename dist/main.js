@@ -1808,7 +1808,7 @@ $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
 $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 
 
-var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
+var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUserClick: onUserClick })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: show && {
             display: "flex"
@@ -1816,15 +1816,16 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).screenWithGroupContent,
         children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
+                onUserClick: ()=>onUserClick(user),
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                            user.picture && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
                                 src: user.picture,
                                 alt: `${user.name} profile picture`
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            user.followers ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -1834,10 +1835,12 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
                                         children: (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followers)
                                     })
                                 ]
+                            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                children: user.name
                             })
                         ]
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                    user.url && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                         href: user.url,
                         target: "_blank",
                         rel: "noreferrer",

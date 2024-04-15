@@ -4,21 +4,27 @@ import humanNumber from 'human-number'
 
 import styles from './style.module.styl'
 
-export default ({ users, show }) => {
+export default ({ users, show, onUserClick }) => {
   return (
     <div style={show && { display: 'flex' }} className={styles.screenWithGroupContent}>
       {users.map(user => (
-        <div className={styles.userItem} key={user._id}>
+        <div className={styles.userItem} key={user._id} onUserClick={() => onUserClick(user)}>
           <div className={styles.row}>
-            <img src={user.picture} alt={`${user.name} profile picture`} />
-            <div className={styles.column}>
-              <span>{user.name}</span>
-              <span>{humanNumber(user.followers)}</span>
-            </div>
+            {user.picture && <img src={user.picture} alt={`${user.name} profile picture`} />}
+            {user.followers
+              ? (
+                <div className={styles.column}>
+                  <span>{user.name}</span>
+                  <span>{humanNumber(user.followers)}</span>
+                </div>
+                )
+              : <span>{user.name}</span>}
           </div>
-          <a href={user.url} target='_blank' rel='noreferrer'>
-            <XIcon />
-          </a>
+          {user.url && (
+            <a href={user.url} target='_blank' rel='noreferrer'>
+              <XIcon />
+            </a>
+          )}
         </div>
       ))}
     </div>
