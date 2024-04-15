@@ -7,10 +7,13 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$reactmodal = require("react-modal");
+var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
+var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
+var $c5L0i$humannumber = require("human-number");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -927,6 +930,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
 
 
 
+
 var $61bbaaf79dd60fe4$exports = {};
 
 $parcel$export($61bbaaf79dd60fe4$exports, "container", () => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd, (v) => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = v);
@@ -973,9 +977,18 @@ const $1e3dbd7e69fec1c4$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 
 var $941289f31472d1d3$exports = {};
 
+$parcel$export($941289f31472d1d3$exports, "address", () => $941289f31472d1d3$export$f7d3c097ceca6c15, (v) => $941289f31472d1d3$export$f7d3c097ceca6c15 = v);
 $parcel$export($941289f31472d1d3$exports, "body", () => $941289f31472d1d3$export$32180ef41b15b513, (v) => $941289f31472d1d3$export$32180ef41b15b513 = v);
+$parcel$export($941289f31472d1d3$exports, "close", () => $941289f31472d1d3$export$8360e631d277ea4d, (v) => $941289f31472d1d3$export$8360e631d277ea4d = v);
+$parcel$export($941289f31472d1d3$exports, "row", () => $941289f31472d1d3$export$120ff0929b202a6d, (v) => $941289f31472d1d3$export$120ff0929b202a6d = v);
+var $941289f31472d1d3$export$f7d3c097ceca6c15;
 var $941289f31472d1d3$export$32180ef41b15b513;
+var $941289f31472d1d3$export$8360e631d277ea4d;
+var $941289f31472d1d3$export$120ff0929b202a6d;
+$941289f31472d1d3$export$f7d3c097ceca6c15 = `sLin6a_address`;
 $941289f31472d1d3$export$32180ef41b15b513 = `sLin6a_body`;
+$941289f31472d1d3$export$8360e631d277ea4d = `sLin6a_close`;
+$941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
 
 
 const $be6f0e84320366a7$export$2515d253ab459c32 = 450;
@@ -1034,22 +1047,31 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                     isOpen: isModalOpen,
                     onRequestClose: ()=>setIsModalOpen(false),
                     style: $0c70feff32ca6a2b$var$customStyles,
-                    contentLabel: "Example Modal",
                     children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                            children: "Rewards"
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            onClick: ()=>setIsModalOpen(false),
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                    children: "Rewards"
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                            ]
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
                                     children: "your address: "
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).address,
                                     children: address
                                 })
                             ]
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
                                     children: "your payout: "
@@ -1064,10 +1086,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     children: "ASK"
                                 })
                             ]
-                        }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                            onClick: ()=>setIsModalOpen(false),
-                            children: "close"
                         })
                     ]
                 }),
@@ -1194,6 +1212,7 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = ({ children: children })=>{
 
 
 
+
 var $49bc4b1067d50534$exports = {};
 
 $parcel$export($49bc4b1067d50534$exports, "button", () => $49bc4b1067d50534$export$2ba01fb71ed41cb6, (v) => $49bc4b1067d50534$export$2ba01fb71ed41cb6 = v);
@@ -1234,21 +1253,48 @@ var $3a3fd704619874f2$exports = {};
 $parcel$export($3a3fd704619874f2$exports, "button", () => $3a3fd704619874f2$export$2ba01fb71ed41cb6, (v) => $3a3fd704619874f2$export$2ba01fb71ed41cb6 = v);
 $parcel$export($3a3fd704619874f2$exports, "input", () => $3a3fd704619874f2$export$b7e3ae3d7c15e42e, (v) => $3a3fd704619874f2$export$b7e3ae3d7c15e42e = v);
 $parcel$export($3a3fd704619874f2$exports, "inputError", () => $3a3fd704619874f2$export$ad080a00b79f0160, (v) => $3a3fd704619874f2$export$ad080a00b79f0160 = v);
+$parcel$export($3a3fd704619874f2$exports, "or", () => $3a3fd704619874f2$export$252bb8b3bbdf6749, (v) => $3a3fd704619874f2$export$252bb8b3bbdf6749 = v);
 $parcel$export($3a3fd704619874f2$exports, "shake", () => $3a3fd704619874f2$export$267b06a7460aa7d3, (v) => $3a3fd704619874f2$export$267b06a7460aa7d3 = v);
+$parcel$export($3a3fd704619874f2$exports, "twitterButton", () => $3a3fd704619874f2$export$ce366a889786a3c0, (v) => $3a3fd704619874f2$export$ce366a889786a3c0 = v);
 $parcel$export($3a3fd704619874f2$exports, "withoutMargin", () => $3a3fd704619874f2$export$8a433e5b2d459900, (v) => $3a3fd704619874f2$export$8a433e5b2d459900 = v);
 var $3a3fd704619874f2$export$2ba01fb71ed41cb6;
 var $3a3fd704619874f2$export$b7e3ae3d7c15e42e;
 var $3a3fd704619874f2$export$ad080a00b79f0160;
+var $3a3fd704619874f2$export$252bb8b3bbdf6749;
 var $3a3fd704619874f2$export$267b06a7460aa7d3;
+var $3a3fd704619874f2$export$ce366a889786a3c0;
 var $3a3fd704619874f2$export$8a433e5b2d459900;
 $3a3fd704619874f2$export$2ba01fb71ed41cb6 = `_4OYftG_button`;
 $3a3fd704619874f2$export$b7e3ae3d7c15e42e = `_4OYftG_input`;
 $3a3fd704619874f2$export$ad080a00b79f0160 = `_4OYftG_inputError`;
+$3a3fd704619874f2$export$252bb8b3bbdf6749 = `_4OYftG_or`;
 $3a3fd704619874f2$export$267b06a7460aa7d3 = `_4OYftG_shake`;
 $3a3fd704619874f2$export$267b06a7460aa7d3;
+$3a3fd704619874f2$export$ce366a889786a3c0 = `_4OYftG_twitterButton`;
 $3a3fd704619874f2$export$8a433e5b2d459900 = `_4OYftG_withoutMargin`;
 
 
+const $0e36908e4e8f3fd7$export$a3b54f03f3789fbd = "twitter-increaser-state";
+const $0e36908e4e8f3fd7$var$TWITTER_CODE_CHALLENGE = "challenge";
+const $0e36908e4e8f3fd7$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
+const $0e36908e4e8f3fd7$var$TWITTER_SCOPE = [
+    "tweet.read",
+    "users.read",
+    "offline.access"
+].join(" ");
+const $0e36908e4e8f3fd7$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
+    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
+    return `${baseUrl}?${query}`;
+};
+const $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$0e36908e4e8f3fd7$export$31cc7ffb9b60a46f($0e36908e4e8f3fd7$var$TWITTER_AUTH_URL, {
+        response_type: "code",
+        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
+        redirect_uri: redirectUri,
+        scope: $0e36908e4e8f3fd7$var$TWITTER_SCOPE,
+        state: $0e36908e4e8f3fd7$export$a3b54f03f3789fbd,
+        code_challenge: $0e36908e4e8f3fd7$var$TWITTER_CODE_CHALLENGE,
+        code_challenge_method: "plain"
+    });
 var $0e36908e4e8f3fd7$export$2e2bcd8739ae039 = ({ getUserToken: f, verifyUser: f2, resend: resend, onError: onError })=>{
     const [{ username: username, password: password, verificationCode: verificationCode }, setFields] = (0, $c5L0i$react.useState)({
         username: "",
@@ -1302,6 +1348,9 @@ var $0e36908e4e8f3fd7$export$2e2bcd8739ae039 = ({ getUserToken: f, verifyUser: f
         });
         setLoading(false);
     };
+    const redirectUri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
+    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+    const twitterAuthUrl = $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2(redirectUri);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
@@ -1341,6 +1390,30 @@ var $0e36908e4e8f3fd7$export$2e2bcd8739ae039 = ({ getUserToken: f, verifyUser: f
                         verificationCode: verificationCode
                     }) : getUserToken(),
                 children: "Sign In"
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($3a3fd704619874f2$exports))).or,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {}),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                        children: "OR"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {})
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6386e79966b60e2$export$2e2bcd8739ae039), {
+                loading: loading,
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3a3fd704619874f2$exports))).button, (0, (/*@__PURE__*/$parcel$interopDefault($3a3fd704619874f2$exports))).twitterButton),
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: twitterAuthUrl,
+                        children: "Sign In with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: twitterAuthUrl,
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    })
+                ]
             })
         ]
     });
@@ -1356,29 +1429,57 @@ var $161279379f26e05c$export$2e2bcd8739ae039 = (0, $0e36908e4e8f3fd7$export$2e2b
 
 
 
+
 var $f736c9972fb8eccc$exports = {};
 
 $parcel$export($f736c9972fb8eccc$exports, "button", () => $f736c9972fb8eccc$export$2ba01fb71ed41cb6, (v) => $f736c9972fb8eccc$export$2ba01fb71ed41cb6 = v);
 $parcel$export($f736c9972fb8eccc$exports, "disabled", () => $f736c9972fb8eccc$export$683472f6198a076e, (v) => $f736c9972fb8eccc$export$683472f6198a076e = v);
 $parcel$export($f736c9972fb8eccc$exports, "input", () => $f736c9972fb8eccc$export$b7e3ae3d7c15e42e, (v) => $f736c9972fb8eccc$export$b7e3ae3d7c15e42e = v);
 $parcel$export($f736c9972fb8eccc$exports, "inputError", () => $f736c9972fb8eccc$export$ad080a00b79f0160, (v) => $f736c9972fb8eccc$export$ad080a00b79f0160 = v);
+$parcel$export($f736c9972fb8eccc$exports, "or", () => $f736c9972fb8eccc$export$252bb8b3bbdf6749, (v) => $f736c9972fb8eccc$export$252bb8b3bbdf6749 = v);
 $parcel$export($f736c9972fb8eccc$exports, "shake", () => $f736c9972fb8eccc$export$267b06a7460aa7d3, (v) => $f736c9972fb8eccc$export$267b06a7460aa7d3 = v);
+$parcel$export($f736c9972fb8eccc$exports, "twitterButton", () => $f736c9972fb8eccc$export$ce366a889786a3c0, (v) => $f736c9972fb8eccc$export$ce366a889786a3c0 = v);
 $parcel$export($f736c9972fb8eccc$exports, "withoutMargin", () => $f736c9972fb8eccc$export$8a433e5b2d459900, (v) => $f736c9972fb8eccc$export$8a433e5b2d459900 = v);
 var $f736c9972fb8eccc$export$2ba01fb71ed41cb6;
 var $f736c9972fb8eccc$export$683472f6198a076e;
 var $f736c9972fb8eccc$export$b7e3ae3d7c15e42e;
 var $f736c9972fb8eccc$export$ad080a00b79f0160;
+var $f736c9972fb8eccc$export$252bb8b3bbdf6749;
 var $f736c9972fb8eccc$export$267b06a7460aa7d3;
+var $f736c9972fb8eccc$export$ce366a889786a3c0;
 var $f736c9972fb8eccc$export$8a433e5b2d459900;
 $f736c9972fb8eccc$export$2ba01fb71ed41cb6 = `PVQyaq_button`;
 $f736c9972fb8eccc$export$683472f6198a076e = `PVQyaq_disabled`;
 $f736c9972fb8eccc$export$b7e3ae3d7c15e42e = `PVQyaq_input`;
 $f736c9972fb8eccc$export$ad080a00b79f0160 = `PVQyaq_inputError`;
+$f736c9972fb8eccc$export$252bb8b3bbdf6749 = `PVQyaq_or`;
 $f736c9972fb8eccc$export$267b06a7460aa7d3 = `PVQyaq_shake`;
 $f736c9972fb8eccc$export$267b06a7460aa7d3;
+$f736c9972fb8eccc$export$ce366a889786a3c0 = `PVQyaq_twitterButton`;
 $f736c9972fb8eccc$export$8a433e5b2d459900 = `PVQyaq_withoutMargin`;
 
 
+const $e4dbb8fb65b2c84a$export$a3b54f03f3789fbd = "twitter-increaser-state";
+const $e4dbb8fb65b2c84a$var$TWITTER_CODE_CHALLENGE = "challenge";
+const $e4dbb8fb65b2c84a$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
+const $e4dbb8fb65b2c84a$var$TWITTER_SCOPE = [
+    "tweet.read",
+    "users.read",
+    "offline.access"
+].join(" ");
+const $e4dbb8fb65b2c84a$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
+    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
+    return `${baseUrl}?${query}`;
+};
+const $e4dbb8fb65b2c84a$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$e4dbb8fb65b2c84a$export$31cc7ffb9b60a46f($e4dbb8fb65b2c84a$var$TWITTER_AUTH_URL, {
+        response_type: "code",
+        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
+        redirect_uri: redirectUri,
+        scope: $e4dbb8fb65b2c84a$var$TWITTER_SCOPE,
+        state: $e4dbb8fb65b2c84a$export$a3b54f03f3789fbd,
+        code_challenge: $e4dbb8fb65b2c84a$var$TWITTER_CODE_CHALLENGE,
+        code_challenge_method: "plain"
+    });
 var $e4dbb8fb65b2c84a$export$2e2bcd8739ae039 = ({ createUser: f, verifyUser: f2, onError: onError, resend: resend })=>{
     const [loading, setLoading] = (0, $c5L0i$react.useState)(null);
     const [{ username: username, password: password, phoneNumber: phoneNumber, country: country, verificationCode: verificationCode }, setFields] = (0, $c5L0i$react.useState)({
@@ -1454,6 +1555,9 @@ var $e4dbb8fb65b2c84a$export$2e2bcd8739ae039 = ({ createUser: f, verifyUser: f2,
         });
         setLoading(false);
     };
+    const redirectUri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
+    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+    const twitterAuthUrl = $e4dbb8fb65b2c84a$export$9b5acf6f7fc8a7d2(redirectUri);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
@@ -1517,6 +1621,30 @@ var $e4dbb8fb65b2c84a$export$2e2bcd8739ae039 = ({ createUser: f, verifyUser: f2,
                         phoneNumber: phoneNumber
                     }),
                 children: showVerification ? "Sign Up" : "Get Code"
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($f736c9972fb8eccc$exports))).or,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {}),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                        children: "OR"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {})
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6386e79966b60e2$export$2e2bcd8739ae039), {
+                loading: loading,
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($f736c9972fb8eccc$exports))).button, (0, (/*@__PURE__*/$parcel$interopDefault($f736c9972fb8eccc$exports))).twitterButton),
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: twitterAuthUrl,
+                        children: "Sign Up with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: twitterAuthUrl,
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    })
+                ]
             })
         ]
     });
@@ -1549,33 +1677,8 @@ $77776f143bd76580$export$cf64224bcd829024 = `P5LmWG_signUp`;
 
 
 
-const $9cd36ad568230ef5$export$a3b54f03f3789fbd = "twitter-increaser-state";
-const $9cd36ad568230ef5$var$TWITTER_CODE_CHALLENGE = "challenge";
-const $9cd36ad568230ef5$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
-const $9cd36ad568230ef5$var$TWITTER_SCOPE = [
-    "tweet.read",
-    "users.read",
-    "offline.access"
-].join(" ");
-const $9cd36ad568230ef5$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$9cd36ad568230ef5$export$31cc7ffb9b60a46f($9cd36ad568230ef5$var$TWITTER_AUTH_URL, {
-        response_type: "code",
-        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
-        redirect_uri: redirectUri,
-        scope: $9cd36ad568230ef5$var$TWITTER_SCOPE,
-        state: $9cd36ad568230ef5$export$a3b54f03f3789fbd,
-        code_challenge: $9cd36ad568230ef5$var$TWITTER_CODE_CHALLENGE,
-        code_challenge_method: "plain"
-    });
-const $9cd36ad568230ef5$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
-    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
-    return `${baseUrl}?${query}`;
-};
 var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verifyUser: verifyUser, getUserToken: getUserToken, resend: resend, onError: onError })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("signIn");
-    const redirect_uri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
-    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
-    const twitterAuthUrl = $9cd36ad568230ef5$export$9b5acf6f7fc8a7d2(redirect_uri);
-    console.log("twitter auth url: ", twitterAuthUrl);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($77776f143bd76580$exports))).containersContainer,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -1610,10 +1713,6 @@ var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verify
                     verifyUser: verifyUser,
                     onError: onError,
                     resend: resend
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                    href: twitterAuthUrl,
-                    children: "login via twitter"
                 })
             ]
         })
@@ -1691,11 +1790,22 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
 
 
 
+
+
 var $fc6e17f49e58291a$exports = {};
 
+$parcel$export($fc6e17f49e58291a$exports, "column", () => $fc6e17f49e58291a$export$4e0c71f277ca26b3, (v) => $fc6e17f49e58291a$export$4e0c71f277ca26b3 = v);
+$parcel$export($fc6e17f49e58291a$exports, "row", () => $fc6e17f49e58291a$export$120ff0929b202a6d, (v) => $fc6e17f49e58291a$export$120ff0929b202a6d = v);
 $parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e17f49e58291a$export$de3da254965f2f43, (v) => $fc6e17f49e58291a$export$de3da254965f2f43 = v);
+$parcel$export($fc6e17f49e58291a$exports, "userItem", () => $fc6e17f49e58291a$export$f6bda04bc7d10a12, (v) => $fc6e17f49e58291a$export$f6bda04bc7d10a12 = v);
+var $fc6e17f49e58291a$export$4e0c71f277ca26b3;
+var $fc6e17f49e58291a$export$120ff0929b202a6d;
 var $fc6e17f49e58291a$export$de3da254965f2f43;
+var $fc6e17f49e58291a$export$f6bda04bc7d10a12;
+$fc6e17f49e58291a$export$4e0c71f277ca26b3 = `zDJPrW_column`;
+$fc6e17f49e58291a$export$120ff0929b202a6d = `zDJPrW_row`;
 $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
+$fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 
 
 var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
@@ -1704,8 +1814,36 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show })=>{
             display: "flex"
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).screenWithGroupContent,
-        children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                children: user.name
+        children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                src: user.picture,
+                                alt: `${user.name} profile picture`
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                        children: user.name
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                        children: (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followers)
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: user.url,
+                        target: "_blank",
+                        rel: "noreferrer",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    })
+                ]
             }, user._id))
     });
 };

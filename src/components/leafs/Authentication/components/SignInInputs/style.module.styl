@@ -40,13 +40,51 @@
   border-radius: 5px;
   background: #000 linear-gradient(90deg, rgba(172,203,238,0.39), rgba(231,240,253,0.39));
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-weight: 500;
   font-size: 20px;
   color: #ebedf2;
   margin-top: 28px;
   margin-bottom: 17px;
+  a {
+    color: #ebedf2;
+    text-decoration: none;
+  }
+
+  a:last-child {
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+  }
+}
+
+.or {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  font-family: 'IBM Plex Sans';
+  justify-content: center;
+  font-weight: bold;
+  color: #626161;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+
+  div {
+    height: 1px;
+    width: 100%;
+    background: #00000061;;
+  }
+
+  span {
+    padding: 0 10px;
+  }
+}
+
+.twitterButton {
+  width: 200px;
 }
 
 .withoutMargin {

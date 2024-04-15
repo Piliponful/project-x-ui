@@ -1,10 +1,39 @@
 import React, { useState } from 'react'
 import cn from 'classnames'
+import XIcon from '@mui/icons-material/X'
 
 import Button from '../../../../shared/Button'
 import Verification from '../Verification'
 
 import styles from './style.module.styl'
+
+export const TWITTER_STATE = 'twitter-increaser-state'
+const TWITTER_CODE_CHALLENGE = 'challenge'
+const TWITTER_AUTH_URL = 'https://twitter.com/i/oauth2/authorize'
+const TWITTER_SCOPE = ['tweet.read', 'users.read', 'offline.access'].join(' ')
+
+export const getURLWithQueryParams = (
+  baseUrl,
+  params
+) => {
+  const query = Object.entries(params)
+    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    .join('&')
+
+  return `${baseUrl}?${query}`
+}
+
+export const getTwitterOAuthUrl = redirectUri =>
+  getURLWithQueryParams(TWITTER_AUTH_URL, {
+    response_type: 'code',
+    client_id: 'a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ',
+    redirect_uri: redirectUri,
+    scope: TWITTER_SCOPE,
+    state: TWITTER_STATE,
+
+    code_challenge: TWITTER_CODE_CHALLENGE,
+    code_challenge_method: 'plain'
+  })
 
 export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
   const [{
@@ -64,6 +93,11 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
     setLoading(false)
   }
 
+  const redirectUri = 'https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb'
+  // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+
+  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
+
   return (
     <>
       <input
@@ -105,6 +139,16 @@ export default ({ getUserToken: f, verifyUser: f2, resend, onError }) => {
         }
       >
         Sign In
+      </Button>
+      <div className={styles.or}><div /><span>OR</span><div /></div>
+      <Button
+        loading={loading}
+        className={cn(styles.button, styles.twitterButton)}
+      >
+        <a href={twitterAuthUrl}>Sign In with</a>
+        <a href={twitterAuthUrl}>
+          <XIcon />
+        </a>
       </Button>
     </>
   )
