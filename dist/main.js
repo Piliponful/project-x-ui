@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -1735,19 +1735,24 @@ var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verify
 
 
 
+
+
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
 $parcel$export($13058157b3244d01$exports, "dropdown", () => $13058157b3244d01$export$81207e5cc4186890, (v) => $13058157b3244d01$export$81207e5cc4186890 = v);
 $parcel$export($13058157b3244d01$exports, "icon", () => $13058157b3244d01$export$1ca1ec8b29a4ce27, (v) => $13058157b3244d01$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($13058157b3244d01$exports, "twitterSignIn", () => $13058157b3244d01$export$6c489d6abe11ec5c, (v) => $13058157b3244d01$export$6c489d6abe11ec5c = v);
 $parcel$export($13058157b3244d01$exports, "username", () => $13058157b3244d01$export$5e1be761f603d585, (v) => $13058157b3244d01$export$5e1be761f603d585 = v);
 var $13058157b3244d01$export$34e0f9847d4c02dd;
 var $13058157b3244d01$export$81207e5cc4186890;
 var $13058157b3244d01$export$1ca1ec8b29a4ce27;
+var $13058157b3244d01$export$6c489d6abe11ec5c;
 var $13058157b3244d01$export$5e1be761f603d585;
 $13058157b3244d01$export$34e0f9847d4c02dd = `rzmFQq_container`;
 $13058157b3244d01$export$81207e5cc4186890 = `rzmFQq_dropdown`;
 $13058157b3244d01$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
+$13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
@@ -1757,20 +1762,29 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
         onTriggered: ()=>setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-        ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-        onClick: ()=>setShowDropdown(!showDropdown),
+    const redirectUri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
+    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+    const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
+    const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+            username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
                 children: [
                     "Settings (",
                     username,
                     ")"
                 ]
+            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                        children: "Sign in with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
                     display: showDropdown ? "flex" : "none"
                 },
@@ -1786,13 +1800,27 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
+            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
                 sx: {
                     color: "#bebebe"
                 }
             })
         ]
+    });
+    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+        style: {
+            justifyContent: "center"
+        },
+        href: twitterAuthUrl,
+        children: content
+    });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        ref: ref,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+        onClick: ()=>setShowDropdown(!showDropdown),
+        children: content
     });
 };
 

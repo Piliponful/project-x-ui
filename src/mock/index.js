@@ -116,7 +116,10 @@ const MainScreenWithQuestions = () => (
     </QuestionCardsRow>
     <div>
       <NewQuestion saveQuestion={() => {}} />
-      <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
+      <ActionsPanel
+        logout={() => console.log('logout')}
+        // username='piliponful'
+      />
     </div>
   </MainScreen>
 )
