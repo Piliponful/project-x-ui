@@ -18,9 +18,13 @@ export default ({ saveQuestion }) => {
     }
   }
 
+  const disabled = !saveQuestion
+
+  console.log('disabled NewQuestion: ', disabled)
+
   return (
     <div className={styles.newQuestion}>
-      <Input value={question} onChange={onChange} />
+      <Input disabled={disabled} value={question} onChange={onChange} />
     </div>
   )
 }

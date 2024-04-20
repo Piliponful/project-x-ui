@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -786,8 +786,9 @@ $5f67be5e02d37987$export$401451a107dc42ce = `Orh0Eq_no`;
 $5f67be5e02d37987$export$7a668e70ea2210d9 = `Orh0Eq_yes`;
 
 
-var $5e95937b5aebb876$export$2e2bcd8739ae039 = ({ answer: answer, respond: respond })=>{
+var $5e95937b5aebb876$export$2e2bcd8739ae039 = ({ answer: answer, respond: respond, disabled: disabled })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+        disabled: disabled,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).button, {
             [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).yes]: answer.toLowerCase() === "yes",
             [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).no]: answer.toLowerCase() === "no"
@@ -812,10 +813,12 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond })=>{
         className: (0, (/*@__PURE__*/$parcel$interopDefault($f5aef85d7fbd61f1$exports))).answerButtons,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
+                disabled: !respond,
                 answer: "Yes",
                 respond: ()=>respond("yes")
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
+                disabled: !respond,
                 answer: "No",
                 respond: ()=>respond("no")
             })
@@ -886,10 +889,11 @@ $6ab302fcbc9538e6$export$6f093cfa640b7166 = `OxsVWq_text`;
 $6ab302fcbc9538e6$export$a3574df893ffa88d = `OxsVWq_textarea`;
 
 
-var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
-            placeholder: "Type your question here...",
+            disabled: disabled,
+            placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
             className: (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea,
             onChange: onChange,
             value: value
@@ -913,9 +917,12 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
             setQuestion("");
         } else setQuestion(newQuestion);
     };
+    const disabled = !saveQuestion;
+    console.log("disabled NewQuestion: ", disabled);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
+            disabled: disabled,
             value: question,
             onChange: onChange
         })

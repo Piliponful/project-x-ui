@@ -247,9 +247,21 @@
   box-shadow: 0 3px 3.84px 2.16px #ff00002e;
 }
 
+.Orh0Eq_yes:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background: #bd5d58;
+}
+
 .Orh0Eq_no {
   background: #3eb5f1;
   box-shadow: 0 3px 3.84px 2.16px #3eb5f12e;
+}
+
+.Orh0Eq_no:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  background: #59acd6;
 }
 
 .b4MS9q_answerButtons {
@@ -302,6 +314,10 @@
   color: #969696;
   opacity: 1;
   font-size: 18px;
+}
+
+.OxsVWq_textarea:disabled {
+  cursor: not-allowed;
 }
 
 .OxsVWq_text {

@@ -4,8 +4,8 @@ import Text from '../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ onChange, value }) => (
+export default ({ disabled, onChange, value }) => (
   <Text className={styles.text}>
-    <textarea placeholder='Type your question here...' className={styles.textarea} onChange={onChange} value={value} />
+    <textarea disabled={disabled} placeholder={`Type your question here ${disabled ? '(disabled if you\'re not signed in)' : ''}...`} className={styles.textarea} onChange={onChange} value={value} />
   </Text>
 )

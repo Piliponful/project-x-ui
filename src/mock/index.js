@@ -123,7 +123,9 @@ const SidebarWithGroups = () => {
           <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
-      <NewQuestion saveQuestion={() => {}} />
+      <NewQuestion
+        // saveQuestion={() => {}}
+      />
       <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
     </Sidebar>
   )
@@ -134,7 +136,9 @@ const SidebarWithQuestions = () => {
     <Sidebar>
       {mostAnsweredQuestionsComponents}
       <div>
-        <NewQuestion saveQuestion={() => {}} />
+        <NewQuestion
+          // saveQuestion={() => {}}
+        />
         <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
       </div>
     </Sidebar>
@@ -155,7 +159,9 @@ const MainScreenWithQuestions = () => (
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
     <div>
-      <NewQuestion saveQuestion={() => {}} />
+      <NewQuestion
+        // saveQuestion={() => {}}
+      />
       <ActionsPanel
         logout={() => console.log('logout')}
         // username='piliponful'
