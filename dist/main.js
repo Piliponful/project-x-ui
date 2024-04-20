@@ -1763,13 +1763,12 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username })=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri })=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    const redirectUri = "https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb";
     // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
     const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {

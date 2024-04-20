@@ -10,12 +10,11 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ logout, username }) => {
+export default ({ logout, username, redirectUri }) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
 
-  const redirectUri = 'https://9ee9-62-192-154-1.ngrok-free.app/api/oauth2_cb'
   // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
 
   const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
