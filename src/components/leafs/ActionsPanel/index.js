@@ -15,8 +15,6 @@ export default ({ logout, username, redirectUri }) => {
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
 
-  // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
-
   const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
 
   const content = (

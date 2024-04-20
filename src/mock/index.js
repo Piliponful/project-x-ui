@@ -146,11 +146,35 @@ const SidebarWithQuestions = () => {
 }
 
 const users = [
-  { _id: 1, name: 'Maxim Pilipenko', picture: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg', followers: 59, url: 'https://twitter.com/piliponful' },
-  { _id: 2, name: 'Patrick Bet-David', picture: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg', followers: 973000, url: 'https://twitter.com/patrickbetdavid' },
-  { _id: 3, name: 'SNEAKO', picture: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg', followers: 808000, url: 'https://twitter.com/sneako' },
-  { _id: 4, name: 'David Goggins', picture: 'https://pbs.twimg.com/profile_images/1585779196948664320/7ZBXg_pv_400x400.jpg', followers: 923000, url: 'https://twitter.com/davidgoggins' },
-  // { _id: 5, name: 'David Goggins' }
+  {
+    _id: 1,
+    fullName: 'Maxim Pilipenko',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+    followerCount: 59,
+    username: 'piliponful'
+  },
+  {
+    _id: 2,
+    fullName: 'Patrick Bet-David',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+    followerCount: 973000,
+    url: 'patrickbetdavid'
+  },
+  {
+    _id: 3,
+    fullName: 'SNEAKO',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg',
+    followerCount: 808000,
+    url: 'sneako'
+  },
+  {
+    _id: 4,
+    fullName: 'David Goggins',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1585779196948664320/7ZBXg_pv_400x400.jpg',
+    followerCount: 923000,
+    url: 'davidgoggins'
+  },
+  // { _id: 5, fullName: 'David Goggins' }
 ]
 
 const MainScreenWithQuestions = () => (

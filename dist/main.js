@@ -1769,7 +1769,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
         onTriggered: ()=>setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
     const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -1864,19 +1863,19 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUs
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
                         children: [
-                            user.picture && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                src: user.picture,
+                            user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                src: user.pictureUrl,
                                 alt: `${user.name} profile picture`
                             }),
-                            user.followers ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            user.followerCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                        children: user.name
+                                        children: user.fullName
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                                         children: [
-                                            (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followers),
+                                            (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
                                             " followers"
                                         ]
                                     })
@@ -1886,8 +1885,8 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUs
                             })
                         ]
                     }),
-                    user.url && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                        href: user.url,
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: `https://twitter.com/${user.username}`,
                         target: "_blank",
                         rel: "noreferrer",
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
