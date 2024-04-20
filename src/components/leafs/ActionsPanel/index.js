@@ -39,7 +39,7 @@ export default ({ logout, username, redirectUri, changeUser, testUsers }) => {
           {testUsers.map(i => (
             <div key={i.username} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
           ))}
-          {testUsers.length && (
+          {Boolean(testUsers.length) && (
             <div onClick={() => changeUser()}>me</div>
           )}
         </div>
