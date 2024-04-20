@@ -26,9 +26,21 @@
 .yes {
   background: #d24a43;
   box-shadow: 0px 3px 3.84px 2.16px rgba(255, 0, 0, 0.18);
+  &:disabled {
+    // background: darken(#d24a43, 30%);
+    background: desaturate(#d24a43, 30%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
 }
 
 .no {
   background: #3eb5f1;
   box-shadow: 0px 3px 3.84px 2.16px rgba(62, 181, 241, 0.18);
+  &:disabled {
+    // background: darken(#3eb5f1, 30%);
+    background: desaturate(#3eb5f1, 30%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
 }

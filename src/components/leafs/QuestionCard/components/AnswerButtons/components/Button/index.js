@@ -5,9 +5,10 @@ import Text from '../../../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ answer, respond }) => {
+export default ({ answer, respond, disabled }) => {
   return (
     <button
+      disabled={disabled}
       className={cn(styles.button, {
         [styles.yes]: answer.toLowerCase() === 'yes',
         [styles.no]: answer.toLowerCase() === 'no'

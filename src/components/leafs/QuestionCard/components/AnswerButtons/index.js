@@ -7,8 +7,8 @@ import styles from './style.module.styl'
 export default ({ respond }) => {
   return (
     <div className={styles.answerButtons}>
-      <Button answer='Yes' respond={() => respond('yes')} />
-      <Button answer='No' respond={() => respond('no')} />
+      <Button disabled={!respond} answer='Yes' respond={() => respond('yes')} />
+      <Button disabled={!respond} answer='No' respond={() => respond('no')} />
     </div>
   )
 }
