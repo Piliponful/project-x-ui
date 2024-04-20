@@ -93,6 +93,10 @@ const SidebarWithQuestions = () => {
   return (
     <Sidebar>
       {mostAnsweredQuestionsComponents}
+      <div>
+        <NewQuestion saveQuestion={() => {}} />
+        <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
+      </div>
     </Sidebar>
   )
 }
@@ -102,17 +106,19 @@ const users = [
   { _id: 2, name: 'Patrick Bet-David', picture: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg', followers: 973000, url: 'https://twitter.com/patrickbetdavid' },
   { _id: 3, name: 'SNEAKO', picture: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg', followers: 808000, url: 'https://twitter.com/sneako' },
   { _id: 4, name: 'David Goggins', picture: 'https://pbs.twimg.com/profile_images/1585779196948664320/7ZBXg_pv_400x400.jpg', followers: 923000, url: 'https://twitter.com/davidgoggins' },
-  { _id: 5, name: 'David Goggins' }
+  // { _id: 5, name: 'David Goggins' }
 ]
 
 const MainScreenWithQuestions = () => (
-  <>
-    <MainScreen>
-      <QuestionCardsRow>
-        {mostAnsweredQuestionsComponents}
-      </QuestionCardsRow>
-    </MainScreen>
-  </>
+  <MainScreen>
+    <QuestionCardsRow>
+      {mostAnsweredQuestionsComponents}
+    </QuestionCardsRow>
+    <div>
+      <NewQuestion saveQuestion={() => {}} />
+      <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
+    </div>
+  </MainScreen>
 )
 
 const Authorized = () => {
@@ -123,13 +129,13 @@ const Authorized = () => {
 
   return (
     <>
-      {screenName === 'groups' && <SidebarWithGroups />}
+      {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
       {screenName === 'questions' && <SidebarWithQuestions />}
 
       {!screenName && (
         <>
-          <SidebarWithGroups />
+          {/* <SidebarWithGroups /> */}
           <GroupContentScreen users={users} />
           <MainScreenWithQuestions />
         </>

@@ -1,5 +1,6 @@
 import React from 'react'
+import cn from 'classnames'
 
 import styles from './style.module.styl'
 
-export default ({ children }) => <div className={styles.container}>{children}</div>
+export default ({ children, className }) => <div className={cn(styles.container, className)}>{children}</div>

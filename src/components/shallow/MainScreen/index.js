@@ -7,7 +7,7 @@ import styles from './style.module.styl'
 
 export default ({ children, className, style }) => (
   <section style={style} className={cn(styles.mainScreen, className)}>
-    <Container>
+    <Container className={styles.mainScreenContainer}>
       {children}
     </Container>
   </section>

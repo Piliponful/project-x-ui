@@ -15,7 +15,7 @@ export default ({ users, show, onUserClick }) => {
               ? (
                 <div className={styles.column}>
                   <span>{user.name}</span>
-                  <span>{humanNumber(user.followers)}</span>
+                  <span>{humanNumber(user.followers)} followers</span>
                 </div>
                 )
               : <span>{user.name}</span>}

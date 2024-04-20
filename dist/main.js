@@ -1137,6 +1137,7 @@ var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PU
 
 
 
+
 var $25f6686bebec2027$exports = {};
 
 $parcel$export($25f6686bebec2027$exports, "container", () => $25f6686bebec2027$export$34e0f9847d4c02dd, (v) => $25f6686bebec2027$export$34e0f9847d4c02dd = v);
@@ -1144,8 +1145,8 @@ var $25f6686bebec2027$export$34e0f9847d4c02dd;
 $25f6686bebec2027$export$34e0f9847d4c02dd = `iW3V3q_container`;
 
 
-var $4fca24e0a7aa9c5a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($25f6686bebec2027$exports))).container,
+var $4fca24e0a7aa9c5a$export$2e2bcd8739ae039 = ({ children: children, className: className })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($25f6686bebec2027$exports))).container, className),
         children: children
     });
 
@@ -1153,14 +1154,18 @@ var $4fca24e0a7aa9c5a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PU
 var $0dca14a056f81668$exports = {};
 
 $parcel$export($0dca14a056f81668$exports, "mainScreen", () => $0dca14a056f81668$export$e962ae2959462fd2, (v) => $0dca14a056f81668$export$e962ae2959462fd2 = v);
+$parcel$export($0dca14a056f81668$exports, "mainScreenContainer", () => $0dca14a056f81668$export$65cfe9c2ce1b1faf, (v) => $0dca14a056f81668$export$65cfe9c2ce1b1faf = v);
 var $0dca14a056f81668$export$e962ae2959462fd2;
+var $0dca14a056f81668$export$65cfe9c2ce1b1faf;
 $0dca14a056f81668$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
+$0dca14a056f81668$export$65cfe9c2ce1b1faf = `zfn2bW_mainScreenContainer`;
 
 
 var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreenContainer,
             children: children
         })
     });
@@ -1835,8 +1840,11 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUs
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                         children: user.name
                                     }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                        children: (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followers)
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                        children: [
+                                            (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followers),
+                                            " followers"
+                                        ]
                                     })
                                 ]
                             }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {

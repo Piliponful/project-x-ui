@@ -93,6 +93,11 @@
   background: none;
   border: 1px solid #3eb5f175;
   margin-top: 10px;
+  transition: box-shadow .1s;
+}
+
+.GNms6q_button:not(:disabled):hover {
+  box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
 }
 
 .GNms6q_nobold {
@@ -291,7 +296,6 @@
   padding: 10px 15px;
   font-family: inherit;
   font-size: 18px;
-  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
 }
 
 .OxsVWq_textarea::placeholder {
@@ -400,6 +404,10 @@
   .zfn2bW_mainScreen {
     display: none;
   }
+}
+
+.zfn2bW_mainScreenContainer {
+  flex-direction: column;
 }
 
 .HFaEpW_sidebar {
@@ -779,7 +787,6 @@
   padding: 30px 20px;
   display: flex;
   position: relative;
-  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
 }
 
 .rzmFQq_dropdown {
@@ -796,7 +803,6 @@
   position: absolute;
   top: -110px;
   left: 0;
-  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
 }
 
 .rzmFQq_icon {
