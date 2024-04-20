@@ -37,7 +37,7 @@ export default ({ logout, username, redirectUri, changeUser, testUsers }) => {
           <div onClick={logout}>Log out</div>
           <div onClick={() => setIsModalOpen(true)}>Rewards</div>
           {testUsers.map(i => (
-            <div key={i.username} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
+            <div key={i.fullName} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
           ))}
           {Boolean(testUsers.length) && (
             <div onClick={() => changeUser()}>me</div>

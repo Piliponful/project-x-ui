@@ -918,7 +918,6 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
         } else setQuestion(newQuestion);
     };
     const disabled = !saveQuestion;
-    console.log("disabled NewQuestion: ", disabled);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
@@ -1806,7 +1805,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
                     testUsers.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                             onClick: ()=>changeUser(i.fullName),
                             children: i.fullName
-                        }, i.username)),
+                        }, i.fullName)),
                     Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>changeUser(),
                         children: "me"
