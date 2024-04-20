@@ -123,9 +123,7 @@ const SidebarWithGroups = () => {
           <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
-      <NewQuestion
-        // saveQuestion={() => {}}
-      />
+      <NewQuestion />
       <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
     </Sidebar>
   )
@@ -136,9 +134,7 @@ const SidebarWithQuestions = () => {
     <Sidebar>
       {mostAnsweredQuestionsComponents}
       <div>
-        <NewQuestion
-          // saveQuestion={() => {}}
-        />
+        <NewQuestion />
         <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
       </div>
     </Sidebar>
@@ -147,34 +143,44 @@ const SidebarWithQuestions = () => {
 
 const users = [
   {
-    _id: 1,
+    userId: '6623cfe7e1d83d0600c06a99',
+    username: 'piliponful',
     fullName: 'Maxim Pilipenko',
-    pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-    followerCount: 59,
-    username: 'piliponful'
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_normal.jpg',
+    twitterVerified: false,
+    followerCount: '67',
+    address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
   },
   {
     _id: 2,
     fullName: 'Patrick Bet-David',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
     followerCount: 973000,
-    url: 'patrickbetdavid'
+    username: 'patrickbetdavid'
   },
   {
     _id: 3,
     fullName: 'SNEAKO',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg',
     followerCount: 808000,
-    url: 'sneako'
+    username: 'sneako'
   },
   {
     _id: 4,
     fullName: 'David Goggins',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1585779196948664320/7ZBXg_pv_400x400.jpg',
     followerCount: 923000,
-    url: 'davidgoggins'
+    username: 'davidgoggins'
   },
-  // { _id: 5, fullName: 'David Goggins' }
+  {
+    username: 'cobratate',
+    fullName: 'Andrew Tate',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1728837013023895552/nCHrdjlh_400x400.jpg',
+    twitterVerified: true,
+    followerCount: '9100000',
+    userId: '6623c2324422e3010a3e37eb',
+    address: 'test'
+  }
 ]
 
 const MainScreenWithQuestions = () => (
@@ -183,9 +189,7 @@ const MainScreenWithQuestions = () => (
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
     <div>
-      <NewQuestion
-        // saveQuestion={() => {}}
-      />
+      <NewQuestion />
       <ActionsPanel
         logout={() => console.log('logout')}
         // username='piliponful'
