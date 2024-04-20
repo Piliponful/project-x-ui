@@ -819,7 +819,7 @@
   padding: 21px 18px;
   font-family: IBM Plex Sans;
   position: absolute;
-  top: -110px;
+  bottom: calc(100% + 6px);
   left: 0;
 }
 
