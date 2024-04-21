@@ -22,7 +22,7 @@ export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnsw
                 ? (
                   <>
                     <Answer his={his} answer={answer} />
-                    {(his && !yourOwnQuestion) ? <AnswerButtons respond={respond} /> : <Text className={styles.hint}>You cannot answer your own question</Text>}
+                    {(his && !yourOwnQuestion) ? <AnswerButtons respond={respond} /> : (yourOwnQuestion && <Text className={styles.hint}>You cannot answer your own question</Text>)}
                   </>
                   )
                 : <AnswerButtons respond={respond} />
