@@ -12,6 +12,7 @@ import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
 import GroupContentScreen from './src/components/leafs/GroupContentScreen'
 import UserContentBlock from './src/components/leafs/UserContentBlock'
+import Search from './src/components/leafs/Search'
 
 import './styles.css'
 
@@ -31,7 +32,8 @@ export default {
     Authentication,
     ActionsPanel,
     GroupContentScreen,
-    UserContentBlock
+    UserContentBlock,
+    Search
   },
   context: {
     MainScreenSwipeContext

@@ -15,6 +15,7 @@ var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
+var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -1983,6 +1984,92 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, question
 
 
 
+
+
+
+var $a9ddd490efc245bf$exports = {};
+
+$parcel$export($a9ddd490efc245bf$exports, "dropdownContainer", () => $a9ddd490efc245bf$export$a3681dba3470c8c4, (v) => $a9ddd490efc245bf$export$a3681dba3470c8c4 = v);
+$parcel$export($a9ddd490efc245bf$exports, "dropdownItemsContainer", () => $a9ddd490efc245bf$export$960d6a7eb8ce632b, (v) => $a9ddd490efc245bf$export$960d6a7eb8ce632b = v);
+$parcel$export($a9ddd490efc245bf$exports, "dropdownValue", () => $a9ddd490efc245bf$export$2ff2bc1709095d00, (v) => $a9ddd490efc245bf$export$2ff2bc1709095d00 = v);
+$parcel$export($a9ddd490efc245bf$exports, "input", () => $a9ddd490efc245bf$export$b7e3ae3d7c15e42e, (v) => $a9ddd490efc245bf$export$b7e3ae3d7c15e42e = v);
+$parcel$export($a9ddd490efc245bf$exports, "search", () => $a9ddd490efc245bf$export$d76128d007d19019, (v) => $a9ddd490efc245bf$export$d76128d007d19019 = v);
+$parcel$export($a9ddd490efc245bf$exports, "text", () => $a9ddd490efc245bf$export$6f093cfa640b7166, (v) => $a9ddd490efc245bf$export$6f093cfa640b7166 = v);
+var $a9ddd490efc245bf$export$a3681dba3470c8c4;
+var $a9ddd490efc245bf$export$960d6a7eb8ce632b;
+var $a9ddd490efc245bf$export$2ff2bc1709095d00;
+var $a9ddd490efc245bf$export$b7e3ae3d7c15e42e;
+var $a9ddd490efc245bf$export$d76128d007d19019;
+var $a9ddd490efc245bf$export$6f093cfa640b7166;
+$a9ddd490efc245bf$export$a3681dba3470c8c4 = `_6W1esa_dropdownContainer`;
+$a9ddd490efc245bf$export$960d6a7eb8ce632b = `_6W1esa_dropdownItemsContainer`;
+$a9ddd490efc245bf$export$2ff2bc1709095d00 = `_6W1esa_dropdownValue`;
+$a9ddd490efc245bf$export$b7e3ae3d7c15e42e = `_6W1esa_input`;
+$a9ddd490efc245bf$export$d76128d007d19019 = `_6W1esa_search`;
+$a9ddd490efc245bf$export$6f093cfa640b7166 = `_6W1esa_text`;
+
+
+var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search })=>{
+    const [text, setText] = (0, $c5L0i$react.useState)("");
+    const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)("Questions");
+    const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
+    const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
+        onTriggered: ()=>setShowDropdown(false)
+    });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).input,
+                onChange: (e)=>setText(e.target.value),
+                value: text
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownContainer,
+                ref: ref,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownValue,
+                        onClick: ()=>setShowDropdown(true),
+                        children: dropdownValue
+                    }),
+                    showDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItemsContainer,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
+                                onClick: ()=>{
+                                    setDropdownValue("Users");
+                                    setShowDropdown(false);
+                                },
+                                children: "Users"
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
+                                onClick: ()=>{
+                                    setDropdownValue("Questions");
+                                    setShowDropdown(false);
+                                },
+                                children: "Questions"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                        onClick: ()=>setShowDropdown(true)
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).search,
+                onClick: ()=>search(dropdownValue, text),
+                children: "Find"
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -1999,7 +2086,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         Authentication: $9cd36ad568230ef5$export$2e2bcd8739ae039,
         ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039,
         GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039,
-        UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039
+        UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039,
+        Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee
