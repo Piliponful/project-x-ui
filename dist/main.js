@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -889,15 +889,12 @@ $6ab302fcbc9538e6$export$6f093cfa640b7166 = `OxsVWq_text`;
 $6ab302fcbc9538e6$export$a3574df893ffa88d = `OxsVWq_textarea`;
 
 
-var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text,
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
-            disabled: disabled,
-            placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea,
-            onChange: onChange,
-            value: value
-        })
+var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
+        disabled: disabled,
+        placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text),
+        onChange: onChange,
+        value: value
     });
 
 
@@ -1014,7 +1011,7 @@ $941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
 const $be6f0e84320366a7$export$2515d253ab459c32 = 450;
 const $be6f0e84320366a7$export$310e42f8685040c9 = 1361;
 const $be6f0e84320366a7$export$5d27a029e0b63495 = 914;
-const $be6f0e84320366a7$export$120137d2fb34488f = 467;
+const $be6f0e84320366a7$export$120137d2fb34488f = 558;
 
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({

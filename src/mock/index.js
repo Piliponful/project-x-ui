@@ -132,7 +132,9 @@ const SidebarWithGroups = () => {
 const SidebarWithQuestions = () => {
   return (
     <Sidebar>
-      {mostAnsweredQuestionsComponents}
+      <GroupsContainer>
+        {mostAnsweredQuestionsComponents}
+      </GroupsContainer>
       <div style={{ width: '100%' }}>
         <NewQuestion />
         <ActionsPanel logout={() => console.log('logout')} username='piliponful' />

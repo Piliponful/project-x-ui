@@ -306,7 +306,7 @@
   width: 100%;
   height: 144px;
   padding: 10px 15px;
-  font-family: inherit;
+  font-family: IBM Plex Sans;
   font-size: 18px;
 }
 
@@ -329,6 +329,12 @@
 .OGOopW_newQuestion {
   width: 100%;
   margin-top: 25px;
+}
+
+@media only screen and (width <= 400px) {
+  .OGOopW_newQuestion {
+    margin-top: 14px;
+  }
 }
 
 .mrTbNq_container {
@@ -414,12 +420,6 @@
   align-items: center;
   width: 500px;
   display: flex;
-}
-
-@media only screen and (width <= 968px) {
-  .zfn2bW_mainScreen {
-    display: none;
-  }
 }
 
 .zfn2bW_mainScreenContainer {
