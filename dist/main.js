@@ -14,6 +14,7 @@ var $c5L0i$reactphonenumberinput = require("react-phone-number-input");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$humannumber = require("human-number");
+var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -1921,6 +1922,62 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUs
 
 
 
+
+
+
+
+
+var $d96dc328a9b2259c$exports = {};
+
+$parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
+$parcel$export($d96dc328a9b2259c$exports, "selected", () => $d96dc328a9b2259c$export$d90250155de6d7e7, (v) => $d96dc328a9b2259c$export$d90250155de6d7e7 = v);
+$parcel$export($d96dc328a9b2259c$exports, "tabs", () => $d96dc328a9b2259c$export$39f5674517ec0000, (v) => $d96dc328a9b2259c$export$39f5674517ec0000 = v);
+var $d96dc328a9b2259c$export$7c341cb16fc91138;
+var $d96dc328a9b2259c$export$d90250155de6d7e7;
+var $d96dc328a9b2259c$export$39f5674517ec0000;
+$d96dc328a9b2259c$export$7c341cb16fc91138 = `_31v-EG_back`;
+$d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
+$d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
+
+
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back })=>{
+    const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).back,
+                onClick: back
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "questions"
+                        }),
+                        onClick: ()=>setSelectedTab("questions"),
+                        children: "Questions"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
+                        }),
+                        onClick: ()=>setSelectedTab("answers"),
+                        children: "Answered Questions"
+                    })
+                ]
+            }),
+            (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                    his: selectedTab === "answers",
+                    ...i
+                }, i.name))
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -1936,7 +1993,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         NewQuestion: $2d4c76ea0fc231a4$export$2e2bcd8739ae039,
         Authentication: $9cd36ad568230ef5$export$2e2bcd8739ae039,
         ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039,
-        GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039
+        GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039,
+        UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee
