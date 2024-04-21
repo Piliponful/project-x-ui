@@ -840,7 +840,7 @@ $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, his: his, respond: respond, createNewGroup: createNewGroup })=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
@@ -863,23 +863,17 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
                 ...answersCount,
                 createNewGroup: createNewGroup
             }),
-            yourOwnQuestion && !his ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+            hisAnswer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
+                his: true,
+                answer: hisAnswer
+            }),
+            answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
+                answer: answer
+            }),
+            yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
                 children: "You cannot answer your own question"
-            }) : answer ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
-                        his: his,
-                        answer: answer
-                    }),
-                    his && !yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
-                        respond: respond
-                    }) : yourOwnQuestion && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
-                        children: "You cannot answer your own question"
-                    })
-                ]
-            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+            }) : !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                 respond: respond
             })
         ]
@@ -1979,7 +1973,6 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, question
                 ]
             }),
             (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    his: selectedTab === "answers",
                     respond: (content)=>respond(selectedTab === "answers")(i._id, content),
                     createNewGroup: (content)=>createNewGroup(i._id, content),
                     ...i

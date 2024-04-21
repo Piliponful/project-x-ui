@@ -20,7 +20,6 @@ export default ({ questions, questionsWithAnswers, back, respond, createNewGroup
       </div>
       {(selectedTab === 'questions' ? questions : questionsWithAnswers).map(i => (
         <QuestionCard
-          his={selectedTab === 'answers'}
           key={i.name}
           respond={content => respond(selectedTab === 'answers')(i._id, content)}
           createNewGroup={content => createNewGroup(i._id, content)}

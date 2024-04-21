@@ -50,7 +50,9 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     name: 'Have you watched new season of attack on titan?',
     currentUserAnswer: 'Yes',
     answersCount: { yes: 383343, no: 23450 },
-    username: 'piliponful'
+    username: 'piliponful',
+    // yourOwnQuestion: true,
+    hisAnswer: 'yes'
   },
   {
     name: 'Will Luffy find one piece?',

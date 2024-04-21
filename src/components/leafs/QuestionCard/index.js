@@ -9,25 +9,14 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, his, respond, createNewGroup }) => {
+export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup }) => {
   return (
     <article className={styles.card}>
       <Title><span style={{ color: '#00000063' }}>{username}:</span> {name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
-      {
-        (yourOwnQuestion && !his)
-          ? <Text className={styles.hint}>You cannot answer your own question</Text>
-          : (
-              answer
-                ? (
-                  <>
-                    <Answer his={his} answer={answer} />
-                    {(his && !yourOwnQuestion) ? <AnswerButtons respond={respond} /> : (yourOwnQuestion && <Text className={styles.hint}>You cannot answer your own question</Text>)}
-                  </>
-                  )
-                : <AnswerButtons respond={respond} />
-            )
-      }
+      {hisAnswer && (<Answer his answer={hisAnswer} />)}
+      {answer && (<Answer answer={answer} />)}
+      {yourOwnQuestion ? <Text className={styles.hint}>You cannot answer your own question</Text> : (!answer && <AnswerButtons respond={respond} />)}
     </article>
   )
 }
