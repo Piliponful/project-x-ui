@@ -8,7 +8,7 @@ export default ({ users, show, onUserClick }) => {
   return (
     <div style={show && { display: 'flex' }} className={styles.screenWithGroupContent}>
       {users.map(user => (
-        <div className={styles.userItem} key={user._id} onUserClick={() => onUserClick(user)}>
+        <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
           <div className={styles.row}>
             {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
             {user.followerCount
