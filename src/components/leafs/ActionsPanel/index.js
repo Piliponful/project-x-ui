@@ -36,6 +36,11 @@ export default ({ logout, username, redirectUri, changeUser, testUsers = [] }) =
         <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
           <div onClick={logout}>Log out</div>
           <div onClick={() => setIsModalOpen(true)}>Rewards</div>
+          {Boolean(testUsers.length) && (
+            <div className={styles.divider}>
+              Test Users
+            </div>
+          )}
           {testUsers.map(i => (
             <div key={i.fullName} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
           ))}

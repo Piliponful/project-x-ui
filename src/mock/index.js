@@ -228,7 +228,10 @@ const MainScreenWithQuestions = () => (
       <NewQuestion />
       <ActionsPanel
         logout={() => console.log('logout')}
-        // username='piliponful'
+        testUsers={[
+          { fullName: 'Patrick Bet-David' }
+        ]}
+        username='piliponful'
       />
     </div>
   </MainScreen>
@@ -259,8 +262,8 @@ const Authorized = () => {
         <>
           {/* <SidebarWithGroups /> */}
           <GroupContentScreen users={users} />
-          {/* <MainScreenWithQuestions /> */}
-          <MainScreenWithUserQuestions />
+          <MainScreenWithQuestions />
+          {/* <MainScreenWithUserQuestions /> */}
         </>
       )}
     </>

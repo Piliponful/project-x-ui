@@ -842,6 +842,16 @@
   color: #bebebe;
 }
 
+.rzmFQq_divider {
+  color: #bebebe;
+  border-top: 1px solid #ffffff26;
+  justify-content: center;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+}
+
 .zDJPrW_screenWithGroupContent {
   background: #00000030;
   border: 1px dashed #3eb5f175;

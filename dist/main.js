@@ -1766,16 +1766,19 @@ var $9cd36ad568230ef5$export$2e2bcd8739ae039 = ({ createUser: createUser, verify
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
+$parcel$export($13058157b3244d01$exports, "divider", () => $13058157b3244d01$export$e8c9778bf415dd08, (v) => $13058157b3244d01$export$e8c9778bf415dd08 = v);
 $parcel$export($13058157b3244d01$exports, "dropdown", () => $13058157b3244d01$export$81207e5cc4186890, (v) => $13058157b3244d01$export$81207e5cc4186890 = v);
 $parcel$export($13058157b3244d01$exports, "icon", () => $13058157b3244d01$export$1ca1ec8b29a4ce27, (v) => $13058157b3244d01$export$1ca1ec8b29a4ce27 = v);
 $parcel$export($13058157b3244d01$exports, "twitterSignIn", () => $13058157b3244d01$export$6c489d6abe11ec5c, (v) => $13058157b3244d01$export$6c489d6abe11ec5c = v);
 $parcel$export($13058157b3244d01$exports, "username", () => $13058157b3244d01$export$5e1be761f603d585, (v) => $13058157b3244d01$export$5e1be761f603d585 = v);
 var $13058157b3244d01$export$34e0f9847d4c02dd;
+var $13058157b3244d01$export$e8c9778bf415dd08;
 var $13058157b3244d01$export$81207e5cc4186890;
 var $13058157b3244d01$export$1ca1ec8b29a4ce27;
 var $13058157b3244d01$export$6c489d6abe11ec5c;
 var $13058157b3244d01$export$5e1be761f603d585;
 $13058157b3244d01$export$34e0f9847d4c02dd = `rzmFQq_container`;
+$13058157b3244d01$export$e8c9778bf415dd08 = `rzmFQq_divider`;
 $13058157b3244d01$export$81207e5cc4186890 = `rzmFQq_dropdown`;
 $13058157b3244d01$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
 $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
@@ -1821,6 +1824,10 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>setIsModalOpen(true),
                         children: "Rewards"
+                    }),
+                    Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).divider,
+                        children: "Test Users"
                     }),
                     testUsers.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                             onClick: ()=>changeUser(i.fullName),
