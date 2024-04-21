@@ -22,7 +22,7 @@ export default ({ questions, questionsWithAnswers, back, respond, createNewGroup
         <QuestionCard
           his={selectedTab === 'answers'}
           key={i.name}
-          respond={respond(selectedTab === 'answers')}
+          respond={content => respond(selectedTab === 'answers')(i._id, content)}
           createNewGroup={content => createNewGroup(i._id, content)}
           {...i}
         />

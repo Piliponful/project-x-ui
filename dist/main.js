@@ -1973,7 +1973,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, question
             }),
             (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                     his: selectedTab === "answers",
-                    respond: respond(selectedTab === "answers"),
+                    respond: (content)=>respond(selectedTab === "answers")(i._id, content),
                     createNewGroup: (content)=>createNewGroup(i._id, content),
                     ...i
                 }, i.name))
