@@ -38,7 +38,8 @@ export default ({ children, includeSwipes, address, payout }) => {
         toggleScreen()
       }
       if (!screenName && width < smallMainScreenWidth) {
-        toggleScreen('groups')
+        console.log('test---------------: groups ')
+        toggleScreen('questions')
       }
     }
     handler()

@@ -10,20 +10,26 @@ Number.prototype.mod = function (n) {
   return ((this % n) + n) % n
 }
 
+const screens = [{ name: 'groups', index: 0 }, { name: 'groupContent', index: 1 }, { name: 'questions', index: 2 }]
+
 export default ({ children }) => {
   const value = useContext(MainScreenSwipeContext)
-  const [swipeCount, setSwipeCount] = useState(0)
+  const [swipeCount, setSwipeCount] = useState(2)
 
-  const screens = ['groups', 'groupContent', 'questions']
-  const screenBySwipeCount = Object.fromEntries(Object.entries(screens.filter(i => value.skipScreen ? i !== value.skipScreen : true)))
-
+  const screenBySwipeCount = Object.fromEntries(
+    Object.entries(screens.filter(i => value.skipScreen ? !value.skipScreen.includes(i.name) : true))
+  )
+  console.log('test: ', screenBySwipeCount, value.skipScreen)
   const handlers = useSwipeable({
     onSwiped: eventData => {
+      if (Object.keys(screenBySwipeCount).length === 0) {
+        return
+      }
       if (eventData.dir === 'Right' || eventData.dir === 'Left') {
         const plus = (eventData.dir === 'Left' ? 1 : (-1))
         const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)
         setSwipeCount(newSwipeCount)
-        value.toggleScreen(screenBySwipeCount[newSwipeCount])
+        value.toggleScreen(screenBySwipeCount[newSwipeCount].name)
       }
     },
     delta: 40,

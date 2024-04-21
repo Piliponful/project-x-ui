@@ -10,7 +10,7 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ logout, username, redirectUri, changeUser, testUsers }) => {
+export default ({ logout, username, redirectUri, changeUser, testUsers = [] }) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)

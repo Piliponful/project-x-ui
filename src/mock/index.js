@@ -133,7 +133,7 @@ const SidebarWithQuestions = () => {
   return (
     <Sidebar>
       {mostAnsweredQuestionsComponents}
-      <div>
+      <div style={{ width: '100%' }}>
         <NewQuestion />
         <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
       </div>
@@ -188,7 +188,7 @@ const MainScreenWithQuestions = () => (
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
-    <div>
+    <div style={{ width: '100%' }}>
       <NewQuestion />
       <ActionsPanel
         logout={() => console.log('logout')}
@@ -199,10 +199,13 @@ const MainScreenWithQuestions = () => (
 )
 
 const Authorized = () => {
-  const { screenName } = useContext(MainScreenSwipeContext)
-  // useEffect(() => {
-  //   setSkipScreen('groupContent')
-  // }, [])
+  const {
+    screenName,
+    setSkipScreen
+  } = useContext(MainScreenSwipeContext)
+  useEffect(() => {
+    setSkipScreen(['groupContent', 'groups'])
+  }, [])
 
   return (
     <>

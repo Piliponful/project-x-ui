@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -948,22 +948,33 @@ $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = `mrTbNq_container`;
 Number.prototype.mod = function(n) {
     return (this % n + n) % n;
 };
+const $1e3dbd7e69fec1c4$var$screens = [
+    {
+        name: "groups",
+        index: 0
+    },
+    {
+        name: "groupContent",
+        index: 1
+    },
+    {
+        name: "questions",
+        index: 2
+    }
+];
 var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
     const value = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    const [swipeCount, setSwipeCount] = (0, $c5L0i$react.useState)(0);
-    const screens = [
-        "groups",
-        "groupContent",
-        "questions"
-    ];
-    const screenBySwipeCount = Object.fromEntries(Object.entries(screens.filter((i)=>value.skipScreen ? i !== value.skipScreen : true)));
+    const [swipeCount, setSwipeCount] = (0, $c5L0i$react.useState)(2);
+    const screenBySwipeCount = Object.fromEntries(Object.entries($1e3dbd7e69fec1c4$var$screens.filter((i)=>value.skipScreen ? !value.skipScreen.includes(i.name) : true)));
+    console.log("test: ", screenBySwipeCount, value.skipScreen);
     const handlers = (0, $c5L0i$reactswipeable.useSwipeable)({
         onSwiped: (eventData)=>{
+            if (Object.keys(screenBySwipeCount).length === 0) return;
             if (eventData.dir === "Right" || eventData.dir === "Left") {
                 const plus = eventData.dir === "Left" ? 1 : -1;
                 const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length);
                 setSwipeCount(newSwipeCount);
-                value.toggleScreen(screenBySwipeCount[newSwipeCount]);
+                value.toggleScreen(screenBySwipeCount[newSwipeCount].name);
             }
         },
         delta: 40,
@@ -1032,7 +1043,10 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         const handler = ()=>{
             const { innerWidth: width } = window;
             if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen();
-            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("groups");
+            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) {
+                console.log("test---------------: groups ");
+                toggleScreen("questions");
+            }
         };
         handler();
         window.addEventListener("resize", handler);
@@ -1762,7 +1776,7 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri, changeUser: changeUser, testUsers: testUsers })=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri, changeUser: changeUser, testUsers: testUsers = [] })=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
