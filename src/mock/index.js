@@ -15,6 +15,7 @@ import Authentication from '../components/leafs/Authentication' // eslint-disabl
 import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
 import UserContentBlock from '../components/leafs/UserContentBlock'
+import Search from '../components/leafs/Search'
 
 import '../../styles.css'
 
@@ -223,6 +224,7 @@ const users = [
 
 const MainScreenWithQuestions = () => (
   <MainScreen>
+    <Search search={() => console.log('search')} />
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
@@ -262,8 +264,8 @@ const Authorized = () => {
 
       {!screenName && (
         <>
-          {/* <SidebarWithGroups /> */}
-          <GroupContentScreen users={users} />
+          <SidebarWithGroups />
+          {/* <GroupContentScreen users={users} /> */}
           <MainScreenWithQuestions />
           {/* <MainScreenWithUserQuestions /> */}
         </>
