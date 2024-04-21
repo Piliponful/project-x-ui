@@ -15,14 +15,14 @@ export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnsw
       <Title><span style={{ color: '#00000063' }}>{username}:</span> {name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
       {
-        yourOwnQuestion
+        (yourOwnQuestion && !his)
           ? <Text className={styles.hint}>You cannot answer your own question</Text>
           : (
               answer
                 ? (
                   <>
                     <Answer his={his} answer={answer} />
-                    {his && <AnswerButtons respond={respond} />}
+                    {(his && !yourOwnQuestion) ? <AnswerButtons respond={respond} /> : <Text className={styles.hint}>You cannot answer your own question</Text>}
                   </>
                   )
                 : <AnswerButtons respond={respond} />

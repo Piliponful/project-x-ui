@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -863,7 +863,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
                 ...answersCount,
                 createNewGroup: createNewGroup
             }),
-            yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+            yourOwnQuestion && !his ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
                 children: "You cannot answer your own question"
             }) : answer ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -872,8 +872,11 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
                         his: his,
                         answer: answer
                     }),
-                    his && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                    his && !yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                         respond: respond
+                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
+                        children: "You cannot answer your own question"
                     })
                 ]
             }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
@@ -1940,7 +1943,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back })=>{
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
@@ -1970,6 +1973,8 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, question
             }),
             (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                     his: selectedTab === "answers",
+                    respond: respond(selectedTab === "answers"),
+                    createNewGroup: (content)=>createNewGroup(i._id, content),
                     ...i
                 }, i.name))
         ]

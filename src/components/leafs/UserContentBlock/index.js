@@ -8,7 +8,7 @@ import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-export default ({ questions, questionsWithAnswers, back }) => {
+export default ({ questions, questionsWithAnswers, back, respond, createNewGroup }) => {
   const [selectedTab, setSelectedTab] = useState('questions')
 
   return (
@@ -22,6 +22,8 @@ export default ({ questions, questionsWithAnswers, back }) => {
         <QuestionCard
           his={selectedTab === 'answers'}
           key={i.name}
+          respond={respond(selectedTab === 'answers')}
+          createNewGroup={content => createNewGroup(i._id, content)}
           {...i}
         />
       ))}
