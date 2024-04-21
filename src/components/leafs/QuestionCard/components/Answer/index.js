@@ -6,9 +6,9 @@ import Text from '../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ answer }) => (
+export default ({ answer, his }) => (
   <Text className={styles.text}>
-    Your answer:
+    {his ? 'His/Her' : 'Your'} answer:
     <span>{' '}</span>
     <span
       className={cn(styles.text, {

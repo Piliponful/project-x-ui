@@ -9,7 +9,7 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, respond, createNewGroup }) => {
+export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, his, respond, createNewGroup }) => {
   return (
     <article className={styles.card}>
       <Title><span style={{ color: '#00000063' }}>{username}:</span> {name}</Title>
@@ -17,7 +17,16 @@ export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnsw
       {
         yourOwnQuestion
           ? <Text className={styles.hint}>You cannot answer your own question</Text>
-          : (answer ? <Answer answer={answer} /> : <AnswerButtons respond={respond} />)
+          : (
+              answer
+                ? (
+                  <>
+                    <Answer his={his} answer={answer} />
+                    {his && <AnswerButtons respond={respond} />}
+                  </>
+                  )
+                : <AnswerButtons respond={respond} />
+            )
       }
     </article>
   )

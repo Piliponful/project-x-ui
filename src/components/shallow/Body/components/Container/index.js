@@ -19,7 +19,6 @@ export default ({ children }) => {
   const screenBySwipeCount = Object.fromEntries(
     Object.entries(screens.filter(i => value.skipScreen ? !value.skipScreen.includes(i.name) : true))
   )
-  console.log('test: ', screenBySwipeCount, value.skipScreen)
   const handlers = useSwipeable({
     onSwiped: eventData => {
       if (Object.keys(screenBySwipeCount).length === 0) {

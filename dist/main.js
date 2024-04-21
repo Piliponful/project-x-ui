@@ -749,10 +749,11 @@ $3fc8af64f93dbb3e$export$6f093cfa640b7166 = `zw8A0W_text`;
 $3fc8af64f93dbb3e$export$7a668e70ea2210d9 = `zw8A0W_yes`;
 
 
-var $d739bb808051a5b3$export$2e2bcd8739ae039 = ({ answer: answer })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $d739bb808051a5b3$export$2e2bcd8739ae039 = ({ answer: answer, his: his })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($3fc8af64f93dbb3e$exports))).text,
         children: [
-            "Your answer:",
+            his ? "His/Her" : "Your",
+            " answer:",
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                 children: " "
             }),
@@ -838,7 +839,7 @@ $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, respond: respond, createNewGroup: createNewGroup })=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, his: his, respond: respond, createNewGroup: createNewGroup })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
@@ -864,8 +865,16 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
             yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
                 children: "You cannot answer your own question"
-            }) : answer ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
-                answer: answer
+            }) : answer ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
+                        his: his,
+                        answer: answer
+                    }),
+                    his && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                        respond: respond
+                    })
+                ]
             }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                 respond: respond
             })
@@ -963,7 +972,6 @@ var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
     const value = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const [swipeCount, setSwipeCount] = (0, $c5L0i$react.useState)(2);
     const screenBySwipeCount = Object.fromEntries(Object.entries($1e3dbd7e69fec1c4$var$screens.filter((i)=>value.skipScreen ? !value.skipScreen.includes(i.name) : true)));
-    console.log("test: ", screenBySwipeCount, value.skipScreen);
     const handlers = (0, $c5L0i$reactswipeable.useSwipeable)({
         onSwiped: (eventData)=>{
             if (Object.keys(screenBySwipeCount).length === 0) return;
@@ -1040,10 +1048,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         const handler = ()=>{
             const { innerWidth: width } = window;
             if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen();
-            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) {
-                console.log("test---------------: groups ");
-                toggleScreen("questions");
-            }
+            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("questions");
         };
         handler();
         window.addEventListener("resize", handler);

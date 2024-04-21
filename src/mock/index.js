@@ -14,6 +14,7 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
+import UserContentBlock from '../components/leafs/UserContentBlock'
 
 import '../../styles.css'
 
@@ -84,6 +85,39 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Do you you support Trump?',
     // currentUserAnswer: 'Yes',
+    answersCount: { yes: 231031, no: 30328 },
+    username: 'piliponful'
+  }
+]
+
+const mostAnsweredQuestionsAnswered = [ // eslint-disable-line
+  {
+    name: 'Have you watched new season of attack on titan?',
+    currentUserAnswer: 'Yes',
+    answersCount: { yes: 383343, no: 23450 },
+    username: 'piliponful'
+  },
+  {
+    name: 'Do you like battle between Sasuke and Naruto?',
+    currentUserAnswer: 'No',
+    answersCount: { yes: 80341, no: 280341 },
+    username: 'piliponful'
+  },
+  {
+    name: 'Do you believe Israel is genociding Gaza?',
+    currentUserAnswer: 'Yes',
+    answersCount: { yes: 231031, no: 30328 },
+    username: 'piliponful'
+  },
+  {
+    name: 'Do you believe in free speech?',
+    currentUserAnswer: 'Yes',
+    answersCount: { yes: 231031, no: 30328 },
+    username: 'piliponful'
+  },
+  {
+    name: 'Do you you support Trump?',
+    currentUserAnswer: 'Yes',
     answersCount: { yes: 231031, no: 30328 },
     username: 'piliponful'
   }
@@ -200,6 +234,12 @@ const MainScreenWithQuestions = () => (
   </MainScreen>
 )
 
+const MainScreenWithUserQuestions = () => (
+  <MainScreen>
+    <UserContentBlock questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
+  </MainScreen>
+)
+
 const Authorized = () => {
   const {
     screenName,
@@ -219,7 +259,8 @@ const Authorized = () => {
         <>
           {/* <SidebarWithGroups /> */}
           <GroupContentScreen users={users} />
-          <MainScreenWithQuestions />
+          {/* <MainScreenWithQuestions /> */}
+          <MainScreenWithUserQuestions />
         </>
       )}
     </>
