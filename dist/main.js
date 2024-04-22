@@ -2020,6 +2020,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $a9ddd490efc245bf$exports = {};
 
 $parcel$export($a9ddd490efc245bf$exports, "dropdownContainer", () => $a9ddd490efc245bf$export$a3681dba3470c8c4, (v) => $a9ddd490efc245bf$export$a3681dba3470c8c4 = v);
@@ -2042,7 +2043,7 @@ $a9ddd490efc245bf$export$d76128d007d19019 = `_6W1esa_search`;
 $a9ddd490efc245bf$export$6f093cfa640b7166 = `_6W1esa_text`;
 
 
-var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search })=>{
+var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: className, style: style })=>{
     const [text, setText] = (0, $c5L0i$react.useState)("");
     const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)("Questions");
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
@@ -2050,7 +2051,8 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search })=>{
         onTriggered: ()=>setShowDropdown(false)
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text,
+        style: style,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text, className),
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).input,
