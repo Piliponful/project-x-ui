@@ -1060,7 +1060,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         return ()=>window.removeEventListener("resize", handler);
     }, []);
     (0, $c5L0i$react.useEffect)(()=>{
-        console.log("screenName: ", screenName, "skipScreen: ", skipScreen);
         if (skipScreen && skipScreen.includes(screenName)) toggleScreen("questions");
     }, [
         skipScreen
