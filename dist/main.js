@@ -1058,6 +1058,12 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         window.addEventListener("resize", handler);
         return ()=>window.removeEventListener("resize", handler);
     }, []);
+    (0, $c5L0i$react.useEffect)(()=>{
+        console.log("screenName: ", screenName, "skipScreen: ", skipScreen);
+        if (skipScreen.includes(screenName)) toggleScreen("questions");
+    }, [
+        skipScreen
+    ]);
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
         value: {
             screenName: screenName,

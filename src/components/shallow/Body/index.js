@@ -48,6 +48,13 @@ export default ({ children, includeSwipes, address, payout }) => {
     return () => window.removeEventListener('resize', handler)
   }, [])
 
+  useEffect(() => {
+    console.log('screenName: ', screenName, 'skipScreen: ', skipScreen)
+    if (skipScreen.includes(screenName)) {
+      toggleScreen('questions')
+    }
+  }, [skipScreen])
+
   if (includeSwipes) {
     return (
       <MainScreenSwipeContext.Provider value={{ screenName, skipScreen, toggleScreen, setSkipScreen, setIsModalOpen: setIsModalOpen }}>
