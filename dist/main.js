@@ -1152,7 +1152,8 @@ var $6be3d19ca593c163$export$f36792cb9bd81925;
 $6be3d19ca593c163$export$f36792cb9bd81925 = `E0-4eG_groupContainer`;
 
 
-var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {

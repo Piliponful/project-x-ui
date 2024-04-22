@@ -1,9 +1,9 @@
 import React from 'react'
 
-import style from './style.module.styl'
+import styles from './style.module.styl'
 
-export default ({ children }) => (
-  <div className={style.groupContainer}>
+export default ({ children, style }) => (
+  <div style={style} className={styles.groupContainer}>
     <div style={{ width: '100%', height: '100%' }}>
       {children}
     </div>
