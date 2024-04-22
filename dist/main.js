@@ -2139,6 +2139,115 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = ({ questions: questions, total: t
 
 
 
+
+
+
+
+
+
+var $e7fcc7d3eba9496b$exports = {};
+
+$parcel$export($e7fcc7d3eba9496b$exports, "back", () => $e7fcc7d3eba9496b$export$7c341cb16fc91138, (v) => $e7fcc7d3eba9496b$export$7c341cb16fc91138 = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "column", () => $e7fcc7d3eba9496b$export$4e0c71f277ca26b3, (v) => $e7fcc7d3eba9496b$export$4e0c71f277ca26b3 = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "row", () => $e7fcc7d3eba9496b$export$120ff0929b202a6d, (v) => $e7fcc7d3eba9496b$export$120ff0929b202a6d = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "total", () => $e7fcc7d3eba9496b$export$9086bb9c16b2b5b, (v) => $e7fcc7d3eba9496b$export$9086bb9c16b2b5b = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "totalAndBack", () => $e7fcc7d3eba9496b$export$ef9502a2481467bc, (v) => $e7fcc7d3eba9496b$export$ef9502a2481467bc = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "userItem", () => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12, (v) => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "usersContainer", () => $e7fcc7d3eba9496b$export$771ca420b1b6ed17, (v) => $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = v);
+var $e7fcc7d3eba9496b$export$7c341cb16fc91138;
+var $e7fcc7d3eba9496b$export$4e0c71f277ca26b3;
+var $e7fcc7d3eba9496b$export$120ff0929b202a6d;
+var $e7fcc7d3eba9496b$export$9086bb9c16b2b5b;
+var $e7fcc7d3eba9496b$export$ef9502a2481467bc;
+var $e7fcc7d3eba9496b$export$f6bda04bc7d10a12;
+var $e7fcc7d3eba9496b$export$771ca420b1b6ed17;
+$e7fcc7d3eba9496b$export$7c341cb16fc91138 = `_9WjUxq_back`;
+$e7fcc7d3eba9496b$export$4e0c71f277ca26b3 = `_9WjUxq_column`;
+$e7fcc7d3eba9496b$export$120ff0929b202a6d = `_9WjUxq_row`;
+$e7fcc7d3eba9496b$export$9086bb9c16b2b5b = `_9WjUxq_total`;
+$e7fcc7d3eba9496b$export$ef9502a2481467bc = `_9WjUxq_totalAndBack`;
+$e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = `_9WjUxq_userItem`;
+$e7fcc7d3eba9496b$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
+
+
+(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper("bold", function(options) {
+    const targetText = options.hash.text;
+    const replacement = `<strong>${targetText}</strong>`;
+    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
+});
+var $d99360e8c29d4994$export$2e2bcd8739ae039 = ({ users: users, total: total, back: back, search: search, onUserClick: onUserClick })=>{
+    const templateString = `{{bold text="${search}"}}`;
+    const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersContainer,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).totalAndBack,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).back,
+                        onClick: back
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).total,
+                        children: [
+                            total,
+                            " users found"
+                        ]
+                    })
+                ]
+            }),
+            users.map((user)=>{
+                let htmlOutput;
+                if (search) htmlOutput = template({
+                    text: user.username
+                });
+                return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).userItem,
+                    onClick: ()=>onUserClick(user),
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).row,
+                            children: [
+                                user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                    src: user.pictureUrl,
+                                    alt: `${user.name} profile picture`
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).column,
+                                    children: [
+                                        htmlOutput ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            dangerouslySetInnerHTML: {
+                                                __html: htmlOutput
+                                            }
+                                        }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: user.username
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                            children: [
+                                                (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
+                                                " followers"
+                                            ]
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                            href: `https://twitter.com/${user.username}`,
+                            target: "_blank",
+                            rel: "noreferrer",
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                        })
+                    ]
+                }, user._id);
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -2157,7 +2266,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039,
         UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039,
         Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039,
-        QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039
+        QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039,
+        UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

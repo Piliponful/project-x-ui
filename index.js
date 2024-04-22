@@ -14,6 +14,7 @@ import GroupContentScreen from './src/components/leafs/GroupContentScreen'
 import UserContentBlock from './src/components/leafs/UserContentBlock'
 import Search from './src/components/leafs/Search'
 import QuestionsSearch from './src/components/leafs/QuestionsSearch'
+import UsersSearch from './src/components/leafs/UsersSearch'
 
 import './styles.css'
 
@@ -35,7 +36,8 @@ export default {
     GroupContentScreen,
     UserContentBlock,
     Search,
-    QuestionsSearch
+    QuestionsSearch,
+    UsersSearch
   },
   context: {
     MainScreenSwipeContext

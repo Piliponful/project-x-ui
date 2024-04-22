@@ -17,6 +17,7 @@ import GroupContentScreen from '../components/leafs/GroupContentScreen'
 import UserContentBlock from '../components/leafs/UserContentBlock'
 import Search from '../components/leafs/Search'
 import QuestionsSearch from '../components/leafs/QuestionsSearch'
+import UsersSearch from '../components/leafs/UsersSearch'
 
 import '../../styles.css'
 
@@ -226,7 +227,8 @@ const users = [
 const MainScreenWithQuestions = () => (
   <MainScreen>
     <Search search={() => console.log('search')} />
-    <QuestionsSearch questions={mostAnsweredQuestions.filter(i => i.name.includes('titan'))} total={342} search='titan' />
+    {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
+    <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
     {/* <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
