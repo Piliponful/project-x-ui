@@ -16,6 +16,7 @@ import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
 import UserContentBlock from '../components/leafs/UserContentBlock'
 import Search from '../components/leafs/Search'
+import QuestionsSearch from '../components/leafs/QuestionsSearch'
 
 import '../../styles.css'
 
@@ -53,7 +54,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     answersCount: { yes: 383343, no: 23450 },
     username: 'piliponful',
     // yourOwnQuestion: true,
-    hisAnswer: 'yes'
+    // hisAnswer: 'yes'
   },
   {
     name: 'Will Luffy find one piece?',
@@ -225,7 +226,8 @@ const users = [
 const MainScreenWithQuestions = () => (
   <MainScreen>
     <Search search={() => console.log('search')} />
-    <QuestionCardsRow>
+    <QuestionsSearch questions={mostAnsweredQuestions.filter(i => i.name.includes('titan'))} total={342} search='titan' />
+    {/* <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
     <div style={{ width: '100%' }}>
@@ -236,8 +238,8 @@ const MainScreenWithQuestions = () => (
           { fullName: 'Patrick Bet-David' }
         ]}
         username='piliponful'
-      />
-    </div>
+      /> */}
+    {/* </div> */}
   </MainScreen>
 )
 

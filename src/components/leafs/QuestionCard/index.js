@@ -9,10 +9,10 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup }) => {
+export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup, htmlName }) => {
   return (
     <article className={styles.card}>
-      <Title><span style={{ color: '#00000063' }}>{username}:</span> {name}</Title>
+      <Title><span style={{ color: '#00000063' }}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
       {hisAnswer && (<Answer his answer={hisAnswer} />)}
       {answer && (<Answer answer={answer} />)}

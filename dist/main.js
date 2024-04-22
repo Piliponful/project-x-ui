@@ -16,6 +16,7 @@ var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
+var $c5L0i$handlebars = require("handlebars");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -841,7 +842,7 @@ $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup })=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
@@ -857,7 +858,11 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
                         ]
                     }),
                     " ",
-                    name
+                    htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                        dangerouslySetInnerHTML: {
+                            __html: htmlName
+                        }
+                    }) : name
                 ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
@@ -2021,6 +2026,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search })=>{
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).input,
+                placeholder: "Search here...",
                 onChange: (e)=>setText(e.target.value),
                 value: text
             }),
@@ -2070,6 +2076,69 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search })=>{
 
 
 
+
+
+
+
+
+var $80a088ebd4973b81$exports = {};
+
+$parcel$export($80a088ebd4973b81$exports, "back", () => $80a088ebd4973b81$export$7c341cb16fc91138, (v) => $80a088ebd4973b81$export$7c341cb16fc91138 = v);
+$parcel$export($80a088ebd4973b81$exports, "total", () => $80a088ebd4973b81$export$9086bb9c16b2b5b, (v) => $80a088ebd4973b81$export$9086bb9c16b2b5b = v);
+$parcel$export($80a088ebd4973b81$exports, "totalAndBack", () => $80a088ebd4973b81$export$ef9502a2481467bc, (v) => $80a088ebd4973b81$export$ef9502a2481467bc = v);
+var $80a088ebd4973b81$export$7c341cb16fc91138;
+var $80a088ebd4973b81$export$9086bb9c16b2b5b;
+var $80a088ebd4973b81$export$ef9502a2481467bc;
+$80a088ebd4973b81$export$7c341cb16fc91138 = `BbEWnq_back`;
+$80a088ebd4973b81$export$9086bb9c16b2b5b = `BbEWnq_total`;
+$80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
+
+
+(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper("bold", function(options) {
+    const targetText = options.hash.text;
+    const replacement = `<strong>${targetText}</strong>`;
+    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
+});
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = ({ questions: questions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search })=>{
+    const templateString = `{{bold text="${search}"}}`;
+    const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).totalAndBack,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).back,
+                        onClick: back
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).total,
+                        children: [
+                            total,
+                            " questions found"
+                        ]
+                    })
+                ]
+            }),
+            questions.map((i)=>{
+                let htmlOutput;
+                if (search) htmlOutput = template({
+                    text: i.name
+                });
+                return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                    respond: (content)=>respond(i._id, content),
+                    createNewGroup: (content)=>createNewGroup(i._id, content),
+                    ...i,
+                    htmlName: htmlOutput
+                }, i.name);
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -2087,7 +2156,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039,
         GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039,
         UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039,
-        Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039
+        Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039,
+        QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

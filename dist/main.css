@@ -927,7 +927,7 @@
 }
 
 ._31v-EG_back {
-  color: #f4f3fd;
+  color: #fff;
   cursor: pointer;
   margin-bottom: 24px;
 }
@@ -1107,5 +1107,22 @@
 
 ._6W1esa_dropdownItemsContainer > div:first-child {
   border-top: none;
+}
+
+.BbEWnq_back {
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.BbEWnq_totalAndBack {
+  justify-content: space-between;
+  display: flex;
+}
+
+.BbEWnq_total {
+  color: #fff;
+  font-family: IBM Plex Sans;
+  font-size: 18px;
 }
 /*# sourceMappingURL=main.css.map */

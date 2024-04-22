@@ -13,6 +13,7 @@ import ActionsPanel from './src/components/leafs/ActionsPanel'
 import GroupContentScreen from './src/components/leafs/GroupContentScreen'
 import UserContentBlock from './src/components/leafs/UserContentBlock'
 import Search from './src/components/leafs/Search'
+import QuestionsSearch from './src/components/leafs/QuestionsSearch'
 
 import './styles.css'
 
@@ -33,7 +34,8 @@ export default {
     ActionsPanel,
     GroupContentScreen,
     UserContentBlock,
-    Search
+    Search,
+    QuestionsSearch
   },
   context: {
     MainScreenSwipeContext

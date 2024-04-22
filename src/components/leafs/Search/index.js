@@ -12,7 +12,7 @@ export default ({ search }) => {
 
   return (
     <div className={styles.text}>
-      <input className={styles.input} onChange={e => setText(e.target.value)} value={text} />
+      <input className={styles.input} placeholder='Search here...' onChange={e => setText(e.target.value)} value={text} />
       <div className={styles.dropdownContainer} ref={ref}>
         <div className={styles.dropdownValue} onClick={() => setShowDropdown(true)}>{dropdownValue}</div>
         {showDropdown && (
