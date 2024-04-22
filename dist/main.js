@@ -1194,14 +1194,15 @@ $0dca14a056f81668$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
 $0dca14a056f81668$export$65cfe9c2ce1b1faf = `zfn2bW_mainScreenContainer`;
 
 
-var $1476c8c916741db2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
+var $1476c8c916741db2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, className: className, style: style }, ref)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
+        ref: ref,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
             className: (0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreenContainer,
             children: children
         })
-    });
+    }));
 
 
 
@@ -1216,11 +1217,12 @@ $f28eb578a4c1e5c1$export$6fbb9cd2843e91b2 = `HFaEpW_sidebar`;
 $f28eb578a4c1e5c1$export$fb184b623420d9be = `HFaEpW_title`;
 
 
-var $caa6e61676dd60dd$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $caa6e61676dd60dd$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, style: style }, ref)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        ref: ref,
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($f28eb578a4c1e5c1$exports))).sidebar,
         children: children
-    });
+    }));
 
 
 
@@ -1895,8 +1897,9 @@ $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
 $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 
 
-var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUserClick: onUserClick, close: close })=>{
+var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, show: show, onUserClick: onUserClick, close: close }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        ref: ref,
         style: show && {
             display: "flex"
         },
@@ -1951,7 +1954,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = ({ users: users, show: show, onUs
                 }, user._id))
         ]
     });
-};
+});
 
 
 

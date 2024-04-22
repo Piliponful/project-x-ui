@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import styles from './style.module.styl'
 
-export default ({ children, style }) => (
-  <div style={style} className={styles.sidebar}>
+export default forwardRef(({ children, style }, ref) => (
+  <div ref={ref} style={style} className={styles.sidebar}>
     {children}
   </div>
-)
+))
