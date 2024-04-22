@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import styles from './style.module.styl'
 
-export default ({ children }) => {
+export default forwardRef(({ children }, ref) => {
   return (
-    <div className={styles.scrollContainer}>
+    <div ref={ref} className={styles.scrollContainer}>
       {children}
     </div>
   )
-}
+})

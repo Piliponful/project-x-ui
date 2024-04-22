@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import Handlebars from 'handlebars'
 import humanNumber from 'human-number'
@@ -16,12 +16,12 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default ({ users, total, back, search, onUserClick }) => {
+export default forwardRef(({ users, total, back, search, onUserClick }, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow className={styles.usersContainer}>
+    <QuestionCardsRow ref={ref} className={styles.usersContainer}>
       <div className={styles.totalAndBack}>
         <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} users found</div>
@@ -49,4 +49,4 @@ export default ({ users, total, back, search, onUserClick }) => {
       })}
     </QuestionCardsRow>
   )
-}
+})

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import cn from 'classnames'
 
@@ -8,11 +8,11 @@ import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-export default ({ questions, questionsWithAnswers, back, respond, createNewGroup }) => {
+export default forwardRef(({ questions, questionsWithAnswers, back, respond, createNewGroup }, ref) => {
   const [selectedTab, setSelectedTab] = useState('questions')
 
   return (
-    <QuestionCardsRow className={styles.screenWithGroupContent}>
+    <QuestionCardsRow ref={ref} className={styles.screenWithGroupContent}>
       <ArrowBackIcon className={styles.back} onClick={back} />
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
@@ -28,4 +28,4 @@ export default ({ questions, questionsWithAnswers, back, respond, createNewGroup
       ))}
     </QuestionCardsRow>
   )
-}
+})

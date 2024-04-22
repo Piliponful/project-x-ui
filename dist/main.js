@@ -1237,12 +1237,13 @@ $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
 $5a9d2af86b1e1e16$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
 
 
-var $f6827b11255bd55d$export$2e2bcd8739ae039 = ({ children: children })=>{
+var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
         children: children
     });
-};
+});
 
 
 
@@ -1976,9 +1977,10 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup })=>{
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
@@ -2011,7 +2013,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = ({ questions: questions, question
                 }, i.name))
         ]
     });
-};
+});
 
 
 
@@ -2125,10 +2127,11 @@ $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $9330b1b20ef62cea$export$2e2bcd8739ae039 = ({ questions: questions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search })=>{
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2161,7 +2164,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = ({ questions: questions, total: t
             })
         ]
     });
-};
+});
 
 
 
@@ -2201,10 +2204,11 @@ $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $d99360e8c29d4994$export$2e2bcd8739ae039 = ({ users: users, total: total, back: back, search: search, onUserClick: onUserClick })=>{
+var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersContainer,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2270,7 +2274,7 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = ({ users: users, total: total, ba
             })
         ]
     });
-};
+});
 
 
 

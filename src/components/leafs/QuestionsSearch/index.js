@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import Handlebars from 'handlebars'
 
@@ -16,12 +16,12 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default ({ questions, total, respond, createNewGroup, back, search }) => {
+export default forwardRef(({ questions, total, respond, createNewGroup, back, search }, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow className={styles.screenWithGroupContent}>
+    <QuestionCardsRow ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.totalAndBack}>
         <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} questions found</div>
@@ -44,4 +44,4 @@ export default ({ questions, total, respond, createNewGroup, back, search }) => 
       })}
     </QuestionCardsRow>
   )
-}
+})
