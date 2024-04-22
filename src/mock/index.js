@@ -228,8 +228,8 @@ const MainScreenWithQuestions = () => (
   <MainScreen>
     <Search search={() => console.log('search')} />
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
-    <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
-    {/* <QuestionCardsRow>
+    {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
+    <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
     <div style={{ width: '100%' }}>
@@ -240,8 +240,8 @@ const MainScreenWithQuestions = () => (
           { fullName: 'Patrick Bet-David' }
         ]}
         username='piliponful'
-      /> */}
-    {/* </div> */}
+      />
+    </div>
   </MainScreen>
 )
 
@@ -268,8 +268,8 @@ const Authorized = () => {
 
       {!screenName && (
         <>
-          <SidebarWithGroups />
-          {/* <GroupContentScreen users={users} /> */}
+          {/* <SidebarWithGroups /> */}
+          <GroupContentScreen users={users} />
           <MainScreenWithQuestions />
           {/* <MainScreenWithUserQuestions /> */}
         </>

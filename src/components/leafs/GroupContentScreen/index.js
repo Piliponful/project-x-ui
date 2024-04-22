@@ -1,12 +1,14 @@
 import React from 'react'
 import XIcon from '@mui/icons-material/X'
 import humanNumber from 'human-number'
+import CloseIcon from '@mui/icons-material/Close'
 
 import styles from './style.module.styl'
 
-export default ({ users, show, onUserClick }) => {
+export default ({ users, show, onUserClick, close }) => {
   return (
     <div style={show && { display: 'flex' }} className={styles.screenWithGroupContent}>
+      <div className={styles.close}><CloseIcon onClick={close} sx={{ fontSize: 30, color: '#c1c1c1' }} /></div>
       {users.map(user => (
         <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
           <div className={styles.row}>
