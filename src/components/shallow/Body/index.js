@@ -26,7 +26,7 @@ const customStyles = {
 Modal.setAppElement('#app')
 
 export default ({ children, includeSwipes, address, payout }) => {
-  const [screenName, toggleScreen] = useState()
+  const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
 
