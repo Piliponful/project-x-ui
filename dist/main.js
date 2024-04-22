@@ -1052,8 +1052,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
-            if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen(null);
-            if (!screenName && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("questions");
+            if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen();
+            if (screenName === "uninitialized" && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("questions");
         };
         handler();
         window.addEventListener("resize", handler);

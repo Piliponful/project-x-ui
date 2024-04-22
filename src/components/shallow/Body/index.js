@@ -35,9 +35,9 @@ export default ({ children, includeSwipes, address, payout }) => {
       const { innerWidth: width } = window
 
       if (width > smallMainScreenWidth) {
-        toggleScreen(null)
+        toggleScreen()
       }
-      if (!screenName && width < smallMainScreenWidth) {
+      if (screenName === 'uninitialized' && width < smallMainScreenWidth) {
         toggleScreen('questions')
       }
     }
