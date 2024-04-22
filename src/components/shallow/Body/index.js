@@ -50,7 +50,7 @@ export default ({ children, includeSwipes, address, payout }) => {
 
   useEffect(() => {
     console.log('screenName: ', screenName, 'skipScreen: ', skipScreen)
-    if (skipScreen.includes(screenName)) {
+    if (skipScreen && skipScreen.includes(screenName)) {
       toggleScreen('questions')
     }
   }, [skipScreen])

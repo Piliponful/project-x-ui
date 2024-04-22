@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import Title from './components/Title'
 import Stats from './components/Stats'
@@ -9,9 +9,9 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup, htmlName }) => {
+export default forwardRef(({ yourOwnQuestion, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup, htmlName }, ref) => {
   return (
-    <article className={styles.card}>
+    <article ref={ref} className={styles.card}>
       <Title><span style={{ color: '#00000063' }}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
       {hisAnswer && (<Answer his answer={hisAnswer} />)}
@@ -19,4 +19,4 @@ export default ({ yourOwnQuestion, username, name, answersCount, currentUserAnsw
       {yourOwnQuestion ? <Text className={styles.hint}>You cannot answer your own question</Text> : (!answer && <AnswerButtons respond={respond} />)}
     </article>
   )
-}
+})

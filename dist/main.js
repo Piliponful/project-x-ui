@@ -842,8 +842,9 @@ $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName })=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
@@ -884,7 +885,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = ({ yourOwnQuestion: yourOwnQuesti
             })
         ]
     });
-};
+});
 
 
 
@@ -1060,7 +1061,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     }, []);
     (0, $c5L0i$react.useEffect)(()=>{
         console.log("screenName: ", screenName, "skipScreen: ", skipScreen);
-        if (skipScreen.includes(screenName)) toggleScreen("questions");
+        if (skipScreen && skipScreen.includes(screenName)) toggleScreen("questions");
     }, [
         skipScreen
     ]);
