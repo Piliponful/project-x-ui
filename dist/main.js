@@ -17,6 +17,7 @@ var $c5L0i$humannumber = require("human-number");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$handlebars = require("handlebars");
+var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -2118,6 +2119,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
 
 
 
+
 var $80a088ebd4973b81$exports = {};
 
 $parcel$export($80a088ebd4973b81$exports, "back", () => $80a088ebd4973b81$export$7c341cb16fc91138, (v) => $80a088ebd4973b81$export$7c341cb16fc91138 = v);
@@ -2136,10 +2138,11 @@ $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search }, ref)=>{
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        id: "questions-search-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent,
         children: [
@@ -2159,17 +2162,34 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     })
                 ]
             }),
-            questions.map((i)=>{
-                let htmlOutput;
-                if (search) htmlOutput = template({
-                    text: i.name
-                });
-                return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    respond: respond && ((content)=>respond(i._id, content)),
-                    createNewGroup: (content)=>createNewGroup(i._id, content),
-                    ...i,
-                    htmlName: htmlOutput
-                }, i.name);
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+                scrollableTarget: "questions-search-scroll-target",
+                dataLength: questions.length,
+                next: fetchQuestions,
+                hasMore: hasMore,
+                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
+                    children: "Loading..."
+                }),
+                endMessage: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    style: {
+                        textAlign: "center"
+                    },
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                        children: "Yay! You have seen it all"
+                    })
+                }),
+                children: questions.map((i)=>{
+                    let htmlOutput;
+                    if (search) htmlOutput = template({
+                        text: i.name
+                    });
+                    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                        respond: respond && ((content)=>respond(i._id, content)),
+                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        ...i,
+                        htmlName: htmlOutput
+                    }, i.name);
+                })
             })
         ]
     });
