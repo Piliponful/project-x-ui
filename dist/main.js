@@ -2190,7 +2190,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
                         htmlName: htmlOutput
-                    }, i.id | i._id);
+                    }, i.id || i._id);
                 })
             })
         ]

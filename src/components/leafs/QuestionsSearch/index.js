@@ -48,7 +48,7 @@ export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond,
 
           return (
             <QuestionCard
-              key={i.id | i._id}
+              key={i.id || i._id}
               respond={respond && (content => respond(i._id, content))}
               createNewGroup={content => createNewGroup(i._id, content)}
               {...i}
