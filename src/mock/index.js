@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 
@@ -182,8 +182,9 @@ const SidebarWithQuestions = () => {
   )
 }
 
-const users = [
+const users = new Array(8).fill(1).map((_, index) => [
   {
+    _id: '6' + index,
     userId: '6623cfe7e1d83d0600c06a99',
     username: 'piliponful',
     fullName: 'Maxim Pilipenko',
@@ -193,27 +194,28 @@ const users = [
     address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
   },
   {
-    _id: 2,
+    _id: '2' + index,
     fullName: 'Patrick Bet-David',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
     followerCount: 973000,
     username: 'patrickbetdavid'
   },
   {
-    _id: 3,
+    _id: '3' + index,
     fullName: 'SNEAKO',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg',
     followerCount: 808000,
     username: 'sneako'
   },
   {
-    _id: 4,
+    _id: '4' + index,
     fullName: 'David Goggins',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1585779196948664320/7ZBXg_pv_400x400.jpg',
     followerCount: 923000,
     username: 'davidgoggins'
   },
   {
+    _id: '5' + index,
     username: 'cobratate',
     fullName: 'Andrew Tate',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1728837013023895552/nCHrdjlh_400x400.jpg',
@@ -222,7 +224,7 @@ const users = [
     userId: '6623c2324422e3010a3e37eb',
     address: 'test'
   }
-]
+]).flat()
 
 const MainScreenWithQuestions = () => (
   <MainScreen>
@@ -259,6 +261,11 @@ const Authorized = () => {
   useEffect(() => {
     setSkipScreen(['groupContent', 'groups'])
   }, [])
+  const [offset, setOffset] = useState(10)
+  const [usersSlice, setUsers] = useState(users.slice(0, 10))
+
+  const hasMore = offset + 10 < users.length
+  console.log('more: ', hasMore, users.length, offset + 10)
 
   return (
     <>
@@ -269,7 +276,11 @@ const Authorized = () => {
       {!screenName && (
         <>
           {/* <SidebarWithGroups /> */}
-          <GroupContentScreen users={users} />
+          <GroupContentScreen
+            hasMore={hasMore}
+            fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
+            users={usersSlice}
+          />
           <MainScreenWithQuestions />
           {/* <MainScreenWithUserQuestions /> */}
         </>
