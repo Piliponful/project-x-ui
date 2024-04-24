@@ -2278,53 +2278,51 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         children: "Yay! You have seen it all"
                     })
                 }),
-                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersItems,
-                    children: users.map((user)=>{
-                        let htmlOutput;
-                        if (search) htmlOutput = template({
-                            text: user.username
-                        });
-                        return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).userItem,
-                            onClick: ()=>onUserClick(user),
-                            children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).row,
-                                    children: [
-                                        user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                            src: user.pictureUrl,
-                                            alt: `${user.name} profile picture`
-                                        }),
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).column,
-                                            children: [
-                                                htmlOutput ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                    dangerouslySetInnerHTML: {
-                                                        __html: htmlOutput
-                                                    }
-                                                }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                    children: user.username
-                                                }),
-                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                    children: [
-                                                        (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
-                                                        " followers"
-                                                    ]
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                    href: `https://twitter.com/${user.username}`,
-                                    target: "_blank",
-                                    rel: "noreferrer",
-                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                                })
-                            ]
-                        }, user._id);
-                    })
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersItems,
+                children: users.map((user)=>{
+                    let htmlOutput;
+                    if (search) htmlOutput = template({
+                        text: user.username
+                    });
+                    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).userItem,
+                        onClick: ()=>onUserClick(user),
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).row,
+                                children: [
+                                    user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                        src: user.pictureUrl,
+                                        alt: `${user.name} profile picture`
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).column,
+                                        children: [
+                                            htmlOutput ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                dangerouslySetInnerHTML: {
+                                                    __html: htmlOutput
+                                                }
+                                            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                children: user.username
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                                children: [
+                                                    (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
+                                                    " followers"
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                href: `https://twitter.com/${user.username}`,
+                                target: "_blank",
+                                rel: "noreferrer",
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                            })
+                        ]
+                    }, user._id);
                 })
             })
         ]

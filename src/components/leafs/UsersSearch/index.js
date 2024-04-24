@@ -38,30 +38,29 @@ export default forwardRef(({ users, fetchUsers, hasMore, total, back, search, on
             <b>Yay! You have seen it all</b>
           </p>
         }
+        className={styles.usersItems}
       >
-        <div className={styles.usersItems}>
-          {users.map(user => {
-            let htmlOutput
-            if (search) {
-              htmlOutput = template({ text: user.username })
-            }
+        {users.map(user => {
+          let htmlOutput
+          if (search) {
+            htmlOutput = template({ text: user.username })
+          }
 
-            return (
-              <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
-                <div className={styles.row}>
-                  {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
-                  <div className={styles.column}>
-                    {htmlOutput ? <span dangerouslySetInnerHTML={{ __html: htmlOutput }} /> : <span>{user.username}</span>}
-                    <span>{humanNumber(user.followerCount)} followers</span>
-                  </div>
+          return (
+            <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
+              <div className={styles.row}>
+                {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
+                <div className={styles.column}>
+                  {htmlOutput ? <span dangerouslySetInnerHTML={{ __html: htmlOutput }} /> : <span>{user.username}</span>}
+                  <span>{humanNumber(user.followerCount)} followers</span>
                 </div>
-                <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
-                  <XIcon />
-                </a>
               </div>
-            )
-          })}
-        </div>
+              <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
+                <XIcon />
+              </a>
+            </div>
+          )
+        })}
       </InfiniteScroll>
     </QuestionCardsRow>
   )
