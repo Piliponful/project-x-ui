@@ -1195,12 +1195,13 @@ $0dca14a056f81668$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
 $0dca14a056f81668$export$65cfe9c2ce1b1faf = `zfn2bW_mainScreenContainer`;
 
 
-var $1476c8c916741db2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, className: className, style: style, id: id }, ref)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
+var $1476c8c916741db2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, className: className, style: style, id: id, scrollId: scrollId }, ref)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("section", {
         id: id,
         ref: ref,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreen, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $4fca24e0a7aa9c5a$export$2e2bcd8739ae039), {
+            scrollId: scrollId,
             className: (0, (/*@__PURE__*/$parcel$interopDefault($0dca14a056f81668$exports))).mainScreenContainer,
             children: children
         })
@@ -1239,9 +1240,10 @@ $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
 $5a9d2af86b1e1e16$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
 
 
-var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children }, ref)=>{
+var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, id: id }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         ref: ref,
+        id: id,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
         children: children
     });
