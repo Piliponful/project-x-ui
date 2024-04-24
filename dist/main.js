@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -1145,6 +1145,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 
 
 
+
 var $6be3d19ca593c163$exports = {};
 
 $parcel$export($6be3d19ca593c163$exports, "groupContainer", () => $6be3d19ca593c163$export$f36792cb9bd81925, (v) => $6be3d19ca593c163$export$f36792cb9bd81925 = v);
@@ -1152,9 +1153,9 @@ var $6be3d19ca593c163$export$f36792cb9bd81925;
 $6be3d19ca593c163$export$f36792cb9bd81925 = `E0-4eG_groupContainer`;
 
 
-var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, style: style, className: className })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {
                 width: "100%",
