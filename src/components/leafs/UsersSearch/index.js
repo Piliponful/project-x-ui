@@ -3,6 +3,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import Handlebars from 'handlebars'
 import humanNumber from 'human-number'
 import XIcon from '@mui/icons-material/X'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
@@ -16,37 +17,52 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default forwardRef(({ users, total, back, search, onUserClick }, ref) => {
+export default forwardRef(({ users, fetchUsers, hasMore, total, back, search, onUserClick }, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow ref={ref} className={styles.usersContainer}>
+    <QuestionCardsRow id='users-search-scroll-target' ref={ref} className={styles.usersContainer}>
       <div className={styles.totalAndBack}>
         <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} users found</div>
       </div>
-      {users.map(user => {
-        let htmlOutput
-        if (search) {
-          htmlOutput = template({ text: user.username })
+      <InfiniteScroll
+        scrollableTarget='users-search-scroll-target'
+        dataLength={users.length}
+        next={fetchUsers}
+        hasMore={hasMore}
+        loader={<h4>Loading...</h4>}
+        endMessage={
+          <p style={{ textAlign: 'center' }}>
+            <b>Yay! You have seen it all</b>
+          </p>
         }
+      >
+        <div className={styles.usersItems}>
+          {users.map(user => {
+            let htmlOutput
+            if (search) {
+              htmlOutput = template({ text: user.username })
+            }
 
-        return (
-          <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
-            <div className={styles.row}>
-              {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
-              <div className={styles.column}>
-                {htmlOutput ? <span dangerouslySetInnerHTML={{ __html: htmlOutput }} /> : <span>{user.username}</span>}
-                <span>{humanNumber(user.followerCount)} followers</span>
+            return (
+              <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
+                <div className={styles.row}>
+                  {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
+                  <div className={styles.column}>
+                    {htmlOutput ? <span dangerouslySetInnerHTML={{ __html: htmlOutput }} /> : <span>{user.username}</span>}
+                    <span>{humanNumber(user.followerCount)} followers</span>
+                  </div>
+                </div>
+                <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
+                  <XIcon />
+                </a>
               </div>
-            </div>
-            <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
-              <XIcon />
-            </a>
-          </div>
-        )
-      })}
+            )
+          })}
+        </div>
+      </InfiniteScroll>
     </QuestionCardsRow>
   )
 })

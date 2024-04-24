@@ -2120,7 +2120,6 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
 
 
 
-
 var $80a088ebd4973b81$exports = {};
 
 $parcel$export($80a088ebd4973b81$exports, "back", () => $80a088ebd4973b81$export$7c341cb16fc91138, (v) => $80a088ebd4973b81$export$7c341cb16fc91138 = v);
@@ -2145,7 +2144,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
         id: "questions-search-scroll-target",
         ref: ref,
-        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent, className),
+        className: className,
         style: style,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2205,6 +2204,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $e7fcc7d3eba9496b$exports = {};
 
 $parcel$export($e7fcc7d3eba9496b$exports, "back", () => $e7fcc7d3eba9496b$export$7c341cb16fc91138, (v) => $e7fcc7d3eba9496b$export$7c341cb16fc91138 = v);
@@ -2214,6 +2214,7 @@ $parcel$export($e7fcc7d3eba9496b$exports, "total", () => $e7fcc7d3eba9496b$expor
 $parcel$export($e7fcc7d3eba9496b$exports, "totalAndBack", () => $e7fcc7d3eba9496b$export$ef9502a2481467bc, (v) => $e7fcc7d3eba9496b$export$ef9502a2481467bc = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "userItem", () => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12, (v) => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "usersContainer", () => $e7fcc7d3eba9496b$export$771ca420b1b6ed17, (v) => $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "usersItems", () => $e7fcc7d3eba9496b$export$2778a17561d67130, (v) => $e7fcc7d3eba9496b$export$2778a17561d67130 = v);
 var $e7fcc7d3eba9496b$export$7c341cb16fc91138;
 var $e7fcc7d3eba9496b$export$4e0c71f277ca26b3;
 var $e7fcc7d3eba9496b$export$120ff0929b202a6d;
@@ -2221,6 +2222,7 @@ var $e7fcc7d3eba9496b$export$9086bb9c16b2b5b;
 var $e7fcc7d3eba9496b$export$ef9502a2481467bc;
 var $e7fcc7d3eba9496b$export$f6bda04bc7d10a12;
 var $e7fcc7d3eba9496b$export$771ca420b1b6ed17;
+var $e7fcc7d3eba9496b$export$2778a17561d67130;
 $e7fcc7d3eba9496b$export$7c341cb16fc91138 = `_9WjUxq_back`;
 $e7fcc7d3eba9496b$export$4e0c71f277ca26b3 = `_9WjUxq_column`;
 $e7fcc7d3eba9496b$export$120ff0929b202a6d = `_9WjUxq_row`;
@@ -2228,6 +2230,7 @@ $e7fcc7d3eba9496b$export$9086bb9c16b2b5b = `_9WjUxq_total`;
 $e7fcc7d3eba9496b$export$ef9502a2481467bc = `_9WjUxq_totalAndBack`;
 $e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = `_9WjUxq_userItem`;
 $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
+$e7fcc7d3eba9496b$export$2778a17561d67130 = `_9WjUxq_usersItems`;
 
 
 (0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper("bold", function(options) {
@@ -2235,10 +2238,11 @@ $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
+var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        id: "users-search-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersContainer,
         children: [
@@ -2258,50 +2262,70 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     })
                 ]
             }),
-            users.map((user)=>{
-                let htmlOutput;
-                if (search) htmlOutput = template({
-                    text: user.username
-                });
-                return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).userItem,
-                    onClick: ()=>onUserClick(user),
-                    children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).row,
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+                scrollableTarget: "users-search-scroll-target",
+                dataLength: users.length,
+                next: fetchUsers,
+                hasMore: hasMore,
+                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
+                    children: "Loading..."
+                }),
+                endMessage: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    style: {
+                        textAlign: "center"
+                    },
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                        children: "Yay! You have seen it all"
+                    })
+                }),
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersItems,
+                    children: users.map((user)=>{
+                        let htmlOutput;
+                        if (search) htmlOutput = template({
+                            text: user.username
+                        });
+                        return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).userItem,
+                            onClick: ()=>onUserClick(user),
                             children: [
-                                user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                    src: user.pictureUrl,
-                                    alt: `${user.name} profile picture`
-                                }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).column,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).row,
                                     children: [
-                                        htmlOutput ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                            dangerouslySetInnerHTML: {
-                                                __html: htmlOutput
-                                            }
-                                        }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                            children: user.username
+                                        user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                            src: user.pictureUrl,
+                                            alt: `${user.name} profile picture`
                                         }),
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).column,
                                             children: [
-                                                (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
-                                                " followers"
+                                                htmlOutput ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    dangerouslySetInnerHTML: {
+                                                        __html: htmlOutput
+                                                    }
+                                                }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    children: user.username
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                                    children: [
+                                                        (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
+                                                        " followers"
+                                                    ]
+                                                })
                                             ]
                                         })
                                     ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                    href: `https://twitter.com/${user.username}`,
+                                    target: "_blank",
+                                    rel: "noreferrer",
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
                                 })
                             ]
-                        }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                            href: `https://twitter.com/${user.username}`,
-                            target: "_blank",
-                            rel: "noreferrer",
-                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                        })
-                    ]
-                }, user._id);
+                        }, user._id);
+                    })
+                })
             })
         ]
     });

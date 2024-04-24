@@ -1244,4 +1244,10 @@
   gap: 8px;
   display: flex;
 }
+
+._9WjUxq_usersItems {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */
