@@ -2120,6 +2120,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
 
 
 
+
 var $80a088ebd4973b81$exports = {};
 
 $parcel$export($80a088ebd4973b81$exports, "back", () => $80a088ebd4973b81$export$7c341cb16fc91138, (v) => $80a088ebd4973b81$export$7c341cb16fc91138 = v);
@@ -2138,13 +2139,14 @@ $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search }, ref)=>{
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
         id: "questions-search-scroll-target",
         ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent, className),
+        style: style,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).totalAndBack,

@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import Handlebars from 'handlebars'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import cn from 'classnames'
 
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
@@ -17,12 +18,12 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond, createNewGroup, back, search }, ref) => {
+export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond, createNewGroup, back, search, style, className }, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow id='questions-search-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
+    <QuestionCardsRow id='questions-search-scroll-target' ref={ref} className={cn(styles.screenWithGroupContent, className)} style={style}>
       <div className={styles.totalAndBack}>
         <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} questions found</div>
