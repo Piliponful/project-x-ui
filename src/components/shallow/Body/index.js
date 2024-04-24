@@ -37,6 +37,7 @@ export default ({ children, includeSwipes, address, payout }) => {
       if (width > smallMainScreenWidth) {
         toggleScreen()
       }
+
       if (screenName === 'uninitialized' && width < smallMainScreenWidth) {
         toggleScreen('questions')
       }

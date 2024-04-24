@@ -884,7 +884,7 @@
   padding: 30px 15px;
 }
 
-@media only screen and (width <= 1129px) {
+@media only screen and (width <= 945px) {
   .zDJPrW_screenWithGroupContent {
     display: none;
   }

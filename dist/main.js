@@ -1024,7 +1024,7 @@ $941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
 const $be6f0e84320366a7$export$2515d253ab459c32 = 450;
 const $be6f0e84320366a7$export$310e42f8685040c9 = 1361;
 const $be6f0e84320366a7$export$5d27a029e0b63495 = 914;
-const $be6f0e84320366a7$export$120137d2fb34488f = 558;
+const $be6f0e84320366a7$export$120137d2fb34488f = 945;
 
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
