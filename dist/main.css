@@ -337,6 +337,12 @@
   }
 }
 
+@media only screen and (width <= 500px) {
+  .OGOopW_newQuestion textarea {
+    height: 110px !important;
+  }
+}
+
 .mrTbNq_container {
   box-sizing: border-box;
   justify-content: center;
@@ -850,6 +856,13 @@
   font-size: 18px;
   font-weight: 500;
   display: flex;
+}
+
+@media only screen and (width <= 500px) {
+  .rzmFQq_container {
+    margin-top: 6px;
+    padding: 25px 20px;
+  }
 }
 
 .zDJPrW_screenWithGroupContent {
