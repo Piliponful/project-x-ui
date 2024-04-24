@@ -27,14 +27,10 @@ export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, clos
           <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
             <div className={styles.row}>
               {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
-              {user.followerCount
-                ? (
-                  <div className={styles.column}>
-                    <span>{user.fullName}</span>
-                    <span>{humanNumber(user.followerCount)} followers</span>
-                  </div>
-                  )
-                : <span>{user.name}</span>}
+              <div className={styles.column}>
+                <span>{user.fullName}</span>
+                <span>{humanNumber(user.followerCount)} followers</span>
+              </div>
             </div>
             <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
               <XIcon />

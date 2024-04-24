@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -1957,7 +1957,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         src: user.pictureUrl,
                                         alt: `${user.name} profile picture`
                                     }),
-                                    user.followerCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -1970,8 +1970,6 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                 ]
                                             })
                                         ]
-                                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                        children: user.name
                                     })
                                 ]
                             }),
