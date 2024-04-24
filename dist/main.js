@@ -2008,7 +2008,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 ]
             }),
             (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    respond: (content)=>respond(selectedTab === "answers")(i._id, content),
+                    respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
                     createNewGroup: (content)=>createNewGroup(i._id, content),
                     ...i
                 }, i.name))
@@ -2159,7 +2159,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     text: i.name
                 });
                 return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    respond: (content)=>respond(i._id, content),
+                    respond: respond && ((content)=>respond(i._id, content)),
                     createNewGroup: (content)=>createNewGroup(i._id, content),
                     ...i,
                     htmlName: htmlOutput

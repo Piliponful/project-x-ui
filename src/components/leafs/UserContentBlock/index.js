@@ -21,7 +21,7 @@ export default forwardRef(({ questions, questionsWithAnswers, back, respond, cre
       {(selectedTab === 'questions' ? questions : questionsWithAnswers).map(i => (
         <QuestionCard
           key={i.name}
-          respond={content => respond(selectedTab === 'answers')(i._id, content)}
+          respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
           createNewGroup={content => createNewGroup(i._id, content)}
           {...i}
         />

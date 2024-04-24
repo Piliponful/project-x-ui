@@ -35,7 +35,7 @@ export default forwardRef(({ questions, total, respond, createNewGroup, back, se
         return (
           <QuestionCard
             key={i.name}
-            respond={content => respond(i._id, content)}
+            respond={respond && (content => respond(i._id, content))}
             createNewGroup={content => createNewGroup(i._id, content)}
             {...i}
             htmlName={htmlOutput}
