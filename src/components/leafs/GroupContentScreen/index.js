@@ -7,7 +7,7 @@ import styles from './style.module.styl'
 
 export default forwardRef(({ users, show, onUserClick, close, style }, ref) => {
   return (
-    <div ref={ref} style={show && { display: 'flex', ...style }} className={styles.screenWithGroupContent}>
+    <div ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={styles.screenWithGroupContent}>
       <div className={styles.close}><CloseIcon onClick={close} sx={{ fontSize: 30, color: '#c1c1c1' }} /></div>
       {users.map(user => (
         <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
