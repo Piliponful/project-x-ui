@@ -237,11 +237,11 @@ const MainScreenWithQuestions = () => (
     <div style={{ width: '100%' }}>
       <NewQuestion />
       <ActionsPanel
-        logout={() => console.log('logout')}
-        testUsers={[
-          { fullName: 'Patrick Bet-David' }
-        ]}
-        username='piliponful'
+        // logout={() => console.log('logout')}
+        // testUsers={[
+        //   { fullName: 'Patrick Bet-David' }
+        // ]}
+        // username='piliponful'
       />
     </div>
   </MainScreen>
@@ -276,12 +276,12 @@ const Authorized = () => {
       {!screenName && (
         <>
           {/* <SidebarWithGroups /> */}
-          <GroupContentScreen
+          {/* <GroupContentScreen
             className='custom-groups-content'
             hasMore={hasMore}
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
-          />
+          /> */}
           <MainScreenWithQuestions />
           {/* <MainScreenWithUserQuestions /> */}
         </>

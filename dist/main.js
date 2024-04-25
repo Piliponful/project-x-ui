@@ -1155,8 +1155,9 @@ var $6be3d19ca593c163$export$f36792cb9bd81925;
 $6be3d19ca593c163$export$f36792cb9bd81925 = `E0-4eG_groupContainer`;
 
 
-var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, style: style, className: className })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, id: id, style: style, className: className })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: style,
+        id: id,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {
@@ -1936,9 +1937,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: users.length,
                 next: fetchUsers,
                 hasMore: hasMore,
-                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
-                    children: "Loading..."
-                }),
+                // loader={<h4>Loading...</h4>}
                 // endMessage={
                 //   <p style={{ textAlign: 'center' }}>
                 //     <b>Yay! You have seen it all</b>
@@ -2041,9 +2040,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: questionsWithAnswers.length,
                 next: fetchQuestions(false),
                 hasMore: answersHasMore,
-                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
-                    children: "Loading..."
-                }),
+                // loader={<h4>Loading...</h4>}
                 // endMessage={
                 //   <p style={{ textAlign: 'center' }}>
                 //     <b>Yay! You have seen it all</b>
@@ -2061,9 +2058,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: userQuestions.length,
                 next: fetchQuestions(true),
                 hasMore: questionsHasMore,
-                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
-                    children: "Loading..."
-                }),
+                // loader={<h4>Loading...</h4>}
                 // endMessage={
                 //   <p style={{ textAlign: 'center' }}>
                 //     <b>Yay! You have seen it all</b>
@@ -2237,9 +2232,6 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: questions.length,
                 next: fetchQuestions,
                 hasMore: hasMore,
-                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
-                    children: "Loading..."
-                }),
                 children: questions.map((i)=>{
                     let htmlOutput;
                     if (search) htmlOutput = template({
@@ -2328,9 +2320,7 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: users.length,
                 next: fetchUsers,
                 hasMore: hasMore,
-                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
-                    children: "Loading..."
-                }),
+                // loader={<h4>Loading...</h4>}
                 // endMessage={
                 //   <p style={{ textAlign: 'center' }}>
                 //     <b>Yay! You have seen it all</b>
