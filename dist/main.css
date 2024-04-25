@@ -337,7 +337,7 @@
   }
 }
 
-@media only screen and (width <= 500px) {
+@media only screen and (width <= 945px) {
   .OGOopW_newQuestion textarea {
     height: 110px !important;
   }
