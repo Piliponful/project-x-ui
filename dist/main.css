@@ -348,7 +348,6 @@
   justify-content: center;
   gap: 48px;
   width: calc(100% - 70px);
-  margin: 15px 0;
   display: flex;
 }
 
@@ -999,60 +998,6 @@
   background-color: #181818;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #0000;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  background-clip: content-box;
-  border: 6px solid #0000;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #a8bbbf;
-}
-
-::-webkit-scrollbar {
-  background: none;
-  width: 0;
-}
-
-* {
-  scrollbar-width: none;
-}
-
-.screen-with-group-content {
-  background: #fff;
-  border-radius: 4px;
-  flex-direction: column;
-  width: 500px;
-  font-family: IBM Plex Sans;
-  display: flex;
-  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
-}
-
-.screen-with-group-content > p {
-  padding: 30px 15px;
-}
-
-.ReactModal__Overlay {
-  backdrop-filter: blur(10px);
-  font-family: IBM Plex Sans;
-  background-color: #0000 !important;
-}
-
-.ReactModal__Content {
-  width: 80%;
-  max-width: 538px;
-  border: none !important;
-}
-
 ._6W1esa_input {
   box-sizing: border-box;
   caret-color: #3b3b3b;
@@ -1074,15 +1019,29 @@
   background: none;
   border: 1px solid #59acd6;
   border-radius: 4px;
-  padding: 9px 16px;
+  padding: 9px 30px 9px 16px;
   font-family: IBM Plex Sans, sans-serif;
   font-size: 18px;
   line-height: 1;
+  transition: color .1s;
   position: absolute;
   top: 50%;
   right: 5px;
   transform: translateY(-50%);
   box-shadow: 0 3px 5.84px .16px #0c0c0c2b;
+}
+
+._6W1esa_search svg {
+  color: #3b3b3b;
+  transition: color .1s;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+._6W1esa_search:hover, ._6W1esa_search:hover svg {
+  color: #000;
 }
 
 ._6W1esa_text {
@@ -1094,10 +1053,12 @@
 }
 
 ._6W1esa_dropdownContainer {
+  box-sizing: border-box;
   width: 138px;
+  transition: color .1s;
   position: absolute;
   top: 50%;
-  right: 83px;
+  right: 95px;
   transform: translateY(-50%);
 }
 
@@ -1105,34 +1066,44 @@
   color: #3b3b3b;
   cursor: pointer;
   height: 18px;
+  transition: color .1s;
   position: absolute;
   top: 50%;
   right: 5px;
   transform: translateY(-50%);
 }
 
+._6W1esa_dropdownContainer:hover, ._6W1esa_dropdownContainer:hover svg, ._6W1esa_dropdownContainer:hover ._6W1esa_dropdownValue {
+  color: #000;
+}
+
 ._6W1esa_dropdownValue {
   cursor: pointer;
   color: #3b3b3b;
+  box-sizing: border-box;
   background: none;
   border: 1px solid #59acd6;
   border-radius: 4px;
   padding: 9px 40px 9px 16px;
   font-family: IBM Plex Sans, sans-serif;
   line-height: 1;
+  transition: color .1s;
   box-shadow: 0 3px 5.84px .16px #0c0c0c2b;
 }
 
 ._6W1esa_dropdownItemsContainer {
   box-sizing: border-box;
-  color: #fff;
+  color: #3b3b3b;
   z-index: 999;
   cursor: pointer;
-  background: #2b2b2b;
+  background: #f4f3fd;
   border-radius: 4px;
   flex-direction: column;
   width: 100%;
+  margin-top: -3px;
+  padding: 0 4px;
   font-family: IBM Plex Sans, sans-serif;
+  transition: color .1s;
   display: flex;
   position: absolute;
   top: 0;
@@ -1140,8 +1111,18 @@
 }
 
 ._6W1esa_dropdownItemsContainer > div {
-  border-top: 1px solid #ffffff26;
+  border-top: 1px solid #3b3b3b21;
   padding: 9px 0 9px 16px;
+}
+
+._6W1esa_dropdownItemsContainer > div:hover {
+  color: #000;
+}
+
+._6W1esa_dropdownItemsContainer > div span {
+  margin-top: 1px;
+  margin-left: -3px;
+  display: block;
 }
 
 ._6W1esa_dropdownItemsContainer > div:first-child {
@@ -1259,5 +1240,59 @@
   flex-direction: column;
   gap: 10px;
   display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  background-clip: content-box;
+  border: 6px solid #0000;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+::-webkit-scrollbar {
+  background: none;
+  width: 0;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+.screen-with-group-content {
+  background: #fff;
+  border-radius: 4px;
+  flex-direction: column;
+  width: 500px;
+  font-family: IBM Plex Sans;
+  display: flex;
+  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
+}
+
+.screen-with-group-content > p {
+  padding: 30px 15px;
+}
+
+.ReactModal__Overlay {
+  backdrop-filter: blur(10px);
+  font-family: IBM Plex Sans;
+  background-color: #0000 !important;
+}
+
+.ReactModal__Content {
+  width: 80%;
+  max-width: 538px;
+  border: none !important;
 }
 /*# sourceMappingURL=main.css.map */

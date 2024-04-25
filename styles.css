@@ -52,3 +52,7 @@
   max-width: 538px;
   width: 80%;
 }
+/* 
+.custom-groups-content {
+  height: calc(100dvh - 40px);
+} */

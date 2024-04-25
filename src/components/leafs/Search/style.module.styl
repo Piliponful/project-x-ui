@@ -35,6 +35,26 @@
   line-height: 1;
   background: transparent;
   border: 1px solid #59acd6;
+  transition: color .1s;
+
+  padding-right: 30px; // with svg
+
+  svg {
+    position: absolute;
+    right: 8px;
+    color: #3b3b3b;
+    transition: color .1s;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  &:hover {
+    color: black;
+
+    svg {
+      color: black;
+    }
+  }
 }
 
 .text {
@@ -52,6 +72,9 @@
   right: 83px;
   transform: translateY(-50%);
   width: 138px;
+  box-sizing: border-box;
+  right: 95px; // with svg
+  transition: color .1s;
 
   svg {
     position: absolute;
@@ -61,6 +84,18 @@
     color: #3b3b3b;
     cursor: pointer;
     height: 18px;
+    transition: color .1s;
+  }
+
+  &:hover {
+    color: black;
+
+    svg {
+      color: black;
+    }
+    .dropdownValue {
+      color: black;
+    }
   }
 }
 
@@ -76,10 +111,11 @@
   border: 1px solid #59acd6;
   box-shadow: 0 3px 5.84px 0.16px #0c0c0c2b;
   line-height: 1;
+  box-sizing: border-box;
+  transition: color .1s;
 }
 
 .dropdownItemsContainer {
-  background: #2b2b2b;
   position: absolute;
   font-family: IBM Plex Sans, sans-serif;
   display: flex;
@@ -91,15 +127,29 @@
   box-sizing: border-box;
   border-radius: 4px;
   top: 0;
-  color: white;
+  color: #3b3b3b;
   z-index: 999;
   cursor: pointer;
   box-shadow: 0 3px 3.84px 1.16px #0c0c0c2b;
+  background: #f4f3fd;
+  margin-top: -3px;
+  padding: 0 4px;
+  transition: color .1s;
 
   & > div {
-    border-top: 1px solid #ffffff26;
+    border-top: 1px solid #3b3b3b21;
     padding: 9px 0;
     padding-left: 16px;
+
+    &:hover {
+      color: black;
+    }
+
+    span {
+      margin-left: -3px;
+      margin-top: 1px;
+      display: block;
+    }
   }
 
   & > div:first-child {

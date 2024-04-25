@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import SearchIcon from '@mui/icons-material/Search'
 import cn from 'classnames'
 
 import styles from './style.module.styl'
@@ -18,13 +19,16 @@ export default ({ search, className, style }) => {
         <div className={styles.dropdownValue} onClick={() => setShowDropdown(true)}>{dropdownValue}</div>
         {showDropdown && (
           <div className={styles.dropdownItemsContainer}>
-            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Users'); setShowDropdown(false) }}>Users</div>
-            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Questions'); setShowDropdown(false) }}>Questions</div>
+            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Questions'); setShowDropdown(false) }}><span>Questions</span></div>
+            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Users'); setShowDropdown(false) }}><span>Users</span></div>
           </div>
         )}
         <ExpandMoreIcon onClick={() => setShowDropdown(true)} />
       </div>
-      <button className={styles.search} onClick={() => search(dropdownValue, text)}>Find</button>
+      <button className={styles.search} onClick={() => search(dropdownValue, text)}>
+        Find
+        <SearchIcon sx={{ fontSize: 16 }} />
+      </button>
     </div>
   )
 }

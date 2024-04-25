@@ -3,12 +3,13 @@ import XIcon from '@mui/icons-material/X'
 import humanNumber from 'human-number'
 import CloseIcon from '@mui/icons-material/Close'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import cn from 'classnames'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style }, ref) => {
+export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style, className }, ref) => {
   return (
-    <div id='group-content-search-scroll-target' ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={styles.screenWithGroupContent}>
+    <div id='group-content-search-scroll-target' ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={cn(styles.screenWithGroupContent, className)}>
       <div className={styles.close}><CloseIcon onClick={close} sx={{ fontSize: 30, color: '#c1c1c1' }} /></div>
       <InfiniteScroll
         scrollableTarget='group-content-search-scroll-target'

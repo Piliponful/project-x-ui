@@ -227,7 +227,7 @@ const users = new Array(8).fill(1).map((_, index) => [
 ]).flat()
 
 const MainScreenWithQuestions = () => (
-  <MainScreen>
+  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
     <Search search={() => console.log('search')} />
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
     {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
@@ -277,6 +277,7 @@ const Authorized = () => {
         <>
           {/* <SidebarWithGroups /> */}
           <GroupContentScreen
+            className='custom-groups-content'
             hasMore={hasMore}
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}

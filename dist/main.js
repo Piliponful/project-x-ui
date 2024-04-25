@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -17,6 +17,7 @@ var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
+var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
 
 
@@ -1885,6 +1886,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
 
 
 
+
 var $fc6e17f49e58291a$exports = {};
 
 $parcel$export($fc6e17f49e58291a$exports, "close", () => $fc6e17f49e58291a$export$8360e631d277ea4d, (v) => $fc6e17f49e58291a$export$8360e631d277ea4d = v);
@@ -1907,7 +1909,7 @@ $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
 
-var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style }, ref)=>{
+var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style, className: className }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         id: "group-content-search-scroll-target",
         ref: ref,
@@ -1917,7 +1919,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             },
             ...style
         },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).screenWithGroupContent,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).screenWithGroupContent, className),
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).close,
@@ -2050,6 +2052,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $a9ddd490efc245bf$exports = {};
 
 $parcel$export($a9ddd490efc245bf$exports, "dropdownContainer", () => $a9ddd490efc245bf$export$a3681dba3470c8c4, (v) => $a9ddd490efc245bf$export$a3681dba3470c8c4 = v);
@@ -2104,18 +2107,22 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
                                 onClick: ()=>{
-                                    setDropdownValue("Users");
+                                    setDropdownValue("Questions");
                                     setShowDropdown(false);
                                 },
-                                children: "Users"
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Questions"
+                                })
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
                                 onClick: ()=>{
-                                    setDropdownValue("Questions");
+                                    setDropdownValue("Users");
                                     setShowDropdown(false);
                                 },
-                                children: "Questions"
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Users"
+                                })
                             })
                         ]
                     }),
@@ -2124,10 +2131,17 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("button", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).search,
                 onClick: ()=>search(dropdownValue, text),
-                children: "Find"
+                children: [
+                    "Find",
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSearch))), {
+                        sx: {
+                            fontSize: 16
+                        }
+                    })
+                ]
             })
         ]
     });
