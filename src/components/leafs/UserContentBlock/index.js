@@ -37,7 +37,7 @@ export default forwardRef(({ questions: userQuestions, hasMore, fetchQuestions, 
       >
         {questions.map(i => (
           <QuestionCard
-            key={i.name}
+            key={i.id || i._id}
             respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
             createNewGroup={content => createNewGroup(i._id, content)}
             {...i}
