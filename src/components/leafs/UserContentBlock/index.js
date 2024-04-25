@@ -2,6 +2,7 @@ import React, { useState, forwardRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import FlipMove from 'react-flip-move'
 
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
@@ -33,14 +34,16 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           // }
           className={styles.usersItems}
         >
-          {questionsWithAnswers.map(i => (
-            <QuestionCard
-              key={i.id || i._id}
-              respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
-              {...i}
-            />
-          ))}
+          <FlipMove typeName={null}>
+            {questionsWithAnswers.map(i => (
+              <QuestionCard
+                key={i.id || i._id}
+                respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
+                createNewGroup={content => createNewGroup(i._id, content)}
+                {...i}
+              />
+            ))}
+          </FlipMove>
         </InfiniteScroll>
       )}
       {selectedTab === 'questions' && (
@@ -57,14 +60,16 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           // }
           className={styles.usersItems}
         >
-          {userQuestions.map(i => (
-            <QuestionCard
-              key={i.id || i._id}
-              respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
-              {...i}
-            />
-          ))}
+          <FlipMove typeName={null}>
+            {userQuestions.map(i => (
+              <QuestionCard
+                key={i.id || i._id}
+                respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
+                createNewGroup={content => createNewGroup(i._id, content)}
+                {...i}
+              />
+            ))}
+          </FlipMove>
         </InfiniteScroll>
       )}
     </QuestionCardsRow>
