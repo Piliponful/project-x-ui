@@ -32,7 +32,7 @@ export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond,
         dataLength={questions.length}
         next={fetchQuestions}
         hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
+        // loader={<h4>Loading...</h4>}
         // endMessage={
         //   <p style={{ textAlign: 'center' }}>
         //     <b>Yay! You have seen it all</b>

@@ -25,7 +25,7 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           dataLength={questionsWithAnswers.length}
           next={fetchQuestions(false)}
           hasMore={answersHasMore}
-          loader={<h4>Loading...</h4>}
+          // loader={<h4>Loading...</h4>}
           // endMessage={
           //   <p style={{ textAlign: 'center' }}>
           //     <b>Yay! You have seen it all</b>
@@ -49,7 +49,7 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           dataLength={userQuestions.length}
           next={fetchQuestions(true)}
           hasMore={questionsHasMore}
-          loader={<h4>Loading...</h4>}
+          // loader={<h4>Loading...</h4>}
           // endMessage={
           //   <p style={{ textAlign: 'center' }}>
           //     <b>Yay! You have seen it all</b>

@@ -32,7 +32,7 @@ export default forwardRef(({ users, fetchUsers, hasMore, total, back, search, on
         dataLength={users.length}
         next={fetchUsers}
         hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
+        // loader={<h4>Loading...</h4>}
         // endMessage={
         //   <p style={{ textAlign: 'center' }}>
         //     <b>Yay! You have seen it all</b>
