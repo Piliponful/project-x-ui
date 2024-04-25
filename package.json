@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.0.219",
+  "version": "1.0.221",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",

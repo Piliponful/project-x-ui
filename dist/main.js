@@ -1995,6 +1995,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
@@ -2008,9 +2009,12 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: userQuestions, hasMore: hasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
+    const userQuestionsTab = selectedTab === "questions";
+    const questions = userQuestionsTab ? userQuestions : questionsWithAnswers;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        id: "user-content-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
         children: [
@@ -2037,11 +2041,29 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     })
                 ]
             }),
-            (selectedTab === "questions" ? questions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
-                    createNewGroup: (content)=>createNewGroup(i._id, content),
-                    ...i
-                }, i.name))
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+                scrollableTarget: "user-content-scroll-target",
+                dataLength: questions.length,
+                next: fetchQuestions(userQuestionsTab),
+                hasMore: hasMore,
+                loader: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h4", {
+                    children: "Loading..."
+                }),
+                endMessage: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    style: {
+                        textAlign: "center"
+                    },
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                        children: "Yay! You have seen it all"
+                    })
+                }),
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
+                children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                        respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
+                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        ...i
+                    }, i.name))
+            })
         ]
     });
 });
