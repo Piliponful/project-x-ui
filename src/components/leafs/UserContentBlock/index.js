@@ -26,11 +26,11 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           next={fetchQuestions(false)}
           hasMore={answersHasMore}
           loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: 'center' }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
+          // endMessage={
+          //   <p style={{ textAlign: 'center' }}>
+          //     <b>Yay! You have seen it all</b>
+          //   </p>
+          // }
           className={styles.usersItems}
         >
           {questionsWithAnswers.map(i => (
@@ -50,11 +50,11 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           next={fetchQuestions(true)}
           hasMore={questionsHasMore}
           loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: 'center' }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
+          // endMessage={
+          //   <p style={{ textAlign: 'center' }}>
+          //     <b>Yay! You have seen it all</b>
+          //   </p>
+          // }
           className={styles.usersItems}
         >
           {userQuestions.map(i => (
