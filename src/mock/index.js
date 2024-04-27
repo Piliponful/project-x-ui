@@ -247,9 +247,7 @@ const MainScreenWithQuestions = () => (
 )
 
 const MainScreenWithUserQuestions = () => (
-  <MainScreen>
-    <UserContentBlock fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
-  </MainScreen>
+  <UserContentBlock fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
 )
 
 const Authorized = () => {
@@ -281,8 +279,8 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           />
-          {/* <MainScreenWithQuestions />
-          <MainScreenWithUserQuestions /> */}
+          {/* <MainScreenWithQuestions /> */}
+          <MainScreenWithUserQuestions />
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
           <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
