@@ -864,18 +864,28 @@
   }
 }
 
+.zDJPrW_back {
+  color: #f4f3fd;
+  cursor: pointer;
+  background: #1c1c1c;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  padding: 3px;
+  position: relative;
+}
+
 .zDJPrW_screenWithGroupContent {
   box-sizing: border-box;
-  background: #00000030;
-  border: 1px dashed #3eb5f175;
+  background: #2b2b2b;
   border-radius: 4px;
   flex-direction: column;
   gap: 8px;
   width: calc(100% - 20px);
   max-width: 500px;
-  height: calc(100dvh - 20px);
-  margin-top: 10px;
-  padding: 10px 0;
+  height: calc(100dvh - 40px);
+  margin: 20px 0;
+  padding: 10px 20px;
   font-family: IBM Plex Sans;
   display: flex;
   overflow: scroll;
@@ -902,7 +912,7 @@
 .zDJPrW_userItem {
   color: #bebebe;
   cursor: pointer;
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
   border-radius: 4px;
   justify-content: space-between;
   gap: 12px;
@@ -965,9 +975,19 @@
 }
 
 ._31v-EG_back {
-  color: #fff;
+  color: #f4f3fd;
   cursor: pointer;
-  margin-bottom: 24px;
+  background: #1c1c1c;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  padding: 3px;
+  position: relative;
+}
+
+._31v-EG_back:after {
+  content: " <- EXCITING!";
+  color: green;
 }
 
 ._31v-EG_backContainer {
@@ -976,9 +996,25 @@
   display: flex;
 }
 
+._31v-EG_screenWithGroupContent {
+  box-sizing: border-box;
+  background: #2b2b2b;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  height: calc(100dvh - 20px);
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-family: IBM Plex Sans;
+  display: flex;
+  overflow: scroll;
+  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
+}
+
 ._31v-EG_tabs {
-  background: #00000030;
-  border: 1px dashed #3eb5f175;
+  background: #1c1c1c;
   border-radius: 4px;
   gap: 12px;
   margin-bottom: 24px;
@@ -989,7 +1025,7 @@
 ._31v-EG_tabs div {
   color: #bebebe;
   cursor: pointer;
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -1001,7 +1037,7 @@
 }
 
 ._31v-EG_tabs div._31v-EG_selected {
-  background-color: #181818;
+  background-color: #2b2b2b;
 }
 
 ._6W1esa_input {
@@ -1135,14 +1171,9 @@
   border-top: none;
 }
 
-.BbEWnq_back {
-  color: #fff;
-  cursor: pointer;
-  margin-bottom: 24px;
-}
-
 .BbEWnq_totalAndBack {
   justify-content: space-between;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -1152,14 +1183,63 @@
   font-size: 18px;
 }
 
-._9WjUxq_back {
-  color: #fff;
+.BbEWnq_back {
+  color: #f4f3fd;
   cursor: pointer;
-  margin-bottom: 24px;
+  background: #1c1c1c;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  padding: 3px;
+  position: relative;
+}
+
+.BbEWnq_screenWithGroupContent {
+  box-sizing: border-box;
+  background: #2b2b2b;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  height: calc(100dvh - 40px);
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-family: IBM Plex Sans;
+  display: flex;
+  overflow: scroll;
+  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
+}
+
+._9WjUxq_back {
+  color: #f4f3fd;
+  cursor: pointer;
+  background: #1c1c1c;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  padding: 3px;
+  position: relative;
+}
+
+._9WjUxq_screenWithGroupContent {
+  box-sizing: border-box;
+  background: #2b2b2b;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  height: calc(100dvh - 20px);
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-family: IBM Plex Sans;
+  display: flex;
+  overflow: scroll;
+  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
 }
 
 ._9WjUxq_totalAndBack {
   justify-content: space-between;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -1170,16 +1250,19 @@
 }
 
 ._9WjUxq_usersContainer {
-  background: #00000030;
-  border: 1px dashed #3eb5f175;
+  box-sizing: border-box;
+  background: #2b2b2b;
   border-radius: 4px;
   flex-direction: column;
   gap: 8px;
   width: calc(100% - 20px);
-  max-width: 350px;
-  padding-top: 10px;
+  max-width: 500px;
+  height: calc(100dvh - 40px);
+  margin: 20px 0;
+  padding: 10px 20px;
   font-family: IBM Plex Sans;
   display: flex;
+  overflow: scroll;
   box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
 }
 
@@ -1197,7 +1280,7 @@
 ._9WjUxq_userItem {
   color: #bebebe;
   cursor: pointer;
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
   border-radius: 4px;
   justify-content: space-between;
   gap: 12px;

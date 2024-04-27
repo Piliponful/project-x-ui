@@ -10,7 +10,7 @@ import styles from './style.module.styl'
 export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style, className }, ref) => {
   return (
     <div id='group-content-search-scroll-target' ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={cn(styles.screenWithGroupContent, className)}>
-      <div className={styles.close}><CloseIcon onClick={close} sx={{ fontSize: 30, color: '#c1c1c1' }} /></div>
+      <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>
       <InfiniteScroll
         scrollableTarget='group-content-search-scroll-target'
         dataLength={users.length}

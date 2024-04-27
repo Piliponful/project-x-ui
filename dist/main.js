@@ -1233,6 +1233,7 @@ var $caa6e61676dd60dd$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $5a9d2af86b1e1e16$exports = {};
 
 $parcel$export($5a9d2af86b1e1e16$exports, "cardsRow", () => $5a9d2af86b1e1e16$export$3ffd594349b5aa88, (v) => $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = v);
@@ -1243,11 +1244,11 @@ $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
 $5a9d2af86b1e1e16$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
 
 
-var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, id: id }, ref)=>{
+var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, id: id, className: className }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         ref: ref,
         id: id,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer, className),
         children: children
     });
 });
@@ -1890,18 +1891,21 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
 
 var $fc6e17f49e58291a$exports = {};
 
+$parcel$export($fc6e17f49e58291a$exports, "back", () => $fc6e17f49e58291a$export$7c341cb16fc91138, (v) => $fc6e17f49e58291a$export$7c341cb16fc91138 = v);
 $parcel$export($fc6e17f49e58291a$exports, "close", () => $fc6e17f49e58291a$export$8360e631d277ea4d, (v) => $fc6e17f49e58291a$export$8360e631d277ea4d = v);
 $parcel$export($fc6e17f49e58291a$exports, "column", () => $fc6e17f49e58291a$export$4e0c71f277ca26b3, (v) => $fc6e17f49e58291a$export$4e0c71f277ca26b3 = v);
 $parcel$export($fc6e17f49e58291a$exports, "row", () => $fc6e17f49e58291a$export$120ff0929b202a6d, (v) => $fc6e17f49e58291a$export$120ff0929b202a6d = v);
 $parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e17f49e58291a$export$de3da254965f2f43, (v) => $fc6e17f49e58291a$export$de3da254965f2f43 = v);
 $parcel$export($fc6e17f49e58291a$exports, "userItem", () => $fc6e17f49e58291a$export$f6bda04bc7d10a12, (v) => $fc6e17f49e58291a$export$f6bda04bc7d10a12 = v);
 $parcel$export($fc6e17f49e58291a$exports, "usersContainer", () => $fc6e17f49e58291a$export$771ca420b1b6ed17, (v) => $fc6e17f49e58291a$export$771ca420b1b6ed17 = v);
+var $fc6e17f49e58291a$export$7c341cb16fc91138;
 var $fc6e17f49e58291a$export$8360e631d277ea4d;
 var $fc6e17f49e58291a$export$4e0c71f277ca26b3;
 var $fc6e17f49e58291a$export$120ff0929b202a6d;
 var $fc6e17f49e58291a$export$de3da254965f2f43;
 var $fc6e17f49e58291a$export$f6bda04bc7d10a12;
 var $fc6e17f49e58291a$export$771ca420b1b6ed17;
+$fc6e17f49e58291a$export$7c341cb16fc91138 = `zDJPrW_back`;
 $fc6e17f49e58291a$export$8360e631d277ea4d = `zDJPrW_close`;
 $fc6e17f49e58291a$export$4e0c71f277ca26b3 = `zDJPrW_column`;
 $fc6e17f49e58291a$export$120ff0929b202a6d = `zDJPrW_row`;
@@ -1925,11 +1929,8 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).close,
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
-                    onClick: close,
-                    sx: {
-                        fontSize: 30,
-                        color: "#c1c1c1"
-                    }
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).back,
+                    onClick: close
                 })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
@@ -1997,21 +1998,24 @@ var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
 $parcel$export($d96dc328a9b2259c$exports, "backContainer", () => $d96dc328a9b2259c$export$4effee6a14a93095, (v) => $d96dc328a9b2259c$export$4effee6a14a93095 = v);
+$parcel$export($d96dc328a9b2259c$exports, "screenWithGroupContent", () => $d96dc328a9b2259c$export$de3da254965f2f43, (v) => $d96dc328a9b2259c$export$de3da254965f2f43 = v);
 $parcel$export($d96dc328a9b2259c$exports, "selected", () => $d96dc328a9b2259c$export$d90250155de6d7e7, (v) => $d96dc328a9b2259c$export$d90250155de6d7e7 = v);
 $parcel$export($d96dc328a9b2259c$exports, "tabs", () => $d96dc328a9b2259c$export$39f5674517ec0000, (v) => $d96dc328a9b2259c$export$39f5674517ec0000 = v);
 var $d96dc328a9b2259c$export$7c341cb16fc91138;
 var $d96dc328a9b2259c$export$4effee6a14a93095;
+var $d96dc328a9b2259c$export$de3da254965f2f43;
 var $d96dc328a9b2259c$export$d90250155de6d7e7;
 var $d96dc328a9b2259c$export$39f5674517ec0000;
 $d96dc328a9b2259c$export$7c341cb16fc91138 = `_31v-EG_back`;
 $d96dc328a9b2259c$export$4effee6a14a93095 = `_31v-EG_backContainer`;
+$d96dc328a9b2259c$export$de3da254965f2f43 = `_31v-EG_screenWithGroupContent`;
 $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
 var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         id: "user-content-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
@@ -2177,15 +2181,19 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
 
 
 
+
 var $80a088ebd4973b81$exports = {};
 
 $parcel$export($80a088ebd4973b81$exports, "back", () => $80a088ebd4973b81$export$7c341cb16fc91138, (v) => $80a088ebd4973b81$export$7c341cb16fc91138 = v);
+$parcel$export($80a088ebd4973b81$exports, "screenWithGroupContent", () => $80a088ebd4973b81$export$de3da254965f2f43, (v) => $80a088ebd4973b81$export$de3da254965f2f43 = v);
 $parcel$export($80a088ebd4973b81$exports, "total", () => $80a088ebd4973b81$export$9086bb9c16b2b5b, (v) => $80a088ebd4973b81$export$9086bb9c16b2b5b = v);
 $parcel$export($80a088ebd4973b81$exports, "totalAndBack", () => $80a088ebd4973b81$export$ef9502a2481467bc, (v) => $80a088ebd4973b81$export$ef9502a2481467bc = v);
 var $80a088ebd4973b81$export$7c341cb16fc91138;
+var $80a088ebd4973b81$export$de3da254965f2f43;
 var $80a088ebd4973b81$export$9086bb9c16b2b5b;
 var $80a088ebd4973b81$export$ef9502a2481467bc;
 $80a088ebd4973b81$export$7c341cb16fc91138 = `BbEWnq_back`;
+$80a088ebd4973b81$export$de3da254965f2f43 = `BbEWnq_screenWithGroupContent`;
 $80a088ebd4973b81$export$9086bb9c16b2b5b = `BbEWnq_total`;
 $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
 
@@ -2201,7 +2209,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
         id: "questions-search-scroll-target",
         ref: ref,
-        className: className,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).screenWithGroupContent),
         style: style,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2256,6 +2264,7 @@ var $e7fcc7d3eba9496b$exports = {};
 $parcel$export($e7fcc7d3eba9496b$exports, "back", () => $e7fcc7d3eba9496b$export$7c341cb16fc91138, (v) => $e7fcc7d3eba9496b$export$7c341cb16fc91138 = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "column", () => $e7fcc7d3eba9496b$export$4e0c71f277ca26b3, (v) => $e7fcc7d3eba9496b$export$4e0c71f277ca26b3 = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "row", () => $e7fcc7d3eba9496b$export$120ff0929b202a6d, (v) => $e7fcc7d3eba9496b$export$120ff0929b202a6d = v);
+$parcel$export($e7fcc7d3eba9496b$exports, "screenWithGroupContent", () => $e7fcc7d3eba9496b$export$de3da254965f2f43, (v) => $e7fcc7d3eba9496b$export$de3da254965f2f43 = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "total", () => $e7fcc7d3eba9496b$export$9086bb9c16b2b5b, (v) => $e7fcc7d3eba9496b$export$9086bb9c16b2b5b = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "totalAndBack", () => $e7fcc7d3eba9496b$export$ef9502a2481467bc, (v) => $e7fcc7d3eba9496b$export$ef9502a2481467bc = v);
 $parcel$export($e7fcc7d3eba9496b$exports, "userItem", () => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12, (v) => $e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = v);
@@ -2264,6 +2273,7 @@ $parcel$export($e7fcc7d3eba9496b$exports, "usersItems", () => $e7fcc7d3eba9496b$
 var $e7fcc7d3eba9496b$export$7c341cb16fc91138;
 var $e7fcc7d3eba9496b$export$4e0c71f277ca26b3;
 var $e7fcc7d3eba9496b$export$120ff0929b202a6d;
+var $e7fcc7d3eba9496b$export$de3da254965f2f43;
 var $e7fcc7d3eba9496b$export$9086bb9c16b2b5b;
 var $e7fcc7d3eba9496b$export$ef9502a2481467bc;
 var $e7fcc7d3eba9496b$export$f6bda04bc7d10a12;
@@ -2272,6 +2282,7 @@ var $e7fcc7d3eba9496b$export$2778a17561d67130;
 $e7fcc7d3eba9496b$export$7c341cb16fc91138 = `_9WjUxq_back`;
 $e7fcc7d3eba9496b$export$4e0c71f277ca26b3 = `_9WjUxq_column`;
 $e7fcc7d3eba9496b$export$120ff0929b202a6d = `_9WjUxq_row`;
+$e7fcc7d3eba9496b$export$de3da254965f2f43 = `_9WjUxq_screenWithGroupContent`;
 $e7fcc7d3eba9496b$export$9086bb9c16b2b5b = `_9WjUxq_total`;
 $e7fcc7d3eba9496b$export$ef9502a2481467bc = `_9WjUxq_totalAndBack`;
 $e7fcc7d3eba9496b$export$f6bda04bc7d10a12 = `_9WjUxq_userItem`;

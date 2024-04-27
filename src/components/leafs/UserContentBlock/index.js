@@ -14,7 +14,7 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
   const [selectedTab, setSelectedTab] = useState('questions')
 
   return (
-    <QuestionCardsRow id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
+    <div id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
@@ -47,6 +47,6 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           ))}
         </FlipMove>
       </InfiniteScroll>
-    </QuestionCardsRow>
+    </div>
   )
 })

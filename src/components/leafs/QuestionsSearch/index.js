@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 import Handlebars from 'handlebars'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import cn from 'classnames'
 
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
@@ -22,7 +23,7 @@ export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond,
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow id='questions-search-scroll-target' ref={ref} className={className} style={style}>
+    <QuestionCardsRow id='questions-search-scroll-target' ref={ref} className={cn(className, styles.screenWithGroupContent)} style={style}>
       <div className={styles.totalAndBack}>
         <div className={styles.total}>{total} questions found</div>
         <CloseIcon className={styles.back} onClick={back} />
