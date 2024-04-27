@@ -970,6 +970,12 @@
   margin-bottom: 24px;
 }
 
+._31v-EG_backContainer {
+  justify-content: end;
+  width: 100%;
+  display: flex;
+}
+
 ._31v-EG_tabs {
   background: #00000030;
   border: 1px dashed #3eb5f175;

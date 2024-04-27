@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import CloseIcon from '@mui/icons-material/Close'
 import Handlebars from 'handlebars'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
@@ -24,8 +24,8 @@ export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond,
   return (
     <QuestionCardsRow id='questions-search-scroll-target' ref={ref} className={className} style={style}>
       <div className={styles.totalAndBack}>
-        <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} questions found</div>
+        <CloseIcon className={styles.back} onClick={back} />
       </div>
       <InfiniteScroll
         scrollableTarget='questions-search-scroll-target'

@@ -230,7 +230,6 @@ const MainScreenWithQuestions = () => (
   <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
     <Search search={() => console.log('search')} />
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
-    {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
     </QuestionCardsRow>
@@ -249,7 +248,7 @@ const MainScreenWithQuestions = () => (
 
 const MainScreenWithUserQuestions = () => (
   <MainScreen>
-    <UserContentBlock questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
+    <UserContentBlock fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
   </MainScreen>
 )
 
@@ -282,8 +281,10 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-          <MainScreenWithQuestions />
+          {/* <MainScreenWithQuestions /> */}
           {/* <MainScreenWithUserQuestions /> */}
+          {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
+          <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' />
         </>
       )}
     </>

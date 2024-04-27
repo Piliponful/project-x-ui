@@ -1,5 +1,5 @@
 import React, { useState, forwardRef } from 'react'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import CloseIcon from '@mui/icons-material/Close'
 import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import FlipMove from 'react-flip-move'
@@ -15,7 +15,7 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
 
   return (
     <QuestionCardsRow id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
-      <ArrowBackIcon className={styles.back} onClick={back} />
+      <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
         <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answered Questions</div>

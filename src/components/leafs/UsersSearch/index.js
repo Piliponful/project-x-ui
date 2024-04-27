@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import CloseIcon from '@mui/icons-material/Close'
 import Handlebars from 'handlebars'
 import humanNumber from 'human-number'
 import XIcon from '@mui/icons-material/X'
@@ -24,8 +24,8 @@ export default forwardRef(({ users, fetchUsers, hasMore, total, back, search, on
   return (
     <QuestionCardsRow id='users-search-scroll-target' ref={ref} className={styles.usersContainer}>
       <div className={styles.totalAndBack}>
-        <ArrowBackIcon className={styles.back} onClick={back} />
         <div className={styles.total}>{total} users found</div>
+        <CloseIcon className={styles.back} onClick={back} />
       </div>
       <InfiniteScroll
         scrollableTarget='users-search-scroll-target'

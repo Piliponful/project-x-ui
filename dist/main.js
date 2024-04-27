@@ -15,7 +15,6 @@ var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
-var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$reactflipmove = require("react-flip-move");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
@@ -1997,12 +1996,15 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
+$parcel$export($d96dc328a9b2259c$exports, "backContainer", () => $d96dc328a9b2259c$export$4effee6a14a93095, (v) => $d96dc328a9b2259c$export$4effee6a14a93095 = v);
 $parcel$export($d96dc328a9b2259c$exports, "selected", () => $d96dc328a9b2259c$export$d90250155de6d7e7, (v) => $d96dc328a9b2259c$export$d90250155de6d7e7 = v);
 $parcel$export($d96dc328a9b2259c$exports, "tabs", () => $d96dc328a9b2259c$export$39f5674517ec0000, (v) => $d96dc328a9b2259c$export$39f5674517ec0000 = v);
 var $d96dc328a9b2259c$export$7c341cb16fc91138;
+var $d96dc328a9b2259c$export$4effee6a14a93095;
 var $d96dc328a9b2259c$export$d90250155de6d7e7;
 var $d96dc328a9b2259c$export$39f5674517ec0000;
 $d96dc328a9b2259c$export$7c341cb16fc91138 = `_31v-EG_back`;
+$d96dc328a9b2259c$export$4effee6a14a93095 = `_31v-EG_backContainer`;
 $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
@@ -2014,9 +2016,12 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).back,
-                onClick: back
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).backContainer,
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).back,
+                    onClick: back
+                })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
@@ -2202,16 +2207,16 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).totalAndBack,
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).back,
-                        onClick: back
-                    }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).total,
                         children: [
                             total,
                             " questions found"
                         ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($80a088ebd4973b81$exports))).back,
+                        onClick: back
                     })
                 ]
             }),
@@ -2290,16 +2295,16 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).totalAndBack,
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).back,
-                        onClick: back
-                    }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).total,
                         children: [
                             total,
                             " users found"
                         ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).back,
+                        onClick: back
                     })
                 ]
             }),
