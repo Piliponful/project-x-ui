@@ -20,64 +20,33 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
         <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answered Questions</div>
       </div>
-      {selectedTab === 'answers' && (
-        <InfiniteScroll
-          scrollableTarget='user-content-scroll-target'
-          dataLength={questionsWithAnswers.length}
-          next={fetchQuestions(false)}
-          hasMore={answersHasMore}
+      <InfiniteScroll
+        scrollableTarget='user-content-scroll-target'
+        dataLength={selectedTab === 'questions' ? userQuestions.length : questionsWithAnswers.length}
+        next={fetchQuestions(true)}
+        hasMore={selectedTab === 'questions' ? questionsHasMore : answersHasMore}
           // loader={<h4>Loading...</h4>}
           // endMessage={
           //   <p style={{ textAlign: 'center' }}>
           //     <b>Yay! You have seen it all</b>
           //   </p>
           // }
-          className={styles.usersItems}
+        className={styles.usersItems}
+      >
+        <FlipMove
+          appearAnimation='elevator'
+          typeName={null}
         >
-          <FlipMove
-            typeName={null}
-            appearAnimation='elevator'
-          >
-            {questionsWithAnswers.map(i => (
-              <QuestionCard
-                key={i.id || i._id}
-                respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
-                createNewGroup={content => createNewGroup(i._id, content)}
-                {...i}
-              />
-            ))}
-          </FlipMove>
-        </InfiniteScroll>
-      )}
-      {selectedTab === 'questions' && (
-        <InfiniteScroll
-          scrollableTarget='user-content-scroll-target'
-          dataLength={userQuestions.length}
-          next={fetchQuestions(true)}
-          hasMore={questionsHasMore}
-          // loader={<h4>Loading...</h4>}
-          // endMessage={
-          //   <p style={{ textAlign: 'center' }}>
-          //     <b>Yay! You have seen it all</b>
-          //   </p>
-          // }
-          className={styles.usersItems}
-        >
-          <FlipMove
-            appearAnimation='elevator'
-            typeName={null}
-          >
-            {userQuestions.map(i => (
-              <QuestionCard
-                key={i.id || i._id}
-                respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
-                createNewGroup={content => createNewGroup(i._id, content)}
-                {...i}
-              />
-            ))}
-          </FlipMove>
-        </InfiniteScroll>
-      )}
+          {(selectedTab === 'questions' ? userQuestions : questionsWithAnswers).map(i => (
+            <QuestionCard
+              key={i.id || i._id}
+              respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
+              createNewGroup={content => createNewGroup(i._id, content)}
+              {...i}
+            />
+          ))}
+        </FlipMove>
+      </InfiniteScroll>
     </QuestionCardsRow>
   )
 })
