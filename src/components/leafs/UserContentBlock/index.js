@@ -34,7 +34,10 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           // }
           className={styles.usersItems}
         >
-          <FlipMove typeName={null}>
+          <FlipMove
+            typeName={null}
+            appearAnimation='elevator'
+          >
             {questionsWithAnswers.map(i => (
               <QuestionCard
                 key={i.id || i._id}
@@ -60,7 +63,10 @@ export default forwardRef(({ questions: userQuestions, questionsHasMore, answers
           // }
           className={styles.usersItems}
         >
-          <FlipMove typeName={null}>
+          <FlipMove
+            appearAnimation='elevator'
+            typeName={null}
+          >
             {userQuestions.map(i => (
               <QuestionCard
                 key={i.id || i._id}
