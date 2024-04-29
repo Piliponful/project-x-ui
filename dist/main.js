@@ -1244,8 +1244,9 @@ $5a9d2af86b1e1e16$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
 $5a9d2af86b1e1e16$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
 
 
-var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ children: children, id: id, className: className }, ref)=>{
+var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, children: children, id: id, className: className }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        style: style,
         ref: ref,
         id: id,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($5a9d2af86b1e1e16$exports))).scrollContainer, className),
@@ -2292,10 +2293,11 @@ $e7fcc7d3eba9496b$export$2778a17561d67130 = `_9WjUxq_usersItems`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
+var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, users: users, fetchUsers: fetchUsers, hasMore: hasMore, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
+        style: style,
         id: "users-search-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e7fcc7d3eba9496b$exports))).usersContainer,

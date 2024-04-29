@@ -17,12 +17,12 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default forwardRef(({ users, fetchUsers, hasMore, total, back, search, onUserClick }, ref) => {
+export default forwardRef(({ style, users, fetchUsers, hasMore, total, back, search, onUserClick }, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
   return (
-    <QuestionCardsRow id='users-search-scroll-target' ref={ref} className={styles.usersContainer}>
+    <QuestionCardsRow style={style} id='users-search-scroll-target' ref={ref} className={styles.usersContainer}>
       <div className={styles.totalAndBack}>
         <div className={styles.total}>{total} users found</div>
         <CloseIcon className={styles.back} onClick={back} />
