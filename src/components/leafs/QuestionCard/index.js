@@ -12,7 +12,7 @@ import styles from './style.module.styl'
 export default forwardRef(({ yourOwnQuestion, onUserClick, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup, htmlName }, ref) => {
   return (
     <article ref={ref} className={styles.card}>
-      <Title><span onClick={onUserClick} style={{ color: '#00000063' }}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}</Title>
+      <Title><span onClick={onUserClick} style={{ color: '#00000063', cursor: 'pointer' }}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}</Title>
       <Stats {...answersCount} createNewGroup={createNewGroup} />
       {hisAnswer && (<Answer his answer={hisAnswer} />)}
       {answer && (<Answer answer={answer} />)}

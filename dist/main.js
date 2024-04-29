@@ -854,7 +854,8 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                         onClick: onUserClick,
                         style: {
-                            color: "#00000063"
+                            color: "#00000063",
+                            cursor: "pointer"
                         },
                         children: [
                             username,
