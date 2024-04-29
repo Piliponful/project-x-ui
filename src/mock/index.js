@@ -18,6 +18,7 @@ import UserContentBlock from '../components/leafs/UserContentBlock'
 import Search from '../components/leafs/Search'
 import QuestionsSearch from '../components/leafs/QuestionsSearch'
 import UsersSearch from '../components/leafs/UsersSearch'
+import { SortQuestions } from '../components/leafs/SortQuestions'
 
 import '../../styles.css'
 
@@ -230,6 +231,7 @@ const users = new Array(8).fill(1).map((_, index) => [
 const MainScreenWithQuestions = () => (
   <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
     <Search search={() => console.log('search')} />
+    <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}

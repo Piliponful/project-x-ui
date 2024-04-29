@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -2059,12 +2059,6 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 dataLength: selectedTab === "questions" ? userQuestions.length : questionsWithAnswers.length,
                 next: fetchQuestions(true),
                 hasMore: selectedTab === "questions" ? questionsHasMore : answersHasMore,
-                // loader={<h4>Loading...</h4>}
-                // endMessage={
-                //   <p style={{ textAlign: 'center' }}>
-                //     <b>Yay! You have seen it all</b>
-                //   </p>
-                // }
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
                     appearAnimation: "elevator",
@@ -2389,6 +2383,171 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
+
+
+
+
+var $31c024bdab3f9b58$exports = {};
+
+$parcel$export($31c024bdab3f9b58$exports, "dropdownContainer", () => $31c024bdab3f9b58$export$a3681dba3470c8c4, (v) => $31c024bdab3f9b58$export$a3681dba3470c8c4 = v);
+$parcel$export($31c024bdab3f9b58$exports, "dropdownItemsContainer", () => $31c024bdab3f9b58$export$960d6a7eb8ce632b, (v) => $31c024bdab3f9b58$export$960d6a7eb8ce632b = v);
+$parcel$export($31c024bdab3f9b58$exports, "dropdownValue", () => $31c024bdab3f9b58$export$2ff2bc1709095d00, (v) => $31c024bdab3f9b58$export$2ff2bc1709095d00 = v);
+$parcel$export($31c024bdab3f9b58$exports, "search", () => $31c024bdab3f9b58$export$d76128d007d19019, (v) => $31c024bdab3f9b58$export$d76128d007d19019 = v);
+$parcel$export($31c024bdab3f9b58$exports, "text", () => $31c024bdab3f9b58$export$6f093cfa640b7166, (v) => $31c024bdab3f9b58$export$6f093cfa640b7166 = v);
+var $31c024bdab3f9b58$export$a3681dba3470c8c4;
+var $31c024bdab3f9b58$export$960d6a7eb8ce632b;
+var $31c024bdab3f9b58$export$2ff2bc1709095d00;
+var $31c024bdab3f9b58$export$d76128d007d19019;
+var $31c024bdab3f9b58$export$6f093cfa640b7166;
+$31c024bdab3f9b58$export$a3681dba3470c8c4 = `ue_oWq_dropdownContainer`;
+$31c024bdab3f9b58$export$960d6a7eb8ce632b = `ue_oWq_dropdownItemsContainer`;
+$31c024bdab3f9b58$export$2ff2bc1709095d00 = `ue_oWq_dropdownValue`;
+$31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
+$31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
+
+
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, className: className, style: style })=>{
+    const [sort, setSort] = (0, $c5L0i$react.useState)("Most Answered");
+    const [duration, setDuration] = (0, $c5L0i$react.useState)("Week");
+    const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
+    const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
+    const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
+        onTriggered: ()=>setShowSortDropdown(false)
+    });
+    const ref2 = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
+        onTriggered: ()=>setShowDurationDropdown(false)
+    });
+    const setDurationAndClose = (value)=>{
+        setDuration(value);
+        setShowDurationDropdown(false);
+        getMessages(sort, value);
+    };
+    const setSortAndClose = (value)=>{
+        setSort(value);
+        setShowSortDropdown(false);
+        getMessages(value, duration);
+    };
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        style: style,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).text, className),
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                children: "Showing"
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
+                ref: ref,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
+                        onClick: ()=>setShowSortDropdown(true),
+                        children: sort
+                    }),
+                    showSortDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setSortAndClose("Most Answered"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Most Answered"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setSortAndClose("Latest"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Latest"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setSortAndClose("Most Controversial"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Most Controversial"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setSortAndClose("Most Unanimous"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Most Unanimous"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setSortAndClose("Most Followed Authors"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Most Followed Authors"
+                                })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                        onClick: ()=>setShowSortDropdown(true)
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                children: [
+                    "Questions ",
+                    duration === "all time" ? "of" : "for last"
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
+                ref: ref2,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
+                        onClick: ()=>setShowDurationDropdown(true),
+                        children: duration
+                    }),
+                    showDurationDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setDurationAndClose("Day"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Day"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setDurationAndClose("Week"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Week"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setDurationAndClose("Year"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Year"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setDurationAndClose("All Time"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "All time"
+                                })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                        onClick: ()=>setShowDurationDropdown(true)
+                    })
+                ]
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -2408,7 +2567,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039,
         Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039,
         QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039,
-        UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039
+        UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039,
+        SortQuestions: $b355bd374f45d8d9$export$f8fcd3a81add9e17
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

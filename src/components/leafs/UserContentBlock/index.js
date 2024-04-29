@@ -23,12 +23,6 @@ export default forwardRef(({ style, questions: userQuestions, questionsHasMore, 
         dataLength={selectedTab === 'questions' ? userQuestions.length : questionsWithAnswers.length}
         next={fetchQuestions(true)}
         hasMore={selectedTab === 'questions' ? questionsHasMore : answersHasMore}
-          // loader={<h4>Loading...</h4>}
-          // endMessage={
-          //   <p style={{ textAlign: 'center' }}>
-          //     <b>Yay! You have seen it all</b>
-          //   </p>
-          // }
         className={styles.usersItems}
       >
         <FlipMove

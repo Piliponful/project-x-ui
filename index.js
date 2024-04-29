@@ -15,6 +15,7 @@ import UserContentBlock from './src/components/leafs/UserContentBlock'
 import Search from './src/components/leafs/Search'
 import QuestionsSearch from './src/components/leafs/QuestionsSearch'
 import UsersSearch from './src/components/leafs/UsersSearch'
+import { SortQuestions } from './src/components/leafs/SortQuestions'
 
 import './styles.css'
 
@@ -37,7 +38,8 @@ export default {
     UserContentBlock,
     Search,
     QuestionsSearch,
-    UsersSearch
+    UsersSearch,
+    SortQuestions
   },
   context: {
     MainScreenSwipeContext

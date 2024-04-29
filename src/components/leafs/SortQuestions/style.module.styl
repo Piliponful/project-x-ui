@@ -1,0 +1,125 @@
+.text {
+  font-size: 18px;
+  // font-weight: 500;
+  color: #bebebe;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  gap: 8px;
+  // position: relative;
+}
+
+.dropdownContainer {
+  position: relative;
+  box-sizing: border-box;
+  transition: color .1s;
+  // min-width: 241px;
+  max-width: 241px;
+
+  svg {
+    position: absolute;
+    right: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3b3b3b;
+    cursor: pointer;
+    height: 18px;
+    transition: color .1s;
+  }
+
+  &:hover {
+    color: black;
+
+    svg {
+      color: black;
+    }
+
+    .dropdownValue {
+      color: black;
+    }
+  }
+}
+
+.dropdownValue {
+  font-family: IBM Plex Sans, sans-serif;
+  border: none;
+  padding: 9px 16px;
+  padding-right: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #3b3b3b;
+  background: #f4f3fd;
+  box-shadow: 0 3px 5.84px 0.16px #0c0c0c2b;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: color .1s;
+  white-space: nowrap;
+}
+
+.dropdownItemsContainer {
+  position: absolute;
+  font-family: IBM Plex Sans, sans-serif;
+  display: flex;
+  flex-direction: column;
+  // gap: 12px;
+  width: 241px;
+  // padding: 9px 10px;
+  // padding-left: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  top: 0;
+  color: #3b3b3b;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 0 3px 3.84px 1.16px #0c0c0c2b;
+  background: #f4f3fd;
+  margin-top: -3px;
+  padding: 0 4px;
+  transition: color .1s;
+
+  & > div {
+    border-top: 1px solid #3b3b3b21;
+    padding: 9px 0;
+    padding-left: 16px;
+
+    &:hover {
+      color: black;
+    }
+
+    span {
+      margin-left: -3px;
+      margin-top: 1px;
+      display: block;
+    }
+  }
+
+  & > div:first-child {
+    border-top: none;
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .text {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .dropdownValue {
+    border: none;
+  }
+  .dropdownContainer {
+    position: relative!important;
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+  }
+  .dropdownContainer, .search {
+    position: static;
+    transform: none;
+    width: 100%;
+    background: #f4f3fd;
+    border: none;
+  }
+  .search svg {
+    display: none;
+  }
+}
