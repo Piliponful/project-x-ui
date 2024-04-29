@@ -4,17 +4,15 @@ import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import FlipMove from 'react-flip-move'
 
-import QuestionCardsRow from '../../shallow/QuestionCardsRow'
-
 import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ questions: userQuestions, questionsHasMore, answersHasMore, fetchQuestions, questionsWithAnswers, back, respond, createNewGroup }, ref) => {
+export default forwardRef(({ style, questions: userQuestions, questionsHasMore, answersHasMore, fetchQuestions, questionsWithAnswers, back, respond, createNewGroup }, ref) => {
   const [selectedTab, setSelectedTab] = useState('questions')
 
   return (
-    <div id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
+    <div style={style} id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>

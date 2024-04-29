@@ -442,7 +442,6 @@
 @media only screen and (width <= 400px) {
   .HFaEpW_sidebar {
     width: 100%;
-    padding: 0 10px;
   }
 }
 
@@ -998,7 +997,7 @@
   width: calc(100% - 20px);
   max-width: 500px;
   height: calc(100dvh - 20px);
-  margin: 20px 0;
+  margin-top: 10px;
   padding: 10px 20px;
   font-family: IBM Plex Sans;
   display: flex;
@@ -1018,6 +1017,7 @@
 ._31v-EG_tabs div {
   color: #bebebe;
   cursor: pointer;
+  text-align: center;
   background-color: #1c1c1c;
   border-radius: 4px;
   justify-content: center;
