@@ -1213,23 +1213,6 @@
   position: relative;
 }
 
-._9WjUxq_screenWithGroupContent {
-  box-sizing: border-box;
-  background: #2b2b2b;
-  border-radius: 4px;
-  flex-direction: column;
-  gap: 8px;
-  width: calc(100% - 20px);
-  max-width: 500px;
-  height: calc(100dvh - 20px);
-  margin: 20px 0;
-  padding: 10px 20px;
-  font-family: IBM Plex Sans;
-  display: flex;
-  overflow: scroll;
-  box-shadow: 0 3px 3.84px 2.16px #0c0c0c2b;
-}
-
 ._9WjUxq_totalAndBack {
   justify-content: space-between;
   margin-top: 10px;
@@ -1250,8 +1233,8 @@
   gap: 8px;
   width: calc(100% - 20px);
   max-width: 500px;
-  height: calc(100dvh - 40px);
-  margin: 20px 0;
+  height: calc(100dvh - 20px);
+  margin-top: 10px;
   padding: 10px 20px;
   font-family: IBM Plex Sans;
   display: flex;
