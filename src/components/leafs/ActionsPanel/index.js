@@ -10,7 +10,7 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ logout, username, redirectUri, changeUser, testUsers = [] }) => {
+export default ({ logout, username, redirectUri, showMyHistory, changeUser, testUsers = [] }) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
@@ -36,6 +36,7 @@ export default ({ logout, username, redirectUri, changeUser, testUsers = [] }) =
         <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
           <div onClick={logout}>Log out</div>
           <div onClick={() => setIsModalOpen(true)}>Rewards</div>
+          <div onClick={() => { setIsModalOpen(true); showMyHistory() }}>My Questions/Answers</div>
           {Boolean(testUsers.length) && (
             <div className={styles.divider}>
               Test Users

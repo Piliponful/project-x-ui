@@ -1806,7 +1806,7 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri, changeUser: changeUser, testUsers: testUsers = [] })=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [] })=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -1845,6 +1845,13 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>setIsModalOpen(true),
                         children: "Rewards"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>{
+                            setIsModalOpen(true);
+                            showMyHistory();
+                        },
+                        children: "My Questions/Answers"
                     }),
                     Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).divider,
