@@ -288,6 +288,16 @@
   margin-bottom: 0;
 }
 
+.GN153G_username {
+  color: #00000063;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.GN153G_username:hover {
+  color: #3b3b3b;
+}
+
 .GN153G_hint {
   color: #969696;
   font-size: 16px;
