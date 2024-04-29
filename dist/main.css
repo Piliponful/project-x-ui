@@ -1164,6 +1164,36 @@
   border-top: none;
 }
 
+@media only screen and (width <= 386px) {
+  ._6W1esa_text {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  ._6W1esa_dropdownValue {
+    border: none;
+  }
+
+  ._6W1esa_dropdownContainer {
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+    position: relative !important;
+  }
+
+  ._6W1esa_dropdownContainer, ._6W1esa_search {
+    background: #f4f3fd;
+    border: none;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  ._6W1esa_search svg {
+    display: none;
+  }
+}
+
 .BbEWnq_totalAndBack {
   justify-content: space-between;
   margin-top: 10px;

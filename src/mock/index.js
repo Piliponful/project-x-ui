@@ -170,7 +170,8 @@ const SidebarWithGroups = () => {
 
 const SidebarWithQuestions = () => {
   return (
-    <Sidebar>
+    <Sidebar style={{ padding: 10 }}>
+      <Search style={{ width: '100%' }} search={() => console.log('search')} />
       <GroupsContainer>
         {mostAnsweredQuestionsComponents}
       </GroupsContainer>
@@ -273,14 +274,14 @@ const Authorized = () => {
       {!screenName && (
         <>
           {/* <SidebarWithGroups /> */}
-          <GroupContentScreen
+          {/* <GroupContentScreen
             className='custom-groups-content'
             hasMore={hasMore}
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
-          />
-          {/* <MainScreenWithQuestions /> */}
-          <MainScreenWithUserQuestions />
+          /> */}
+          <MainScreenWithQuestions />
+          {/* <MainScreenWithUserQuestions /> */}
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
           <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
