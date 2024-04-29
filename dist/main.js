@@ -1976,6 +1976,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                onClick: (e)=>e.stopPropagation(),
                                 href: `https://twitter.com/${user.username}`,
                                 target: "_blank",
                                 rel: "noreferrer",
