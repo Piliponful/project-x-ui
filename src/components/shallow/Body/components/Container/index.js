@@ -27,18 +27,18 @@ export default ({ children }) => {
 
       console.log('eventData: ', eventData)
 
-      if (eventData.dir === 'Right' || eventData.dir === 'Left') {
-        const plus = (eventData.dir === 'Left' ? 1 : (-1))
-        const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)
-        setSwipeCount(newSwipeCount)
-        value.toggleScreen(screenBySwipeCount[newSwipeCount].name)
-      }
+      // if (eventData.dir === 'Right' || eventData.dir === 'Left') {
+      //   const plus = (eventData.dir === 'Left' ? 1 : (-1))
+      //   const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)
+      //   setSwipeCount(newSwipeCount)
+      //   value.toggleScreen(screenBySwipeCount[newSwipeCount].name)
+      // }
 
-      if (eventData.dir === 'Down') {
+      if (eventData.dir === 'Right') {
         value.setShowSearch(true)
       }
 
-      if (eventData.dir === 'Up') {
+      if (eventData.dir === 'Left') {
         value.setShowSearch(false)
       }
     },

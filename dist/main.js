@@ -985,14 +985,14 @@ var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
         onSwiped: (eventData)=>{
             if (Object.keys(screenBySwipeCount).length === 0) return;
             console.log("eventData: ", eventData);
-            if (eventData.dir === "Right" || eventData.dir === "Left") {
-                const plus = eventData.dir === "Left" ? 1 : -1;
-                const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length);
-                setSwipeCount(newSwipeCount);
-                value.toggleScreen(screenBySwipeCount[newSwipeCount].name);
-            }
-            if (eventData.dir === "Down") value.setShowSearch(true);
-            if (eventData.dir === "Up") value.setShowSearch(false);
+            // if (eventData.dir === 'Right' || eventData.dir === 'Left') {
+            //   const plus = (eventData.dir === 'Left' ? 1 : (-1))
+            //   const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)
+            //   setSwipeCount(newSwipeCount)
+            //   value.toggleScreen(screenBySwipeCount[newSwipeCount].name)
+            // }
+            if (eventData.dir === "Right") value.setShowSearch(true);
+            if (eventData.dir === "Left") value.setShowSearch(false);
         },
         delta: 40,
         preventDefaultTouchmoveEvent: true
