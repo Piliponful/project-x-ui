@@ -230,8 +230,6 @@ const users = new Array(8).fill(1).map((_, index) => [
 
 const MainScreenWithQuestions = () => (
   <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
-    <Search search={() => console.log('search')} />
-    <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
@@ -282,6 +280,10 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
+          <div>
+            <Search buttonsOutside search={() => console.log('search')} />
+            <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
+          </div>
           <MainScreenWithQuestions />
           {/* <MainScreenWithUserQuestions /> */}
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />

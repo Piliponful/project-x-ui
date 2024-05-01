@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -2083,18 +2083,21 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 var $a9ddd490efc245bf$exports = {};
 
+$parcel$export($a9ddd490efc245bf$exports, "buttonsOutside", () => $a9ddd490efc245bf$export$eb4f292bdd97cb15, (v) => $a9ddd490efc245bf$export$eb4f292bdd97cb15 = v);
 $parcel$export($a9ddd490efc245bf$exports, "dropdownContainer", () => $a9ddd490efc245bf$export$a3681dba3470c8c4, (v) => $a9ddd490efc245bf$export$a3681dba3470c8c4 = v);
 $parcel$export($a9ddd490efc245bf$exports, "dropdownItemsContainer", () => $a9ddd490efc245bf$export$960d6a7eb8ce632b, (v) => $a9ddd490efc245bf$export$960d6a7eb8ce632b = v);
 $parcel$export($a9ddd490efc245bf$exports, "dropdownValue", () => $a9ddd490efc245bf$export$2ff2bc1709095d00, (v) => $a9ddd490efc245bf$export$2ff2bc1709095d00 = v);
 $parcel$export($a9ddd490efc245bf$exports, "input", () => $a9ddd490efc245bf$export$b7e3ae3d7c15e42e, (v) => $a9ddd490efc245bf$export$b7e3ae3d7c15e42e = v);
 $parcel$export($a9ddd490efc245bf$exports, "search", () => $a9ddd490efc245bf$export$d76128d007d19019, (v) => $a9ddd490efc245bf$export$d76128d007d19019 = v);
 $parcel$export($a9ddd490efc245bf$exports, "text", () => $a9ddd490efc245bf$export$6f093cfa640b7166, (v) => $a9ddd490efc245bf$export$6f093cfa640b7166 = v);
+var $a9ddd490efc245bf$export$eb4f292bdd97cb15;
 var $a9ddd490efc245bf$export$a3681dba3470c8c4;
 var $a9ddd490efc245bf$export$960d6a7eb8ce632b;
 var $a9ddd490efc245bf$export$2ff2bc1709095d00;
 var $a9ddd490efc245bf$export$b7e3ae3d7c15e42e;
 var $a9ddd490efc245bf$export$d76128d007d19019;
 var $a9ddd490efc245bf$export$6f093cfa640b7166;
+$a9ddd490efc245bf$export$eb4f292bdd97cb15 = `_6W1esa_buttonsOutside`;
 $a9ddd490efc245bf$export$a3681dba3470c8c4 = `_6W1esa_dropdownContainer`;
 $a9ddd490efc245bf$export$960d6a7eb8ce632b = `_6W1esa_dropdownItemsContainer`;
 $a9ddd490efc245bf$export$2ff2bc1709095d00 = `_6W1esa_dropdownValue`;
@@ -2103,7 +2106,7 @@ $a9ddd490efc245bf$export$d76128d007d19019 = `_6W1esa_search`;
 $a9ddd490efc245bf$export$6f093cfa640b7166 = `_6W1esa_text`;
 
 
-var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: className, style: style })=>{
+var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, buttonsOutside: buttonsOutside = false, className: className, style: style })=>{
     const [text, setText] = (0, $c5L0i$react.useState)("");
     const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)("Questions");
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
@@ -2112,7 +2115,9 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, className: cla
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
-        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text, className),
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text, className, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).buttonsOutside]: buttonsOutside
+        }),
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).input,
