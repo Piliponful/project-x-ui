@@ -52,6 +52,7 @@ export const SortQuestions = ({ getMessages, className, style }) => {
           <div className={styles.dropdownItemsContainer}>
             <div className={styles.dropdownItem} onClick={() => setDurationAndClose('Day')}><span>Day</span></div>
             <div className={styles.dropdownItem} onClick={() => setDurationAndClose('Week')}><span>Week</span></div>
+            <div className={styles.dropdownItem} onClick={() => setDurationAndClose('Month')}><span>Month</span></div>
             <div className={styles.dropdownItem} onClick={() => setDurationAndClose('Year')}><span>Year</span></div>
             <div className={styles.dropdownItem} onClick={() => setDurationAndClose('All Time')}><span>All time</span></div>
           </div>

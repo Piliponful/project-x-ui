@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -2519,6 +2519,13 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, c
                                 onClick: ()=>setDurationAndClose("Week"),
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                     children: "Week"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                onClick: ()=>setDurationAndClose("Month"),
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Month"
                                 })
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
