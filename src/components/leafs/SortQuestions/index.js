@@ -7,10 +7,7 @@ import Title from '../GroupCard/components/Title'
 
 import styles from './style.module.styl'
 
-export const SortQuestions = ({ getMessages, className, style }) => {
-  const [sort, setSort] = useState('Most Answered')
-  const [duration, setDuration] = useState('Week')
-
+export const SortQuestions = ({ getMessages, duration = 'Most Answered', sort = 'Week', setSort, setDuration, className, style }) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false)
   const [showDurationDropdown, setShowDurationDropdown] = useState(false)
 
@@ -45,7 +42,7 @@ export const SortQuestions = ({ getMessages, className, style }) => {
         )}
         <ExpandMoreIcon onClick={() => setShowSortDropdown(true)} />
       </div>
-      <Title>Questions {duration === 'all time' ? 'of' : 'for last'}</Title>
+      <Title>Questions {duration === 'All Time' ? 'of' : 'for last'}</Title>
       <div className={styles.dropdownContainer} ref={ref2}>
         <div className={styles.dropdownValue} onClick={() => setShowDurationDropdown(true)}>{duration}</div>
         {showDurationDropdown && (

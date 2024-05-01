@@ -2424,9 +2424,7 @@ $31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
 $31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
 
 
-const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, className: className, style: style })=>{
-    const [sort, setSort] = (0, $c5L0i$react.useState)("Most Answered");
-    const [duration, setDuration] = (0, $c5L0i$react.useState)("Week");
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, duration: duration = "Most Answered", sort: sort = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style })=>{
     const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
     const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -2509,7 +2507,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, c
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
                 children: [
                     "Questions ",
-                    duration === "all time" ? "of" : "for last"
+                    duration === "All Time" ? "of" : "for last"
                 ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
