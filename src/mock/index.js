@@ -185,12 +185,15 @@ const SidebarWithQuestions = () => {
               position: 'absolute',
               display: 'flex',
               justifyContent: 'center',
-              height: '100%',
               width: '100%',
               top: 0,
               zIndex: 111,
-              background: '#0000008a',
-              backdropFilter: 'blur(2px)'
+              height: 'auto',
+              borderBottomRightRadius: 8,
+              borderBottomLeftRadius: 8,
+              background: '#f4f3fd',
+              backdropFilter: 'blur(6px)',
+              boxShadow: '0 3px 5.84px 0.16px #0c0c0c2b'
             }}
           >
             <div style={{ width: 241 }}>
