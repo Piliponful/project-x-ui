@@ -35,7 +35,7 @@ export default forwardRef(({ style, questions: userQuestions, questionsHasMore, 
               respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
               createNewGroup={content => createNewGroup(i._id, content)}
               {...i}
-              onUserClick={() => onUserClick(i.userId)}
+              onUserClick={() => { onUserClick(i.userId); setSelectedTab('questions') }}
             />
           ))}
         </FlipMove>

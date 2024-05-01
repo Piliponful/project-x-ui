@@ -2075,7 +2075,10 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
                             createNewGroup: (content)=>createNewGroup(i._id, content),
                             ...i,
-                            onUserClick: ()=>onUserClick(i.userId)
+                            onUserClick: ()=>{
+                                onUserClick(i.userId);
+                                setSelectedTab("questions");
+                            }
                         }, i.id || i._id))
                 })
             })
