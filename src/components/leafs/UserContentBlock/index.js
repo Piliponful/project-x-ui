@@ -8,7 +8,7 @@ import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ style, questions: userQuestions, questionsHasMore, answersHasMore, fetchQuestions, questionsWithAnswers, back, respond, createNewGroup }, ref) => {
+export default forwardRef(({ style, questions: userQuestions, questionsHasMore, answersHasMore, fetchQuestions, questionsWithAnswers, back, respond, createNewGroup, onUserClick }, ref) => {
   const [selectedTab, setSelectedTab] = useState('questions')
 
   return (
@@ -35,6 +35,7 @@ export default forwardRef(({ style, questions: userQuestions, questionsHasMore, 
               respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
               createNewGroup={content => createNewGroup(i._id, content)}
               {...i}
+              onUserClick={() => onUserClick(i.userId)}
             />
           ))}
         </FlipMove>

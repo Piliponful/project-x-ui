@@ -2028,7 +2028,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
@@ -2074,7 +2074,8 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     children: (selectedTab === "questions" ? userQuestions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                             respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
                             createNewGroup: (content)=>createNewGroup(i._id, content),
-                            ...i
+                            ...i,
+                            onUserClick: ()=>onUserClick(i.userId)
                         }, i.id || i._id))
                 })
             })
