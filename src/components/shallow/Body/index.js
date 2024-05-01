@@ -8,7 +8,7 @@ import styles from './style.module.styl'
 
 import { smallMainScreenWidth } from '../../../constants'
 
-export const MainScreenSwipeContext = React.createContext({ toggleScreen: null, setSkipScreen: null, setIsModalOpen: null })
+export const MainScreenSwipeContext = React.createContext({ toggleScreen: null, setSkipScreen: null, setIsModalOpen: null, setShowSearch: null, showSearch: false })
 
 const customStyles = {
   content: {
@@ -29,6 +29,7 @@ export default ({ children, includeSwipes, address, payout }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
 
   useEffect(() => {
     const handler = () => {
@@ -57,7 +58,7 @@ export default ({ children, includeSwipes, address, payout }) => {
 
   if (includeSwipes) {
     return (
-      <MainScreenSwipeContext.Provider value={{ screenName, skipScreen, toggleScreen, setSkipScreen, setIsModalOpen: setIsModalOpen }}>
+      <MainScreenSwipeContext.Provider value={{ screenName, skipScreen, showSearch, toggleScreen, setShowSearch, setSkipScreen, setIsModalOpen: setIsModalOpen }}>
         <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
           <Modal
             isOpen={isModalOpen}

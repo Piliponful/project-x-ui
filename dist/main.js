@@ -984,12 +984,15 @@ var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
     const handlers = (0, $c5L0i$reactswipeable.useSwipeable)({
         onSwiped: (eventData)=>{
             if (Object.keys(screenBySwipeCount).length === 0) return;
+            console.log("eventData: ", eventData);
             if (eventData.dir === "Right" || eventData.dir === "Left") {
                 const plus = eventData.dir === "Left" ? 1 : -1;
                 const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length);
                 setSwipeCount(newSwipeCount);
                 value.toggleScreen(screenBySwipeCount[newSwipeCount].name);
             }
+            if (eventData.dir === "Down") value.setShowSearch(true);
+            if (eventData.dir === "Up") value.setShowSearch(false);
         },
         delta: 40,
         preventDefaultTouchmoveEvent: true
@@ -1034,7 +1037,9 @@ const $be6f0e84320366a7$export$120137d2fb34488f = 945;
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
     toggleScreen: null,
     setSkipScreen: null,
-    setIsModalOpen: null
+    setIsModalOpen: null,
+    setShowSearch: null,
+    showSearch: false
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -1053,6 +1058,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
+    const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1072,7 +1078,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         value: {
             screenName: screenName,
             skipScreen: skipScreen,
+            showSearch: showSearch,
             toggleScreen: toggleScreen,
+            setShowSearch: setShowSearch,
             setSkipScreen: setSkipScreen,
             setIsModalOpen: setIsModalOpen
         },

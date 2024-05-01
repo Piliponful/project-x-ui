@@ -54,7 +54,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     name: 'Have you watched new season of attack on titan?',
     currentUserAnswer: 'Yes',
     answersCount: { yes: 383343, no: 23450 },
-    username: 'piliponful',
+    username: 'piliponful'
     // yourOwnQuestion: true,
     // hisAnswer: 'yes'
   },
@@ -170,9 +170,36 @@ const SidebarWithGroups = () => {
 }
 
 const SidebarWithQuestions = () => {
+  const {
+    showSearch
+  } = useContext(MainScreenSwipeContext)
+
+  console.log('show search: ', showSearch)
+
   return (
     <Sidebar style={{ padding: 10 }}>
-      <Search style={{ width: '100%' }} search={() => console.log('search')} />
+      {
+        showSearch && (
+          <div
+            style={{
+              position: 'absolute',
+              display: 'flex',
+              justifyContent: 'center',
+              height: '100%',
+              width: '100%',
+              top: 0,
+              zIndex: 111,
+              background: '#0000008a',
+              backdropFilter: 'blur(2px)'
+            }}
+          >
+            <div style={{ width: 241 }}>
+              <Search buttonsOutside search={() => console.log('search')} />
+              <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
+            </div>
+          </div>
+        )
+      }
       <GroupsContainer>
         {mostAnsweredQuestionsComponents}
       </GroupsContainer>
@@ -236,13 +263,7 @@ const MainScreenWithQuestions = () => (
     </QuestionCardsRow>
     <div style={{ width: '100%' }}>
       <NewQuestion />
-      <ActionsPanel
-        // logout={() => console.log('logout')}
-        // testUsers={[
-        //   { fullName: 'Patrick Bet-David' }
-        // ]}
-        // username='piliponful'
-      />
+      <ActionsPanel />
     </div>
   </MainScreen>
 )
