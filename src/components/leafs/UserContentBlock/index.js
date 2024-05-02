@@ -23,15 +23,14 @@ export const UserHistoryTabs = forwardRef(({
   )
 })
 
-export const UserQuestionsHistory = forwardRef(({
-  questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick, selectedTab
-}, ref) => {
+export const UserQuestionsHistory = ({
+  questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick
+}) => {
   return (
     <InfiniteScroll
-      ref={ref}
       scrollableTarget='user-content-scroll-target'
       dataLength={questions.length}
-      next={fetchQuestions(true)}
+      next={fetchQuestions}
       hasMore={hasMore}
       className={styles.usersItems}
     >
@@ -51,4 +50,4 @@ export const UserQuestionsHistory = forwardRef(({
       </FlipMove>
     </InfiniteScroll>
   )
-})
+}

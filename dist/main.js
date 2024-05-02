@@ -2073,12 +2073,11 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
         ]
     });
 });
-const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, selectedTab: selectedTab }, ref)=>{
+const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
-        ref: ref,
         scrollableTarget: "user-content-scroll-target",
         dataLength: questions.length,
-        next: fetchQuestions(true),
+        next: fetchQuestions,
         hasMore: hasMore,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
@@ -2092,7 +2091,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
                 }, i.id || i._id))
         })
     });
-});
+};
 
 
 
