@@ -2028,8 +2028,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
-    const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("questions");
+var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, selectedTab: selectedTab, setSelectedTab: setSelectedTab }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
         id: "user-content-scroll-target",
@@ -2075,10 +2074,7 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
                             createNewGroup: (content)=>createNewGroup(i._id, content),
                             ...i,
-                            onUserClick: ()=>{
-                                onUserClick(i.userId);
-                                setSelectedTab("questions");
-                            }
+                            onUserClick: ()=>onUserClick(i.userId)
                         }, i.id || i._id))
                 })
             })
