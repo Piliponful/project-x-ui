@@ -1875,7 +1875,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
                 sx: {
-                    color: "#bebebe"
+                    color: "#2b2b2b"
                 }
             })
         ]
@@ -2410,21 +2410,24 @@ var $31c024bdab3f9b58$exports = {};
 $parcel$export($31c024bdab3f9b58$exports, "dropdownContainer", () => $31c024bdab3f9b58$export$a3681dba3470c8c4, (v) => $31c024bdab3f9b58$export$a3681dba3470c8c4 = v);
 $parcel$export($31c024bdab3f9b58$exports, "dropdownItemsContainer", () => $31c024bdab3f9b58$export$960d6a7eb8ce632b, (v) => $31c024bdab3f9b58$export$960d6a7eb8ce632b = v);
 $parcel$export($31c024bdab3f9b58$exports, "dropdownValue", () => $31c024bdab3f9b58$export$2ff2bc1709095d00, (v) => $31c024bdab3f9b58$export$2ff2bc1709095d00 = v);
+$parcel$export($31c024bdab3f9b58$exports, "dropdownWithLabel", () => $31c024bdab3f9b58$export$4c1173217024b6d6, (v) => $31c024bdab3f9b58$export$4c1173217024b6d6 = v);
 $parcel$export($31c024bdab3f9b58$exports, "search", () => $31c024bdab3f9b58$export$d76128d007d19019, (v) => $31c024bdab3f9b58$export$d76128d007d19019 = v);
 $parcel$export($31c024bdab3f9b58$exports, "text", () => $31c024bdab3f9b58$export$6f093cfa640b7166, (v) => $31c024bdab3f9b58$export$6f093cfa640b7166 = v);
 var $31c024bdab3f9b58$export$a3681dba3470c8c4;
 var $31c024bdab3f9b58$export$960d6a7eb8ce632b;
 var $31c024bdab3f9b58$export$2ff2bc1709095d00;
+var $31c024bdab3f9b58$export$4c1173217024b6d6;
 var $31c024bdab3f9b58$export$d76128d007d19019;
 var $31c024bdab3f9b58$export$6f093cfa640b7166;
 $31c024bdab3f9b58$export$a3681dba3470c8c4 = `ue_oWq_dropdownContainer`;
 $31c024bdab3f9b58$export$960d6a7eb8ce632b = `ue_oWq_dropdownItemsContainer`;
 $31c024bdab3f9b58$export$2ff2bc1709095d00 = `ue_oWq_dropdownValue`;
+$31c024bdab3f9b58$export$4c1173217024b6d6 = `ue_oWq_dropdownWithLabel`;
 $31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
 $31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
 
 
-const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, duration: duration = "Most Answered", sort: sort = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style })=>{
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style })=>{
     const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
     const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -2447,120 +2450,130 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, d
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).text, className),
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
-                children: "Showing"
-            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
-                ref: ref,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownWithLabel,
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
-                        onClick: ()=>setShowSortDropdown(true),
-                        children: sort
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                        children: "Showing"
                     }),
-                    showSortDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
+                        ref: ref,
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setSortAndClose("Most Answered"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Most Answered"
-                                })
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
+                                onClick: ()=>setShowSortDropdown(true),
+                                children: sort
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setSortAndClose("Latest"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Latest"
-                                })
+                            showSortDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setSortAndClose("Most Answered"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Most Answered"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setSortAndClose("Latest"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Latest"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setSortAndClose("Most Controversial"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Most Controversial"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setSortAndClose("Most Unanimous"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Most Unanimous"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setSortAndClose("Most Followed Authors"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Most Followed Authors"
+                                        })
+                                    })
+                                ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setSortAndClose("Most Controversial"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Most Controversial"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setSortAndClose("Most Unanimous"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Most Unanimous"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setSortAndClose("Most Followed Authors"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Most Followed Authors"
-                                })
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                                onClick: ()=>setShowSortDropdown(true)
                             })
                         ]
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
-                        onClick: ()=>setShowSortDropdown(true)
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
-                children: [
-                    "Questions ",
-                    duration === "All Time" ? "of" : "for last"
-                ]
-            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
-                ref: ref2,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownWithLabel,
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
-                        onClick: ()=>setShowDurationDropdown(true),
-                        children: duration
-                    }),
-                    showDurationDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setDurationAndClose("Day"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Day"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setDurationAndClose("Week"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Week"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setDurationAndClose("Month"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Month"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setDurationAndClose("Year"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Year"
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                onClick: ()=>setDurationAndClose("All Time"),
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "All time"
-                                })
-                            })
+                            "Questions ",
+                            duration === "All Time" ? "of" : "for last"
                         ]
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
-                        onClick: ()=>setShowDurationDropdown(true)
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownContainer,
+                        ref: ref2,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownValue,
+                                onClick: ()=>setShowDurationDropdown(true),
+                                children: duration
+                            }),
+                            showDurationDropdown && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItemsContainer,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setDurationAndClose("Day"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Day"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setDurationAndClose("Week"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Week"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setDurationAndClose("Month"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Month"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setDurationAndClose("Year"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "Year"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
+                                        onClick: ()=>setDurationAndClose("All Time"),
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            children: "All time"
+                                        })
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                                onClick: ()=>setShowDurationDropdown(true)
+                            })
+                        ]
                     })
                 ]
             })
