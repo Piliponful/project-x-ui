@@ -174,8 +174,6 @@ const SidebarWithQuestions = () => {
     showSearch
   } = useContext(MainScreenSwipeContext)
 
-  console.log('show search: ', showSearch)
-
   return (
     <Sidebar style={{ padding: 10 }}>
       {
@@ -288,7 +286,6 @@ const Authorized = () => {
   const [usersSlice, setUsers] = useState(users.slice(0, 10))
 
   const hasMore = offset + 10 < users.length
-  console.log('more: ', hasMore, users.length, offset + 10)
 
   return (
     <>
@@ -309,10 +306,10 @@ const Authorized = () => {
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div>
-          <MainScreenWithQuestions />
+          {/* <MainScreenWithQuestions /> */}
           {/* <MainScreenWithUserQuestions /> */}
-          {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
-          <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
+          <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
+          {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
       )}
     </>
