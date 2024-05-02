@@ -25,8 +25,6 @@ export default ({ children }) => {
         return
       }
 
-      console.log('eventData: ', eventData)
-
       // if (eventData.dir === 'Right' || eventData.dir === 'Left') {
       //   const plus = (eventData.dir === 'Left' ? 1 : (-1))
       //   const newSwipeCount = (swipeCount + plus).mod(Object.values(screenBySwipeCount).length)

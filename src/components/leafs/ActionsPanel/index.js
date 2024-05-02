@@ -17,8 +17,6 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
 
   const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
 
-  console.log('ref inside actions panel: ', ref2)
-
   const content = (
     <>
       {
@@ -85,7 +83,6 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
     <div
       ref={node => {
         ref.current = node
-        console.log('setting ref2: ', ref2)
         if (ref2) {
           ref2(node)
         }
