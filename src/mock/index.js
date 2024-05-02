@@ -219,7 +219,7 @@ const users = new Array(8).fill(1).map((_, index) => [
     userId: '6623cfe7e1d83d0600c06a99',
     username: 'piliponful',
     fullName: 'Maxim Pilipenko',
-    pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_normal.jpg',
+    pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
     twitterVerified: false,
     followerCount: '67',
     address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
@@ -302,13 +302,13 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-          <div style={{ width: 241 }}>
+          {/* <div style={{ width: 241 }}>
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
-          </div>
+          </div> */}
           {/* <MainScreenWithQuestions /> */}
           {/* <MainScreenWithUserQuestions /> */}
-          <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
+          {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
           {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
       )}
