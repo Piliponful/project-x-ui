@@ -69,7 +69,7 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
       <a
         ref={node => {
           if (ref2) {
-            ref2.current = node
+            ref2(node)
           }
         }}
         className={styles.container}
@@ -87,7 +87,7 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
         ref.current = node
         console.log('setting ref2: ', ref2)
         if (ref2) {
-          ref2.current = node
+          ref2(node)
         }
       }}
       className={styles.container}

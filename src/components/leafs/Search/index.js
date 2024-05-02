@@ -17,7 +17,7 @@ export default forwardRef(({ search, buttonsOutside = false, className, style },
       ref={node => {
         ref.current = node
         if (ref2) {
-          ref2.current = node
+          ref2(node)
         }
       }}
       style={style}
