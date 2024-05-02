@@ -54,7 +54,8 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     name: 'Have you watched new season of attack on titan?',
     currentUserAnswer: 'Yes',
     answersCount: { yes: 383343, no: 23450 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 0
     // yourOwnQuestion: true,
     // hisAnswer: 'yes'
   },
@@ -62,37 +63,43 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
     answersCount: { yes: 112342, no: 311323 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 1
   },
   {
     name: 'Do you like naruto?',
     currentUserAnswer: null,
     answersCount: { yes: 240325, no: 101333 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 2
   },
   {
     name: 'Do you like battle between Sasuke and Naruto?',
     // currentUserAnswer: 'No',
     answersCount: { yes: 80341, no: 280341 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 3
   },
   {
     name: 'Do you believe Israel is genociding Gaza?',
     // currentUserAnswer: 'Yes',
     answersCount: { yes: 231031, no: 30328 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 4
   },
   {
     name: 'Do you believe in free speech?',
     // currentUserAnswer: 'Yes',
     answersCount: { yes: 231031, no: 30328 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 5
   },
   {
     name: 'Do you you support Trump?',
     // currentUserAnswer: 'Yes',
     answersCount: { yes: 231031, no: 30328 },
-    username: 'piliponful'
+    username: 'piliponful',
+    _id: 6
   }
 ]
 
@@ -284,14 +291,27 @@ const Authorized = () => {
   }, [])
   const [offset, setOffset] = useState(10)
   const [usersSlice, setUsers] = useState(users.slice(0, 10))
+  const [selectedTab, setSelectedTab] = useState('questions')
 
   const hasMore = offset + 10 < users.length
 
   return (
     <>
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
-      {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
-      {screenName === 'questions' && <SidebarWithQuestions />}
+      {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
+      {screenName === 'questions' && <SidebarWithQuestions />} */}
+      {screenName && (
+        <UserContentBlock
+          questions={mostAnsweredQuestions.slice(1, 2)}
+          questionsHasMore={false}
+          fetchQuestions={() => console.log('fetch questions')}
+          questionsWithAnswers={mostAnsweredQuestions.slice(0, 1)}
+          answersHasMore={false}
+          back={() => console.log('back')}
+          selectedTab={selectedTab}
+          setSelectedTab={setSelectedTab}
+        />
+      )}
 
       {!screenName && (
         <>
@@ -306,7 +326,7 @@ const Authorized = () => {
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div>
-          <MainScreenWithQuestions />
+          {/* <MainScreenWithQuestions /> */}
           {/* <MainScreenWithUserQuestions /> */}
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
           {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
