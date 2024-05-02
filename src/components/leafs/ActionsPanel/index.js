@@ -17,6 +17,8 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
 
   const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
 
+  console.log('ref inside actions panel: ', ref2)
+
   const content = (
     <>
       {
@@ -64,7 +66,16 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
 
   if (!username) {
     return (
-      <a className={styles.container} style={{ justifyContent: 'center' }} href={twitterAuthUrl}>
+      <a
+        ref={node => {
+          if (ref2) {
+            ref2.current = node
+          }
+        }}
+        className={styles.container}
+        style={{ justifyContent: 'center' }}
+        href={twitterAuthUrl}
+      >
         {content}
       </a>
     )
@@ -74,6 +85,7 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
     <div
       ref={node => {
         ref.current = node
+        console.log('setting ref2: ', ref2)
         if (ref2) {
           ref2.current = node
         }

@@ -1822,6 +1822,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     });
     const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
+    console.log("ref inside actions panel: ", ref2);
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
@@ -1882,6 +1883,9 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ]
     });
     if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+        ref: (node)=>{
+            if (ref2) ref2.current = node;
+        },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
         style: {
             justifyContent: "center"
@@ -1892,6 +1896,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         ref: (node)=>{
             ref.current = node;
+            console.log("setting ref2: ", ref2);
             if (ref2) ref2.current = node;
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
