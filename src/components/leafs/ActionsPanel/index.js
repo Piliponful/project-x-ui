@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, forwardRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
@@ -10,7 +10,7 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ logout, username, redirectUri, showMyHistory, changeUser, testUsers = [] }) => {
+export default forwardRef(({ logout, username, redirectUri, showMyHistory, changeUser, testUsers = [] }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
@@ -71,8 +71,15 @@ export default ({ logout, username, redirectUri, showMyHistory, changeUser, test
   }
 
   return (
-    <div ref={ref} className={styles.container} onClick={() => setShowDropdown(!showDropdown)}>
+    <div
+      ref={node => {
+        ref.current = node
+        ref2.current = node
+      }}
+      className={styles.container}
+      onClick={() => setShowDropdown(!showDropdown)}
+    >
       {content}
     </div>
   )
-}
+})

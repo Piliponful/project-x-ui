@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 
 import Input from './components/Input'
 
 import styles from './style.module.styl'
 
-export default ({ saveQuestion }) => {
+export default forwardRef(({ saveQuestion }, ref) => {
   const [question, setQuestion] = useState('')
 
   const onChange = (e) => {
@@ -21,8 +21,8 @@ export default ({ saveQuestion }) => {
   const disabled = !saveQuestion
 
   return (
-    <div className={styles.newQuestion}>
+    <div ref={ref} className={styles.newQuestion}>
       <Input disabled={disabled} value={question} onChange={onChange} />
     </div>
   )
-}
+})

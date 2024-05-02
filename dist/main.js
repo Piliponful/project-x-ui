@@ -923,7 +923,7 @@ var $6db7aebbd1711895$export$9ad540bb5fc131aa;
 $6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
 
 
-var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=>{
+var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
     const [question, setQuestion] = (0, $c5L0i$react.useState)("");
     const onChange = (e)=>{
         const newQuestion = e.target.value;
@@ -934,6 +934,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
     };
     const disabled = !saveQuestion;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
             disabled: disabled,
@@ -941,7 +942,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = ({ saveQuestion: saveQuestion })=
             onChange: onChange
         })
     });
-};
+});
 
 
 
@@ -1814,7 +1815,7 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: username, redirectUri: redirectUri, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [] })=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, redirectUri: redirectUri, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [] }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -1889,12 +1890,15 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = ({ logout: logout, username: user
         children: content
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        ref: ref,
+        ref: (node)=>{
+            ref.current = node;
+            ref2.current = node;
+        },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
         onClick: ()=>setShowDropdown(!showDropdown),
         children: content
     });
-};
+});
 
 
 
@@ -2114,7 +2118,7 @@ $a9ddd490efc245bf$export$d76128d007d19019 = `_6W1esa_search`;
 $a9ddd490efc245bf$export$6f093cfa640b7166 = `_6W1esa_text`;
 
 
-var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, buttonsOutside: buttonsOutside = false, className: className, style: style })=>{
+var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ search: search, buttonsOutside: buttonsOutside = false, className: className, style: style }, ref2)=>{
     const [text, setText] = (0, $c5L0i$react.useState)("");
     const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)("Questions");
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
@@ -2122,6 +2126,10 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, buttonsOutside
         onTriggered: ()=>setShowDropdown(false)
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        ref: (node)=>{
+            ref.current = node;
+            ref2.current = node;
+        },
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text, className, {
             [(0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).buttonsOutside]: buttonsOutside
@@ -2187,7 +2195,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, buttonsOutside
             })
         ]
     });
-};
+});
 
 
 
@@ -2425,7 +2433,7 @@ $31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
 $31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
 
 
-const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style })=>{
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ getMessages: getMessages, sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
     const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
     const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -2445,6 +2453,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, s
         getMessages(value, duration);
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        ref: ref3,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).text, className),
         children: [
@@ -2577,7 +2586,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = ({ getMessages: getMessages, s
             })
         ]
     });
-};
+});
 
 
 

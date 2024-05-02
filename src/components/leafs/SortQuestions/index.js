@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import cn from 'classnames'
@@ -7,7 +7,7 @@ import Title from '../GroupCard/components/Title'
 
 import styles from './style.module.styl'
 
-export const SortQuestions = ({ getMessages, sort = 'Most Answered', duration = 'Week', setSort, setDuration, className, style }) => {
+export const SortQuestions = forwardRef(({ getMessages, sort = 'Most Answered', duration = 'Week', setSort, setDuration, className, style }, ref3) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false)
   const [showDurationDropdown, setShowDurationDropdown] = useState(false)
 
@@ -27,7 +27,7 @@ export const SortQuestions = ({ getMessages, sort = 'Most Answered', duration = 
   }
 
   return (
-    <div style={style} className={cn(styles.text, className)}>
+    <div ref={ref3} style={style} className={cn(styles.text, className)}>
       <div className={styles.dropdownWithLabel}>
         <Title>Showing</Title>
         <div className={styles.dropdownContainer} ref={ref}>
@@ -62,4 +62,4 @@ export const SortQuestions = ({ getMessages, sort = 'Most Answered', duration = 
       </div>
     </div>
   )
-}
+})
