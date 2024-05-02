@@ -8,38 +8,47 @@ import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({
-  style, questions: userQuestions, questionsHasMore, answersHasMore, fetchQuestions, questionsWithAnswers, back, respond, createNewGroup, onUserClick, selectedTab, setSelectedTab
+export const UserHistoryTabs = forwardRef(({
+  selectedTab, setSelectedTab, back, children
 }, ref) => {
   return (
-    <div style={style} id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
+    <div id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
         <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answered Questions</div>
       </div>
-      <InfiniteScroll
-        scrollableTarget='user-content-scroll-target'
-        dataLength={selectedTab === 'questions' ? userQuestions.length : questionsWithAnswers.length}
-        next={fetchQuestions(true)}
-        hasMore={selectedTab === 'questions' ? questionsHasMore : answersHasMore}
-        className={styles.usersItems}
-      >
-        <FlipMove
-          appearAnimation='elevator'
-          typeName={null}
-        >
-          {(selectedTab === 'questions' ? userQuestions : questionsWithAnswers).map(i => (
-            <QuestionCard
-              key={i.id || i._id}
-              respond={respond && (content => respond(selectedTab === 'answers')(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
-              {...i}
-              onUserClick={() => onUserClick(i.userId)}
-            />
-          ))}
-        </FlipMove>
-      </InfiniteScroll>
+      {children}
     </div>
+  )
+})
+
+export const UserQuestionsHistory = forwardRef(({
+  questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick, selectedTab
+}, ref) => {
+  return (
+    <InfiniteScroll
+      ref={ref}
+      scrollableTarget='user-content-scroll-target'
+      dataLength={questions.length}
+      next={fetchQuestions(true)}
+      hasMore={hasMore}
+      className={styles.usersItems}
+    >
+      <FlipMove
+        appearAnimation='elevator'
+        typeName={null}
+      >
+        {questions.map(i => (
+          <QuestionCard
+            key={i.id || i._id}
+            respond={respond && (content => respond(i._id, content))}
+            createNewGroup={content => createNewGroup(i._id, content)}
+            {...i}
+            onUserClick={() => onUserClick(i.userId)}
+          />
+        ))}
+      </FlipMove>
+    </InfiniteScroll>
   )
 })

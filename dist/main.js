@@ -2037,9 +2037,8 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, questions: userQuestions, questionsHasMore: questionsHasMore, answersHasMore: answersHasMore, fetchQuestions: fetchQuestions, questionsWithAnswers: questionsWithAnswers, back: back, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, selectedTab: selectedTab, setSelectedTab: setSelectedTab }, ref)=>{
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-        style: style,
         id: "user-content-scroll-target",
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).screenWithGroupContent,
@@ -2070,24 +2069,28 @@ var $4c6bd8db1d735d14$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
-                scrollableTarget: "user-content-scroll-target",
-                dataLength: selectedTab === "questions" ? userQuestions.length : questionsWithAnswers.length,
-                next: fetchQuestions(true),
-                hasMore: selectedTab === "questions" ? questionsHasMore : answersHasMore,
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
-                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
-                    appearAnimation: "elevator",
-                    typeName: null,
-                    children: (selectedTab === "questions" ? userQuestions : questionsWithAnswers).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                            respond: respond && ((content)=>respond(selectedTab === "answers")(i._id, content)),
-                            createNewGroup: (content)=>createNewGroup(i._id, content),
-                            ...i,
-                            onUserClick: ()=>onUserClick(i.userId)
-                        }, i.id || i._id))
-                })
-            })
+            children
         ]
+    });
+});
+const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, selectedTab: selectedTab }, ref)=>{
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+        ref: ref,
+        scrollableTarget: "user-content-scroll-target",
+        dataLength: questions.length,
+        next: fetchQuestions(true),
+        hasMore: hasMore,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+            appearAnimation: "elevator",
+            typeName: null,
+            children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                    respond: respond && ((content)=>respond(i._id, content)),
+                    createNewGroup: (content)=>createNewGroup(i._id, content),
+                    ...i,
+                    onUserClick: ()=>onUserClick(i.userId)
+                }, i.id || i._id))
+        })
     });
 });
 
@@ -2611,7 +2614,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         Authentication: $9cd36ad568230ef5$export$2e2bcd8739ae039,
         ActionsPanel: $b29d4b4923c0cd00$export$2e2bcd8739ae039,
         GroupContentScreen: $42498b7876d29f2b$export$2e2bcd8739ae039,
-        UserContentBlock: $4c6bd8db1d735d14$export$2e2bcd8739ae039,
+        UserHistoryTabs: $4c6bd8db1d735d14$export$522e89d0fa1200f4,
+        UserQuestionsHistory: $4c6bd8db1d735d14$export$6241fe9ea73c6c74,
         Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039,
         QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039,
         UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039,

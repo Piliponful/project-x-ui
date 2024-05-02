@@ -11,7 +11,7 @@ import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
 import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
 import GroupContentScreen from './src/components/leafs/GroupContentScreen'
-import UserContentBlock from './src/components/leafs/UserContentBlock'
+import { UserHistoryTabs, UserQuestionsHistory } from './src/components/leafs/UserContentBlock'
 import Search from './src/components/leafs/Search'
 import QuestionsSearch from './src/components/leafs/QuestionsSearch'
 import UsersSearch from './src/components/leafs/UsersSearch'
@@ -35,7 +35,8 @@ export default {
     Authentication,
     ActionsPanel,
     GroupContentScreen,
-    UserContentBlock,
+    UserHistoryTabs,
+    UserQuestionsHistory,
     Search,
     QuestionsSearch,
     UsersSearch,
