@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'

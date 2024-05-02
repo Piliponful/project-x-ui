@@ -2219,7 +2219,7 @@ $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className }, ref)=>{
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className, onUserClick: onUserClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
@@ -2258,7 +2258,8 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         respond: respond && ((content)=>respond(i._id, content)),
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
-                        htmlName: htmlOutput
+                        htmlName: htmlOutput,
+                        onUserClick: ()=>onUserClick(i.userId)
                     }, i.id || i._id);
                 })
             })
