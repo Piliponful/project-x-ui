@@ -13,7 +13,16 @@ export default forwardRef(({ search, buttonsOutside = false, className, style },
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
 
   return (
-    <div ref={node => { ref.current = node; ref2.current = node }} style={style} className={cn(styles.text, className, { [styles.buttonsOutside]: buttonsOutside })}>
+    <div
+      ref={node => {
+        ref.current = node
+        if (ref2) {
+          ref2.current = node
+        }
+      }}
+      style={style}
+      className={cn(styles.text, className, { [styles.buttonsOutside]: buttonsOutside })}
+    >
       <input className={styles.input} placeholder='Search here...' onChange={e => setText(e.target.value)} value={text} />
       <div className={styles.dropdownContainer} ref={ref}>
         <div className={styles.dropdownValue} onClick={() => setShowDropdown(true)}>{dropdownValue}</div>

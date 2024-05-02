@@ -1892,7 +1892,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         ref: (node)=>{
             ref.current = node;
-            ref2.current = node;
+            if (ref2) ref2.current = node;
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
         onClick: ()=>setShowDropdown(!showDropdown),
@@ -2128,7 +2128,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         ref: (node)=>{
             ref.current = node;
-            ref2.current = node;
+            if (ref2) ref2.current = node;
         },
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).text, className, {

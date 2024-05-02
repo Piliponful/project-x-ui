@@ -74,7 +74,9 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
     <div
       ref={node => {
         ref.current = node
-        ref2.current = node
+        if (ref2) {
+          ref2.current = node
+        }
       }}
       className={styles.container}
       onClick={() => setShowDropdown(!showDropdown)}
