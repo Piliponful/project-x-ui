@@ -191,7 +191,7 @@ const SidebarWithQuestions = () => {
               height: 'auto',
               borderBottomRightRadius: 8,
               borderBottomLeftRadius: 8,
-              background: '#f4f3fd',
+              background: 'rgb(244 243 253 / 23%)',
               backdropFilter: 'blur(6px)',
               boxShadow: '0 3px 5.84px 0.16px #0c0c0c2b'
             }}
@@ -203,6 +203,7 @@ const SidebarWithQuestions = () => {
           </div>
         )
       }
+      <h3 style={{ fontFamily: 'IBM Plex Sans', color: '#2b2b2b', fontWeight: 300, marginTop: 0, marginBottom: 10 }}>Last Week Most Answered</h3>
       <GroupsContainer>
         {mostAnsweredQuestionsComponents}
       </GroupsContainer>
@@ -304,7 +305,7 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-          <div>
+          <div style={{ width: 241 }}>
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div>

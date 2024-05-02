@@ -55,7 +55,7 @@ export default ({ logout, username, redirectUri, showMyHistory, changeUser, test
         username && (
           <SettingsIcon
             className={styles.icon}
-            sx={{ color: '#bebebe' }}
+            sx={{ color: '#2b2b2b' }}
           />
         )
       }

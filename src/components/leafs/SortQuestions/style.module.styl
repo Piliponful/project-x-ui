@@ -1,12 +1,17 @@
 .text {
-  font-size: 18px;
+  font-size: 16px;
   // font-weight: 500;
   color: #bebebe;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
-  gap: 8px;
+  gap: 16px;
   // position: relative;
+
+  & > div > span {
+    font-weight: 300;
+    color: #3b3b3b;
+  }
 }
 
 .dropdownContainer {
@@ -48,8 +53,9 @@
   border-radius: 4px;
   cursor: pointer;
   color: #3b3b3b;
+  background: #2b2b2b0f;
   // background: #f4f3fd;
-  box-shadow: 0 3px 5.84px 0.16px #0c0c0c2b;
+  // box-shadow: 0 3px 5.84px 0.16px #0c0c0c2b;
   line-height: 1;
   box-sizing: border-box;
   transition: color .1s;
@@ -96,6 +102,12 @@
   & > div:first-child {
     border-top: none;
   }
+}
+
+.dropdownWithLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 @media only screen and (max-width: 386px) {
