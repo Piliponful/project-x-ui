@@ -2062,7 +2062,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
                         }),
                         onClick: ()=>setSelectedTab("answers"),
-                        children: "Answered Questions"
+                        children: "Answers"
                     })
                 ]
             }),
@@ -2160,7 +2160,9 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
-                                onClick: ()=>{
+                                onClick: (e)=>{
+                                    e.stopPropagation();
+                                    e.preventDefault();
                                     setDropdownValue("Questions");
                                     setShowDropdown(false);
                                 },
@@ -2170,7 +2172,9 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).dropdownItem,
-                                onClick: ()=>{
+                                onClick: (e)=>{
+                                    e.stopPropagation();
+                                    e.preventDefault();
                                     setDropdownValue("Users");
                                     setShowDropdown(false);
                                 },

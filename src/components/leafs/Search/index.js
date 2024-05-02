@@ -28,8 +28,8 @@ export default forwardRef(({ search, buttonsOutside = false, className, style },
         <div className={styles.dropdownValue} onClick={() => setShowDropdown(true)}>{dropdownValue}</div>
         {showDropdown && (
           <div className={styles.dropdownItemsContainer}>
-            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Questions'); setShowDropdown(false) }}><span>Questions</span></div>
-            <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Users'); setShowDropdown(false) }}><span>Users</span></div>
+            <div className={styles.dropdownItem} onClick={e => { e.stopPropagation(); e.preventDefault(); setDropdownValue('Questions'); setShowDropdown(false) }}><span>Questions</span></div>
+            <div className={styles.dropdownItem} onClick={e => { e.stopPropagation(); e.preventDefault(); setDropdownValue('Users'); setShowDropdown(false) }}><span>Users</span></div>
           </div>
         )}
         <ExpandMoreIcon className={styles.expandIcon} onClick={() => setShowDropdown(true)} />

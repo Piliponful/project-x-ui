@@ -16,7 +16,7 @@ export const UserHistoryTabs = forwardRef(({
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
-        <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answered Questions</div>
+        <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
       </div>
       {children}
     </div>
