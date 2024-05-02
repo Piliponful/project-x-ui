@@ -23,7 +23,7 @@ export default ({ search, buttonsOutside = false, className, style }) => {
             <div className={styles.dropdownItem} onClick={() => { setDropdownValue('Users'); setShowDropdown(false) }}><span>Users</span></div>
           </div>
         )}
-        <ExpandMoreIcon onClick={() => setShowDropdown(true)} />
+        <ExpandMoreIcon className={styles.expandIcon} onClick={() => setShowDropdown(true)} />
       </div>
       <button className={styles.search} onClick={() => search(dropdownValue, text)}>
         Find

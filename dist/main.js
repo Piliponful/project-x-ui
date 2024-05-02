@@ -2172,6 +2172,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = ({ search: search, buttonsOutside
                         ]
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialExpandMore))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($a9ddd490efc245bf$exports))).expandIcon,
                         onClick: ()=>setShowDropdown(true)
                     })
                 ]
