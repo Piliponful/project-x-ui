@@ -307,7 +307,7 @@ const Authorized = () => {
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div> */}
           {/* <MainScreenWithQuestions /> */}
-          {/* <MainScreenWithUserQuestions /> */}
+          <MainScreenWithUserQuestions />
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
           {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
