@@ -38,7 +38,6 @@ export const UserQuestionsHistory = ({
         appearAnimation='elevator'
         typeName={null}
         maintainContainerHeight
-        duration={5000}
       >
         {questions.map(i => (
           <QuestionCard
