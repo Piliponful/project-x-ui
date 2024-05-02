@@ -37,6 +37,7 @@ export const UserQuestionsHistory = ({
       <FlipMove
         appearAnimation='elevator'
         typeName={null}
+        maintainContainerHeight
       >
         {questions.map(i => (
           <QuestionCard

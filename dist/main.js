@@ -2080,6 +2080,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
             appearAnimation: "elevator",
             typeName: null,
+            maintainContainerHeight: true,
             children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                     respond: respond && ((content)=>respond(i._id, content)),
                     createNewGroup: (content)=>createNewGroup(i._id, content),

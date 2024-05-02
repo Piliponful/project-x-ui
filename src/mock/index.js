@@ -14,7 +14,7 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
-import UserContentBlock from '../components/leafs/UserContentBlock'
+import { UserHistoryTabs, UserQuestionsHistory } from '../components/leafs/UserContentBlock'
 import Search from '../components/leafs/Search'
 import QuestionsSearch from '../components/leafs/QuestionsSearch'
 import UsersSearch from '../components/leafs/UsersSearch'
@@ -278,7 +278,9 @@ const MainScreenWithQuestions = () => (
 )
 
 const MainScreenWithUserQuestions = () => (
-  <UserContentBlock fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
+  <UserHistoryTabs>
+    <UserQuestionsHistory fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
+  </UserHistoryTabs>
 )
 
 const Authorized = () => {
@@ -301,16 +303,29 @@ const Authorized = () => {
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
       {screenName === 'questions' && <SidebarWithQuestions />} */}
       {screenName && (
-        <UserContentBlock
-          questions={mostAnsweredQuestions.slice(1, 2)}
-          questionsHasMore={false}
-          fetchQuestions={() => console.log('fetch questions')}
-          questionsWithAnswers={mostAnsweredQuestions.slice(0, 1)}
-          answersHasMore={false}
+        <UserHistoryTabs
           back={() => console.log('back')}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
-        />
+        >
+          {
+            selectedTab === 'questions'
+              ? (
+                <UserQuestionsHistory
+                  questions={mostAnsweredQuestions.slice(0, 1)}
+                  hasMore={false}
+                  fetchQuestions={() => console.log('fetch questions')}
+                />
+                )
+              : (
+                <UserQuestionsHistory
+                  questions={[]}
+                  hasMore={false}
+                  fetchQuestions={() => console.log('fetch questions')}
+                />
+                )
+          }
+        </UserHistoryTabs>
       )}
 
       {!screenName && (
