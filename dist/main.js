@@ -2043,8 +2043,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children, similarity: similarity, compareWithMe: compareWithMe, answers: answers }, ref)=>{
-    console.log("answers: ", answers);
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children, similarity: similarity, compareWithMe: compareWithMe }, ref)=>{
     const [showDifference, setShowDifference] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
@@ -2133,15 +2132,16 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
         })
     });
 };
-const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers = {
-    different: [],
-    same: [],
-    notAnswered: []
-}, hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
+const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
+    const [answers1, setAnswers] = (0, $c5L0i$react.useState)({
+        different: [],
+        same: [],
+        notAnswered: []
+    });
     (0, $c5L0i$react.useEffect)(()=>{
-        compareWithMe();
+        compareWithMe().then((answers1)=>setAnswers(answers1));
     }, []);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -2192,7 +2192,7 @@ const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers = {
             }) : null,
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
                 scrollableTarget: "user-content-scroll-target",
-                dataLength: answers[selectedTab].length,
+                dataLength: answers1[selectedTab].length,
                 next: fetchAnswers,
                 hasMore: hasMore,
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
@@ -2200,7 +2200,7 @@ const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers = {
                     appearAnimation: "elevator",
                     typeName: null,
                     maintainContainerHeight: true,
-                    children: (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                    children: (selectedTab === "notAnswered" ? answers1[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers1[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                             respond: respond && ((content)=>respond(i._id, content)),
                             createNewGroup: (content)=>createNewGroup(i._id, content),
                             ...i,

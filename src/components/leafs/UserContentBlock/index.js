@@ -9,9 +9,8 @@ import QuestionCard from '../QuestionCard'
 import styles from './style.module.styl'
 
 export const UserHistoryTabs = forwardRef(({
-  selectedTab, setSelectedTab, back, children, similarity, compareWithMe, answers
+  selectedTab, setSelectedTab, back, children, similarity, compareWithMe
 }, ref) => {
-  console.log('answers: ', answers)
   const [showDifference, setShowDifference] = useState(false)
 
   useEffect(() => {
@@ -73,11 +72,6 @@ export const UserQuestionsHistory = ({
 }
 
 export const UserAnswerDifferences = ({
-  answers = {
-    different: [],
-    same: [],
-    notAnswered: []
-  },
   hasMore,
   fetchAnswers,
   respond,
@@ -87,9 +81,14 @@ export const UserAnswerDifferences = ({
 }) => {
   const [selectedTab, setSelectedTab] = useState('different')
   const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
+  const [answers, setAnswers] = useState({
+    different: [],
+    same: [],
+    notAnswered: []
+  })
 
   useEffect(() => {
-    compareWithMe()
+    compareWithMe().then(answers => setAnswers(answers))
   }, [])
 
   return (
