@@ -2019,22 +2019,43 @@ var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
 $parcel$export($d96dc328a9b2259c$exports, "backContainer", () => $d96dc328a9b2259c$export$4effee6a14a93095, (v) => $d96dc328a9b2259c$export$4effee6a14a93095 = v);
+$parcel$export($d96dc328a9b2259c$exports, "button", () => $d96dc328a9b2259c$export$2ba01fb71ed41cb6, (v) => $d96dc328a9b2259c$export$2ba01fb71ed41cb6 = v);
+$parcel$export($d96dc328a9b2259c$exports, "differentTabs", () => $d96dc328a9b2259c$export$b70bd1b6fa2267e5, (v) => $d96dc328a9b2259c$export$b70bd1b6fa2267e5 = v);
+$parcel$export($d96dc328a9b2259c$exports, "differentTabs2", () => $d96dc328a9b2259c$export$11056a9a5a9dfdf9, (v) => $d96dc328a9b2259c$export$11056a9a5a9dfdf9 = v);
 $parcel$export($d96dc328a9b2259c$exports, "screenWithGroupContent", () => $d96dc328a9b2259c$export$de3da254965f2f43, (v) => $d96dc328a9b2259c$export$de3da254965f2f43 = v);
 $parcel$export($d96dc328a9b2259c$exports, "selected", () => $d96dc328a9b2259c$export$d90250155de6d7e7, (v) => $d96dc328a9b2259c$export$d90250155de6d7e7 = v);
 $parcel$export($d96dc328a9b2259c$exports, "tabs", () => $d96dc328a9b2259c$export$39f5674517ec0000, (v) => $d96dc328a9b2259c$export$39f5674517ec0000 = v);
 var $d96dc328a9b2259c$export$7c341cb16fc91138;
 var $d96dc328a9b2259c$export$4effee6a14a93095;
+var $d96dc328a9b2259c$export$2ba01fb71ed41cb6;
+var $d96dc328a9b2259c$export$b70bd1b6fa2267e5;
+var $d96dc328a9b2259c$export$11056a9a5a9dfdf9;
 var $d96dc328a9b2259c$export$de3da254965f2f43;
 var $d96dc328a9b2259c$export$d90250155de6d7e7;
 var $d96dc328a9b2259c$export$39f5674517ec0000;
 $d96dc328a9b2259c$export$7c341cb16fc91138 = `_31v-EG_back`;
 $d96dc328a9b2259c$export$4effee6a14a93095 = `_31v-EG_backContainer`;
+$d96dc328a9b2259c$export$2ba01fb71ed41cb6 = `_31v-EG_button`;
+$d96dc328a9b2259c$export$b70bd1b6fa2267e5 = `_31v-EG_differentTabs`;
+$d96dc328a9b2259c$export$11056a9a5a9dfdf9 = `_31v-EG_differentTabs2`;
 $d96dc328a9b2259c$export$de3da254965f2f43 = `_31v-EG_screenWithGroupContent`;
 $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children }, ref)=>{
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children, similarity: similarity, compareWithMe: compareWithMe, answers: answers }, ref)=>{
+    console.log("answers: ", answers);
+    const [showDifference, setShowDifference] = (0, $c5L0i$react.useState)(false);
+    (0, $c5L0i$react.useEffect)(()=>{
+        if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
+    }, [
+        showDifference
+    ]);
+    (0, $c5L0i$react.useEffect)(()=>{
+        if (showDifference && selectedTab !== "answers") setShowDifference(false);
+    }, [
+        selectedTab
+    ]);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         id: "user-content-scroll-target",
         ref: ref,
@@ -2046,6 +2067,23 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).back,
                     onClick: back
                 })
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                children: [
+                    "Similarity to you: ",
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("b", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarityMeter,
+                        children: [
+                            similarity,
+                            "%"
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
+                onClick: ()=>setShowDifference(true),
+                children: "Compare With Me"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
@@ -2066,28 +2104,107 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     })
                 ]
             }),
-            children
+            showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$a6816b34ad549b0, {
+                compareWithMe: compareWithMe,
+                answers: answers
+            }) : children
         ]
     });
 });
 const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick })=>{
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
-        scrollableTarget: "user-content-scroll-target",
-        dataLength: questions.length,
-        next: fetchQuestions,
-        hasMore: hasMore,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
-            appearAnimation: "elevator",
-            typeName: null,
-            maintainContainerHeight: true,
-            children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                    respond: respond && ((content)=>respond(i._id, content)),
-                    createNewGroup: (content)=>createNewGroup(i._id, content),
-                    ...i,
-                    onUserClick: ()=>onUserClick(i.userId)
-                }, i.id || i._id))
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+            scrollableTarget: "user-content-scroll-target",
+            dataLength: questions.length,
+            next: fetchQuestions,
+            hasMore: hasMore,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
+            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+                appearAnimation: "elevator",
+                typeName: null,
+                maintainContainerHeight: true,
+                children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                        respond: respond && ((content)=>respond(i._id, content)),
+                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        ...i,
+                        onUserClick: ()=>onUserClick(i.userId)
+                    }, i.id || i._id))
+            })
         })
+    });
+};
+const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers, hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
+    const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
+    const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
+    (0, $c5L0i$react.useEffect)(()=>{
+        compareWithMe();
+    }, []);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).differentTabs),
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "different"
+                        }),
+                        onClick: ()=>setSelectedTab("different"),
+                        children: "Different"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "same"
+                        }),
+                        onClick: ()=>setSelectedTab("same"),
+                        children: "Same"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "notAnswered"
+                        }),
+                        onClick: ()=>setSelectedTab("notAnswered"),
+                        children: "Not Answered"
+                    })
+                ]
+            }),
+            selectedTab === "notAnswered" ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).differentTabs2),
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === "byMe"
+                        }),
+                        onClick: ()=>setSelectedNestedTab("byMe"),
+                        children: "By Me"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === "byHim"
+                        }),
+                        onClick: ()=>setSelectedNestedTab("byHim"),
+                        children: "By Him/Her"
+                    })
+                ]
+            }) : null,
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
+                scrollableTarget: "user-content-scroll-target",
+                dataLength: answers[selectedTab].length,
+                next: fetchAnswers,
+                hasMore: hasMore,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+                    appearAnimation: "elevator",
+                    typeName: null,
+                    maintainContainerHeight: true,
+                    children: (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                            respond: respond && ((content)=>respond(i._id, content)),
+                            createNewGroup: (content)=>createNewGroup(i._id, content),
+                            ...i,
+                            onUserClick: ()=>onUserClick(i.userId)
+                        }, i.id || i._id))
+                })
+            })
+        ]
     });
 };
 

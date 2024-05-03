@@ -55,7 +55,8 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     currentUserAnswer: 'Yes',
     answersCount: { yes: 383343, no: 23450 },
     username: 'piliponful',
-    _id: 0
+    _id: 0,
+    byMe: true
     // yourOwnQuestion: true,
     // hisAnswer: 'yes'
   },
@@ -64,7 +65,8 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     currentUserAnswer: null,
     answersCount: { yes: 112342, no: 311323 },
     username: 'piliponful',
-    _id: 1
+    _id: 1,
+    byMe: true
   },
   {
     name: 'Do you like naruto?',
@@ -265,7 +267,7 @@ const users = new Array(8).fill(1).map((_, index) => [
 ]).flat()
 
 const MainScreenWithQuestions = () => (
-  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
+  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10, marginRight: 241 }}>
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
@@ -277,8 +279,18 @@ const MainScreenWithQuestions = () => (
   </MainScreen>
 )
 
-const MainScreenWithUserQuestions = () => (
-  <UserHistoryTabs>
+const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => (
+  <UserHistoryTabs
+    selectedTab={selectedTab}
+    setSelectedTab={setSelectedTab}
+    similarity={80}
+    answers={{
+      different: mostAnsweredQuestions.slice(0, 1),
+      same: mostAnsweredQuestions.slice(1, 2),
+      notAnswered: mostAnsweredQuestions.slice(0, 4)
+    }}
+    compareWithMe={() => console.log('compare with em')}
+  >
     <UserQuestionsHistory fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
   </UserHistoryTabs>
 )
@@ -304,7 +316,9 @@ const Authorized = () => {
       {screenName === 'questions' && <SidebarWithQuestions />} */}
       {screenName && (
         <UserHistoryTabs
+          answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
           back={() => console.log('back')}
+          similarity={80}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
         >
@@ -337,12 +351,12 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-          <div style={{ width: 241 }}>
+          {/* <div style={{ width: 241 }}>
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div>
-          {/* <MainScreenWithQuestions /> */}
-          {/* <MainScreenWithUserQuestions /> */}
+          <MainScreenWithQuestions /> */}
+          <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
           {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
           {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
         </>
