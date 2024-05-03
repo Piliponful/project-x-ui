@@ -75,19 +75,23 @@ export const UserAnswerDifferences = ({
   respond,
   createNewGroup,
   onUserClick,
-  compareWithMe
-}) => {
-  const [selectedTab, setSelectedTab] = useState('different')
-  const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
-  const [answers, setAnswers] = useState({
+  answers = {
     different: [],
     same: [],
     notAnswered: []
-  })
+  }
+}) => {
+  const [selectedTab, setSelectedTab] = useState('different')
+  const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
+  // const [answers, setAnswers] = useState({
+  //   different: [],
+  //   same: [],
+  //   notAnswered: []
+  // })
 
-  useEffect(() => {
-    compareWithMe().then(answers => setAnswers(answers))
-  }, [])
+  // useEffect(() => {
+  //   compareWithMe().then(answers => setAnswers(answers))
+  // }, [])
 
   return (
     <>

@@ -2130,17 +2130,21 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
 };
 const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ respond: // hasMore,
 // fetchAnswers,
-respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
+respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers = {
+    different: [],
+    same: [],
+    notAnswered: []
+} })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
-    const [answers, setAnswers] = (0, $c5L0i$react.useState)({
-        different: [],
-        same: [],
-        notAnswered: []
-    });
-    (0, $c5L0i$react.useEffect)(()=>{
-        compareWithMe().then((answers)=>setAnswers(answers));
-    }, []);
+    // const [answers, setAnswers] = useState({
+    //   different: [],
+    //   same: [],
+    //   notAnswered: []
+    // })
+    // useEffect(() => {
+    //   compareWithMe().then(answers => setAnswers(answers))
+    // }, [])
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
