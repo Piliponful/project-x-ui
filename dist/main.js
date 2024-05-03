@@ -2043,8 +2043,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, back: back, children: children, similarity: similarity, compareWithMe: compareWithMe }, ref)=>{
-    const [showDifference, setShowDifference] = (0, $c5L0i$react.useState)(false);
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
     }, [
@@ -2103,10 +2102,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     })
                 ]
             }),
-            showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$a6816b34ad549b0, {
-                compareWithMe: compareWithMe,
-                answers: answers
-            }) : children
+            children
         ]
     });
 });
@@ -2132,16 +2128,18 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
         })
     });
 };
-const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
+const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ respond: // hasMore,
+// fetchAnswers,
+respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
-    const [answers1, setAnswers] = (0, $c5L0i$react.useState)({
+    const [answers, setAnswers] = (0, $c5L0i$react.useState)({
         different: [],
         same: [],
         notAnswered: []
     });
     (0, $c5L0i$react.useEffect)(()=>{
-        compareWithMe().then((answers1)=>setAnswers(answers1));
+        compareWithMe().then((answers)=>setAnswers(answers));
     }, []);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -2190,23 +2188,16 @@ const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ hasMore: hasMore, fetchAnswe
                     })
                 ]
             }) : null,
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
-                scrollableTarget: "user-content-scroll-target",
-                dataLength: answers1[selectedTab].length,
-                next: fetchAnswers,
-                hasMore: hasMore,
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
-                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
-                    appearAnimation: "elevator",
-                    typeName: null,
-                    maintainContainerHeight: true,
-                    children: (selectedTab === "notAnswered" ? answers1[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers1[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                            respond: respond && ((content)=>respond(i._id, content)),
-                            createNewGroup: (content)=>createNewGroup(i._id, content),
-                            ...i,
-                            onUserClick: ()=>onUserClick(i.userId)
-                        }, i.id || i._id))
-                })
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+                appearAnimation: "elevator",
+                typeName: null,
+                maintainContainerHeight: true,
+                children: (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                        respond: respond && ((content)=>respond(i._id, content)),
+                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        ...i,
+                        onUserClick: ()=>onUserClick(i.userId)
+                    }, i.id || i._id))
             })
         ]
     });
@@ -2741,7 +2732,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         Search: $95c6e69ef8ee0198$export$2e2bcd8739ae039,
         QuestionsSearch: $9330b1b20ef62cea$export$2e2bcd8739ae039,
         UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039,
-        SortQuestions: $b355bd374f45d8d9$export$f8fcd3a81add9e17
+        SortQuestions: $b355bd374f45d8d9$export$f8fcd3a81add9e17,
+        UserAnswerDifferences: $4c6bd8db1d735d14$export$a6816b34ad549b0
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

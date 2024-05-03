@@ -9,10 +9,8 @@ import QuestionCard from '../QuestionCard'
 import styles from './style.module.styl'
 
 export const UserHistoryTabs = forwardRef(({
-  selectedTab, setSelectedTab, back, children, similarity, compareWithMe
+  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity
 }, ref) => {
-  const [showDifference, setShowDifference] = useState(false)
-
   useEffect(() => {
     if (showDifference && selectedTab !== 'answers') {
       setSelectedTab('answers')
@@ -34,7 +32,7 @@ export const UserHistoryTabs = forwardRef(({
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
         <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
       </div>
-      {showDifference ? <UserAnswerDifferences compareWithMe={compareWithMe} answers={answers} /> : children}
+      {children}
     </div>
   )
 })
@@ -72,8 +70,8 @@ export const UserQuestionsHistory = ({
 }
 
 export const UserAnswerDifferences = ({
-  hasMore,
-  fetchAnswers,
+  // hasMore,
+  // fetchAnswers,
   respond,
   createNewGroup,
   onUserClick,
@@ -108,32 +106,32 @@ export const UserAnswerDifferences = ({
             )
           : null
       }
-      <InfiniteScroll
+      {/* <InfiniteScroll
         scrollableTarget='user-content-scroll-target'
         dataLength={answers[selectedTab].length}
         next={fetchAnswers}
         hasMore={hasMore}
         className={styles.usersItems}
+      > */}
+      <FlipMove
+        appearAnimation='elevator'
+        typeName={null}
+        maintainContainerHeight
       >
-        <FlipMove
-          appearAnimation='elevator'
-          typeName={null}
-          maintainContainerHeight
-        >
-          {(selectedTab === 'notAnswered'
-            ? answers[selectedTab].filter(i => selectedNestedTab === 'byMe' ? i.byMe : !i.byMe)
-            : answers[selectedTab]
-          ).map(i => (
-            <QuestionCard
-              key={i.id || i._id}
-              respond={respond && (content => respond(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
-              {...i}
-              onUserClick={() => onUserClick(i.userId)}
-            />
-          ))}
-        </FlipMove>
-      </InfiniteScroll>
+        {(selectedTab === 'notAnswered'
+          ? answers[selectedTab].filter(i => selectedNestedTab === 'byMe' ? i.byMe : !i.byMe)
+          : answers[selectedTab]
+        ).map(i => (
+          <QuestionCard
+            key={i.id || i._id}
+            respond={respond && (content => respond(i._id, content))}
+            createNewGroup={content => createNewGroup(i._id, content)}
+            {...i}
+            onUserClick={() => onUserClick(i.userId)}
+          />
+        ))}
+      </FlipMove>
+      {/* </InfiniteScroll> */}
     </>
   )
 }
