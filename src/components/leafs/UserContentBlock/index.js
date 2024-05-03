@@ -73,7 +73,17 @@ export const UserQuestionsHistory = ({
 }
 
 export const UserAnswerDifferences = ({
-  answers, hasMore, fetchAnswers, respond, createNewGroup, onUserClick, compareWithMe
+  answers = {
+    different: [],
+    same: [],
+    notAnswered: []
+  },
+  hasMore,
+  fetchAnswers,
+  respond,
+  createNewGroup,
+  onUserClick,
+  compareWithMe
 }) => {
   const [selectedTab, setSelectedTab] = useState('different')
   const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')

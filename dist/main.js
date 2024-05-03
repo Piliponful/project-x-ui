@@ -2133,7 +2133,11 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
         })
     });
 };
-const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers, hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
+const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ answers: answers = {
+    different: [],
+    same: [],
+    notAnswered: []
+}, hasMore: hasMore, fetchAnswers: fetchAnswers, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, compareWithMe: compareWithMe })=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
     (0, $c5L0i$react.useEffect)(()=>{
