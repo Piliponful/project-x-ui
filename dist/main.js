@@ -2602,7 +2602,7 @@ $31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
 $31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
 
 
-const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ getMessages: getMessages, sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
     const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
     const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -2614,12 +2614,10 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
     const setDurationAndClose = (value)=>{
         setDuration(value);
         setShowDurationDropdown(false);
-        getMessages(sort, value);
     };
     const setSortAndClose = (value)=>{
         setSort(value);
         setShowSortDropdown(false);
-        getMessages(value, duration);
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         ref: ref3,

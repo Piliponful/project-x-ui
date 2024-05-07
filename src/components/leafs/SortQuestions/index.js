@@ -7,7 +7,7 @@ import Title from '../GroupCard/components/Title'
 
 import styles from './style.module.styl'
 
-export const SortQuestions = forwardRef(({ getMessages, sort = 'Most Answered', duration = 'Week', setSort, setDuration, className, style }, ref3) => {
+export const SortQuestions = forwardRef(({ sort = 'Most Answered', duration = 'Week', setSort, setDuration, className, style }, ref3) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false)
   const [showDurationDropdown, setShowDurationDropdown] = useState(false)
 
@@ -17,13 +17,11 @@ export const SortQuestions = forwardRef(({ getMessages, sort = 'Most Answered', 
   const setDurationAndClose = value => {
     setDuration(value)
     setShowDurationDropdown(false)
-    getMessages(sort, value)
   }
 
   const setSortAndClose = value => {
     setSort(value)
     setShowSortDropdown(false)
-    getMessages(value, duration)
   }
 
   return (
