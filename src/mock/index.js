@@ -309,7 +309,7 @@ const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
                   createNewGroup={() => console.log('get users by answer')}
                   onUserClick={() => console.log('on user click')}
                   answers={{
-                    different: mostAnsweredQuestions.slice(0, 1),
+                    different: [],
                     same: mostAnsweredQuestions.slice(1, 2),
                     notAnswered: mostAnsweredQuestions.slice(0, 4)
                   }}

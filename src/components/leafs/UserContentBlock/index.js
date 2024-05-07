@@ -53,9 +53,36 @@ export const UserHistoryTabs = forwardRef(({
   )
 })
 
+export const Empty = () => (
+  <div
+    style={{
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}
+  >
+    <span
+      style={{
+        color: '#3b3b3b',
+        fontSize: 36,
+        fontWeight: 300
+      }}
+    >
+      empty
+    </span>
+  </div>
+)
+
+Empty.prototype = {}
+
 export const UserQuestionsHistory = forwardRef(({
   questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick
 }, ref) => {
+  if (questions.length === 0) {
+    return <Empty />
+  }
   return (
     <>
       <InfiniteScroll
@@ -109,6 +136,19 @@ export const UserAnswerDifferences = forwardRef(({
   //   compareWithMe().then(answers => setAnswers(answers))
   // }, [])
 
+  const questionsToShow = (selectedTab === 'notAnswered'
+    ? answers[selectedTab].filter(i => selectedNestedTab === 'byMe' ? i.byMe : !i.byMe)
+    : answers[selectedTab]
+  ).map(i => (
+    <QuestionCard
+      key={i.id || i._id}
+      respond={respond && (content => respond(i._id, content))}
+      createNewGroup={content => createNewGroup(i._id, content)}
+      {...i}
+      onUserClick={() => onUserClick(i.userId)}
+    />
+  ))
+
   return (
     <>
       <div className={cn(styles.tabs, styles.differentTabs)}>
@@ -133,23 +173,13 @@ export const UserAnswerDifferences = forwardRef(({
         hasMore={hasMore}
         className={styles.usersItems}
       > */}
+      {questionsToShow.length === 0 && <Empty />}
       <FlipMove
         appearAnimation='elevator'
         typeName={null}
         maintainContainerHeight
       >
-        {(selectedTab === 'notAnswered'
-          ? answers[selectedTab].filter(i => selectedNestedTab === 'byMe' ? i.byMe : !i.byMe)
-          : answers[selectedTab]
-        ).map(i => (
-          <QuestionCard
-            key={i.id || i._id}
-            respond={respond && (content => respond(i._id, content))}
-            createNewGroup={content => createNewGroup(i._id, content)}
-            {...i}
-            onUserClick={() => onUserClick(i.userId)}
-          />
-        ))}
+        {questionsToShow}
       </FlipMove>
       {/* </InfiniteScroll> */}
     </>

@@ -2129,7 +2129,26 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
         ]
     });
 });
+const $4c6bd8db1d735d14$export$1f74963c34e8bfec = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        style: {
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+        },
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+            style: {
+                color: "#3b3b3b",
+                fontSize: 36,
+                fontWeight: 300
+            },
+            children: "empty"
+        })
+    });
+$4c6bd8db1d735d14$export$1f74963c34e8bfec.prototype = {};
 const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
+    if (questions.length === 0) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {});
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
             scrollableTarget: "user-content-scroll-target",
@@ -2168,6 +2187,12 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
     // useEffect(() => {
     //   compareWithMe().then(answers => setAnswers(answers))
     // }, [])
+    const questionsToShow = (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+            respond: respond && ((content)=>respond(i._id, content)),
+            createNewGroup: (content)=>createNewGroup(i._id, content),
+            ...i,
+            onUserClick: ()=>onUserClick(i.userId)
+        }, i.id || i._id));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2215,16 +2240,12 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                     })
                 ]
             }) : null,
+            questionsToShow.length === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {}),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
                 appearAnimation: "elevator",
                 typeName: null,
                 maintainContainerHeight: true,
-                children: (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
-                        respond: respond && ((content)=>respond(i._id, content)),
-                        createNewGroup: (content)=>createNewGroup(i._id, content),
-                        ...i,
-                        onUserClick: ()=>onUserClick(i.userId)
-                    }, i.id || i._id))
+                children: questionsToShow
             })
         ]
     });
