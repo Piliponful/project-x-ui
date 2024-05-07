@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
+import FlipMove from 'react-flip-move'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -14,7 +15,7 @@ import QuestionCard from '../components/leafs/QuestionCard'
 import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
-import { UserHistoryTabs, UserQuestionsHistory } from '../components/leafs/UserContentBlock'
+import { UserHistoryTabs, UserQuestionsHistory, UserAnswerDifferences } from '../components/leafs/UserContentBlock'
 import Search from '../components/leafs/Search'
 import QuestionsSearch from '../components/leafs/QuestionsSearch'
 import UsersSearch from '../components/leafs/UsersSearch'
@@ -279,21 +280,57 @@ const MainScreenWithQuestions = () => (
   </MainScreen>
 )
 
-const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => (
-  <UserHistoryTabs
-    selectedTab={selectedTab}
-    setSelectedTab={setSelectedTab}
-    similarity={null}
-    answers={{
-      different: mostAnsweredQuestions.slice(0, 1),
-      same: mostAnsweredQuestions.slice(1, 2),
-      notAnswered: mostAnsweredQuestions.slice(0, 4)
-    }}
-    compareWithMe={() => console.log('compare with em')}
-  >
-    <UserQuestionsHistory fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />
-  </UserHistoryTabs>
-)
+const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
+  const [showDifferences, setShowDifferences] = useState(false)
+  UserQuestionsHistory.prototype = {}
+  UserAnswerDifferences.prototype = {}
+  return (
+    <UserHistoryTabs
+      selectedTab={selectedTab}
+      setSelectedTab={setSelectedTab}
+      similarity={80}
+      answers={{
+        different: mostAnsweredQuestions.slice(0, 1),
+        same: mostAnsweredQuestions.slice(1, 2),
+        notAnswered: mostAnsweredQuestions.slice(0, 4)
+      }}
+      compareWithMe={() => console.log('compare with em')}
+      showDifference={showDifferences}
+      setShowDifference={setShowDifferences}
+    >
+      <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
+        {
+          selectedTab === 'questions'
+            ? (<UserQuestionsHistory fetchQuestions={() => {}} questions={mostAnsweredQuestions} questionsWithAnswers={mostAnsweredQuestionsAnswered} user={users[4]} />)
+            : showDifferences
+              ? (
+                <UserAnswerDifferences
+                  respond={() => console.log('respond')}
+                  createNewGroup={() => console.log('get users by answer')}
+                  onUserClick={() => console.log('on user click')}
+                  answers={{
+                    different: mostAnsweredQuestions.slice(0, 1),
+                    same: mostAnsweredQuestions.slice(1, 2),
+                    notAnswered: mostAnsweredQuestions.slice(0, 4)
+                  }}
+                />
+                )
+              : (
+                <UserQuestionsHistory
+                  style={{ margin: '10px', maxWidth: 'none' }}
+                  fetchQuestions={() => console.log('fetch user answers')}
+                  hasMore={false}
+                  respond={() => console.log('respond')}
+                  createNewGroup={() => console.log('get users by answer')}
+                  questions={mostAnsweredQuestions}
+                  onUserClick={() => console.log('on user click')}
+                />
+                )
+        }
+      </FlipMove>
+    </UserHistoryTabs>
+  )
+}
 
 const Authorized = () => {
   const {
@@ -314,7 +351,7 @@ const Authorized = () => {
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
       {screenName === 'questions' && <SidebarWithQuestions />} */}
-      {screenName && (
+      {/* {screenName && (
         <UserHistoryTabs
           answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
           back={() => console.log('back')}
@@ -340,27 +377,27 @@ const Authorized = () => {
                 )
           }
         </UserHistoryTabs>
-      )}
+      )} */}
 
-      {!screenName && (
-        <>
-          {/* <SidebarWithGroups /> */}
-          {/* <GroupContentScreen
+      {/* {!screenName && ( */}
+      <>
+        {/* <SidebarWithGroups /> */}
+        {/* <GroupContentScreen
             className='custom-groups-content'
             hasMore={hasMore}
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-          {/* <div style={{ width: 241 }}>
+        {/* <div style={{ width: 241 }}>
             <Search buttonsOutside search={() => console.log('search')} />
             <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
           </div>
           <MainScreenWithQuestions /> */}
-          <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-          {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
-          {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
-        </>
-      )}
+        <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
+        {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
+      </>
+      {/* )} */}
     </>
   )
 }

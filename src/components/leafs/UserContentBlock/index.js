@@ -4,6 +4,7 @@ import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import FlipMove from 'react-flip-move'
 import _ from 'lodash'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 import QuestionCard from '../QuestionCard'
 
@@ -30,21 +31,31 @@ export const UserHistoryTabs = forwardRef(({
       {!_.isNull(similarity) && (
         <>
           <p>Similarity to you: <b className={styles.similarityMeter}>{similarity}%</b></p>
-          <button className={styles.button} onClick={() => setShowDifference(true)}>Compare With Me</button>
+          <button className={styles.button} onClick={() => setShowDifference(!showDifference)}>
+            {
+              showDifference
+                ? <div style={{ display: 'flex', alignItems: 'center' }}><ArrowBackIcon sx={{ fontSize: 14, marginRight: '5px' }} /><span>Back</span></div>
+                : 'Show Differences'
+            }
+          </button>
         </>
       )}
-      <div className={styles.tabs}>
-        <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
-        <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
-      </div>
+      {
+        !showDifference && (
+          <div className={styles.tabs}>
+            <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
+            <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
+          </div>
+        )
+      }
       {children}
     </div>
   )
 })
 
-export const UserQuestionsHistory = ({
+export const UserQuestionsHistory = forwardRef(({
   questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick
-}) => {
+}, ref) => {
   return (
     <>
       <InfiniteScroll
@@ -72,9 +83,9 @@ export const UserQuestionsHistory = ({
       </InfiniteScroll>
     </>
   )
-}
+})
 
-export const UserAnswerDifferences = ({
+export const UserAnswerDifferences = forwardRef(({
   // hasMore,
   // fetchAnswers,
   respond,
@@ -85,7 +96,7 @@ export const UserAnswerDifferences = ({
     same: [],
     notAnswered: []
   }
-}) => {
+}, ref) => {
   const [selectedTab, setSelectedTab] = useState('different')
   const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
   // const [answers, setAnswers] = useState({
@@ -101,8 +112,8 @@ export const UserAnswerDifferences = ({
   return (
     <>
       <div className={cn(styles.tabs, styles.differentTabs)}>
-        <div className={cn({ [styles.selected]: selectedTab === 'different' })} onClick={() => setSelectedTab('different')}>Different</div>
-        <div className={cn({ [styles.selected]: selectedTab === 'same' })} onClick={() => setSelectedTab('same')}>Same</div>
+        <div className={cn({ [styles.selected]: selectedTab === 'different' })} onClick={() => setSelectedTab('different')}>Different Answer</div>
+        <div className={cn({ [styles.selected]: selectedTab === 'same' })} onClick={() => setSelectedTab('same')}>Same Answer</div>
         <div className={cn({ [styles.selected]: selectedTab === 'notAnswered' })} onClick={() => setSelectedTab('notAnswered')}>Not Answered</div>
       </div>
       {
@@ -143,4 +154,4 @@ export const UserAnswerDifferences = ({
       {/* </InfiniteScroll> */}
     </>
   )
-}
+})

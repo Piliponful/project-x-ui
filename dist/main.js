@@ -16,6 +16,7 @@ var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
+var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
@@ -2016,6 +2017,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
@@ -2083,12 +2085,28 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
-                        onClick: ()=>setShowDifference(true),
-                        children: "Compare With Me"
+                        onClick: ()=>setShowDifference(!showDifference),
+                        children: showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            style: {
+                                display: "flex",
+                                alignItems: "center"
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
+                                    sx: {
+                                        fontSize: 14,
+                                        marginRight: "5px"
+                                    }
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    children: "Back"
+                                })
+                            ]
+                        }) : "Show Differences"
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            !showDifference && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -2111,7 +2129,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
         ]
     });
 });
-const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick })=>{
+const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
             scrollableTarget: "user-content-scroll-target",
@@ -2132,14 +2150,14 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = ({ questions: questions, hasMo
             })
         })
     });
-};
-const $4c6bd8db1d735d14$export$a6816b34ad549b0 = ({ respond: // hasMore,
+});
+const $4c6bd8db1d735d14$export$a6816b34ad549b0 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ respond: // hasMore,
 // fetchAnswers,
 respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers = {
     different: [],
     same: [],
     notAnswered: []
-} })=>{
+} }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
     // const [answers, setAnswers] = useState({
@@ -2160,14 +2178,14 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "different"
                         }),
                         onClick: ()=>setSelectedTab("different"),
-                        children: "Different"
+                        children: "Different Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "same"
                         }),
                         onClick: ()=>setSelectedTab("same"),
-                        children: "Same"
+                        children: "Same Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
@@ -2210,7 +2228,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
             })
         ]
     });
-};
+});
 
 
 

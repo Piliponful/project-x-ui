@@ -1044,6 +1044,7 @@
 ._31v-EG_screenWithGroupContent p {
   color: #3b3b3b;
   text-align: center;
+  margin: 0;
   font-size: 36px;
   font-weight: 300;
 }
@@ -1056,12 +1057,12 @@
   background: #2b2b2b0f;
   border-radius: 4px;
   gap: 12px;
-  margin-bottom: 6px;
   padding: 4px;
   display: flex;
 }
 
 ._31v-EG_tabs div {
+  box-sizing: border-box;
   color: #3b3b3b;
   cursor: pointer;
   text-align: center;
@@ -1069,7 +1070,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40px;
+  min-height: 40px;
+  padding: 5px 10px;
   font-family: IBM Plex Sans;
   transition: background-color .1s;
   display: flex;
@@ -1080,12 +1082,13 @@
 }
 
 ._31v-EG_differentTabs {
-  width: 80%;
+  box-sizing: border-box;
+  width: 100%;
   margin: 0 auto;
 }
 
 ._31v-EG_differentTabs2 {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
