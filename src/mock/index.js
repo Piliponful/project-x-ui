@@ -283,7 +283,7 @@ const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => (
   <UserHistoryTabs
     selectedTab={selectedTab}
     setSelectedTab={setSelectedTab}
-    similarity={80}
+    similarity={null}
     answers={{
       different: mostAnsweredQuestions.slice(0, 1),
       same: mostAnsweredQuestions.slice(1, 2),
@@ -318,7 +318,7 @@ const Authorized = () => {
         <UserHistoryTabs
           answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
           back={() => console.log('back')}
-          similarity={80}
+          similarity={null}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
         >

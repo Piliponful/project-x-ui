@@ -2015,6 +2015,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $d96dc328a9b2259c$exports = {};
 
 $parcel$export($d96dc328a9b2259c$exports, "back", () => $d96dc328a9b2259c$export$7c341cb16fc91138, (v) => $d96dc328a9b2259c$export$7c341cb16fc91138 = v);
@@ -2066,22 +2067,26 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     onClick: back
                 })
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+            !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
-                    "Similarity to you: ",
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("b", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarityMeter,
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                         children: [
-                            similarity,
-                            "%"
+                            "Similarity to you: ",
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("b", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarityMeter,
+                                children: [
+                                    similarity,
+                                    "%"
+                                ]
+                            })
                         ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
+                        onClick: ()=>setShowDifference(true),
+                        children: "Compare With Me"
                     })
                 ]
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
-                onClick: ()=>setShowDifference(true),
-                children: "Compare With Me"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,

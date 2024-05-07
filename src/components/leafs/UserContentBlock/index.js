@@ -3,6 +3,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import cn from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import FlipMove from 'react-flip-move'
+import _ from 'lodash'
 
 import QuestionCard from '../QuestionCard'
 
@@ -26,8 +27,12 @@ export const UserHistoryTabs = forwardRef(({
   return (
     <div id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
-      <p>Similarity to you: <b className={styles.similarityMeter}>{similarity}%</b></p>
-      <button className={styles.button} onClick={() => setShowDifference(true)}>Compare With Me</button>
+      {!_.isNull(similarity) && (
+        <>
+          <p>Similarity to you: <b className={styles.similarityMeter}>{similarity}%</b></p>
+          <button className={styles.button} onClick={() => setShowDifference(true)}>Compare With Me</button>
+        </>
+      )}
       <div className={styles.tabs}>
         <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
         <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
