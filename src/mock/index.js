@@ -389,11 +389,13 @@ const Authorized = () => {
             users={usersSlice}
           /> */}
         {/* <div style={{ width: 241 }}>
-            <Search buttonsOutside search={() => console.log('search')} />
-            <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
-          </div>
-          <MainScreenWithQuestions /> */}
+          <Search buttonsOutside search={() => console.log('search')} />
+          <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
+        </div> */}
+        {/* <MainScreenWithQuestions /> */}
+        {/* <div style={{ marginRight: 241 }}> */}
         <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
         {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
       </>

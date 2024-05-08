@@ -1936,6 +1936,55 @@ $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
 
+const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style })=>{
+    console.log("test: ", style);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        style: style,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
+        onClick: ()=>onUserClick(user),
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                style: {
+                    display: "flex",
+                    justifyContent: "space-between"
+                },
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
+                        children: [
+                            user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                src: user.pictureUrl,
+                                alt: `${user.name} profile picture`
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                        children: user.fullName
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                        children: [
+                                            (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
+                                            " followers"
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        onClick: (e)=>e.stopPropagation(),
+                        href: `https://twitter.com/${user.username}`,
+                        target: "_blank",
+                        rel: "noreferrer",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    })
+                ]
+            }),
+            children
+        ]
+    }, user._id);
+};
 var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style, className: className }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         id: "group-content-search-scroll-target",
@@ -1967,46 +2016,15 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 //   </p>
                 // }
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).usersContainer,
-                children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
-                        onClick: ()=>onUserClick(user),
-                        children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
-                                children: [
-                                    user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                        src: user.pictureUrl,
-                                        alt: `${user.name} profile picture`
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
-                                        children: [
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                children: user.fullName
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                children: [
-                                                    (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
-                                                    " followers"
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                onClick: (e)=>e.stopPropagation(),
-                                href: `https://twitter.com/${user.username}`,
-                                target: "_blank",
-                                rel: "noreferrer",
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                            })
-                        ]
+                children: users.map((user)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($42498b7876d29f2b$export$1f44aaf2ec115b54, {
+                        user: user,
+                        onUserClick: onUserClick
                     }, user._id))
             })
         ]
     });
 });
+
 
 
 
@@ -2046,7 +2064,17 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity }, ref)=>{
+const $4c6bd8db1d735d14$var$usert = {
+    _id: "6",
+    userId: "6623cfe7e1d83d0600c06a99",
+    username: "piliponful",
+    fullName: "Maxim Pilipenko",
+    pictureUrl: "https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg",
+    twitterVerified: false,
+    followerCount: "67",
+    address: "0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20"
+};
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user = $4c6bd8db1d735d14$var$usert }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
     }, [
@@ -2069,42 +2097,53 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     onClick: back
                 })
             }),
-            !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $42498b7876d29f2b$export$1f44aaf2ec115b54), {
+                style: {
+                    cursor: "auto",
+                    border: "none"
+                },
+                user: user,
+                onUserClick: ()=>{},
+                children: !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                    style: {
+                        paddingTop: 24,
+                        paddingBottom: 9,
+                        borderTop: "1px solid #b3b3b3"
+                    },
+                    children: [
+                        "Similarity to you: ",
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarityMeter,
+                            children: [
+                                similarity,
+                                "%"
+                            ]
+                        })
+                    ]
+                })
+            }),
+            !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
+                    onClick: ()=>setShowDifference(!showDifference),
+                    children: showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            alignItems: "center"
+                        },
                         children: [
-                            "Similarity to you: ",
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("b", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarityMeter,
-                                children: [
-                                    similarity,
-                                    "%"
-                                ]
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
+                                sx: {
+                                    fontSize: 14,
+                                    marginRight: "5px"
+                                }
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                children: "Back"
                             })
                         ]
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
-                        onClick: ()=>setShowDifference(!showDifference),
-                        children: showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            style: {
-                                display: "flex",
-                                alignItems: "center"
-                            },
-                            children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
-                                    sx: {
-                                        fontSize: 14,
-                                        marginRight: "5px"
-                                    }
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    children: "Back"
-                                })
-                            ]
-                        }) : "Show Differences"
-                    })
-                ]
+                    }) : "Show Differences"
+                })
             }),
             !showDifference && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,

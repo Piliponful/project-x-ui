@@ -7,6 +7,28 @@ import cn from 'classnames'
 
 import styles from './style.module.styl'
 
+export const User = ({ user, onUserClick, children, style }) => {
+  console.log('test: ', style)
+  return (
+    <div style={style} className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className={styles.row}>
+          {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
+          <div className={styles.column}>
+            <span>{user.fullName}</span>
+            <span>{humanNumber(user.followerCount)} followers</span>
+          </div>
+        </div>
+        <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
+          <XIcon />
+        </a>
+      </div>
+
+      {children}
+    </div>
+  )
+}
+
 export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style, className }, ref) => {
   return (
     <div id='group-content-search-scroll-target' ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={cn(styles.screenWithGroupContent, className)}>
@@ -24,20 +46,7 @@ export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, clos
         // }
         className={styles.usersContainer}
       >
-        {users.map(user => (
-          <div className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
-            <div className={styles.row}>
-              {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
-              <div className={styles.column}>
-                <span>{user.fullName}</span>
-                <span>{humanNumber(user.followerCount)} followers</span>
-              </div>
-            </div>
-            <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
-              <XIcon />
-            </a>
-          </div>
-        ))}
+        {users.map(user => <User key={user._id} user={user} onUserClick={onUserClick} />)}
       </InfiniteScroll>
     </div>
   )
