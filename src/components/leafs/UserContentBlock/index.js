@@ -84,13 +84,15 @@ export const UserHistoryTabs = forwardRef(({
               }}
             />
             <div className={styles.tabs}>
-              <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
-              <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
+              <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>His/Her Questions</div>
+              <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>His/Her Answers</div>
             </div>
           </>
         )
       }
+      {/* <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'> */}
       {children}
+      {/* </FlipMove> */}
     </div>
   )
 })
@@ -198,6 +200,7 @@ export const UserAnswerDifferences = forwardRef(({
           borderTop: '1px solid rgb(179, 179, 179)',
           boxSizing: 'border-box',
           margin: '15px auto'
+          // marginBottom: 23
         }}
       />
       <div className={cn(styles.tabs, styles.differentTabs)}>
