@@ -1937,7 +1937,7 @@ $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
 
 const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style })=>{
-    console.log("test: ", style);
+    if (!user) return null;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
@@ -2145,22 +2145,35 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     }) : "Show Differences"
                 })
             }),
-            !showDifference && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
+            !showDifference && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "questions"
-                        }),
-                        onClick: ()=>setSelectedTab("questions"),
-                        children: "Questions"
+                        style: {
+                            width: "calc(100% - 30px)",
+                            height: 1,
+                            borderTop: "1px solid rgb(179, 179, 179)",
+                            boxSizing: "border-box",
+                            margin: "15px auto"
+                        }
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
-                        }),
-                        onClick: ()=>setSelectedTab("answers"),
-                        children: "Answers"
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "questions"
+                                }),
+                                onClick: ()=>setSelectedTab("questions"),
+                                children: "Questions"
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
+                                }),
+                                onClick: ()=>setSelectedTab("answers"),
+                                children: "Answers"
+                            })
+                        ]
                     })
                 ]
             }),
@@ -2234,6 +2247,15 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
         }, i.id || i._id));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                style: {
+                    width: "calc(100% - 30px)",
+                    height: 1,
+                    borderTop: "1px solid rgb(179, 179, 179)",
+                    boxSizing: "border-box",
+                    margin: "15px auto"
+                }
+            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).differentTabs),
                 children: [

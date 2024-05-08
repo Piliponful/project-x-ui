@@ -8,7 +8,10 @@ import cn from 'classnames'
 import styles from './style.module.styl'
 
 export const User = ({ user, onUserClick, children, style }) => {
-  console.log('test: ', style)
+  if (!user) {
+    return null
+  }
+
   return (
     <div style={style} className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>

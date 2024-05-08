@@ -73,10 +73,21 @@ export const UserHistoryTabs = forwardRef(({
       )}
       {
         !showDifference && (
-          <div className={styles.tabs}>
-            <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
-            <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
-          </div>
+          <>
+            <div
+              style={{
+                width: 'calc(100% - 30px)',
+                height: 1,
+                borderTop: '1px solid rgb(179, 179, 179)',
+                boxSizing: 'border-box',
+                margin: '15px auto'
+              }}
+            />
+            <div className={styles.tabs}>
+              <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>Questions</div>
+              <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>Answers</div>
+            </div>
+          </>
         )
       }
       {children}
@@ -182,6 +193,15 @@ export const UserAnswerDifferences = forwardRef(({
 
   return (
     <>
+      <div
+        style={{
+          width: 'calc(100% - 30px)',
+          height: 1,
+          borderTop: '1px solid rgb(179, 179, 179)',
+          boxSizing: 'border-box',
+          margin: '15px auto'
+        }}
+      />
       <div className={cn(styles.tabs, styles.differentTabs)}>
         <div className={cn({ [styles.selected]: selectedTab === 'different' })} onClick={() => setSelectedTab('different')}>Different Answer</div>
         <div className={cn({ [styles.selected]: selectedTab === 'same' })} onClick={() => setSelectedTab('same')}>Same Answer</div>
