@@ -6,7 +6,17 @@
   flex-direction: column;
   margin-bottom: 24px;
   gap: 16px;
-  // position: relative;
+  position: relative;
+  margin-top: 64px;
+
+  &::before {
+    content: "⬤";
+    font-size: 6px;
+    position: absolute;
+    top: -32px;
+    right: 50%;
+    transform: translateX(-50%);
+  }
 
   & > div > span {
     font-weight: 300;

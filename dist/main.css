@@ -1431,9 +1431,20 @@
   color: #bebebe;
   flex-direction: column;
   gap: 16px;
+  margin-top: 64px;
   margin-bottom: 24px;
   font-size: 16px;
   display: flex;
+  position: relative;
+}
+
+.ue_oWq_text:before {
+  content: "⬤";
+  font-size: 6px;
+  position: absolute;
+  top: -32px;
+  right: 50%;
+  transform: translateX(-50%);
 }
 
 .ue_oWq_text > div > span {
