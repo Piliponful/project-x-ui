@@ -2200,11 +2200,11 @@ const $4c6bd8db1d735d14$export$1f74963c34e8bfec = ()=>/*#__PURE__*/ (0, $c5L0i$r
     });
 $4c6bd8db1d735d14$export$1f74963c34e8bfec.prototype = {};
 const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
-    if (questions.length === 0) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {});
+    if (questions && questions.length === 0) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {});
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
             scrollableTarget: "user-content-scroll-target",
-            dataLength: questions.length,
+            dataLength: questions?.length || 0,
             next: fetchQuestions,
             hasMore: hasMore,
             className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).usersItems,
@@ -2212,7 +2212,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
                 appearAnimation: "elevator",
                 typeName: null,
                 maintainContainerHeight: true,
-                children: questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+                children: questions && questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                         respond: respond && ((content)=>respond(i._id, content)),
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
@@ -2224,11 +2224,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
 });
 const $4c6bd8db1d735d14$export$a6816b34ad549b0 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ respond: // hasMore,
 // fetchAnswers,
-respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers = {
-    different: [],
-    same: [],
-    notAnswered: []
-} }, ref)=>{
+respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
     // const [answers, setAnswers] = useState({
@@ -2239,12 +2235,13 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
     // useEffect(() => {
     //   compareWithMe().then(answers => setAnswers(answers))
     // }, [])
-    const questionsToShow = (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+    const questionsToShow = answers && (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
             respond: respond && ((content)=>respond(i._id, content)),
             createNewGroup: (content)=>createNewGroup(i._id, content),
             ...i,
             onUserClick: ()=>onUserClick(i.userId)
         }, i.id || i._id));
+    console.log("questions to show: ", questionsToShow, answers);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -2301,7 +2298,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                     })
                 ]
             }) : null,
-            questionsToShow.length === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {}),
+            questionsToShow && questionsToShow.length === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {}),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
                 appearAnimation: "elevator",
                 typeName: null,

@@ -122,14 +122,14 @@ Empty.prototype = {}
 export const UserQuestionsHistory = forwardRef(({
   questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick
 }, ref) => {
-  if (questions.length === 0) {
+  if (questions && questions.length === 0) {
     return <Empty />
   }
   return (
     <>
       <InfiniteScroll
         scrollableTarget='user-content-scroll-target'
-        dataLength={questions.length}
+        dataLength={questions?.length || 0}
         next={fetchQuestions}
         hasMore={hasMore}
         className={styles.usersItems}
@@ -139,7 +139,7 @@ export const UserQuestionsHistory = forwardRef(({
           typeName={null}
           maintainContainerHeight
         >
-          {questions.map(i => (
+          {questions && questions.map(i => (
             <QuestionCard
               key={i.id || i._id}
               respond={respond && (content => respond(i._id, content))}
@@ -160,11 +160,7 @@ export const UserAnswerDifferences = forwardRef(({
   respond,
   createNewGroup,
   onUserClick,
-  answers = {
-    different: [],
-    same: [],
-    notAnswered: []
-  }
+  answers
 }, ref) => {
   const [selectedTab, setSelectedTab] = useState('different')
   const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
@@ -178,7 +174,7 @@ export const UserAnswerDifferences = forwardRef(({
   //   compareWithMe().then(answers => setAnswers(answers))
   // }, [])
 
-  const questionsToShow = (selectedTab === 'notAnswered'
+  const questionsToShow = answers && ((selectedTab === 'notAnswered'
     ? answers[selectedTab].filter(i => selectedNestedTab === 'byMe' ? i.byMe : !i.byMe)
     : answers[selectedTab]
   ).map(i => (
@@ -189,7 +185,9 @@ export const UserAnswerDifferences = forwardRef(({
       {...i}
       onUserClick={() => onUserClick(i.userId)}
     />
-  ))
+  )))
+
+  console.log('questions to show: ', questionsToShow, answers)
 
   return (
     <>
@@ -224,7 +222,7 @@ export const UserAnswerDifferences = forwardRef(({
         hasMore={hasMore}
         className={styles.usersItems}
       > */}
-      {questionsToShow.length === 0 && <Empty />}
+      {questionsToShow && questionsToShow.length === 0 && <Empty />}
       <FlipMove
         appearAnimation='elevator'
         typeName={null}
