@@ -11,19 +11,19 @@ import QuestionCard from '../QuestionCard'
 
 import styles from './style.module.styl'
 
-const usert = {
-  _id: '6',
-  userId: '6623cfe7e1d83d0600c06a99',
-  username: 'piliponful',
-  fullName: 'Maxim Pilipenko',
-  pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-  twitterVerified: false,
-  followerCount: '67',
-  address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
-}
+// const usert = {
+//   _id: '6',
+//   userId: '6623cfe7e1d83d0600c06a99',
+//   username: 'piliponful',
+//   fullName: 'Maxim Pilipenko',
+//   pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+//   twitterVerified: false,
+//   followerCount: '67',
+//   address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
+// }
 
 export const UserHistoryTabs = forwardRef(({
-  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user = usert
+  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user
 }, ref) => {
   useEffect(() => {
     if (showDifference && selectedTab !== 'answers') {
@@ -188,8 +188,6 @@ export const UserAnswerDifferences = forwardRef(({
       onUserClick={() => onUserClick(i.userId)}
     />
   )))
-
-  console.log('questions to show: ', questionsToShow, answers)
 
   return (
     <>

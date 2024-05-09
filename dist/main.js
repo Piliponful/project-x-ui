@@ -2065,17 +2065,7 @@ $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$var$usert = {
-    _id: "6",
-    userId: "6623cfe7e1d83d0600c06a99",
-    username: "piliponful",
-    fullName: "Maxim Pilipenko",
-    pictureUrl: "https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg",
-    twitterVerified: false,
-    followerCount: "67",
-    address: "0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20"
-};
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user = $4c6bd8db1d735d14$var$usert }, ref)=>{
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
     }, [
@@ -2242,7 +2232,6 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
             ...i,
             onUserClick: ()=>onUserClick(i.userId)
         }, i.id || i._id));
-    console.log("questions to show: ", questionsToShow, answers);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
