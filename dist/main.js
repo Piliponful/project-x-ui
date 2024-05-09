@@ -929,6 +929,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const onChange = (e)=>{
         const newQuestion = e.target.value;
         if (newQuestion[newQuestion.length - 1] === "?") {
+            e.target.blur();
             saveQuestion(newQuestion);
             setQuestion("");
         } else setQuestion(newQuestion);

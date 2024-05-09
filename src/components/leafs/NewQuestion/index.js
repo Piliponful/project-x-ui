@@ -11,6 +11,7 @@ export default forwardRef(({ saveQuestion }, ref) => {
     const newQuestion = e.target.value
 
     if (newQuestion[newQuestion.length - 1] === '?') {
+      e.target.blur()
       saveQuestion(newQuestion)
       setQuestion('')
     } else {
