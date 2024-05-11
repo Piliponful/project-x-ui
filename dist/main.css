@@ -1448,11 +1448,6 @@
   transform: translateX(-50%);
 }
 
-.ue_oWq_text > div > span {
-  color: #3b3b3b;
-  font-weight: 300;
-}
-
 .ue_oWq_dropdownContainer {
   box-sizing: border-box;
   max-width: 241px;

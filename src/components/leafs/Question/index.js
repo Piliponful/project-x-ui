@@ -12,7 +12,9 @@ import styles from './styles.module.styl'
 
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
-export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureUrl, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup }, ref) => {
+export const Question = forwardRef(({
+  yourOwnQuestion, onUserClick, userPictureUrl, username, name, answersCount, currentUserAnswer: answer, respond, createNewGroup
+}, ref) => {
   const [state, setState] = useState(null)
 
   const totalAnswerCount = answersCount.yes + answersCount.no

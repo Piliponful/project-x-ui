@@ -528,7 +528,8 @@ var $98b0d8317ccf47e7$export$fb184b623420d9be;
 $98b0d8317ccf47e7$export$fb184b623420d9be = `_4XHpq_title`;
 
 
-var $57011da2278f77c7$export$2e2bcd8739ae039 = ({ children: children })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $57011da2278f77c7$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+        style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($98b0d8317ccf47e7$exports))).title,
         children: children
     });
@@ -2703,6 +2704,10 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownWithLabel,
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                        style: {
+                            fontWeight: 300,
+                            color: "#3b3b3b"
+                        },
                         children: "Showing"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2765,6 +2770,10 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownWithLabel,
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                        style: {
+                            fontWeight: 300,
+                            color: "#3b3b3b"
+                        },
                         children: [
                             "Questions ",
                             duration === "All Time" ? "of" : "for last"
@@ -2883,7 +2892,7 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;

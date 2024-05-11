@@ -27,7 +27,7 @@ export const SortQuestions = forwardRef(({ sort = 'Most Answered', duration = 'W
   return (
     <div ref={ref3} style={style} className={cn(styles.text, className)}>
       <div className={styles.dropdownWithLabel}>
-        <Title>Showing</Title>
+        <Title style={{ fontWeight: 300, color: '#3b3b3b' }}>Showing</Title>
         <div className={styles.dropdownContainer} ref={ref}>
           <div className={styles.dropdownValue} onClick={() => setShowSortDropdown(true)}>{sort}</div>
           {showSortDropdown && (
@@ -43,7 +43,7 @@ export const SortQuestions = forwardRef(({ sort = 'Most Answered', duration = 'W
         </div>
       </div>
       <div className={styles.dropdownWithLabel}>
-        <Title>Questions {duration === 'All Time' ? 'of' : 'for last'}</Title>
+        <Title style={{ fontWeight: 300, color: '#3b3b3b' }}>Questions {duration === 'All Time' ? 'of' : 'for last'}</Title>
         <div className={styles.dropdownContainer} ref={ref2}>
           <div className={styles.dropdownValue} onClick={() => setShowDurationDropdown(true)}>{duration}</div>
           {showDurationDropdown && (
