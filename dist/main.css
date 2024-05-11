@@ -1628,4 +1628,124 @@
 #question-text {
   font-size: 178px;
 }
+
+.WWPmHq_card {
+  box-sizing: border-box;
+  background: none;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  height: 100dvh;
+  margin-bottom: 10px;
+  padding: 15px 0 10px;
+  display: flex;
+  overflow: hidden;
+}
+
+.WWPmHq_card:last-of-type {
+  margin-bottom: 0;
+}
+
+.WWPmHq_username {
+  color: #00000063;
+  white-space: pre;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: end;
+  height: 40px;
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  line-height: 1;
+  transition: color .2s;
+  display: flex;
+}
+
+.WWPmHq_usernameActual {
+  cursor: pointer;
+}
+
+.WWPmHq_usernameActual:hover {
+  color: #3b3b3b;
+}
+
+.WWPmHq_hint {
+  color: #969696;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.WWPmHq_stats {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.WWPmHq_stats > div {
+  width: 100%;
+}
+
+.WWPmHq_textContainer {
+  justify-content: center;
+  width: 160px;
+  display: flex;
+}
+
+.WWPmHq_text {
+  justify-content: center;
+  margin-top: 5px;
+  display: flex;
+}
+
+.WWPmHq_questionText {
+  font-size: 178px;
+  font-weight: 200;
+}
+
+.WWPmHq_respondButton {
+  color: #3b3b3b;
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: IBM Plex Sans;
+  font-size: 18px;
+  display: flex;
+}
+
+.WWPmHq_respondButton svg {
+  color: #3b3b3b;
+}
+
+.WWPmHq_arrowDown {
+  border-top: 13px solid #b3b3b3;
+  border-left: 13px solid #0000;
+  border-right: 13px solid #0000;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.WWPmHq_img {
+  border: 3px solid #b3b3b3;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.WWPmHq_imgWithArrow {
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.WWPmHq_bars > div {
+  min-width: 102px;
+}
 /*# sourceMappingURL=main.css.map */
