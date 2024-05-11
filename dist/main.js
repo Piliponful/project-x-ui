@@ -670,19 +670,28 @@ var $93a91f764584dcb2$export$2e2bcd8739ae039 = ({ yes: yes, no: no, onHover: onH
 
 var $060bced7ba3b76d4$exports = {};
 
+$parcel$export($060bced7ba3b76d4$exports, "arrowDown", () => $060bced7ba3b76d4$export$f61feb65ec56823b, (v) => $060bced7ba3b76d4$export$f61feb65ec56823b = v);
+$parcel$export($060bced7ba3b76d4$exports, "img", () => $060bced7ba3b76d4$export$463b44d9bf3628be, (v) => $060bced7ba3b76d4$export$463b44d9bf3628be = v);
+$parcel$export($060bced7ba3b76d4$exports, "imgWithArrow", () => $060bced7ba3b76d4$export$e4e79e5008270fc7, (v) => $060bced7ba3b76d4$export$e4e79e5008270fc7 = v);
 $parcel$export($060bced7ba3b76d4$exports, "stats", () => $060bced7ba3b76d4$export$7804429c45dff272, (v) => $060bced7ba3b76d4$export$7804429c45dff272 = v);
 $parcel$export($060bced7ba3b76d4$exports, "text", () => $060bced7ba3b76d4$export$6f093cfa640b7166, (v) => $060bced7ba3b76d4$export$6f093cfa640b7166 = v);
 $parcel$export($060bced7ba3b76d4$exports, "textContainer", () => $060bced7ba3b76d4$export$2cedfd664bb3bd01, (v) => $060bced7ba3b76d4$export$2cedfd664bb3bd01 = v);
+var $060bced7ba3b76d4$export$f61feb65ec56823b;
+var $060bced7ba3b76d4$export$463b44d9bf3628be;
+var $060bced7ba3b76d4$export$e4e79e5008270fc7;
 var $060bced7ba3b76d4$export$7804429c45dff272;
 var $060bced7ba3b76d4$export$6f093cfa640b7166;
 var $060bced7ba3b76d4$export$2cedfd664bb3bd01;
+$060bced7ba3b76d4$export$f61feb65ec56823b = `hWz-3G_arrowDown`;
+$060bced7ba3b76d4$export$463b44d9bf3628be = `hWz-3G_img`;
+$060bced7ba3b76d4$export$e4e79e5008270fc7 = `hWz-3G_imgWithArrow`;
 $060bced7ba3b76d4$export$7804429c45dff272 = `hWz-3G_stats`;
 $060bced7ba3b76d4$export$6f093cfa640b7166 = `hWz-3G_text`;
 $060bced7ba3b76d4$export$2cedfd664bb3bd01 = `hWz-3G_textContainer`;
 
 
 const $b43f368b8ea6feca$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, createNewGroup: createNewGroup, className: className })=>{
+var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: me, createNewGroup: createNewGroup, className: className })=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const answers = {
         yes: yes,
@@ -705,6 +714,93 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, createNewGro
             }),
             userReplyCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).textContainer,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
+                                style: {
+                                    width: `${yesPercentage}%`,
+                                    position: "relative",
+                                    display: "flex",
+                                    gap: 12,
+                                    bottom: 0
+                                },
+                                children: [
+                                    me?.answer === "Yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
+                                        children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
+                                                src: me.pictureUrl,
+                                                alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
+                                            })
+                                        ]
+                                    }),
+                                    he?.answer === "Yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
+                                        style: {
+                                            left: "50%"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
+                                                src: he.pictureUrl,
+                                                alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
+                                style: {
+                                    width: `${noPercentage}%`,
+                                    position: "relative",
+                                    display: "flex",
+                                    gap: 12,
+                                    bottom: 0
+                                },
+                                children: [
+                                    me?.answer === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
+                                        style: {
+                                            right: "50%"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
+                                                src: me.pictureUrl,
+                                                alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
+                                            })
+                                        ]
+                                    }),
+                                    he?.answer === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
+                                        children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
+                                                src: he.pictureUrl,
+                                                alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $93a91f764584dcb2$export$2e2bcd8739ae039), {
                         yes: yesPercentage,
                         no: noPercentage,
@@ -741,44 +837,6 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, createNewGro
         ]
     });
 };
-
-
-
-
-
-
-
-var $3fc8af64f93dbb3e$exports = {};
-
-$parcel$export($3fc8af64f93dbb3e$exports, "no", () => $3fc8af64f93dbb3e$export$401451a107dc42ce, (v) => $3fc8af64f93dbb3e$export$401451a107dc42ce = v);
-$parcel$export($3fc8af64f93dbb3e$exports, "text", () => $3fc8af64f93dbb3e$export$6f093cfa640b7166, (v) => $3fc8af64f93dbb3e$export$6f093cfa640b7166 = v);
-$parcel$export($3fc8af64f93dbb3e$exports, "yes", () => $3fc8af64f93dbb3e$export$7a668e70ea2210d9, (v) => $3fc8af64f93dbb3e$export$7a668e70ea2210d9 = v);
-var $3fc8af64f93dbb3e$export$401451a107dc42ce;
-var $3fc8af64f93dbb3e$export$6f093cfa640b7166;
-var $3fc8af64f93dbb3e$export$7a668e70ea2210d9;
-$3fc8af64f93dbb3e$export$401451a107dc42ce = `zw8A0W_no`;
-$3fc8af64f93dbb3e$export$6f093cfa640b7166 = `zw8A0W_text`;
-$3fc8af64f93dbb3e$export$7a668e70ea2210d9 = `zw8A0W_yes`;
-
-
-var $d739bb808051a5b3$export$2e2bcd8739ae039 = ({ answer: answer, his: his, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-        style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($3fc8af64f93dbb3e$exports))).text,
-        children: [
-            his ? "His/Her" : "Your",
-            " answer:",
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                children: " "
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3fc8af64f93dbb3e$exports))).text, {
-                    [(0, (/*@__PURE__*/$parcel$interopDefault($3fc8af64f93dbb3e$exports))).yes]: answer.toLowerCase() === "yes",
-                    [(0, (/*@__PURE__*/$parcel$interopDefault($3fc8af64f93dbb3e$exports))).no]: answer.toLowerCase() === "no"
-                }),
-                children: (0, $c5L0i$lodash.capitalize)(answer)
-            })
-        ]
-    });
 
 
 
@@ -842,7 +900,6 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 };
 
 
-
 var $34a1d4be4ab80325$exports = {};
 
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
@@ -856,7 +913,7 @@ $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
@@ -881,19 +938,14 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
                 ...answersCount,
+                he: he,
+                me: me,
                 createNewGroup: createNewGroup
             }),
-            hisAnswer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
-                his: true,
-                answer: hisAnswer
-            }),
-            answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $d739bb808051a5b3$export$2e2bcd8739ae039), {
-                answer: answer
-            }),
-            yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).hint,
-                children: "You cannot answer your own question"
-            }) : !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+            !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                style: {
+                    width: 400
+                },
                 respond: respond
             })
         ]

@@ -10,7 +10,7 @@ import styles from './style.module.styl'
 
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
-export default ({ yes, no, createNewGroup, className }) => {
+export default ({ yes, no, he, me, createNewGroup, className }) => {
   const [state, setState] = useState(null)
 
   const answers = { yes, no }
@@ -27,6 +27,56 @@ export default ({ yes, no, createNewGroup, className }) => {
         userReplyCount
           ? (
             <>
+              <div className={styles.textContainer}>
+                <Text
+                  className={styles.text}
+                  style={{
+                    width: `${yesPercentage}%`,
+                    position: 'relative',
+                    display: 'flex',
+                    gap: 12,
+                    bottom: 0
+                    // minWidth: 102
+                  }}
+                >
+                  {me?.answer === 'Yes' && (
+                    <p className={styles.imgWithArrow}>
+                      <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
+                      <div className={styles.arrowDown} />
+                    </p>
+                  )}
+                  {he?.answer === 'Yes' && (
+                    <p className={styles.imgWithArrow} style={{ left: '50%' }}>
+                      <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
+                      <div className={styles.arrowDown} />
+                    </p>
+                  )}
+                </Text>
+                <Text
+                  className={styles.text}
+                  style={{
+                    width: `${noPercentage}%`,
+                    position: 'relative',
+                    display: 'flex',
+                    gap: 12,
+                    bottom: 0
+                    // minWidth: 102
+                  }}
+                >
+                  {me?.answer === 'No' && (
+                    <p className={styles.imgWithArrow} style={{ right: '50%' }}>
+                      <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
+                      <div className={styles.arrowDown} />
+                    </p>
+                  )}
+                  {he?.answer === 'No' && (
+                    <p className={styles.imgWithArrow}>
+                      <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
+                      <div className={styles.arrowDown} />
+                    </p>
+                  )}
+                </Text>
+              </div>
               <Bars yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
               <div className={styles.textContainer}>
                 <Text className={styles.text} style={{ width: `${yesPercentage}%` }}>{yesPercentage}%</Text>

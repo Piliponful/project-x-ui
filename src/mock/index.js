@@ -53,16 +53,23 @@ const groups = [
 
 const mostAnsweredQuestions = [ // eslint-disable-line
   {
-    name: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen?`,
-    // currentUserAnswer: 'No',
-    answersCount: { yes: 0, no: 0 },
+    name: 'Tester?',
+    currentUserAnswer: 'No',
+    answersCount: { yes: 383343, no: 23450 },
     username: 'piliponful',
     _id: 0,
     byMe: true,
     respond: () => {},
     // yourOwnQuestion: true,
-    userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg'
-    // hisAnswer: 'yes'
+    // userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+    me: {
+      pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+      answer: 'No'
+    },
+    he: {
+      pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+      answer: 'No'
+    }
   },
   {
     name: 'Will Luffy find one piece?',
@@ -292,15 +299,19 @@ const usert = {
   followerCount: '67',
   address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
 }
+
+UserQuestionsHistory.prototype = {}
+UserAnswerDifferences.prototype = {}
+
 const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
   const [showDifferences, setShowDifferences] = useState(false)
-  UserQuestionsHistory.prototype = {}
-  UserAnswerDifferences.prototype = {}
+
   const [testUser, setTestUser] = useState()
 
   useEffect(() => {
     setTimeout(() => setTestUser(usert), 1000)
   }, [])
+
   return (
     <UserHistoryTabs
       selectedTab={selectedTab}
@@ -401,13 +412,13 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-        <div style={{ width: 241 }}>
+        {/* <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions />
+        <MainScreenWithQuestions /> */}
         {/* <div style={{ marginRight: 241 }}> */}
-        {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
+        <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         {/* <Question {...(mostAnsweredQuestions[0])} /> */}
         {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
