@@ -727,7 +727,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer === "Yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    me?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -740,7 +740,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer === "Yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    he?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: {
                                             left: "50%"
@@ -768,7 +768,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    me?.answer?.toLowerCase() === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: {
                                             right: "50%"
@@ -784,7 +784,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    he?.answer?.toLowerCase() === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -2956,17 +2956,9 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             const b = document.querySelector("#question-text");
             const c = document.querySelector("#question-text-size");
             const containerHeight = a.clientHeight;
-            const containerWidth = a.clientWidth;
             const questionHeight = b.clientHeight;
-            const questionWidth = b.clientWidth;
-            console.log("container height: ", containerHeight);
-            console.log("question height: ", questionHeight);
-            if (questionHeight + 110 < containerHeight) {
-                console.log("done");
-                return resizeObserver.disconnect();
-            }
+            if (questionHeight + 110 < containerHeight) return resizeObserver.disconnect();
             const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace("px", ""));
-            console.log("currentFontSize: ", currentFontSize);
             c.style["font-size"] = `${currentFontSize - 1}px`;
         });
         resizeObserver.observe(document.querySelector("#question-text"));
@@ -3069,7 +3061,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer === "Yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                                answer.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3105,7 +3097,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                                answer.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {

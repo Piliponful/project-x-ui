@@ -39,13 +39,13 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                     // minWidth: 102
                   }}
                 >
-                  {me?.answer === 'Yes' && (
+                  {me?.answer?.toLowerCase() === 'yes' && (
                     <p className={styles.imgWithArrow}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
                     </p>
                   )}
-                  {he?.answer === 'Yes' && (
+                  {he?.answer?.toLowerCase() === 'yes' && (
                     <p className={styles.imgWithArrow} style={{ left: '50%' }}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
@@ -63,13 +63,13 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                     // minWidth: 102
                   }}
                 >
-                  {me?.answer === 'No' && (
+                  {me?.answer?.toLowerCase() === 'No' && (
                     <p className={styles.imgWithArrow} style={{ right: '50%' }}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
                     </p>
                   )}
-                  {he?.answer === 'No' && (
+                  {he?.answer?.toLowerCase() === 'No' && (
                     <p className={styles.imgWithArrow}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />

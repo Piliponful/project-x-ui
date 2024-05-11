@@ -31,21 +31,14 @@ export const Question = forwardRef(({
       const c = document.querySelector('#question-text-size')
 
       const containerHeight = a.clientHeight
-      const containerWidth = a.clientWidth
 
       const questionHeight = b.clientHeight
-      const questionWidth = b.clientWidth
-
-      console.log('container height: ', containerHeight)
-      console.log('question height: ', questionHeight)
 
       if ((questionHeight + 110) < containerHeight) {
-        console.log('done')
         return resizeObserver.disconnect()
       }
 
       const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace('px', ''))
-      console.log('currentFontSize: ', currentFontSize)
       c.style['font-size'] = `${currentFontSize - 1}px`
     })
 
@@ -96,7 +89,7 @@ export const Question = forwardRef(({
                     }}
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
-                    {answer === 'Yes' && (
+                    {answer.toLowerCase() === 'yes' && (
                       <p className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
                         <div className={styles.arrowDown} />
@@ -115,7 +108,7 @@ export const Question = forwardRef(({
                     }}
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
-                    {answer === 'No' && (
+                    {answer.toLowerCase() === 'no' && (
                       <p className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
                         <div className={styles.arrowDown} />
