@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import cn from 'classnames'
 
 import Number from '../../../../shared/Number'
 
@@ -7,9 +8,9 @@ import Bars from './components/Bars'
 
 import styles from './style.module.styl'
 
-const calcPercent = (x, sum) => Math.floor(x / sum * 100)
+const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
-export default ({ yes, no, createNewGroup }) => {
+export default ({ yes, no, createNewGroup, className }) => {
   const [state, setState] = useState(null)
 
   const answers = { yes, no }
@@ -20,7 +21,7 @@ export default ({ yes, no, createNewGroup }) => {
   const noPercentage = calcPercent(no, yes + no)
 
   return (
-    <div className={styles.stats}>
+    <div className={cn(styles.stats, className)}>
       <Text secondary><Number x={userReplyCount} /> people answered</Text>
       {
         userReplyCount

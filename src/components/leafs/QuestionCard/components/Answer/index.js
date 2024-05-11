@@ -6,8 +6,8 @@ import Text from '../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ answer, his }) => (
-  <Text className={styles.text}>
+export default ({ answer, his, style }) => (
+  <Text style={style} className={styles.text}>
     {his ? 'His/Her' : 'Your'} answer:
     <span>{' '}</span>
     <span

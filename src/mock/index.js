@@ -20,6 +20,7 @@ import Search from '../components/leafs/Search'
 import QuestionsSearch from '../components/leafs/QuestionsSearch'
 import UsersSearch from '../components/leafs/UsersSearch'
 import { SortQuestions } from '../components/leafs/SortQuestions'
+import { Question } from '../components/leafs/Question'
 
 import '../../styles.css'
 
@@ -52,13 +53,15 @@ const groups = [
 
 const mostAnsweredQuestions = [ // eslint-disable-line
   {
-    name: 'Have you watched new season of attack on titan?',
-    currentUserAnswer: 'Yes',
+    name: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen?`,
+    currentUserAnswer: 'No',
     answersCount: { yes: 383343, no: 23450 },
     username: 'piliponful',
     _id: 0,
-    byMe: true
-    // yourOwnQuestion: true,
+    byMe: true,
+    respond: () => {},
+    yourOwnQuestion: true,
+    userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg'
     // hisAnswer: 'yes'
   },
   {
@@ -404,7 +407,8 @@ const Authorized = () => {
         </div>
         <MainScreenWithQuestions /> */}
         {/* <div style={{ marginRight: 241 }}> */}
-        <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
+        <Question {...(mostAnsweredQuestions[0])} />
         {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
         {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
