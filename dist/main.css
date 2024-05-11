@@ -1690,6 +1690,7 @@
 .WWPmHq_textContainer {
   justify-content: center;
   width: 160px;
+  margin-top: 24px;
   display: flex;
 }
 

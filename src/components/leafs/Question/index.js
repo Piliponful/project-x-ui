@@ -1,9 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import _ from 'lodash'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
 import Title from '../QuestionCard/components/Title'
-import Answer from '../QuestionCard/components/Answer'
 import AnswerButtons from '../QuestionCard/components/AnswerButtons'
 import Bars from '../QuestionCard/components/Stats/components/Bars'
 
@@ -17,12 +15,12 @@ const calcPercent = (x, sum) => Math.round(x / sum * 100)
 export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureUrl, username, name, answersCount, currentUserAnswer: answer, hisAnswer, respond, createNewGroup }, ref) => {
   const [state, setState] = useState(null)
 
-  const userReplyCount = state ? answersCount[state] : answersCount.yes + answersCount.no
+  const totalAnswerCount = answersCount.yes + answersCount.no
 
-  console.log(userReplyCount)
+  const userReplyCount = state ? answersCount[state] : totalAnswerCount
 
-  const yesPercentage = calcPercent(answersCount.yes, answersCount.yes + answersCount.no)
-  const noPercentage = calcPercent(answersCount.no, answersCount.yes + answersCount.no)
+  const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
+  const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(() => {
@@ -71,20 +69,17 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
       <div
         style={{
           position: 'absolute',
-          bottom: 0,
+          bottom: totalAnswerCount === 0 ? 16 : 0,
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center'
         }}
       >
-        {/* {hisAnswer && (<Answer his answer={hisAnswer} />)} */}
-        {/* {answer && (<Answer style={{ marginBottom: 12 }} answer={answer} />)} */}
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ width: 400 }} respond={respond} />)}
         <div className={styles.stats}>
           {
-          userReplyCount
-            ? (
+            Boolean(userReplyCount) && (
               <>
                 <div className={styles.textContainer}>
                   <Text
@@ -128,15 +123,10 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
                 </div>
                 <Bars className={styles.bars} yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
               </>
-              )
-            : null
-        }
+            )
+          }
         </div>
       </div>
-      {/* <button className={styles.respondButton}>
-        respond
-        <KeyboardArrowDownIcon />
-      </button> */}
     </article>
   )
 })

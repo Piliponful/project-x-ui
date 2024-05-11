@@ -20,7 +20,6 @@ var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
-require("@mui/icons-material/KeyboardArrowDown");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -2840,8 +2839,6 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
-
-
 var $c9a1b197475086e8$exports = {};
 
 $parcel$export($c9a1b197475086e8$exports, "arrowDown", () => $c9a1b197475086e8$export$f61feb65ec56823b, (v) => $c9a1b197475086e8$export$f61feb65ec56823b = v);
@@ -2888,10 +2885,10 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
 const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, username: username, name: name, answersCount: answersCount, currentUserAnswer: answer, hisAnswer: hisAnswer, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
-    const userReplyCount = state ? answersCount[state] : answersCount.yes + answersCount.no;
-    console.log(userReplyCount);
-    const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, answersCount.yes + answersCount.no);
-    const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, answersCount.yes + answersCount.no);
+    const totalAnswerCount = answersCount.yes + answersCount.no;
+    const userReplyCount = state ? answersCount[state] : totalAnswerCount;
+    const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
+    const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{
             const a = document.querySelector("#question-card");
@@ -2970,7 +2967,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
                     position: "absolute",
-                    bottom: 0,
+                    bottom: totalAnswerCount === 0 ? 16 : 0,
                     width: "100%",
                     display: "flex",
                     flexDirection: "column",
@@ -2985,7 +2982,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).stats,
-                        children: userReplyCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                        children: Boolean(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).textContainer,
@@ -3072,7 +3069,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                     createNewGroup: createNewGroup
                                 })
                             ]
-                        }) : null
+                        })
                     })
                 ]
             })
