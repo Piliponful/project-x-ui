@@ -2971,7 +2971,10 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                 style: {
                     position: "absolute",
                     bottom: 0,
-                    width: "100%"
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center"
                 },
                 children: [
                     !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {

@@ -68,7 +68,16 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
           {' '}<Text style={{ display: 'inline', textAlign: 'center' }} secondary>answered by <Number x={userReplyCount} /> people</Text>
         </p>
       </div>
-      <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
         {/* {hisAnswer && (<Answer his answer={hisAnswer} />)} */}
         {/* {answer && (<Answer style={{ marginBottom: 12 }} answer={answer} />)} */}
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ width: 400 }} respond={respond} />)}
