@@ -41,7 +41,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                 >
                   {me?.answer?.toLowerCase() === 'yes' && (
                     <p className={styles.imgWithArrow}>
-                      {/* <img className={styles.img} src={me.pictureUrl} alt='profile picture' /> */}
+                      <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.tester}>Yes</div>
                       <div className={styles.arrowDown} />
                     </p>

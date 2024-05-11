@@ -66,18 +66,18 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     //   pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
     //   answer: 'No'
     // },
-    he: {
-      pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'Yes'
-    }
+    // he: {
+    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+    //   answer: 'Yes'
+    // }
   },
   {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
-    answersCount: { yes: 383343, no: 0 },
+    answersCount: { no: 383343, yes: 0 },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'Yes'
+      answer: 'No'
     },
     username: 'piliponful',
     _id: 1,
