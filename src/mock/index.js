@@ -279,11 +279,25 @@ const MainScreenWithQuestions = () => (
     </div>
   </MainScreen>
 )
-
+const usert = {
+  _id: '6',
+  userId: '6623cfe7e1d83d0600c06a99',
+  username: 'piliponful',
+  fullName: 'Maxim Pilipenko',
+  pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+  twitterVerified: false,
+  followerCount: '67',
+  address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
+}
 const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
   const [showDifferences, setShowDifferences] = useState(false)
   UserQuestionsHistory.prototype = {}
   UserAnswerDifferences.prototype = {}
+  const [testUser, setTestUser] = useState()
+
+  useEffect(() => {
+    setTimeout(() => setTestUser(usert), 1000)
+  }, [])
   return (
     <UserHistoryTabs
       selectedTab={selectedTab}
@@ -292,6 +306,7 @@ const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
       compareWithMe={() => console.log('compare with em')}
       showDifference={showDifferences}
       setShowDifference={setShowDifferences}
+      user={testUser}
     >
       <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
         {

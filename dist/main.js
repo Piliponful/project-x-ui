@@ -1912,11 +1912,13 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $fc6e17f49e58291a$exports = {};
 
 $parcel$export($fc6e17f49e58291a$exports, "back", () => $fc6e17f49e58291a$export$7c341cb16fc91138, (v) => $fc6e17f49e58291a$export$7c341cb16fc91138 = v);
 $parcel$export($fc6e17f49e58291a$exports, "close", () => $fc6e17f49e58291a$export$8360e631d277ea4d, (v) => $fc6e17f49e58291a$export$8360e631d277ea4d = v);
 $parcel$export($fc6e17f49e58291a$exports, "column", () => $fc6e17f49e58291a$export$4e0c71f277ca26b3, (v) => $fc6e17f49e58291a$export$4e0c71f277ca26b3 = v);
+$parcel$export($fc6e17f49e58291a$exports, "imgFallback", () => $fc6e17f49e58291a$export$e94d20c87215d48b, (v) => $fc6e17f49e58291a$export$e94d20c87215d48b = v);
 $parcel$export($fc6e17f49e58291a$exports, "row", () => $fc6e17f49e58291a$export$120ff0929b202a6d, (v) => $fc6e17f49e58291a$export$120ff0929b202a6d = v);
 $parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e17f49e58291a$export$de3da254965f2f43, (v) => $fc6e17f49e58291a$export$de3da254965f2f43 = v);
 $parcel$export($fc6e17f49e58291a$exports, "userItem", () => $fc6e17f49e58291a$export$f6bda04bc7d10a12, (v) => $fc6e17f49e58291a$export$f6bda04bc7d10a12 = v);
@@ -1924,6 +1926,7 @@ $parcel$export($fc6e17f49e58291a$exports, "usersContainer", () => $fc6e17f49e582
 var $fc6e17f49e58291a$export$7c341cb16fc91138;
 var $fc6e17f49e58291a$export$8360e631d277ea4d;
 var $fc6e17f49e58291a$export$4e0c71f277ca26b3;
+var $fc6e17f49e58291a$export$e94d20c87215d48b;
 var $fc6e17f49e58291a$export$120ff0929b202a6d;
 var $fc6e17f49e58291a$export$de3da254965f2f43;
 var $fc6e17f49e58291a$export$f6bda04bc7d10a12;
@@ -1931,6 +1934,7 @@ var $fc6e17f49e58291a$export$771ca420b1b6ed17;
 $fc6e17f49e58291a$export$7c341cb16fc91138 = `zDJPrW_back`;
 $fc6e17f49e58291a$export$8360e631d277ea4d = `zDJPrW_close`;
 $fc6e17f49e58291a$export$4e0c71f277ca26b3 = `zDJPrW_column`;
+$fc6e17f49e58291a$export$e94d20c87215d48b = `zDJPrW_imgFallback`;
 $fc6e17f49e58291a$export$120ff0929b202a6d = `zDJPrW_row`;
 $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
 $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
@@ -1938,7 +1942,6 @@ $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
 
 const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style })=>{
-    if (!user) return null;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
@@ -1950,32 +1953,49 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                     justifyContent: "space-between"
                 },
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).row,
-                        children: [
-                            user.pictureUrl && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                src: user.pictureUrl,
-                                alt: `${user.name} profile picture`
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
-                                children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                        children: user.fullName
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+                            typeName: null,
+                            appearAnimation: "fade",
+                            enterAnimation: "fade",
+                            leaveAnimation: "fade",
+                            children: [
+                                user ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                    src: user.pictureUrl,
+                                    alt: `${user.name} profile picture`
+                                }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).imgFallback,
+                                    style: {
+                                        background: "#E7E4E2"
+                                    }
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).column,
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
+                                        typeName: null,
+                                        appearAnimation: "fade",
+                                        enterAnimation: "fade",
+                                        leaveAnimation: "fade",
                                         children: [
-                                            (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
-                                            " followers"
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                children: user?.fullName || "loading"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                                children: [
+                                                    (0, ($parcel$interopDefault($c5L0i$humannumber)))(user?.followerCount || 0),
+                                                    " followers"
+                                                ]
+                                            })
                                         ]
                                     })
-                                ]
-                            })
-                        ]
+                                })
+                            ]
+                        })
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                         onClick: (e)=>e.stopPropagation(),
-                        href: `https://twitter.com/${user.username}`,
+                        href: `https://twitter.com/${user?.username}`,
                         target: "_blank",
                         rel: "noreferrer",
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
@@ -1984,7 +2004,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
             }),
             children
         ]
-    }, user._id);
+    }, user?._id);
 };
 var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style, className: className }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {

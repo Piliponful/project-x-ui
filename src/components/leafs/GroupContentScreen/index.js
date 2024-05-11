@@ -4,25 +4,26 @@ import humanNumber from 'human-number'
 import CloseIcon from '@mui/icons-material/Close'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import cn from 'classnames'
+import FlipMove from 'react-flip-move'
 
 import styles from './style.module.styl'
 
 export const User = ({ user, onUserClick, children, style }) => {
-  if (!user) {
-    return null
-  }
-
   return (
-    <div style={style} className={styles.userItem} key={user._id} onClick={() => onUserClick(user)}>
+    <div style={style} className={styles.userItem} key={user?._id} onClick={() => onUserClick(user)}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div className={styles.row}>
-          {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
-          <div className={styles.column}>
-            <span>{user.fullName}</span>
-            <span>{humanNumber(user.followerCount)} followers</span>
-          </div>
+          <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
+            {user ? <img src={user.pictureUrl} alt={`${user.name} profile picture`} /> : <div className={styles.imgFallback} style={{ background: '#E7E4E2' }} />}
+            <div className={styles.column}>
+              <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
+                <span>{user?.fullName || 'loading'}</span>
+                <span>{humanNumber(user?.followerCount || 0)} followers</span>
+              </FlipMove>
+            </div>
+          </FlipMove>
         </div>
-        <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
+        <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user?.username}`} target='_blank' rel='noreferrer'>
           <XIcon />
         </a>
       </div>
