@@ -46,7 +46,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                     </p>
                   )}
                   {he?.answer?.toLowerCase() === 'yes' && (
-                    <p className={styles.imgWithArrow} style={{ left: '50%' }}>
+                    <p className={styles.imgWithArrow} style={me?.answer ? { left: '50%' } : {}}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
                     </p>
@@ -64,7 +64,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                   }}
                 >
                   {me?.answer?.toLowerCase() === 'no' && (
-                    <p className={styles.imgWithArrow} style={{ right: '50%' }}>
+                    <p className={styles.imgWithArrow} style={he?.answer ? { right: '50%' } : {}}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
                     </p>

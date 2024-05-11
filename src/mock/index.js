@@ -55,17 +55,17 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Tester?',
     currentUserAnswer: 'No',
-    answersCount: { yes: 383343, no: 23450 },
+    answersCount: { no: 383343, yes: 0 },
     username: 'piliponful',
     _id: 0,
     byMe: true,
     respond: () => {},
     // yourOwnQuestion: true,
     // userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-    me: {
-      pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-      answer: 'No'
-    },
+    // me: {
+    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+    //   answer: 'No'
+    // },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
       answer: 'No'
@@ -74,7 +74,11 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
-    answersCount: { yes: 112342, no: 311323 },
+    answersCount: { no: 383343, yes: 0 },
+    he: {
+      pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+      answer: 'No'
+    },
     username: 'piliponful',
     _id: 1,
     byMe: true
