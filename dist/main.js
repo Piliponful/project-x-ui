@@ -674,18 +674,21 @@ $parcel$export($060bced7ba3b76d4$exports, "arrowDown", () => $060bced7ba3b76d4$e
 $parcel$export($060bced7ba3b76d4$exports, "img", () => $060bced7ba3b76d4$export$463b44d9bf3628be, (v) => $060bced7ba3b76d4$export$463b44d9bf3628be = v);
 $parcel$export($060bced7ba3b76d4$exports, "imgWithArrow", () => $060bced7ba3b76d4$export$e4e79e5008270fc7, (v) => $060bced7ba3b76d4$export$e4e79e5008270fc7 = v);
 $parcel$export($060bced7ba3b76d4$exports, "stats", () => $060bced7ba3b76d4$export$7804429c45dff272, (v) => $060bced7ba3b76d4$export$7804429c45dff272 = v);
+$parcel$export($060bced7ba3b76d4$exports, "tester", () => $060bced7ba3b76d4$export$6b5c497e0b5239d7, (v) => $060bced7ba3b76d4$export$6b5c497e0b5239d7 = v);
 $parcel$export($060bced7ba3b76d4$exports, "text", () => $060bced7ba3b76d4$export$6f093cfa640b7166, (v) => $060bced7ba3b76d4$export$6f093cfa640b7166 = v);
 $parcel$export($060bced7ba3b76d4$exports, "textContainer", () => $060bced7ba3b76d4$export$2cedfd664bb3bd01, (v) => $060bced7ba3b76d4$export$2cedfd664bb3bd01 = v);
 var $060bced7ba3b76d4$export$f61feb65ec56823b;
 var $060bced7ba3b76d4$export$463b44d9bf3628be;
 var $060bced7ba3b76d4$export$e4e79e5008270fc7;
 var $060bced7ba3b76d4$export$7804429c45dff272;
+var $060bced7ba3b76d4$export$6b5c497e0b5239d7;
 var $060bced7ba3b76d4$export$6f093cfa640b7166;
 var $060bced7ba3b76d4$export$2cedfd664bb3bd01;
 $060bced7ba3b76d4$export$f61feb65ec56823b = `hWz-3G_arrowDown`;
 $060bced7ba3b76d4$export$463b44d9bf3628be = `hWz-3G_img`;
 $060bced7ba3b76d4$export$e4e79e5008270fc7 = `hWz-3G_imgWithArrow`;
 $060bced7ba3b76d4$export$7804429c45dff272 = `hWz-3G_stats`;
+$060bced7ba3b76d4$export$6b5c497e0b5239d7 = `hWz-3G_tester`;
 $060bced7ba3b76d4$export$6f093cfa640b7166 = `hWz-3G_text`;
 $060bced7ba3b76d4$export$2cedfd664bb3bd01 = `hWz-3G_textContainer`;
 
@@ -730,10 +733,9 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     me?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
-                                                src: me.pictureUrl,
-                                                alt: "profile picture"
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).tester,
+                                                children: "Yes"
                                             }),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
@@ -750,6 +752,10 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
                                                 src: he.pictureUrl,
                                                 alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).tester,
+                                                children: "Yes"
                                             }),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
@@ -780,6 +786,10 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                                 alt: "profile picture"
                                             }),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).tester,
+                                                children: "No"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
                                             })
                                         ]
@@ -791,6 +801,10 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).img,
                                                 src: he.pictureUrl,
                                                 alt: "profile picture"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).tester,
+                                                children: "No"
                                             }),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).arrowDown
@@ -813,21 +827,23 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
-                                    width: `${yesPercentage}%`
+                                    width: `${yesPercentage}%`,
+                                    whiteSpace: "nowrap"
                                 },
                                 children: [
                                     yesPercentage,
-                                    "%"
+                                    "%(yes)"
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
-                                    width: `${noPercentage}%`
+                                    width: `${noPercentage}%`,
+                                    whiteSpace: "nowrap"
                                 },
                                 children: [
                                     noPercentage,
-                                    "%"
+                                    "%(no)"
                                 ]
                             })
                         ]

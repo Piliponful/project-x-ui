@@ -41,13 +41,15 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                 >
                   {me?.answer?.toLowerCase() === 'yes' && (
                     <p className={styles.imgWithArrow}>
-                      <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
+                      {/* <img className={styles.img} src={me.pictureUrl} alt='profile picture' /> */}
+                      <div className={styles.tester}>Yes</div>
                       <div className={styles.arrowDown} />
                     </p>
                   )}
                   {he?.answer?.toLowerCase() === 'yes' && (
                     <p className={styles.imgWithArrow} style={me?.answer ? { left: '50%' } : {}}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
+                      <div className={styles.tester}>Yes</div>
                       <div className={styles.arrowDown} />
                     </p>
                   )}
@@ -66,12 +68,14 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                   {me?.answer?.toLowerCase() === 'no' && (
                     <p className={styles.imgWithArrow} style={he?.answer ? { right: '50%' } : {}}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
+                      <div className={styles.tester}>No</div>
                       <div className={styles.arrowDown} />
                     </p>
                   )}
                   {he?.answer?.toLowerCase() === 'no' && (
                     <p className={styles.imgWithArrow}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
+                      <div className={styles.tester}>No</div>
                       <div className={styles.arrowDown} />
                     </p>
                   )}
@@ -79,8 +83,8 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
               </div>
               <Bars yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
               <div className={styles.textContainer}>
-                <Text className={styles.text} style={{ width: `${yesPercentage}%` }}>{yesPercentage}%</Text>
-                <Text className={styles.text} style={{ width: `${noPercentage}%` }}>{noPercentage}%</Text>
+                <Text className={styles.text} style={{ width: `${yesPercentage}%`, whiteSpace: 'nowrap' }}>{yesPercentage}%(yes)</Text>
+                <Text className={styles.text} style={{ width: `${noPercentage}%`, whiteSpace: 'nowrap' }}>{noPercentage}%(no)</Text>
               </div>
             </>
             )

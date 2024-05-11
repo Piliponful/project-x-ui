@@ -55,7 +55,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Tester?',
     currentUserAnswer: 'No',
-    answersCount: { no: 383343, yes: 0 },
+    answersCount: { yes: 383343, no: 0 },
     username: 'piliponful',
     _id: 0,
     byMe: true,
@@ -68,16 +68,16 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     // },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'No'
+      answer: 'Yes'
     }
   },
   {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
-    answersCount: { no: 383343, yes: 0 },
+    answersCount: { yes: 383343, no: 0 },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'No'
+      answer: 'Yes'
     },
     username: 'piliponful',
     _id: 1,

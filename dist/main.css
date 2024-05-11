@@ -225,11 +225,32 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  position: relative;
+}
+
+.hWz-3G_tester {
+  content: "";
+  z-index: 111;
+  background: #b3b3b3;
+  border: 3px solid #b3b3b3;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  bottom: 5px;
 }
 
 .hWz-3G_imgWithArrow {
   position: absolute;
   bottom: 0;
+}
+
+.hWz-3G_imgWithArrow:hover .hWz-3G_tester {
+  display: flex;
 }
 
 .Orh0Eq_button {

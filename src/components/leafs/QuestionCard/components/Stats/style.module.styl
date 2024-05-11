@@ -33,11 +33,34 @@
   height: 30px;
   width: 30px;
   border: 3px solid #b3b3b3;
+  position: relative;
+
+  // &:hover::after {
+  //   display: block;
+  // }
+}
+
+.tester {
+  content: "";
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 3px solid #b3b3b3;
+  background: #b3b3b3;
+  display: none;;
+  position: absolute;
+  z-index: 111;
+  bottom: 5px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgWithArrow {
   position: absolute;
   bottom: 0;
-  // position: relative;
-  // bottom: 18px;
+
+  &:hover .tester {
+    display: flex;
+  }
 }
