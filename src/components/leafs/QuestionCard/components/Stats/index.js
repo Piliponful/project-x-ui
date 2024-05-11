@@ -63,13 +63,13 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                     // minWidth: 102
                   }}
                 >
-                  {me?.answer?.toLowerCase() === 'No' && (
+                  {me?.answer?.toLowerCase() === 'no' && (
                     <p className={styles.imgWithArrow} style={{ right: '50%' }}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />
                     </p>
                   )}
-                  {he?.answer?.toLowerCase() === 'No' && (
+                  {he?.answer?.toLowerCase() === 'no' && (
                     <p className={styles.imgWithArrow}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.arrowDown} />

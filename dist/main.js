@@ -768,7 +768,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer?.toLowerCase() === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    me?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: {
                                             right: "50%"
@@ -784,7 +784,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer?.toLowerCase() === "No" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    he?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
