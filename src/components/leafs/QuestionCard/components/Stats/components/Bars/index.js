@@ -3,9 +3,9 @@ import cn from 'classnames'
 
 import styles from './style.module.styl'
 
-export default ({ yes, no, onHover, createNewGroup }) => {
+export default ({ yes, no, onHover, createNewGroup, style, className }) => {
   return (
-    <div className={styles.bars}>
+    <div style={style} className={cn(styles.bars, className)}>
       <div
         style={{ width: `${yes}%` }}
         className={cn(styles.bar, styles.yesBar)}

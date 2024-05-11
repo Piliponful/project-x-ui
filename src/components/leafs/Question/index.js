@@ -28,6 +28,7 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
     const resizeObserver = new ResizeObserver(() => {
       const a = document.querySelector('#question-card')
       const b = document.querySelector('#question-text')
+      const c = document.querySelector('#question-text-size')
 
       const containerHeight = a.clientHeight
       const containerWidth = a.clientWidth
@@ -43,15 +44,15 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
         return resizeObserver.disconnect()
       }
 
-      const currentFontSize = parseInt(window.getComputedStyle(b).fontSize.replace('px', ''))
+      const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace('px', ''))
       console.log('currentFontSize: ', currentFontSize)
-      b.style['font-size'] = `${currentFontSize - 1}px`
+      c.style['font-size'] = `${currentFontSize - 1}px`
     })
 
     resizeObserver.observe(document.querySelector('#question-text'))
 
     window.addEventListener('resize', _.debounce(() => {
-      document.querySelector('#question-text').style['font-size'] = '200px'
+      document.querySelector('#question-text-size').style['font-size'] = '200px'
       resizeObserver.observe(document.querySelector('#question-text'))
     }, 1000))
 
@@ -60,13 +61,13 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
 
   return (
     <article id='question-card' ref={ref} className={styles.card}>
-      <Title id='question-text' style={{ padding: '0 26px' }}>
-        <div className={styles.questionText}>{name}</div>
-        <p className={styles.username} onClick={onUserClick}>
-          {' '}by {username},
-          {' '}<Text style={{ display: 'inline', textAlign: 'center', marginBottom: 70 }} secondary>answered by <Number x={userReplyCount} /> people</Text>
+      <div id='question-text' style={{ padding: '0 26px' }}>
+        <Title style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
+        <p className={styles.username}>
+          {' '}by <span className={styles.usernameActual} onClick={onUserClick}>{username}</span>,
+          {' '}<Text style={{ display: 'inline', textAlign: 'center' }} secondary>answered by <Number x={userReplyCount} /> people</Text>
         </p>
-      </Title>
+      </div>
       <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         {/* {hisAnswer && (<Answer his answer={hisAnswer} />)} */}
         {/* {answer && (<Answer style={{ marginBottom: 12 }} answer={answer} />)} */}
@@ -84,7 +85,8 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
                       position: 'relative',
                       display: 'flex',
                       gap: 12,
-                      bottom: 0
+                      bottom: 0,
+                      minWidth: 102
                     }}
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
@@ -102,7 +104,8 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
                       position: 'relative',
                       display: 'flex',
                       gap: 12,
-                      bottom: 0
+                      bottom: 0,
+                      minWidth: 102
                     }}
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
@@ -114,7 +117,7 @@ export const Question = forwardRef(({ yourOwnQuestion, onUserClick, userPictureU
                     )}
                   </Text>
                 </div>
-                <Bars yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
+                <Bars className={styles.bars} yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
               </>
               )
             : null

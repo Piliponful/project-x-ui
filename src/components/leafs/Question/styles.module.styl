@@ -21,18 +21,28 @@
 
 .username {
   color: #00000063;
-  cursor: pointer;
   transition: color .2s;
-  white-space: nowrap;
+  white-space: pre;
   font-size: 16px;
   // padding-bottom: 16px;
   height: 40px;
   box-sizing: border-box;
-  display: block;
+  font-family: 'IBM Plex Sans';
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  line-height: 1;
+  // & * {
+  //   line-height: 1;
+  // }
+}
+
+.usernameActual {
+  cursor: pointer;
 
   &:hover {
     color: #3b3b3b;
-  }
+  }  
 }
 
 .hint {
@@ -68,7 +78,7 @@
 
 .questionText {
   // font-size: 48px;
-  // font-size: 178px;
+  font-size: 178px;
   font-weight: 200;
 }
 
@@ -120,3 +130,7 @@
 //   position: relative;
 //   width: 100%;
 // }
+
+.bars > div {
+  min-width: 102px;
+}
