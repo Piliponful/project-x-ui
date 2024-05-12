@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -964,9 +964,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 createNewGroup: createNewGroup
             }),
             !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
-                style: {
-                    width: 400
-                },
                 respond: respond
             })
         ]

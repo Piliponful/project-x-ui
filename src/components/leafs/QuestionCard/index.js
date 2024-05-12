@@ -13,7 +13,7 @@ export default forwardRef(({ yourOwnQuestion, onUserClick, username, name, answe
         <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
       </Title>
       <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
-      {!yourOwnQuestion && (!me?.answer && <AnswerButtons style={{ width: 400 }} respond={respond} />)}
+      {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
     </article>
   )
 })
