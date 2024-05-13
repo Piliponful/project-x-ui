@@ -165,7 +165,7 @@
 
 .pVQoxG_bars {
   width: 160px;
-  height: 14px;
+  height: 4px;
   margin-top: 5px;
   display: flex;
 }
@@ -1774,15 +1774,21 @@
 }
 
 .WWPmHq_img {
+  z-index: 99999;
   border: 3px solid #b3b3b3;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  position: relative;
 }
 
 .WWPmHq_imgWithArrow {
   margin-bottom: 4px;
   position: relative;
+}
+
+.WWPmHq_bars {
+  height: 14px;
 }
 
 .WWPmHq_bars > div {
