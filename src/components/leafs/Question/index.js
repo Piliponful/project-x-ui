@@ -99,7 +99,7 @@ export const Question = forwardRef(({
                       minWidth: 102
                     }}
                   >
-                    <span style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
+                    <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
                     {answer?.toLowerCase() === 'yes' && (
                       <div className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
@@ -118,7 +118,7 @@ export const Question = forwardRef(({
                       minWidth: 102
                     }}
                   >
-                    <span style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
+                    <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
                     {answer?.toLowerCase() === 'no' && (
                       <div className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
