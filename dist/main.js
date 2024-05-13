@@ -2985,8 +2985,17 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             const c = document.querySelector("#question-text-size");
             const containerHeight = a.clientHeight;
             const questionHeight = b.clientHeight;
-            if (questionHeight + 110 < containerHeight) return resizeObserver.disconnect();
+            const containerWidth = a.clientWidth;
+            const questionWidth = b.clientWidth;
+            console.log(questionWidth, containerWidth);
+            if (questionHeight + 110 < containerHeight && questionWidth <= containerWidth) return resizeObserver.disconnect();
             const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace("px", ""));
+            if (currentFontSize === 0) {
+                c.style["font-size"] = "32px";
+                b.style.overflow = "auto";
+                b.style.height = "calc(100dvh - 126px)";
+                return resizeObserver.disconnect();
+            }
             c.style["font-size"] = `${currentFontSize - 1}px`;
         });
         resizeObserver.observe(document.querySelector("#question-text"));
@@ -3015,7 +3024,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                         id: "question-text-size",
                         children: name
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).username,
                         children: [
                             " ",
@@ -3057,7 +3066,8 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                 children: [
                     !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                         style: {
-                            width: 400
+                            maxWidth: 400,
+                            width: "90%"
                         },
                         respond: respond
                     }),

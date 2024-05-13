@@ -31,14 +31,25 @@ export const Question = forwardRef(({
       const c = document.querySelector('#question-text-size')
 
       const containerHeight = a.clientHeight
-
       const questionHeight = b.clientHeight
 
-      if ((questionHeight + 110) < containerHeight) {
+      const containerWidth = a.clientWidth
+      const questionWidth = b.clientWidth
+
+      console.log(questionWidth, containerWidth)
+
+      if ((questionHeight + 110) < containerHeight && questionWidth <= containerWidth) {
         return resizeObserver.disconnect()
       }
 
       const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace('px', ''))
+
+      if (currentFontSize === 0) {
+        c.style['font-size'] = '32px'
+        b.style.overflow = 'auto'
+        b.style.height = 'calc(100dvh - 126px)'
+        return resizeObserver.disconnect()
+      }
       c.style['font-size'] = `${currentFontSize - 1}px`
     })
 
@@ -56,10 +67,10 @@ export const Question = forwardRef(({
     <article id='question-card' ref={ref} className={styles.card}>
       <div id='question-text' style={{ padding: '0 26px' }}>
         <Title style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
-        <p className={styles.username}>
+        <div className={styles.username}>
           {' '}by <span className={styles.usernameActual} onClick={onUserClick}>{username}</span>,
           {' '}<Text style={{ display: 'inline', textAlign: 'center' }} secondary>answered by <Number x={userReplyCount} /> people</Text>
-        </p>
+        </div>
       </div>
       <div
         style={{
@@ -71,7 +82,7 @@ export const Question = forwardRef(({
           alignItems: 'center'
         }}
       >
-        {!yourOwnQuestion && (!answer && <AnswerButtons style={{ width: 400 }} respond={respond} />)}
+        {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond} />)}
         <div className={styles.stats}>
           {
             Boolean(userReplyCount) && (
