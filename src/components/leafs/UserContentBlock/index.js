@@ -50,11 +50,7 @@ export const UserHistoryTabs = forwardRef(({
       >
         {!_.isNull(similarity) && (
           <p
-            style={{
-              paddingTop: 24,
-              paddingBottom: 9,
-              borderTop: '1px solid #b3b3b3'
-            }}
+            className={styles.similarity}
           >
             Similarity to you: <span className={styles.similarityMeter}>{similarity}%</span>
           </p>

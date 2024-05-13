@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -2144,6 +2144,7 @@ $parcel$export($d96dc328a9b2259c$exports, "differentTabs", () => $d96dc328a9b225
 $parcel$export($d96dc328a9b2259c$exports, "differentTabs2", () => $d96dc328a9b2259c$export$11056a9a5a9dfdf9, (v) => $d96dc328a9b2259c$export$11056a9a5a9dfdf9 = v);
 $parcel$export($d96dc328a9b2259c$exports, "screenWithGroupContent", () => $d96dc328a9b2259c$export$de3da254965f2f43, (v) => $d96dc328a9b2259c$export$de3da254965f2f43 = v);
 $parcel$export($d96dc328a9b2259c$exports, "selected", () => $d96dc328a9b2259c$export$d90250155de6d7e7, (v) => $d96dc328a9b2259c$export$d90250155de6d7e7 = v);
+$parcel$export($d96dc328a9b2259c$exports, "similarity", () => $d96dc328a9b2259c$export$16a4d76eabe7aabb, (v) => $d96dc328a9b2259c$export$16a4d76eabe7aabb = v);
 $parcel$export($d96dc328a9b2259c$exports, "tabs", () => $d96dc328a9b2259c$export$39f5674517ec0000, (v) => $d96dc328a9b2259c$export$39f5674517ec0000 = v);
 var $d96dc328a9b2259c$export$7c341cb16fc91138;
 var $d96dc328a9b2259c$export$4effee6a14a93095;
@@ -2152,6 +2153,7 @@ var $d96dc328a9b2259c$export$b70bd1b6fa2267e5;
 var $d96dc328a9b2259c$export$11056a9a5a9dfdf9;
 var $d96dc328a9b2259c$export$de3da254965f2f43;
 var $d96dc328a9b2259c$export$d90250155de6d7e7;
+var $d96dc328a9b2259c$export$16a4d76eabe7aabb;
 var $d96dc328a9b2259c$export$39f5674517ec0000;
 $d96dc328a9b2259c$export$7c341cb16fc91138 = `_31v-EG_back`;
 $d96dc328a9b2259c$export$4effee6a14a93095 = `_31v-EG_backContainer`;
@@ -2160,6 +2162,7 @@ $d96dc328a9b2259c$export$b70bd1b6fa2267e5 = `_31v-EG_differentTabs`;
 $d96dc328a9b2259c$export$11056a9a5a9dfdf9 = `_31v-EG_differentTabs2`;
 $d96dc328a9b2259c$export$de3da254965f2f43 = `_31v-EG_screenWithGroupContent`;
 $d96dc328a9b2259c$export$d90250155de6d7e7 = `_31v-EG_selected`;
+$d96dc328a9b2259c$export$16a4d76eabe7aabb = `_31v-EG_similarity`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
@@ -2194,11 +2197,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                 user: user,
                 onUserClick: ()=>{},
                 children: !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
-                    style: {
-                        paddingTop: 24,
-                        paddingBottom: 9,
-                        borderTop: "1px solid #b3b3b3"
-                    },
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarity,
                     children: [
                         "Similarity to you: ",
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {

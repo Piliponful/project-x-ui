@@ -377,8 +377,8 @@ const Authorized = () => {
   return (
     <>
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
-      {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />}
-      {screenName === 'questions' && <SidebarWithQuestions />} */}
+      {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
+      <SidebarWithQuestions />
       {/* {screenName && (
         <UserHistoryTabs
           answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
@@ -422,7 +422,7 @@ const Authorized = () => {
         </div>
         <MainScreenWithQuestions /> */}
         {/* <div style={{ marginRight: 241 }}> */}
-        <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
         {/* <Question {...(mostAnsweredQuestions[0])} /> */}
         {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
