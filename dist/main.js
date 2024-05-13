@@ -2597,7 +2597,7 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         ...i,
                         htmlName: htmlOutput,
                         onUserClick: ()=>onUserClick(i.userId),
-                        onQuestionClick: ()=>onQuestionClick(i._id)
+                        onClick: ()=>onQuestionClick(i._id)
                     }, i.id || i._id);
                 })
             })

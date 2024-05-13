@@ -56,7 +56,7 @@ export default forwardRef(({
               {...i}
               htmlName={htmlOutput}
               onUserClick={() => onUserClick(i.userId)}
-              onQuestionClick={() => onQuestionClick(i._id)}
+              onClick={() => onQuestionClick(i._id)}
             />
           )
         })}
