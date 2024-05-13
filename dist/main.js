@@ -2319,7 +2319,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
                         onUserClick: ()=>onUserClick(i.userId),
-                        onQuestionClick: ()=>onQuestionClick(i._id)
+                        onClick: ()=>onQuestionClick(i._id)
                     }, i.id || i._id))
             })
         })
@@ -2343,7 +2343,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
             createNewGroup: (content)=>createNewGroup(i._id, content),
             ...i,
             onUserClick: ()=>onUserClick(i.userId),
-            onQuestionClick: ()=>onQuestionClick(i._id)
+            onClick: ()=>onQuestionClick(i._id)
         }, i.id || i._id));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -2992,7 +2992,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             const questionHeight = b.clientHeight;
             const containerWidth = a.clientWidth;
             const questionWidth = b.clientWidth;
-            console.log(questionWidth, containerWidth);
             if (questionHeight + 110 < containerHeight && questionWidth <= containerWidth) return resizeObserver.disconnect();
             const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace("px", ""));
             if (currentFontSize === 0) {

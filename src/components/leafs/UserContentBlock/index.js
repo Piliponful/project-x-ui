@@ -144,7 +144,7 @@ export const UserQuestionsHistory = forwardRef(({
               createNewGroup={content => createNewGroup(i._id, content)}
               {...i}
               onUserClick={() => onUserClick(i.userId)}
-              onQuestionClick={() => onQuestionClick(i._id)}
+              onClick={() => onQuestionClick(i._id)}
             />
           ))}
         </FlipMove>
@@ -184,7 +184,7 @@ export const UserAnswerDifferences = forwardRef(({
       createNewGroup={content => createNewGroup(i._id, content)}
       {...i}
       onUserClick={() => onUserClick(i.userId)}
-      onQuestionClick={() => onQuestionClick(i._id)}
+      onClick={() => onQuestionClick(i._id)}
     />
   )))
 

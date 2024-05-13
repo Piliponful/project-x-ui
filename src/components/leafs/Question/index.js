@@ -36,8 +36,6 @@ export const Question = forwardRef(({
       const containerWidth = a.clientWidth
       const questionWidth = b.clientWidth
 
-      console.log(questionWidth, containerWidth)
-
       if ((questionHeight + 110) < containerHeight && questionWidth <= containerWidth) {
         return resizeObserver.disconnect()
       }
