@@ -706,7 +706,9 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: me?.answer || he?.answer ? {
             marginTop: 50
-        } : {},
+        } : {
+            marginTop: 20
+        },
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).stats, className),
         children: [
             userReplyCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
