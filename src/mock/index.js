@@ -74,6 +74,10 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas',
     currentUserAnswer: 'No',
+    he: {
+      pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+      answer: 'Yes'
+    },
     answersCount: { no: 383343, yes: 0 },
     username: 'piliponful',
     _id: 0,
@@ -387,7 +391,7 @@ const Authorized = () => {
     <>
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
-      <SidebarWithQuestions />
+      {/* <SidebarWithQuestions /> */}
       {/* {screenName && (
         <UserHistoryTabs
           answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
@@ -431,7 +435,7 @@ const Authorized = () => {
         </div>
         <MainScreenWithQuestions /> */}
         {/* <div style={{ marginRight: 241 }}> */}
-        {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
+        <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         {/* <Question {...(mostAnsweredQuestions[0])} /> */}
         {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}

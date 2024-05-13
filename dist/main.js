@@ -2394,7 +2394,6 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
             questionsToShow && questionsToShow.length === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {}),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactflipmove))), {
                 appearAnimation: "elevator",
-                typeName: null,
                 maintainContainerHeight: true,
                 children: questionsToShow
             })

@@ -222,7 +222,6 @@ export const UserAnswerDifferences = forwardRef(({
       {questionsToShow && questionsToShow.length === 0 && <Empty />}
       <FlipMove
         appearAnimation='elevator'
-        typeName={null}
         maintainContainerHeight
       >
         {questionsToShow}
