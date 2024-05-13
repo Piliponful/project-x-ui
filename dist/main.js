@@ -726,7 +726,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    me?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -743,7 +743,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    he?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: me?.answer ? {
                                             left: "50%"
@@ -775,7 +775,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    me?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: he?.answer ? {
                                             right: "50%"
@@ -795,7 +795,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                    he?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3089,7 +3089,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                                answer.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3125,7 +3125,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                                answer.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {

@@ -39,18 +39,18 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                   }}
                 >
                   {me?.answer?.toLowerCase() === 'yes' && (
-                    <p className={styles.imgWithArrow}>
+                    <div className={styles.imgWithArrow}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.tester}>Yes</div>
                       <div className={styles.arrowDown} />
-                    </p>
+                    </div>
                   )}
                   {he?.answer?.toLowerCase() === 'yes' && (
-                    <p className={styles.imgWithArrow} style={me?.answer ? { left: '50%' } : {}}>
+                    <div className={styles.imgWithArrow} style={me?.answer ? { left: '50%' } : {}}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.tester}>Yes</div>
                       <div className={styles.arrowDown} />
-                    </p>
+                    </div>
                   )}
                 </Text>
                 <Text
@@ -65,18 +65,18 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                   }}
                 >
                   {me?.answer?.toLowerCase() === 'no' && (
-                    <p className={styles.imgWithArrow} style={he?.answer ? { right: '50%' } : {}}>
+                    <div className={styles.imgWithArrow} style={he?.answer ? { right: '50%' } : {}}>
                       <img className={styles.img} src={me.pictureUrl} alt='profile picture' />
                       <div className={styles.tester}>No</div>
                       <div className={styles.arrowDown} />
-                    </p>
+                    </div>
                   )}
                   {he?.answer?.toLowerCase() === 'no' && (
-                    <p className={styles.imgWithArrow}>
+                    <div className={styles.imgWithArrow}>
                       <img className={styles.img} src={he.pictureUrl} alt='profile picture' />
                       <div className={styles.tester}>No</div>
                       <div className={styles.arrowDown} />
-                    </p>
+                    </div>
                   )}
                 </Text>
               </div>

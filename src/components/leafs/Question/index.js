@@ -90,10 +90,10 @@ export const Question = forwardRef(({
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
                     {answer.toLowerCase() === 'yes' && (
-                      <p className={styles.imgWithArrow}>
+                      <div className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
                         <div className={styles.arrowDown} />
-                      </p>
+                      </div>
                     )}
                   </Text>
                   <Text
@@ -109,10 +109,10 @@ export const Question = forwardRef(({
                   >
                     <span style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
                     {answer.toLowerCase() === 'no' && (
-                      <p className={styles.imgWithArrow}>
+                      <div className={styles.imgWithArrow}>
                         <img className={styles.img} src={userPictureUrl} alt='profile picture' />
                         <div className={styles.arrowDown} />
-                      </p>
+                      </div>
                     )}
                   </Text>
                 </div>
