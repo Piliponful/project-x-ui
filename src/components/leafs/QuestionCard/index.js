@@ -6,9 +6,9 @@ import AnswerButtons from './components/AnswerButtons'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ yourOwnQuestion, onUserClick, username, name, answersCount, he, me, respond, createNewGroup, htmlName }, ref) => {
+export default forwardRef(({ yourOwnQuestion, onUserClick, username, name, answersCount, he, me, respond, createNewGroup, htmlName, onClick }, ref) => {
   return (
-    <article ref={ref} className={styles.card}>
+    <article ref={ref} className={styles.card} onClick={onClick}>
       <Title>
         <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
       </Title>
