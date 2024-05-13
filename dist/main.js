@@ -704,17 +704,11 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
     const yesPercentage = $b43f368b8ea6feca$var$calcPercent(yes, yes + no);
     const noPercentage = $b43f368b8ea6feca$var$calcPercent(no, yes + no);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        style: me?.answer || he?.answer ? {
+            marginTop: 50
+        } : {},
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).stats, className),
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
-                secondary: true,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $7eb06ad4c8df7dbd$export$2e2bcd8739ae039), {
-                        x: userReplyCount
-                    }),
-                    " people answered"
-                ]
-            }),
             userReplyCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -854,7 +848,19 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                         ]
                     })
                 ]
-            }) : null
+            }) : null,
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
+                secondary: true,
+                style: {
+                    marginTop: 12
+                },
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $7eb06ad4c8df7dbd$export$2e2bcd8739ae039), {
+                        x: userReplyCount
+                    }),
+                    " people answered"
+                ]
+            })
         ]
     });
 };

@@ -72,12 +72,21 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     // }
   },
   {
+    name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas',
+    currentUserAnswer: 'No',
+    answersCount: { no: 383343, yes: 0 },
+    username: 'piliponful',
+    _id: 0,
+    byMe: true,
+    respond: () => {}
+  },
+  {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
     answersCount: { no: 383343, yes: 0 },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'No'
+      answer: 'Yes'
     },
     username: 'piliponful',
     _id: 1,

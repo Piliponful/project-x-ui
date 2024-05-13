@@ -21,8 +21,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
   const noPercentage = calcPercent(no, yes + no)
 
   return (
-    <div className={cn(styles.stats, className)}>
-      <Text secondary><Number x={userReplyCount} /> people answered</Text>
+    <div style={me?.answer || he?.answer ? { marginTop: 50 } : {}} className={cn(styles.stats, className)}>
       {
         userReplyCount
           ? (
@@ -90,6 +89,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
             )
           : null
       }
+      <Text secondary style={{ marginTop: 12 }}><Number x={userReplyCount} /> people answered</Text>
     </div>
   )
 }
