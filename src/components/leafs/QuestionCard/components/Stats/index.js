@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import cn from 'classnames'
+import _ from 'lodash'
 
 import Number from '../../../../shared/Number'
 
@@ -23,8 +24,8 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
   return (
     <div style={me?.answer || he?.answer ? { marginTop: 50 } : { marginTop: 20 }} className={cn(styles.stats, className)}>
       {
-        userReplyCount
-          ? (
+        _.isNumber(userReplyCount) &&
+          (
             <>
               <div className={styles.textContainer}>
                 <Text
@@ -86,8 +87,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
                 <Text className={styles.text} style={{ width: `${noPercentage}%`, whiteSpace: 'nowrap' }}>{noPercentage}%(no)</Text>
               </div>
             </>
-            )
-          : null
+          )
       }
       <Text secondary style={{ marginTop: 12 }}><Number x={userReplyCount} /> people answered</Text>
     </div>

@@ -85,7 +85,7 @@ export const Question = forwardRef(({
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond} />)}
         <div className={styles.stats}>
           {
-            Boolean(userReplyCount) && (
+            _.isNumber(userReplyCount) && (
               <>
                 <div className={styles.textContainer}>
                   <Text

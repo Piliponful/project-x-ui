@@ -609,6 +609,7 @@ var $c52b3c36a0937910$export$2e2bcd8739ae039 = ({ children: children, style: sty
 
 
 
+
 var $261dc5824c408278$exports = {};
 
 $parcel$export($261dc5824c408278$exports, "text", () => $261dc5824c408278$export$6f093cfa640b7166, (v) => $261dc5824c408278$export$6f093cfa640b7166 = v);
@@ -713,7 +714,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
         },
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).stats, className),
         children: [
-            userReplyCount ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+            (0, ($parcel$interopDefault($c5L0i$lodash))).isNumber(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).textContainer,
@@ -852,7 +853,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                         ]
                     })
                 ]
-            }) : null,
+            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
                 secondary: true,
                 style: {
@@ -3077,7 +3078,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).stats,
-                        children: Boolean(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                        children: (0, ($parcel$interopDefault($c5L0i$lodash))).isNumber(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).textContainer,
