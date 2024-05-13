@@ -2296,7 +2296,7 @@ const $4c6bd8db1d735d14$export$1f74963c34e8bfec = ()=>/*#__PURE__*/ (0, $c5L0i$r
         })
     });
 $4c6bd8db1d735d14$export$1f74963c34e8bfec.prototype = {};
-const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick }, ref)=>{
+const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, respond: respond, createNewGroup: createNewGroup, onUserClick: onUserClick, onQuestionClick: onQuestionClick }, ref)=>{
     if (questions && questions.length === 0) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4c6bd8db1d735d14$export$1f74963c34e8bfec, {});
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {
@@ -2313,7 +2313,8 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
                         respond: respond && ((content)=>respond(i._id, content)),
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
-                        onUserClick: ()=>onUserClick(i.userId)
+                        onUserClick: ()=>onUserClick(i.userId),
+                        onQuestionClick: ()=>onQuestionClick(i._id)
                     }, i.id || i._id))
             })
         })
@@ -2321,7 +2322,7 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
 });
 const $4c6bd8db1d735d14$export$a6816b34ad549b0 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ respond: // hasMore,
 // fetchAnswers,
-respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers }, ref)=>{
+respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers, onQuestionClick: onQuestionClick }, ref)=>{
     const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
     const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
     // const [answers, setAnswers] = useState({
@@ -2336,7 +2337,8 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
             respond: respond && ((content)=>respond(i._id, content)),
             createNewGroup: (content)=>createNewGroup(i._id, content),
             ...i,
-            onUserClick: ()=>onUserClick(i.userId)
+            onUserClick: ()=>onUserClick(i.userId),
+            onQuestionClick: ()=>onQuestionClick(i._id)
         }, i.id || i._id));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -2549,7 +2551,7 @@ $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
     const replacement = `<strong>${targetText}</strong>`;
     return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
 });
-var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className, onUserClick: onUserClick }, ref)=>{
+var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className, onUserClick: onUserClick, onQuestionClick: onQuestionClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
     const template = (0, ($parcel$interopDefault($c5L0i$handlebars))).compile(templateString);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $f6827b11255bd55d$export$2e2bcd8739ae039), {
@@ -2589,7 +2591,8 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         createNewGroup: (content)=>createNewGroup(i._id, content),
                         ...i,
                         htmlName: htmlOutput,
-                        onUserClick: ()=>onUserClick(i.userId)
+                        onUserClick: ()=>onUserClick(i.userId),
+                        onQuestionClick: ()=>onQuestionClick(i._id)
                     }, i.id || i._id);
                 })
             })

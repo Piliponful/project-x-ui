@@ -18,7 +18,9 @@ Handlebars.registerHelper('bold', function (options) {
   )
 })
 
-export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond, createNewGroup, back, search, style, className, onUserClick }, ref) => {
+export default forwardRef(({
+  questions, hasMore, fetchQuestions, total, respond, createNewGroup, back, search, style, className, onUserClick, onQuestionClick
+}, ref) => {
   const templateString = `{{bold text="${search}"}}`
   const template = Handlebars.compile(templateString)
 
@@ -54,6 +56,7 @@ export default forwardRef(({ questions, hasMore, fetchQuestions, total, respond,
               {...i}
               htmlName={htmlOutput}
               onUserClick={() => onUserClick(i.userId)}
+              onQuestionClick={() => onQuestionClick(i._id)}
             />
           )
         })}

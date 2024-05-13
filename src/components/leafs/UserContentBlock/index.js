@@ -118,7 +118,7 @@ export const Empty = () => (
 Empty.prototype = {}
 
 export const UserQuestionsHistory = forwardRef(({
-  questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick
+  questions, hasMore, fetchQuestions, respond, createNewGroup, onUserClick, onQuestionClick
 }, ref) => {
   if (questions && questions.length === 0) {
     return <Empty />
@@ -144,6 +144,7 @@ export const UserQuestionsHistory = forwardRef(({
               createNewGroup={content => createNewGroup(i._id, content)}
               {...i}
               onUserClick={() => onUserClick(i.userId)}
+              onQuestionClick={() => onQuestionClick(i._id)}
             />
           ))}
         </FlipMove>
@@ -158,7 +159,8 @@ export const UserAnswerDifferences = forwardRef(({
   respond,
   createNewGroup,
   onUserClick,
-  answers
+  answers,
+  onQuestionClick
 }, ref) => {
   const [selectedTab, setSelectedTab] = useState('different')
   const [selectedNestedTab, setSelectedNestedTab] = useState('byMe')
@@ -182,6 +184,7 @@ export const UserAnswerDifferences = forwardRef(({
       createNewGroup={content => createNewGroup(i._id, content)}
       {...i}
       onUserClick={() => onUserClick(i.userId)}
+      onQuestionClick={() => onQuestionClick(i._id)}
     />
   )))
 
