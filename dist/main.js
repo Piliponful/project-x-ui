@@ -6,6 +6,7 @@ var $c5L0i$classnames = require("classnames");
 var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
+var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
@@ -584,6 +585,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
 
 
 
+
 var $6c2645ffd3415e4c$exports = {};
 
 $parcel$export($6c2645ffd3415e4c$exports, "title", () => $6c2645ffd3415e4c$export$fb184b623420d9be, (v) => $6c2645ffd3415e4c$export$fb184b623420d9be = v);
@@ -932,12 +934,15 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 var $34a1d4be4ab80325$exports = {};
 
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
+$parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
 $parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
 $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
 var $34a1d4be4ab80325$export$aa3e815946b80764;
+var $34a1d4be4ab80325$export$9f77e0932fb78f72;
 var $34a1d4be4ab80325$export$464c821cd4347539;
 var $34a1d4be4ab80325$export$5e1be761f603d585;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
+$34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
@@ -946,8 +951,11 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
-        onClick: onClick,
         children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
+                onClick: onClick
+            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {

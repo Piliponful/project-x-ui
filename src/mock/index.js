@@ -71,19 +71,19 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     //   answer: 'Yes'
     // }
   },
-  {
-    name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas',
-    currentUserAnswer: 'No',
-    // he: {
-    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-    //   answer: 'Yes'
-    // },
-    answersCount: { no: 383343, yes: 0 },
-    username: 'piliponful',
-    _id: 0,
-    byMe: true,
-    respond: () => {}
-  },
+  // {
+  //   name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas',
+  //   currentUserAnswer: 'No',
+  //   // he: {
+  //   //   pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+  //   //   answer: 'Yes'
+  //   // },
+  //   answersCount: { no: 383343, yes: 0 },
+  //   username: 'piliponful',
+  //   _id: 0,
+  //   byMe: true,
+  //   respond: () => {}
+  // },
   {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
@@ -429,14 +429,14 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
-        <Question {...(mostAnsweredQuestions[1])} />
+        {/* <Question {...(mostAnsweredQuestions[1])} /> */}
         {/* </div> */}
         {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
         {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}

@@ -315,10 +315,19 @@
   margin-bottom: 10px;
   padding: 15px 15px 10px;
   display: flex;
+  position: relative;
 }
 
 .GN153G_card:last-of-type {
   margin-bottom: 0;
+}
+
+.GN153G_expand {
+  color: #3b3b3b;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .GN153G_username {
