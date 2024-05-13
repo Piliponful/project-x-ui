@@ -3089,7 +3089,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3125,7 +3125,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                         "%"
                                                     ]
                                                 }),
-                                                answer.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
