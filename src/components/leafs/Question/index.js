@@ -133,7 +133,7 @@ export const Question = forwardRef(({
                   )}
                 </div>
                 <Bars
-                  className={cn(styles.bars, { [styles.barsMinWidth]: yesPercentage !== 0 })}
+                  className={cn(styles.bars, { [styles.barsMinWidth]: (yesPercentage !== 0 && noPercentage !== 0) })}
                   yes={yesPercentage}
                   no={noPercentage}
                   onHover={setState}

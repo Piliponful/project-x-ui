@@ -2721,6 +2721,7 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                onClick: (e)=>e.stopPropagation(),
                                 href: `https://twitter.com/${user.username}`,
                                 target: "_blank",
                                 rel: "noreferrer",
@@ -3165,7 +3166,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $93a91f764584dcb2$export$2e2bcd8739ae039), {
                                     className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).bars, {
-                                        [(0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).barsMinWidth]: yesPercentage !== 0
+                                        [(0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).barsMinWidth]: yesPercentage !== 0 && noPercentage !== 0
                                     }),
                                     yes: yesPercentage,
                                     no: noPercentage,

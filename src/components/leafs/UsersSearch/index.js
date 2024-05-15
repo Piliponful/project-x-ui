@@ -55,7 +55,7 @@ export default forwardRef(({ style, users, fetchUsers, hasMore, total, back, sea
                   <span>{humanNumber(user.followerCount)} followers</span>
                 </div>
               </div>
-              <a href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
+              <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user.username}`} target='_blank' rel='noreferrer'>
                 <XIcon />
               </a>
             </div>
