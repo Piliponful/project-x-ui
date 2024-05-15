@@ -7,6 +7,7 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
+var $c5L0i$datefns = require("date-fns");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
@@ -586,6 +587,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
 
 
 
+
 var $6c2645ffd3415e4c$exports = {};
 
 $parcel$export($6c2645ffd3415e4c$exports, "title", () => $6c2645ffd3415e4c$export$fb184b623420d9be, (v) => $6c2645ffd3415e4c$export$fb184b623420d9be = v);
@@ -948,7 +950,7 @@ $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
@@ -973,6 +975,17 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             __html: htmlName
                         }
                     }) : name
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                style: {
+                    fontFamily: "IBM Plex Sans"
+                },
+                children: [
+                    (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt)),
+                    " ago (",
+                    (0, $c5L0i$datefns.format)(new Date(createdAt), "PPPPp"),
+                    ")"
                 ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
