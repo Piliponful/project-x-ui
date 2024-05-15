@@ -55,7 +55,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Tester?',
     currentUserAnswer: 'No',
-    answersCount: { yes: 383343, no: 0 },
+    answersCount: { yes: 0, no: 0 },
     username: 'piliponful',
     _id: 0,
     byMe: true,
@@ -87,7 +87,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
   {
     name: 'Will Luffy find one piece?',
     currentUserAnswer: null,
-    answersCount: { no: 383343, yes: 0 },
+    answersCount: { no: 0, yes: 0 },
     he: {
       pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
       answer: 'Yes'

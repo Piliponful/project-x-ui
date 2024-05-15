@@ -714,7 +714,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
         },
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).stats, className),
         children: [
-            (0, ($parcel$interopDefault($c5L0i$lodash))).isNumber(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+            userReplyCount !== 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).textContainer,
@@ -2933,10 +2933,12 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $c9a1b197475086e8$exports = {};
 
 $parcel$export($c9a1b197475086e8$exports, "arrowDown", () => $c9a1b197475086e8$export$f61feb65ec56823b, (v) => $c9a1b197475086e8$export$f61feb65ec56823b = v);
 $parcel$export($c9a1b197475086e8$exports, "bars", () => $c9a1b197475086e8$export$60912654947077e3, (v) => $c9a1b197475086e8$export$60912654947077e3 = v);
+$parcel$export($c9a1b197475086e8$exports, "barsMinWidth", () => $c9a1b197475086e8$export$2e07f93cbaeb0394, (v) => $c9a1b197475086e8$export$2e07f93cbaeb0394 = v);
 $parcel$export($c9a1b197475086e8$exports, "card", () => $c9a1b197475086e8$export$aa3e815946b80764, (v) => $c9a1b197475086e8$export$aa3e815946b80764 = v);
 $parcel$export($c9a1b197475086e8$exports, "hint", () => $c9a1b197475086e8$export$464c821cd4347539, (v) => $c9a1b197475086e8$export$464c821cd4347539 = v);
 $parcel$export($c9a1b197475086e8$exports, "img", () => $c9a1b197475086e8$export$463b44d9bf3628be, (v) => $c9a1b197475086e8$export$463b44d9bf3628be = v);
@@ -2950,6 +2952,7 @@ $parcel$export($c9a1b197475086e8$exports, "username", () => $c9a1b197475086e8$ex
 $parcel$export($c9a1b197475086e8$exports, "usernameActual", () => $c9a1b197475086e8$export$9a369e4b55725081, (v) => $c9a1b197475086e8$export$9a369e4b55725081 = v);
 var $c9a1b197475086e8$export$f61feb65ec56823b;
 var $c9a1b197475086e8$export$60912654947077e3;
+var $c9a1b197475086e8$export$2e07f93cbaeb0394;
 var $c9a1b197475086e8$export$aa3e815946b80764;
 var $c9a1b197475086e8$export$464c821cd4347539;
 var $c9a1b197475086e8$export$463b44d9bf3628be;
@@ -2963,6 +2966,7 @@ var $c9a1b197475086e8$export$5e1be761f603d585;
 var $c9a1b197475086e8$export$9a369e4b55725081;
 $c9a1b197475086e8$export$f61feb65ec56823b = `WWPmHq_arrowDown`;
 $c9a1b197475086e8$export$60912654947077e3 = `WWPmHq_bars`;
+$c9a1b197475086e8$export$2e07f93cbaeb0394 = `WWPmHq_barsMinWidth`;
 $c9a1b197475086e8$export$aa3e815946b80764 = `WWPmHq_card`;
 $c9a1b197475086e8$export$464c821cd4347539 = `WWPmHq_hint`;
 $c9a1b197475086e8$export$463b44d9bf3628be = `WWPmHq_img`;
@@ -3009,6 +3013,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         }, 1000));
         return ()=>resizeObserver.disconnect();
     }, []);
+    console.log("test: ", yesPercentage, noPercentage, userReplyCount);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         id: "question-card",
         ref: ref,
@@ -3077,12 +3082,12 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).stats,
-                        children: (0, ($parcel$interopDefault($c5L0i$lodash))).isNumber(userReplyCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                        children: userReplyCount !== 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).textContainer,
                                     children: [
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                                        yesPercentage !== 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).text,
                                             style: {
                                                 width: `${yesPercentage}%`,
@@ -3119,7 +3124,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                                 })
                                             ]
                                         }),
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                                        noPercentage !== 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).text,
                                             style: {
                                                 width: `${noPercentage}%`,
@@ -3159,7 +3164,9 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                     ]
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $93a91f764584dcb2$export$2e2bcd8739ae039), {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).bars,
+                                    className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).bars, {
+                                        [(0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).barsMinWidth]: yesPercentage !== 0
+                                    }),
                                     yes: yesPercentage,
                                     no: noPercentage,
                                     onHover: setState,

@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import _ from 'lodash'
+import cn from 'classnames'
 
 import Title from '../QuestionCard/components/Title'
 import AnswerButtons from '../QuestionCard/components/AnswerButtons'
@@ -61,6 +62,8 @@ export const Question = forwardRef(({
     return () => resizeObserver.disconnect()
   }, [])
 
+  console.log('test: ', yesPercentage, noPercentage, userReplyCount)
+
   return (
     <article id='question-card' ref={ref} className={styles.card}>
       <div id='question-text' style={{ padding: '0 26px' }}>
@@ -83,49 +86,59 @@ export const Question = forwardRef(({
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond} />)}
         <div className={styles.stats}>
           {
-            _.isNumber(userReplyCount) && (
+            userReplyCount !== 0 && (
               <>
                 <div className={styles.textContainer}>
-                  <Text
-                    className={styles.text}
-                    style={{
-                      width: `${yesPercentage}%`,
-                      position: 'relative',
-                      display: 'flex',
-                      gap: 12,
-                      bottom: 0,
-                      minWidth: 102
-                    }}
-                  >
-                    <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
-                    {answer?.toLowerCase() === 'yes' && (
-                      <div className={styles.imgWithArrow}>
-                        <img className={styles.img} src={userPictureUrl} alt='profile picture' />
-                        <div className={styles.arrowDown} />
-                      </div>
-                    )}
-                  </Text>
-                  <Text
-                    className={styles.text}
-                    style={{
-                      width: `${noPercentage}%`,
-                      position: 'relative',
-                      display: 'flex',
-                      gap: 12,
-                      bottom: 0,
-                      minWidth: 102
-                    }}
-                  >
-                    <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
-                    {answer?.toLowerCase() === 'no' && (
-                      <div className={styles.imgWithArrow}>
-                        <img className={styles.img} src={userPictureUrl} alt='profile picture' />
-                        <div className={styles.arrowDown} />
-                      </div>
-                    )}
-                  </Text>
+                  {yesPercentage !== 0 && (
+                    <Text
+                      className={styles.text}
+                      style={{
+                        width: `${yesPercentage}%`,
+                        position: 'relative',
+                        display: 'flex',
+                        gap: 12,
+                        bottom: 0,
+                        minWidth: 102
+                      }}
+                    >
+                      <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{yesPercentage}%</span>
+                      {answer?.toLowerCase() === 'yes' && (
+                        <div className={styles.imgWithArrow}>
+                          <img className={styles.img} src={userPictureUrl} alt='profile picture' />
+                          <div className={styles.arrowDown} />
+                        </div>
+                      )}
+                    </Text>
+                  )}
+                  {noPercentage !== 0 && (
+                    <Text
+                      className={styles.text}
+                      style={{
+                        width: `${noPercentage}%`,
+                        position: 'relative',
+                        display: 'flex',
+                        gap: 12,
+                        bottom: 0,
+                        minWidth: 102
+                      }}
+                    >
+                      <span onClick={createNewGroup} style={{ display: 'flex', alignItems: 'end' }}>{noPercentage}%</span>
+                      {answer?.toLowerCase() === 'no' && (
+                        <div className={styles.imgWithArrow}>
+                          <img className={styles.img} src={userPictureUrl} alt='profile picture' />
+                          <div className={styles.arrowDown} />
+                        </div>
+                      )}
+                    </Text>
+                  )}
                 </div>
-                <Bars className={styles.bars} yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
+                <Bars
+                  className={cn(styles.bars, { [styles.barsMinWidth]: yesPercentage !== 0 })}
+                  yes={yesPercentage}
+                  no={noPercentage}
+                  onHover={setState}
+                  createNewGroup={createNewGroup}
+                />
               </>
             )
           }

@@ -24,7 +24,7 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
   return (
     <div style={me?.answer || he?.answer ? { marginTop: 50 } : { marginTop: 20 }} className={cn(styles.stats, className)}>
       {
-        _.isNumber(userReplyCount) &&
+        userReplyCount !== 0 &&
           (
             <>
               <div className={styles.textContainer}>
