@@ -3100,7 +3100,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                    onClick: createNewGroup,
+                                                    onClick: ()=>createNewGroup("yes"),
                                                     style: {
                                                         display: "flex",
                                                         alignItems: "end"
@@ -3137,7 +3137,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                    onClick: createNewGroup,
+                                                    onClick: ()=>createNewGroup("no"),
                                                     style: {
                                                         display: "flex",
                                                         alignItems: "end"
