@@ -7,7 +7,6 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
-var $c5L0i$datefns = require("date-fns");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
@@ -587,7 +586,6 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
 
 
 
-
 var $6c2645ffd3415e4c$exports = {};
 
 $parcel$export($6c2645ffd3415e4c$exports, "title", () => $6c2645ffd3415e4c$export$fb184b623420d9be, (v) => $6c2645ffd3415e4c$export$fb184b623420d9be = v);
@@ -975,17 +973,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             __html: htmlName
                         }
                     }) : name
-                ]
-            }),
-            createdAt && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
-                style: {
-                    fontFamily: "IBM Plex Sans"
-                },
-                children: [
-                    (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt)),
-                    " ago (",
-                    (0, $c5L0i$datefns.format)(new Date(createdAt), "PPPPp"),
-                    ")"
                 ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
@@ -3027,7 +3014,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         }, 1000));
         return ()=>resizeObserver.disconnect();
     }, []);
-    console.log("test: ", yesPercentage, noPercentage, userReplyCount);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         id: "question-card",
         ref: ref,

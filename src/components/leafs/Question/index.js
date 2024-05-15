@@ -62,8 +62,6 @@ export const Question = forwardRef(({
     return () => resizeObserver.disconnect()
   }, [])
 
-  console.log('test: ', yesPercentage, noPercentage, userReplyCount)
-
   return (
     <article id='question-card' ref={ref} className={styles.card}>
       <div id='question-text' style={{ padding: '0 26px' }}>

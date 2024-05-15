@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import { formatDistanceToNow, format } from 'date-fns'
+// import { formatDistanceToNow, format } from 'date-fns'
 
 import Title from './components/Title'
 import Stats from './components/Stats'
@@ -15,7 +15,7 @@ export default forwardRef(({ yourOwnQuestion, onUserClick, createdAt, username, 
       <Title>
         <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
       </Title>
-      {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>}
+      {/* {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>} */}
       <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
       {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
     </article>
