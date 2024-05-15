@@ -977,7 +977,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     }) : name
                 ]
             }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+            createdAt && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                 style: {
                     fontFamily: "IBM Plex Sans"
                 },

@@ -15,7 +15,7 @@ export default forwardRef(({ yourOwnQuestion, onUserClick, createdAt, username, 
       <Title>
         <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
       </Title>
-      <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>
+      {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>}
       <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
       {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
     </article>
