@@ -1949,6 +1949,10 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         children: "Log out"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>setIsModalOpen(true),
+                        children: "Rewards"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: showMyHistory,
                         children: "My Questions/Answers"
                     }),
