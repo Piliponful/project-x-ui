@@ -31,7 +31,7 @@ export default forwardRef(({ yourOwnQuestion, _id, onUserClick, createdAt, usern
       </Title>
       {/* {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>} */}
       <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
-      {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
+      {!yourOwnQuestion && (!me?.answer && <AnswerButtons style={{ marginLeft: 19 }} respond={respond} />)}
     </article>
   )
 })
