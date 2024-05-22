@@ -25,7 +25,7 @@ const customStyles = {
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide, connected, isWalletModalOpenInitial = true }) => {
+export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -61,6 +61,11 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     connectToWalletR()
     setIsWalletModalOpen(false)
     setIsModalOpen(false)
+  }
+
+  const hide = () => {
+    hideR()
+    setIsWalletModalOpen(false)
   }
 
   if (includeSwipes) {
