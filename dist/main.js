@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -1161,11 +1161,11 @@ const $0c70feff32ca6a2b$var$customStyles = {
     }
 };
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWallet, hide: hide, connected: connected })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWallet, hide: hide, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
-    const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(true);
-    const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(false);
+    const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
+    const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(isWalletModalOpenInitial);
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
