@@ -962,17 +962,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
-                        onClick: onClick
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
-                        onClick: share
-                    })
-                ]
-            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
@@ -1003,6 +992,17 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     boxSizing: "border-box"
                 },
                 respond: respond
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                        onClick: onClick
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                        onClick: share
+                    })
+                ]
             })
         ]
     });

@@ -22,16 +22,16 @@ export default forwardRef(({ yourOwnQuestion, _id, onUserClick, createdAt, usern
 
   return (
     <article ref={ref} className={styles.card}>
-      <div className={styles.expand}>
-        <OpenInNewIcon onClick={onClick} />
-        <ShareIcon onClick={share} />
-      </div>
       <Title>
         <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
       </Title>
       {/* {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>} */}
       <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
       {!yourOwnQuestion && (!me?.answer && <AnswerButtons style={{ paddingRight: 15, boxSizing: 'border-box' }} respond={respond} />)}
+      <div className={styles.expand}>
+        <OpenInNewIcon onClick={onClick} />
+        <ShareIcon onClick={share} />
+      </div>
     </article>
   )
 })
