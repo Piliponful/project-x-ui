@@ -1161,7 +1161,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
     }
 };
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWallet, hide: hide, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hide, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
@@ -1182,6 +1182,11 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     }, [
         skipScreen
     ]);
+    const connectToWallet = ()=>{
+        connectToWalletR();
+        setIsWalletModalOpen(false);
+        setIsModalOpen(false);
+    };
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
         value: {
             screenName: screenName,
