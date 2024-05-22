@@ -1,6 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import _ from 'lodash'
 import cn from 'classnames'
+import ShareIcon from '@mui/icons-material/Share'
 
 import Title from '../QuestionCard/components/Title'
 import AnswerButtons from '../QuestionCard/components/AnswerButtons'
@@ -14,7 +15,7 @@ import styles from './styles.module.styl'
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
 export const Question = forwardRef(({
-  yourOwnQuestion, onUserClick, userPictureUrl, username, name, answersCount, me: { answer } = {}, respond, createNewGroup
+  yourOwnQuestion, onUserClick, userPictureUrl, _id, username, name, answersCount, me: { answer } = {}, respond, createNewGroup
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -24,6 +25,16 @@ export const Question = forwardRef(({
 
   const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
   const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
+
+  const share = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Question',
+        text: name,
+        url: `https://poll.cc/questions/${_id}`
+      })
+    }
+  }
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(() => {
@@ -69,6 +80,7 @@ export const Question = forwardRef(({
         <div className={styles.username}>
           {' '}by <span className={styles.usernameActual} onClick={onUserClick}>{username}</span>,
           {' '}<Text style={{ display: 'inline', textAlign: 'center' }} secondary>answered by <Number x={userReplyCount} /> people</Text>
+          <ShareIcon sx={{ marginLeft: '10px', cursor: 'pointer' }} onClick={share} />
         </div>
       </div>
       <div

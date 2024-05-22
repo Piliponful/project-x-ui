@@ -7,6 +7,7 @@ var $c5L0i$reactspinnersBeatLoader = require("react-spinners/BeatLoader");
 var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome");
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
+var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
@@ -586,6 +587,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
 
 
 
+
 var $6c2645ffd3415e4c$exports = {};
 
 $parcel$export($6c2645ffd3415e4c$exports, "title", () => $6c2645ffd3415e4c$export$fb184b623420d9be, (v) => $6c2645ffd3415e4c$export$fb184b623420d9be = v);
@@ -948,14 +950,28 @@ $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, _id: _id, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
+    const share = ()=>{
+        if (navigator.share) navigator.share({
+            title: "Question",
+            text: name,
+            url: `https://poll.cc/questions/${_id}`
+        });
+    };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
-                onClick: onClick
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                        onClick: onClick
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                        onClick: share
+                    })
+                ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
                 children: [
@@ -3033,6 +3049,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $c9a1b197475086e8$exports = {};
 
 $parcel$export($c9a1b197475086e8$exports, "arrowDown", () => $c9a1b197475086e8$export$f61feb65ec56823b, (v) => $c9a1b197475086e8$export$f61feb65ec56823b = v);
@@ -3080,12 +3097,19 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, _id: _id, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
     const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
+    const share = ()=>{
+        if (navigator.share) navigator.share({
+            title: "Question",
+            text: name,
+            url: `https://poll.cc/questions/${_id}`
+        });
+    };
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{
             const a = document.querySelector("#question-card");
@@ -3156,6 +3180,13 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                     }),
                                     " people"
                                 ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                                sx: {
+                                    marginLeft: "10px",
+                                    cursor: "pointer"
+                                },
+                                onClick: share
                             })
                         ]
                     })

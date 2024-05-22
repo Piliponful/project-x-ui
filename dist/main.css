@@ -299,6 +299,7 @@
 .b4MS9q_answerButtons {
   justify-content: space-between;
   width: 100%;
+  margin-left: 19px;
   display: flex;
 }
 
@@ -313,7 +314,7 @@
   width: 100%;
   min-height: 180px;
   margin-bottom: 10px;
-  padding: 15px 15px 10px;
+  padding: 15px 39px 10px 15px;
   display: flex;
   position: relative;
 }
@@ -323,11 +324,17 @@
 }
 
 .GN153G_expand {
-  color: #3b3b3b;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
   position: absolute;
   top: 8px;
   right: 8px;
+}
+
+.GN153G_expand svg {
+  color: #3b3b3b;
+  cursor: pointer;
 }
 
 .GN153G_username {
@@ -1696,6 +1703,10 @@
   font-size: 178px;
 }
 
+article {
+  min-height: unset !important;
+}
+
 .WWPmHq_card {
   box-sizing: border-box;
   background: none;
@@ -1720,8 +1731,8 @@
   white-space: pre;
   box-sizing: border-box;
   justify-content: center;
-  align-items: end;
-  height: 40px;
+  align-items: center;
+  margin-top: 20px;
   font-family: IBM Plex Sans;
   font-size: 16px;
   line-height: 1;
