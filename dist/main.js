@@ -987,10 +987,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 createNewGroup: createNewGroup
             }),
             !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
-                style: {
-                    paddingRight: 15,
-                    boxSizing: "border-box"
-                },
                 respond: respond
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
