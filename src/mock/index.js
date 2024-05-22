@@ -463,7 +463,7 @@ const getUserToken = () => {
 
 const root = ReactDOM.createRoot(document.getElementById('app'))
 root.render(
-  <Body address='0x105Cc09CA22e3cD746D8d6c4e2f8cfBcf97207Be' payout={155} includeSwipes>
+  <Body address='0x105Cc09CA22e3cD746D8d6c4e2f8cfBcf97207Be' payout={155} includeSwipes connected={false}>
     <Authorized />
     {/* <Authentication
       createUser={createUser}

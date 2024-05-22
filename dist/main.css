@@ -470,6 +470,35 @@
   overflow: hidden;
 }
 
+.sLin6a_hide {
+  color: #00f;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sLin6a_modalContent {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.sLin6a_connectButton {
+  cursor: pointer;
+  color: #3b3b3b;
+  background: none;
+  border: 1px solid #59acd6;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  padding: 9px 16px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  transition: color .1s;
+  display: flex;
+}
+
 .E0-4eG_groupContainer {
   flex-direction: column;
   width: 100%;
@@ -1653,9 +1682,8 @@
 }
 
 .ReactModal__Overlay {
-  backdrop-filter: blur(10px);
   font-family: IBM Plex Sans;
-  background-color: #0000 !important;
+  background-color: #0000004d !important;
 }
 
 .ReactModal__Content {
