@@ -15,7 +15,7 @@ import styles from './styles.module.styl'
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
 export const Question = forwardRef(({
-  yourOwnQuestion, onUserClick, userPictureUrl, _id, username, name, answersCount, me: { answer } = {}, respond, createNewGroup
+  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -31,7 +31,7 @@ export const Question = forwardRef(({
       navigator.share({
         title: 'Question',
         text: name,
-        url: `https://poll.cc/questions/${_id}`
+        url: `https://poll.cc/questions/${shortId}`
       })
     }
   }

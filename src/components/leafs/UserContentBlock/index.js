@@ -141,10 +141,10 @@ export const UserQuestionsHistory = forwardRef(({
             <QuestionCard
               key={i.id || i._id}
               respond={respond && (content => respond(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
+              createNewGroup={content => createNewGroup(i.shortId, content)}
               {...i}
               onUserClick={() => onUserClick(i.userId)}
-              onClick={() => onQuestionClick(i._id)}
+              onClick={() => onQuestionClick(i.shortId)}
             />
           ))}
         </FlipMove>
@@ -181,10 +181,10 @@ export const UserAnswerDifferences = forwardRef(({
     <QuestionCard
       key={i.id || i._id}
       respond={respond && (content => respond(i._id, content))}
-      createNewGroup={content => createNewGroup(i._id, content)}
+      createNewGroup={content => createNewGroup(i.shortId, content)}
       {...i}
       onUserClick={() => onUserClick(i.userId)}
-      onClick={() => onQuestionClick(i._id)}
+      onClick={() => onQuestionClick(i.shortId)}
     />
   )))
 

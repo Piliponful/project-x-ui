@@ -52,11 +52,11 @@ export default forwardRef(({
             <QuestionCard
               key={i.id || i._id}
               respond={respond && (content => respond(i._id, content))}
-              createNewGroup={content => createNewGroup(i._id, content)}
+              createNewGroup={content => createNewGroup(i.shortId, content)}
               {...i}
               htmlName={htmlOutput}
               onUserClick={() => onUserClick(i.userId)}
-              onClick={() => onQuestionClick(i._id)}
+              onClick={() => onQuestionClick(i.shortId)}
             />
           )
         })}

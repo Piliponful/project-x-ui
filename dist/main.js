@@ -950,12 +950,12 @@ $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, _id: _id, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
             text: name,
-            url: `https://poll.cc/questions/${_id}`
+            url: `https://poll.cc/questions/${shortId}`
         });
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
@@ -2430,10 +2430,10 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
                 maintainContainerHeight: true,
                 children: questions && questions.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                         respond: respond && ((content)=>respond(i._id, content)),
-                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        createNewGroup: (content)=>createNewGroup(i.shortId, content),
                         ...i,
                         onUserClick: ()=>onUserClick(i.userId),
-                        onClick: ()=>onQuestionClick(i._id)
+                        onClick: ()=>onQuestionClick(i.shortId)
                     }, i.id || i._id))
             })
         })
@@ -2454,10 +2454,10 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
     // }, [])
     const questionsToShow = answers && (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
             respond: respond && ((content)=>respond(i._id, content)),
-            createNewGroup: (content)=>createNewGroup(i._id, content),
+            createNewGroup: (content)=>createNewGroup(i.shortId, content),
             ...i,
             onUserClick: ()=>onUserClick(i.userId),
-            onClick: ()=>onQuestionClick(i._id)
+            onClick: ()=>onQuestionClick(i.shortId)
         }, i.id || i._id));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -2707,11 +2707,11 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     });
                     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
                         respond: respond && ((content)=>respond(i._id, content)),
-                        createNewGroup: (content)=>createNewGroup(i._id, content),
+                        createNewGroup: (content)=>createNewGroup(i.shortId, content),
                         ...i,
                         htmlName: htmlOutput,
                         onUserClick: ()=>onUserClick(i.userId),
-                        onClick: ()=>onQuestionClick(i._id)
+                        onClick: ()=>onQuestionClick(i.shortId)
                     }, i.id || i._id);
                 })
             })
@@ -3097,7 +3097,7 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, _id: _id, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
@@ -3107,7 +3107,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         if (navigator.share) navigator.share({
             title: "Question",
             text: name,
-            url: `https://poll.cc/questions/${_id}`
+            url: `https://poll.cc/questions/${shortId}`
         });
     };
     (0, $c5L0i$react.useEffect)(()=>{
