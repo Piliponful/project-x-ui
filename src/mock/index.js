@@ -23,6 +23,7 @@ import { SortQuestions } from '../components/leafs/SortQuestions'
 import { Question } from '../components/leafs/Question'
 
 import '../../styles.css'
+import './mock-styles.css'
 
 import 'react-phone-number-input/style.css'
 
@@ -136,7 +137,8 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     answersCount: { yes: 231031, no: 30328 },
     username: 'piliponful',
     createdAt: 1080156900,
-    _id: 6
+    _id: 6,
+    img: 'https://www.meisterdrucke.ie/kunstwerke/1260px/F_Abderrahim_-_Donald_Trump_Portrait_painting_for_Sale_Wall_Art_Prints_Framed_Art_-_%28MeisterDrucke-1478499%29.jpg'
   }
 ]
 
