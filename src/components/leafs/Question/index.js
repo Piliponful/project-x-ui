@@ -29,8 +29,6 @@ export const Question = forwardRef(({
   const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
   const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
 
-  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}`)
-
   const share = () => {
     if (navigator.share) {
       navigator.share({
@@ -41,7 +39,9 @@ export const Question = forwardRef(({
     }
   }
 
-  const redirectToLogin = () => {
+  const redirectToLogin = answer => {
+    const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}?answer=${answer}`)
+
     window.location.replace(twitterAuthUrl)
   }
 

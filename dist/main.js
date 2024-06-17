@@ -3130,7 +3130,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
     const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
-    const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}`);
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
@@ -3138,7 +3137,8 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             url: `https://poll.cc/questions/${shortId}`
         });
     };
-    const redirectToLogin = ()=>{
+    const redirectToLogin = (answer)=>{
+        const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}?answer=${answer}`);
         window.location.replace(twitterAuthUrl);
     };
     (0, $c5L0i$react.useEffect)(()=>{
