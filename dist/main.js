@@ -1053,8 +1053,11 @@ var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: 
 
 var $6db7aebbd1711895$exports = {};
 
+$parcel$export($6db7aebbd1711895$exports, "button", () => $6db7aebbd1711895$export$2ba01fb71ed41cb6, (v) => $6db7aebbd1711895$export$2ba01fb71ed41cb6 = v);
 $parcel$export($6db7aebbd1711895$exports, "newQuestion", () => $6db7aebbd1711895$export$9ad540bb5fc131aa, (v) => $6db7aebbd1711895$export$9ad540bb5fc131aa = v);
+var $6db7aebbd1711895$export$2ba01fb71ed41cb6;
 var $6db7aebbd1711895$export$9ad540bb5fc131aa;
+$6db7aebbd1711895$export$2ba01fb71ed41cb6 = `OGOopW_button`;
 $6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
 
 
@@ -1062,21 +1065,29 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const [question, setQuestion] = (0, $c5L0i$react.useState)("");
     const onChange = (e)=>{
         const newQuestion = e.target.value;
-        if (newQuestion[newQuestion.length - 1] === "?") {
-            e.target.blur();
-            saveQuestion(newQuestion);
-            setQuestion("");
-        } else setQuestion(newQuestion);
+        setQuestion(newQuestion);
+    };
+    const save = (e)=>{
+        e.target.blur();
+        saveQuestion(question);
+        setQuestion("");
     };
     const disabled = !saveQuestion;
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
-            disabled: disabled,
-            value: question,
-            onChange: onChange
-        })
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
+                disabled: disabled,
+                value: question,
+                onChange: onChange
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).button,
+                onClick: save,
+                children: "Ask"
+            })
+        ]
     });
 });
 

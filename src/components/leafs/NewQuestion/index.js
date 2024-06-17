@@ -10,13 +10,13 @@ export default forwardRef(({ saveQuestion }, ref) => {
   const onChange = (e) => {
     const newQuestion = e.target.value
 
-    if (newQuestion[newQuestion.length - 1] === '?') {
-      e.target.blur()
-      saveQuestion(newQuestion)
-      setQuestion('')
-    } else {
-      setQuestion(newQuestion)
-    }
+    setQuestion(newQuestion)
+  }
+
+  const save = (e) => {
+    e.target.blur()
+    saveQuestion(question)
+    setQuestion('')
   }
 
   const disabled = !saveQuestion
@@ -24,6 +24,7 @@ export default forwardRef(({ saveQuestion }, ref) => {
   return (
     <div ref={ref} className={styles.newQuestion}>
       <Input disabled={disabled} value={question} onChange={onChange} />
+      <button className={styles.button} onClick={save}>Ask</button>
     </div>
   )
 })

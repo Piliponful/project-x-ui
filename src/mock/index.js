@@ -401,7 +401,7 @@ const Authorized = () => {
     <>
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
-      <SidebarWithQuestions />
+      {/* <SidebarWithQuestions /> */}
       {/* {screenName && (
         <UserHistoryTabs
           answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
@@ -439,11 +439,11 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
         {/* <Question {...(mostAnsweredQuestions[1])} /> */}
