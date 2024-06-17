@@ -1558,6 +1558,7 @@
 
 .ue_oWq_dropdownContainer {
   box-sizing: border-box;
+  border-radius: 4px;
   max-width: 241px;
   transition: color .1s;
   position: relative;
