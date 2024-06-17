@@ -3138,7 +3138,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         });
     };
     const redirectToLogin = (answer)=>{
-        const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}?answer=${answer}?parentMessageId=${_id}`);
+        const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}?answer=${answer}&parentMessageId=${_id}`);
         window.location.replace(twitterAuthUrl);
     };
     (0, $c5L0i$react.useEffect)(()=>{

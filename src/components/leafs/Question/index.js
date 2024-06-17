@@ -40,7 +40,7 @@ export const Question = forwardRef(({
   }
 
   const redirectToLogin = answer => {
-    const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}?answer=${answer}?parentMessageId=${_id}`)
+    const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}?answer=${answer}&parentMessageId=${_id}`)
 
     window.location.replace(twitterAuthUrl)
   }
