@@ -8,6 +8,7 @@ var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
+var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactswipeable = require("react-swipeable");
@@ -588,6 +589,8 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
 
 
 
+
+
 var $6c2645ffd3415e4c$exports = {};
 
 $parcel$export($6c2645ffd3415e4c$exports, "title", () => $6c2645ffd3415e4c$export$fb184b623420d9be, (v) => $6c2645ffd3415e4c$export$fb184b623420d9be = v);
@@ -939,18 +942,27 @@ var $34a1d4be4ab80325$exports = {};
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
 $parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
+$parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
 $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
 var $34a1d4be4ab80325$export$aa3e815946b80764;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
 var $34a1d4be4ab80325$export$464c821cd4347539;
+var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
+var $34a1d4be4ab80325$export$275ee2193c25f37a;
+var $34a1d4be4ab80325$export$fd824239f75849bd;
 var $34a1d4be4ab80325$export$5e1be761f603d585;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
+$34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
+$34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
+$34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick }, ref)=>{
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
@@ -962,41 +974,56 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
         children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
-                        onClick: onUserClick,
-                        children: [
-                            username,
-                            ":"
-                        ]
-                    }),
-                    " ",
-                    htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                        dangerouslySetInnerHTML: {
-                            __html: htmlName
-                        }
-                    }) : name
-                ]
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
-                ...answersCount,
-                he: he,
-                me: me,
-                createNewGroup: createNewGroup
-            }),
-            !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
-                respond: respond
+            img && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).previewImg,
+                src: img,
+                alt: "preview image"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCard, {
+                    [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCardWithImage]: img
+                }),
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
-                        onClick: onClick
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
+                                onClick: onUserClick,
+                                children: [
+                                    username,
+                                    ":"
+                                ]
+                            }),
+                            " ",
+                            htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                dangerouslySetInnerHTML: {
+                                    __html: htmlName
+                                }
+                            }) : name
+                        ]
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
-                        onClick: share
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
+                        ...answersCount,
+                        he: he,
+                        me: me,
+                        createNewGroup: createNewGroup
+                    }),
+                    !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                        respond: respond
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                                onClick: onClick
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                                onClick: share
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
+                                onClick: addImage
+                            })
+                        ]
                     })
                 ]
             })
@@ -3050,12 +3077,15 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
+
 var $c9a1b197475086e8$exports = {};
 
 $parcel$export($c9a1b197475086e8$exports, "arrowDown", () => $c9a1b197475086e8$export$f61feb65ec56823b, (v) => $c9a1b197475086e8$export$f61feb65ec56823b = v);
 $parcel$export($c9a1b197475086e8$exports, "bars", () => $c9a1b197475086e8$export$60912654947077e3, (v) => $c9a1b197475086e8$export$60912654947077e3 = v);
 $parcel$export($c9a1b197475086e8$exports, "barsMinWidth", () => $c9a1b197475086e8$export$2e07f93cbaeb0394, (v) => $c9a1b197475086e8$export$2e07f93cbaeb0394 = v);
 $parcel$export($c9a1b197475086e8$exports, "card", () => $c9a1b197475086e8$export$aa3e815946b80764, (v) => $c9a1b197475086e8$export$aa3e815946b80764 = v);
+$parcel$export($c9a1b197475086e8$exports, "close", () => $c9a1b197475086e8$export$8360e631d277ea4d, (v) => $c9a1b197475086e8$export$8360e631d277ea4d = v);
 $parcel$export($c9a1b197475086e8$exports, "hint", () => $c9a1b197475086e8$export$464c821cd4347539, (v) => $c9a1b197475086e8$export$464c821cd4347539 = v);
 $parcel$export($c9a1b197475086e8$exports, "img", () => $c9a1b197475086e8$export$463b44d9bf3628be, (v) => $c9a1b197475086e8$export$463b44d9bf3628be = v);
 $parcel$export($c9a1b197475086e8$exports, "imgWithArrow", () => $c9a1b197475086e8$export$e4e79e5008270fc7, (v) => $c9a1b197475086e8$export$e4e79e5008270fc7 = v);
@@ -3070,6 +3100,7 @@ var $c9a1b197475086e8$export$f61feb65ec56823b;
 var $c9a1b197475086e8$export$60912654947077e3;
 var $c9a1b197475086e8$export$2e07f93cbaeb0394;
 var $c9a1b197475086e8$export$aa3e815946b80764;
+var $c9a1b197475086e8$export$8360e631d277ea4d;
 var $c9a1b197475086e8$export$464c821cd4347539;
 var $c9a1b197475086e8$export$463b44d9bf3628be;
 var $c9a1b197475086e8$export$e4e79e5008270fc7;
@@ -3084,6 +3115,7 @@ $c9a1b197475086e8$export$f61feb65ec56823b = `WWPmHq_arrowDown`;
 $c9a1b197475086e8$export$60912654947077e3 = `WWPmHq_bars`;
 $c9a1b197475086e8$export$2e07f93cbaeb0394 = `WWPmHq_barsMinWidth`;
 $c9a1b197475086e8$export$aa3e815946b80764 = `WWPmHq_card`;
+$c9a1b197475086e8$export$8360e631d277ea4d = `WWPmHq_close`;
 $c9a1b197475086e8$export$464c821cd4347539 = `WWPmHq_hint`;
 $c9a1b197475086e8$export$463b44d9bf3628be = `WWPmHq_img`;
 $c9a1b197475086e8$export$e4e79e5008270fc7 = `WWPmHq_imgWithArrow`;
@@ -3097,18 +3129,22 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup, close: close, redirectUri: redirectUri }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
     const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
+    const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
             text: name,
             url: `https://poll.cc/questions/${shortId}`
         });
+    };
+    const redirectToLogin = ()=>{
+        window.location.replace(twitterAuthUrl);
     };
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{
@@ -3119,7 +3155,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             const questionHeight = b.clientHeight;
             const containerWidth = a.clientWidth;
             const questionWidth = b.clientWidth;
-            if (questionHeight + 110 < containerHeight && questionWidth <= containerWidth) return resizeObserver.disconnect();
+            if (questionHeight + 178 < containerHeight && questionWidth <= containerWidth) return resizeObserver.disconnect();
             const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace("px", ""));
             if (currentFontSize === 0) {
                 c.style["font-size"] = "32px";
@@ -3141,6 +3177,13 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         ref: ref,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).card,
         children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).close,
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).back,
+                    onClick: close
+                })
+            }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 id: "question-text",
                 style: {
@@ -3207,7 +3250,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                             maxWidth: 400,
                             width: "90%"
                         },
-                        respond: respond
+                        respond: respond || redirectToLogin
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).stats,

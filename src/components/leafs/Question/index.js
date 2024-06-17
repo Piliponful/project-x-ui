@@ -2,10 +2,13 @@ import React, { forwardRef, useEffect, useState } from 'react'
 import _ from 'lodash'
 import cn from 'classnames'
 import ShareIcon from '@mui/icons-material/Share'
+import CloseIcon from '@mui/icons-material/Close'
 
 import Title from '../QuestionCard/components/Title'
 import AnswerButtons from '../QuestionCard/components/AnswerButtons'
 import Bars from '../QuestionCard/components/Stats/components/Bars'
+
+import { getTwitterOAuthUrl } from '../Authentication/components/SignInInputs/SignInInputs'
 
 import Number from '../../shared/Number'
 import Text from '../../shared/Text'
@@ -15,7 +18,7 @@ import styles from './styles.module.styl'
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
 export const Question = forwardRef(({
-  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup
+  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup, close, redirectUri
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -26,6 +29,8 @@ export const Question = forwardRef(({
   const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
   const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
 
+  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
+
   const share = () => {
     if (navigator.share) {
       navigator.share({
@@ -34,6 +39,10 @@ export const Question = forwardRef(({
         url: `https://poll.cc/questions/${shortId}`
       })
     }
+  }
+
+  const redirectToLogin = () => {
+    window.location.replace(twitterAuthUrl)
   }
 
   useEffect(() => {
@@ -48,7 +57,7 @@ export const Question = forwardRef(({
       const containerWidth = a.clientWidth
       const questionWidth = b.clientWidth
 
-      if ((questionHeight + 110) < containerHeight && questionWidth <= containerWidth) {
+      if ((questionHeight + 178) < containerHeight && questionWidth <= containerWidth) {
         return resizeObserver.disconnect()
       }
 
@@ -75,6 +84,7 @@ export const Question = forwardRef(({
 
   return (
     <article id='question-card' ref={ref} className={styles.card}>
+      <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>
       <div id='question-text' style={{ padding: '0 26px' }}>
         <Title style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
         <div className={styles.username}>
@@ -93,7 +103,7 @@ export const Question = forwardRef(({
           alignItems: 'center'
         }}
       >
-        {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond} />)}
+        {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond || redirectToLogin} />)}
         <div className={styles.stats}>
           {
             userReplyCount !== 0 && (

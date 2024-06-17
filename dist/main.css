@@ -305,6 +305,32 @@
 .GN153G_card {
   box-sizing: border-box;
   background: none;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+
+.GN153G_card:last-of-type {
+  margin-bottom: 0;
+}
+
+.GN153G_previewImg {
+  object-fit: cover;
+  aspect-ratio: 1 / 2;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  width: 100%;
+  height: 180px;
+}
+
+.GN153G_innerCard {
+  box-sizing: border-box;
+  background: none;
   border: 1px solid #b3b3b3;
   border-radius: 4px;
   flex-direction: column;
@@ -312,14 +338,15 @@
   align-items: center;
   width: 100%;
   min-height: 180px;
-  margin-bottom: 10px;
   padding: 15px 15px 10px;
   display: flex;
   position: relative;
 }
 
-.GN153G_card:last-of-type {
-  margin-bottom: 0;
+.GN153G_innerCardWithImage {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .GN153G_expand {
@@ -1829,5 +1856,21 @@
 
 .WWPmHq_barsMinWidth > div {
   min-width: 102px;
+}
+
+.WWPmHq_close {
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 24px;
+  display: flex;
+}
+
+.WWPmHq_close h2 {
+  margin: 0 0 20px;
+}
+
+.WWPmHq_close svg {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
