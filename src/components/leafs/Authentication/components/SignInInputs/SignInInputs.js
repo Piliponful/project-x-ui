@@ -23,13 +23,13 @@ export const getURLWithQueryParams = (
   return `${baseUrl}?${query}`
 }
 
-export const getTwitterOAuthUrl = redirectUri =>
+export const getTwitterOAuthUrl = (redirectUri, state = TWITTER_STATE) =>
   getURLWithQueryParams(TWITTER_AUTH_URL, {
     response_type: 'code',
     client_id: 'a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ',
     redirect_uri: redirectUri,
     scope: TWITTER_SCOPE,
-    state: TWITTER_STATE,
+    state,
 
     code_challenge: TWITTER_CODE_CHALLENGE,
     code_challenge_method: 'plain'

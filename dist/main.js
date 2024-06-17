@@ -1580,12 +1580,12 @@ const $0e36908e4e8f3fd7$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
     const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
     return `${baseUrl}?${query}`;
 };
-const $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$0e36908e4e8f3fd7$export$31cc7ffb9b60a46f($0e36908e4e8f3fd7$var$TWITTER_AUTH_URL, {
+const $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2 = (redirectUri, state = $0e36908e4e8f3fd7$export$a3b54f03f3789fbd)=>$0e36908e4e8f3fd7$export$31cc7ffb9b60a46f($0e36908e4e8f3fd7$var$TWITTER_AUTH_URL, {
         response_type: "code",
         client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
         redirect_uri: redirectUri,
         scope: $0e36908e4e8f3fd7$var$TWITTER_SCOPE,
-        state: $0e36908e4e8f3fd7$export$a3b54f03f3789fbd,
+        state: state,
         code_challenge: $0e36908e4e8f3fd7$var$TWITTER_CODE_CHALLENGE,
         code_challenge_method: "plain"
     });
@@ -3130,7 +3130,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
     const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
-    const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri);
+    const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}`);
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",

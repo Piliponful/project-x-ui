@@ -29,7 +29,7 @@ export const Question = forwardRef(({
   const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
   const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
 
-  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
+  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}`)
 
   const share = () => {
     if (navigator.share) {
