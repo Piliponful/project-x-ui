@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ShareIcon from '@mui/icons-material/Share'
-import ImageIcon from '@mui/icons-material/Image'
+// import ImageIcon from '@mui/icons-material/Image'
 import cn from 'classnames'
 // import { formatDistanceToNow, format } from 'date-fns'
 
@@ -35,7 +35,7 @@ export default forwardRef(({ yourOwnQuestion, shortId, onUserClick, img, created
         <div className={styles.expand}>
           <OpenInNewIcon onClick={onClick} />
           <ShareIcon onClick={share} />
-          <ImageIcon onClick={addImage} />
+          {/* <ImageIcon onClick={addImage} /> */}
         </div>
       </div>
     </article>
