@@ -831,6 +831,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).textContainer,
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
+                                onClick: ()=>createNewGroup("yes"),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
                                     width: `${yesPercentage}%`,
@@ -842,6 +843,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
+                                onClick: ()=>createNewGroup("no"),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
                                     width: `${noPercentage}%`,
