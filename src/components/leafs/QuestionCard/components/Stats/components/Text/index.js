@@ -5,4 +5,4 @@ import Text from '../../../../../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default ({ children, style, className }) => <Text style={style} className={cn(className, styles.text)}>{children}</Text>
+export default ({ children, style, className, onClick }) => <Text onClick={onClick} style={style} className={cn(className, styles.text)}>{children}</Text>

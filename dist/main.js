@@ -53,7 +53,8 @@ var $9de1d70601a77f40$export$6f093cfa640b7166;
 $9de1d70601a77f40$export$6f093cfa640b7166 = `Gy87eW_text`;
 
 
-var $48846b284e41a4a2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style, id: id })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $48846b284e41a4a2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style, id: id, onClick: onClick })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        onClick: onClick,
         id: id,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($9de1d70601a77f40$exports))).text),
@@ -619,7 +620,8 @@ var $261dc5824c408278$export$6f093cfa640b7166;
 $261dc5824c408278$export$6f093cfa640b7166 = `D2SXEW_text`;
 
 
-var $af7a69f871974f3a$export$2e2bcd8739ae039 = ({ children: children, style: style, className: className })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $af7a69f871974f3a$export$2e2bcd8739ae039 = ({ children: children, style: style, className: className, onClick: onClick })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+        onClick: onClick,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($261dc5824c408278$exports))).text),
         children: children
@@ -834,6 +836,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 onClick: ()=>createNewGroup("yes"),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
+                                    cursor: "pointer",
                                     width: `${yesPercentage}%`,
                                     whiteSpace: "nowrap"
                                 },
@@ -846,6 +849,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 onClick: ()=>createNewGroup("no"),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
+                                    cursor: "pointer",
                                     width: `${noPercentage}%`,
                                     whiteSpace: "nowrap"
                                 },

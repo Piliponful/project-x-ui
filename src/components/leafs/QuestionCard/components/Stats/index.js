@@ -83,8 +83,8 @@ export default ({ yes, no, he, me, createNewGroup, className }) => {
               </div>
               <Bars yes={yesPercentage} no={noPercentage} onHover={setState} createNewGroup={createNewGroup} />
               <div className={styles.textContainer}>
-                <Text onClick={() => createNewGroup('yes')} className={styles.text} style={{ width: `${yesPercentage}%`, whiteSpace: 'nowrap' }}>{yesPercentage}%(yes)</Text>
-                <Text onClick={() => createNewGroup('no')} className={styles.text} style={{ width: `${noPercentage}%`, whiteSpace: 'nowrap' }}>{noPercentage}%(no)</Text>
+                <Text onClick={() => createNewGroup('yes')} className={styles.text} style={{ cursor: 'pointer', width: `${yesPercentage}%`, whiteSpace: 'nowrap' }}>{yesPercentage}%(yes)</Text>
+                <Text onClick={() => createNewGroup('no')} className={styles.text} style={{ cursor: 'pointer', width: `${noPercentage}%`, whiteSpace: 'nowrap' }}>{noPercentage}%(no)</Text>
               </div>
             </>
           )
