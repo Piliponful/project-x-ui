@@ -8,7 +8,6 @@ import GroupsContainer from './src/components/shallow/GroupsContainer'
 import MainScreen from './src/components/shallow/MainScreen'
 import Sidebar from './src/components/shallow/Sidebar'
 import QuestionCardsRow from './src/components/shallow/QuestionCardsRow'
-import Authentication from './src/components/leafs/Authentication'
 import ActionsPanel from './src/components/leafs/ActionsPanel'
 import GroupContentScreen from './src/components/leafs/GroupContentScreen'
 import { UserHistoryTabs, UserQuestionsHistory, UserAnswerDifferences } from './src/components/leafs/UserContentBlock'
@@ -33,7 +32,6 @@ export default {
     GroupCard,
     QuestionCard,
     NewQuestion,
-    Authentication,
     ActionsPanel,
     GroupContentScreen,
     UserHistoryTabs,

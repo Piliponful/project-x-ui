@@ -8,8 +8,6 @@ import Title from '../QuestionCard/components/Title'
 import AnswerButtons from '../QuestionCard/components/AnswerButtons'
 import Bars from '../QuestionCard/components/Stats/components/Bars'
 
-import { getTwitterOAuthUrl } from '../Authentication/components/SignInInputs/SignInInputs'
-
 import Number from '../../shared/Number'
 import Text from '../../shared/Text'
 
