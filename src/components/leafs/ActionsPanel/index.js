@@ -68,7 +68,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
           }
         }}
         className={styles.container}
-        style={{ justifyContent: 'center' }}
+        style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
         onClick={handleTwitterLogin}
       >
         {content}

@@ -1607,7 +1607,9 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
         style: {
-            justifyContent: "center"
+            justifyContent: "center",
+            border: "none",
+            fontSize: 16
         },
         onClick: handleTwitterLogin,
         children: content

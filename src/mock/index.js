@@ -12,7 +12,6 @@ import NewQuestion from '../components/leafs/NewQuestion'
 import Circles from '../components/leafs/Circles'
 import QuestionCardsRow from '../components/shallow/QuestionCardsRow'
 import QuestionCard from '../components/leafs/QuestionCard'
-import Authentication from '../components/leafs/Authentication' // eslint-disable-line
 import ActionsPanel from '../components/leafs/ActionsPanel'
 import GroupContentScreen from '../components/leafs/GroupContentScreen'
 import { UserHistoryTabs, UserQuestionsHistory, UserAnswerDifferences } from '../components/leafs/UserContentBlock'
