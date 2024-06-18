@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 
-import Container, { ContainerWithoutSwipes } from './components/Container'
+import { ContainerWithoutSwipes } from './components/Container'
 
 import styles from './style.module.styl'
 
@@ -114,9 +114,9 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
                   )
             }
           </Modal>
-          <Container>
+          <ContainerWithoutSwipes>
             {children}
-          </Container>
+          </ContainerWithoutSwipes>
         </div>
       </MainScreenSwipeContext.Provider>
     )
