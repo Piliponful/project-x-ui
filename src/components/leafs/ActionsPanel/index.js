@@ -4,18 +4,15 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
-import { getTwitterOAuthUrl } from '../Authentication/components/SignInInputs/SignInInputs'
 
 import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ logout, username, redirectUri, showMyHistory, changeUser, testUsers = [] }, ref2) => {
+export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
-
-  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
 
   const content = (
     <>
@@ -64,7 +61,7 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
 
   if (!username) {
     return (
-      <a
+      <button
         ref={node => {
           if (ref2) {
             ref2(node)
@@ -72,10 +69,10 @@ export default forwardRef(({ logout, username, redirectUri, showMyHistory, chang
         }}
         className={styles.container}
         style={{ justifyContent: 'center' }}
-        href={twitterAuthUrl}
+        onClick={handleTwitterLogin}
       >
         {content}
-      </a>
+      </button>
     )
   }
 
