@@ -18,7 +18,7 @@ import styles from './styles.module.styl'
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
 export const Question = forwardRef(({
-  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup, close, redirectUri, _id
+  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup, close, _id, handleTwitterLogin
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -40,9 +40,7 @@ export const Question = forwardRef(({
   }
 
   const redirectToLogin = answer => {
-    const twitterAuthUrl = getTwitterOAuthUrl(redirectUri, `/questions/${shortId}?answer=${answer}&parentMessageId=${_id}`)
-
-    window.location.replace(twitterAuthUrl)
+    handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${_id}`)
   }
 
   useEffect(() => {

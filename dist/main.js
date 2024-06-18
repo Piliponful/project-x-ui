@@ -3133,7 +3133,7 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup, close: close, redirectUri: redirectUri, _id: _id }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup, close: close, _id: _id, handleTwitterLogin: handleTwitterLogin }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
@@ -3147,8 +3147,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         });
     };
     const redirectToLogin = (answer)=>{
-        const twitterAuthUrl = (0, $0e36908e4e8f3fd7$export$9b5acf6f7fc8a7d2)(redirectUri, `/questions/${shortId}?answer=${answer}&parentMessageId=${_id}`);
-        window.location.replace(twitterAuthUrl);
+        handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${_id}`);
     };
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{
