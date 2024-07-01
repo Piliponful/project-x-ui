@@ -53,13 +53,22 @@ var $9de1d70601a77f40$export$6f093cfa640b7166;
 $9de1d70601a77f40$export$6f093cfa640b7166 = `Gy87eW_text`;
 
 
-var $48846b284e41a4a2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style, id: id, onClick: onClick })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+var $48846b284e41a4a2$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style, id: id, onClick: onClick, h1: h1 = false })=>{
+    if (h1) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
         onClick: onClick,
         id: id,
         style: style,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($9de1d70601a77f40$exports))).text),
         children: children
     });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        onClick: onClick,
+        id: id,
+        style: style,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($9de1d70601a77f40$exports))).text),
+        children: children
+    });
+};
 
 
 var $aefd75e8896fae09$exports = {};
@@ -596,7 +605,8 @@ var $6c2645ffd3415e4c$export$fb184b623420d9be;
 $6c2645ffd3415e4c$export$fb184b623420d9be = `WM5FBW_title`;
 
 
-var $c52b3c36a0937910$export$2e2bcd8739ae039 = ({ children: children, style: style, id: id })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $c52b3c36a0937910$export$2e2bcd8739ae039 = ({ children: children, style: style, id: id, h1: h1 = false })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+        h1: h1,
         id: id,
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6c2645ffd3415e4c$exports))).title,
@@ -2681,6 +2691,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                 },
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
+                        h1: true,
                         style: {
                             fontSize: 200,
                             fontWeight: 200

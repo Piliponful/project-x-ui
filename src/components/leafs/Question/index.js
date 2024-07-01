@@ -82,7 +82,7 @@ export const Question = forwardRef(({
     <article id='question-card' ref={ref} className={styles.card}>
       <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>
       <div id='question-text' style={{ padding: '0 26px' }}>
-        <Title style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
+        <Title h1 style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
         <div className={styles.username}>
           {' '}by <span className={styles.usernameActual} onClick={onUserClick}>{username}</span>,
           {' '}<Text style={{ display: 'inline', textAlign: 'center' }} secondary>answered by <Number x={userReplyCount} /> people</Text>
