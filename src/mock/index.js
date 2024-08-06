@@ -20,6 +20,7 @@ import QuestionsSearch from '../components/leafs/QuestionsSearch'
 import UsersSearch from '../components/leafs/UsersSearch'
 import { SortQuestions } from '../components/leafs/SortQuestions'
 import { Question } from '../components/leafs/Question'
+import { ChatBlock } from '../components/leafs/ChatBlock'
 
 import '../../styles.css'
 import './mock-styles.css'
@@ -303,7 +304,7 @@ const users = new Array(8).fill(1).map((_, index) => [
 ]).flat()
 
 const MainScreenWithQuestions = () => (
-  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10, marginRight: 241 }}>
+  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
     {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
     <QuestionCardsRow>
       {mostAnsweredQuestionsComponents}
@@ -382,6 +383,19 @@ const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
   )
 }
 
+const messages = [{
+  mine: true,
+  text: 'This is my first test message'
+},
+{
+  mine: true,
+  text: 'This is my second test message'
+},
+{
+  mine: false,
+  text: 'This is not my message'
+}]
+
 const Authorized = () => {
   const {
     screenName,
@@ -443,6 +457,7 @@ const Authorized = () => {
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
         <MainScreenWithQuestions />
+        <ChatBlock messages={messages} />
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
         {/* <Question {...(mostAnsweredQuestions[1])} /> */}

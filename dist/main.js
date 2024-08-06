@@ -1027,8 +1027,11 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
-                                onClick: onClick
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                href: `/questions/${shortId}`,
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                                    onClick: onClick
+                                })
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
                                 onClick: share
@@ -2856,6 +2859,72 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
 
 
 
+
+
+var $6c6fd8ca00de879c$exports = {};
+
+$parcel$export($6c6fd8ca00de879c$exports, "btn", () => $6c6fd8ca00de879c$export$534219b709288da9, (v) => $6c6fd8ca00de879c$export$534219b709288da9 = v);
+$parcel$export($6c6fd8ca00de879c$exports, "chat", () => $6c6fd8ca00de879c$export$530dccc8e24f4e99, (v) => $6c6fd8ca00de879c$export$530dccc8e24f4e99 = v);
+$parcel$export($6c6fd8ca00de879c$exports, "input", () => $6c6fd8ca00de879c$export$b7e3ae3d7c15e42e, (v) => $6c6fd8ca00de879c$export$b7e3ae3d7c15e42e = v);
+$parcel$export($6c6fd8ca00de879c$exports, "inputGroup", () => $6c6fd8ca00de879c$export$995e14ef61d916e6, (v) => $6c6fd8ca00de879c$export$995e14ef61d916e6 = v);
+$parcel$export($6c6fd8ca00de879c$exports, "message", () => $6c6fd8ca00de879c$export$a8ecead220dd38a6, (v) => $6c6fd8ca00de879c$export$a8ecead220dd38a6 = v);
+$parcel$export($6c6fd8ca00de879c$exports, "messageBoard", () => $6c6fd8ca00de879c$export$af8c1666bc2bbdc3, (v) => $6c6fd8ca00de879c$export$af8c1666bc2bbdc3 = v);
+$parcel$export($6c6fd8ca00de879c$exports, "mine", () => $6c6fd8ca00de879c$export$25c810edd2c6953a, (v) => $6c6fd8ca00de879c$export$25c810edd2c6953a = v);
+$parcel$export($6c6fd8ca00de879c$exports, "notMine", () => $6c6fd8ca00de879c$export$16cf7ecddabb39f4, (v) => $6c6fd8ca00de879c$export$16cf7ecddabb39f4 = v);
+var $6c6fd8ca00de879c$export$534219b709288da9;
+var $6c6fd8ca00de879c$export$530dccc8e24f4e99;
+var $6c6fd8ca00de879c$export$b7e3ae3d7c15e42e;
+var $6c6fd8ca00de879c$export$995e14ef61d916e6;
+var $6c6fd8ca00de879c$export$a8ecead220dd38a6;
+var $6c6fd8ca00de879c$export$af8c1666bc2bbdc3;
+var $6c6fd8ca00de879c$export$25c810edd2c6953a;
+var $6c6fd8ca00de879c$export$16cf7ecddabb39f4;
+$6c6fd8ca00de879c$export$534219b709288da9 = `SmrJ8W_btn`;
+$6c6fd8ca00de879c$export$530dccc8e24f4e99 = `SmrJ8W_chat`;
+$6c6fd8ca00de879c$export$b7e3ae3d7c15e42e = `SmrJ8W_input`;
+$6c6fd8ca00de879c$export$995e14ef61d916e6 = `SmrJ8W_inputGroup`;
+$6c6fd8ca00de879c$export$a8ecead220dd38a6 = `SmrJ8W_message`;
+$6c6fd8ca00de879c$export$af8c1666bc2bbdc3 = `SmrJ8W_messageBoard`;
+$6c6fd8ca00de879c$export$25c810edd2c6953a = `SmrJ8W_mine`;
+$6c6fd8ca00de879c$export$16cf7ecddabb39f4 = `SmrJ8W_notMine`;
+
+
+const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMessage: sendMessage })=>{
+    const [value, setValue] = (0, $c5L0i$react.useState)("");
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).chat,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).messageBoard,
+                children: messages.map((msg, index)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).message, {
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).mine]: msg.mine,
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).notMine]: !msg.mine
+                        }),
+                        children: msg.text
+                    }, index))
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).inputGroup,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).input,
+                        value: value,
+                        onChange: ({ target: { value: value } })=>setValue(value)
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).btn,
+                        onClick: sendMessage,
+                        children: "Submit"
+                    })
+                ]
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -2878,7 +2947,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         UsersSearch: $d99360e8c29d4994$export$2e2bcd8739ae039,
         SortQuestions: $b355bd374f45d8d9$export$f8fcd3a81add9e17,
         UserAnswerDifferences: $4c6bd8db1d735d14$export$a6816b34ad549b0,
-        Question: $aa945d4ce4ddbaaa$export$38435c7d2fecd2f
+        Question: $aa945d4ce4ddbaaa$export$38435c7d2fecd2f,
+        ChatBlock: $e3031400c56218a8$export$125e71c614a0b114
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

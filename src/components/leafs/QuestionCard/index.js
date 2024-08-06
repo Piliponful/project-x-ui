@@ -33,7 +33,7 @@ export default forwardRef(({ yourOwnQuestion, shortId, onUserClick, img, created
         <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
         {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
         <div className={styles.expand}>
-          <OpenInNewIcon onClick={onClick} />
+          <a href={`/questions/${shortId}`}><OpenInNewIcon onClick={onClick} /></a>
           <ShareIcon onClick={share} />
           {/* <ImageIcon onClick={addImage} /> */}
         </div>

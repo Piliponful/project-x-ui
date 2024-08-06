@@ -1,3 +1,7 @@
 article {
   min-height: unset!important;
 }
+
+* {
+  font-family: 'IBM Plex Sans'!important;
+}

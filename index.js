@@ -16,6 +16,7 @@ import QuestionsSearch from './src/components/leafs/QuestionsSearch'
 import UsersSearch from './src/components/leafs/UsersSearch'
 import { SortQuestions } from './src/components/leafs/SortQuestions'
 import { Question } from './src/components/leafs/Question'
+import { ChatBlock } from './src/components/leafs/ChatBlock'
 
 import './styles.css'
 
@@ -41,7 +42,8 @@ export default {
     UsersSearch,
     SortQuestions,
     UserAnswerDifferences,
-    Question
+    Question,
+    ChatBlock
   },
   context: {
     MainScreenSwipeContext

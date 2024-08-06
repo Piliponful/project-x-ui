@@ -1571,4 +1571,93 @@
 .WWPmHq_close svg {
   cursor: pointer;
 }
+
+.SmrJ8W_chat {
+  width: 500px;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.SmrJ8W_messageBoard {
+  flex-flow: column wrap;
+  width: 100%;
+  height: calc(100dvh - 85px);
+  display: flex;
+  overflow-y: scroll;
+}
+
+.SmrJ8W_messageBoard::-webkit-scrollbar {
+  display: none;
+}
+
+.SmrJ8W_message {
+  background-color: #f7f7f7;
+  border-radius: 2px;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+  margin-bottom: 20px;
+  padding: 2em;
+}
+
+.SmrJ8W_message:last-child {
+  margin-bottom: 0;
+}
+
+.SmrJ8W_mine {
+  align-self: flex-end;
+}
+
+.SmrJ8W_notMine {
+  align-self: flex-start;
+}
+
+.SmrJ8W_inputGroup {
+  z-index: 1;
+  flex-flow: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0 8px;
+  font-size: 1.14em;
+  display: flex;
+  bottom: 0;
+}
+
+.SmrJ8W_input {
+  color: #1f1f21;
+  background-color: #ffffff8c;
+  border: 0;
+  outline: 0;
+  flex-grow: 1;
+}
+
+.SmrJ8W_input:focus {
+  background-color: #ffffffbf;
+}
+
+.SmrJ8W_input::-webkit-input-placeholder {
+  color: #21212140;
+}
+
+.SmrJ8W_btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3d83d6;
+  border: 2px solid #0000;
+  border-left: 0;
+  border-right: 0;
+  outline: 0;
+  padding: 1em 2em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.SmrJ8W_btn:hover {
+  border-bottom-color: #1e528f;
+}
+
+.SmrJ8W_btn:active {
+  border-top-color: #1e528f;
+  border-bottom-color: #0000;
+}
 /*# sourceMappingURL=main.css.map */
