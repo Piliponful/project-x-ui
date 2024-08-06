@@ -3,11 +3,24 @@ import classNames from 'classnames'
 
 import styles from './style.module.styl'
 
-export const ChatBlock = ({ messages, sendMessage }) => {
+const defaultGroup = {
+  name: 'You',
+  peopleCount: 10,
+  id: 1
+}
+
+export const ChatBlock = ({ messages, sendMessage, onUserClick, currentGroup = defaultGroup, changeGroup }) => {
   const [value, setValue] = useState('')
 
   return (
     <div className={styles.chat}>
+      <div className={styles.top}>
+        <div className={styles.currentGroup}>
+          <b>{currentGroup.name}</b>
+          <p><span>people count: </span>{currentGroup.peopleCount}</p>
+        </div>
+        <button className={styles.changeGroupBtn} onClick={changeGroup}>change group</button>
+      </div>
       <div className={styles.messageBoard}>
         {messages.map((msg, index) => (
           <div
@@ -17,7 +30,8 @@ export const ChatBlock = ({ messages, sendMessage }) => {
               [styles.notMine]: !msg.mine
             })}
           >
-            {msg.text}
+            <img onClick={() => onUserClick(msg.username)} className={styles.picture} src={msg.pictureUrl} />
+            <span>{msg.text}</span>
           </div>
         ))}
       </div>
@@ -31,7 +45,7 @@ export const ChatBlock = ({ messages, sendMessage }) => {
           className={styles.btn}
           onClick={sendMessage}
         >
-          Submit
+          Send
         </button>
       </div>
     </div>

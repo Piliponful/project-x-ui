@@ -1574,14 +1574,13 @@
 
 .SmrJ8W_chat {
   width: 500px;
-  height: 100%;
   padding: 10px 0;
 }
 
 .SmrJ8W_messageBoard {
   flex-flow: column wrap;
   width: 100%;
-  height: calc(100dvh - 85px);
+  height: calc(100dvh - 254px);
   display: flex;
   overflow-y: scroll;
 }
@@ -1592,12 +1591,14 @@
 
 .SmrJ8W_message {
   background-color: #f7f7f7;
-  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
   width: 50%;
   min-width: 300px;
   max-width: 500px;
   margin-bottom: 20px;
-  padding: 2em;
+  padding: 10px;
+  display: flex;
 }
 
 .SmrJ8W_message:last-child {
@@ -1620,15 +1621,19 @@
   padding: 0 8px;
   font-size: 1.14em;
   display: flex;
+  position: relative;
   bottom: 0;
 }
 
 .SmrJ8W_input {
-  color: #1f1f21;
-  background-color: #ffffff8c;
+  color: #2b2b2b;
+  background: #2b2b2b0f;
   border: 0;
+  border-radius: 4px;
   outline: 0;
   flex-grow: 1;
+  height: 144px;
+  font-size: 16px;
 }
 
 .SmrJ8W_input:focus {
@@ -1640,24 +1645,69 @@
 }
 
 .SmrJ8W_btn {
-  color: #fff;
+  color: #f1f1f1;
   cursor: pointer;
-  background-color: #3d83d6;
-  border: 2px solid #0000;
-  border-left: 0;
-  border-right: 0;
-  outline: 0;
-  padding: 1em 2em;
-  font-size: 1em;
-  font-weight: 700;
+  background: #3eb5f1;
+  border: none;
+  border-radius: 29px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: box-shadow .3s ease-out;
+  display: flex;
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 23.84px 8.16px #3eb5f163;
 }
 
 .SmrJ8W_btn:hover {
   border-bottom-color: #1e528f;
 }
 
-.SmrJ8W_btn:active {
-  border-top-color: #1e528f;
-  border-bottom-color: #0000;
+.SmrJ8W_picture {
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 50%;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.SmrJ8W_changeGroupBtn {
+  color: #f1f1f1;
+  cursor: pointer;
+  background: #3eb5f1;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: box-shadow .3s ease-out;
+  display: flex;
+  box-shadow: 0 3px 3.84px 2.16px #3eb5f12e;
+}
+
+.SmrJ8W_top {
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.SmrJ8W_currentGroup {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */

@@ -385,15 +385,21 @@ const MainScreenWithUserQuestions = ({ selectedTab, setSelectedTab }) => {
 
 const messages = [{
   mine: true,
-  text: 'This is my first test message'
-},
-{
-  mine: true,
-  text: 'This is my second test message'
+  text: 'This is my first test message',
+  pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+  username: 'piliponful'
 },
 {
   mine: false,
-  text: 'This is not my message'
+  text: 'This is not my message',
+  pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
+  username: 'patrickbetdavid'
+},
+{
+  mine: false,
+  text: 'This is some else\'s message',
+  pictureUrl: 'https://pbs.twimg.com/profile_images/1746261579623198720/nXQM_q9U_400x400.jpg',
+  username: 'sneako'
 }]
 
 const Authorized = () => {
