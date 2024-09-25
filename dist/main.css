@@ -998,7 +998,7 @@
   transition: color .1s;
   display: flex;
   position: absolute;
-  top: 0;
+  bottom: 0;
   box-shadow: 0 3px 3.84px 1.16px #0c0c0c2b;
 }
 
@@ -1301,7 +1301,7 @@
   transition: color .1s;
   display: flex;
   position: absolute;
-  top: 0;
+  bottom: 0;
   box-shadow: 0 3px 3.84px 1.16px #0c0c0c2b;
 }
 
