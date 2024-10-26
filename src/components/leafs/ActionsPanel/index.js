@@ -2,12 +2,45 @@ import React, { useState, useContext, forwardRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
+import { jwtDecode } from 'jwt-decode'
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
+
+const CustomLoginButton = () => {
+  const handleLoginSuccess = (credentialResponse) => {
+    const token = credentialResponse.credential // This is the JWT token
+    const decodedToken = jwtDecode(token) // Decode the JWT token
+    const userEmail = decodedToken.email // Get email from the decoded token
+    console.log('User Info:', decodedToken)
+    alert(`Welcome! Your email is: ${userEmail}`)
+  }
+
+  const handleLoginFailure = (error) => {
+    console.error('Login Failed: ', error)
+    alert('Login failed. Please try again.')
+  }
+
+  return (
+    <GoogleLogin
+      onSuccess={handleLoginSuccess}
+      onFailure={handleLoginFailure}
+      cookiePolicy='single_host_origin'
+      style={{ display: 'none' }} // Hide the default button
+    >
+      <button
+        onClick={handleLoginSuccess}
+        style={{ padding: '10px', backgroundColor: '#4285F4', color: 'white', border: 'none', borderRadius: '5px' }}
+      >
+        Sign in with Google
+      </button>
+    </GoogleLogin>
+  )
+}
 
 export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
@@ -21,10 +54,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
           ? <Text className={styles.username}>Settings ({username})</Text>
           : (
             <div className={styles.twitterSignIn}>
-              <Text className={styles.username}>
-                Sign in with
-              </Text>
-              <XIcon />
+              <CustomLoginButton />
             </div>
             )
       }

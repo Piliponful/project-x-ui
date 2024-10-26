@@ -1596,6 +1596,8 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
+
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
@@ -1618,6 +1620,38 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
+const $b29d4b4923c0cd00$var$CustomLoginButton = ()=>{
+    const handleLoginSuccess = (credentialResponse)=>{
+        const token = credentialResponse.credential; // This is the JWT token
+        const decodedToken = (0, $c5L0i$jwtdecode.jwtDecode)(token); // Decode the JWT token
+        const userEmail = decodedToken.email; // Get email from the decoded token
+        console.log("User Info:", decodedToken);
+        alert(`Welcome! Your email is: ${userEmail}`);
+    };
+    const handleLoginFailure = (error)=>{
+        console.error("Login Failed: ", error);
+        alert("Login failed. Please try again.");
+    };
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleLogin), {
+        onSuccess: handleLoginSuccess,
+        onFailure: handleLoginFailure,
+        cookiePolicy: "single_host_origin",
+        style: {
+            display: "none"
+        },
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+            onClick: handleLoginSuccess,
+            style: {
+                padding: "10px",
+                backgroundColor: "#4285F4",
+                color: "white",
+                border: "none",
+                borderRadius: "5px"
+            },
+            children: "Sign in with Google"
+        })
+    });
+};
 var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -1633,15 +1667,9 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     username,
                     ")"
                 ]
-            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                        children: "Sign in with"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                ]
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($b29d4b4923c0cd00$var$CustomLoginButton, {})
             }),
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
