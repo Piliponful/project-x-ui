@@ -10,6 +10,7 @@ var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
+var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
@@ -950,168 +951,6 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 };
 
 
-var $34a1d4be4ab80325$exports = {};
-
-$parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
-$parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
-$parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
-$parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
-$parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
-$parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
-$parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
-var $34a1d4be4ab80325$export$aa3e815946b80764;
-var $34a1d4be4ab80325$export$9f77e0932fb78f72;
-var $34a1d4be4ab80325$export$464c821cd4347539;
-var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
-var $34a1d4be4ab80325$export$275ee2193c25f37a;
-var $34a1d4be4ab80325$export$fd824239f75849bd;
-var $34a1d4be4ab80325$export$5e1be761f603d585;
-$34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
-$34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
-$34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
-$34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
-$34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
-$34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
-$34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
-
-
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId }, ref)=>{
-    const share = ()=>{
-        if (navigator.share) navigator.share({
-            title: "Question",
-            text: name,
-            url: `https://poll.cc/questions/${shortId}`
-        });
-    };
-    const redirectToLogin = (answer)=>{
-        handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${parentMessageId}`);
-    };
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
-        ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
-        children: [
-            img && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).previewImg,
-                src: img,
-                alt: "preview image"
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCard, {
-                    [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCardWithImage]: img
-                }),
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
-                        children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
-                                onClick: onUserClick,
-                                children: [
-                                    username,
-                                    ":"
-                                ]
-                            }),
-                            " ",
-                            htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                dangerouslySetInnerHTML: {
-                                    __html: htmlName
-                                }
-                            }) : name
-                        ]
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
-                        ...answersCount,
-                        he: he,
-                        me: me,
-                        createNewGroup: createNewGroup
-                    }),
-                    !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
-                        respond: respond || redirectToLogin
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
-                        children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                href: `/questions/${shortId}`,
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
-                                    onClick: onClick
-                                })
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
-                                onClick: share
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-});
-
-
-
-
-
-
-
-var $6ab302fcbc9538e6$exports = {};
-
-$parcel$export($6ab302fcbc9538e6$exports, "text", () => $6ab302fcbc9538e6$export$6f093cfa640b7166, (v) => $6ab302fcbc9538e6$export$6f093cfa640b7166 = v);
-$parcel$export($6ab302fcbc9538e6$exports, "textarea", () => $6ab302fcbc9538e6$export$a3574df893ffa88d, (v) => $6ab302fcbc9538e6$export$a3574df893ffa88d = v);
-var $6ab302fcbc9538e6$export$6f093cfa640b7166;
-var $6ab302fcbc9538e6$export$a3574df893ffa88d;
-$6ab302fcbc9538e6$export$6f093cfa640b7166 = `OxsVWq_text`;
-$6ab302fcbc9538e6$export$a3574df893ffa88d = `OxsVWq_textarea`;
-
-
-var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
-        disabled: disabled,
-        placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
-        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text),
-        onChange: onChange,
-        value: value
-    });
-
-
-var $6db7aebbd1711895$exports = {};
-
-$parcel$export($6db7aebbd1711895$exports, "button", () => $6db7aebbd1711895$export$2ba01fb71ed41cb6, (v) => $6db7aebbd1711895$export$2ba01fb71ed41cb6 = v);
-$parcel$export($6db7aebbd1711895$exports, "newQuestion", () => $6db7aebbd1711895$export$9ad540bb5fc131aa, (v) => $6db7aebbd1711895$export$9ad540bb5fc131aa = v);
-var $6db7aebbd1711895$export$2ba01fb71ed41cb6;
-var $6db7aebbd1711895$export$9ad540bb5fc131aa;
-$6db7aebbd1711895$export$2ba01fb71ed41cb6 = `OGOopW_button`;
-$6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
-
-
-var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
-    const [question, setQuestion] = (0, $c5L0i$react.useState)("");
-    const onChange = (e)=>{
-        const newQuestion = e.target.value;
-        setQuestion(newQuestion);
-    };
-    const save = (e)=>{
-        e.target.blur();
-        saveQuestion(question);
-        setQuestion("");
-    };
-    const disabled = !saveQuestion;
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-        ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
-                disabled: disabled,
-                value: question,
-                onChange: onChange
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).button,
-                onClick: save,
-                children: "Ask"
-            })
-        ]
-    });
-});
-
 
 
 
@@ -1212,6 +1051,7 @@ const $be6f0e84320366a7$export$120137d2fb34488f = 945;
 
 
 const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$interopDefault($c5L0i$react))).createContext({
+    setIsLoginModalOpen: ()=>{},
     toggleScreen: null,
     setSkipScreen: null,
     setIsModalOpen: null,
@@ -1230,6 +1070,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
+const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
@@ -1237,6 +1078,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
     const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(isWalletModalOpenInitial);
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
+    const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1261,148 +1103,186 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         hideR();
         setIsWalletModalOpen(false);
     };
-    if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
-        value: {
-            screenName: screenName,
-            skipScreen: skipScreen,
-            showSearch: showSearch,
-            toggleScreen: toggleScreen,
-            setShowSearch: setShowSearch,
-            setSkipScreen: setSkipScreen,
-            setIsModalOpen: setIsModalOpen,
-            setIsWalletModalOpen: setIsWalletModalOpen
-        },
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-            style: {
-                height: screenName ? "100%" : "auto"
+    const handleLoginSuccess = (credentialResponse)=>{
+        const userInfo = credentialResponse.credential;
+        console.log("User Info:", userInfo);
+        alert(`Welcome! Your email is: ${userInfo.email}`);
+    };
+    const handleLoginFailure = (error)=>{
+        console.error("Login Failed: ", error);
+        alert("Login failed. Please try again.");
+    };
+    if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleOAuthProvider), {
+        clientId: $0c70feff32ca6a2b$var$clientId,
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($0c70feff32ca6a2b$export$32c650b79baf5fee.Provider, {
+            value: {
+                screenName: screenName,
+                skipScreen: skipScreen,
+                showSearch: showSearch,
+                toggleScreen: toggleScreen,
+                setShowSearch: setShowSearch,
+                setSkipScreen: setSkipScreen,
+                setIsModalOpen: setIsModalOpen,
+                setIsWalletModalOpen: setIsWalletModalOpen,
+                setIsLoginModalOpen: setIsLoginModalOpen
             },
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
-            children: [
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
-                    isOpen: isWalletModalOpen,
-                    onRequestClose: ()=>setIsWalletModalOpen(false),
-                    style: $0c70feff32ca6a2b$var$customStyles,
-                    children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            onClick: ()=>setIsWalletModalOpen(false),
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                style: {
+                    height: screenName ? "100%" : "auto"
+                },
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                        isOpen: isWalletModalOpen,
+                        onRequestClose: ()=>setIsWalletModalOpen(false),
+                        style: $0c70feff32ca6a2b$var$customStyles,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                onClick: ()=>setIsWalletModalOpen(false),
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                        children: "Connect Wallet"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                        children: "Do you have a wallet(metamask, trust, etc)?"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                        children: "In this app you can get crypto rewards for asking and answering questions. But to get them you need crypto wallet."
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                        children: [
+                                            "If you don't have one, click ",
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).hide,
+                                                onClick: hide,
+                                                children: "hide to stop seeing this popup"
+                                            }),
+                                            ". Later you can always find it in ",
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                                children: "settings > rewards"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).connectButton,
+                                        onClick: connectToWallet,
+                                        children: "Connect"
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                        isOpen: isModalOpen,
+                        onRequestClose: ()=>setIsModalOpen(false),
+                        style: $0c70feff32ca6a2b$var$customStyles,
+                        children: connected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                             children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                    children: "Connect Wallet"
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
-                            ]
-                        }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
-                            children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
-                                    children: "Do you have a wallet(metamask, trust, etc)?"
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                                    children: "In this app you can get crypto rewards for asking and answering questions. But to get them you need crypto wallet."
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    onClick: ()=>setIsModalOpen(false),
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
                                     children: [
-                                        "If you don't have one, click ",
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).hide,
-                                            onClick: hide,
-                                            children: "hide to stop seeing this popup"
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                            children: "Rewards"
                                         }),
-                                        ". Later you can always find it in ",
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
+                                    children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
-                                            children: "settings > rewards"
+                                            children: "your address: "
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).address,
+                                            children: address
                                         })
                                     ]
                                 }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                            children: "your payout: "
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).amount,
+                                            children: [
+                                                payout,
+                                                " "
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                            children: "ASK"
+                                        })
+                                    ]
+                                })
+                            ]
+                        }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    onClick: ()=>setIsModalOpen(false),
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                            children: "Rewards"
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                    children: "To get rewards for asking questions and answering them you need to connect crypto wallet"
+                                }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                    style: {
+                                        width: "100%",
+                                        marginTop: 20
+                                    },
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).connectButton,
                                     onClick: connectToWallet,
                                     children: "Connect"
                                 })
                             ]
                         })
-                    ]
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
-                    isOpen: isModalOpen,
-                    onRequestClose: ()=>setIsModalOpen(false),
-                    style: $0c70feff32ca6a2b$var$customStyles,
-                    children: connected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                        isOpen: showLoginModal,
+                        onRequestClose: ()=>setIsLoginModalOpen(false),
+                        style: $0c70feff32ca6a2b$var$customStyles,
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                onClick: ()=>setIsModalOpen(false),
+                                onClick: ()=>setIsLoginModalOpen(false),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                        children: "Rewards"
+                                        children: "Login or Sign up"
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
                                 ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
-                                children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
-                                        children: "your address: "
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).address,
-                                        children: address
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).row,
-                                children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
-                                        children: "your payout: "
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).amount,
-                                        children: [
-                                            payout,
-                                            " "
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
-                                        children: "ASK"
-                                    })
-                                ]
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleLogin), {
+                                    onSuccess: handleLoginSuccess,
+                                    onFailure: handleLoginFailure,
+                                    cookiePolicy: "single_host_origin"
+                                })
                             })
                         ]
-                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                onClick: ()=>setIsModalOpen(false),
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
-                                children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                        children: "Rewards"
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
-                                ]
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                                children: "To get rewards for asking questions and answering them you need to connect crypto wallet"
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                                style: {
-                                    width: "100%",
-                                    marginTop: 20
-                                },
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).connectButton,
-                                onClick: connectToWallet,
-                                children: "Connect"
-                            })
-                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$97295e60e7f371e1), {
+                        children: children
                     })
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$97295e60e7f371e1), {
-                    children: children
-                })
-            ]
+                ]
+            })
         })
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -1415,6 +1295,174 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         })
     });
 };
+
+
+var $34a1d4be4ab80325$exports = {};
+
+$parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
+$parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
+$parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
+$parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
+$parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
+var $34a1d4be4ab80325$export$aa3e815946b80764;
+var $34a1d4be4ab80325$export$9f77e0932fb78f72;
+var $34a1d4be4ab80325$export$464c821cd4347539;
+var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
+var $34a1d4be4ab80325$export$275ee2193c25f37a;
+var $34a1d4be4ab80325$export$fd824239f75849bd;
+var $34a1d4be4ab80325$export$5e1be761f603d585;
+$34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
+$34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
+$34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
+$34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
+$34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
+$34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
+$34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
+
+
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId }, ref)=>{
+    const share = ()=>{
+        if (navigator.share) navigator.share({
+            title: "Question",
+            text: name,
+            url: `https://poll.cc/questions/${shortId}`
+        });
+    };
+    const { setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const redirectToLogin = (answer)=>{
+        setIsLoginModalOpen(true);
+    // handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${parentMessageId}&redirect=home`)
+    };
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
+            ref: ref,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
+            children: [
+                img && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).previewImg,
+                    src: img,
+                    alt: "preview image"
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCard, {
+                        [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCardWithImage]: img
+                    }),
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
+                                    onClick: onUserClick,
+                                    children: [
+                                        username,
+                                        ":"
+                                    ]
+                                }),
+                                " ",
+                                htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    dangerouslySetInnerHTML: {
+                                        __html: htmlName
+                                    }
+                                }) : name
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
+                            ...answersCount,
+                            he: he,
+                            me: me,
+                            createNewGroup: createNewGroup
+                        }),
+                        !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                            respond: respond || redirectToLogin
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                    href: `/questions/${shortId}`,
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                                        onClick: onClick
+                                    })
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                                    onClick: share
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    });
+});
+
+
+
+
+
+
+
+var $6ab302fcbc9538e6$exports = {};
+
+$parcel$export($6ab302fcbc9538e6$exports, "text", () => $6ab302fcbc9538e6$export$6f093cfa640b7166, (v) => $6ab302fcbc9538e6$export$6f093cfa640b7166 = v);
+$parcel$export($6ab302fcbc9538e6$exports, "textarea", () => $6ab302fcbc9538e6$export$a3574df893ffa88d, (v) => $6ab302fcbc9538e6$export$a3574df893ffa88d = v);
+var $6ab302fcbc9538e6$export$6f093cfa640b7166;
+var $6ab302fcbc9538e6$export$a3574df893ffa88d;
+$6ab302fcbc9538e6$export$6f093cfa640b7166 = `OxsVWq_text`;
+$6ab302fcbc9538e6$export$a3574df893ffa88d = `OxsVWq_textarea`;
+
+
+var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
+        disabled: disabled,
+        placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text),
+        onChange: onChange,
+        value: value
+    });
+
+
+var $6db7aebbd1711895$exports = {};
+
+$parcel$export($6db7aebbd1711895$exports, "button", () => $6db7aebbd1711895$export$2ba01fb71ed41cb6, (v) => $6db7aebbd1711895$export$2ba01fb71ed41cb6 = v);
+$parcel$export($6db7aebbd1711895$exports, "newQuestion", () => $6db7aebbd1711895$export$9ad540bb5fc131aa, (v) => $6db7aebbd1711895$export$9ad540bb5fc131aa = v);
+var $6db7aebbd1711895$export$2ba01fb71ed41cb6;
+var $6db7aebbd1711895$export$9ad540bb5fc131aa;
+$6db7aebbd1711895$export$2ba01fb71ed41cb6 = `OGOopW_button`;
+$6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
+
+
+var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
+    const [question, setQuestion] = (0, $c5L0i$react.useState)("");
+    const onChange = (e)=>{
+        const newQuestion = e.target.value;
+        setQuestion(newQuestion);
+    };
+    const save = (e)=>{
+        e.target.blur();
+        saveQuestion(question);
+        setQuestion("");
+    };
+    const disabled = !saveQuestion;
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        ref: ref,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).newQuestion,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $9b90ff53938d564a$export$2e2bcd8739ae039), {
+                disabled: disabled,
+                value: question,
+                onChange: onChange
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).button,
+                onClick: save,
+                children: "Ask"
+            })
+        ]
+    });
+});
+
 
 
 
