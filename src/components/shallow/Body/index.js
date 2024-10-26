@@ -82,12 +82,13 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     setIsWalletModalOpen(false)
   }
 
-  const handleLoginSuccess = (credentialResponse) => {
+  const handleLoginSuccess = async (credentialResponse) => {
     const userInfo = credentialResponse.credential
     console.log('User Info:', userInfo)
     const decoded = jwtDecode(userInfo)
     console.log('decoded: ', decoded)
-    createUser({ ...answer, ...decoded })
+    await createUser({ ...answer, ...decoded })
+    setIsLoginModalOpen(false)
   }
 
   const handleLoginFailure = (error) => {
