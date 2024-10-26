@@ -1597,7 +1597,6 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
-
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
@@ -1620,7 +1619,7 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin }, ref2)=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -1640,6 +1639,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 const userInfo = await userInfoResponse.json(); // Parse the JSON response
                 console.log("User Info:", userInfo); // Log the user info
                 alert(`Welcome! Your email is: ${userInfo.email}`);
+                await createUser(userInfo);
             } catch (error) {
                 console.error("Error fetching user info:", error);
                 alert("Failed to fetch user info. Please try again.");
