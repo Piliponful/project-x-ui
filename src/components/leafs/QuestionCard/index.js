@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react'
+import React, { forwardRef, useContext, useEffect, useState } from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ShareIcon from '@mui/icons-material/Share'
 // import ImageIcon from '@mui/icons-material/Image'
@@ -30,7 +30,8 @@ export default forwardRef(({
   htmlName,
   onClick,
   handleTwitterLogin,
-  parentMessageId
+  parentMessageId,
+  createUser
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -42,11 +43,11 @@ export default forwardRef(({
     }
   }
 
-  const { setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
+  const { setIsLoginModalOpen, setAnswer } = useContext(MainScreenSwipeContext)
 
   const redirectToLogin = answer => {
     setIsLoginModalOpen(true)
-    // handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${parentMessageId}&redirect=home`)
+    setAnswer({ answer, parentMessageId, shortId })
   }
 
   return (

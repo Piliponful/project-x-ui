@@ -10,7 +10,15 @@ import styles from './style.module.styl'
 
 import { smallMainScreenWidth } from '../../../constants'
 
-export const MainScreenSwipeContext = React.createContext({ setIsLoginModalOpen: () => {}, toggleScreen: null, setSkipScreen: null, setIsModalOpen: null, setShowSearch: null, showSearch: false })
+export const MainScreenSwipeContext = React.createContext({
+  setIsLoginModalOpen: () => {},
+  toggleScreen: null,
+  setSkipScreen: null,
+  setIsModalOpen: null,
+  setShowSearch: null,
+  showSearch: false,
+  setAnswer: () => {}
+})
 
 const customStyles = {
   content: {
@@ -29,13 +37,14 @@ const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleuserc
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true }) => {
+export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(isWalletModalOpenInitial)
   const [showSearch, setShowSearch] = useState(false)
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
+  const [answer, setAnswer] = useState(null)
 
   useEffect(() => {
     const handler = () => {
@@ -78,12 +87,11 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     console.log('User Info:', userInfo)
     const decoded = jwtDecode(userInfo)
     console.log('decoded: ', decoded)
-    alert(`Welcome! Your email is: ${userInfo.email}`)
+    createUser({ ...answer, ...decoded })
   }
 
   const handleLoginFailure = (error) => {
     console.error('Login Failed: ', error)
-    alert('Login failed. Please try again.')
   }
 
   if (includeSwipes) {
@@ -91,7 +99,16 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
       <GoogleOAuthProvider clientId={clientId}>
         <MainScreenSwipeContext.Provider
           value={{
-            screenName, skipScreen, showSearch, toggleScreen, setShowSearch, setSkipScreen, setIsModalOpen: setIsModalOpen, setIsWalletModalOpen, setIsLoginModalOpen
+            screenName,
+            skipScreen,
+            showSearch,
+            toggleScreen,
+            setShowSearch,
+            setSkipScreen,
+            setIsModalOpen: setIsModalOpen,
+            setIsWalletModalOpen,
+            setIsLoginModalOpen,
+            setAnswer
           }}
         >
           <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>

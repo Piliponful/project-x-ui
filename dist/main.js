@@ -1058,7 +1058,8 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setSkipScreen: null,
     setIsModalOpen: null,
     setShowSearch: null,
-    showSearch: false
+    showSearch: false,
+    setAnswer: ()=>{}
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -1074,13 +1075,14 @@ const $0c70feff32ca6a2b$var$customStyles = {
 };
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
     const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(isWalletModalOpenInitial);
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
+    const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1110,11 +1112,13 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         console.log("User Info:", userInfo);
         const decoded = (0, $c5L0i$jwtdecode.jwtDecode)(userInfo);
         console.log("decoded: ", decoded);
-        alert(`Welcome! Your email is: ${userInfo.email}`);
+        createUser({
+            ...answer,
+            ...decoded
+        });
     };
     const handleLoginFailure = (error)=>{
         console.error("Login Failed: ", error);
-        alert("Login failed. Please try again.");
     };
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleOAuthProvider), {
         clientId: $0c70feff32ca6a2b$var$clientId,
@@ -1128,7 +1132,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                 setSkipScreen: setSkipScreen,
                 setIsModalOpen: setIsModalOpen,
                 setIsWalletModalOpen: setIsWalletModalOpen,
-                setIsLoginModalOpen: setIsLoginModalOpen
+                setIsLoginModalOpen: setIsLoginModalOpen,
+                setAnswer: setAnswer
             },
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1326,7 +1331,7 @@ $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser }, ref)=>{
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
@@ -1334,10 +1339,14 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             url: `https://poll.cc/questions/${shortId}`
         });
     };
-    const { setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const redirectToLogin = (answer)=>{
         setIsLoginModalOpen(true);
-    // handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${parentMessageId}&redirect=home`)
+        setAnswer({
+            answer: answer,
+            parentMessageId: parentMessageId,
+            shortId: shortId
+        });
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
