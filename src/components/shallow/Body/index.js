@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
-import jwtDecode from 'jwt-decode'
+import { jwtDecode } from 'jwt-decode'
 
 import { ContainerWithoutSwipes } from './components/Container'
 

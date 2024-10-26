@@ -1108,7 +1108,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const handleLoginSuccess = (credentialResponse)=>{
         const userInfo = credentialResponse.credential;
         console.log("User Info:", userInfo);
-        const decoded = (0, ($parcel$interopDefault($c5L0i$jwtdecode)))(userInfo);
+        const decoded = (0, $c5L0i$jwtdecode.jwtDecode)(userInfo);
         console.log("decoded: ", decoded);
         alert(`Welcome! Your email is: ${userInfo.email}`);
     };
