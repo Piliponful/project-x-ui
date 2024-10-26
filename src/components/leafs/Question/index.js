@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from 'react'
+import React, { forwardRef, useEffect, useState, useContext } from 'react'
 import _ from 'lodash'
 import cn from 'classnames'
 import ShareIcon from '@mui/icons-material/Share'
@@ -11,12 +11,26 @@ import Bars from '../QuestionCard/components/Stats/components/Bars'
 import Number from '../../shared/Number'
 import Text from '../../shared/Text'
 
+import { MainScreenSwipeContext } from '../../shallow/Body'
+
 import styles from './styles.module.styl'
 
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 
 export const Question = forwardRef(({
-  yourOwnQuestion, onUserClick, userPictureUrl, shortId, username, name, answersCount, me: { answer } = {}, respond, createNewGroup, close, _id, handleTwitterLogin
+  yourOwnQuestion,
+  onUserClick,
+  userPictureUrl,
+  shortId,
+  username,
+  name,
+  answersCount,
+  me: { answer } = {},
+  respond,
+  createNewGroup,
+  close,
+  _id,
+  handleTwitterLogin
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -26,6 +40,7 @@ export const Question = forwardRef(({
 
   const yesPercentage = calcPercent(answersCount.yes, totalAnswerCount)
   const noPercentage = calcPercent(answersCount.no, totalAnswerCount)
+  const { setIsLoginModalOpen, setAnswer } = useContext(MainScreenSwipeContext)
 
   const share = () => {
     if (navigator.share) {
@@ -38,7 +53,8 @@ export const Question = forwardRef(({
   }
 
   const redirectToLogin = answer => {
-    handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${_id}`)
+    setIsLoginModalOpen(true)
+    setAnswer({ answer, parentMessageId: _id, shortId })
   }
 
   useEffect(() => {

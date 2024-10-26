@@ -60,7 +60,7 @@ const mostAnsweredQuestions = [ // eslint-disable-line
     username: 'piliponful',
     _id: 0,
     byMe: true,
-    respond: () => {},
+    // respond: () => {},
     createdAt: 1080156900,
     // yourOwnQuestion: true,
     // userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',

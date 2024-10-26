@@ -1638,11 +1638,9 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
                 const userInfo = await userInfoResponse.json(); // Parse the JSON response
                 console.log("User Info:", userInfo); // Log the user info
-                alert(`Welcome! Your email is: ${userInfo.email}`);
                 await createUser(userInfo);
             } catch (error) {
                 console.error("Error fetching user info:", error);
-                alert("Failed to fetch user info. Please try again.");
             }
         }
     });
@@ -2670,6 +2668,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $c9a1b197475086e8$exports = {};
 
 $parcel$export($c9a1b197475086e8$exports, "arrowDown", () => $c9a1b197475086e8$export$f61feb65ec56823b, (v) => $c9a1b197475086e8$export$f61feb65ec56823b = v);
@@ -2726,6 +2725,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
     const yesPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.yes, totalAnswerCount);
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
+    const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
@@ -2734,7 +2734,12 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         });
     };
     const redirectToLogin = (answer)=>{
-        handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${_id}`);
+        setIsLoginModalOpen(true);
+        setAnswer({
+            answer: answer,
+            parentMessageId: _id,
+            shortId: shortId
+        });
     };
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{

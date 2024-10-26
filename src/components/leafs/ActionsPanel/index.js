@@ -33,11 +33,9 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
 
         const userInfo = await userInfoResponse.json() // Parse the JSON response
         console.log('User Info:', userInfo) // Log the user info
-        alert(`Welcome! Your email is: ${userInfo.email}`)
         await createUser(userInfo)
       } catch (error) {
         console.error('Error fetching user info:', error)
-        alert('Failed to fetch user info. Please try again.')
       }
     }
   })
