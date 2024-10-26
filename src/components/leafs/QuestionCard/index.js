@@ -11,7 +11,25 @@ import AnswerButtons from './components/AnswerButtons'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ yourOwnQuestion, shortId, onUserClick, img, createdAt, addImage, username, name, answersCount, he, me, respond, createNewGroup, htmlName, onClick }, ref) => {
+export default forwardRef(({
+  yourOwnQuestion,
+  shortId,
+  onUserClick,
+  img,
+  createdAt,
+  addImage,
+  username,
+  name,
+  answersCount,
+  he,
+  me,
+  respond,
+  createNewGroup,
+  htmlName,
+  onClick,
+  handleTwitterLogin,
+  parentMessageId
+}, ref) => {
   const share = () => {
     if (navigator.share) {
       navigator.share({
@@ -20,6 +38,10 @@ export default forwardRef(({ yourOwnQuestion, shortId, onUserClick, img, created
         url: `https://poll.cc/questions/${shortId}`
       })
     }
+  }
+
+  const redirectToLogin = answer => {
+    handleTwitterLogin(`?href=/questions/${shortId}&answer=${answer}&parentMessageId=${parentMessageId}`)
   }
 
   return (
@@ -31,7 +53,7 @@ export default forwardRef(({ yourOwnQuestion, shortId, onUserClick, img, created
         </Title>
         {/* {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>} */}
         <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
-        {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond} />)}
+        {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond || redirectToLogin} />)}
         <div className={styles.expand}>
           <a href={`/questions/${shortId}`}><OpenInNewIcon onClick={onClick} /></a>
           <ShareIcon onClick={share} />
