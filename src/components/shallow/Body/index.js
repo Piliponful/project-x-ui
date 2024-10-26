@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
+import jwtDecode from 'jwt-decode'
 
 import { ContainerWithoutSwipes } from './components/Container'
 
@@ -75,6 +76,8 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
   const handleLoginSuccess = (credentialResponse) => {
     const userInfo = credentialResponse.credential
     console.log('User Info:', userInfo)
+    const decoded = jwtDecode(userInfo)
+    console.log('decoded: ', decoded)
     alert(`Welcome! Your email is: ${userInfo.email}`)
   }
 

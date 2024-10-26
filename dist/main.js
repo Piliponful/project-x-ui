@@ -11,6 +11,7 @@ var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
+var $c5L0i$jwtdecode = require("jwt-decode");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
@@ -960,6 +961,7 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 
 
 
+
 var $61bbaaf79dd60fe4$exports = {};
 
 $parcel$export($61bbaaf79dd60fe4$exports, "container", () => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd, (v) => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = v);
@@ -1106,6 +1108,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const handleLoginSuccess = (credentialResponse)=>{
         const userInfo = credentialResponse.credential;
         console.log("User Info:", userInfo);
+        const decoded = (0, ($parcel$interopDefault($c5L0i$jwtdecode)))(userInfo);
+        console.log("decoded: ", decoded);
         alert(`Welcome! Your email is: ${userInfo.email}`);
     };
     const handleLoginFailure = (error)=>{
