@@ -1627,7 +1627,24 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     });
     const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
-        onSuccess: (tokenResponse)=>console.log(tokenResponse)
+        onSuccess: async (tokenResponse)=>{
+            const accessToken = tokenResponse.access_token;
+            try {
+                const userInfoResponse = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`
+                    }
+                });
+                if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
+                const userInfo = await userInfoResponse.json(); // Parse the JSON response
+                console.log("User Info:", userInfo); // Log the user info
+                alert(`Welcome! Your email is: ${userInfo.email}`);
+            } catch (error) {
+                console.error("Error fetching user info:", error);
+                alert("Failed to fetch user info. Please try again.");
+            }
+        }
     });
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
@@ -1640,7 +1657,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 ]
             }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
-                onClick: login,
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
@@ -1699,7 +1715,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             border: "none",
             fontSize: 16
         },
-        onClick: handleTwitterLogin,
+        onClick: login,
         children: content
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {

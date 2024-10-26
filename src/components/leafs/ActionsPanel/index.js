@@ -2,7 +2,6 @@ import React, { useState, useContext, forwardRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
-import { jwtDecode } from 'jwt-decode'
 import { useGoogleLogin } from '@react-oauth/google'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
@@ -17,7 +16,29 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
   const { setIsModalOpen } = useContext(MainScreenSwipeContext)
 
   const login = useGoogleLogin({
-    onSuccess: tokenResponse => console.log(tokenResponse)
+    onSuccess: async tokenResponse => {
+      const accessToken = tokenResponse.access_token
+
+      try {
+        const userInfoResponse = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        })
+
+        if (!userInfoResponse.ok) {
+          throw new Error('Failed to fetch user info')
+        }
+
+        const userInfo = await userInfoResponse.json() // Parse the JSON response
+        console.log('User Info:', userInfo) // Log the user info
+        alert(`Welcome! Your email is: ${userInfo.email}`)
+      } catch (error) {
+        console.error('Error fetching user info:', error)
+        alert('Failed to fetch user info. Please try again.')
+      }
+    }
   })
 
   const content = (
@@ -26,7 +47,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
         username
           ? <Text className={styles.username}>Settings ({username})</Text>
           : (
-            <div className={styles.twitterSignIn} onClick={login}>
+            <div className={styles.twitterSignIn}>
               <Text className={styles.username}>
                 Sign in with
               </Text>
@@ -75,7 +96,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
         }}
         className={styles.container}
         style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
-        onClick={handleTwitterLogin}
+        onClick={login}
       >
         {content}
       </button>
