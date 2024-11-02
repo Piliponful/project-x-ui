@@ -31,7 +31,8 @@ export default forwardRef(({
   onClick,
   handleTwitterLogin,
   parentMessageId,
-  createUser
+  createUser,
+  trackConversion
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -46,6 +47,8 @@ export default forwardRef(({
   const { setIsLoginModalOpen, setAnswer } = useContext(MainScreenSwipeContext)
 
   const redirectToLogin = answer => {
+    // eslint-disable-next-line no-undef
+    gtag_report_conversion()
     setIsLoginModalOpen(true)
     setAnswer({ answer, parentMessageId, shortId })
   }

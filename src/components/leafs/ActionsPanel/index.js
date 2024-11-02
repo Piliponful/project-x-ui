@@ -2,6 +2,7 @@ import React, { useState, useContext, forwardRef } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
+import GoogleIcon from '@mui/icons-material/Google'
 import { useGoogleLogin } from '@react-oauth/google'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
@@ -50,7 +51,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
               <Text className={styles.username}>
                 Sign in with
               </Text>
-              <XIcon />
+              <GoogleIcon />
             </div>
             )
       }

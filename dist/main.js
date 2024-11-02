@@ -16,6 +16,7 @@ var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
+var $c5L0i$muiiconsmaterialGoogle = require("@mui/icons-material/Google");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
@@ -1332,7 +1333,7 @@ $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion }, ref)=>{
     const share = ()=>{
         if (navigator.share) navigator.share({
             title: "Question",
@@ -1342,6 +1343,8 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     };
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const redirectToLogin = (answer)=>{
+        // eslint-disable-next-line no-undef
+        gtag_report_conversion();
         setIsLoginModalOpen(true);
         setAnswer({
             answer: answer,
@@ -1597,6 +1600,7 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
@@ -1660,7 +1664,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
                         children: "Sign in with"
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialGoogle))), {})
                 ]
             }),
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
