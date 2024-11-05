@@ -2532,10 +2532,16 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
         onTriggered: ()=>setShowDurationDropdown(false)
     });
     const setDurationAndClose = (value)=>{
+        window.mixpanel.track("Update Filter", {
+            filter: value
+        });
         setDuration(value);
         setShowDurationDropdown(false);
     };
     const setSortAndClose = (value)=>{
+        window.mixpanel.track("Update Sort", {
+            sort: value
+        });
         setSort(value);
         setShowSortDropdown(false);
     };

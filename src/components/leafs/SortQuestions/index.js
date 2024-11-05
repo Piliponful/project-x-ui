@@ -15,11 +15,17 @@ export const SortQuestions = forwardRef(({ sort = 'Most Answered', duration = 'W
   const ref2 = useDetectClickOutside({ onTriggered: () => setShowDurationDropdown(false) })
 
   const setDurationAndClose = value => {
+    window.mixpanel.track('Update Filter', {
+      filter: value
+    })
     setDuration(value)
     setShowDurationDropdown(false)
   }
 
   const setSortAndClose = value => {
+    window.mixpanel.track('Update Sort', {
+      sort: value
+    })
     setSort(value)
     setShowSortDropdown(false)
   }
