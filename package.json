@@ -37,6 +37,7 @@
     "install": "^0.13.0",
     "jwt-decode": "^4.0.0",
     "lodash": "^4.17.21",
+    "mixpanel-browser": "^2.55.1",
     "npm": "^7.8.0",
     "parcel": "^2.0.1",
     "project-x-ui": "^1.0.372",

@@ -4,6 +4,8 @@ import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 
+import '../../../mixpanel'
+
 import { ContainerWithoutSwipes } from './components/Container'
 
 import styles from './style.module.styl'

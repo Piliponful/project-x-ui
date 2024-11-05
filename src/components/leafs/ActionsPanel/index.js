@@ -4,6 +4,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
 import GoogleIcon from '@mui/icons-material/Google'
 import { useGoogleLogin } from '@react-oauth/google'
+import mixpanel from 'mixpanel-browser'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
