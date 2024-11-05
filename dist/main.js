@@ -1100,6 +1100,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         skipScreen
     ]);
     const connectToWallet = ()=>{
+        window.mixpanel.track("Rewards Modal -> Connect Wallet Click");
         connectToWalletR();
         setIsWalletModalOpen(false);
         setIsModalOpen(false);
@@ -1122,6 +1123,10 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         window.mixpanel.track("Login Failed", {
             error: error
         });
+    };
+    const closeRewardsConnectWalletModal = ()=>{
+        setIsModalOpen(false);
+        window.mixpanel.track("Rewards Modal(Connect Wallet) -> Close Click");
     };
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleOAuthProvider), {
         clientId: $0c70feff32ca6a2b$var$clientId,
@@ -1193,7 +1198,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
                         isOpen: isModalOpen,
-                        onRequestClose: ()=>setIsModalOpen(false),
+                        onRequestClose: closeRewardsConnectWalletModal,
                         style: $0c70feff32ca6a2b$var$customStyles,
                         children: connected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                             children: [
@@ -1241,7 +1246,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                    onClick: ()=>setIsModalOpen(false),
+                                    onClick: closeRewardsConnectWalletModal,
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
@@ -1693,7 +1698,10 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         children: "Log out"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: ()=>setIsModalOpen(true),
+                        onClick: ()=>{
+                            window.mixpanel.track("Rewards");
+                            setIsModalOpen(true);
+                        },
                         children: "Rewards"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {

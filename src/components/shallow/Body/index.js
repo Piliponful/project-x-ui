@@ -72,6 +72,7 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
   }, [skipScreen])
 
   const connectToWallet = () => {
+    window.mixpanel.track('Rewards Modal -> Connect Wallet Click')
     connectToWalletR()
     setIsWalletModalOpen(false)
     setIsModalOpen(false)
@@ -94,6 +95,11 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     window.mixpanel.track('Login Failed', {
       error
     })
+  }
+
+  const closeRewardsConnectWalletModal = () => {
+    setIsModalOpen(false)
+    window.mixpanel.track('Rewards Modal(Connect Wallet) -> Close Click')
   }
 
   if (includeSwipes) {
@@ -135,7 +141,7 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
             </Modal>
             <Modal
               isOpen={isModalOpen}
-              onRequestClose={() => setIsModalOpen(false)}
+              onRequestClose={closeRewardsConnectWalletModal}
               style={customStyles}
             >
               {
@@ -149,7 +155,7 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
                     )
                   : (
                     <div>
-                      <div onClick={() => setIsModalOpen(false)} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
+                      <div onClick={closeRewardsConnectWalletModal} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
                       <p>To get rewards for asking questions and answering them you need to connect crypto wallet</p>
                       <button style={{ width: '100%', marginTop: 20 }} className={styles.connectButton} onClick={connectToWallet}>Connect</button>
                     </div>

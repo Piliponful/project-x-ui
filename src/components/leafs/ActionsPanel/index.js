@@ -63,7 +63,13 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
       {username && (
         <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
           <div onClick={logout}>Log out</div>
-          <div onClick={() => setIsModalOpen(true)}>Rewards</div>
+          <div
+            onClick={() => {
+              window.mixpanel.track('Rewards')
+              setIsModalOpen(true)
+            }}
+          >Rewards
+          </div>
           <div onClick={showMyHistory}>My Questions/Answers</div>
           {Boolean(testUsers.length) && (
             <div className={styles.divider}>
