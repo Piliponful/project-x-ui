@@ -55,7 +55,7 @@ export default forwardRef(({ style, users, fetchUsers, hasMore, total, back, sea
                   <span>{humanNumber(user.followerCount)} followers</span>
                 </div>
               </div>
-              {user.followerCount && (
+              {user?.followerCount && (
                 <a
                   onClick={e => {
                     e.stopPropagation()

@@ -23,7 +23,7 @@ export const User = ({ user, onUserClick, children, style }) => {
             </div>
           </FlipMove>
         </div>
-        {user.followerCount && (
+        {user?.followerCount && (
           <a
             onClick={e => {
               e.stopPropagation()
