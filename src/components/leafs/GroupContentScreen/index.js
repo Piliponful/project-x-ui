@@ -23,9 +23,19 @@ export const User = ({ user, onUserClick, children, style }) => {
             </div>
           </FlipMove>
         </div>
-        <a onClick={e => e.stopPropagation()} href={`https://twitter.com/${user?.username}`} target='_blank' rel='noreferrer'>
-          <XIcon />
-        </a>
+        {user.followerCount && (
+          <a
+            onClick={e => {
+              e.stopPropagation()
+              window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
+            }}
+            href={`https://twitter.com/${user?.username}`}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <XIcon />
+          </a>
+        )}
       </div>
 
       {children}
