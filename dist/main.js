@@ -1990,7 +1990,11 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
             !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).button,
-                    onClick: ()=>setShowDifference(!showDifference),
+                    onClick: ()=>{
+                        const newShowDifference = !showDifference;
+                        setShowDifference(newShowDifference);
+                        window.mixpanel.track(newShowDifference ? "Show Users Difference" : "Go Back to User Q/A");
+                    },
                     children: showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         style: {
                             display: "flex",
@@ -2028,14 +2032,20 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                                     [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "questions"
                                 }),
-                                onClick: ()=>setSelectedTab("questions"),
+                                onClick: ()=>{
+                                    window.mixpanel.track("Select User Questions Tab");
+                                    setSelectedTab("questions");
+                                },
                                 children: "His/Her Questions"
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                                     [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
                                 }),
-                                onClick: ()=>setSelectedTab("answers"),
+                                onClick: ()=>{
+                                    setSelectedTab("answers");
+                                    window.mixpanel.track("Select User Answers Tab");
+                                },
                                 children: "His/Her Answers"
                             })
                         ]
@@ -2126,21 +2136,30 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "different"
                         }),
-                        onClick: ()=>setSelectedTab("different"),
+                        onClick: ()=>{
+                            window.mixpanel.track("Select Different Tab");
+                            setSelectedTab("different");
+                        },
                         children: "Different Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "same"
                         }),
-                        onClick: ()=>setSelectedTab("same"),
+                        onClick: ()=>{
+                            window.mixpanel.track("Select Same Tab");
+                            setSelectedTab("same");
+                        },
                         children: "Same Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                             [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "notAnswered"
                         }),
-                        onClick: ()=>setSelectedTab("notAnswered"),
+                        onClick: ()=>{
+                            window.mixpanel.track("Select Not Answered Tab");
+                            setSelectedTab("notAnswered");
+                        },
                         children: "Not Answered"
                     })
                 ]

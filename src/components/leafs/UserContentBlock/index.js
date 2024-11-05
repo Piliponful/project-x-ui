@@ -58,7 +58,14 @@ export const UserHistoryTabs = forwardRef(({
       </User>
       {!_.isNull(similarity) && (
         <>
-          <button className={styles.button} onClick={() => setShowDifference(!showDifference)}>
+          <button
+            className={styles.button}
+            onClick={() => {
+              const newShowDifference = !showDifference
+              setShowDifference(newShowDifference)
+              window.mixpanel.track(newShowDifference ? 'Show Users Difference' : 'Go Back to User Q/A')
+            }}
+          >
             {
               showDifference
                 ? <div style={{ display: 'flex', alignItems: 'center' }}><ArrowBackIcon sx={{ fontSize: 14, marginRight: '5px' }} /><span>Back</span></div>
@@ -80,8 +87,24 @@ export const UserHistoryTabs = forwardRef(({
               }}
             />
             <div className={styles.tabs}>
-              <div className={cn({ [styles.selected]: selectedTab === 'questions' })} onClick={() => setSelectedTab('questions')}>His/Her Questions</div>
-              <div className={cn({ [styles.selected]: selectedTab === 'answers' })} onClick={() => setSelectedTab('answers')}>His/Her Answers</div>
+              <div
+                className={cn({ [styles.selected]: selectedTab === 'questions' })}
+                onClick={() => {
+                  window.mixpanel.track('Select User Questions Tab')
+                  setSelectedTab('questions')
+                }}
+              >
+                His/Her Questions
+              </div>
+              <div
+                className={cn({ [styles.selected]: selectedTab === 'answers' })}
+                onClick={() => {
+                  setSelectedTab('answers')
+                  window.mixpanel.track('Select User Answers Tab')
+                }}
+              >
+                His/Her Answers
+              </div>
             </div>
           </>
         )
@@ -201,9 +224,33 @@ export const UserAnswerDifferences = forwardRef(({
         }}
       />
       <div className={cn(styles.tabs, styles.differentTabs)}>
-        <div className={cn({ [styles.selected]: selectedTab === 'different' })} onClick={() => setSelectedTab('different')}>Different Answer</div>
-        <div className={cn({ [styles.selected]: selectedTab === 'same' })} onClick={() => setSelectedTab('same')}>Same Answer</div>
-        <div className={cn({ [styles.selected]: selectedTab === 'notAnswered' })} onClick={() => setSelectedTab('notAnswered')}>Not Answered</div>
+        <div
+          className={cn({ [styles.selected]: selectedTab === 'different' })}
+          onClick={() => {
+            window.mixpanel.track('Select Different Tab')
+            setSelectedTab('different')
+          }}
+        >
+          Different Answer
+        </div>
+        <div
+          className={cn({ [styles.selected]: selectedTab === 'same' })}
+          onClick={() => {
+            window.mixpanel.track('Select Same Tab')
+            setSelectedTab('same')
+          }}
+        >
+          Same Answer
+        </div>
+        <div
+          className={cn({ [styles.selected]: selectedTab === 'notAnswered' })}
+          onClick={() => {
+            window.mixpanel.track('Select Not Answered Tab')
+            setSelectedTab('notAnswered')
+          }}
+        >
+          Not Answered
+        </div>
       </div>
       {
         selectedTab === 'notAnswered'
