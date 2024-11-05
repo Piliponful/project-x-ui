@@ -36,6 +36,9 @@ export default forwardRef(({
 }, ref) => {
   const share = () => {
     if (navigator.share) {
+      window.mixpanel.track('Share', {
+        questionId: shortId
+      })
       navigator.share({
         title: 'Question',
         text: name,
@@ -48,9 +51,13 @@ export default forwardRef(({
 
   const redirectToLogin = answer => {
     // eslint-disable-next-line no-undef
-    gtag_report_conversion()
+    // window.gtag_report_conversion()
     setIsLoginModalOpen(true)
     setAnswer({ answer, parentMessageId, shortId })
+    window.mixpanel.track('Anonymous Question Answer', {
+      questionId: shortId,
+      answer
+    })
   }
 
   return (

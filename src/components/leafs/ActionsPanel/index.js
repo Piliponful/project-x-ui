@@ -4,7 +4,6 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
 import GoogleIcon from '@mui/icons-material/Google'
 import { useGoogleLogin } from '@react-oauth/google'
-import mixpanel from 'mixpanel-browser'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
@@ -34,11 +33,15 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
         }
 
         const userInfo = await userInfoResponse.json() // Parse the JSON response
-        console.log('User Info:', userInfo) // Log the user info
         await createUser(userInfo)
       } catch (error) {
         console.error('Error fetching user info:', error)
       }
+    },
+    onError: (error) => {
+      window.mixpanel.track('Login Failed', {
+        error
+      })
     }
   })
 

@@ -49,6 +49,12 @@
   transform: translateY(-50%);
 }
 
-.button:hover {
+.button:not(:disabled):hover {
   box-shadow: 0 3px 9.84px -0.84px #3eb5f12e;
+}
+
+.button:disabled {
+  background: #8d9193;
+  cursor: not-allowed;
+  box-shadow: 0 0 23.84px 8.16px #8d91935c;
 }

@@ -557,8 +557,14 @@
   box-shadow: 0 0 23.84px 8.16px #3eb5f163;
 }
 
-.OGOopW_button:hover {
+.OGOopW_button:not(:disabled):hover {
   box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
+}
+
+.OGOopW_button:disabled {
+  cursor: not-allowed;
+  background: #8d9193;
+  box-shadow: 0 0 23.84px 8.16px #8d91935c;
 }
 
 .E0-4eG_groupContainer {

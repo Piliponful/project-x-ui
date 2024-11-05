@@ -24,7 +24,7 @@ export default forwardRef(({ saveQuestion }, ref) => {
   return (
     <div ref={ref} className={styles.newQuestion}>
       <Input disabled={disabled} value={question} onChange={onChange} />
-      <button className={styles.button} onClick={save}>Ask</button>
+      <button disabled={!question || !saveQuestion} className={styles.button} onClick={save}>Ask</button>
     </div>
   )
 })

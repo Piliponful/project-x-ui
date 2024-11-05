@@ -44,6 +44,9 @@ export const Question = forwardRef(({
 
   const share = () => {
     if (navigator.share) {
+      window.mixpanel.track('Share', {
+        questionId: shortId
+      })
       navigator.share({
         title: 'Question',
         text: name,
@@ -55,6 +58,10 @@ export const Question = forwardRef(({
   const redirectToLogin = answer => {
     setIsLoginModalOpen(true)
     setAnswer({ answer, parentMessageId: _id, shortId })
+    window.mixpanel.track('Anonymous Question Answer', {
+      questionId: shortId,
+      answer
+    })
   }
 
   useEffect(() => {

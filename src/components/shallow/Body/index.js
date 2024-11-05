@@ -4,8 +4,6 @@ import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 
-import '../../../mixpanel'
-
 import { ContainerWithoutSwipes } from './components/Container'
 
 import styles from './style.module.styl'
@@ -86,15 +84,16 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
 
   const handleLoginSuccess = async (credentialResponse) => {
     const userInfo = credentialResponse.credential
-    console.log('User Info:', userInfo)
     const decoded = jwtDecode(userInfo)
-    console.log('decoded: ', decoded)
     await createUser({ ...answer, ...decoded })
     setIsLoginModalOpen(false)
   }
 
   const handleLoginFailure = (error) => {
     console.error('Login Failed: ', error)
+    window.mixpanel.track('Login Failed', {
+      error
+    })
   }
 
   if (includeSwipes) {

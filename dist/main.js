@@ -1110,9 +1110,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     };
     const handleLoginSuccess = async (credentialResponse)=>{
         const userInfo = credentialResponse.credential;
-        console.log("User Info:", userInfo);
         const decoded = (0, $c5L0i$jwtdecode.jwtDecode)(userInfo);
-        console.log("decoded: ", decoded);
         await createUser({
             ...answer,
             ...decoded
@@ -1121,6 +1119,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     };
     const handleLoginFailure = (error)=>{
         console.error("Login Failed: ", error);
+        window.mixpanel.track("Login Failed", {
+            error: error
+        });
     };
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleOAuthProvider), {
         clientId: $0c70feff32ca6a2b$var$clientId,
@@ -1335,21 +1336,30 @@ $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion }, ref)=>{
     const share = ()=>{
-        if (navigator.share) navigator.share({
-            title: "Question",
-            text: name,
-            url: `https://poll.cc/questions/${shortId}`
-        });
+        if (navigator.share) {
+            window.mixpanel.track("Share", {
+                questionId: shortId
+            });
+            navigator.share({
+                title: "Question",
+                text: name,
+                url: `https://poll.cc/questions/${shortId}`
+            });
+        }
     };
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const redirectToLogin = (answer)=>{
         // eslint-disable-next-line no-undef
-        gtag_report_conversion();
+        // window.gtag_report_conversion()
         setIsLoginModalOpen(true);
         setAnswer({
             answer: answer,
             parentMessageId: parentMessageId,
             shortId: shortId
+        });
+        window.mixpanel.track("Anonymous Question Answer", {
+            questionId: shortId,
+            answer: answer
         });
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -1472,6 +1482,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 onChange: onChange
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                disabled: !question || !saveQuestion,
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).button,
                 onClick: save,
                 children: "Ask"
@@ -1641,11 +1652,15 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 });
                 if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
                 const userInfo = await userInfoResponse.json(); // Parse the JSON response
-                console.log("User Info:", userInfo); // Log the user info
                 await createUser(userInfo);
             } catch (error) {
                 console.error("Error fetching user info:", error);
             }
+        },
+        onError: (error)=>{
+            window.mixpanel.track("Login Failed", {
+                error: error
+            });
         }
     });
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -2731,11 +2746,16 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     const noPercentage = $aa945d4ce4ddbaaa$var$calcPercent(answersCount.no, totalAnswerCount);
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const share = ()=>{
-        if (navigator.share) navigator.share({
-            title: "Question",
-            text: name,
-            url: `https://poll.cc/questions/${shortId}`
-        });
+        if (navigator.share) {
+            window.mixpanel.track("Share", {
+                questionId: shortId
+            });
+            navigator.share({
+                title: "Question",
+                text: name,
+                url: `https://poll.cc/questions/${shortId}`
+            });
+        }
     };
     const redirectToLogin = (answer)=>{
         setIsLoginModalOpen(true);
@@ -2743,6 +2763,10 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             answer: answer,
             parentMessageId: _id,
             shortId: shortId
+        });
+        window.mixpanel.track("Anonymous Question Answer", {
+            questionId: shortId,
+            answer: answer
         });
     };
     (0, $c5L0i$react.useEffect)(()=>{
