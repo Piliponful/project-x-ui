@@ -57,6 +57,7 @@ export const Question = forwardRef(({
 
   const redirectToLogin = answer => {
     setIsLoginModalOpen(true)
+    window.gtag_report_conversion()
     setAnswer({ answer, parentMessageId: _id, shortId })
     window.mixpanel.track('Anonymous Question Answer', {
       questionId: shortId,
