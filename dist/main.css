@@ -319,6 +319,9 @@
 }
 
 .sLin6a_body {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #fff, #ece9e6);
+  background: linear-gradient(to right, #fff, #ece9e6);
   justify-content: center;
   width: 100vw;
   min-height: 100dvh;
