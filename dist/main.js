@@ -1074,6 +1074,10 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: () => {}
+// }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser })=>{
@@ -1274,15 +1278,25 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         isOpen: showLoginModal,
                         onRequestClose: ()=>setIsLoginModalOpen(false),
                         style: $0c70feff32ca6a2b$var$customStyles,
+                        shouldCloseOnOverlayClick: false,
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                onClick: ()=>setIsLoginModalOpen(false),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                    children: "Login or Sign up"
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                style: {
+                                    marginBottom: 20
+                                },
                                 children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                        children: "Login or Sign up"
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                        children: "To count your answer we need you to finish registration."
                                     }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                        children: "Otherwise votes wouldn't mean a thing."
+                                    })
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {

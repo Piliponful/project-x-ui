@@ -32,7 +32,10 @@ const customStyles = {
     flexDirection: 'column'
   }
 }
-
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: () => {}
+// }
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
 Modal.setAppElement('#app')
@@ -166,8 +169,13 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
               isOpen={showLoginModal}
               onRequestClose={() => setIsLoginModalOpen(false)}
               style={customStyles}
+              shouldCloseOnOverlayClick={false}
             >
-              <div onClick={() => setIsLoginModalOpen(false)} className={styles.close}><h2>Login or Sign up</h2><CloseIcon /></div>
+              <div className={styles.close}><h2>Login or Sign up</h2></div>
+              <div style={{ marginBottom: 20 }}>
+                <p>To count your answer we need you to finish registration.</p>
+                <p>Otherwise votes wouldn't mean a thing.</p>
+              </div>
               <div className={styles.modalContent}>
                 <GoogleLogin
                   onSuccess={handleLoginSuccess}
