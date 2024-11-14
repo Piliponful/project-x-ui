@@ -1077,12 +1077,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-window.gtag_report_conversion = ()=>{};
-window.mixpanel = {
-    track: (...rest)=>{
-        console.log(rest);
-    }
-};
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: (...rest) => {
+//     console.log(rest)
+//   }
+// }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser })=>{
