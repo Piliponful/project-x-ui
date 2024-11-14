@@ -1,0 +1,370 @@
+.landing-button {
+  cursor: pointer;
+  color: #3b3b3b;
+  font-family: IBM Plex Sans, sans-serif;
+  border: none;
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 8px;
+}
+
+.slides {
+  overflow: scroll;
+  background: linear-gradient(to right, #fff, #ece9e6);
+}
+
+.mobile-second-text {
+  display: none;
+}
+
+.landing {
+  color: #3b3b3b;
+  font-family: IBM Plex Sans, sans-serif;
+  width: 100%;
+  height: 100vh;
+  @supports (height: 100svh) {
+    height: 100svh;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  text-align: center;
+  line-height: 78%;
+  font-weight: 500;
+  letter-spacing: -3.51667px;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.landing .name {
+  font-size: 1.7em;
+  color: #232323;
+}
+
+.landing h1,.landing h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.landing h1 {
+  line-height: 1.1;
+}
+
+.landing h2 {
+  line-height: 1.1;
+}
+
+.landing .additional-text {
+  line-height: 1.1;
+}
+
+.landing .additional-text {
+  font-size: 0.5em;
+  line-height: 1;
+  color: #616161;
+}
+
+.landing small {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #0000008a;
+  line-height: 1.3;
+}
+
+.landing .smaller {
+  font-size: 0.3em;
+  font-weight: 200;
+  letter-spacing: -1.5;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.scrollIcon {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #BFBFBF;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 39px;
+ 
+  &:after {
+    content: 'Scroll Down';
+    color: #BFBFBF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-top: 10px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    animation: scrollText 2s infinite;
+  }
+}
+
+i.scroll {
+  background: #BFBFBF;
+  width: 3px;
+  height: 7px;
+  display: block;
+  border-radius: 40px;
+  animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity:1;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity:.7;
+    transform: translateY(130%);
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    opacity: 1;
+    transform: translateY(120%);
+  }
+  100% {
+    opacity: .0;
+    transform: translateY(180%);
+  }
+}
+
+.open-app-button {
+  line-height: 130%;
+  letter-spacing: -.5px;
+  box-sizing: border-box;
+  text-decoration: unset;
+  font-family: IBM Plex Sans, sans-serif;
+  background: #3eb5f1;
+  color: #f1f1f1;
+  box-shadow: 0 0px 23.84px 8.16px #3eb5f163;
+  cursor: pointer;
+  border: none;
+  border-radius: 29px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: box-shadow .3s ease-out;
+  display: flex;
+  margin-top: 32px;
+}
+
+.open-app-button:hover {
+  box-shadow: 0 3px 9.84px -0.84px #3eb5f12e;
+}
+
+.made-by {
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+
+  a {
+    font-size: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-family: "Dancing Script";
+  }
+}
+
+@media only screen and (max-width: 1148px) {
+  .landing {
+    font-size: 90px;
+  }
+}
+
+@media only screen and (max-width: 843px) {
+  .landing {
+    font-size: 70px;
+  }
+
+  .landing .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+  }
+}
+
+@media only screen and (max-width: 606px) {
+  .landing {
+    font-size: 50px;
+    letter-spacing: -1.5px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+  }
+
+  .scrollIcon {
+    left: 45px;
+  }
+
+  .mobile-second-text {
+    display: block;
+  }
+
+  .mobile-second-text p {
+    font-size: .6em;
+    line-height: .9;
+  }
+
+  .mobile-second-text p:last-child {
+    font-size: .4em;
+  }
+
+  .second-text-container {
+    display: none;
+  }
+
+  .landing .smaller {
+    letter-spacing: -0.5px;
+    line-height: 100%;
+  }
+
+  .landing .subtitle {
+    line-height: 0.9;
+    font-size: 0.8em;
+  }
+
+  .landing .additional-text {
+    margin-top: 14px;
+  }
+
+  .landing .scrollIcon {
+    width: 17px;
+    height: 29px;
+    border: 1px solid #BFBFBF;
+
+    &:after {
+      font-size: 14px;
+    }
+  }
+
+  i.scroll {
+    width: 2px;
+    height: 5px;
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #0066ff;
+  color: #fff;
+  position: relative;
+  z-index: 101;
+}
+
+.coin {
+  position: absolute;
+  top: var(--coin-from-x, 24px);
+  left: var(--coin-from-y, 24px);
+  z-index: 100;
+  opacity: 0;
+}
+
+.coin::after {
+  content: "$";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  font-size: 10px;
+  color: rgb(237, 196, 107);
+  background: rgb(227, 162, 23);
+  border: 2px solid rgb(237, 196, 107);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.coin--animated,
+.coin--animated::after {
+  animation-delay: var(--coin-delay, 0s);
+  animation-duration: var(--coin-duration, 1.5s);
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.coin--animated {
+  animation-name: coin-x-axis;
+  animation-timing-function: ease-in;
+}
+
+.coin--animated::after {
+  animation-name: coin-y-axis-and-flip;
+  animation-timing-function: ease-out;
+}
+
+@keyframes coin-x-axis {
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    left: calc(var(--coin-to-x) * 1.5);
+  }
+}
+
+@keyframes coin-y-axis-and-flip {
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(calc(var(--coin-to-y) * 1.5)) rotate3d(1, 1, 1, 1080deg);
+  }
+}
+
+@supports (backdrop-filter: blur()) {
+  .search-modal {
+    background: rgb(244 243 253 / 23%)!important;
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* .landing:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+} */

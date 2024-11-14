@@ -17,6 +17,7 @@ import UsersSearch from './src/components/leafs/UsersSearch'
 import { SortQuestions } from './src/components/leafs/SortQuestions'
 import { Question } from './src/components/leafs/Question'
 import { ChatBlock } from './src/components/leafs/ChatBlock'
+import { Landing } from './src/components/shallow/Landing'
 
 import './styles.css'
 
@@ -26,7 +27,8 @@ export default {
     GroupsContainer,
     MainScreen,
     Sidebar,
-    QuestionCardsRow
+    QuestionCardsRow,
+    Landing
   },
   leafs: {
     Circles,

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 import FlipMove from 'react-flip-move'
+import { BrowserRouter } from 'react-router-dom'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -26,6 +27,7 @@ import '../../styles.css'
 import './mock-styles.css'
 
 import 'react-phone-number-input/style.css'
+import { Landing } from '../components/shallow/Landing'
 
 window.Snap = Snap
 
@@ -418,6 +420,7 @@ const Authorized = () => {
 
   return (
     <>
+      <Landing />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -458,12 +461,12 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-        <div style={{ width: 241 }}>
+        {/* <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
         <MainScreenWithQuestions />
-        <ChatBlock messages={messages} />
+        <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
         {/* <Question {...(mostAnsweredQuestions[1])} /> */}
@@ -487,7 +490,9 @@ const getUserToken = () => {
 const root = ReactDOM.createRoot(document.getElementById('app'))
 root.render(
   <Body address='0x105Cc09CA22e3cD746D8d6c4e2f8cfBcf97207Be' payout={155} includeSwipes connected={false} isWalletModalOpenInitial={false}>
-    <Authorized />
+    <BrowserRouter>
+      <Authorized />
+    </BrowserRouter>
     {/* <Authentication
       createUser={createUser}
       verifyUser={() => console.log('verifyUser')}

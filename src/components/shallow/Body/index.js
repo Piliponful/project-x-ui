@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
@@ -32,10 +32,14 @@ const customStyles = {
     flexDirection: 'column'
   }
 }
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: () => {}
-// }
+
+window.gtag_report_conversion = () => {}
+window.mixpanel = {
+  track: (...rest) => {
+    console.log(rest)
+  }
+}
+
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
 Modal.setAppElement('#app')
@@ -48,6 +52,11 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
   const [showSearch, setShowSearch] = useState(false)
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
   const [answer, setAnswer] = useState(null)
+  const modalContent = useRef(null)
+  const modalContentIframe = useRef(null)
+  const init = useRef(false)
+  const init2 = useRef(false)
+  const [modalDoneOpening, setModalDoneOpening] = useState(false)
 
   useEffect(() => {
     const handler = () => {
@@ -73,6 +82,58 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
       toggleScreen('questions')
     }
   }, [skipScreen])
+
+  useEffect(() => {
+    // console.log('modal-content in useEffect', init.current)
+    // console.log('modal done opening: ', modalDoneOpening)
+
+    if (init.current || !modalDoneOpening) {
+      return
+    }
+    // console.log('after modal-content in useEffect', init.current)
+    // console.log('modal button: ', modalContent.current)
+
+    const onClick = () => {
+      window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
+    }
+
+    // Define the observer to watch for style changes on the iframe itself
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        // console.log('attributeName: ', mutation.attributeName)
+        if (mutation.attributeName === 'style') {
+          const styles = window.getComputedStyle(modalContentIframe.current)
+          // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
+          const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
+          if (iframeHeight > 0) {
+            if (init2.current) {
+              return
+            }
+
+            console.log('height of iframe is bigger then 0')
+
+            modalContent.current.removeEventListener('onClick', onClick)
+            modalContentIframe.current.addEventListener('click', () => {
+              window.mixpanel.track('Sign Up(google logged in) Button Clicked')
+            })
+            init2.current = true
+          }
+        }
+      })
+    })
+
+    // Configure the observer to watch for attribute changes (specifically style) on the iframe
+    observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
+    modalContent.current.addEventListener('click', onClick)
+    init.current = true
+  }, [modalDoneOpening])
+
+  // useEffect(() => {
+  //   if (showLoginModal) {
+  //     const modalContent = document.getElementById('model-content')
+  //     console.log('element: ', modalContent)
+  //   }
+  // }, [showLoginModal])
 
   const connectToWallet = () => {
     window.mixpanel.track('Rewards Modal -> Connect Wallet Click')
@@ -170,17 +231,44 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
               onRequestClose={() => setIsLoginModalOpen(false)}
               style={customStyles}
               shouldCloseOnOverlayClick={false}
+              onAfterOpen={() => {
+                modalContent.current = document.getElementById('model-content')
+                console.log('element: ', modalContent)
+                modalContentIframe.current = document.getElementById('model-content').querySelector('iframe')
+                console.log('iframe: ', modalContentIframe)
+                setModalDoneOpening(true)
+              }}
             >
               <div className={styles.close}><h2>Login or Sign up</h2></div>
               <div style={{ marginBottom: 20 }}>
-                <p>To count your answer we need you to finish registration.</p>
+                <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
                 <p>Otherwise votes wouldn't mean a thing.</p>
               </div>
-              <div className={styles.modalContent}>
+              {/* <p
+                style={{
+                  fontSize: 12,
+                  marginBottom: 5,
+                  color: 'gray'
+                }}
+              >
+                If you're interested in our mission and where this project goes, join our telegram channel:{' '}
+                <a target='_blank' href='https://t.me/poll_cc' rel='noreferrer'>https://t.me/poll_cc</a>
+              </p>
+              <p
+                style={{
+                  fontSize: 12,
+                  marginBottom: 20,
+                  color: 'gray'
+                }}
+              >
+                *I'm not looking to scam you or sell you anything. What you see is what you get.
+              </p> */}
+              <div className={styles.modalContent} id='model-content'>
                 <GoogleLogin
                   onSuccess={handleLoginSuccess}
                   onFailure={handleLoginFailure}
                   cookiePolicy='single_host_origin'
+                  prompt_parent_id='tester-tester'
                 />
               </div>
             </Modal>

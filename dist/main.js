@@ -24,6 +24,9 @@ var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
+var $c5L0i$reactrouterdom = require("react-router-dom");
+var $c5L0i$reacthelmet = require("react-helmet");
+var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -1074,10 +1077,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: () => {}
-// }
+window.gtag_report_conversion = ()=>{};
+window.mixpanel = {
+    track: (...rest)=>{
+        console.log(rest);
+    }
+};
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser })=>{
@@ -1088,6 +1093,11 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
+    const modalContent = (0, $c5L0i$react.useRef)(null);
+    const modalContentIframe = (0, $c5L0i$react.useRef)(null);
+    const init = (0, $c5L0i$react.useRef)(false);
+    const init2 = (0, $c5L0i$react.useRef)(false);
+    const [modalDoneOpening, setModalDoneOpening] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1103,6 +1113,54 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     }, [
         skipScreen
     ]);
+    (0, $c5L0i$react.useEffect)(()=>{
+        // console.log('modal-content in useEffect', init.current)
+        // console.log('modal done opening: ', modalDoneOpening)
+        if (init.current || !modalDoneOpening) return;
+        // console.log('after modal-content in useEffect', init.current)
+        // console.log('modal button: ', modalContent.current)
+        const onClick = ()=>{
+            window.mixpanel.track("Sign Up(google not logged in) Button Clicked");
+        };
+        // Define the observer to watch for style changes on the iframe itself
+        const observer = new MutationObserver((mutations)=>{
+            mutations.forEach((mutation)=>{
+                // console.log('attributeName: ', mutation.attributeName)
+                if (mutation.attributeName === "style") {
+                    const styles = window.getComputedStyle(modalContentIframe.current);
+                    // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
+                    const iframeHeight = parseInt(styles.getPropertyValue("height").replace("px", ""));
+                    if (iframeHeight > 0) {
+                        if (init2.current) return;
+                        console.log("height of iframe is bigger then 0");
+                        modalContent.current.removeEventListener("onClick", onClick);
+                        modalContentIframe.current.addEventListener("click", ()=>{
+                            window.mixpanel.track("Sign Up(google logged in) Button Clicked");
+                        });
+                        init2.current = true;
+                    }
+                }
+            });
+        });
+        // Configure the observer to watch for attribute changes (specifically style) on the iframe
+        observer.observe(modalContentIframe.current, {
+            attributes: true,
+            attributeFilter: [
+                "bis_size",
+                "style"
+            ]
+        });
+        modalContent.current.addEventListener("click", onClick);
+        init.current = true;
+    }, [
+        modalDoneOpening
+    ]);
+    // useEffect(() => {
+    //   if (showLoginModal) {
+    //     const modalContent = document.getElementById('model-content')
+    //     console.log('element: ', modalContent)
+    //   }
+    // }, [showLoginModal])
     const connectToWallet = ()=>{
         window.mixpanel.track("Rewards Modal -> Connect Wallet Click");
         connectToWalletR();
@@ -1279,6 +1337,13 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         onRequestClose: ()=>setIsLoginModalOpen(false),
                         style: $0c70feff32ca6a2b$var$customStyles,
                         shouldCloseOnOverlayClick: false,
+                        onAfterOpen: ()=>{
+                            modalContent.current = document.getElementById("model-content");
+                            console.log("element: ", modalContent);
+                            modalContentIframe.current = document.getElementById("model-content").querySelector("iframe");
+                            console.log("iframe: ", modalContentIframe);
+                            setModalDoneOpening(true);
+                        },
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
@@ -1292,6 +1357,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                        style: {
+                                            marginBottom: 4
+                                        },
                                         children: "To count your answer we need you to finish registration."
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
@@ -1301,10 +1369,12 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
+                                id: "model-content",
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleLogin), {
                                     onSuccess: handleLoginSuccess,
                                     onFailure: handleLoginFailure,
-                                    cookiePolicy: "single_host_origin"
+                                    cookiePolicy: "single_host_origin",
+                                    prompt_parent_id: "tester-tester"
                                 })
                             })
                         ]
@@ -3158,13 +3228,249 @@ const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
+
+
+
+var $af1ad4f19d8ab63f$exports = {};
+
+$parcel$export($af1ad4f19d8ab63f$exports, "additional-text", () => $af1ad4f19d8ab63f$export$202e93cb7fe09fc8, (v) => $af1ad4f19d8ab63f$export$202e93cb7fe09fc8 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "coin", () => $af1ad4f19d8ab63f$export$3c9d1e4131afeeb8, (v) => $af1ad4f19d8ab63f$export$3c9d1e4131afeeb8 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "coin--animated", () => $af1ad4f19d8ab63f$export$9fb4f45ed9e347e0, (v) => $af1ad4f19d8ab63f$export$9fb4f45ed9e347e0 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "coin-x-axis", () => $af1ad4f19d8ab63f$export$a729607373715201, (v) => $af1ad4f19d8ab63f$export$a729607373715201 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "coin-y-axis-and-flip", () => $af1ad4f19d8ab63f$export$4079574a46612420, (v) => $af1ad4f19d8ab63f$export$4079574a46612420 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "icon", () => $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27, (v) => $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "landing", () => $af1ad4f19d8ab63f$export$a9ae88069d8ac14e, (v) => $af1ad4f19d8ab63f$export$a9ae88069d8ac14e = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "landing-button", () => $af1ad4f19d8ab63f$export$f282e5191b337f50, (v) => $af1ad4f19d8ab63f$export$f282e5191b337f50 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "made-by", () => $af1ad4f19d8ab63f$export$101a475b15c86041, (v) => $af1ad4f19d8ab63f$export$101a475b15c86041 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "mobile-second-text", () => $af1ad4f19d8ab63f$export$9b4a162e4d9f672, (v) => $af1ad4f19d8ab63f$export$9b4a162e4d9f672 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "name", () => $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6, (v) => $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "open-app-button", () => $af1ad4f19d8ab63f$export$ae608c4430a9e9fc, (v) => $af1ad4f19d8ab63f$export$ae608c4430a9e9fc = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "scroll", () => $af1ad4f19d8ab63f$export$209876d7b1ac8f3, (v) => $af1ad4f19d8ab63f$export$209876d7b1ac8f3 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "scrollIcon", () => $af1ad4f19d8ab63f$export$efb197c1da01f76f, (v) => $af1ad4f19d8ab63f$export$efb197c1da01f76f = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "scrollText", () => $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5, (v) => $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "scrollWheel", () => $af1ad4f19d8ab63f$export$594daf8f7b4e7e32, (v) => $af1ad4f19d8ab63f$export$594daf8f7b4e7e32 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "search-modal", () => $af1ad4f19d8ab63f$export$2fd0fffb18ebb0c0, (v) => $af1ad4f19d8ab63f$export$2fd0fffb18ebb0c0 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "second-text-container", () => $af1ad4f19d8ab63f$export$891c99f874761757, (v) => $af1ad4f19d8ab63f$export$891c99f874761757 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "slides", () => $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9, (v) => $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "smaller", () => $af1ad4f19d8ab63f$export$3f732695c1493aec, (v) => $af1ad4f19d8ab63f$export$3f732695c1493aec = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "subtitle", () => $af1ad4f19d8ab63f$export$c96745152eb2740f, (v) => $af1ad4f19d8ab63f$export$c96745152eb2740f = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "text", () => $af1ad4f19d8ab63f$export$6f093cfa640b7166, (v) => $af1ad4f19d8ab63f$export$6f093cfa640b7166 = v);
+var $af1ad4f19d8ab63f$export$202e93cb7fe09fc8;
+var $af1ad4f19d8ab63f$export$3c9d1e4131afeeb8;
+var $af1ad4f19d8ab63f$export$9fb4f45ed9e347e0;
+var $af1ad4f19d8ab63f$export$a729607373715201;
+var $af1ad4f19d8ab63f$export$4079574a46612420;
+var $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27;
+var $af1ad4f19d8ab63f$export$a9ae88069d8ac14e;
+var $af1ad4f19d8ab63f$export$f282e5191b337f50;
+var $af1ad4f19d8ab63f$export$101a475b15c86041;
+var $af1ad4f19d8ab63f$export$9b4a162e4d9f672;
+var $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6;
+var $af1ad4f19d8ab63f$export$ae608c4430a9e9fc;
+var $af1ad4f19d8ab63f$export$209876d7b1ac8f3;
+var $af1ad4f19d8ab63f$export$efb197c1da01f76f;
+var $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5;
+var $af1ad4f19d8ab63f$export$594daf8f7b4e7e32;
+var $af1ad4f19d8ab63f$export$2fd0fffb18ebb0c0;
+var $af1ad4f19d8ab63f$export$891c99f874761757;
+var $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9;
+var $af1ad4f19d8ab63f$export$3f732695c1493aec;
+var $af1ad4f19d8ab63f$export$c96745152eb2740f;
+var $af1ad4f19d8ab63f$export$6f093cfa640b7166;
+$af1ad4f19d8ab63f$export$202e93cb7fe09fc8 = `aq6KZW_additional-text`;
+$af1ad4f19d8ab63f$export$3c9d1e4131afeeb8 = `aq6KZW_coin`;
+$af1ad4f19d8ab63f$export$9fb4f45ed9e347e0 = `aq6KZW_coin--animated`;
+$af1ad4f19d8ab63f$export$a729607373715201 = `aq6KZW_coin-x-axis`;
+$af1ad4f19d8ab63f$export$a729607373715201;
+$af1ad4f19d8ab63f$export$4079574a46612420 = `aq6KZW_coin-y-axis-and-flip`;
+$af1ad4f19d8ab63f$export$4079574a46612420;
+$af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27 = `aq6KZW_icon`;
+$af1ad4f19d8ab63f$export$a9ae88069d8ac14e = `aq6KZW_landing`;
+$af1ad4f19d8ab63f$export$f282e5191b337f50 = `aq6KZW_landing-button`;
+$af1ad4f19d8ab63f$export$101a475b15c86041 = `aq6KZW_made-by`;
+$af1ad4f19d8ab63f$export$9b4a162e4d9f672 = `aq6KZW_mobile-second-text`;
+$af1ad4f19d8ab63f$export$a8ff84c12d48cfa6 = `aq6KZW_name`;
+$af1ad4f19d8ab63f$export$ae608c4430a9e9fc = `aq6KZW_open-app-button`;
+$af1ad4f19d8ab63f$export$209876d7b1ac8f3 = `aq6KZW_scroll`;
+$af1ad4f19d8ab63f$export$efb197c1da01f76f = `aq6KZW_scrollIcon`;
+$af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5 = `aq6KZW_scrollText`;
+$af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5;
+$af1ad4f19d8ab63f$export$594daf8f7b4e7e32 = `aq6KZW_scrollWheel`;
+$af1ad4f19d8ab63f$export$594daf8f7b4e7e32;
+$af1ad4f19d8ab63f$export$2fd0fffb18ebb0c0 = `aq6KZW_search-modal`;
+$af1ad4f19d8ab63f$export$891c99f874761757 = `aq6KZW_second-text-container`;
+$af1ad4f19d8ab63f$export$59de61ccd1a8a2d9 = `aq6KZW_slides`;
+$af1ad4f19d8ab63f$export$3f732695c1493aec = `aq6KZW_smaller`;
+$af1ad4f19d8ab63f$export$c96745152eb2740f = `aq6KZW_subtitle`;
+$af1ad4f19d8ab63f$export$6f093cfa640b7166 = `aq6KZW_text`;
+
+
+
+const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).text,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).name,
+                children: "Public voting"
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).subtitle,
+                children: "on social or political issues."
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["additional-text"],
+                children: "This is the place to declare what you stand for or what you believe in."
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                children: "Your votes tied to your twitter profile, everyone can see them."
+            })
+        ]
+    });
+const $4f095db3a6856690$var$SecondText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["second-text-container"],
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        children: "Find your similarities and your differences."
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
+                        children: "After you cast your votes you can compare your answers with anyone else on the site."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["mobile-second-text"],
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        children: "Find your similarities"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        children: "and your differences."
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
+                        children: "After you cast your votes you can compare your answers with anyone else on the site."
+                    })
+                ]
+            })
+        ]
+    });
+const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            children: [
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    children: "Get crypto for every question asked, every answer to that question and every question you answer"
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
+                    children: "You will get reward relative to your follower count on X"
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                    children: "(you have 1000 followers, you'll get 1000 for every question and answer)"
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                        children: "It's a custom token. Its value is derived from the fact I will only sell ads on this app using this token"
+                    })
+                })
+            ]
+        })
+    });
+const $4f095db3a6856690$var$textByPageNumber = {
+    0: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$FirstText, {}),
+    1: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$SecondText, {}),
+    2: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$ThirdText, {})
+};
+const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ jwt: jwt }, ref)=>{
+    (0, $c5L0i$react.useEffect)(()=>{
+        document.querySelector("body > div > div").style["max-height"] = "unset";
+        document.querySelector("body > div > div").style["min-height"] = "unset";
+        return ()=>{
+            document.querySelector("body > div > div").style["max-height"] = "100svh";
+            document.querySelector("body > div > div").style["min-height"] = "100svh";
+        };
+    }, []);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
+                encodeSpecialCharacters: false,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("title", {
+                        children: "poll.cc"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
+                        name: "description",
+                        content: "Public voting on social or political issues."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
+                children: [
+                    0,
+                    1,
+                    2
+                ].map((pageNumber)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        ref: ref,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
+                        children: [
+                            $4f095db3a6856690$var$textByPageNumber[pageNumber],
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
+                                replace: true,
+                                to: jwt ? "/" : "/app",
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["open-app-button"],
+                                style: pageNumber > 0 ? {
+                                    marginTop: 60
+                                } : {},
+                                children: [
+                                    "Open App ",
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
+                                        sx: {
+                                            marginLeft: "15px",
+                                            fontSize: 20
+                                        }
+                                    })
+                                ]
+                            }),
+                            pageNumber === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).scrollIcon,
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("i", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).scroll
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
+                                        children: [
+                                            "made by ",
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                                href: "mailto:piliponful@gmail.com",
+                                                children: "piliponful"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }, pageNumber))
+            })
+        ]
+    });
+});
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
         GroupsContainer: $cf7fa14b6ace065a$export$2e2bcd8739ae039,
         MainScreen: $1476c8c916741db2$export$2e2bcd8739ae039,
         Sidebar: $caa6e61676dd60dd$export$2e2bcd8739ae039,
-        QuestionCardsRow: $f6827b11255bd55d$export$2e2bcd8739ae039
+        QuestionCardsRow: $f6827b11255bd55d$export$2e2bcd8739ae039,
+        Landing: $4f095db3a6856690$export$12449a31c6671d53
     },
     leafs: {
         Circles: $16c888d17a78a645$export$2e2bcd8739ae039,
