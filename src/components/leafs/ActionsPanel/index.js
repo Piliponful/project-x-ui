@@ -34,6 +34,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
 
         const userInfo = await userInfoResponse.json() // Parse the JSON response
         await createUser(userInfo)
+        window.gtag_report_conversion()
       } catch (error) {
         console.error('Error fetching user info:', error)
       }
@@ -107,7 +108,6 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
         className={styles.container}
         style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
         onClick={() => {
-          window.gtag_report_conversion()
           login()
         }}
       >

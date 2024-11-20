@@ -151,6 +151,7 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     const userInfo = credentialResponse.credential
     const decoded = jwtDecode(userInfo)
     await createUser({ ...answer, ...decoded })
+    window.gtag_report_conversion()
     setIsLoginModalOpen(false)
   }
 

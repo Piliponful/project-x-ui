@@ -1178,6 +1178,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
             ...answer,
             ...decoded
         });
+        window.gtag_report_conversion();
         setIsLoginModalOpen(false);
     };
     const handleLoginFailure = (error)=>{
@@ -1439,7 +1440,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const redirectToLogin = (answer)=>{
         // eslint-disable-next-line no-undef
-        window.gtag_report_conversion();
         setIsLoginModalOpen(true);
         setAnswer({
             answer: answer,
@@ -1742,6 +1742,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
                 const userInfo = await userInfoResponse.json(); // Parse the JSON response
                 await createUser(userInfo);
+                window.gtag_report_conversion();
             } catch (error) {
                 console.error("Error fetching user info:", error);
             }
@@ -1825,7 +1826,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             fontSize: 16
         },
         onClick: ()=>{
-            window.gtag_report_conversion();
             login();
         },
         children: content
@@ -2889,7 +2889,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     };
     const redirectToLogin = (answer)=>{
         setIsLoginModalOpen(true);
-        window.gtag_report_conversion();
         setAnswer({
             answer: answer,
             parentMessageId: _id,
