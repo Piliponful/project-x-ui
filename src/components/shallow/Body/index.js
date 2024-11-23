@@ -5,6 +5,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 
 import { ContainerWithoutSwipes } from './components/Container'
+import { KYCComponent } from '../../leafs/ActionsPanel'
 
 import styles from './style.module.styl'
 
@@ -52,11 +53,6 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
   const [showSearch, setShowSearch] = useState(false)
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
   const [answer, setAnswer] = useState(null)
-  const modalContent = useRef(null)
-  const modalContentIframe = useRef(null)
-  const init = useRef(false)
-  const init2 = useRef(false)
-  const [modalDoneOpening, setModalDoneOpening] = useState(false)
 
   useEffect(() => {
     const handler = () => {
@@ -83,50 +79,50 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
     }
   }, [skipScreen])
 
-  useEffect(() => {
-    // console.log('modal-content in useEffect', init.current)
-    // console.log('modal done opening: ', modalDoneOpening)
+  // useEffect(() => {
+  //   // console.log('modal-content in useEffect', init.current)
+  //   // console.log('modal done opening: ', modalDoneOpening)
 
-    if (init.current || !modalDoneOpening) {
-      return
-    }
-    // console.log('after modal-content in useEffect', init.current)
-    // console.log('modal button: ', modalContent.current)
+  //   if (init.current || !modalDoneOpening) {
+  //     return
+  //   }
+  //   // console.log('after modal-content in useEffect', init.current)
+  //   // console.log('modal button: ', modalContent.current)
 
-    const onClick = () => {
-      window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
-    }
+  //   const onClick = () => {
+  //     window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
+  //   }
 
-    // Define the observer to watch for style changes on the iframe itself
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        // console.log('attributeName: ', mutation.attributeName)
-        if (mutation.attributeName === 'style') {
-          const styles = window.getComputedStyle(modalContentIframe.current)
-          // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
-          const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
-          if (iframeHeight > 0) {
-            if (init2.current) {
-              return
-            }
+  //   // Define the observer to watch for style changes on the iframe itself
+  //   const observer = new MutationObserver((mutations) => {
+  //     mutations.forEach((mutation) => {
+  //       // console.log('attributeName: ', mutation.attributeName)
+  //       if (mutation.attributeName === 'style') {
+  //         const styles = window.getComputedStyle(modalContentIframe.current)
+  //         // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
+  //         const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
+  //         if (iframeHeight > 0) {
+  //           if (init2.current) {
+  //             return
+  //           }
 
-            console.log('height of iframe is bigger then 0')
+  //           console.log('height of iframe is bigger then 0')
 
-            modalContent.current.removeEventListener('onClick', onClick)
-            modalContentIframe.current.addEventListener('click', () => {
-              window.mixpanel.track('Sign Up(google logged in) Button Clicked')
-            })
-            init2.current = true
-          }
-        }
-      })
-    })
+  //           modalContent.current.removeEventListener('onClick', onClick)
+  //           modalContentIframe.current.addEventListener('click', () => {
+  //             window.mixpanel.track('Sign Up(google logged in) Button Clicked')
+  //           })
+  //           init2.current = true
+  //         }
+  //       }
+  //     })
+  //   })
 
-    // Configure the observer to watch for attribute changes (specifically style) on the iframe
-    observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
-    modalContent.current.addEventListener('click', onClick)
-    init.current = true
-  }, [modalDoneOpening])
+  //   // Configure the observer to watch for attribute changes (specifically style) on the iframe
+  //   observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
+  //   modalContent.current.addEventListener('click', onClick)
+  //   init.current = true
+  // }, [modalDoneOpening])
 
   // useEffect(() => {
   //   if (showLoginModal) {
@@ -232,19 +228,20 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
               onRequestClose={() => setIsLoginModalOpen(false)}
               style={customStyles}
               shouldCloseOnOverlayClick={false}
-              onAfterOpen={() => {
-                modalContent.current = document.getElementById('model-content')
-                console.log('element: ', modalContent)
-                modalContentIframe.current = document.getElementById('model-content').querySelector('iframe')
-                console.log('iframe: ', modalContentIframe)
-                setModalDoneOpening(true)
-              }}
+              // onAfterOpen={() => {
+              //   modalContent.current = document.getElementById('model-content')
+              //   console.log('element: ', modalContent)
+              //   modalContentIframe.current = document.getElementById('model-content').querySelector('iframe')
+              //   console.log('iframe: ', modalContentIframe)
+              //   setModalDoneOpening(true)
+              // }}
             >
               <div className={styles.close}><h2>Login or Sign up</h2></div>
               <div style={{ marginBottom: 20 }}>
                 <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
                 <p>Otherwise votes wouldn't mean a thing.</p>
               </div>
+              <KYCComponent />
               {/* <p
                 style={{
                   fontSize: 12,

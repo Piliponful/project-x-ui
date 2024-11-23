@@ -1,15 +1,63 @@
-import React, { useState, useContext, forwardRef } from 'react'
+import React, { useState, useContext, forwardRef, useEffect } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import XIcon from '@mui/icons-material/X'
 import GoogleIcon from '@mui/icons-material/Google'
 import { useGoogleLogin } from '@react-oauth/google'
+import SumsubWebSdk from '@sumsub/websdk-react'
+import axios from 'axios'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
+
+export const KYCComponent = ({ userId }) => {
+  const [accessToken, setAccessToken] = useState('')
+
+  useEffect(() => {
+    const fetchAccessToken = async () => {
+      try {
+        const response = await axios.post('/api/kyc/access-token', {
+          userId,
+          levelName: 'basic-kyc-level' // Replace with your level name
+        })
+        setAccessToken(response.data.token)
+      } catch (error) {
+        console.error('Error fetching access token:', error.response?.data || error.message)
+      }
+    }
+
+    fetchAccessToken()
+  }, [userId])
+
+  const handleMessage = (type, payload) => {
+    console.log('Sumsub message:', type, payload)
+    if (type === 'idCheck.applicantStatus' && payload.reviewStatus === 'completed') {
+      // Handle post-verification logic here
+    }
+  }
+
+  const handleError = (error) => {
+    console.error('Sumsub error:', error)
+  }
+
+  return (
+    <div>
+      {accessToken && (
+        <SumsubWebSdk
+          accessToken={accessToken}
+          expirationHandler={() => axios.post('/api/kyc/access-token', { userId, levelName: 'basic-kyc-level' }).then(res => res.data.token)}
+          config={{ lang: 'en' }}
+          options={{ addViewportTag: false, adaptIframeHeight: true }}
+          onMessage={handleMessage}
+          onError={handleError}
+        />
+      )}
+    </div>
+  )
+}
 
 export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)

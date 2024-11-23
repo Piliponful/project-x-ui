@@ -17,6 +17,8 @@ var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$muiiconsmaterialGoogle = require("@mui/icons-material/Google");
+var $c5L0i$sumsubwebsdkreact = require("@sumsub/websdk-react");
+var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
@@ -1022,6 +1024,202 @@ const $1e3dbd7e69fec1c4$export$97295e60e7f371e1 = ({ children: children })=>/*#_
     });
 
 
+
+
+
+
+
+
+
+
+
+
+
+var $13058157b3244d01$exports = {};
+
+$parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
+$parcel$export($13058157b3244d01$exports, "divider", () => $13058157b3244d01$export$e8c9778bf415dd08, (v) => $13058157b3244d01$export$e8c9778bf415dd08 = v);
+$parcel$export($13058157b3244d01$exports, "dropdown", () => $13058157b3244d01$export$81207e5cc4186890, (v) => $13058157b3244d01$export$81207e5cc4186890 = v);
+$parcel$export($13058157b3244d01$exports, "icon", () => $13058157b3244d01$export$1ca1ec8b29a4ce27, (v) => $13058157b3244d01$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($13058157b3244d01$exports, "twitterSignIn", () => $13058157b3244d01$export$6c489d6abe11ec5c, (v) => $13058157b3244d01$export$6c489d6abe11ec5c = v);
+$parcel$export($13058157b3244d01$exports, "username", () => $13058157b3244d01$export$5e1be761f603d585, (v) => $13058157b3244d01$export$5e1be761f603d585 = v);
+var $13058157b3244d01$export$34e0f9847d4c02dd;
+var $13058157b3244d01$export$e8c9778bf415dd08;
+var $13058157b3244d01$export$81207e5cc4186890;
+var $13058157b3244d01$export$1ca1ec8b29a4ce27;
+var $13058157b3244d01$export$6c489d6abe11ec5c;
+var $13058157b3244d01$export$5e1be761f603d585;
+$13058157b3244d01$export$34e0f9847d4c02dd = `rzmFQq_container`;
+$13058157b3244d01$export$e8c9778bf415dd08 = `rzmFQq_divider`;
+$13058157b3244d01$export$81207e5cc4186890 = `rzmFQq_dropdown`;
+$13058157b3244d01$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
+$13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
+$13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
+
+
+const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId })=>{
+    const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
+    (0, $c5L0i$react.useEffect)(()=>{
+        const fetchAccessToken = async ()=>{
+            try {
+                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
+                    userId: userId,
+                    levelName: "basic-kyc-level" // Replace with your level name
+                });
+                setAccessToken(response.data.token);
+            } catch (error) {
+                console.error("Error fetching access token:", error.response?.data || error.message);
+            }
+        };
+        fetchAccessToken();
+    }, [
+        userId
+    ]);
+    const handleMessage = (type, payload)=>{
+        console.log("Sumsub message:", type, payload);
+        type === "idCheck.applicantStatus" && payload.reviewStatus;
+    };
+    const handleError = (error)=>{
+        console.error("Sumsub error:", error);
+    };
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        children: accessToken && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$sumsubwebsdkreact))), {
+            accessToken: accessToken,
+            expirationHandler: ()=>(0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
+                    userId: userId,
+                    levelName: "basic-kyc-level"
+                }).then((res)=>res.data.token),
+            config: {
+                lang: "en"
+            },
+            options: {
+                addViewportTag: false,
+                adaptIframeHeight: true
+            },
+            onMessage: handleMessage,
+            onError: handleError
+        })
+    });
+};
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
+    const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
+    const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
+        onTriggered: ()=>setShowDropdown(false)
+    });
+    const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
+        onSuccess: async (tokenResponse)=>{
+            const accessToken = tokenResponse.access_token;
+            try {
+                const userInfoResponse = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`
+                    }
+                });
+                if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
+                const userInfo = await userInfoResponse.json(); // Parse the JSON response
+                await createUser(userInfo);
+                window.gtag_report_conversion();
+            } catch (error) {
+                console.error("Error fetching user info:", error);
+            }
+        },
+        onError: (error)=>{
+            window.mixpanel.track("Login Failed", {
+                error: error
+            });
+        }
+    });
+    const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: [
+            username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                children: [
+                    "Settings (",
+                    username,
+                    ")"
+                ]
+            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                        children: "Sign in with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialGoogle))), {})
+                ]
+            }),
+            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                style: {
+                    display: showDropdown ? "flex" : "none"
+                },
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).dropdown,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: logout,
+                        children: "Log out"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>{
+                            window.mixpanel.track("Rewards");
+                            setIsModalOpen(true);
+                        },
+                        children: "Rewards"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: showMyHistory,
+                        children: "My Questions/Answers"
+                    }),
+                    Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).divider,
+                        children: "Test Users"
+                    }),
+                    testUsers.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            onClick: ()=>changeUser(i.fullName),
+                            children: i.fullName
+                        }, i.fullName)),
+                    Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>changeUser(),
+                        children: "me"
+                    })
+                ]
+            }),
+            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
+                sx: {
+                    color: "#2b2b2b"
+                }
+            })
+        ]
+    });
+    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+        ref: (node)=>{
+            if (ref2) ref2(node);
+        },
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+        style: {
+            justifyContent: "center",
+            border: "none",
+            fontSize: 16
+        },
+        onClick: ()=>{
+            login();
+        },
+        children: content
+    });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        ref: (node)=>{
+            ref.current = node;
+            if (ref2) ref2(node);
+        },
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+        onClick: ()=>setShowDropdown(!showDropdown),
+        children: content
+    });
+});
+
+
 var $941289f31472d1d3$exports = {};
 
 $parcel$export($941289f31472d1d3$exports, "address", () => $941289f31472d1d3$export$f7d3c097ceca6c15, (v) => $941289f31472d1d3$export$f7d3c097ceca6c15 = v);
@@ -1093,11 +1291,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
-    const modalContent = (0, $c5L0i$react.useRef)(null);
-    const modalContentIframe = (0, $c5L0i$react.useRef)(null);
-    const init = (0, $c5L0i$react.useRef)(false);
-    const init2 = (0, $c5L0i$react.useRef)(false);
-    const [modalDoneOpening, setModalDoneOpening] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1113,48 +1306,44 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     }, [
         skipScreen
     ]);
-    (0, $c5L0i$react.useEffect)(()=>{
-        // console.log('modal-content in useEffect', init.current)
-        // console.log('modal done opening: ', modalDoneOpening)
-        if (init.current || !modalDoneOpening) return;
-        // console.log('after modal-content in useEffect', init.current)
-        // console.log('modal button: ', modalContent.current)
-        const onClick = ()=>{
-            window.mixpanel.track("Sign Up(google not logged in) Button Clicked");
-        };
-        // Define the observer to watch for style changes on the iframe itself
-        const observer = new MutationObserver((mutations)=>{
-            mutations.forEach((mutation)=>{
-                // console.log('attributeName: ', mutation.attributeName)
-                if (mutation.attributeName === "style") {
-                    const styles = window.getComputedStyle(modalContentIframe.current);
-                    // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
-                    const iframeHeight = parseInt(styles.getPropertyValue("height").replace("px", ""));
-                    if (iframeHeight > 0) {
-                        if (init2.current) return;
-                        console.log("height of iframe is bigger then 0");
-                        modalContent.current.removeEventListener("onClick", onClick);
-                        modalContentIframe.current.addEventListener("click", ()=>{
-                            window.mixpanel.track("Sign Up(google logged in) Button Clicked");
-                        });
-                        init2.current = true;
-                    }
-                }
-            });
-        });
-        // Configure the observer to watch for attribute changes (specifically style) on the iframe
-        observer.observe(modalContentIframe.current, {
-            attributes: true,
-            attributeFilter: [
-                "bis_size",
-                "style"
-            ]
-        });
-        modalContent.current.addEventListener("click", onClick);
-        init.current = true;
-    }, [
-        modalDoneOpening
-    ]);
+    // useEffect(() => {
+    //   // console.log('modal-content in useEffect', init.current)
+    //   // console.log('modal done opening: ', modalDoneOpening)
+    //   if (init.current || !modalDoneOpening) {
+    //     return
+    //   }
+    //   // console.log('after modal-content in useEffect', init.current)
+    //   // console.log('modal button: ', modalContent.current)
+    //   const onClick = () => {
+    //     window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
+    //   }
+    //   // Define the observer to watch for style changes on the iframe itself
+    //   const observer = new MutationObserver((mutations) => {
+    //     mutations.forEach((mutation) => {
+    //       // console.log('attributeName: ', mutation.attributeName)
+    //       if (mutation.attributeName === 'style') {
+    //         const styles = window.getComputedStyle(modalContentIframe.current)
+    //         // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
+    //         const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
+    //         if (iframeHeight > 0) {
+    //           if (init2.current) {
+    //             return
+    //           }
+    //           console.log('height of iframe is bigger then 0')
+    //           modalContent.current.removeEventListener('onClick', onClick)
+    //           modalContentIframe.current.addEventListener('click', () => {
+    //             window.mixpanel.track('Sign Up(google logged in) Button Clicked')
+    //           })
+    //           init2.current = true
+    //         }
+    //       }
+    //     })
+    //   })
+    //   // Configure the observer to watch for attribute changes (specifically style) on the iframe
+    //   observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
+    //   modalContent.current.addEventListener('click', onClick)
+    //   init.current = true
+    // }, [modalDoneOpening])
     // useEffect(() => {
     //   if (showLoginModal) {
     //     const modalContent = document.getElementById('model-content')
@@ -1338,13 +1527,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         onRequestClose: ()=>setIsLoginModalOpen(false),
                         style: $0c70feff32ca6a2b$var$customStyles,
                         shouldCloseOnOverlayClick: false,
-                        onAfterOpen: ()=>{
-                            modalContent.current = document.getElementById("model-content");
-                            console.log("element: ", modalContent);
-                            modalContentIframe.current = document.getElementById("model-content").querySelector("iframe");
-                            console.log("iframe: ", modalContentIframe);
-                            setModalDoneOpening(true);
-                        },
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
@@ -1368,6 +1550,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     })
                                 ]
                             }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {}),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
                                 id: "model-content",
@@ -1691,155 +1874,6 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-var $13058157b3244d01$exports = {};
-
-$parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
-$parcel$export($13058157b3244d01$exports, "divider", () => $13058157b3244d01$export$e8c9778bf415dd08, (v) => $13058157b3244d01$export$e8c9778bf415dd08 = v);
-$parcel$export($13058157b3244d01$exports, "dropdown", () => $13058157b3244d01$export$81207e5cc4186890, (v) => $13058157b3244d01$export$81207e5cc4186890 = v);
-$parcel$export($13058157b3244d01$exports, "icon", () => $13058157b3244d01$export$1ca1ec8b29a4ce27, (v) => $13058157b3244d01$export$1ca1ec8b29a4ce27 = v);
-$parcel$export($13058157b3244d01$exports, "twitterSignIn", () => $13058157b3244d01$export$6c489d6abe11ec5c, (v) => $13058157b3244d01$export$6c489d6abe11ec5c = v);
-$parcel$export($13058157b3244d01$exports, "username", () => $13058157b3244d01$export$5e1be761f603d585, (v) => $13058157b3244d01$export$5e1be761f603d585 = v);
-var $13058157b3244d01$export$34e0f9847d4c02dd;
-var $13058157b3244d01$export$e8c9778bf415dd08;
-var $13058157b3244d01$export$81207e5cc4186890;
-var $13058157b3244d01$export$1ca1ec8b29a4ce27;
-var $13058157b3244d01$export$6c489d6abe11ec5c;
-var $13058157b3244d01$export$5e1be761f603d585;
-$13058157b3244d01$export$34e0f9847d4c02dd = `rzmFQq_container`;
-$13058157b3244d01$export$e8c9778bf415dd08 = `rzmFQq_divider`;
-$13058157b3244d01$export$81207e5cc4186890 = `rzmFQq_dropdown`;
-$13058157b3244d01$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
-$13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
-$13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
-
-
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
-    const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
-    const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
-        onTriggered: ()=>setShowDropdown(false)
-    });
-    const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
-        onSuccess: async (tokenResponse)=>{
-            const accessToken = tokenResponse.access_token;
-            try {
-                const userInfoResponse = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
-                    method: "GET",
-                    headers: {
-                        Authorization: `Bearer ${accessToken}`
-                    }
-                });
-                if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
-                const userInfo = await userInfoResponse.json(); // Parse the JSON response
-                await createUser(userInfo);
-                window.gtag_report_conversion();
-            } catch (error) {
-                console.error("Error fetching user info:", error);
-            }
-        },
-        onError: (error)=>{
-            window.mixpanel.track("Login Failed", {
-                error: error
-            });
-        }
-    });
-    const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-        children: [
-            username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                children: [
-                    "Settings (",
-                    username,
-                    ")"
-                ]
-            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                        children: "Sign in with"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialGoogle))), {})
-                ]
-            }),
-            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                style: {
-                    display: showDropdown ? "flex" : "none"
-                },
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).dropdown,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: logout,
-                        children: "Log out"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: ()=>{
-                            window.mixpanel.track("Rewards");
-                            setIsModalOpen(true);
-                        },
-                        children: "Rewards"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: showMyHistory,
-                        children: "My Questions/Answers"
-                    }),
-                    Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).divider,
-                        children: "Test Users"
-                    }),
-                    testUsers.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                            onClick: ()=>changeUser(i.fullName),
-                            children: i.fullName
-                        }, i.fullName)),
-                    Boolean(testUsers.length) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: ()=>changeUser(),
-                        children: "me"
-                    })
-                ]
-            }),
-            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
-                sx: {
-                    color: "#2b2b2b"
-                }
-            })
-        ]
-    });
-    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-        ref: (node)=>{
-            if (ref2) ref2(node);
-        },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-        style: {
-            justifyContent: "center",
-            border: "none",
-            fontSize: 16
-        },
-        onClick: ()=>{
-            login();
-        },
-        children: content
-    });
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        ref: (node)=>{
-            ref.current = node;
-            if (ref2) ref2(node);
-        },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-        onClick: ()=>setShowDropdown(!showDropdown),
-        children: content
-    });
-});
 
 
 
@@ -3230,6 +3264,10 @@ const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
+var $6897806a32f8d108$exports = {};
+$6897806a32f8d108$exports = new URL("polyscan.9c875efa.svg", "file:" + __filename).toString();
+
+
 var $af1ad4f19d8ab63f$exports = {};
 
 $parcel$export($af1ad4f19d8ab63f$exports, "additional-text", () => $af1ad4f19d8ab63f$export$202e93cb7fe09fc8, (v) => $af1ad4f19d8ab63f$export$202e93cb7fe09fc8 = v);
@@ -3321,7 +3359,7 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
                 children: "This is the place to declare what you stand for or what you believe in."
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                children: "Your votes tied to your twitter profile, everyone can see them."
+                children: "Your votes tied to your \uD835\uDE9D\u0336\uD835\uDEA0\u0336\uD835\uDE92\u0336\uD835\uDE9D\u0336\uD835\uDE9D\u0336\uD835\uDE8E\u0336\uD835\uDE9B\u0336 gmail profile, everyone can see them."
             })
         ]
     });
@@ -3364,15 +3402,39 @@ const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
                 }),
                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
-                    children: "You will get reward relative to your follower count on X"
+                    children: "You will get reward relative to your follower count on X(if you sign in with it)"
                 }),
                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
                     children: "(you have 1000 followers, you'll get 1000 for every question and answer)"
                 }),
                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                     children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                        children: "It's a custom token. Its value is derived from the fact I will only sell ads on this app using this token"
+                        children: "It's a custom token. Its value is derived from the fact I will only sell ads(and paid polls) on this app using this token"
                     })
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    style: {
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                            src: (0, (/*@__PURE__*/$parcel$interopDefault($6897806a32f8d108$exports))),
+                            style: {
+                                height: 24,
+                                paddingRight: 5
+                            }
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                            style: {
+                                fontSize: 14,
+                                letterSpacing: "0px"
+                            },
+                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                            children: "token on polyscan"
+                        })
+                    ]
                 })
             ]
         })

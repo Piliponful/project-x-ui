@@ -2,6 +2,8 @@ import React, { forwardRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
+import PolyscanSVG from './polyscan.svg'
+
 import styles from './styles.module.styl'
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
@@ -11,7 +13,7 @@ const FirstText = () => (
     <h1 className={styles.name}>Public voting</h1>
     <h2 className={styles.subtitle}>on social or political issues.</h2>
     <h2 className={styles['additional-text']}>This is the place to declare what you stand for or what you believe in.</h2>
-    <small>Your votes tied to your twitter profile, everyone can see them.</small>
+    <small>Your votes tied to your 𝚝̶𝚠̶𝚒̶𝚝̶𝚝̶𝚎̶𝚛̶ gmail profile, everyone can see them.</small>
   </div>
 )
 
@@ -33,9 +35,13 @@ const ThirdText = () => (
   <>
     <div>
       <p>Get crypto for every question asked, every answer to that question and every question you answer</p>
-      <p className={styles.smaller}>You will get reward relative to your follower count on X</p>
+      <p className={styles.smaller}>You will get reward relative to your follower count on X(if you sign in with it)</p>
       <small>(you have 1000 followers, you'll get 1000 for every question and answer)</small>
-      <div><small>It's a custom token. Its value is derived from the fact I will only sell ads on this app using this token</small></div>
+      <div><small>It's a custom token. Its value is derived from the fact I will only sell ads(and paid polls) on this app using this token</small></div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <img src={PolyscanSVG} style={{ height: 24, paddingRight: 5 }} />
+        <a style={{ fontSize: 14, letterSpacing: '0px' }} href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805'>token on polyscan</a>
+      </div>
     </div>
   </>
 )

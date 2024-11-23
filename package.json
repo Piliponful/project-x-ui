@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
@@ -23,6 +23,8 @@
     "@mui/material": "^5.15.15",
     "@parcel/transformer-stylus": "^2.0.1",
     "@react-oauth/google": "^0.12.1",
+    "@sumsub/websdk-react": "^2.3.10",
+    "axios": "^1.7.7",
     "classnames": "^2.3.1",
     "date-fns": "^3.6.0",
     "eslint": "^7.32.0",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "buffer": "^6.0.3",
     "process": "^0.11.10"
   }
 }
