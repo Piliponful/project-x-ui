@@ -1283,7 +1283,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
 // }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);

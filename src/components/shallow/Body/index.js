@@ -45,7 +45,7 @@ const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleuserc
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser }) => {
+export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser, showKYC }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
