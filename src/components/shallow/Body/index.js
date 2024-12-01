@@ -18,7 +18,8 @@ export const MainScreenSwipeContext = React.createContext({
   setIsModalOpen: null,
   setShowSearch: null,
   showSearch: false,
-  setAnswer: () => {}
+  setAnswer: () => {},
+  setShowKYCModal: () => {}
 })
 
 const customStyles = {
@@ -34,12 +35,12 @@ const customStyles = {
   }
 }
 
-window.gtag_report_conversion = () => {}
-window.mixpanel = {
-  track: (...rest) => {
-    console.log(rest)
-  }
-}
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: (...rest) => {
+//     console.log(rest)
+//   }
+// }
 
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
@@ -52,6 +53,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(isWalletModalOpenInitial)
   const [showSearch, setShowSearch] = useState(false)
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
+  const [showKYCModal, setShowKYCModal] = useState(false)
   const [answer, setAnswer] = useState(null)
 
   useEffect(() => {
@@ -78,58 +80,6 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
       toggleScreen('questions')
     }
   }, [skipScreen])
-
-  // useEffect(() => {
-  //   // console.log('modal-content in useEffect', init.current)
-  //   // console.log('modal done opening: ', modalDoneOpening)
-
-  //   if (init.current || !modalDoneOpening) {
-  //     return
-  //   }
-  //   // console.log('after modal-content in useEffect', init.current)
-  //   // console.log('modal button: ', modalContent.current)
-
-  //   const onClick = () => {
-  //     window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
-  //   }
-
-  //   // Define the observer to watch for style changes on the iframe itself
-  //   const observer = new MutationObserver((mutations) => {
-  //     mutations.forEach((mutation) => {
-  //       // console.log('attributeName: ', mutation.attributeName)
-  //       if (mutation.attributeName === 'style') {
-  //         const styles = window.getComputedStyle(modalContentIframe.current)
-  //         // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
-  //         const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
-  //         if (iframeHeight > 0) {
-  //           if (init2.current) {
-  //             return
-  //           }
-
-  //           console.log('height of iframe is bigger then 0')
-
-  //           modalContent.current.removeEventListener('onClick', onClick)
-  //           modalContentIframe.current.addEventListener('click', () => {
-  //             window.mixpanel.track('Sign Up(google logged in) Button Clicked')
-  //           })
-  //           init2.current = true
-  //         }
-  //       }
-  //     })
-  //   })
-
-  //   // Configure the observer to watch for attribute changes (specifically style) on the iframe
-  //   observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
-  //   modalContent.current.addEventListener('click', onClick)
-  //   init.current = true
-  // }, [modalDoneOpening])
-
-  // useEffect(() => {
-  //   if (showLoginModal) {
-  //     const modalContent = document.getElementById('model-content')
-  //     console.log('element: ', modalContent)
-  //   }
-  // }, [showLoginModal])
 
   const connectToWallet = () => {
     window.mixpanel.track('Rewards Modal -> Connect Wallet Click')
@@ -177,7 +127,8 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             setIsModalOpen: setIsModalOpen,
             setIsWalletModalOpen,
             setIsLoginModalOpen,
-            setAnswer
+            setAnswer,
+            setShowKYCModal
           }}
         >
           <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
@@ -228,20 +179,12 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
               onRequestClose={() => setIsLoginModalOpen(false)}
               style={customStyles}
               shouldCloseOnOverlayClick={false}
-              // onAfterOpen={() => {
-              //   modalContent.current = document.getElementById('model-content')
-              //   console.log('element: ', modalContent)
-              //   modalContentIframe.current = document.getElementById('model-content').querySelector('iframe')
-              //   console.log('iframe: ', modalContentIframe)
-              //   setModalDoneOpening(true)
-              // }}
             >
               <div className={styles.close}><h2>Login or Sign up</h2></div>
               <div style={{ marginBottom: 20 }}>
                 <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
                 <p>Otherwise votes wouldn't mean a thing.</p>
               </div>
-              <KYCComponent userId={userId} />
               {/* <p
                 style={{
                   fontSize: 12,
@@ -269,6 +212,21 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   prompt_parent_id='tester-tester'
                 />
               </div>
+            </Modal>
+            <Modal
+              isOpen={showKYCModal}
+              onRequestClose={() => setShowKYCModal(false)}
+              style={customStyles}
+              shouldCloseOnOverlayClick={false}
+            >
+              <div onClick={() => setIsWalletModalOpen(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
+              <div style={{ marginBottom: 20 }}>
+                <p style={{ marginBottom: 4 }}>
+                  We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person.
+                  That way all the answers to polls become so much more valuable to you and everyone else.
+                </p>
+              </div>
+              <KYCComponent userId={userId} closeModal={() => setShowKYCModal(false)} />
             </Modal>
             <ContainerWithoutSwipes>
               {children}

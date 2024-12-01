@@ -13,16 +13,15 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export const KYCComponent = ({ userId }) => {
+export const KYCComponent = ({ userId, closeModal }) => {
   const [accessToken, setAccessToken] = useState('')
-  console.log('test-------------- KYCComponent')
 
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
         const response = await axios.post('https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token', {
           userId,
-          levelName: 'basic-kyc-level' // Replace with your level name
+          levelName: 'all-data' // Replace with your level name
         })
         setAccessToken(response.data.token)
       } catch (error) {
@@ -35,8 +34,9 @@ export const KYCComponent = ({ userId }) => {
 
   const handleMessage = (type, payload) => {
     console.log('Sumsub message:', type, payload)
-    if (type === 'idCheck.applicantStatus' && payload.reviewStatus === 'completed') {
+    if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
       // Handle post-verification logic here
+      closeModal()
     }
   }
 
@@ -63,7 +63,7 @@ export const KYCComponent = ({ userId }) => {
 export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
-  const { setIsModalOpen } = useContext(MainScreenSwipeContext)
+  const { setIsModalOpen, setShowKYCModal } = useContext(MainScreenSwipeContext)
 
   const login = useGoogleLogin({
     onSuccess: async tokenResponse => {
@@ -113,6 +113,13 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
       {username && (
         <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
           <div onClick={logout}>Log out</div>
+          <div
+            onClick={() => {
+              window.mixpanel.track('Verify Identity')
+              setShowKYCModal(true)
+            }}
+          >Verify Identity
+          </div>
           <div
             onClick={() => {
               window.mixpanel.track('Rewards')

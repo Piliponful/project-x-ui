@@ -1057,15 +1057,14 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId })=>{
+const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal: closeModal })=>{
     const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
-    console.log("test-------------- KYCComponent");
     (0, $c5L0i$react.useEffect)(()=>{
         const fetchAccessToken = async ()=>{
             try {
                 const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token", {
                     userId: userId,
-                    levelName: "basic-kyc-level" // Replace with your level name
+                    levelName: "all-data" // Replace with your level name
                 });
                 setAccessToken(response.data.token);
             } catch (error) {
@@ -1078,7 +1077,8 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId })=>{
     ]);
     const handleMessage = (type, payload)=>{
         console.log("Sumsub message:", type, payload);
-        type === "idCheck.applicantStatus" && payload.reviewStatus;
+        if (type === "idCheck.onApplicantStatusChanged" && payload.reviewStatus === "completed") // Handle post-verification logic here
+        closeModal();
     };
     const handleError = (error)=>{
         console.error("Sumsub error:", error);
@@ -1107,7 +1107,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
     });
-    const { setIsModalOpen: setIsModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
         onSuccess: async (tokenResponse)=>{
             const accessToken = tokenResponse.access_token;
@@ -1160,6 +1160,13 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: logout,
                         children: "Log out"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        onClick: ()=>{
+                            window.mixpanel.track("Verify Identity");
+                            setShowKYCModal(true);
+                        },
+                        children: "Verify Identity"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>{
@@ -1262,7 +1269,8 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setIsModalOpen: null,
     setShowSearch: null,
     showSearch: false,
-    setAnswer: ()=>{}
+    setAnswer: ()=>{},
+    setShowKYCModal: ()=>{}
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -1276,12 +1284,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-window.gtag_report_conversion = ()=>{};
-window.mixpanel = {
-    track: (...rest)=>{
-        console.log(rest);
-    }
-};
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: (...rest) => {
+//     console.log(rest)
+//   }
+// }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
@@ -1291,6 +1299,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(isWalletModalOpenInitial);
     const [showSearch, setShowSearch] = (0, $c5L0i$react.useState)(false);
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
+    const [showKYCModal, setShowKYCModal] = (0, $c5L0i$react.useState)(false);
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
@@ -1307,50 +1316,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     }, [
         skipScreen
     ]);
-    // useEffect(() => {
-    //   // console.log('modal-content in useEffect', init.current)
-    //   // console.log('modal done opening: ', modalDoneOpening)
-    //   if (init.current || !modalDoneOpening) {
-    //     return
-    //   }
-    //   // console.log('after modal-content in useEffect', init.current)
-    //   // console.log('modal button: ', modalContent.current)
-    //   const onClick = () => {
-    //     window.mixpanel.track('Sign Up(google not logged in) Button Clicked')
-    //   }
-    //   // Define the observer to watch for style changes on the iframe itself
-    //   const observer = new MutationObserver((mutations) => {
-    //     mutations.forEach((mutation) => {
-    //       // console.log('attributeName: ', mutation.attributeName)
-    //       if (mutation.attributeName === 'style') {
-    //         const styles = window.getComputedStyle(modalContentIframe.current)
-    //         // console.log('Iframe bis_size changed:', styles.getPropertyValue('height'), bisSize, modalContentIframe.current.style.cssText)
-    //         const iframeHeight = parseInt(styles.getPropertyValue('height').replace('px', ''))
-    //         if (iframeHeight > 0) {
-    //           if (init2.current) {
-    //             return
-    //           }
-    //           console.log('height of iframe is bigger then 0')
-    //           modalContent.current.removeEventListener('onClick', onClick)
-    //           modalContentIframe.current.addEventListener('click', () => {
-    //             window.mixpanel.track('Sign Up(google logged in) Button Clicked')
-    //           })
-    //           init2.current = true
-    //         }
-    //       }
-    //     })
-    //   })
-    //   // Configure the observer to watch for attribute changes (specifically style) on the iframe
-    //   observer.observe(modalContentIframe.current, { attributes: true, attributeFilter: ['bis_size', 'style'] })
-    //   modalContent.current.addEventListener('click', onClick)
-    //   init.current = true
-    // }, [modalDoneOpening])
-    // useEffect(() => {
-    //   if (showLoginModal) {
-    //     const modalContent = document.getElementById('model-content')
-    //     console.log('element: ', modalContent)
-    //   }
-    // }, [showLoginModal])
     const connectToWallet = ()=>{
         window.mixpanel.track("Rewards Modal -> Connect Wallet Click");
         connectToWalletR();
@@ -1394,7 +1359,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                 setIsModalOpen: setIsModalOpen,
                 setIsWalletModalOpen: setIsWalletModalOpen,
                 setIsLoginModalOpen: setIsLoginModalOpen,
-                setAnswer: setAnswer
+                setAnswer: setAnswer,
+                setShowKYCModal: setShowKYCModal
             },
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1551,9 +1517,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {
-                                userId: userId
-                            }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
                                 id: "model-content",
@@ -1563,6 +1526,39 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     cookiePolicy: "single_host_origin",
                                     prompt_parent_id: "tester-tester"
                                 })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                        isOpen: showKYCModal,
+                        onRequestClose: ()=>setShowKYCModal(false),
+                        style: $0c70feff32ca6a2b$var$customStyles,
+                        shouldCloseOnOverlayClick: false,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                onClick: ()=>setIsWalletModalOpen(false),
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                        children: "Verify your Identity"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                style: {
+                                    marginBottom: 20
+                                },
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                    style: {
+                                        marginBottom: 4
+                                    },
+                                    children: "We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person. That way all the answers to polls become so much more valuable to you and everyone else."
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {
+                                userId: userId,
+                                closeModal: ()=>setShowKYCModal(false)
                             })
                         ]
                     }),
