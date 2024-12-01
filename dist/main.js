@@ -1084,7 +1084,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal:
         console.error("Sumsub error:", error);
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        children: accessToken && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$sumsubwebsdkreact))), {
+        children: accessToken && userId && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$sumsubwebsdkreact))), {
             accessToken: accessToken,
             expirationHandler: ()=>(0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
                     userId: userId,
@@ -1536,7 +1536,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         shouldCloseOnOverlayClick: false,
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                onClick: ()=>setIsWalletModalOpen(false),
+                                onClick: ()=>setShowKYCModal(false),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {

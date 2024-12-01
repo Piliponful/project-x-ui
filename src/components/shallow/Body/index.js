@@ -219,7 +219,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
               style={customStyles}
               shouldCloseOnOverlayClick={false}
             >
-              <div onClick={() => setIsWalletModalOpen(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
+              <div onClick={() => setShowKYCModal(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
               <div style={{ marginBottom: 20 }}>
                 <p style={{ marginBottom: 4 }}>
                   We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person.

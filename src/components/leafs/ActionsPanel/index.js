@@ -46,7 +46,7 @@ export const KYCComponent = ({ userId, closeModal }) => {
 
   return (
     <div>
-      {accessToken && (
+      {accessToken && userId && (
         <SumsubWebSdk
           accessToken={accessToken}
           expirationHandler={() => axios.post('/api/kyc/access-token', { userId, levelName: 'basic-kyc-level' }).then(res => res.data.token)}
