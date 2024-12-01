@@ -34,18 +34,18 @@ const customStyles = {
   }
 }
 
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = () => {}
+window.mixpanel = {
+  track: (...rest) => {
+    console.log(rest)
+  }
+}
 
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser, showKYC }) => {
+export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser, showKYC }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -241,7 +241,7 @@ export default ({ children, includeSwipes, address, payout, connectToWallet: con
                 <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
                 <p>Otherwise votes wouldn't mean a thing.</p>
               </div>
-              <KYCComponent />
+              <KYCComponent userId={userId} />
               {/* <p
                 style={{
                   fontSize: 12,

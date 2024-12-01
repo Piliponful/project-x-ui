@@ -15,11 +15,12 @@ import styles from './style.module.styl'
 
 export const KYCComponent = ({ userId }) => {
   const [accessToken, setAccessToken] = useState('')
+  console.log('test-------------- KYCComponent')
 
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
-        const response = await axios.post('/api/kyc/access-token', {
+        const response = await axios.post('https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token', {
           userId,
           levelName: 'basic-kyc-level' // Replace with your level name
         })

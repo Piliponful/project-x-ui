@@ -1059,10 +1059,11 @@ $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId })=>{
     const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
+    console.log("test-------------- KYCComponent");
     (0, $c5L0i$react.useEffect)(()=>{
         const fetchAccessToken = async ()=>{
             try {
-                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
+                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token", {
                     userId: userId,
                     levelName: "basic-kyc-level" // Replace with your level name
                 });
@@ -1275,15 +1276,15 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = ()=>{};
+window.mixpanel = {
+    track: (...rest)=>{
+        console.log(rest);
+    }
+};
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
@@ -1550,7 +1551,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {}),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {
+                                userId: userId
+                            }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
                                 id: "model-content",

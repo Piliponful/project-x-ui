@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
@@ -60,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "buffer": "^6.0.3",
     "process": "^0.11.10"
   }
 }
