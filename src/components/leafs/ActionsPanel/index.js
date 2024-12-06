@@ -19,7 +19,7 @@ export const KYCComponent = ({ userId, closeModal }) => {
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
-        const response = await axios.post('https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token', {
+        const response = await axios.post('/api/kyc/access-token', {
           userId,
           levelName: 'all-data' // Replace with your level name
         })
@@ -34,10 +34,10 @@ export const KYCComponent = ({ userId, closeModal }) => {
 
   const handleMessage = (type, payload) => {
     console.log('Sumsub message:', type, payload)
-    if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
-      // Handle post-verification logic here
-      closeModal()
-    }
+    // if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
+    //   // Handle post-verification logic here
+    //   closeModal()
+    // }
   }
 
   const handleError = (error) => {

@@ -1062,7 +1062,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal:
     (0, $c5L0i$react.useEffect)(()=>{
         const fetchAccessToken = async ()=>{
             try {
-                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("https://krill-immense-randomly.ngrok-free.app/api/kyc/access-token", {
+                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
                     userId: userId,
                     levelName: "all-data" // Replace with your level name
                 });
@@ -1077,8 +1077,10 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal:
     ]);
     const handleMessage = (type, payload)=>{
         console.log("Sumsub message:", type, payload);
-        if (type === "idCheck.onApplicantStatusChanged" && payload.reviewStatus === "completed") // Handle post-verification logic here
-        closeModal();
+    // if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
+    //   // Handle post-verification logic here
+    //   closeModal()
+    // }
     };
     const handleError = (error)=>{
         console.error("Sumsub error:", error);
@@ -1545,16 +1547,21 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
                                 ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 style: {
                                     marginBottom: 20
                                 },
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                                    style: {
-                                        marginBottom: 4
-                                    },
-                                    children: "We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person. That way all the answers to polls become so much more valuable to you and everyone else."
-                                })
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                        style: {
+                                            marginBottom: 4
+                                        },
+                                        children: "We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person. That way all the answers to polls become so much more valuable to you and everyone else."
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                        children: "*Your first and last name, as well as country of origin and age will be public, if it's not clear yet"
+                                    })
+                                ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {
                                 userId: userId,

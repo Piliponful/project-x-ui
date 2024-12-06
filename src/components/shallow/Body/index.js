@@ -225,6 +225,9 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person.
                   That way all the answers to polls become so much more valuable to you and everyone else.
                 </p>
+                <b>
+                  *Your first and last name, as well as country of origin and age will be public, if it's not clear yet
+                </b>
               </div>
               <KYCComponent userId={userId} closeModal={() => setShowKYCModal(false)} />
             </Modal>
