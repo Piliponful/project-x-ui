@@ -135,9 +135,8 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
           : (
             <div className={styles.twitterSignIn}>
               <Text className={styles.username}>
-                Sign in with
+                Sign in
               </Text>
-              <GoogleIcon />
             </div>
             )
       }
@@ -197,7 +196,7 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
           className={styles.container}
           style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
           onClick={() => {
-            login()
+            setIsLoginModalOpen(true)
           }}
         >
           {content}

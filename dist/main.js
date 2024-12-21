@@ -16,7 +16,7 @@ var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
-var $c5L0i$muiiconsmaterialGoogle = require("@mui/icons-material/Google");
+require("@mui/icons-material/Google");
 var $c5L0i$sumsubwebsdkreact = require("@sumsub/websdk-react");
 var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
@@ -1168,15 +1168,12 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     username,
                     ")"
                 ]
-            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                        children: "Sign in with"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialGoogle))), {})
-                ]
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                    children: "Sign in"
+                })
             }),
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1240,7 +1237,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 fontSize: 16
             },
             onClick: ()=>{
-                login();
+                setIsLoginModalOpen(true);
             },
             children: content
         })
@@ -1317,12 +1314,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-window.gtag_report_conversion = ()=>{};
-window.mixpanel = {
-    track: (...rest)=>{
-        console.log(rest);
-    }
-};
+// window.gtag_report_conversion = () => {}
+// window.mixpanel = {
+//   track: (...rest) => {
+//     console.log(rest)
+//   }
+// }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
