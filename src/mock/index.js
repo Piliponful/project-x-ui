@@ -212,7 +212,7 @@ const SidebarWithGroups = () => {
         ))}
       </GroupsContainer>
       <NewQuestion />
-      <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
+      <ActionsPanel logout={() => console.log('logout')} username='piliponful' handleTwitterLogin={() => console.log('test')} />
     </Sidebar>
   )
 }
@@ -255,7 +255,7 @@ const SidebarWithQuestions = () => {
       </GroupsContainer>
       <div style={{ width: '100%' }}>
         <NewQuestion />
-        <ActionsPanel logout={() => console.log('logout')} username='piliponful' />
+        <ActionsPanel logout={() => console.log('logout')} username='piliponful' handleTwitterLogin={() => console.log('test')} />
       </div>
     </Sidebar>
   )
@@ -313,7 +313,7 @@ const MainScreenWithQuestions = () => (
     </QuestionCardsRow>
     <div style={{ width: '100%' }}>
       <NewQuestion />
-      <ActionsPanel />
+      <ActionsPanel handleTwitterLogin={() => console.log('test')} />
     </div>
   </MainScreen>
 )

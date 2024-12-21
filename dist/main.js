@@ -12,10 +12,10 @@ var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
 var $c5L0i$jwtdecode = require("jwt-decode");
+var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
-var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$muiiconsmaterialGoogle = require("@mui/icons-material/Google");
 var $c5L0i$sumsubwebsdkreact = require("@sumsub/websdk-react");
 var $c5L0i$axios = require("axios");
@@ -968,6 +968,7 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 
 
 
+
 var $61bbaaf79dd60fe4$exports = {};
 
 $parcel$export($61bbaaf79dd60fe4$exports, "container", () => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd, (v) => $61bbaaf79dd60fe4$export$34e0f9847d4c02dd = v);
@@ -1057,6 +1058,27 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
+const $b29d4b4923c0cd00$export$a3b54f03f3789fbd = "twitter-increaser-state";
+const $b29d4b4923c0cd00$var$TWITTER_CODE_CHALLENGE = "challenge";
+const $b29d4b4923c0cd00$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
+const $b29d4b4923c0cd00$var$TWITTER_SCOPE = [
+    "tweet.read",
+    "users.read",
+    "offline.access"
+].join(" ");
+const $b29d4b4923c0cd00$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
+    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
+    return `${baseUrl}?${query}`;
+};
+const $b29d4b4923c0cd00$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$b29d4b4923c0cd00$export$31cc7ffb9b60a46f($b29d4b4923c0cd00$var$TWITTER_AUTH_URL, {
+        response_type: "code",
+        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
+        redirect_uri: redirectUri,
+        scope: $b29d4b4923c0cd00$var$TWITTER_SCOPE,
+        state: $b29d4b4923c0cd00$export$a3b54f03f3789fbd,
+        code_challenge: $b29d4b4923c0cd00$var$TWITTER_CODE_CHALLENGE,
+        code_challenge_method: "plain"
+    });
 const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal: closeModal })=>{
     const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
     (0, $c5L0i$react.useEffect)(()=>{
@@ -1109,7 +1131,10 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
     });
-    const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const redirectUri = "https://krill-immense-randomly.ngrok-free.app/api/oauth2_cb";
+    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+    const twitterAuthUrl = $b29d4b4923c0cd00$export$9b5acf6f7fc8a7d2(redirectUri);
     const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
         onSuccess: async (tokenResponse)=>{
             const accessToken = tokenResponse.access_token;
@@ -1203,20 +1228,22 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             })
         ]
     });
-    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-        ref: (node)=>{
-            if (ref2) ref2(node);
-        },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-        style: {
-            justifyContent: "center",
-            border: "none",
-            fontSize: 16
-        },
-        onClick: ()=>{
-            login();
-        },
-        children: content
+    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+            ref: (node)=>{
+                if (ref2) ref2(node);
+            },
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+            style: {
+                justifyContent: "center",
+                border: "none",
+                fontSize: 16
+            },
+            onClick: ()=>{
+                login();
+            },
+            children: content
+        })
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         ref: (node)=>{
@@ -1228,6 +1255,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         children: content
     });
 });
+
 
 
 var $941289f31472d1d3$exports = {};
@@ -1294,7 +1322,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
 // }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
@@ -1519,15 +1547,28 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).modalContent,
                                 id: "model-content",
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleLogin), {
-                                    onSuccess: handleLoginSuccess,
-                                    onFailure: handleLoginFailure,
-                                    cookiePolicy: "single_host_origin",
-                                    prompt_parent_id: "tester-tester"
-                                })
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleLogin), {
+                                        onSuccess: handleLoginSuccess,
+                                        onFailure: handleLoginFailure,
+                                        cookiePolicy: "single_host_origin",
+                                        prompt_parent_id: "tester-tester"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).twitterSignIn,
+                                        onClick: handleTwitterLogin,
+                                        children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).username,
+                                                children: "Sign in with 2"
+                                            }),
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                                        ]
+                                    })
+                                ]
                             })
                         ]
                     }),
@@ -3354,18 +3395,11 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).name,
-                children: "Public voting"
+                children: "Non-anonymous voting"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).subtitle,
-                children: "on social or political issues."
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["additional-text"],
-                children: "This is the place to declare what you stand for or what you believe in."
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                children: "Your votes tied to your \uD835\uDE9D\u0336\uD835\uDEA0\u0336\uD835\uDE92\u0336\uD835\uDE9D\u0336\uD835\uDE9D\u0336\uD835\uDE8E\u0336\uD835\uDE9B\u0336 gmail profile, everyone can see them."
+                children: "on social and political issues."
             })
         ]
     });
@@ -3446,9 +3480,7 @@ const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
         })
     });
 const $4f095db3a6856690$var$textByPageNumber = {
-    0: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$FirstText, {}),
-    1: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$SecondText, {}),
-    2: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$ThirdText, {})
+    0: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$FirstText, {})
 };
 const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ jwt: jwt }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
@@ -3475,54 +3507,27 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
-                children: [
-                    0,
-                    1,
-                    2
-                ].map((pageNumber)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                        ref: ref,
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
-                        children: [
-                            $4f095db3a6856690$var$textByPageNumber[pageNumber],
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
-                                replace: true,
-                                to: jwt ? "/" : "/app",
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["open-app-button"],
-                                style: pageNumber > 0 ? {
-                                    marginTop: 60
-                                } : {},
-                                children: [
-                                    "Open App ",
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
-                                        sx: {
-                                            marginLeft: "15px",
-                                            fontSize: 20
-                                        }
-                                    })
-                                ]
-                            }),
-                            pageNumber === 0 && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-                                children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).scrollIcon,
-                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("i", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).scroll
-                                        })
-                                    }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
-                                        children: [
-                                            "made by ",
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                                href: "mailto:piliponful@gmail.com",
-                                                children: "piliponful"
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }, pageNumber))
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    ref: ref,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
+                    children: [
+                        $4f095db3a6856690$var$textByPageNumber[0],
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
+                            replace: true,
+                            to: jwt ? "/" : "/app",
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["open-app-button"],
+                            children: [
+                                "Open App ",
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
+                                    sx: {
+                                        marginLeft: "15px",
+                                        fontSize: 20
+                                    }
+                                })
+                            ]
+                        })
+                    ]
+                })
             })
         ]
     });

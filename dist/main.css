@@ -1674,6 +1674,7 @@
 
 .aq6KZW_slides {
   background: linear-gradient(to right, #fff, #ece9e6);
+  width: 100%;
   overflow: scroll;
 }
 
@@ -1695,7 +1696,6 @@
   font-family: IBM Plex Sans, sans-serif;
   font-size: 110px;
   font-weight: 500;
-  line-height: 78%;
   display: flex;
   position: relative;
 }
@@ -1708,26 +1708,22 @@
 
 .aq6KZW_landing .aq6KZW_name {
   color: #232323;
-  font-size: 1.7em;
+  font-size: 83px;
 }
 
-.aq6KZW_landing h1, .aq6KZW_landing h2 {
+h1, h2 {
   margin: 0;
-  font-size: 1em;
-  line-height: 1.1;
 }
 
 .aq6KZW_landing .aq6KZW_additional-text {
   color: #616161;
-  font-size: .5em;
-  line-height: 1;
+  font-size: 30px;
 }
 
-.aq6KZW_landing small {
-  letter-spacing: 1px;
-  color: #0000008a;
-  font-size: 18px;
-  line-height: 1.3;
+.aq6KZW_landing .aq6KZW_subtitle {
+  color: #616161;
+  font-size: 40px;
+  font-weight: 300;
 }
 
 .aq6KZW_landing .aq6KZW_smaller {
@@ -1735,15 +1731,14 @@
   margin-top: 10px;
   font-size: .3em;
   font-weight: 200;
-  line-height: 1.3;
 }
 
 .aq6KZW_scrollIcon {
-  border: 2px solid #bfbfbf;
+  border: 1px solid #bfbfbf;
   border-radius: 30px;
   justify-content: center;
-  width: 20px;
-  height: 35px;
+  width: 15.4px;
+  height: 27px;
   display: flex;
   position: absolute;
   bottom: 39px;
@@ -1757,9 +1752,8 @@
   width: 100px;
   margin-top: 10px;
   font-family: Source Sans Pro, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1;
   animation: 2s infinite aq6KZW_scrollText;
   display: block;
   position: absolute;
@@ -1769,8 +1763,8 @@
 i.aq6KZW_scroll {
   background: #bfbfbf;
   border-radius: 40px;
-  width: 3px;
-  height: 7px;
+  width: 2px;
+  height: 5px;
   animation: 2s infinite aq6KZW_scrollWheel;
   display: block;
 }
@@ -1860,7 +1854,6 @@ i.aq6KZW_scroll {
 
   .aq6KZW_mobile-second-text p {
     font-size: .6em;
-    line-height: .9;
   }
 
   .aq6KZW_mobile-second-text p:last-child {
@@ -1871,14 +1864,9 @@ i.aq6KZW_scroll {
     display: none;
   }
 
-  .aq6KZW_landing .aq6KZW_smaller {
-    letter-spacing: -.5px;
-    line-height: 100%;
-  }
-
   .aq6KZW_landing .aq6KZW_subtitle {
-    font-size: .8em;
-    line-height: .9;
+    font-size: 30px;
+    font-weight: 300;
   }
 
   .aq6KZW_landing .aq6KZW_additional-text {

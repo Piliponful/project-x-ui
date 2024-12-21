@@ -13,6 +13,34 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
+export const TWITTER_STATE = 'twitter-increaser-state'
+const TWITTER_CODE_CHALLENGE = 'challenge'
+const TWITTER_AUTH_URL = 'https://twitter.com/i/oauth2/authorize'
+const TWITTER_SCOPE = ['tweet.read', 'users.read', 'offline.access'].join(' ')
+
+export const getURLWithQueryParams = (
+  baseUrl,
+  params
+) => {
+  const query = Object.entries(params)
+    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    .join('&')
+
+  return `${baseUrl}?${query}`
+}
+
+export const getTwitterOAuthUrl = redirectUri =>
+  getURLWithQueryParams(TWITTER_AUTH_URL, {
+    response_type: 'code',
+    client_id: 'a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ',
+    redirect_uri: redirectUri,
+    scope: TWITTER_SCOPE,
+    state: TWITTER_STATE,
+
+    code_challenge: TWITTER_CODE_CHALLENGE,
+    code_challenge_method: 'plain'
+  })
+
 export const KYCComponent = ({ userId, closeModal }) => {
   const [accessToken, setAccessToken] = useState('')
 
@@ -63,7 +91,11 @@ export const KYCComponent = ({ userId, closeModal }) => {
 export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
-  const { setIsModalOpen, setShowKYCModal } = useContext(MainScreenSwipeContext)
+  const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
+  const redirectUri = 'https://krill-immense-randomly.ngrok-free.app/api/oauth2_cb'
+  // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
+
+  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
 
   const login = useGoogleLogin({
     onSuccess: async tokenResponse => {
@@ -155,20 +187,22 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
 
   if (!username) {
     return (
-      <button
-        ref={node => {
-          if (ref2) {
-            ref2(node)
-          }
-        }}
-        className={styles.container}
-        style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
-        onClick={() => {
-          login()
-        }}
-      >
-        {content}
-      </button>
+      <>
+        <button
+          ref={node => {
+            if (ref2) {
+              ref2(node)
+            }
+          }}
+          className={styles.container}
+          style={{ justifyContent: 'center', border: 'none', fontSize: 16 }}
+          onClick={() => {
+            login()
+          }}
+        >
+          {content}
+        </button>
+      </>
     )
   }
 

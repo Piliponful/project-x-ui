@@ -3,9 +3,11 @@ import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
+import XIcon from '@mui/icons-material/X'
 
 import { ContainerWithoutSwipes } from './components/Container'
 import { KYCComponent } from '../../leafs/ActionsPanel'
+import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
@@ -46,7 +48,7 @@ const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleuserc
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, hide: hideR, connected, isWalletModalOpenInitial = true, createUser, showKYC }) => {
+export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, hide: hideR, connected, handleTwitterLogin, isWalletModalOpenInitial = true, createUser, showKYC }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -211,6 +213,12 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   cookiePolicy='single_host_origin'
                   prompt_parent_id='tester-tester'
                 />
+                <button className={styles.twitterSignIn} onClick={handleTwitterLogin}>
+                  <Text className={styles.username}>
+                    Sign in with 2
+                  </Text>
+                  <XIcon />
+                </button>
               </div>
             </Modal>
             <Modal
