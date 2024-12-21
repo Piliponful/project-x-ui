@@ -1268,6 +1268,7 @@ $parcel$export($941289f31472d1d3$exports, "connectButton", () => $941289f31472d1
 $parcel$export($941289f31472d1d3$exports, "hide", () => $941289f31472d1d3$export$fe8985bb6374093c, (v) => $941289f31472d1d3$export$fe8985bb6374093c = v);
 $parcel$export($941289f31472d1d3$exports, "modalContent", () => $941289f31472d1d3$export$add244bda2f9423c, (v) => $941289f31472d1d3$export$add244bda2f9423c = v);
 $parcel$export($941289f31472d1d3$exports, "row", () => $941289f31472d1d3$export$120ff0929b202a6d, (v) => $941289f31472d1d3$export$120ff0929b202a6d = v);
+$parcel$export($941289f31472d1d3$exports, "twitterSignIn", () => $941289f31472d1d3$export$6c489d6abe11ec5c, (v) => $941289f31472d1d3$export$6c489d6abe11ec5c = v);
 var $941289f31472d1d3$export$f7d3c097ceca6c15;
 var $941289f31472d1d3$export$802cfe72001a1ee;
 var $941289f31472d1d3$export$32180ef41b15b513;
@@ -1276,6 +1277,7 @@ var $941289f31472d1d3$export$53a6eba4a816532e;
 var $941289f31472d1d3$export$fe8985bb6374093c;
 var $941289f31472d1d3$export$add244bda2f9423c;
 var $941289f31472d1d3$export$120ff0929b202a6d;
+var $941289f31472d1d3$export$6c489d6abe11ec5c;
 $941289f31472d1d3$export$f7d3c097ceca6c15 = `sLin6a_address`;
 $941289f31472d1d3$export$802cfe72001a1ee = `sLin6a_amount`;
 $941289f31472d1d3$export$32180ef41b15b513 = `sLin6a_body`;
@@ -1284,6 +1286,7 @@ $941289f31472d1d3$export$53a6eba4a816532e = `sLin6a_connectButton`;
 $941289f31472d1d3$export$fe8985bb6374093c = `sLin6a_hide`;
 $941289f31472d1d3$export$add244bda2f9423c = `sLin6a_modalContent`;
 $941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
+$941289f31472d1d3$export$6c489d6abe11ec5c = `sLin6a_twitterSignIn`;
 
 
 const $be6f0e84320366a7$export$2515d253ab459c32 = 450;
@@ -1314,12 +1317,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = ()=>{};
+window.mixpanel = {
+    track: (...rest)=>{
+        console.log(rest);
+    }
+};
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
@@ -1561,11 +1564,14 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).twitterSignIn,
                                         onClick: handleTwitterLogin,
                                         children: [
+                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {}),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                                                style: {
+                                                    flexGrow: 1
+                                                },
                                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).username,
-                                                children: "Sign in with 2"
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                                                children: "Sign in with X"
+                                            })
                                         ]
                                     })
                                 ]

@@ -464,6 +464,36 @@
   display: flex;
 }
 
+.sLin6a_twitterSignIn {
+  color: #3c4043;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  align-items: center;
+  height: 40px;
+  padding: 0 12px;
+  font-family: Google Sans, arial, sans-serif;
+  font-size: 14px;
+  transition: all .2s;
+  display: flex;
+}
+
+.sLin6a_twitterSignIn:hover {
+  background: #4285f40a;
+  border-color: #d2e3fc;
+}
+
+.sLin6a_twitterSignIn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sLin6a_twitterSignIn > div {
+  font-family: Google Sans, arial, sans-serif;
+}
+
 .GN153G_card {
   box-sizing: border-box;
   background: none;

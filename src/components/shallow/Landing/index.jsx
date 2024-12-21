@@ -10,10 +10,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 const FirstText = () => (
   <div className={styles.text}>
-    <h1 className={styles.name}>Public voting</h1>
-    <h2 className={styles.subtitle}>on social or political issues.</h2>
-    <h2 className={styles['additional-text']}>This is the place to declare what you stand for or what you believe in.</h2>
-    <small>Your votes tied to your 𝚝̶𝚠̶𝚒̶𝚝̶𝚝̶𝚎̶𝚛̶ gmail profile, everyone can see them.</small>
+    <h1 className={styles.name}>Non-anonymous voting</h1>
+    <h2 className={styles.subtitle}>on social and political issues.</h2>
   </div>
 )
 
@@ -47,9 +45,7 @@ const ThirdText = () => (
 )
 
 const textByPageNumber = {
-  0: <FirstText />,
-  1: <SecondText />,
-  2: <ThirdText />
+  0: <FirstText />
 }
 
 export const Landing = forwardRef(({ jwt }, ref) => {
@@ -70,22 +66,18 @@ export const Landing = forwardRef(({ jwt }, ref) => {
         <meta name='description' content='Public voting on social or political issues.' />
       </Helmet>
       <div className={styles.slides}>
-        {[0, 1, 2].map(pageNumber => (
-          <div key={pageNumber} ref={ref} className={styles.landing}>
-            {textByPageNumber[pageNumber]}
-            <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']} style={pageNumber > 0 ? { marginTop: 60 } : {}}>
-              Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
-            </Link>
-            {pageNumber === 0 && (
-              <>
-                <div className={styles.scrollIcon}>
-                  <i className={styles.scroll} />
-                </div>
-                <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
-              </>
-            )}
-          </div>
-        ))}
+        <div ref={ref} className={styles.landing}>
+          {textByPageNumber[0]}
+          <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']}>
+            Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
+          </Link>
+          {/* <>
+            <div className={styles.scrollIcon}>
+              <i className={styles.scroll} />
+            </div>
+            <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
+          </> */}
+        </div>
       </div>
     </>
   )

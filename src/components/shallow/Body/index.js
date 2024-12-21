@@ -37,12 +37,12 @@ const customStyles = {
   }
 }
 
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = () => {}
+window.mixpanel = {
+  track: (...rest) => {
+    console.log(rest)
+  }
+}
 
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
@@ -214,10 +214,10 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   prompt_parent_id='tester-tester'
                 />
                 <button className={styles.twitterSignIn} onClick={handleTwitterLogin}>
-                  <Text className={styles.username}>
-                    Sign in with 2
-                  </Text>
                   <XIcon />
+                  <Text style={{ flexGrow: 1 }} className={styles.username}>
+                    Sign in with X
+                  </Text>
                 </button>
               </div>
             </Modal>
