@@ -1,9 +1,6 @@
 import React, { useState, useContext, forwardRef, useEffect } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
-import XIcon from '@mui/icons-material/X'
-import GoogleIcon from '@mui/icons-material/Google'
-import { useGoogleLogin } from '@react-oauth/google'
 import SumsubWebSdk from '@sumsub/websdk-react'
 import axios from 'axios'
 
@@ -12,34 +9,6 @@ import { MainScreenSwipeContext } from '../../shallow/Body'
 import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
-
-export const TWITTER_STATE = 'twitter-increaser-state'
-const TWITTER_CODE_CHALLENGE = 'challenge'
-const TWITTER_AUTH_URL = 'https://twitter.com/i/oauth2/authorize'
-const TWITTER_SCOPE = ['tweet.read', 'users.read', 'offline.access'].join(' ')
-
-export const getURLWithQueryParams = (
-  baseUrl,
-  params
-) => {
-  const query = Object.entries(params)
-    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-    .join('&')
-
-  return `${baseUrl}?${query}`
-}
-
-export const getTwitterOAuthUrl = redirectUri =>
-  getURLWithQueryParams(TWITTER_AUTH_URL, {
-    response_type: 'code',
-    client_id: 'a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ',
-    redirect_uri: redirectUri,
-    scope: TWITTER_SCOPE,
-    state: TWITTER_STATE,
-
-    code_challenge: TWITTER_CODE_CHALLENGE,
-    code_challenge_method: 'plain'
-  })
 
 export const KYCComponent = ({ userId, closeModal }) => {
   const [accessToken, setAccessToken] = useState('')
@@ -92,40 +61,6 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
-  const redirectUri = 'https://krill-immense-randomly.ngrok-free.app/api/oauth2_cb'
-  // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
-
-  const twitterAuthUrl = getTwitterOAuthUrl(redirectUri)
-
-  const login = useGoogleLogin({
-    onSuccess: async tokenResponse => {
-      const accessToken = tokenResponse.access_token
-
-      try {
-        const userInfoResponse = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${accessToken}`
-          }
-        })
-
-        if (!userInfoResponse.ok) {
-          throw new Error('Failed to fetch user info')
-        }
-
-        const userInfo = await userInfoResponse.json() // Parse the JSON response
-        await createUser(userInfo)
-        window.gtag_report_conversion()
-      } catch (error) {
-        console.error('Error fetching user info:', error)
-      }
-    },
-    onError: (error) => {
-      window.mixpanel.track('Login Failed', {
-        error
-      })
-    }
-  })
 
   const content = (
     <>

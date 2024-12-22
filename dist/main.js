@@ -16,7 +16,6 @@ var $c5L0i$muiiconsmaterialX = require("@mui/icons-material/X");
 var $c5L0i$reactswipeable = require("react-swipeable");
 var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
-require("@mui/icons-material/Google");
 var $c5L0i$sumsubwebsdkreact = require("@sumsub/websdk-react");
 var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
@@ -1033,9 +1032,6 @@ const $1e3dbd7e69fec1c4$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 
 
 
-
-
-
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
@@ -1058,27 +1054,6 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-const $b29d4b4923c0cd00$export$a3b54f03f3789fbd = "twitter-increaser-state";
-const $b29d4b4923c0cd00$var$TWITTER_CODE_CHALLENGE = "challenge";
-const $b29d4b4923c0cd00$var$TWITTER_AUTH_URL = "https://twitter.com/i/oauth2/authorize";
-const $b29d4b4923c0cd00$var$TWITTER_SCOPE = [
-    "tweet.read",
-    "users.read",
-    "offline.access"
-].join(" ");
-const $b29d4b4923c0cd00$export$31cc7ffb9b60a46f = (baseUrl, params)=>{
-    const query = Object.entries(params).map(([key, value])=>`${key}=${encodeURIComponent(value)}`).join("&");
-    return `${baseUrl}?${query}`;
-};
-const $b29d4b4923c0cd00$export$9b5acf6f7fc8a7d2 = (redirectUri)=>$b29d4b4923c0cd00$export$31cc7ffb9b60a46f($b29d4b4923c0cd00$var$TWITTER_AUTH_URL, {
-        response_type: "code",
-        client_id: "a1RVRjBMTnhsNzVPNVdZQmRHMVY6MTpjaQ",
-        redirect_uri: redirectUri,
-        scope: $b29d4b4923c0cd00$var$TWITTER_SCOPE,
-        state: $b29d4b4923c0cd00$export$a3b54f03f3789fbd,
-        code_challenge: $b29d4b4923c0cd00$var$TWITTER_CODE_CHALLENGE,
-        code_challenge_method: "plain"
-    });
 const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal: closeModal })=>{
     const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
     (0, $c5L0i$react.useEffect)(()=>{
@@ -1132,33 +1107,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         onTriggered: ()=>setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    const redirectUri = "https://krill-immense-randomly.ngrok-free.app/api/oauth2_cb";
-    // const redirect_uri = 'https://differencee.com/api/oauth2_cb'
-    const twitterAuthUrl = $b29d4b4923c0cd00$export$9b5acf6f7fc8a7d2(redirectUri);
-    const login = (0, $c5L0i$reactoauthgoogle.useGoogleLogin)({
-        onSuccess: async (tokenResponse)=>{
-            const accessToken = tokenResponse.access_token;
-            try {
-                const userInfoResponse = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
-                    method: "GET",
-                    headers: {
-                        Authorization: `Bearer ${accessToken}`
-                    }
-                });
-                if (!userInfoResponse.ok) throw new Error("Failed to fetch user info");
-                const userInfo = await userInfoResponse.json(); // Parse the JSON response
-                await createUser(userInfo);
-                window.gtag_report_conversion();
-            } catch (error) {
-                console.error("Error fetching user info:", error);
-            }
-        },
-        onError: (error)=>{
-            window.mixpanel.track("Login Failed", {
-                error: error
-            });
-        }
-    });
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
@@ -3398,7 +3346,7 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).name,
-                children: "Non-anonymous voting"
+                children: "Non-anonymous online voting"
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).subtitle,
@@ -3526,6 +3474,16 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                         marginLeft: "15px",
                                         fontSize: 20
                                     }
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
+                            children: [
+                                "made by ",
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                    href: "mailto:piliponful@gmail.com",
+                                    children: "piliponful"
                                 })
                             ]
                         })

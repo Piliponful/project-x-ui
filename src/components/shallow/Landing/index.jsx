@@ -10,7 +10,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 const FirstText = () => (
   <div className={styles.text}>
-    <h1 className={styles.name}>Non-anonymous voting</h1>
+    <h1 className={styles.name}>Non-anonymous online voting</h1>
     <h2 className={styles.subtitle}>on social and political issues.</h2>
   </div>
 )
@@ -75,8 +75,8 @@ export const Landing = forwardRef(({ jwt }, ref) => {
             <div className={styles.scrollIcon}>
               <i className={styles.scroll} />
             </div>
-            <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
           </> */}
+          <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
         </div>
       </div>
     </>
