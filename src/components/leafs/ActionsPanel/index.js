@@ -3,8 +3,12 @@ import { useDetectClickOutside } from 'react-detect-click-outside'
 import SettingsIcon from '@mui/icons-material/Settings'
 import SumsubWebSdk from '@sumsub/websdk-react'
 import axios from 'axios'
+import XIcon from '@mui/icons-material/X'
+import cn from 'classnames'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
+
+import KYCIcon from './kyc.svg'
 
 import Text from '../../shared/Text'
 
@@ -57,7 +61,7 @@ export const KYCComponent = ({ userId, closeModal }) => {
   )
 }
 
-export default forwardRef(({ logout, username, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
+export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
@@ -66,7 +70,11 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
     <>
       {
         username
-          ? <Text className={styles.username}>Settings ({username})</Text>
+          ? (
+            <>
+              <Text className={styles.username}>Settings ({username})</Text>
+            </>
+            )
           : (
             <div className={styles.twitterSignIn}>
               <Text className={styles.username}>
@@ -75,38 +83,6 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
             </div>
             )
       }
-
-      {username && (
-        <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
-          <div onClick={logout}>Log out</div>
-          <div
-            onClick={() => {
-              window.mixpanel.track('Verify Identity')
-              setShowKYCModal(true)
-            }}
-          >Verify Identity
-          </div>
-          <div
-            onClick={() => {
-              window.mixpanel.track('Rewards')
-              setIsModalOpen(true)
-            }}
-          >Rewards
-          </div>
-          <div onClick={showMyHistory}>My Questions/Answers</div>
-          {Boolean(testUsers.length) && (
-            <div className={styles.divider}>
-              Test Users
-            </div>
-          )}
-          {testUsers.map(i => (
-            <div key={i.fullName} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
-          ))}
-          {Boolean(testUsers.length) && (
-            <div onClick={() => changeUser()}>me</div>
-          )}
-        </div>
-      )}
 
       {
         username && (
@@ -141,17 +117,70 @@ export default forwardRef(({ logout, username, showMyHistory, changeUser, testUs
   }
 
   return (
-    <div
-      ref={node => {
-        ref.current = node
-        if (ref2) {
-          ref2(node)
-        }
-      }}
-      className={styles.container}
-      onClick={() => setShowDropdown(!showDropdown)}
-    >
-      {content}
+    <div style={{ display: 'flex', gap: 12, position: 'relative' }}>
+      <div
+        ref={node => {
+          ref.current = node
+          if (ref2) {
+            ref2(node)
+          }
+        }}
+        className={styles.container}
+        onClick={() => setShowDropdown(!showDropdown)}
+        style={{ width: (showKYCLogin || showXLogin) ? '40%' : '100%', textAlign: 'center' }}
+      >
+        {content}
+      </div>
+
+      {showXLogin && (
+        <div className={cn(styles.twitterSignIn, styles.container)} style={{ width: 'calc(60% - 12px)' }} onClick={handleTwitterLogin}>
+          <Text className={styles.username}>
+            Verify yourself with
+          </Text>
+          <XIcon />
+        </div>
+      )}
+
+      {showKYCLogin && (
+        <div className={cn(styles.twitterSignIn, styles.container)} style={{ width: 'calc(60% - 12px)' }} onClick={() => { setShowKYCModal(true) }}>
+          <Text className={styles.username}>
+            Verify yourself with
+          </Text>
+          <img src={KYCIcon} style={{ height: 27, marginBottom: 3 }} />
+        </div>
+      )}
+
+      {username && (
+        <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
+          <div onClick={logout}>Log out</div>
+          <div
+            onClick={() => {
+              window.mixpanel.track('Verify Identity')
+              setShowKYCModal(true)
+            }}
+          >Verify Identity
+          </div>
+          <div
+            onClick={() => {
+              window.mixpanel.track('Rewards')
+              setIsModalOpen(true)
+            }}
+          >Rewards
+          </div>
+          <div onClick={showMyHistory}>My Questions/Answers</div>
+          {Boolean(testUsers.length) && (
+            <div className={styles.divider}>
+              Test Users
+            </div>
+          )}
+          {testUsers.map(i => (
+            <div key={i.fullName} onClick={() => changeUser(i.fullName)}>{i.fullName}</div>
+          ))}
+          {Boolean(testUsers.length) && (
+            <div onClick={() => changeUser()}>me</div>
+          )}
+        </div>
+      )}
     </div>
   )
 })

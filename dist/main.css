@@ -347,7 +347,7 @@
   padding: 21px 18px;
   font-family: IBM Plex Sans;
   position: absolute;
-  bottom: calc(100% + 6px);
+  bottom: 100%;
   left: 0;
 }
 
@@ -1736,9 +1736,29 @@
   }
 }
 
+@media only screen and (width <= 380px) {
+  .aq6KZW_landing .aq6KZW_name {
+    font-size: 42px !important;
+  }
+
+  .aq6KZW_landing .aq6KZW_subtitle {
+    font-size: 22px !important;
+  }
+
+  .aq6KZW_landing .aq6KZW_open-app-button {
+    margin-top: 30px;
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+
+  .aq6KZW_landing .aq6KZW_open-app-button svg {
+    font-size: 14px;
+  }
+}
+
 .aq6KZW_landing .aq6KZW_name {
   color: #232323;
-  font-size: 55px;
+  font-size: 60px;
 }
 
 h1, h2 {

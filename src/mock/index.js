@@ -313,7 +313,7 @@ const MainScreenWithQuestions = () => (
     </QuestionCardsRow>
     <div style={{ width: '100%' }}>
       <NewQuestion />
-      <ActionsPanel handleTwitterLogin={() => console.log('test')} />
+      <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin />
     </div>
   </MainScreen>
 )
@@ -420,7 +420,7 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing />
+      {/* <Landing /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -461,11 +461,11 @@ const Authorized = () => {
             fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
             users={usersSlice}
           /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}

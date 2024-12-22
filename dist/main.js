@@ -1032,6 +1032,12 @@ const $1e3dbd7e69fec1c4$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 
 
 
+
+var $80078e45b13c3759$exports = {};
+$80078e45b13c3759$exports = new URL("kyc.31754f12.svg", "file:" + __filename).toString();
+
+
+
 var $13058157b3244d01$exports = {};
 
 $parcel$export($13058157b3244d01$exports, "container", () => $13058157b3244d01$export$34e0f9847d4c02dd, (v) => $13058157b3244d01$export$34e0f9847d4c02dd = v);
@@ -1101,7 +1107,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal:
         })
     });
 };
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showXLogin: showXLogin, showKYCLogin: showKYCLogin, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -1109,19 +1115,102 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
-            username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
-                children: [
-                    "Settings (",
-                    username,
-                    ")"
-                ]
+            username ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                    children: [
+                        "Settings (",
+                        username,
+                        ")"
+                    ]
+                })
             }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn,
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
                     children: "Sign in"
                 })
+            }),
+            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
+                sx: {
+                    color: "#2b2b2b"
+                }
+            })
+        ]
+    });
+    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+            ref: (node)=>{
+                if (ref2) ref2(node);
+            },
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+            style: {
+                justifyContent: "center",
+                border: "none",
+                fontSize: 16
+            },
+            onClick: ()=>{
+                setIsLoginModalOpen(true);
+            },
+            children: content
+        })
+    });
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        style: {
+            display: "flex",
+            gap: 12,
+            position: "relative"
+        },
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                ref: (node)=>{
+                    ref.current = node;
+                    if (ref2) ref2(node);
+                },
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
+                onClick: ()=>setShowDropdown(!showDropdown),
+                style: {
+                    width: showKYCLogin || showXLogin ? "40%" : "100%",
+                    textAlign: "center"
+                },
+                children: content
+            }),
+            showXLogin && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container),
+                style: {
+                    width: "calc(60% - 12px)"
+                },
+                onClick: handleTwitterLogin,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                        children: "Verify yourself with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                ]
+            }),
+            showKYCLogin && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container),
+                style: {
+                    width: "calc(60% - 12px)"
+                },
+                onClick: ()=>{
+                    setShowKYCModal(true);
+                },
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).username,
+                        children: "Verify yourself with"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                        src: (0, (/*@__PURE__*/$parcel$interopDefault($80078e45b13c3759$exports))),
+                        style: {
+                            height: 27,
+                            marginBottom: 3
+                        }
+                    })
+                ]
             }),
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1164,40 +1253,8 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         children: "me"
                     })
                 ]
-            }),
-            username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
-                sx: {
-                    color: "#2b2b2b"
-                }
             })
         ]
-    });
-    if (!username) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-            ref: (node)=>{
-                if (ref2) ref2(node);
-            },
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-            style: {
-                justifyContent: "center",
-                border: "none",
-                fontSize: 16
-            },
-            onClick: ()=>{
-                setIsLoginModalOpen(true);
-            },
-            children: content
-        })
-    });
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        ref: (node)=>{
-            ref.current = node;
-            if (ref2) ref2(node);
-        },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
-        onClick: ()=>setShowDropdown(!showDropdown),
-        children: content
     });
 });
 
