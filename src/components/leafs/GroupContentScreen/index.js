@@ -69,7 +69,7 @@ export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, clos
           <div className={styles.checkboxes__row}>
             <div className={styles.checkboxes__item}>
               <label className={`${styles.checkbox} ${styles['style-c']}`}>
-                <input type='checkbox' onChange={(e) => toggleVerifiedByX(e.target.checked)} />
+                <input type='checkbox' onChange={(e) => toggleVerifiedByKYC(e.target.checked)} />
                 <div className={styles.checkbox__checkmark} />
                 <div className={styles.checkbox__body}>
                   <span>verified by passport</span>

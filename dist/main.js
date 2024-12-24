@@ -2181,7 +2181,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                                             type: "checkbox",
-                                            onChange: (e)=>toggleVerifiedByX(e.target.checked)
+                                            onChange: (e)=>toggleVerifiedByKYC(e.target.checked)
                                         }),
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox__checkmark
