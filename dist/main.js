@@ -2085,7 +2085,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                             ]
                         })
                     }),
-                    user?.followerCount && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                    Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                         onClick: (e)=>{
                             e.stopPropagation();
                             window.mixpanel.track("X Profile Click", {

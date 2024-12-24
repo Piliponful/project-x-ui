@@ -28,7 +28,7 @@ export const User = ({ user, onUserClick, children, style }) => {
             </div>
           </FlipMove>
         </div>
-        {user?.followerCount && (
+        {Number.isInteger(user?.followerCount) && (
           <a
             onClick={e => {
               e.stopPropagation()
