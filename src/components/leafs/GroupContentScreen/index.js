@@ -8,6 +8,9 @@ import FlipMove from 'react-flip-move'
 
 import styles from './style.module.styl'
 
+import svg from '../UsersSearch/x-check.svg'
+import KYCIcon from '../ActionsPanel/kyc.svg'
+
 export const User = ({ user, onUserClick, children, style }) => {
   return (
     <div style={style} className={styles.userItem} key={user?._id} onClick={() => onUserClick(user)}>
@@ -18,7 +21,9 @@ export const User = ({ user, onUserClick, children, style }) => {
             <div className={styles.column}>
               <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
                 <span>{user?.fullName || 'loading'}</span>
-                <span>{humanNumber(user?.followerCount || 0)} followers</span>
+                {Number.isInteger(user?.followerCount) && <span>{humanNumber(user.followerCount)} followers</span>}
+                {user?.twitterVerified && user?.twitterVerified !== 'none' && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>twitter verified</span><img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} /></div>}
+                {user?.verifiedKYC && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>verified by passport</span><img src={KYCIcon} style={{ height: 20, width: 20, paddingLeft: 3, border: 'none' }} /></div>}
               </FlipMove>
             </div>
           </FlipMove>

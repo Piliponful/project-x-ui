@@ -1964,6 +1964,11 @@ $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
 
+var $2869377cb1e5210a$exports = {};
+$2869377cb1e5210a$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename).toString();
+
+
+
 const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
@@ -2004,10 +2009,56 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                                 children: user?.fullName || "loading"
                                             }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                            Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                                                 children: [
-                                                    (0, ($parcel$interopDefault($c5L0i$humannumber)))(user?.followerCount || 0),
+                                                    (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
                                                     " followers"
+                                                ]
+                                            }),
+                                            user?.twitterVerified && user?.twitterVerified !== "none" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                style: {
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    fontSize: 14,
+                                                    fontWeight: 300,
+                                                    color: "gray"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                        children: "twitter verified"
+                                                    }),
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($2869377cb1e5210a$exports))),
+                                                        style: {
+                                                            height: 16,
+                                                            width: 16,
+                                                            paddingLeft: 3,
+                                                            border: "none"
+                                                        }
+                                                    })
+                                                ]
+                                            }),
+                                            user?.verifiedKYC && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                style: {
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    fontSize: 14,
+                                                    fontWeight: 300,
+                                                    color: "gray"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                        children: "verified by passport"
+                                                    }),
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($80078e45b13c3759$exports))),
+                                                        style: {
+                                                            height: 20,
+                                                            width: 20,
+                                                            paddingLeft: 3,
+                                                            border: "none"
+                                                        }
+                                                    })
                                                 ]
                                             })
                                         ]
@@ -2567,9 +2618,6 @@ var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
-
-var $2869377cb1e5210a$exports = {};
-$2869377cb1e5210a$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename).toString();
 
 
 
