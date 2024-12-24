@@ -425,43 +425,42 @@ const Authorized = () => {
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      {/* {screenName && (
-        <UserHistoryTabs
-          answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
-          back={() => console.log('back')}
-          similarity={null}
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        >
-          {
-            selectedTab === 'questions'
-              ? (
-                <UserQuestionsHistory
-                  questions={mostAnsweredQuestions.slice(0, 1)}
-                  hasMore={false}
-                  fetchQuestions={() => console.log('fetch questions')}
-                />
-                )
-              : (
-                <UserQuestionsHistory
-                  questions={[]}
-                  hasMore={false}
-                  fetchQuestions={() => console.log('fetch questions')}
-                />
-                )
-          }
-        </UserHistoryTabs>
-      )} */}
+      <UserHistoryTabs
+        answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
+        back={() => console.log('back')}
+        similarity={null}
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+        user={users[0]}
+      >
+        {
+          selectedTab === 'questions'
+            ? (
+              <UserQuestionsHistory
+                questions={mostAnsweredQuestions.slice(0, 1)}
+                hasMore={false}
+                fetchQuestions={() => console.log('fetch questions')}
+              />
+              )
+            : (
+              <UserQuestionsHistory
+                questions={[]}
+                hasMore={false}
+                fetchQuestions={() => console.log('fetch questions')}
+              />
+              )
+        }
+      </UserHistoryTabs>
 
       {/* {!screenName && ( */}
       <>
         {/* <SidebarWithGroups /> */}
-        <GroupContentScreen
+        {/* <GroupContentScreen
           className='custom-groups-content'
           hasMore={hasMore}
           fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
           users={usersSlice}
-        />
+        /> */}
         {/* <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
