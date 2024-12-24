@@ -1198,6 +1198,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     width: "calc(60% - 12px)"
                 },
                 onClick: ()=>{
+                    window.mixpanel.track("Verify Identity");
                     setShowKYCModal(true);
                 },
                 children: [
@@ -1223,13 +1224,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: logout,
                         children: "Log out"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        onClick: ()=>{
-                            window.mixpanel.track("Verify Identity");
-                            setShowKYCModal(true);
-                        },
-                        children: "Verify Identity"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>{

@@ -351,7 +351,7 @@
   left: 0;
 }
 
-.rzmFQq_icon {
+.rzmFQq_dropdown > div, .rzmFQq_icon {
   cursor: pointer;
 }
 
@@ -372,6 +372,7 @@
 
 .rzmFQq_divider {
   color: #2b2b2b;
+  cursor: initial;
   border-top: 1px solid #25252524;
   justify-content: center;
   padding-top: 12px;

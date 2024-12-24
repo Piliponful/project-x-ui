@@ -144,7 +144,7 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
       )}
 
       {showKYCLogin && (
-        <div className={cn(styles.twitterSignIn, styles.container)} style={{ width: 'calc(60% - 12px)' }} onClick={() => { setShowKYCModal(true) }}>
+        <div className={cn(styles.twitterSignIn, styles.container)} style={{ width: 'calc(60% - 12px)' }} onClick={() => { window.mixpanel.track('Verify Identity'); setShowKYCModal(true) }}>
           <Text className={styles.username}>
             Verify yourself with
           </Text>
@@ -157,17 +157,11 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
           <div onClick={logout}>Log out</div>
           <div
             onClick={() => {
-              window.mixpanel.track('Verify Identity')
-              setShowKYCModal(true)
-            }}
-          >Verify Identity
-          </div>
-          <div
-            onClick={() => {
               window.mixpanel.track('Rewards')
               setIsModalOpen(true)
             }}
-          >Rewards
+          >
+            Rewards
           </div>
           <div onClick={showMyHistory}>My Questions/Answers</div>
           {Boolean(testUsers.length) && (
