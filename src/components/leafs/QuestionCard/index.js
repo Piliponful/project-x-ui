@@ -4,6 +4,7 @@ import ShareIcon from '@mui/icons-material/Share'
 // import ImageIcon from '@mui/icons-material/Image'
 import cn from 'classnames'
 // import { formatDistanceToNow, format } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns'
 
 import Title from './components/Title'
 import Stats from './components/Stats'
@@ -71,9 +72,12 @@ export default forwardRef(({
           <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
           {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond || redirectToLogin} />)}
           <div className={styles.expand}>
-            <a href={`/questions/${shortId}`}><OpenInNewIcon onClick={onClick} /></a>
-            <ShareIcon onClick={share} />
-            {/* <ImageIcon onClick={addImage} /> */}
+            <span style={{ color: '#00000063' }}>{formatDistanceToNow(new Date(createdAt * 1000))} ago</span>
+            <div style={{ display: 'flex', gap: 12 }}>
+              <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
+              <ShareIcon className={styles.icon} onClick={share} />
+              {/* <ImageIcon onClick={addImage} /> */}
+            </div>
           </div>
         </div>
       </article>

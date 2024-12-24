@@ -8,6 +8,7 @@ var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
+var $c5L0i$datefns = require("date-fns");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
@@ -595,6 +596,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
         ]
     });
 };
+
 
 
 
@@ -1639,6 +1641,7 @@ var $34a1d4be4ab80325$exports = {};
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
 $parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
+$parcel$export($34a1d4be4ab80325$exports, "icon", () => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27, (v) => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = v);
 $parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
 $parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
 $parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
@@ -1646,6 +1649,7 @@ $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$ex
 var $34a1d4be4ab80325$export$aa3e815946b80764;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
 var $34a1d4be4ab80325$export$464c821cd4347539;
+var $34a1d4be4ab80325$export$1ca1ec8b29a4ce27;
 var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
 var $34a1d4be4ab80325$export$275ee2193c25f37a;
 var $34a1d4be4ab80325$export$fd824239f75849bd;
@@ -1653,6 +1657,7 @@ var $34a1d4be4ab80325$export$5e1be761f603d585;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
+$34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = `GN153G_icon`;
 $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
 $34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
 $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
@@ -1731,14 +1736,33 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
                             children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                    href: `/questions/${shortId}`,
-                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
-                                        onClick: onClick
-                                    })
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    style: {
+                                        color: "#00000063"
+                                    },
+                                    children: [
+                                        (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt * 1000)),
+                                        " ago"
+                                    ]
                                 }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
-                                    onClick: share
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    style: {
+                                        display: "flex",
+                                        gap: 12
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                            href: `/questions/${shortId}`,
+                                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                                onClick: onClick
+                                            })
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                            onClick: share
+                                        })
+                                    ]
                                 })
                             ]
                         })

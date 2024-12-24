@@ -544,18 +544,13 @@
 
 .GN153G_expand {
   border-top: 1px solid #2b2b2b57;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
   width: calc(100% - 18px);
   margin-top: 15px;
   padding-top: 10px;
   display: flex;
-}
-
-.GN153G_expand svg {
-  color: #3b3b3b;
-  cursor: pointer;
 }
 
 .GN153G_username {
@@ -572,6 +567,16 @@
   color: #969696;
   font-size: 16px;
   font-weight: 300;
+}
+
+.GN153G_icon {
+  cursor: pointer;
+  color: #00000063;
+  transition: all .2s !important;
+}
+
+.GN153G_icon:hover {
+  color: #3b3b3b;
 }
 
 .OxsVWq_textarea {
