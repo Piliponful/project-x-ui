@@ -48,7 +48,7 @@ const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleuserc
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, hide: hideR, connected, handleTwitterLogin, isWalletModalOpenInitial = true, createUser, showKYC }) => {
+export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, updateJwt, hide: hideR, connected, handleTwitterLogin, isWalletModalOpenInitial = true, createUser, showKYC }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -237,7 +237,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   *Your first and last name, as well as country of origin and age will be public, if it's not clear yet
                 </b>
               </div>
-              <KYCComponent userId={userId} closeModal={() => setShowKYCModal(false)} />
+              <KYCComponent userId={userId} updateJwt={updateJwt} closeModal={() => setShowKYCModal(false)} />
             </Modal>
             <ContainerWithoutSwipes>
               {children}

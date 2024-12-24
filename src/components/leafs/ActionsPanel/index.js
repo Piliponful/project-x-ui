@@ -14,7 +14,7 @@ import Text from '../../shared/Text'
 
 import styles from './style.module.styl'
 
-export const KYCComponent = ({ userId, closeModal }) => {
+export const KYCComponent = ({ userId, updateJwt, closeModal }) => {
   const [accessToken, setAccessToken] = useState('')
 
   useEffect(() => {
@@ -35,10 +35,12 @@ export const KYCComponent = ({ userId, closeModal }) => {
 
   const handleMessage = (type, payload) => {
     console.log('Sumsub message:', type, payload)
-    // if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
-    //   // Handle post-verification logic here
-    //   closeModal()
-    // }
+    if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed' && updateJwt) {
+      console.log('success KYC')
+      updateJwt()
+      // Handle post-verification logic here
+      // closeModal()
+    }
   }
 
   const handleError = (error) => {

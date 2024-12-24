@@ -1060,7 +1060,7 @@ $13058157b3244d01$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
 $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
-const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal: closeModal })=>{
+const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: updateJwt, closeModal: closeModal })=>{
     const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
     (0, $c5L0i$react.useEffect)(()=>{
         const fetchAccessToken = async ()=>{
@@ -1080,10 +1080,12 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, closeModal:
     ]);
     const handleMessage = (type, payload)=>{
         console.log("Sumsub message:", type, payload);
-    // if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed') {
-    //   // Handle post-verification logic here
-    //   closeModal()
-    // }
+        if (type === "idCheck.onApplicantStatusChanged" && payload.reviewStatus === "completed" && updateJwt) {
+            console.log("success KYC");
+            updateJwt();
+        // Handle post-verification logic here
+        // closeModal()
+        }
     };
     const handleError = (error)=>{
         console.error("Sumsub error:", error);
@@ -1327,7 +1329,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
 // }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
@@ -1614,6 +1616,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b29d4b4923c0cd00$export$b1977eae5cbd7a49), {
                                 userId: userId,
+                                updateJwt: updateJwt,
                                 closeModal: ()=>setShowKYCModal(false)
                             })
                         ]
