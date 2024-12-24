@@ -1939,27 +1939,45 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 var $fc6e17f49e58291a$exports = {};
 
 $parcel$export($fc6e17f49e58291a$exports, "back", () => $fc6e17f49e58291a$export$7c341cb16fc91138, (v) => $fc6e17f49e58291a$export$7c341cb16fc91138 = v);
+$parcel$export($fc6e17f49e58291a$exports, "checkbox", () => $fc6e17f49e58291a$export$b07e517d22efa1ca, (v) => $fc6e17f49e58291a$export$b07e517d22efa1ca = v);
+$parcel$export($fc6e17f49e58291a$exports, "checkbox__body", () => $fc6e17f49e58291a$export$d3da3a95ea50034e, (v) => $fc6e17f49e58291a$export$d3da3a95ea50034e = v);
+$parcel$export($fc6e17f49e58291a$exports, "checkbox__checkmark", () => $fc6e17f49e58291a$export$340dac494ade0321, (v) => $fc6e17f49e58291a$export$340dac494ade0321 = v);
+$parcel$export($fc6e17f49e58291a$exports, "checkboxes__item", () => $fc6e17f49e58291a$export$760569eb394a6344, (v) => $fc6e17f49e58291a$export$760569eb394a6344 = v);
+$parcel$export($fc6e17f49e58291a$exports, "checkboxes__row", () => $fc6e17f49e58291a$export$6c3b9b20e13900f2, (v) => $fc6e17f49e58291a$export$6c3b9b20e13900f2 = v);
 $parcel$export($fc6e17f49e58291a$exports, "close", () => $fc6e17f49e58291a$export$8360e631d277ea4d, (v) => $fc6e17f49e58291a$export$8360e631d277ea4d = v);
 $parcel$export($fc6e17f49e58291a$exports, "column", () => $fc6e17f49e58291a$export$4e0c71f277ca26b3, (v) => $fc6e17f49e58291a$export$4e0c71f277ca26b3 = v);
 $parcel$export($fc6e17f49e58291a$exports, "imgFallback", () => $fc6e17f49e58291a$export$e94d20c87215d48b, (v) => $fc6e17f49e58291a$export$e94d20c87215d48b = v);
 $parcel$export($fc6e17f49e58291a$exports, "row", () => $fc6e17f49e58291a$export$120ff0929b202a6d, (v) => $fc6e17f49e58291a$export$120ff0929b202a6d = v);
 $parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e17f49e58291a$export$de3da254965f2f43, (v) => $fc6e17f49e58291a$export$de3da254965f2f43 = v);
+$parcel$export($fc6e17f49e58291a$exports, "style-c", () => $fc6e17f49e58291a$export$d8e3ffb8a71e7871, (v) => $fc6e17f49e58291a$export$d8e3ffb8a71e7871 = v);
 $parcel$export($fc6e17f49e58291a$exports, "userItem", () => $fc6e17f49e58291a$export$f6bda04bc7d10a12, (v) => $fc6e17f49e58291a$export$f6bda04bc7d10a12 = v);
 $parcel$export($fc6e17f49e58291a$exports, "usersContainer", () => $fc6e17f49e58291a$export$771ca420b1b6ed17, (v) => $fc6e17f49e58291a$export$771ca420b1b6ed17 = v);
 var $fc6e17f49e58291a$export$7c341cb16fc91138;
+var $fc6e17f49e58291a$export$b07e517d22efa1ca;
+var $fc6e17f49e58291a$export$d3da3a95ea50034e;
+var $fc6e17f49e58291a$export$340dac494ade0321;
+var $fc6e17f49e58291a$export$760569eb394a6344;
+var $fc6e17f49e58291a$export$6c3b9b20e13900f2;
 var $fc6e17f49e58291a$export$8360e631d277ea4d;
 var $fc6e17f49e58291a$export$4e0c71f277ca26b3;
 var $fc6e17f49e58291a$export$e94d20c87215d48b;
 var $fc6e17f49e58291a$export$120ff0929b202a6d;
 var $fc6e17f49e58291a$export$de3da254965f2f43;
+var $fc6e17f49e58291a$export$d8e3ffb8a71e7871;
 var $fc6e17f49e58291a$export$f6bda04bc7d10a12;
 var $fc6e17f49e58291a$export$771ca420b1b6ed17;
 $fc6e17f49e58291a$export$7c341cb16fc91138 = `zDJPrW_back`;
+$fc6e17f49e58291a$export$b07e517d22efa1ca = `zDJPrW_checkbox`;
+$fc6e17f49e58291a$export$d3da3a95ea50034e = `zDJPrW_checkbox__body`;
+$fc6e17f49e58291a$export$340dac494ade0321 = `zDJPrW_checkbox__checkmark`;
+$fc6e17f49e58291a$export$760569eb394a6344 = `zDJPrW_checkboxes__item`;
+$fc6e17f49e58291a$export$6c3b9b20e13900f2 = `zDJPrW_checkboxes__row`;
 $fc6e17f49e58291a$export$8360e631d277ea4d = `zDJPrW_close`;
 $fc6e17f49e58291a$export$4e0c71f277ca26b3 = `zDJPrW_column`;
 $fc6e17f49e58291a$export$e94d20c87215d48b = `zDJPrW_imgFallback`;
 $fc6e17f49e58291a$export$120ff0929b202a6d = `zDJPrW_row`;
 $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
+$fc6e17f49e58291a$export$d8e3ffb8a71e7871 = `zDJPrW_style-c`;
 $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
 
@@ -2085,7 +2103,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
         ]
     }, user?._id);
 };
-var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style, className: className }, ref)=>{
+var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ users: users, fetchUsers: fetchUsers, hasMore: hasMore, show: show, onUserClick: onUserClick, close: close, style: style, className: className, toggleVerifiedByX: toggleVerifiedByX, toggleVerifiedByKYC: toggleVerifiedByKYC }, ref)=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         id: "group-content-search-scroll-target",
         ref: ref,
@@ -2102,6 +2120,94 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).back,
                     onClick: close
+                })
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                style: {
+                    marginBottom: 32,
+                    display: "flex",
+                    gap: 8
+                },
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    style: {
+                        display: "flex",
+                        alignItems: "center",
+                        fontSize: 14,
+                        fontWeight: 300,
+                        color: "gray"
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__row,
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__item,
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))["style-c"]}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+                                            type: "checkbox",
+                                            onChange: (e)=>toggleVerifiedByX(e.target.checked)
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox__checkmark
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox__body,
+                                            children: [
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    children: "twitter verified"
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($2869377cb1e5210a$exports))),
+                                                    style: {
+                                                        height: 16,
+                                                        width: 16,
+                                                        paddingLeft: 3,
+                                                        border: "none"
+                                                    }
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__row,
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__item,
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))["style-c"]}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+                                            type: "checkbox",
+                                            onChange: (e)=>toggleVerifiedByX(e.target.checked)
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox__checkmark
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox__body,
+                                            children: [
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    children: "verified by passport"
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($80078e45b13c3759$exports))),
+                                                    style: {
+                                                        height: 16,
+                                                        width: 16,
+                                                        paddingLeft: 3,
+                                                        border: "none"
+                                                    }
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                        })
+                    ]
                 })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$reactinfinitescrollcomponent))), {

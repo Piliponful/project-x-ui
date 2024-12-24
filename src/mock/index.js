@@ -425,7 +425,7 @@ const Authorized = () => {
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      <UserHistoryTabs
+      {/* <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}
         similarity={null}
@@ -450,17 +450,19 @@ const Authorized = () => {
               />
               )
         }
-      </UserHistoryTabs>
+      </UserHistoryTabs> */}
 
       {/* {!screenName && ( */}
       <>
         {/* <SidebarWithGroups /> */}
-        {/* <GroupContentScreen
+        <GroupContentScreen
           className='custom-groups-content'
           hasMore={hasMore}
           fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
           users={usersSlice}
-        /> */}
+          toggleVerifiedByX={(toggleVerifiedByX) => console.log('toggleVerifiedByX, ', toggleVerifiedByX)}
+          toggleVerifiedByKYC={(toggleVerifiedByKYC) => console.log('toggleVerifiedByKYC, ', toggleVerifiedByKYC)}
+        />
         {/* <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />

@@ -5,3 +5,8 @@ article {
 * {
   font-family: 'IBM Plex Sans';
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

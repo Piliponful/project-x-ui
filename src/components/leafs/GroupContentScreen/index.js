@@ -48,10 +48,38 @@ export const User = ({ user, onUserClick, children, style }) => {
   )
 }
 
-export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style, className }, ref) => {
+export default forwardRef(({ users, fetchUsers, hasMore, show, onUserClick, close, style, className, toggleVerifiedByX, toggleVerifiedByKYC }, ref) => {
   return (
     <div id='group-content-search-scroll-target' ref={ref} style={{ ...(show && ({ display: 'flex' })), ...style }} className={cn(styles.screenWithGroupContent, className)}>
       <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>
+      <div style={{ marginBottom: 32, display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}>
+          <div className={styles.checkboxes__row}>
+            <div className={styles.checkboxes__item}>
+              <label className={`${styles.checkbox} ${styles['style-c']}`}>
+                <input type='checkbox' onChange={(e) => toggleVerifiedByX(e.target.checked)} />
+                <div className={styles.checkbox__checkmark} />
+                <div className={styles.checkbox__body}>
+                  <span>twitter verified</span>
+                  <img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div className={styles.checkboxes__row}>
+            <div className={styles.checkboxes__item}>
+              <label className={`${styles.checkbox} ${styles['style-c']}`}>
+                <input type='checkbox' onChange={(e) => toggleVerifiedByX(e.target.checked)} />
+                <div className={styles.checkbox__checkmark} />
+                <div className={styles.checkbox__body}>
+                  <span>verified by passport</span>
+                  <img src={KYCIcon} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} />
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
       <InfiniteScroll
         scrollableTarget='group-content-search-scroll-target'
         dataLength={users.length}
