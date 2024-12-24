@@ -268,7 +268,8 @@ const users = new Array(8).fill(1).map((_, index) => [
     username: 'piliponful',
     fullName: 'Maxim Pilipenko',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-    twitterVerified: false,
+    twitterVerified: true,
+    verifiedKYC: true,
     followerCount: '67',
     address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
   },
@@ -471,7 +472,7 @@ const Authorized = () => {
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
         {/* <Question {...(mostAnsweredQuestions[1])} /> */}
         {/* </div> */}
-        {/* <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} /> */}
+        <UsersSearch users={users.filter(i => i.username.includes('pili'))} search='pili' total={1} />
         {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
       </>
       {/* )} */}

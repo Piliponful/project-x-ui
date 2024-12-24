@@ -5,6 +5,9 @@ import humanNumber from 'human-number'
 import XIcon from '@mui/icons-material/X'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
+import svg from './x-check.svg'
+import KYCIcon from '../ActionsPanel/kyc.svg'
+
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
 import styles from './style.module.styl'
@@ -52,10 +55,12 @@ export default forwardRef(({ style, users, fetchUsers, hasMore, total, back, sea
                 {user.pictureUrl && <img src={user.pictureUrl} alt={`${user.name} profile picture`} />}
                 <div className={styles.column}>
                   {htmlOutput ? <span dangerouslySetInnerHTML={{ __html: htmlOutput }} /> : <span>{user.username}</span>}
-                  <span>{humanNumber(user.followerCount)} followers</span>
+                  {Number.isInteger(user?.followerCount) && <span>{humanNumber(user.followerCount)} followers</span>}
+                  {user?.twitterVerified && user?.twitterVerified !== 'none' && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>twitter verified</span><img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} /></div>}
+                  {user?.verifiedKYC && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>verified by passport</span><img src={KYCIcon} style={{ height: 20, width: 20, paddingLeft: 3, border: 'none' }} /></div>}
                 </div>
               </div>
-              {user?.followerCount && (
+              {Number.isInteger(user?.followerCount) && (
                 <a
                   onClick={e => {
                     e.stopPropagation()
