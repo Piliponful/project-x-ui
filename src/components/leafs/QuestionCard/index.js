@@ -72,7 +72,7 @@ export default forwardRef(({
           <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
           {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond || redirectToLogin} />)}
           <div className={styles.expand}>
-            <span style={{ color: '#00000063' }}>{formatDistanceToNow(new Date(createdAt * 1000))} ago</span>
+            <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt || 0 * 1000)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
               <ShareIcon className={styles.icon} onClick={share} />

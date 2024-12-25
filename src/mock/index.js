@@ -54,94 +54,87 @@ const groups = [
   { name: 'Anime-haters', userCount: 2243 }
 ]
 
-const mostAnsweredQuestions = [ // eslint-disable-line
+const mostAnsweredQuestions = [
   {
-    name: 'Tester?',
-    currentUserAnswer: 'No',
-    answersCount: { yes: 0, no: 0 },
+    _id: '664e4d1daf0b967629f5caae',
+    userId: '66422f0e814d3019c045efb3',
     username: 'piliponful',
-    _id: 0,
-    byMe: true,
-    // respond: () => {},
-    createdAt: 1735066365,
-    // yourOwnQuestion: true,
-    // userPictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-    // me: {
-    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-    //   answer: 'No'
-    // },
-    // he: {
-    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-    //   answer: 'Yes'
-    // }
-  },
-  {
-    name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas',
-    currentUserAnswer: 'No',
-    createdAt: 1735066365,
-    // he: {
-    //   pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-    //   answer: 'Yes'
-    // },
-    answersCount: { no: 383343, yes: 0 },
-    username: 'piliponful',
-    _id: 0,
-    byMe: true,
-    respond: () => {}
-  },
-  {
-    name: 'Will Luffy find one piece?',
-    currentUserAnswer: null,
-    answersCount: { no: 0, yes: 0 },
-    he: {
-      pictureUrl: 'https://pbs.twimg.com/profile_images/1745929905575993345/CkfQqk_t_400x400.jpg',
-      answer: 'Yes'
+    name: 'Do you support Trump?',
+    parentMessageId: null,
+    createdAt: 1716407581944,
+    totalAnswers: 15,
+    img: 'https://images.saatchiart.com/saatchi/984876/art/12057223/11119449-DYQYVMKO-7.jpg',
+    answersCount: {
+      yes: 10,
+      no: 5
     },
-    username: 'piliponful',
-    _id: 1,
-    createdAt: 1735066365,
-    byMe: true
+    noPercentage: 33,
+    shortId: 0,
+    hide: true
   },
   {
-    name: 'Do you like naruto?',
-    currentUserAnswer: null,
-    answersCount: { yes: 240325, no: 101333 },
-    username: 'piliponful',
-    createdAt: 1735066365,
-    _id: 2
+    _id: '6650964de52e25cf29ecc054',
+    userId: '668c3ea7af22bce6f34641ad',
+    username: 'KirillMark46849',
+    name: 'Do you think Ukraine will win in the war ?',
+    parentMessageId: null,
+    createdAt: 1716557389613,
+    totalAnswers: 13,
+    img: 'https://as2.ftcdn.net/v2/jpg/05/47/25/61/1000_F_547256145_znzOGAI54Zr4Lh82NemhVHf8Mr6aeDmV.jpg',
+    answersCount: {
+      yes: 4,
+      no: 9
+    },
+    shortId: 2,
+    noPercentage: 69
   },
   {
-    name: 'Do you like battle between Sasuke and Naruto?',
-    // currentUserAnswer: 'No',
-    answersCount: { yes: 80341, no: 280341 },
+    _id: '6651c5dac4df33de39d4875d',
+    userId: '66422f0e814d3019c045efb3',
     username: 'piliponful',
-    createdAt: 1735066365,
-    _id: 3
+    name: 'Are you willing to pay more taxes so other people can have food and heathcare?',
+    img: 'https://cdn2.oceansbridge.com/2017/10/15100428/The-Payment-of-Taxes-Georges-de-La-Tour-oil-painting.jpg',
+    parentMessageId: null,
+    createdAt: 1716635097983,
+    totalAnswers: 4,
+    answersCount: {
+      yes: 2,
+      no: 2
+    },
+    shortId: 6,
+    noPercentage: 50
   },
   {
-    name: 'Do you believe Israel is genociding Gaza?',
-    // currentUserAnswer: 'Yes',
-    answersCount: { yes: 231031, no: 30328 },
-    username: 'piliponful',
-    createdAt: 1735066365,
-    _id: 4
+    _id: '665338c333ac78651bcafe6d',
+    userId: '668c3ea7af22bce6f34641ad',
+    username: 'KirillMark46849',
+    name: 'Do you think Biden will win the election?',
+    img: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/joe-biden-portrait-watercolor-with-american-flag-stockphotosart-com.jpg',
+    parentMessageId: null,
+    createdAt: 1716730051552,
+    totalAnswers: 4,
+    answersCount: {
+      yes: 0,
+      no: 4
+    },
+    shortId: 9,
+    noPercentage: 100
   },
   {
-    name: 'Do you believe in free speech?',
-    // currentUserAnswer: 'Yes',
-    answersCount: { yes: 231031, no: 30328 },
+    _id: '6658f55b71d200e0657cdacc',
+    userId: '66422f0e814d3019c045efb3',
     username: 'piliponful',
-    createdAt: 1735066365,
-    _id: 5
-  },
-  {
-    name: 'Do you you support Trump?',
-    // currentUserAnswer: 'Yes',
-    answersCount: { yes: 231031, no: 30328 },
-    username: 'piliponful',
-    createdAt: 1735066365,
-    _id: 6,
-    img: 'https://www.meisterdrucke.ie/kunstwerke/1260px/F_Abderrahim_-_Donald_Trump_Portrait_painting_for_Sale_Wall_Art_Prints_Framed_Art_-_%28MeisterDrucke-1478499%29.jpg'
+    name: 'Will this app be successful?',
+    img: 'https://media.carnegie.org/filer_public_thumbnails/filer_public/0d/1a/0d1a5205-4724-4dae-a0bc-3bffa0ebc5dc/scene_at_the_signing_of_the_constitution_of_the_united_states.jpg__928x618_q85_crop_subsampling-2_upscale.jpg',
+    parentMessageId: null,
+    createdAt: 1717106011368,
+    totalAnswers: 2,
+    answersCount: {
+      yes: 2,
+      no: 0
+    },
+    shortId: 12,
+    noPercentage: 0
   }
 ]
 
@@ -199,7 +192,7 @@ const mostAnsweredQuestionsComponents = mostAnsweredQuestions.map(i => (
     key={i.name}
     {...i}
     // respond={response => console.log('respond ' + response)}
-    createNewGroup={content => console.log('create new group ' + content)}
+    createNewGroup={name => console.log('create new group ' + name)}
   />
 ))
 
@@ -457,7 +450,7 @@ const Authorized = () => {
       <>
         {/* <SidebarWithGroups /> */}
         {/* <GroupContentScreen
-          className='custom-groups-content'
+          className='custom-groups-name'
           hasMore={hasMore}
           fetchUsers={() => { setUsers([...usersSlice, users.slice(offset, offset + 10)]); setOffset(offset + 10); console.log('loaded new users') }}
           users={usersSlice}

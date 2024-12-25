@@ -1741,7 +1741,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         color: "#00000063"
                                     },
                                     children: [
-                                        (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt * 1000)),
+                                        (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt || 0)),
                                         " ago"
                                     ]
                                 }),
