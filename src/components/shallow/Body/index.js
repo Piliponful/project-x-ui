@@ -21,7 +21,9 @@ export const MainScreenSwipeContext = React.createContext({
   setShowSearch: null,
   showSearch: false,
   setAnswer: () => {},
-  setShowKYCModal: () => {}
+  setShowKYCModal: () => {},
+  setSelectedMessage: () => {},
+  setAddImgModal: () => {}
 })
 
 const customStyles = {
@@ -48,7 +50,7 @@ const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleuserc
 
 Modal.setAppElement('#app')
 
-export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, updateJwt, hide: hideR, connected, handleTwitterLogin, isWalletModalOpenInitial = true, createUser, showKYC }) => {
+export default ({ children, includeSwipes, address, payout, userId, connectToWallet: connectToWalletR, addImage, updateJwt, hide: hideR, connected, handleTwitterLogin, isWalletModalOpenInitial = true, createUser, showKYC }) => {
   const [screenName, toggleScreen] = useState('uninitialized')
   const [skipScreen, setSkipScreen] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -57,6 +59,9 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
   const [showKYCModal, setShowKYCModal] = useState(false)
   const [answer, setAnswer] = useState(null)
+  const [addImgModal, setAddImgModal] = useState(null)
+  const [selectedMessage, setSelectedMessage] = useState(false)
+  const [imgUrl, setImgUrl] = useState('')
 
   useEffect(() => {
     const handler = () => {
@@ -130,7 +135,9 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             setIsWalletModalOpen,
             setIsLoginModalOpen,
             setAnswer,
-            setShowKYCModal
+            setShowKYCModal,
+            setAddImgModal,
+            setSelectedMessage
           }}
         >
           <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
@@ -238,6 +245,20 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                 </b>
               </div>
               <KYCComponent userId={userId} updateJwt={updateJwt} closeModal={() => setShowKYCModal(false)} />
+            </Modal>
+            <Modal
+              isOpen={addImgModal}
+              onRequestClose={() => setAddImgModal(false)}
+              style={customStyles}
+              shouldCloseOnOverlayClick={false}
+            >
+              <div onClick={() => setAddImgModal(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
+              <div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
+                <input className={styles.input} placeholder='Place img url here...' onChange={e => setImgUrl(e.target.value)} value={imgUrl} />
+                <button className={styles.search} onClick={() => { addImage(selectedMessage, imgUrl) }}>
+                  send
+                </button>
+              </div>
             </Modal>
             <ContainerWithoutSwipes>
               {children}

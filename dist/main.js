@@ -9,6 +9,7 @@ var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-i
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
 var $c5L0i$datefns = require("date-fns");
+var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
@@ -596,6 +597,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
         ]
     });
 };
+
 
 
 
@@ -1266,8 +1268,10 @@ $parcel$export($941289f31472d1d3$exports, "body", () => $941289f31472d1d3$export
 $parcel$export($941289f31472d1d3$exports, "close", () => $941289f31472d1d3$export$8360e631d277ea4d, (v) => $941289f31472d1d3$export$8360e631d277ea4d = v);
 $parcel$export($941289f31472d1d3$exports, "connectButton", () => $941289f31472d1d3$export$53a6eba4a816532e, (v) => $941289f31472d1d3$export$53a6eba4a816532e = v);
 $parcel$export($941289f31472d1d3$exports, "hide", () => $941289f31472d1d3$export$fe8985bb6374093c, (v) => $941289f31472d1d3$export$fe8985bb6374093c = v);
+$parcel$export($941289f31472d1d3$exports, "input", () => $941289f31472d1d3$export$b7e3ae3d7c15e42e, (v) => $941289f31472d1d3$export$b7e3ae3d7c15e42e = v);
 $parcel$export($941289f31472d1d3$exports, "modalContent", () => $941289f31472d1d3$export$add244bda2f9423c, (v) => $941289f31472d1d3$export$add244bda2f9423c = v);
 $parcel$export($941289f31472d1d3$exports, "row", () => $941289f31472d1d3$export$120ff0929b202a6d, (v) => $941289f31472d1d3$export$120ff0929b202a6d = v);
+$parcel$export($941289f31472d1d3$exports, "search", () => $941289f31472d1d3$export$d76128d007d19019, (v) => $941289f31472d1d3$export$d76128d007d19019 = v);
 $parcel$export($941289f31472d1d3$exports, "twitterSignIn", () => $941289f31472d1d3$export$6c489d6abe11ec5c, (v) => $941289f31472d1d3$export$6c489d6abe11ec5c = v);
 var $941289f31472d1d3$export$f7d3c097ceca6c15;
 var $941289f31472d1d3$export$802cfe72001a1ee;
@@ -1275,8 +1279,10 @@ var $941289f31472d1d3$export$32180ef41b15b513;
 var $941289f31472d1d3$export$8360e631d277ea4d;
 var $941289f31472d1d3$export$53a6eba4a816532e;
 var $941289f31472d1d3$export$fe8985bb6374093c;
+var $941289f31472d1d3$export$b7e3ae3d7c15e42e;
 var $941289f31472d1d3$export$add244bda2f9423c;
 var $941289f31472d1d3$export$120ff0929b202a6d;
+var $941289f31472d1d3$export$d76128d007d19019;
 var $941289f31472d1d3$export$6c489d6abe11ec5c;
 $941289f31472d1d3$export$f7d3c097ceca6c15 = `sLin6a_address`;
 $941289f31472d1d3$export$802cfe72001a1ee = `sLin6a_amount`;
@@ -1284,8 +1290,10 @@ $941289f31472d1d3$export$32180ef41b15b513 = `sLin6a_body`;
 $941289f31472d1d3$export$8360e631d277ea4d = `sLin6a_close`;
 $941289f31472d1d3$export$53a6eba4a816532e = `sLin6a_connectButton`;
 $941289f31472d1d3$export$fe8985bb6374093c = `sLin6a_hide`;
+$941289f31472d1d3$export$b7e3ae3d7c15e42e = `sLin6a_input`;
 $941289f31472d1d3$export$add244bda2f9423c = `sLin6a_modalContent`;
 $941289f31472d1d3$export$120ff0929b202a6d = `sLin6a_row`;
+$941289f31472d1d3$export$d76128d007d19019 = `sLin6a_search`;
 $941289f31472d1d3$export$6c489d6abe11ec5c = `sLin6a_twitterSignIn`;
 
 
@@ -1303,7 +1311,9 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setShowSearch: null,
     showSearch: false,
     setAnswer: ()=>{},
-    setShowKYCModal: ()=>{}
+    setShowKYCModal: ()=>{},
+    setSelectedMessage: ()=>{},
+    setAddImgModal: ()=>{}
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -1325,7 +1335,7 @@ const $0c70feff32ca6a2b$var$customStyles = {
 // }
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
-var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
+var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, addImage: addImage, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
@@ -1334,6 +1344,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
     const [showKYCModal, setShowKYCModal] = (0, $c5L0i$react.useState)(false);
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
+    const [addImgModal, setAddImgModal] = (0, $c5L0i$react.useState)(null);
+    const [selectedMessage, setSelectedMessage] = (0, $c5L0i$react.useState)(false);
+    const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)("");
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1393,7 +1406,9 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                 setIsWalletModalOpen: setIsWalletModalOpen,
                 setIsLoginModalOpen: setIsLoginModalOpen,
                 setAnswer: setAnswer,
-                setShowKYCModal: setShowKYCModal
+                setShowKYCModal: setShowKYCModal,
+                setAddImgModal: setAddImgModal,
+                setSelectedMessage: setSelectedMessage
             },
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1617,6 +1632,47 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                             })
                         ]
                     }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($c5L0i$reactmodal))), {
+                        isOpen: addImgModal,
+                        onRequestClose: ()=>setAddImgModal(false),
+                        style: $0c70feff32ca6a2b$var$customStyles,
+                        shouldCloseOnOverlayClick: false,
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                onClick: ()=>setAddImgModal(false),
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                        children: "Verify your Identity"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                style: {
+                                    marginBottom: 20,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: 12
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).input,
+                                        placeholder: "Place img url here...",
+                                        onChange: (e)=>setImgUrl(e.target.value),
+                                        value: imgUrl
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).search,
+                                        onClick: ()=>{
+                                            addImage(selectedMessage, imgUrl);
+                                        },
+                                        children: "send"
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$97295e60e7f371e1), {
                         children: children
                     })
@@ -1664,7 +1720,7 @@ $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, addImage: addImage, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track("Share", {
@@ -1677,7 +1733,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             });
         }
     };
-    const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const { setIsLoginModalOpen: setIsLoginModalOpen, setAddImgModal: setAddImgModal, setSelectedMessage: setSelectedMessage, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const redirectToLogin = (answer)=>{
         // eslint-disable-next-line no-undef
         setIsLoginModalOpen(true);
@@ -1741,7 +1797,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         color: "#00000063"
                                     },
                                     children: [
-                                        (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt || 0)),
+                                        (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt * 1000)),
                                         " ago"
                                     ]
                                 }),
@@ -1761,6 +1817,13 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                             onClick: share
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                            onClick: ()=>{
+                                                setAddImgModal(true);
+                                                setSelectedMessage(parentMessageId);
+                                            }
                                         })
                                     ]
                                 })

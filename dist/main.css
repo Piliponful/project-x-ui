@@ -495,6 +495,42 @@
   font-family: Google Sans, arial, sans-serif;
 }
 
+.sLin6a_search {
+  cursor: pointer;
+  color: #3b3b3b;
+  background: none;
+  border: 1px solid #59acd6;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 9px 16px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  transition: color .1s;
+  display: flex;
+}
+
+.sLin6a_search svg {
+  color: #3b3b3b;
+  margin-left: 8px;
+  transition: color .1s;
+}
+
+.sLin6a_input {
+  box-sizing: border-box;
+  caret-color: #3b3b3b;
+  color: #3b3b3b;
+  background: #2b2b2b0f;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 80%;
+  padding: 10px 0 10px 15px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+}
+
 .GN153G_card {
   box-sizing: border-box;
   background: none;

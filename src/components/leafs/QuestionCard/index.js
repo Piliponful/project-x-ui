@@ -1,9 +1,8 @@
 import React, { forwardRef, useContext } from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ShareIcon from '@mui/icons-material/Share'
-// import ImageIcon from '@mui/icons-material/Image'
+import ImageIcon from '@mui/icons-material/Image'
 import cn from 'classnames'
-// import { formatDistanceToNow, format } from 'date-fns'
 import { formatDistanceToNow } from 'date-fns'
 
 import Title from './components/Title'
@@ -20,7 +19,6 @@ export default forwardRef(({
   onUserClick,
   img,
   createdAt,
-  addImage,
   username,
   name,
   answersCount,
@@ -48,7 +46,7 @@ export default forwardRef(({
     }
   }
 
-  const { setIsLoginModalOpen, setAnswer } = useContext(MainScreenSwipeContext)
+  const { setIsLoginModalOpen, setAddImgModal, setSelectedMessage, setAnswer } = useContext(MainScreenSwipeContext)
 
   const redirectToLogin = answer => {
     // eslint-disable-next-line no-undef
@@ -68,15 +66,20 @@ export default forwardRef(({
           <Title>
             <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
           </Title>
-          {/* {createdAt && <p style={{ fontFamily: 'IBM Plex Sans' }}>{formatDistanceToNow(new Date(createdAt))} ago ({format(new Date(createdAt), 'PPPPp')})</p>} */}
           <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
           {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond || redirectToLogin} />)}
           <div className={styles.expand}>
-            <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt || 0 * 1000)))} ago</span>
+            <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt * 1000)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
               <ShareIcon className={styles.icon} onClick={share} />
-              {/* <ImageIcon onClick={addImage} /> */}
+              <ImageIcon
+                className={styles.icon}
+                onClick={() => {
+                  setAddImgModal(true)
+                  setSelectedMessage(parentMessageId)
+                }}
+              />
             </div>
           </div>
         </div>
