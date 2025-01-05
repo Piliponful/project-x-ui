@@ -31,7 +31,8 @@ export default forwardRef(({
   handleTwitterLogin,
   parentMessageId,
   createUser,
-  trackConversion
+  trackConversion,
+  addImageAvailable
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -73,13 +74,15 @@ export default forwardRef(({
             <div style={{ display: 'flex', gap: 12 }}>
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
               <ShareIcon className={styles.icon} onClick={share} />
-              <ImageIcon
-                className={styles.icon}
-                onClick={() => {
-                  setAddImgModal(true)
-                  setSelectedMessage(parentMessageId)
-                }}
-              />
+              {addImageAvailable && (
+                <ImageIcon
+                  className={styles.icon}
+                  onClick={() => {
+                    setAddImgModal(true)
+                    setSelectedMessage(parentMessageId)
+                  }}
+                />
+              )}
             </div>
           </div>
         </div>

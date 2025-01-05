@@ -77,6 +77,7 @@ export const Landing = forwardRef(({ jwt }, ref) => {
             </div>
           </> */}
           <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
+          <span className={styles.privacy}><a href='/privacy-policy'>privacy policy</a></span>
         </div>
       </div>
     </>

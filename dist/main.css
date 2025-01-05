@@ -1962,6 +1962,22 @@ i.aq6KZW_scroll {
   box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
 }
 
+.aq6KZW_privacy {
+  letter-spacing: 0;
+  color: gray;
+  font-weight: 200;
+  line-height: 1;
+  position: absolute;
+  bottom: -2px;
+  left: 10px;
+}
+
+.aq6KZW_privacy a {
+  color: inherit;
+  font-size: 15px;
+  text-decoration: none;
+}
+
 .aq6KZW_made-by {
   letter-spacing: 0;
   font-size: 14px;

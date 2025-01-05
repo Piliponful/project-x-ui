@@ -252,7 +252,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
               style={customStyles}
               shouldCloseOnOverlayClick={false}
             >
-              <div onClick={() => setAddImgModal(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
+              <div onClick={() => setAddImgModal(false)} className={styles.close}><h2>Add Art to the Question</h2><CloseIcon /></div>
               <div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
                 <input className={styles.input} placeholder='Place img url here...' onChange={e => setImgUrl(e.target.value)} value={imgUrl} />
                 <button className={styles.search} onClick={() => { addImage(selectedMessage, imgUrl) }}>

@@ -1643,7 +1643,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                        children: "Verify your Identity"
+                                        children: "Add Art to the Question"
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {})
                                 ]
@@ -1720,7 +1720,7 @@ $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track("Share", {
@@ -1818,7 +1818,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                             onClick: share
                                         }),
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
+                                        addImageAvailable && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                             onClick: ()=>{
                                                 setAddImgModal(true);
@@ -3626,6 +3626,7 @@ $parcel$export($af1ad4f19d8ab63f$exports, "made-by", () => $af1ad4f19d8ab63f$exp
 $parcel$export($af1ad4f19d8ab63f$exports, "mobile-second-text", () => $af1ad4f19d8ab63f$export$9b4a162e4d9f672, (v) => $af1ad4f19d8ab63f$export$9b4a162e4d9f672 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "name", () => $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6, (v) => $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "open-app-button", () => $af1ad4f19d8ab63f$export$ae608c4430a9e9fc, (v) => $af1ad4f19d8ab63f$export$ae608c4430a9e9fc = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "privacy", () => $af1ad4f19d8ab63f$export$116a08ee153e3bde, (v) => $af1ad4f19d8ab63f$export$116a08ee153e3bde = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "scroll", () => $af1ad4f19d8ab63f$export$209876d7b1ac8f3, (v) => $af1ad4f19d8ab63f$export$209876d7b1ac8f3 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "scrollIcon", () => $af1ad4f19d8ab63f$export$efb197c1da01f76f, (v) => $af1ad4f19d8ab63f$export$efb197c1da01f76f = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "scrollText", () => $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5, (v) => $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5 = v);
@@ -3648,6 +3649,7 @@ var $af1ad4f19d8ab63f$export$101a475b15c86041;
 var $af1ad4f19d8ab63f$export$9b4a162e4d9f672;
 var $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6;
 var $af1ad4f19d8ab63f$export$ae608c4430a9e9fc;
+var $af1ad4f19d8ab63f$export$116a08ee153e3bde;
 var $af1ad4f19d8ab63f$export$209876d7b1ac8f3;
 var $af1ad4f19d8ab63f$export$efb197c1da01f76f;
 var $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5;
@@ -3672,6 +3674,7 @@ $af1ad4f19d8ab63f$export$101a475b15c86041 = `aq6KZW_made-by`;
 $af1ad4f19d8ab63f$export$9b4a162e4d9f672 = `aq6KZW_mobile-second-text`;
 $af1ad4f19d8ab63f$export$a8ff84c12d48cfa6 = `aq6KZW_name`;
 $af1ad4f19d8ab63f$export$ae608c4430a9e9fc = `aq6KZW_open-app-button`;
+$af1ad4f19d8ab63f$export$116a08ee153e3bde = `aq6KZW_privacy`;
 $af1ad4f19d8ab63f$export$209876d7b1ac8f3 = `aq6KZW_scroll`;
 $af1ad4f19d8ab63f$export$efb197c1da01f76f = `aq6KZW_scrollIcon`;
 $af1ad4f19d8ab63f$export$b21f6e6a6b9fbbc5 = `aq6KZW_scrollText`;
@@ -3832,6 +3835,13 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                     children: "piliponful"
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                href: "/privacy-policy",
+                                children: "privacy policy"
+                            })
                         })
                     ]
                 })
