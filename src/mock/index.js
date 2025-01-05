@@ -423,10 +423,10 @@ const Authorized = () => {
 
   return (
     <>
-      {/* <Landing /> */}
+      <Landing />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
-      <SidebarWithQuestions />
+      {/* <SidebarWithQuestions /> */}
       {/* <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}

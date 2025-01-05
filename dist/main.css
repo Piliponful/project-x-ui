@@ -1966,9 +1966,9 @@ i.aq6KZW_scroll {
   letter-spacing: 0;
   color: gray;
   font-weight: 200;
-  line-height: 1;
+  line-height: 15px;
   position: absolute;
-  bottom: -2px;
+  bottom: 12px;
   left: 10px;
 }
 
