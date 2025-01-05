@@ -1583,7 +1583,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("button", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).twitterSignIn,
-                                        onClick: handleTwitterLogin,
+                                        onClick: ()=>handleTwitterLogin(`sendEmails=${sendEmails}`),
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {}),
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {

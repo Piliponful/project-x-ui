@@ -214,7 +214,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                   cookiePolicy='single_host_origin'
                   prompt_parent_id='tester-tester'
                 />
-                <button className={styles.twitterSignIn} onClick={handleTwitterLogin}>
+                <button className={styles.twitterSignIn} onClick={() => handleTwitterLogin(`sendEmails=${sendEmails}`)}>
                   <XIcon />
                   <Text style={{ flexGrow: 1 }} className={styles.username}>
                     Sign in with X
