@@ -416,7 +416,7 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing />
+      {/* <Landing /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -458,11 +458,11 @@ const Authorized = () => {
           toggleVerifiedByX={(toggleVerifiedByX) => console.log('toggleVerifiedByX, ', toggleVerifiedByX)}
           toggleVerifiedByKYC={(toggleVerifiedByKYC) => console.log('toggleVerifiedByKYC, ', toggleVerifiedByKYC)}
         /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}

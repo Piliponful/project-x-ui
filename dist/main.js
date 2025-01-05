@@ -1327,12 +1327,12 @@ const $0c70feff32ca6a2b$var$customStyles = {
         flexDirection: "column"
     }
 };
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = ()=>{};
+window.mixpanel = {
+    track: (...rest)=>{
+        console.log(rest);
+    }
+};
 const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
 (0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, addImage: addImage, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
@@ -1347,6 +1347,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [addImgModal, setAddImgModal] = (0, $c5L0i$react.useState)(null);
     const [selectedMessage, setSelectedMessage] = (0, $c5L0i$react.useState)(false);
     const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)("");
+    const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1377,7 +1378,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         const decoded = (0, $c5L0i$jwtdecode.jwtDecode)(userInfo);
         await createUser({
             ...answer,
-            ...decoded
+            ...decoded,
+            sendEmails: sendEmails
         });
         window.gtag_report_conversion();
         setIsLoginModalOpen(false);
@@ -1588,6 +1590,39 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                 children: "Sign in with X"
                                             })
                                         ]
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkboxes__row,
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkboxes__item,
+                                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
+                                                style: {
+                                                    display: "flex",
+                                                    gap: 4
+                                                },
+                                                className: `${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports)))["style-c"]}`,
+                                                children: [
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+                                                        style: {
+                                                            height: 13,
+                                                            marginTop: 4
+                                                        },
+                                                        checked: sendEmails,
+                                                        type: "checkbox",
+                                                        onChange: (e)=>setSendEmails(e.target.checked)
+                                                    }),
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkbox__checkmark
+                                                    }),
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkbox__body,
+                                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                            children: "We will send you one email a week about most answered polls of that week."
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        })
                                     })
                                 ]
                             })

@@ -39,12 +39,12 @@ const customStyles = {
   }
 }
 
-// window.gtag_report_conversion = () => {}
-// window.mixpanel = {
-//   track: (...rest) => {
-//     console.log(rest)
-//   }
-// }
+window.gtag_report_conversion = () => {}
+window.mixpanel = {
+  track: (...rest) => {
+    console.log(rest)
+  }
+}
 
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
@@ -62,6 +62,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [addImgModal, setAddImgModal] = useState(null)
   const [selectedMessage, setSelectedMessage] = useState(false)
   const [imgUrl, setImgUrl] = useState('')
+  const [sendEmails, setSendEmails] = useState(true)
 
   useEffect(() => {
     const handler = () => {
@@ -103,7 +104,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const handleLoginSuccess = async (credentialResponse) => {
     const userInfo = credentialResponse.credential
     const decoded = jwtDecode(userInfo)
-    await createUser({ ...answer, ...decoded })
+    await createUser({ ...answer, ...decoded, sendEmails })
     window.gtag_report_conversion()
     setIsLoginModalOpen(false)
   }
@@ -226,6 +227,18 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                     Sign in with X
                   </Text>
                 </button>
+
+                <div className={styles.checkboxes__row}>
+                  <div className={styles.checkboxes__item}>
+                    <label style={{ display: 'flex', gap: 4 }} className={`${styles.checkbox} ${styles['style-c']}`}>
+                      <input style={{ height: 13, marginTop: 4 }} checked={sendEmails} type='checkbox' onChange={(e) => setSendEmails(e.target.checked)} />
+                      <div className={styles.checkbox__checkmark} />
+                      <div className={styles.checkbox__body}>
+                        <span>We will send you one email a week about most answered polls of that week.</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </div>
             </Modal>
             <Modal
