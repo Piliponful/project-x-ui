@@ -400,6 +400,13 @@ const messages = [{
   username: 'sneako'
 }]
 
+window.gtag_report_conversion = () => {}
+window.mixpanel = {
+  track: (...rest) => {
+    console.log(rest)
+  }
+}
+
 const Authorized = () => {
   const {
     screenName,

@@ -39,15 +39,6 @@ const customStyles = {
   }
 }
 
-if (!process.env.HOST) {
-  console.log('-----------------')
-  window.gtag_report_conversion = () => {}
-  window.mixpanel = {
-    track: (...rest) => {
-      console.log(rest)
-    }
-  }
-}
 const clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com' // Replace with your actual Client ID
 
 Modal.setAppElement('#app')
