@@ -65,7 +65,7 @@ export const KYCComponent = ({ userId, updateJwt, closeModal }) => {
 
 export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
-  const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
+  const ref = useDetectClickOutside({ onTriggered: () => console.log('on trigger') || setShowDropdown(false) })
   const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
 
   const content = (
@@ -121,15 +121,21 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
   return (
     <div style={{ display: 'flex', gap: 12, position: 'relative' }}>
       <div
-        ref={node => {
-          ref.current = node
-          if (ref2) {
-            ref2(node)
-          }
-        }}
+        // ref={node => {
+        //   ref.current = node
+        //   if (ref2) {
+        //     ref2(node)
+        //   }
+        // }}
         className={styles.container}
-        onClick={() => setShowDropdown(!showDropdown)}
+        onClick={(e) => { console.log('test dropdown true'); e.stopPropagation(); setShowDropdown(!showDropdown) }}
         style={{ width: (showKYCLogin || showXLogin) ? '40%' : '100%', textAlign: 'center' }}
+        // ref={node => {
+        //   ref.current = node
+        //   if (ref2) {
+        //     ref2(node)
+        //   }
+        // }}
       >
         {content}
       </div>
@@ -153,7 +159,16 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
       )}
 
       {username && (
-        <div style={{ display: showDropdown ? 'flex' : 'none' }} className={styles.dropdown}>
+        <div
+          style={{ display: showDropdown ? 'flex' : 'none' }}
+          className={styles.dropdown}
+          ref={node => {
+            ref.current = node
+            if (ref2) {
+              ref2(node)
+            }
+          }}
+        >
           <div onClick={logout}>Log out</div>
           <div
             onClick={() => {
