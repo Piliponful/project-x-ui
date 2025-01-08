@@ -941,18 +941,18 @@ var $f5aef85d7fbd61f1$export$33b0e16035b753e;
 $f5aef85d7fbd61f1$export$33b0e16035b753e = `b4MS9q_answerButtons`;
 
 
-var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style })=>{
+var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style, loading: loading })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($f5aef85d7fbd61f1$exports))).answerButtons,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
-                disabled: !respond,
+                disabled: loading || !respond,
                 answer: "Yes",
                 respond: ()=>respond("yes")
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
-                disabled: !respond,
+                disabled: loading || !respond,
                 answer: "No",
                 respond: ()=>respond("no")
             })
@@ -1763,7 +1763,7 @@ $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track("Share", {
@@ -1830,6 +1830,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             createNewGroup: createNewGroup
                         }),
                         !yourOwnQuestion && !me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
+                            loading: loading,
                             respond: respond || redirectToLogin
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {

@@ -32,7 +32,8 @@ export default forwardRef(({
   parentMessageId,
   createUser,
   trackConversion,
-  addImageAvailable
+  addImageAvailable,
+  loading
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -68,7 +69,7 @@ export default forwardRef(({
             <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
           </Title>
           <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
-          {!yourOwnQuestion && (!me?.answer && <AnswerButtons respond={respond || redirectToLogin} />)}
+          {!yourOwnQuestion && (!me?.answer && <AnswerButtons loading={loading} respond={respond || redirectToLogin} />)}
           <div className={styles.expand}>
             <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>

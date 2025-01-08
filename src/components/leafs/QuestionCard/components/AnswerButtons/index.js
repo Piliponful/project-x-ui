@@ -4,11 +4,11 @@ import Button from './components/Button'
 
 import styles from './style.module.styl'
 
-export default ({ respond, style }) => {
+export default ({ respond, style, loading }) => {
   return (
     <div style={style} className={styles.answerButtons}>
-      <Button disabled={!respond} answer='Yes' respond={() => respond('yes')} />
-      <Button disabled={!respond} answer='No' respond={() => respond('no')} />
+      <Button disabled={loading || !respond} answer='Yes' respond={() => respond('yes')} />
+      <Button disabled={loading || !respond} answer='No' respond={() => respond('no')} />
     </div>
   )
 }
