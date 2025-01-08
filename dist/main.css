@@ -1871,6 +1871,17 @@
   }
 }
 
+.aq6KZW_svgWrapper {
+  width: 25px;
+  height: 18px;
+}
+
+.aq6KZW_svgWrapper svg {
+  width: auto;
+  height: 18px;
+  padding-right: 6px;
+}
+
 .aq6KZW_landing .aq6KZW_name {
   color: #232323;
   font-size: 60px;
@@ -1981,7 +1992,7 @@ i.aq6KZW_scroll {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 200;
-  line-height: 1;
+  line-height: 14px;
 }
 
 .aq6KZW_made-by a {
@@ -2131,7 +2142,7 @@ i.aq6KZW_scroll {
   animation-timing-function: ease-out;
 }
 
-@supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+@supports (backdrop-filter: blur()) {
   .aq6KZW_search-modal {
     backdrop-filter: blur(6px);
     background: #f4f31c !important;

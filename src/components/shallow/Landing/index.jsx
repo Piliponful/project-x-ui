@@ -2,11 +2,13 @@ import React, { forwardRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-import PolyscanSVG from './polyscan.svg'
+import PolyscanSVG from 'bundle-text:./polyscan.svg'
 
 import styles from './styles.module.styl'
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+
+console.log('url: ', PolyscanSVG)
 
 const FirstText = () => (
   <div className={styles.text}>
@@ -77,9 +79,9 @@ export const Landing = forwardRef(({ jwt }, ref) => {
             </div>
           </> */}
           <div className={styles.icons}>
-            <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
+            <span className={styles['made-by']}><span style={{ fontSize: 15 }}>made by</span> <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={PolyscanSVG} style={{ height: 18, paddingRight: 5 }} />
+              <div className={styles.svgWrapper} dangerouslySetInnerHTML={{ __html: PolyscanSVG }} />
               <a
                 style={{
                   fontSize: 15,
@@ -89,12 +91,13 @@ export const Landing = forwardRef(({ jwt }, ref) => {
                   fontWeight: 200,
                   whiteSpace: 'nowrap'
                 }}
-                href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805'
+                target='_blank'
+                href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805' rel='noreferrer'
               >
                 token on polyscan
               </a>
             </div>
-            <span className={styles.privacy}><a href='/privacy-policy'>privacy policy</a></span>
+            <span className={styles.privacy}><a href='/privacy-policy' target='_blank'>privacy policy</a></span>
           </div>
         </div>
       </div>

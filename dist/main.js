@@ -8,8 +8,8 @@ var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
-var $c5L0i$datefns = require("date-fns");
 var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
+var $c5L0i$datefns = require("date-fns");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
@@ -89,12 +89,12 @@ $aefd75e8896fae09$export$464c821cd4347539 = `LwUTDG_hint`;
 
 var $e9bc36b91c87c2a4$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups, selectedCircleParts: selectedCircleParts })=>{
     const lengthToHint = {
-        1: "(select another group to continue)",
-        2: "(click on area to select what goes to new group)"
+        1: '(select another group to continue)',
+        2: '(click on area to select what goes to new group)'
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($aefd75e8896fae09$exports))).hint,
-        children: selectedCircleParts.length === 1 ? "(click on selected area again to deselect)" : lengthToHint[selectedGroups.length]
+        children: selectedCircleParts.length === 1 ? '(click on selected area again to deselect)' : lengthToHint[selectedGroups.length]
     });
 };
 
@@ -258,19 +258,19 @@ var $3f03f2f51f594f55$export$2e2bcd8739ae039 = ()=>/*#__PURE__*/ (0, $c5L0i$reac
 
 
 const $16c888d17a78a645$var$circlePartsToCompositionType = (circleParts)=>{
-    if (circleParts.includes("intersection") && circleParts.length === 1) return "intersection";
-    if (circleParts.includes("leftWing") && circleParts.length === 1) return "difference";
-    if (circleParts.includes("rightWing") && circleParts.length === 1) return "difference";
-    if (circleParts.includes("rightWing") && circleParts.includes("leftWing") && circleParts.length === 2) return "symmetric-difference";
+    if (circleParts.includes('intersection') && circleParts.length === 1) return 'intersection';
+    if (circleParts.includes('leftWing') && circleParts.length === 1) return 'difference';
+    if (circleParts.includes('rightWing') && circleParts.length === 1) return 'difference';
+    if (circleParts.includes('rightWing') && circleParts.includes('leftWing') && circleParts.length === 2) return 'symmetric-difference';
     if ([
-        "leftWing",
-        "intersection",
-        "rightWing"
-    ].every((i)=>circleParts.includes(i))) return "union";
+        'leftWing',
+        'intersection',
+        'rightWing'
+    ].every((i)=>circleParts.includes(i))) return 'union';
     return null;
 };
 const $16c888d17a78a645$var$isAllowedToClick = (element, partName)=>{
-    const isElementSelected = element.attr("fillOpacity") === "1";
+    const isElementSelected = element.attr('fillOpacity') === '1';
     if (isElementSelected) return true;
     return $16c888d17a78a645$var$circlePartsToCompositionType([
         ...$16c888d17a78a645$var$selectedParts,
@@ -279,7 +279,7 @@ const $16c888d17a78a645$var$isAllowedToClick = (element, partName)=>{
 };
 const $16c888d17a78a645$var$setCursorStyle = (element, partName)=>{
     const allowedToClick = $16c888d17a78a645$var$isAllowedToClick(element, partName);
-    const newStyle = allowedToClick ? "pointer" : "not-allowed";
+    const newStyle = allowedToClick ? 'pointer' : 'not-allowed';
     element.attr({
         cursor: newStyle
     });
@@ -288,9 +288,9 @@ let $16c888d17a78a645$var$selectedParts = [];
 var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups, handleCompositionTypeChange: handleCompositionTypeChange })=>{
     const changeOpacity = (element, partName, parts)=>{
         if (!$16c888d17a78a645$var$isAllowedToClick(element, partName)) return;
-        const isElementSelected = element.attr("fillOpacity") === "1";
+        const isElementSelected = element.attr('fillOpacity') === '1';
         element.attr({
-            "fillOpacity": isElementSelected ? "0" : "1"
+            'fillOpacity': isElementSelected ? '0' : '1'
         });
         const newSelectedParts = isElementSelected ? $16c888d17a78a645$var$selectedParts.filter((i)=>i !== partName) : [
             ...$16c888d17a78a645$var$selectedParts,
@@ -303,9 +303,9 @@ var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
     };
     (0, $c5L0i$react.useEffect)(()=>{
         if (selectedGroups.length !== 2) return;
-        const intersection = Snap("#intersection");
-        const rightWing = Snap("#right-wing");
-        const leftWing = Snap("#left-wing");
+        const intersection = Snap('#intersection');
+        const rightWing = Snap('#right-wing');
+        const leftWing = Snap('#left-wing');
         const parts = {
             intersection: intersection,
             rightWing: rightWing,
@@ -320,13 +320,13 @@ var $16c888d17a78a645$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($1d23555c6124769a$exports))).circlesContainer,
-                children: selectedGroups.length === 1 ? selectedGroups[0].color === "#3eb5f1" ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $3f03f2f51f594f55$export$2e2bcd8739ae039), {}) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5fc5222e4eb90daa$export$2e2bcd8739ae039), {}) : selectedGroups[0].color === "#3eb5f1" ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $a5ce285e563907a0$export$2e2bcd8739ae039), {
+                children: selectedGroups.length === 1 ? selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $3f03f2f51f594f55$export$2e2bcd8739ae039), {}) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5fc5222e4eb90daa$export$2e2bcd8739ae039), {}) : selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $a5ce285e563907a0$export$2e2bcd8739ae039), {
                     style: {
-                        cursor: "pointer"
+                        cursor: 'pointer'
                     }
                 }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $975429ec27add272$export$2e2bcd8739ae039), {
                     style: {
-                        cursor: "pointer"
+                        cursor: 'pointer'
                     }
                 })
             }),
@@ -524,7 +524,7 @@ var $f44c38bcab8183cc$export$1ca1ec8b29a4ce27;
 $f44c38bcab8183cc$export$1ca1ec8b29a4ce27 = `wcFNia_icon`;
 
 
-var $2b34424d3cce10f8$export$2e2bcd8739ae039 = ({ color: color = "#bebebe", deselect: deselect })=>{
+var $2b34424d3cce10f8$export$2e2bcd8739ae039 = ({ color: color = '#bebebe', deselect: deselect })=>{
     const [icon, setIcon] = (0, $c5L0i$react.useState)((0, $c5L0i$fortawesomefreesolidsvgicons.faCheckCircle));
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$fortawesomereactfontawesome.FontAwesomeIcon), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($f44c38bcab8183cc$exports))).icon,
@@ -566,7 +566,7 @@ $3b909940669176b5$export$59b1d651044d302 = `sslnla_leftSideContainer`;
 
 
 var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCount, selected: selected, color: color, save: save, toggleSelection: toggleSelection, combine: combine, readyToSave: readyToSave, cancel: cancel })=>{
-    const [newGroupTitle, setNewGroupTitle] = (0, $c5L0i$react.useState)("");
+    const [newGroupTitle, setNewGroupTitle] = (0, $c5L0i$react.useState)('');
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($3b909940669176b5$exports))).card,
         children: [
@@ -678,18 +678,18 @@ var $93a91f764584dcb2$export$2e2bcd8739ae039 = ({ yes: yes, no: no, onHover: onH
                     width: `${yes}%`
                 },
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3113bd7adef0dc04$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($3113bd7adef0dc04$exports))).yesBar),
-                onMouseEnter: ()=>onHover("yes"),
+                onMouseEnter: ()=>onHover('yes'),
                 onMouseLeave: ()=>onHover(),
-                onClick: ()=>createNewGroup("yes")
+                onClick: ()=>createNewGroup('yes')
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 style: {
                     width: `${no}%`
                 },
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3113bd7adef0dc04$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($3113bd7adef0dc04$exports))).noBar),
-                onMouseEnter: ()=>onHover("no"),
+                onMouseEnter: ()=>onHover('no'),
                 onMouseLeave: ()=>onHover(),
-                onClick: ()=>createNewGroup("no")
+                onClick: ()=>createNewGroup('no')
             })
         ]
     });
@@ -748,13 +748,13 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
                                     width: `${yesPercentage}%`,
-                                    position: "relative",
-                                    display: "flex",
+                                    position: 'relative',
+                                    display: 'flex',
                                     gap: 12,
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    me?.answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -771,10 +771,10 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    he?.answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: me?.answer ? {
-                                            left: "50%"
+                                            left: '50%'
                                         } : {},
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -797,16 +797,16 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
                                     width: `${noPercentage}%`,
-                                    position: "relative",
-                                    display: "flex",
+                                    position: 'relative',
+                                    display: 'flex',
                                     gap: 12,
                                     bottom: 0
                                 },
                                 children: [
-                                    me?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    me?.answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         style: he?.answer ? {
-                                            right: "50%"
+                                            right: '50%'
                                         } : {},
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -823,7 +823,7 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                             })
                                         ]
                                     }),
-                                    he?.answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    he?.answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -854,12 +854,12 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).textContainer,
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
-                                onClick: ()=>createNewGroup("yes"),
+                                onClick: ()=>createNewGroup('yes'),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
-                                    cursor: "pointer",
+                                    cursor: 'pointer',
                                     width: `${yesPercentage}%`,
-                                    whiteSpace: "nowrap"
+                                    whiteSpace: 'nowrap'
                                 },
                                 children: [
                                     yesPercentage,
@@ -867,12 +867,12 @@ var $b43f368b8ea6feca$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $af7a69f871974f3a$export$2e2bcd8739ae039), {
-                                onClick: ()=>createNewGroup("no"),
+                                onClick: ()=>createNewGroup('no'),
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($060bced7ba3b76d4$exports))).text,
                                 style: {
-                                    cursor: "pointer",
+                                    cursor: 'pointer',
                                     width: `${noPercentage}%`,
-                                    whiteSpace: "nowrap"
+                                    whiteSpace: 'nowrap'
                                 },
                                 children: [
                                     noPercentage,
@@ -923,8 +923,8 @@ var $5e95937b5aebb876$export$2e2bcd8739ae039 = ({ answer: answer, respond: respo
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
         disabled: disabled,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).button, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).yes]: answer.toLowerCase() === "yes",
-            [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).no]: answer.toLowerCase() === "no"
+            [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).yes]: answer.toLowerCase() === 'yes',
+            [(0, (/*@__PURE__*/$parcel$interopDefault($5f67be5e02d37987$exports))).no]: answer.toLowerCase() === 'no'
         }),
         onClick: respond,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
@@ -949,12 +949,12 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
                 disabled: loading || !respond,
                 answer: "Yes",
-                respond: ()=>respond("yes")
+                respond: ()=>respond('yes')
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
                 disabled: loading || !respond,
                 answer: "No",
-                respond: ()=>respond("no")
+                respond: ()=>respond('no')
             })
         ]
     });
@@ -985,15 +985,15 @@ Number.prototype.mod = function(n) {
 };
 const $1e3dbd7e69fec1c4$var$screens = [
     {
-        name: "groups",
+        name: 'groups',
         index: 0
     },
     {
-        name: "groupContent",
+        name: 'groupContent',
         index: 1
     },
     {
-        name: "questions",
+        name: 'questions',
         index: 2
     }
 ];
@@ -1010,8 +1010,8 @@ var $1e3dbd7e69fec1c4$export$2e2bcd8739ae039 = ({ children: children })=>{
             //   setSwipeCount(newSwipeCount)
             //   value.toggleScreen(screenBySwipeCount[newSwipeCount].name)
             // }
-            if (eventData.dir === "Right") value.setShowSearch(true);
-            if (eventData.dir === "Left") value.setShowSearch(false);
+            if (eventData.dir === 'Right') value.setShowSearch(true);
+            if (eventData.dir === 'Left') value.setShowSearch(false);
         },
         delta: 40,
         preventDefaultTouchmoveEvent: true
@@ -1065,17 +1065,17 @@ $13058157b3244d01$export$5e1be761f603d585 = `rzmFQq_username`;
 
 
 const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: updateJwt, closeModal: closeModal })=>{
-    const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)("");
+    const [accessToken, setAccessToken] = (0, $c5L0i$react.useState)('');
     (0, $c5L0i$react.useEffect)(()=>{
         const fetchAccessToken = async ()=>{
             try {
-                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
+                const response = await (0, ($parcel$interopDefault($c5L0i$axios))).post('/api/kyc/access-token', {
                     userId: userId,
-                    levelName: "all-data" // Replace with your level name
+                    levelName: 'all-data' // Replace with your level name
                 });
                 setAccessToken(response.data.token);
             } catch (error) {
-                console.error("Error fetching access token:", error.response?.data || error.message);
+                console.error('Error fetching access token:', error.response?.data || error.message);
             }
         };
         fetchAccessToken();
@@ -1083,26 +1083,26 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: 
         userId
     ]);
     const handleMessage = (type, payload)=>{
-        console.log("Sumsub message:", type, payload);
-        if (type === "idCheck.onApplicantStatusChanged" && payload.reviewStatus === "completed" && updateJwt) {
-            console.log("success KYC");
+        console.log('Sumsub message:', type, payload);
+        if (type === 'idCheck.onApplicantStatusChanged' && payload.reviewStatus === 'completed' && updateJwt) {
+            console.log('success KYC');
             updateJwt();
         // Handle post-verification logic here
         // closeModal()
         }
     };
     const handleError = (error)=>{
-        console.error("Sumsub error:", error);
+        console.error('Sumsub error:', error);
     };
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         children: accessToken && userId && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$sumsubwebsdkreact))), {
             accessToken: accessToken,
-            expirationHandler: ()=>(0, ($parcel$interopDefault($c5L0i$axios))).post("/api/kyc/access-token", {
+            expirationHandler: ()=>(0, ($parcel$interopDefault($c5L0i$axios))).post('/api/kyc/access-token', {
                     userId: userId,
-                    levelName: "basic-kyc-level"
+                    levelName: 'basic-kyc-level'
                 }).then((res)=>res.data.token),
             config: {
-                lang: "en"
+                lang: 'en'
             },
             options: {
                 addViewportTag: false,
@@ -1116,7 +1116,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: 
 var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showXLogin: showXLogin, showKYCLogin: showKYCLogin, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
-        onTriggered: ()=>console.log("on trigger") || setShowDropdown(false)
+        onTriggered: ()=>console.log('on trigger') || setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -1140,7 +1140,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSettings))), {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).icon,
                 sx: {
-                    color: "#2b2b2b"
+                    color: '#2b2b2b'
                 }
             })
         ]
@@ -1152,8 +1152,8 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             },
             className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
             style: {
-                justifyContent: "center",
-                border: "none",
+                justifyContent: 'center',
+                border: 'none',
                 fontSize: 16
             },
             onClick: ()=>{
@@ -1164,9 +1164,9 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: {
-            display: "flex",
+            display: 'flex',
             gap: 12,
-            position: "relative"
+            position: 'relative'
         },
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -1178,20 +1178,20 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 // }}
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
                 onClick: (e)=>{
-                    console.log("test dropdown true");
+                    console.log('test dropdown true');
                     e.stopPropagation();
                     setShowDropdown(!showDropdown);
                 },
                 style: {
-                    width: showKYCLogin || showXLogin ? "40%" : "100%",
-                    textAlign: "center"
+                    width: showKYCLogin || showXLogin ? '40%' : '100%',
+                    textAlign: 'center'
                 },
                 children: content
             }),
             showXLogin && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container),
                 style: {
-                    width: "calc(60% - 12px)"
+                    width: 'calc(60% - 12px)'
                 },
                 onClick: handleTwitterLogin,
                 children: [
@@ -1205,10 +1205,10 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             showKYCLogin && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container),
                 style: {
-                    width: "calc(60% - 12px)"
+                    width: 'calc(60% - 12px)'
                 },
                 onClick: ()=>{
-                    window.mixpanel.track("Verify Identity");
+                    window.mixpanel.track('Verify Identity');
                     setShowKYCModal(true);
                 },
                 children: [
@@ -1227,7 +1227,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             }),
             username && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
-                    display: showDropdown ? "flex" : "none"
+                    display: showDropdown ? 'flex' : 'none'
                 },
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).dropdown,
                 ref: (node)=>{
@@ -1241,7 +1241,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>{
-                            window.mixpanel.track("Rewards");
+                            window.mixpanel.track('Rewards');
                             setIsModalOpen(true);
                         },
                         children: "Rewards"
@@ -1327,20 +1327,20 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
-        top: "50%",
-        left: "50%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-        display: "flex",
-        flexDirection: "column"
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        display: 'flex',
+        flexDirection: 'column'
     }
 };
-const $0c70feff32ca6a2b$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
-(0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement("#app");
+const $0c70feff32ca6a2b$var$clientId = '693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com'; // Replace with your actual Client ID
+(0, ($parcel$interopDefault($c5L0i$reactmodal))).setAppElement('#app');
 var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, addImage: addImage, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
-    const [screenName, toggleScreen] = (0, $c5L0i$react.useState)("uninitialized");
+    const [screenName, toggleScreen] = (0, $c5L0i$react.useState)('uninitialized');
     const [skipScreen, setSkipScreen] = (0, $c5L0i$react.useState)();
     const [isModalOpen, setIsModalOpen] = (0, $c5L0i$react.useState)(false);
     const [isWalletModalOpen, setIsWalletModalOpen] = (0, $c5L0i$react.useState)(isWalletModalOpenInitial);
@@ -1350,25 +1350,25 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
     const [addImgModal, setAddImgModal] = (0, $c5L0i$react.useState)(null);
     const [selectedMessage, setSelectedMessage] = (0, $c5L0i$react.useState)(false);
-    const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)("");
+    const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)('');
     const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
             if (width > (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen();
-            if (screenName === "uninitialized" && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen("questions");
+            if (screenName === 'uninitialized' && width < (0, $be6f0e84320366a7$export$120137d2fb34488f)) toggleScreen('questions');
         };
         handler();
-        window.addEventListener("resize", handler);
-        return ()=>window.removeEventListener("resize", handler);
+        window.addEventListener('resize', handler);
+        return ()=>window.removeEventListener('resize', handler);
     }, []);
     (0, $c5L0i$react.useEffect)(()=>{
-        if (skipScreen && skipScreen.includes(screenName)) toggleScreen("questions");
+        if (skipScreen && skipScreen.includes(screenName)) toggleScreen('questions');
     }, [
         skipScreen
     ]);
     const connectToWallet = ()=>{
-        window.mixpanel.track("Rewards Modal -> Connect Wallet Click");
+        window.mixpanel.track('Rewards Modal -> Connect Wallet Click');
         connectToWalletR();
         setIsWalletModalOpen(false);
         setIsModalOpen(false);
@@ -1389,14 +1389,14 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         setIsLoginModalOpen(false);
     };
     const handleLoginFailure = (error)=>{
-        console.error("Login Failed: ", error);
-        window.mixpanel.track("Login Failed", {
+        console.error('Login Failed: ', error);
+        window.mixpanel.track('Login Failed', {
             error: error
         });
     };
     const closeRewardsConnectWalletModal = ()=>{
         setIsModalOpen(false);
-        window.mixpanel.track("Rewards Modal(Connect Wallet) -> Close Click");
+        window.mixpanel.track('Rewards Modal(Connect Wallet) -> Close Click');
     };
     if (includeSwipes) return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactoauthgoogle.GoogleOAuthProvider), {
         clientId: $0c70feff32ca6a2b$var$clientId,
@@ -1418,7 +1418,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
             },
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
-                    height: screenName ? "100%" : "auto"
+                    height: screenName ? '100%' : 'auto'
                 },
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
                 children: [
@@ -1533,7 +1533,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                                     style: {
-                                        width: "100%",
+                                        width: '100%',
                                         marginTop: 20
                                     },
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).connectButton,
@@ -1586,7 +1586,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                         onClick: ()=>{
                                             setAnswer(null);
                                             handleTwitterLogin(`?sendEmails=${sendEmails}
-                      ${answer ? `&answer=${answer.answer}&parentMessageId=${answer.parentMessageId}&href=/questions/${answer.shortId}` : ""}`);
+                      ${answer ? `&answer=${answer.answer}&parentMessageId=${answer.parentMessageId}&href=/questions/${answer.shortId}` : ''}`);
                                         },
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {}),
@@ -1605,10 +1605,10 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkboxes__item,
                                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
                                                 style: {
-                                                    display: "flex",
+                                                    display: 'flex',
                                                     gap: 4
                                                 },
-                                                className: `${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports)))["style-c"]}`,
+                                                className: `${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports)))['style-c']}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                                                         style: {
@@ -1694,8 +1694,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 style: {
                                     marginBottom: 20,
-                                    display: "flex",
-                                    alignItems: "center",
+                                    display: 'flex',
+                                    alignItems: 'center',
                                     gap: 12
                                 },
                                 children: [
@@ -1725,7 +1725,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: {
-            height: screenName ? "100%" : "auto"
+            height: screenName ? '100%' : 'auto'
         },
         className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).body,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $1e3dbd7e69fec1c4$export$97295e60e7f371e1), {
@@ -1766,11 +1766,11 @@ $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
-            window.mixpanel.track("Share", {
+            window.mixpanel.track('Share', {
                 questionId: shortId
             });
             navigator.share({
-                title: "Question",
+                title: 'Question',
                 text: name,
                 url: `https://poll.cc/questions/${shortId}`
             });
@@ -1785,7 +1785,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             parentMessageId: parentMessageId,
             shortId: shortId
         });
-        window.mixpanel.track("Anonymous Question Answer", {
+        window.mixpanel.track('Anonymous Question Answer', {
             questionId: shortId,
             answer: answer
         });
@@ -1838,7 +1838,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                                     style: {
-                                        color: "#00000063"
+                                        color: '#00000063'
                                     },
                                     children: [
                                         (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt)),
@@ -1847,7 +1847,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     style: {
-                                        display: "flex",
+                                        display: 'flex',
                                         gap: 12
                                     },
                                     children: [
@@ -1898,7 +1898,7 @@ $6ab302fcbc9538e6$export$a3574df893ffa88d = `OxsVWq_textarea`;
 
 var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
         disabled: disabled,
-        placeholder: `Type your question here ${disabled ? "(disabled if you're not signed in)" : ""}...`,
+        placeholder: `Type your question here ${disabled ? '(disabled if you\'re not signed in)' : ''}...`,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($6ab302fcbc9538e6$exports))).text),
         onChange: onChange,
         value: value
@@ -1916,7 +1916,7 @@ $6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
 
 
 var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
-    const [question, setQuestion] = (0, $c5L0i$react.useState)("");
+    const [question, setQuestion] = (0, $c5L0i$react.useState)('');
     const onChange = (e)=>{
         const newQuestion = e.target.value;
         setQuestion(newQuestion);
@@ -1924,7 +1924,7 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
     const save = (e)=>{
         e.target.blur();
         saveQuestion(question);
-        setQuestion("");
+        setQuestion('');
     };
     const disabled = !saveQuestion;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -1964,8 +1964,8 @@ var $cf7fa14b6ace065a$export$2e2bcd8739ae039 = ({ children: children, id: id, st
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6be3d19ca593c163$exports))).groupContainer, className),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
             style: {
-                width: "100%",
-                height: "100%"
+                width: '100%',
+                height: '100%'
             },
             children: children
         })
@@ -2126,8 +2126,8 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
-                    display: "flex",
-                    justifyContent: "space-between"
+                    display: 'flex',
+                    justifyContent: 'space-between'
                 },
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -2144,7 +2144,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                 }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).imgFallback,
                                     style: {
-                                        background: "#E7E4E2"
+                                        background: '#E7E4E2'
                                     }
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -2156,7 +2156,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                         leaveAnimation: "fade",
                                         children: [
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                children: user?.fullName || "loading"
+                                                children: user?.fullName || 'loading'
                                             }),
                                             Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                                                 children: [
@@ -2164,13 +2164,13 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                     " followers"
                                                 ]
                                             }),
-                                            user?.twitterVerified && user?.twitterVerified !== "none" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            user?.twitterVerified && user?.twitterVerified !== 'none' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                 style: {
-                                                    display: "flex",
-                                                    alignItems: "center",
+                                                    display: 'flex',
+                                                    alignItems: 'center',
                                                     fontSize: 14,
                                                     fontWeight: 300,
-                                                    color: "gray"
+                                                    color: 'gray'
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -2182,18 +2182,18 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                             height: 16,
                                                             width: 16,
                                                             paddingLeft: 3,
-                                                            border: "none"
+                                                            border: 'none'
                                                         }
                                                     })
                                                 ]
                                             }),
                                             user?.verifiedKYC && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                 style: {
-                                                    display: "flex",
-                                                    alignItems: "center",
+                                                    display: 'flex',
+                                                    alignItems: 'center',
                                                     fontSize: 14,
                                                     fontWeight: 300,
-                                                    color: "gray"
+                                                    color: 'gray'
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -2205,7 +2205,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                             height: 20,
                                                             width: 20,
                                                             paddingLeft: 3,
-                                                            border: "none"
+                                                            border: 'none'
                                                         }
                                                     })
                                                 ]
@@ -2219,7 +2219,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                     Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                         onClick: (e)=>{
                             e.stopPropagation();
-                            window.mixpanel.track("X Profile Click", {
+                            window.mixpanel.track('X Profile Click', {
                                 url: `https://twitter.com/${user?.username}`
                             });
                         },
@@ -2240,7 +2240,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ref: ref,
         style: {
             ...show && {
-                display: "flex"
+                display: 'flex'
             },
             ...style
         },
@@ -2256,16 +2256,16 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 style: {
                     marginBottom: 32,
-                    display: "flex",
+                    display: 'flex',
                     gap: 8
                 },
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                     style: {
-                        display: "flex",
-                        alignItems: "center",
+                        display: 'flex',
+                        alignItems: 'center',
                         fontSize: 14,
                         fontWeight: 300,
-                        color: "gray"
+                        color: 'gray'
                     },
                     children: [
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
@@ -2273,7 +2273,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__item,
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
-                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))["style-c"]}`,
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['style-c']}`,
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                                             type: "checkbox",
@@ -2294,7 +2294,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                         height: 16,
                                                         width: 16,
                                                         paddingLeft: 3,
-                                                        border: "none"
+                                                        border: 'none'
                                                     }
                                                 })
                                             ]
@@ -2308,7 +2308,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkboxes__item,
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("label", {
-                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))["style-c"]}`,
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['style-c']}`,
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
                                             type: "checkbox",
@@ -2329,7 +2329,7 @@ var $42498b7876d29f2b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                         height: 16,
                                                         width: 16,
                                                         paddingLeft: 3,
-                                                        border: "none"
+                                                        border: 'none'
                                                     }
                                                 })
                                             ]
@@ -2406,12 +2406,12 @@ $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
-        if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
+        if (showDifference && selectedTab !== 'answers') setSelectedTab('answers');
     }, [
         showDifference
     ]);
     (0, $c5L0i$react.useEffect)(()=>{
-        if (showDifference && selectedTab !== "answers") setShowDifference(false);
+        if (showDifference && selectedTab !== 'answers') setShowDifference(false);
     }, [
         selectedTab
     ]);
@@ -2429,8 +2429,8 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $42498b7876d29f2b$export$1f44aaf2ec115b54), {
                 style: {
-                    cursor: "auto",
-                    border: "none"
+                    cursor: 'auto',
+                    border: 'none'
                 },
                 user: user,
                 onUserClick: ()=>{},
@@ -2454,36 +2454,36 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                     onClick: ()=>{
                         const newShowDifference = !showDifference;
                         setShowDifference(newShowDifference);
-                        window.mixpanel.track(newShowDifference ? "Show Users Difference" : "Go Back to User Q/A");
+                        window.mixpanel.track(newShowDifference ? 'Show Users Difference' : 'Go Back to User Q/A');
                     },
                     children: showDifference ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         style: {
-                            display: "flex",
-                            alignItems: "center"
+                            display: 'flex',
+                            alignItems: 'center'
                         },
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowBack))), {
                                 sx: {
                                     fontSize: 14,
-                                    marginRight: "5px"
+                                    marginRight: '5px'
                                 }
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                 children: "Back"
                             })
                         ]
-                    }) : "Show Differences"
+                    }) : 'Show Differences'
                 })
             }),
             !showDifference && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         style: {
-                            width: "calc(100% - 30px)",
+                            width: 'calc(100% - 30px)',
                             height: 1,
-                            borderTop: "1px solid rgb(179, 179, 179)",
-                            boxSizing: "border-box",
-                            margin: "15px auto"
+                            borderTop: '1px solid rgb(179, 179, 179)',
+                            boxSizing: 'border-box',
+                            margin: '15px auto'
                         }
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2491,21 +2491,21 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "questions"
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'questions'
                                 }),
                                 onClick: ()=>{
-                                    window.mixpanel.track("Select User Questions Tab");
-                                    setSelectedTab("questions");
+                                    window.mixpanel.track('Select User Questions Tab');
+                                    setSelectedTab('questions');
                                 },
                                 children: "His/Her Questions"
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "answers"
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'answers'
                                 }),
                                 onClick: ()=>{
-                                    setSelectedTab("answers");
-                                    window.mixpanel.track("Select User Answers Tab");
+                                    setSelectedTab('answers');
+                                    window.mixpanel.track('Select User Answers Tab');
                                 },
                                 children: "His/Her Answers"
                             })
@@ -2519,15 +2519,15 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
 });
 const $4c6bd8db1d735d14$export$1f74963c34e8bfec = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
         style: {
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
         },
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
             style: {
-                color: "#3b3b3b",
+                color: '#3b3b3b',
                 fontSize: 36,
                 fontWeight: 300
             },
@@ -2562,8 +2562,8 @@ const $4c6bd8db1d735d14$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $c5L0i$react
 const $4c6bd8db1d735d14$export$a6816b34ad549b0 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ respond: // hasMore,
 // fetchAnswers,
 respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answers, onQuestionClick: onQuestionClick }, ref)=>{
-    const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)("different");
-    const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)("byMe");
+    const [selectedTab, setSelectedTab] = (0, $c5L0i$react.useState)('different');
+    const [selectedNestedTab, setSelectedNestedTab] = (0, $c5L0i$react.useState)('byMe');
     // const [answers, setAnswers] = useState({
     //   different: [],
     //   same: [],
@@ -2572,7 +2572,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
     // useEffect(() => {
     //   compareWithMe().then(answers => setAnswers(answers))
     // }, [])
-    const questionsToShow = answers && (selectedTab === "notAnswered" ? answers[selectedTab].filter((i)=>selectedNestedTab === "byMe" ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
+    const questionsToShow = answers && (selectedTab === 'notAnswered' ? answers[selectedTab].filter((i)=>selectedNestedTab === 'byMe' ? i.byMe : !i.byMe) : answers[selectedTab]).map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fde06a1540536d1e$export$2e2bcd8739ae039), {
             respond: respond && ((content)=>respond(i._id, content)),
             createNewGroup: (content)=>createNewGroup(i.shortId, content),
             ...i,
@@ -2583,11 +2583,11 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 style: {
-                    width: "calc(100% - 30px)",
+                    width: 'calc(100% - 30px)',
                     height: 1,
-                    borderTop: "1px solid rgb(179, 179, 179)",
-                    boxSizing: "border-box",
-                    margin: "15px auto"
+                    borderTop: '1px solid rgb(179, 179, 179)',
+                    boxSizing: 'border-box',
+                    margin: '15px auto'
                 }
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2595,51 +2595,51 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "different"
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'different'
                         }),
                         onClick: ()=>{
-                            window.mixpanel.track("Select Different Tab");
-                            setSelectedTab("different");
+                            window.mixpanel.track('Select Different Tab');
+                            setSelectedTab('different');
                         },
                         children: "Different Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "same"
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'same'
                         }),
                         onClick: ()=>{
-                            window.mixpanel.track("Select Same Tab");
-                            setSelectedTab("same");
+                            window.mixpanel.track('Select Same Tab');
+                            setSelectedTab('same');
                         },
                         children: "Same Answer"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === "notAnswered"
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'notAnswered'
                         }),
                         onClick: ()=>{
-                            window.mixpanel.track("Select Not Answered Tab");
-                            setSelectedTab("notAnswered");
+                            window.mixpanel.track('Select Not Answered Tab');
+                            setSelectedTab('notAnswered');
                         },
                         children: "Not Answered"
                     })
                 ]
             }),
-            selectedTab === "notAnswered" ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            selectedTab === 'notAnswered' ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).differentTabs2),
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === "byMe"
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === 'byMe'
                         }),
-                        onClick: ()=>setSelectedNestedTab("byMe"),
+                        onClick: ()=>setSelectedNestedTab('byMe'),
                         children: "By Me"
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === "byHim"
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedNestedTab === 'byHim'
                         }),
-                        onClick: ()=>setSelectedNestedTab("byHim"),
+                        onClick: ()=>setSelectedNestedTab('byHim'),
                         children: "By Him/Her"
                     })
                 ]
@@ -2687,8 +2687,8 @@ $a9ddd490efc245bf$export$6f093cfa640b7166 = `_6W1esa_text`;
 
 
 var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ search: search, buttonsOutside: buttonsOutside = false, className: className, style: style }, ref2)=>{
-    const [text, setText] = (0, $c5L0i$react.useState)("");
-    const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)("Questions");
+    const [text, setText] = (0, $c5L0i$react.useState)('');
+    const [dropdownValue, setDropdownValue] = (0, $c5L0i$react.useState)('Questions');
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -2726,7 +2726,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 onClick: (e)=>{
                                     e.stopPropagation();
                                     e.preventDefault();
-                                    setDropdownValue("Questions");
+                                    setDropdownValue('Questions');
                                     setShowDropdown(false);
                                 },
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -2738,7 +2738,7 @@ var $95c6e69ef8ee0198$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 onClick: (e)=>{
                                     e.stopPropagation();
                                     e.preventDefault();
-                                    setDropdownValue("Users");
+                                    setDropdownValue('Users');
                                     setShowDropdown(false);
                                 },
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -2794,10 +2794,10 @@ $80a088ebd4973b81$export$9086bb9c16b2b5b = `BbEWnq_total`;
 $80a088ebd4973b81$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
 
 
-(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper("bold", function(options) {
+(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper('bold', function(options) {
     const targetText = options.hash.text;
     const replacement = `<strong>${targetText}</strong>`;
-    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
+    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, 'gi'), replacement));
 });
 var $9330b1b20ef62cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ questions: questions, hasMore: hasMore, fetchQuestions: fetchQuestions, total: total, respond: respond, createNewGroup: createNewGroup, back: back, search: search, style: style, className: className, onUserClick: onUserClick, onQuestionClick: onQuestionClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
@@ -2887,10 +2887,10 @@ $e7fcc7d3eba9496b$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
 $e7fcc7d3eba9496b$export$2778a17561d67130 = `_9WjUxq_usersItems`;
 
 
-(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper("bold", function(options) {
+(0, ($parcel$interopDefault($c5L0i$handlebars))).registerHelper('bold', function(options) {
     const targetText = options.hash.text;
     const replacement = `<strong>${targetText}</strong>`;
-    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, "gi"), replacement));
+    return new (0, ($parcel$interopDefault($c5L0i$handlebars))).SafeString(this.text.replace(new RegExp(targetText, 'gi'), replacement));
 });
 var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ style: style, users: users, fetchUsers: fetchUsers, hasMore: hasMore, total: total, back: back, search: search, onUserClick: onUserClick }, ref)=>{
     const templateString = `{{bold text="${search}"}}`;
@@ -2961,13 +2961,13 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     " followers"
                                                 ]
                                             }),
-                                            user?.twitterVerified && user?.twitterVerified !== "none" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            user?.twitterVerified && user?.twitterVerified !== 'none' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                 style: {
-                                                    display: "flex",
-                                                    alignItems: "center",
+                                                    display: 'flex',
+                                                    alignItems: 'center',
                                                     fontSize: 14,
                                                     fontWeight: 300,
-                                                    color: "gray"
+                                                    color: 'gray'
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -2979,18 +2979,18 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                             height: 16,
                                                             width: 16,
                                                             paddingLeft: 3,
-                                                            border: "none"
+                                                            border: 'none'
                                                         }
                                                     })
                                                 ]
                                             }),
                                             user?.verifiedKYC && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                 style: {
-                                                    display: "flex",
-                                                    alignItems: "center",
+                                                    display: 'flex',
+                                                    alignItems: 'center',
                                                     fontSize: 14,
                                                     fontWeight: 300,
-                                                    color: "gray"
+                                                    color: 'gray'
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
@@ -3002,7 +3002,7 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                             height: 20,
                                                             width: 20,
                                                             paddingLeft: 3,
-                                                            border: "none"
+                                                            border: 'none'
                                                         }
                                                     })
                                                 ]
@@ -3014,7 +3014,7 @@ var $d99360e8c29d4994$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                 onClick: (e)=>{
                                     e.stopPropagation();
-                                    window.mixpanel.track("X Profile Click", {
+                                    window.mixpanel.track('X Profile Click', {
                                         url: `https://twitter.com/${user?.username}`
                                     });
                                 },
@@ -3060,7 +3060,7 @@ $31c024bdab3f9b58$export$d76128d007d19019 = `ue_oWq_search`;
 $31c024bdab3f9b58$export$6f093cfa640b7166 = `ue_oWq_text`;
 
 
-const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ sort: sort = "Most Answered", duration: duration = "Week", setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
+const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ sort: sort = 'Most Answered', duration: duration = 'Week', setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
     const [showSortDropdown, setShowSortDropdown] = (0, $c5L0i$react.useState)(false);
     const [showDurationDropdown, setShowDurationDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
@@ -3070,14 +3070,14 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
         onTriggered: ()=>setShowDurationDropdown(false)
     });
     const setDurationAndClose = (value)=>{
-        window.mixpanel.track("Update Filter", {
+        window.mixpanel.track('Update Filter', {
             filter: value
         });
         setDuration(value);
         setShowDurationDropdown(false);
     };
     const setSortAndClose = (value)=>{
-        window.mixpanel.track("Update Sort", {
+        window.mixpanel.track('Update Sort', {
             sort: value
         });
         setSort(value);
@@ -3094,7 +3094,7 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
                         style: {
                             fontWeight: 300,
-                            color: "#3b3b3b"
+                            color: '#3b3b3b'
                         },
                         children: "Showing"
                     }),
@@ -3112,35 +3112,35 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setSortAndClose("Most Answered"),
+                                        onClick: ()=>setSortAndClose('Most Answered'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Most Answered"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setSortAndClose("Latest"),
+                                        onClick: ()=>setSortAndClose('Latest'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Latest"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setSortAndClose("Most Controversial"),
+                                        onClick: ()=>setSortAndClose('Most Controversial'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Most Controversial"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setSortAndClose("Most Unanimous"),
+                                        onClick: ()=>setSortAndClose('Most Unanimous'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Most Unanimous"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setSortAndClose("Most Followed Authors"),
+                                        onClick: ()=>setSortAndClose('Most Followed Authors'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Most Followed Authors"
                                         })
@@ -3160,11 +3160,11 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
                         style: {
                             fontWeight: 300,
-                            color: "#3b3b3b"
+                            color: '#3b3b3b'
                         },
                         children: [
                             "Questions ",
-                            duration === "All Time" ? "of" : "for last"
+                            duration === 'All Time' ? 'of' : 'for last'
                         ]
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -3181,35 +3181,35 @@ const $b355bd374f45d8d9$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $c5L0i$react
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setDurationAndClose("Day"),
+                                        onClick: ()=>setDurationAndClose('Day'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Day"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setDurationAndClose("Week"),
+                                        onClick: ()=>setDurationAndClose('Week'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Week"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setDurationAndClose("Month"),
+                                        onClick: ()=>setDurationAndClose('Month'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Month"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setDurationAndClose("Year"),
+                                        onClick: ()=>setDurationAndClose('Year'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "Year"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($31c024bdab3f9b58$exports))).dropdownItem,
-                                        onClick: ()=>setDurationAndClose("All Time"),
+                                        onClick: ()=>setDurationAndClose('All Time'),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                             children: "All time"
                                         })
@@ -3299,11 +3299,11 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const share = ()=>{
         if (navigator.share) {
-            window.mixpanel.track("Share", {
+            window.mixpanel.track('Share', {
                 questionId: shortId
             });
             navigator.share({
-                title: "Question",
+                title: 'Question',
                 text: name,
                 url: `https://poll.cc/questions/${shortId}`
             });
@@ -3316,34 +3316,34 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             parentMessageId: _id,
             shortId: shortId
         });
-        window.mixpanel.track("Anonymous Question Answer", {
+        window.mixpanel.track('Anonymous Question Answer', {
             questionId: shortId,
             answer: answer
         });
     };
     (0, $c5L0i$react.useEffect)(()=>{
         const resizeObserver = new ResizeObserver(()=>{
-            const a = document.querySelector("#question-card");
-            const b = document.querySelector("#question-text");
-            const c = document.querySelector("#question-text-size");
+            const a = document.querySelector('#question-card');
+            const b = document.querySelector('#question-text');
+            const c = document.querySelector('#question-text-size');
             const containerHeight = a.clientHeight;
             const questionHeight = b.clientHeight;
             const containerWidth = a.clientWidth;
             const questionWidth = b.clientWidth;
             if (questionHeight + 178 < containerHeight && questionWidth <= containerWidth) return resizeObserver.disconnect();
-            const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace("px", ""));
+            const currentFontSize = parseInt(window.getComputedStyle(c).fontSize.replace('px', ''));
             if (currentFontSize === 0) {
-                c.style["font-size"] = "32px";
-                b.style.overflow = "auto";
-                b.style.height = "calc(100dvh - 126px)";
+                c.style['font-size'] = '32px';
+                b.style.overflow = 'auto';
+                b.style.height = 'calc(100dvh - 126px)';
                 return resizeObserver.disconnect();
             }
-            c.style["font-size"] = `${currentFontSize - 1}px`;
+            c.style['font-size'] = `${currentFontSize - 1}px`;
         });
-        resizeObserver.observe(document.querySelector("#question-text"));
-        window.addEventListener("resize", (0, ($parcel$interopDefault($c5L0i$lodash))).debounce(()=>{
-            document.querySelector("#question-text-size").style["font-size"] = "200px";
-            resizeObserver.observe(document.querySelector("#question-text"));
+        resizeObserver.observe(document.querySelector('#question-text'));
+        window.addEventListener('resize', (0, ($parcel$interopDefault($c5L0i$lodash))).debounce(()=>{
+            document.querySelector('#question-text-size').style['font-size'] = '200px';
+            resizeObserver.observe(document.querySelector('#question-text'));
         }, 1000));
         return ()=>resizeObserver.disconnect();
     }, []);
@@ -3362,7 +3362,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 id: "question-text",
                 style: {
-                    padding: "0 26px"
+                    padding: '0 26px'
                 },
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
@@ -3377,7 +3377,7 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).username,
                         children: [
-                            " ",
+                            ' ',
                             "by ",
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).usernameActual,
@@ -3385,11 +3385,11 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                 children: username
                             }),
                             ",",
-                            " ",
+                            ' ',
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
                                 style: {
-                                    display: "inline",
-                                    textAlign: "center"
+                                    display: 'inline',
+                                    textAlign: 'center'
                                 },
                                 secondary: true,
                                 children: [
@@ -3402,8 +3402,8 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
                                 sx: {
-                                    marginLeft: "10px",
-                                    cursor: "pointer"
+                                    marginLeft: '10px',
+                                    cursor: 'pointer'
                                 },
                                 onClick: share
                             })
@@ -3413,18 +3413,18 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
-                    position: "absolute",
+                    position: 'absolute',
                     bottom: totalAnswerCount === 0 ? 16 : 0,
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center"
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
                 },
                 children: [
                     !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                         style: {
                             maxWidth: 400,
-                            width: "90%"
+                            width: '90%'
                         },
                         respond: respond || redirectToLogin
                     }),
@@ -3439,25 +3439,25 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).text,
                                             style: {
                                                 width: `${yesPercentage}%`,
-                                                position: "relative",
-                                                display: "flex",
+                                                position: 'relative',
+                                                display: 'flex',
                                                 gap: 12,
                                                 bottom: 0,
                                                 minWidth: 102
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                    onClick: ()=>createNewGroup("yes"),
+                                                    onClick: ()=>createNewGroup('yes'),
                                                     style: {
-                                                        display: "flex",
-                                                        alignItems: "end"
+                                                        display: 'flex',
+                                                        alignItems: 'end'
                                                     },
                                                     children: [
                                                         yesPercentage,
                                                         "%"
                                                     ]
                                                 }),
-                                                answer?.toLowerCase() === "yes" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3476,25 +3476,25 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).text,
                                             style: {
                                                 width: `${noPercentage}%`,
-                                                position: "relative",
-                                                display: "flex",
+                                                position: 'relative',
+                                                display: 'flex',
                                                 gap: 12,
                                                 bottom: 0,
                                                 minWidth: 102
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                                    onClick: ()=>createNewGroup("no"),
+                                                    onClick: ()=>createNewGroup('no'),
                                                     style: {
-                                                        display: "flex",
-                                                        alignItems: "end"
+                                                        display: 'flex',
+                                                        alignItems: 'end'
                                                     },
                                                     children: [
                                                         noPercentage,
                                                         "%"
                                                     ]
                                                 }),
-                                                answer?.toLowerCase() === "no" && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -3574,12 +3574,12 @@ $6c6fd8ca00de879c$export$1e95b668f3b82d = `SmrJ8W_top`;
 
 
 const $e3031400c56218a8$var$defaultGroup = {
-    name: "You",
+    name: 'You',
     peopleCount: 10,
     id: 1
 };
 const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMessage: sendMessage, onUserClick: onUserClick, currentGroup: currentGroup = $e3031400c56218a8$var$defaultGroup, changeGroup: changeGroup })=>{
-    const [value, setValue] = (0, $c5L0i$react.useState)("");
+    const [value, setValue] = (0, $c5L0i$react.useState)('');
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($6c6fd8ca00de879c$exports))).chat,
         children: [
@@ -3652,8 +3652,8 @@ const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
-var $6897806a32f8d108$exports = {};
-$6897806a32f8d108$exports = new URL("polyscan.9c875efa.svg", "file:" + __filename).toString();
+var $57c8671c6c0c78f4$exports = {};
+$57c8671c6c0c78f4$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
 
 
 var $af1ad4f19d8ab63f$exports = {};
@@ -3681,6 +3681,7 @@ $parcel$export($af1ad4f19d8ab63f$exports, "second-text-container", () => $af1ad4
 $parcel$export($af1ad4f19d8ab63f$exports, "slides", () => $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9, (v) => $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "smaller", () => $af1ad4f19d8ab63f$export$3f732695c1493aec, (v) => $af1ad4f19d8ab63f$export$3f732695c1493aec = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "subtitle", () => $af1ad4f19d8ab63f$export$c96745152eb2740f, (v) => $af1ad4f19d8ab63f$export$c96745152eb2740f = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "svgWrapper", () => $af1ad4f19d8ab63f$export$e5459a6f92d1eda8, (v) => $af1ad4f19d8ab63f$export$e5459a6f92d1eda8 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "text", () => $af1ad4f19d8ab63f$export$6f093cfa640b7166, (v) => $af1ad4f19d8ab63f$export$6f093cfa640b7166 = v);
 var $af1ad4f19d8ab63f$export$202e93cb7fe09fc8;
 var $af1ad4f19d8ab63f$export$3c9d1e4131afeeb8;
@@ -3705,6 +3706,7 @@ var $af1ad4f19d8ab63f$export$891c99f874761757;
 var $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9;
 var $af1ad4f19d8ab63f$export$3f732695c1493aec;
 var $af1ad4f19d8ab63f$export$c96745152eb2740f;
+var $af1ad4f19d8ab63f$export$e5459a6f92d1eda8;
 var $af1ad4f19d8ab63f$export$6f093cfa640b7166;
 $af1ad4f19d8ab63f$export$202e93cb7fe09fc8 = `aq6KZW_additional-text`;
 $af1ad4f19d8ab63f$export$3c9d1e4131afeeb8 = `aq6KZW_coin`;
@@ -3733,10 +3735,12 @@ $af1ad4f19d8ab63f$export$891c99f874761757 = `aq6KZW_second-text-container`;
 $af1ad4f19d8ab63f$export$59de61ccd1a8a2d9 = `aq6KZW_slides`;
 $af1ad4f19d8ab63f$export$3f732695c1493aec = `aq6KZW_smaller`;
 $af1ad4f19d8ab63f$export$c96745152eb2740f = `aq6KZW_subtitle`;
+$af1ad4f19d8ab63f$export$e5459a6f92d1eda8 = `aq6KZW_svgWrapper`;
 $af1ad4f19d8ab63f$export$6f093cfa640b7166 = `aq6KZW_text`;
 
 
 
+console.log('url: ', (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports))));
 const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).text,
         children: [
@@ -3753,7 +3757,7 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
 const $4f095db3a6856690$var$SecondText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["second-text-container"],
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['second-text-container'],
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
                         children: "Find your similarities and your differences."
@@ -3765,7 +3769,7 @@ const $4f095db3a6856690$var$SecondText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxru
                 ]
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["mobile-second-text"],
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['mobile-second-text'],
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
                         children: "Find your similarities"
@@ -3801,13 +3805,13 @@ const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
                 }),
                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                     style: {
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                     },
                     children: [
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                            src: (0, (/*@__PURE__*/$parcel$interopDefault($6897806a32f8d108$exports))),
+                            src: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports))),
                             style: {
                                 height: 24,
                                 paddingRight: 5
@@ -3816,7 +3820,7 @@ const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                             style: {
                                 fontSize: 14,
-                                letterSpacing: "0px"
+                                letterSpacing: '0px'
                             },
                             href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
                             children: "token on polyscan"
@@ -3831,11 +3835,11 @@ const $4f095db3a6856690$var$textByPageNumber = {
 };
 const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ jwt: jwt }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
-        document.querySelector("body > div > div").style["max-height"] = "unset";
-        document.querySelector("body > div > div").style["min-height"] = "unset";
+        document.querySelector('body > div > div').style['max-height'] = 'unset';
+        document.querySelector('body > div > div').style['min-height'] = 'unset';
         return ()=>{
-            document.querySelector("body > div > div").style["max-height"] = "100svh";
-            document.querySelector("body > div > div").style["min-height"] = "100svh";
+            document.querySelector('body > div > div').style['max-height'] = '100svh';
+            document.querySelector('body > div > div').style['min-height'] = '100svh';
         };
     }, []);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -3861,13 +3865,13 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                         $4f095db3a6856690$var$textByPageNumber[0],
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
                             replace: true,
-                            to: jwt ? "/" : "/app",
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["open-app-button"],
+                            to: jwt ? '/' : '/app',
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['open-app-button'],
                             children: [
                                 "Open App ",
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
                                     sx: {
-                                        marginLeft: "15px",
+                                        marginLeft: '15px',
                                         fontSize: 20
                                     }
                                 })
@@ -3877,9 +3881,15 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
                             children: [
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['made-by'],
                                     children: [
-                                        "made by ",
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            style: {
+                                                fontSize: 15
+                                            },
+                                            children: "made by"
+                                        }),
+                                        " ",
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                             href: "mailto:piliponful@gmail.com",
                                             children: "piliponful"
@@ -3888,28 +3898,29 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                 }),
                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     style: {
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center"
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
                                     },
                                     children: [
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                            src: (0, (/*@__PURE__*/$parcel$interopDefault($6897806a32f8d108$exports))),
-                                            style: {
-                                                height: 18,
-                                                paddingRight: 5
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).svgWrapper,
+                                            dangerouslySetInnerHTML: {
+                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports)))
                                             }
                                         }),
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                             style: {
                                                 fontSize: 15,
-                                                letterSpacing: "0px",
-                                                textDecoration: "none",
-                                                color: "gray",
+                                                letterSpacing: '0px',
+                                                textDecoration: 'none',
+                                                color: 'gray',
                                                 fontWeight: 200,
-                                                whiteSpace: "nowrap"
+                                                whiteSpace: 'nowrap'
                                             },
+                                            target: "_blank",
                                             href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                                            rel: "noreferrer",
                                             children: "token on polyscan"
                                         })
                                     ]
@@ -3918,6 +3929,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
                                     children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                         href: "/privacy-policy",
+                                        target: "_blank",
                                         children: "privacy policy"
                                     })
                                 })

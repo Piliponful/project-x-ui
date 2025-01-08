@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.1.48",
+  "version": "1.1.49",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
@@ -21,7 +21,8 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
-    "@parcel/transformer-stylus": "^2.0.1",
+    "@parcel/transformer-stylus": "^2.13.3",
+    "@parcel/transformer-svg-react": "^2.13.3",
     "@react-oauth/google": "^0.12.1",
     "@sumsub/websdk-react": "^2.3.10",
     "axios": "^1.7.7",
@@ -41,7 +42,7 @@
     "lodash": "^4.17.21",
     "mixpanel-browser": "^2.55.1",
     "npm": "^7.8.0",
-    "parcel": "^2.0.1",
+    "parcel": "^2.13.3",
     "project-x-ui": "^1.0.372",
     "react": "^18.2.0",
     "react-detect-click-outside": "^1.1.7",
@@ -60,7 +61,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "@parcel/transformer-inline-string": "^2.13.3",
     "buffer": "^6.0.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   }
 }
