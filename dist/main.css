@@ -878,7 +878,6 @@
 
 .zDJPrW_checkbox.zDJPrW_style-c {
   cursor: pointer;
-  -webkit-user-select: none;
   user-select: none;
   padding-left: 30px;
   display: inline-block;
@@ -1948,7 +1947,6 @@ i.aq6KZW_scroll {
 .aq6KZW_open-app-button {
   letter-spacing: -.5px;
   box-sizing: border-box;
-  -webkit-text-decoration: unset;
   text-decoration: unset;
   color: #f1f1f1;
   cursor: pointer;
