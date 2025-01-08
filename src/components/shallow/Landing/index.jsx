@@ -76,8 +76,26 @@ export const Landing = forwardRef(({ jwt }, ref) => {
               <i className={styles.scroll} />
             </div>
           </> */}
-          <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
-          <span className={styles.privacy}><a href='/privacy-policy'>privacy policy</a></span>
+          <div className={styles.icons}>
+            <span className={styles['made-by']}>made by <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img src={PolyscanSVG} style={{ height: 18, paddingRight: 5 }} />
+              <a
+                style={{
+                  fontSize: 15,
+                  letterSpacing: '0px',
+                  textDecoration: 'none',
+                  color: 'gray',
+                  fontWeight: 200,
+                  whiteSpace: 'nowrap'
+                }}
+                href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805'
+              >
+                token on polyscan
+              </a>
+            </div>
+            <span className={styles.privacy}><a href='/privacy-policy'>privacy policy</a></span>
+          </div>
         </div>
       </div>
     </>

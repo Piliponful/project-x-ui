@@ -51,12 +51,12 @@
   }
 
   .landing .open-app-button {
-    padding: 10px 13px;
-    font-size: 14px;
+    padding: 12px 16px;
+    font-size: 18px;
     margin-top: 30px;
 
     svg {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }
@@ -177,10 +177,11 @@ i.scroll {
   letter-spacing: 0;
   font-weight: 200;
   line-height: 15px;
-  position: absolute;
-  bottom: 12px;
-  left: 10px;
+  // position: absolute;
+  // bottom: 12px;
+  // left: 10px;
   color: gray;
+  white-space: nowrap;
 
   a {
     font-size: 15px;
@@ -194,9 +195,10 @@ i.scroll {
   font-size: 14px;
   font-weight: 200;
   line-height: 1;
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
+  // position: absolute;
+  // bottom: 12px;
+  // right: 12px;
+  white-space: nowrap;
 
   a {
     font-size: 20px;
@@ -204,6 +206,16 @@ i.scroll {
     text-decoration: none;
     font-family: "Dancing Script";
   }
+}
+
+.icons {
+  font-size: 15px;
+  margin-top: 90px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 1148px) {
@@ -221,6 +233,12 @@ i.scroll {
     display: flex;
     flex-direction: column;
     gap: 16px
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .icons {
+    
   }
 }
 

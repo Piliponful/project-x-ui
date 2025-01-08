@@ -1862,12 +1862,12 @@
 
   .aq6KZW_landing .aq6KZW_open-app-button {
     margin-top: 30px;
-    padding: 10px 13px;
-    font-size: 14px;
+    padding: 12px 16px;
+    font-size: 18px;
   }
 
   .aq6KZW_landing .aq6KZW_open-app-button svg {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -1965,11 +1965,9 @@ i.aq6KZW_scroll {
 .aq6KZW_privacy {
   letter-spacing: 0;
   color: gray;
+  white-space: nowrap;
   font-weight: 200;
   line-height: 15px;
-  position: absolute;
-  bottom: 12px;
-  left: 10px;
 }
 
 .aq6KZW_privacy a {
@@ -1980,12 +1978,10 @@ i.aq6KZW_scroll {
 
 .aq6KZW_made-by {
   letter-spacing: 0;
+  white-space: nowrap;
   font-size: 14px;
   font-weight: 200;
   line-height: 1;
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
 }
 
 .aq6KZW_made-by a {
@@ -1993,6 +1989,16 @@ i.aq6KZW_scroll {
   font-family: Dancing Script;
   font-size: 20px;
   text-decoration: none;
+}
+
+.aq6KZW_icons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 90px;
+  font-size: 15px;
+  display: flex;
 }
 
 @media only screen and (width <= 1148px) {

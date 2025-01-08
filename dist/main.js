@@ -3664,6 +3664,7 @@ $parcel$export($af1ad4f19d8ab63f$exports, "coin--animated", () => $af1ad4f19d8ab
 $parcel$export($af1ad4f19d8ab63f$exports, "coin-x-axis", () => $af1ad4f19d8ab63f$export$a729607373715201, (v) => $af1ad4f19d8ab63f$export$a729607373715201 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "coin-y-axis-and-flip", () => $af1ad4f19d8ab63f$export$4079574a46612420, (v) => $af1ad4f19d8ab63f$export$4079574a46612420 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "icon", () => $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27, (v) => $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($af1ad4f19d8ab63f$exports, "icons", () => $af1ad4f19d8ab63f$export$df03f54e09e486fa, (v) => $af1ad4f19d8ab63f$export$df03f54e09e486fa = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "landing", () => $af1ad4f19d8ab63f$export$a9ae88069d8ac14e, (v) => $af1ad4f19d8ab63f$export$a9ae88069d8ac14e = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "landing-button", () => $af1ad4f19d8ab63f$export$f282e5191b337f50, (v) => $af1ad4f19d8ab63f$export$f282e5191b337f50 = v);
 $parcel$export($af1ad4f19d8ab63f$exports, "made-by", () => $af1ad4f19d8ab63f$export$101a475b15c86041, (v) => $af1ad4f19d8ab63f$export$101a475b15c86041 = v);
@@ -3687,6 +3688,7 @@ var $af1ad4f19d8ab63f$export$9fb4f45ed9e347e0;
 var $af1ad4f19d8ab63f$export$a729607373715201;
 var $af1ad4f19d8ab63f$export$4079574a46612420;
 var $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27;
+var $af1ad4f19d8ab63f$export$df03f54e09e486fa;
 var $af1ad4f19d8ab63f$export$a9ae88069d8ac14e;
 var $af1ad4f19d8ab63f$export$f282e5191b337f50;
 var $af1ad4f19d8ab63f$export$101a475b15c86041;
@@ -3712,6 +3714,7 @@ $af1ad4f19d8ab63f$export$a729607373715201;
 $af1ad4f19d8ab63f$export$4079574a46612420 = `aq6KZW_coin-y-axis-and-flip`;
 $af1ad4f19d8ab63f$export$4079574a46612420;
 $af1ad4f19d8ab63f$export$1ca1ec8b29a4ce27 = `aq6KZW_icon`;
+$af1ad4f19d8ab63f$export$df03f54e09e486fa = `aq6KZW_icons`;
 $af1ad4f19d8ab63f$export$a9ae88069d8ac14e = `aq6KZW_landing`;
 $af1ad4f19d8ab63f$export$f282e5191b337f50 = `aq6KZW_landing-button`;
 $af1ad4f19d8ab63f$export$101a475b15c86041 = `aq6KZW_made-by`;
@@ -3870,22 +3873,55 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                 })
                             ]
                         }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
                             children: [
-                                "made by ",
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                    href: "mailto:piliponful@gmail.com",
-                                    children: "piliponful"
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))["made-by"],
+                                    children: [
+                                        "made by ",
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                            href: "mailto:piliponful@gmail.com",
+                                            children: "piliponful"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    style: {
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center"
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                            src: (0, (/*@__PURE__*/$parcel$interopDefault($6897806a32f8d108$exports))),
+                                            style: {
+                                                height: 18,
+                                                paddingRight: 5
+                                            }
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                            style: {
+                                                fontSize: 15,
+                                                letterSpacing: "0px",
+                                                textDecoration: "none",
+                                                color: "gray",
+                                                fontWeight: 200,
+                                                whiteSpace: "nowrap"
+                                            },
+                                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                                            children: "token on polyscan"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                        href: "/privacy-policy",
+                                        children: "privacy policy"
+                                    })
                                 })
                             ]
-                        }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
-                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                href: "/privacy-policy",
-                                children: "privacy policy"
-                            })
                         })
                     ]
                 })

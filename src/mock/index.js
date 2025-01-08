@@ -71,7 +71,8 @@ const mostAnsweredQuestions = [
     noPercentage: 33,
     shortId: 0,
     hide: true,
-    addImageAvailable: true
+    addImageAvailable: true,
+    loading: true
   },
   {
     _id: '6650964de52e25cf29ecc054',
@@ -87,7 +88,8 @@ const mostAnsweredQuestions = [
       no: 9
     },
     shortId: 2,
-    noPercentage: 69
+    noPercentage: 69,
+    loading: true
   },
   {
     _id: '6651c5dac4df33de39d4875d',
