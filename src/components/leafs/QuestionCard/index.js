@@ -33,7 +33,8 @@ export default forwardRef(({
   createUser,
   trackConversion,
   addImageAvailable,
-  loading
+  loading,
+  selected
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -60,9 +61,12 @@ export default forwardRef(({
     })
   }
 
+  console.log('selected: ', selected)
+
   return (
     <>
-      <article ref={ref} className={styles.card}>
+      <article ref={ref} className={cn(styles.card, { [styles.selectedQuestion]: selected })}>
+        {selected && <div className={styles.badge}><span>Selected</span></div>}
         {img && <img className={styles.previewImg} src={img} alt='preview image' />}
         <div className={cn(styles.innerCard, { [styles.innerCardWithImage]: img })}>
           <Title>

@@ -8,42 +8,11 @@ import styles from './styles.module.styl'
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
-console.log('url: ', PolyscanSVG)
-
 const FirstText = () => (
   <div className={styles.text}>
     <h1 className={styles.name}>Non-anonymous online voting</h1>
     <h2 className={styles.subtitle}>on social and political issues.</h2>
   </div>
-)
-
-const SecondText = () => (
-  <>
-    <div className={styles['second-text-container']}>
-      <p>Find your similarities and your differences.</p>
-      <p className={styles.smaller}>After you cast your votes you can compare your answers with anyone else on the site.</p>
-    </div>
-    <div className={styles['mobile-second-text']}>
-      <p>Find your similarities</p>
-      <p>and your differences.</p>
-      <p className={styles.smaller}>After you cast your votes you can compare your answers with anyone else on the site.</p>
-    </div>
-  </>
-)
-
-const ThirdText = () => (
-  <>
-    <div>
-      <p>Get crypto for every question asked, every answer to that question and every question you answer</p>
-      <p className={styles.smaller}>You will get reward relative to your follower count on X(if you sign in with it)</p>
-      <small>(you have 1000 followers, you'll get 1000 for every question and answer)</small>
-      <div><small>It's a custom token. Its value is derived from the fact I will only sell ads(and paid polls) on this app using this token</small></div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <img src={PolyscanSVG} style={{ height: 24, paddingRight: 5 }} />
-        <a style={{ fontSize: 14, letterSpacing: '0px' }} href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805'>token on polyscan</a>
-      </div>
-    </div>
-  </>
 )
 
 const textByPageNumber = {
@@ -73,11 +42,6 @@ export const Landing = forwardRef(({ jwt }, ref) => {
           <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']}>
             Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
           </Link>
-          {/* <>
-            <div className={styles.scrollIcon}>
-              <i className={styles.scroll} />
-            </div>
-          </> */}
           <div className={styles.icons}>
             <span className={styles['made-by']}><span style={{ fontSize: 15 }}>made by</span> <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

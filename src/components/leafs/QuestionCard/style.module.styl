@@ -87,3 +87,48 @@
   cursor: pointer;
   color: #00000063;
 }
+
+.selectedQuestion .innerCardWithImage, .selectedQuestion .innerCard {
+  border-width: 2px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "⬤";
+    color: #bebebe;
+    font-size: 6px;
+    position: absolute;
+    bottom: -25px;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.badge {
+  color: #3b3b3b;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: IBM Plex Sans, sans-serif;
+
+  span {
+    background: #bebebe;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 87px;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    margin-bottom: -3px;
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.selectedQuestion .previewImg {
+  border: 2px solid #b3b3b3;
+  border-bottom: none;
+}

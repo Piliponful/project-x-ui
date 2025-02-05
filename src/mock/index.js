@@ -72,7 +72,8 @@ const mostAnsweredQuestions = [
     shortId: 0,
     hide: true,
     addImageAvailable: true,
-    loading: true
+    loading: true,
+    selected: true
   },
   {
     _id: '6650964de52e25cf29ecc054',
@@ -129,6 +130,21 @@ const mostAnsweredQuestions = [
     username: 'piliponful',
     name: 'Will this app be successful?',
     img: 'https://media.carnegie.org/filer_public_thumbnails/filer_public/0d/1a/0d1a5205-4724-4dae-a0bc-3bffa0ebc5dc/scene_at_the_signing_of_the_constitution_of_the_united_states.jpg__928x618_q85_crop_subsampling-2_upscale.jpg',
+    parentMessageId: null,
+    createdAt: 1717106011368,
+    totalAnswers: 2,
+    answersCount: {
+      yes: 2,
+      no: 0
+    },
+    shortId: 12,
+    noPercentage: 0
+  },
+  {
+    _id: '6658f55b71d200e0657cdacc',
+    userId: '66422f0e814d3019c045efb3',
+    username: 'piliponful',
+    name: 'Do you think attack on titan ending was good?',
     parentMessageId: null,
     createdAt: 1717106011368,
     totalAnswers: 2,
@@ -425,7 +441,7 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing />
+      {/* <Landing /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -467,11 +483,11 @@ const Authorized = () => {
           toggleVerifiedByX={(toggleVerifiedByX) => console.log('toggleVerifiedByX, ', toggleVerifiedByX)}
           toggleVerifiedByKYC={(toggleVerifiedByKYC) => console.log('toggleVerifiedByKYC, ', toggleVerifiedByKYC)}
         /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}

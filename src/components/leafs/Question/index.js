@@ -30,7 +30,8 @@ export const Question = forwardRef(({
   createNewGroup,
   close,
   _id,
-  handleTwitterLogin
+  handleTwitterLogin,
+  selected = false
 }, ref) => {
   const [state, setState] = useState(null)
 
@@ -101,8 +102,10 @@ export const Question = forwardRef(({
     return () => resizeObserver.disconnect()
   }, [])
 
+  console.log('selected: ', selected)
+
   return (
-    <article id='question-card' ref={ref} className={styles.card}>
+    <article id='question-card' ref={ref} className={cn(styles.card, { 'selected-question': selected })}>
       <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>
       <div id='question-text' style={{ padding: '0 26px' }}>
         <Title h1 style={{ fontSize: 200, fontWeight: 200 }} id='question-text-size'>{name}</Title>
@@ -122,6 +125,16 @@ export const Question = forwardRef(({
           alignItems: 'center'
         }}
       >
+        <div
+          style={{
+            padding: '25px 22px',
+            background: '#00000017',
+            marginBottom: 40,
+            borderRadius: 40
+          }}
+        >
+          Wanna see more questions or ask one yourself?
+        </div>
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond || redirectToLogin} />)}
         <div className={styles.stats}>
           {
