@@ -963,8 +963,10 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 
 /* eslint-disable react/self-closing-comp */ /* eslint-disable jsx-quotes */ 
 
+
 var $34a1d4be4ab80325$exports = {};
 
+$parcel$export($34a1d4be4ab80325$exports, "active", () => $34a1d4be4ab80325$export$89da14300d534261, (v) => $34a1d4be4ab80325$export$89da14300d534261 = v);
 $parcel$export($34a1d4be4ab80325$exports, "badge", () => $34a1d4be4ab80325$export$4aebd143f31d0c0d, (v) => $34a1d4be4ab80325$export$4aebd143f31d0c0d = v);
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
@@ -975,6 +977,7 @@ $parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4
 $parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
 $parcel$export($34a1d4be4ab80325$exports, "selectedQuestion", () => $34a1d4be4ab80325$export$f7f968f67303d06e, (v) => $34a1d4be4ab80325$export$f7f968f67303d06e = v);
 $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
+var $34a1d4be4ab80325$export$89da14300d534261;
 var $34a1d4be4ab80325$export$4aebd143f31d0c0d;
 var $34a1d4be4ab80325$export$aa3e815946b80764;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
@@ -985,6 +988,7 @@ var $34a1d4be4ab80325$export$275ee2193c25f37a;
 var $34a1d4be4ab80325$export$fd824239f75849bd;
 var $34a1d4be4ab80325$export$f7f968f67303d06e;
 var $34a1d4be4ab80325$export$5e1be761f603d585;
+$34a1d4be4ab80325$export$89da14300d534261 = `GN153G_active`;
 $34a1d4be4ab80325$export$4aebd143f31d0c0d = `GN153G_badge`;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
@@ -997,14 +1001,16 @@ $34a1d4be4ab80325$export$f7f968f67303d06e = `GN153G_selectedQuestion`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 
 
-var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("svg", {
+var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
         id: "fi_5932657",
-        fill: "#00000063",
+        fill: groupMode ? '#3b3b3b' : '#00000063',
         marginTop: "4",
         onClick: onClick,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).active]: groupMode
+        }),
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("g", {
             id: "Icon",
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
@@ -1789,7 +1795,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 
 
 
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track('Share', {
@@ -1840,23 +1846,27 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).innerCardWithImage]: img
                     }),
                     children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
-                            children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
-                                    onClick: onUserClick,
-                                    children: [
-                                        username,
-                                        ":"
-                                    ]
-                                }),
-                                " ",
-                                htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    dangerouslySetInnerHTML: {
-                                        __html: htmlName
-                                    }
-                                }) : name
-                            ]
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c52b3c36a0937910$export$2e2bcd8739ae039), {
+                            children: groupMode ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("b", {
+                                children: "Create group"
+                            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).username,
+                                        onClick: onUserClick,
+                                        children: [
+                                            username,
+                                            ":"
+                                        ]
+                                    }),
+                                    " ",
+                                    htmlName ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                        dangerouslySetInnerHTML: {
+                                            __html: htmlName
+                                        }
+                                    }) : name
+                                ]
+                            })
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $b43f368b8ea6feca$export$2e2bcd8739ae039), {
                             ...answersCount,
@@ -1903,6 +1913,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     transform: 'translate(-50%, -50%)'
                                                 },
                                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
+                                                    groupMode: groupMode,
                                                     onClick: toggleGroupMode
                                                 })
                                             })

@@ -73,7 +73,8 @@ const mostAnsweredQuestions = [
     hide: true,
     addImageAvailable: true,
     loading: true,
-    selected: true
+    selected: true,
+    groupMode: true
   },
   {
     _id: '6650964de52e25cf29ecc054',

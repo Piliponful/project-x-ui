@@ -376,6 +376,10 @@
   font-weight: 300;
 }
 
+.GN153G_active {
+  fill: #3b3b3b !important;
+}
+
 .GN153G_icon {
   cursor: pointer;
   color: #00000063;

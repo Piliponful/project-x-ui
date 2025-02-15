@@ -37,7 +37,8 @@ export default forwardRef(({
   trackConversion,
   addImageAvailable,
   loading,
-  selected
+  selected,
+  groupMode
 }, ref) => {
   const share = () => {
     if (navigator.share) {
@@ -73,7 +74,7 @@ export default forwardRef(({
         {img && <img className={styles.previewImg} src={img} alt='preview image' />}
         <div className={cn(styles.innerCard, { [styles.innerCardWithImage]: img })}>
           <Title>
-            <span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}
+            {groupMode ? <b>Create group</b> : <div><span className={styles.username} onClick={onUserClick}>{username}:</span> {htmlName ? <span dangerouslySetInnerHTML={{ __html: htmlName }} /> : name}</div>}
           </Title>
           <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
           {!yourOwnQuestion && (!me?.answer && <AnswerButtons loading={loading} respond={respond || redirectToLogin} />)}
@@ -82,7 +83,7 @@ export default forwardRef(({
             <div style={{ display: 'flex', gap: 12 }}>
               <div style={{ position: 'relative', height: 24, width: 34 }}>
                 <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                  <VennDiagram onClick={toggleGroupMode} />
+                  <VennDiagram groupMode={groupMode} onClick={toggleGroupMode} />
                 </div>
               </div>
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
