@@ -80,8 +80,8 @@ export default forwardRef(({
           <div className={styles.expand}>
             <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>
-              <div style={{ position: 'relative', height: 24, width: 36 }}>
-                <div style={{ marginTop: 2, height: 'auto', width: 36, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+              <div style={{ position: 'relative', height: 24, width: 34 }}>
+                <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
                   <VennDiagram onClick={toggleGroupMode} />
                 </div>
               </div>

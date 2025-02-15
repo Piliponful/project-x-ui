@@ -961,6 +961,60 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 };
 
 
+/* eslint-disable react/self-closing-comp */ /* eslint-disable jsx-quotes */ 
+
+var $34a1d4be4ab80325$exports = {};
+
+$parcel$export($34a1d4be4ab80325$exports, "badge", () => $34a1d4be4ab80325$export$4aebd143f31d0c0d, (v) => $34a1d4be4ab80325$export$4aebd143f31d0c0d = v);
+$parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
+$parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
+$parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
+$parcel$export($34a1d4be4ab80325$exports, "icon", () => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27, (v) => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
+$parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
+$parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
+$parcel$export($34a1d4be4ab80325$exports, "selectedQuestion", () => $34a1d4be4ab80325$export$f7f968f67303d06e, (v) => $34a1d4be4ab80325$export$f7f968f67303d06e = v);
+$parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
+var $34a1d4be4ab80325$export$4aebd143f31d0c0d;
+var $34a1d4be4ab80325$export$aa3e815946b80764;
+var $34a1d4be4ab80325$export$9f77e0932fb78f72;
+var $34a1d4be4ab80325$export$464c821cd4347539;
+var $34a1d4be4ab80325$export$1ca1ec8b29a4ce27;
+var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
+var $34a1d4be4ab80325$export$275ee2193c25f37a;
+var $34a1d4be4ab80325$export$fd824239f75849bd;
+var $34a1d4be4ab80325$export$f7f968f67303d06e;
+var $34a1d4be4ab80325$export$5e1be761f603d585;
+$34a1d4be4ab80325$export$4aebd143f31d0c0d = `GN153G_badge`;
+$34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
+$34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
+$34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
+$34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = `GN153G_icon`;
+$34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
+$34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
+$34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
+$34a1d4be4ab80325$export$f7f968f67303d06e = `GN153G_selectedQuestion`;
+$34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
+
+
+var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 64 64",
+        id: "fi_5932657",
+        fill: "#00000063",
+        marginTop: "4",
+        onClick: onClick,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("g", {
+            id: "Icon",
+            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
+                d: "M44,14a17.90629,17.90629,0,0,0-11.99988,4.62195,18.00005,18.00005,0,1,0,0,26.7561A17.98812,17.98812,0,1,0,44,14ZM32,42.54749a15.90619,15.90619,0,0,1,0-21.095,15.90619,15.90619,0,0,1,0,21.095ZM4,32A15.97347,15.97347,0,0,1,30.58832,20.03711a17.88927,17.88927,0,0,0,0,23.92578A15.97347,15.97347,0,0,1,4,32ZM44,48a15.916,15.916,0,0,1-10.5882-4.037,17.88993,17.88993,0,0,0,0-23.926A15.98993,15.98993,0,1,1,44,48Z"
+            })
+        })
+    });
+
+
+
 
 
 
@@ -1734,35 +1788,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 };
 
 
-var $34a1d4be4ab80325$exports = {};
 
-$parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
-$parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
-$parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
-$parcel$export($34a1d4be4ab80325$exports, "icon", () => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27, (v) => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = v);
-$parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
-$parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
-$parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
-$parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
-var $34a1d4be4ab80325$export$aa3e815946b80764;
-var $34a1d4be4ab80325$export$9f77e0932fb78f72;
-var $34a1d4be4ab80325$export$464c821cd4347539;
-var $34a1d4be4ab80325$export$1ca1ec8b29a4ce27;
-var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
-var $34a1d4be4ab80325$export$275ee2193c25f37a;
-var $34a1d4be4ab80325$export$fd824239f75849bd;
-var $34a1d4be4ab80325$export$5e1be761f603d585;
-$34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
-$34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
-$34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
-$34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = `GN153G_icon`;
-$34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
-$34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
-$34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
-$34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
-
-
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected }, ref)=>{
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track('Share', {
@@ -1789,11 +1816,20 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             answer: answer
         });
     };
+    console.log('selected: ', selected);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
             ref: ref,
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card,
+            className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card, {
+                [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).selectedQuestion]: selected
+            }),
             children: [
+                selected && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).badge,
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                        children: "Selected"
+                    })
+                }),
                 img && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).previewImg,
                     src: img,
@@ -1850,6 +1886,27 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         gap: 12
                                     },
                                     children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            style: {
+                                                position: 'relative',
+                                                height: 24,
+                                                width: 34
+                                            },
+                                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                style: {
+                                                    marginTop: 2,
+                                                    height: 'auto',
+                                                    width: 34,
+                                                    position: 'absolute',
+                                                    left: '50%',
+                                                    top: '50%',
+                                                    transform: 'translate(-50%, -50%)'
+                                                },
+                                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
+                                                    onClick: toggleGroupMode
+                                                })
+                                            })
+                                        }),
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                             href: `/questions/${shortId}`,
                                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
@@ -3289,7 +3346,7 @@ $c9a1b197475086e8$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
 
 
 const $aa945d4ce4ddbaaa$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
-const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup, close: close, _id: _id, handleTwitterLogin: handleTwitterLogin }, ref)=>{
+const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ yourOwnQuestion: yourOwnQuestion, onUserClick: onUserClick, userPictureUrl: userPictureUrl, shortId: shortId, username: username, name: name, answersCount: answersCount, me: { answer: answer } = {}, respond: respond, createNewGroup: createNewGroup, close: close, _id: _id, handleTwitterLogin: handleTwitterLogin, selected: selected = false }, ref)=>{
     const [state, setState] = (0, $c5L0i$react.useState)(null);
     const totalAnswerCount = answersCount.yes + answersCount.no;
     const userReplyCount = state ? answersCount[state] : totalAnswerCount;
@@ -3346,10 +3403,13 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         }, 1000));
         return ()=>resizeObserver.disconnect();
     }, []);
+    console.log('selected: ', selected);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         id: "question-card",
         ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).card,
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).card, {
+            'selected-question': selected
+        }),
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($c9a1b197475086e8$exports))).close,
@@ -3420,6 +3480,15 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     alignItems: 'center'
                 },
                 children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                        style: {
+                            padding: '25px 22px',
+                            background: '#00000017',
+                            marginBottom: 40,
+                            borderRadius: 40
+                        },
+                        children: "Wanna see more questions or ask one yourself?"
+                    }),
                     !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                         style: {
                             maxWidth: 400,
@@ -3739,7 +3808,6 @@ $af1ad4f19d8ab63f$export$6f093cfa640b7166 = `aq6KZW_text`;
 
 
 
-console.log('url: ', (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports))));
 const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).text,
         children: [
@@ -3752,82 +3820,6 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
                 children: "on social and political issues."
             })
         ]
-    });
-const $4f095db3a6856690$var$SecondText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['second-text-container'],
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                        children: "Find your similarities and your differences."
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
-                        children: "After you cast your votes you can compare your answers with anyone else on the site."
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['mobile-second-text'],
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                        children: "Find your similarities"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                        children: "and your differences."
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
-                        children: "After you cast your votes you can compare your answers with anyone else on the site."
-                    })
-                ]
-            })
-        ]
-    });
-const $4f095db3a6856690$var$ThirdText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-            children: [
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                    children: "Get crypto for every question asked, every answer to that question and every question you answer"
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).smaller,
-                    children: "You will get reward relative to your follower count on X(if you sign in with it)"
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                    children: "(you have 1000 followers, you'll get 1000 for every question and answer)"
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                        children: "It's a custom token. Its value is derived from the fact I will only sell ads(and paid polls) on this app using this token"
-                    })
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                    style: {
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                            src: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports))),
-                            style: {
-                                height: 24,
-                                paddingRight: 5
-                            }
-                        }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                            style: {
-                                fontSize: 14,
-                                letterSpacing: '0px'
-                            },
-                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
-                            children: "token on polyscan"
-                        })
-                    ]
-                })
-            ]
-        })
     });
 const $4f095db3a6856690$var$textByPageNumber = {
     0: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$FirstText, {})
