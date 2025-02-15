@@ -8,12 +8,15 @@ import { formatDistanceToNow } from 'date-fns'
 import Title from './components/Title'
 import Stats from './components/Stats'
 import AnswerButtons from './components/AnswerButtons'
+import VennDiagram from './VennDiagram'
+// import JoinFullOutlinedIcon from '@mui/icons-material/JoinFullOutlined'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import styles from './style.module.styl'
 
 export default forwardRef(({
+  toggleGroupMode,
   yourOwnQuestion,
   shortId,
   onUserClick,
@@ -77,6 +80,11 @@ export default forwardRef(({
           <div className={styles.expand}>
             <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>
+              <div style={{ position: 'relative', height: 24, width: 36 }}>
+                <div style={{ marginTop: 2, height: 'auto', width: 36, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                  <VennDiagram onClick={toggleGroupMode} />
+                </div>
+              </div>
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
               <ShareIcon className={styles.icon} onClick={share} />
               {addImageAvailable && (
