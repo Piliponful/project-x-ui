@@ -1940,7 +1940,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         gap: 12
                                     },
                                     children: [
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        window.featureFlags?.groups && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                             style: {
                                                 position: 'relative',
                                                 height: 24,

@@ -81,11 +81,13 @@ export default forwardRef(({
           <div className={styles.expand}>
             <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
             <div style={{ display: 'flex', gap: 12 }}>
-              <div style={{ position: 'relative', height: 24, width: 34 }}>
-                <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                  <VennDiagram groupMode={groupMode} onClick={toggleGroupMode} />
+              {window.featureFlags?.groups && (
+                <div style={{ position: 'relative', height: 24, width: 34 }}>
+                  <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                    <VennDiagram groupMode={groupMode} onClick={toggleGroupMode} />
+                  </div>
                 </div>
-              </div>
+              )}
               <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
               <ShareIcon className={styles.icon} onClick={share} />
               {addImageAvailable && (
