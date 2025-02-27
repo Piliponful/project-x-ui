@@ -19,6 +19,7 @@ export const MainScreenSwipeContext = React.createContext({
   setSkipScreen: null,
   setIsModalOpen: false,
   setShowSearch: null,
+  addImgModal: false,
   showSearch: false,
   setAnswer: () => {},
   setShowKYCModal: () => {},
@@ -52,7 +53,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [showLoginModal, setIsLoginModalOpen] = useState(false)
   const [showKYCModal, setShowKYCModal] = useState(false)
   const [answer, setAnswer] = useState(null)
-  const [addImgModal, setAddImgModal] = useState(null)
+  const [addImgModal, setAddImgModal] = useState(false)
   const [selectedMessage, setSelectedMessage] = useState(false)
   const [imgUrl, setImgUrl] = useState('')
   const [sendEmails, setSendEmails] = useState(true)

@@ -21,6 +21,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@parcel/source-map": "^2.1.1",
     "@parcel/transformer-stylus": "^2.13.3",
     "@parcel/transformer-svg-react": "^2.13.3",
     "@react-oauth/google": "^0.12.1",

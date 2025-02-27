@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -1421,6 +1421,7 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setSkipScreen: null,
     setIsModalOpen: false,
     setShowSearch: null,
+    addImgModal: false,
     showSearch: false,
     setAnswer: ()=>{},
     setShowKYCModal: ()=>{},
@@ -1450,7 +1451,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [showLoginModal, setIsLoginModalOpen] = (0, $c5L0i$react.useState)(false);
     const [showKYCModal, setShowKYCModal] = (0, $c5L0i$react.useState)(false);
     const [answer, setAnswer] = (0, $c5L0i$react.useState)(null);
-    const [addImgModal, setAddImgModal] = (0, $c5L0i$react.useState)(null);
+    const [addImgModal, setAddImgModal] = (0, $c5L0i$react.useState)(false);
     const [selectedMessage, setSelectedMessage] = (0, $c5L0i$react.useState)(false);
     const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)('');
     const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
