@@ -28,7 +28,6 @@ var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore"
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
 var $c5L0i$reactrouterdom = require("react-router-dom");
-var $c5L0i$reacthelmet = require("react-helmet");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
 
 
@@ -966,7 +965,6 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 
 var $34a1d4be4ab80325$exports = {};
 
-$parcel$export($34a1d4be4ab80325$exports, "active", () => $34a1d4be4ab80325$export$89da14300d534261, (v) => $34a1d4be4ab80325$export$89da14300d534261 = v);
 $parcel$export($34a1d4be4ab80325$exports, "badge", () => $34a1d4be4ab80325$export$4aebd143f31d0c0d, (v) => $34a1d4be4ab80325$export$4aebd143f31d0c0d = v);
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
@@ -977,7 +975,7 @@ $parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4
 $parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
 $parcel$export($34a1d4be4ab80325$exports, "selectedQuestion", () => $34a1d4be4ab80325$export$f7f968f67303d06e, (v) => $34a1d4be4ab80325$export$f7f968f67303d06e = v);
 $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
-var $34a1d4be4ab80325$export$89da14300d534261;
+$parcel$export($34a1d4be4ab80325$exports, "vennDiagramIcon", () => $34a1d4be4ab80325$export$21d313c8dd377057, (v) => $34a1d4be4ab80325$export$21d313c8dd377057 = v);
 var $34a1d4be4ab80325$export$4aebd143f31d0c0d;
 var $34a1d4be4ab80325$export$aa3e815946b80764;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
@@ -988,7 +986,7 @@ var $34a1d4be4ab80325$export$275ee2193c25f37a;
 var $34a1d4be4ab80325$export$fd824239f75849bd;
 var $34a1d4be4ab80325$export$f7f968f67303d06e;
 var $34a1d4be4ab80325$export$5e1be761f603d585;
-$34a1d4be4ab80325$export$89da14300d534261 = `GN153G_active`;
+var $34a1d4be4ab80325$export$21d313c8dd377057;
 $34a1d4be4ab80325$export$4aebd143f31d0c0d = `GN153G_badge`;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
@@ -999,25 +997,71 @@ $34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
 $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$f7f968f67303d06e = `GN153G_selectedQuestion`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
+$34a1d4be4ab80325$export$21d313c8dd377057 = `GN153G_vennDiagramIcon`;
 
 
-var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("svg", {
+var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode })=>{
+    const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(groupMode);
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
-        id: "fi_5932657",
-        fill: groupMode ? '#3b3b3b' : '#00000063',
-        marginTop: "4",
         onClick: onClick,
-        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon, {
+        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).vennDiagramIcon, {
             [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).active]: groupMode
         }),
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("g", {
-            id: "Icon",
-            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
-                d: "M44,14a17.90629,17.90629,0,0,0-11.99988,4.62195,18.00005,18.00005,0,1,0,0,26.7561A17.98812,17.98812,0,1,0,44,14ZM32,42.54749a15.90619,15.90619,0,0,1,0-21.095,15.90619,15.90619,0,0,1,0,21.095ZM4,32A15.97347,15.97347,0,0,1,30.58832,20.03711a17.88927,17.88927,0,0,0,0,23.92578A15.97347,15.97347,0,0,1,4,32ZM44,48a15.916,15.916,0,0,1-10.5882-4.037,17.88993,17.88993,0,0,0,0-23.926A15.98993,15.98993,0,1,1,44,48Z"
+        onMouseEnter: ()=>setIsHovered(true),
+        onMouseLeave: ()=>!groupMode && setIsHovered(false),
+        style: {
+            cursor: 'pointer'
+        },
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("defs", {
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("linearGradient", {
+                    id: "gradient-fill",
+                    gradientUnits: "userSpaceOnUse",
+                    x1: "2.044",
+                    x2: "62",
+                    y1: "32",
+                    y2: "32",
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("stop", {
+                            offset: "0",
+                            "stop-color": "#0fdcdd"
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("stop", {
+                            offset: "1",
+                            "stop-color": "#46a1e8"
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("g", {
+                id: "_39_Diagram_Venn",
+                "data-name": "39 Diagram Venn",
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
+                    d: "m44 14a17.723 17.723 0 0 0 -12 4.2 17.762 17.762 0 0 0 -12-4.2c-23.91 0-23.971 36 0 36a17.864 17.864 0 0 0 12.028-4.16 17.756 17.756 0 0 0 11.972 4.16c24.12 0 23.881-36 0-36zm-12 28.958a17.159 17.159 0 0 1 .026-21.958c5.318 5.982 5.283 15.952-.026 21.958zm-12-26.958a15.913 15.913 0 0 1 10.569 3.6c-6.014 6.749-6.035 18.026-.037 24.785a15.821 15.821 0 0 1 -10.532 3.615c-21.254 0-21.307-32 0-32zm24 32a15.8 15.8 0 0 1 -10.5-3.593c6.026-6.749 5.982-18.031-.044-24.792a15.809 15.809 0 0 1 10.544-3.615c21.44 0 21.227 32 0 32z",
+                    fill: isHovered ? 'url(#gradient-fill)' : '#00000063'
+                })
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("animate", {
+                attributeName: "fill",
+                from: "#00000063",
+                to: "url(#gradient-fill)",
+                dur: "0.5s",
+                begin: "mouseover",
+                fill: "freeze"
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("animate", {
+                attributeName: "fill",
+                from: "url(#gradient-fill)",
+                to: "#00000063",
+                dur: "0.5s",
+                begin: "mouseout",
+                fill: "freeze"
             })
-        })
+        ]
     });
+};
 
 
 
@@ -3491,15 +3535,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
                     alignItems: 'center'
                 },
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                        style: {
-                            padding: '25px 22px',
-                            background: '#00000017',
-                            marginBottom: 40,
-                            borderRadius: 40
-                        },
-                        children: "Wanna see more questions or ask one yourself?"
-                    }),
                     !yourOwnQuestion && !answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $aea682282f3bff22$export$2e2bcd8739ae039), {
                         style: {
                             maxWidth: 400,
@@ -3730,7 +3765,6 @@ const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
-
 var $57c8671c6c0c78f4$exports = {};
 $57c8671c6c0c78f4$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
 
@@ -3844,103 +3878,87 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
             document.querySelector('body > div > div').style['min-height'] = '100svh';
         };
     }, []);
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
-                encodeSpecialCharacters: false,
-                children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("title", {
-                        children: "poll.cc"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
-                        name: "description",
-                        content: "Public voting on social or political issues."
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
-                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                    ref: ref,
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
+        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+            ref: ref,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
+            children: [
+                $4f095db3a6856690$var$textByPageNumber[0],
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
+                    replace: true,
+                    to: jwt ? '/' : '/app',
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['open-app-button'],
                     children: [
-                        $4f095db3a6856690$var$textByPageNumber[0],
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
-                            replace: true,
-                            to: jwt ? '/' : '/app',
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['open-app-button'],
+                        "Open App ",
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
+                            sx: {
+                                marginLeft: '15px',
+                                fontSize: 20
+                            }
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
+                    children: [
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['made-by'],
                             children: [
-                                "Open App ",
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
-                                    sx: {
-                                        marginLeft: '15px',
-                                        fontSize: 20
-                                    }
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    style: {
+                                        fontSize: 15
+                                    },
+                                    children: "made by"
+                                }),
+                                " ",
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                    href: "mailto:piliponful@gmail.com",
+                                    children: "piliponful"
                                 })
                             ]
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
+                            style: {
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            },
                             children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['made-by'],
-                                    children: [
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                            style: {
-                                                fontSize: 15
-                                            },
-                                            children: "made by"
-                                        }),
-                                        " ",
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                            href: "mailto:piliponful@gmail.com",
-                                            children: "piliponful"
-                                        })
-                                    ]
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).svgWrapper,
+                                    dangerouslySetInnerHTML: {
+                                        __html: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports)))
+                                    }
                                 }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                                     style: {
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
+                                        fontSize: 15,
+                                        letterSpacing: '0px',
+                                        textDecoration: 'none',
+                                        color: 'gray',
+                                        fontWeight: 200,
+                                        whiteSpace: 'nowrap'
                                     },
-                                    children: [
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).svgWrapper,
-                                            dangerouslySetInnerHTML: {
-                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports)))
-                                            }
-                                        }),
-                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                            style: {
-                                                fontSize: 15,
-                                                letterSpacing: '0px',
-                                                textDecoration: 'none',
-                                                color: 'gray',
-                                                fontWeight: 200,
-                                                whiteSpace: 'nowrap'
-                                            },
-                                            target: "_blank",
-                                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
-                                            rel: "noreferrer",
-                                            children: "token on polyscan"
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
-                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                        href: "/privacy-policy",
-                                        target: "_blank",
-                                        children: "privacy policy"
-                                    })
+                                    target: "_blank",
+                                    href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                                    rel: "noreferrer",
+                                    children: "token on polyscan"
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                href: "/privacy-policy",
+                                target: "_blank",
+                                children: "privacy policy"
+                            })
                         })
                     ]
                 })
-            })
-        ]
+            ]
+        })
     });
 });
 

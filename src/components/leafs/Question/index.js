@@ -125,7 +125,7 @@ export const Question = forwardRef(({
           alignItems: 'center'
         }}
       >
-        <div
+        {/* <div
           style={{
             padding: '25px 22px',
             background: '#00000017',
@@ -134,7 +134,7 @@ export const Question = forwardRef(({
           }}
         >
           Wanna see more questions or ask one yourself?
-        </div>
+        </div> */}
         {!yourOwnQuestion && (!answer && <AnswerButtons style={{ maxWidth: 400, width: '90%' }} respond={respond || redirectToLogin} />)}
         <div className={styles.stats}>
           {

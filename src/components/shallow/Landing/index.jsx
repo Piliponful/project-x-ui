@@ -1,6 +1,5 @@
 import React, { forwardRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 
 import PolyscanSVG from 'bundle-text:./polyscan.svg'
 
@@ -31,40 +30,34 @@ export const Landing = forwardRef(({ jwt }, ref) => {
   }, [])
 
   return (
-    <>
-      <Helmet encodeSpecialCharacters={false}>
-        <title>poll.cc</title>
-        <meta name='description' content='Public voting on social or political issues.' />
-      </Helmet>
-      <div className={styles.slides}>
-        <div ref={ref} className={styles.landing}>
-          {textByPageNumber[0]}
-          <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']}>
-            Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
-          </Link>
-          <div className={styles.icons}>
-            <span className={styles['made-by']}><span style={{ fontSize: 15 }}>made by</span> <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div className={styles.svgWrapper} dangerouslySetInnerHTML={{ __html: PolyscanSVG }} />
-              <a
-                style={{
-                  fontSize: 15,
-                  letterSpacing: '0px',
-                  textDecoration: 'none',
-                  color: 'gray',
-                  fontWeight: 200,
-                  whiteSpace: 'nowrap'
-                }}
-                target='_blank'
-                href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805' rel='noreferrer'
-              >
-                token on polyscan
-              </a>
-            </div>
-            <span className={styles.privacy}><a href='/privacy-policy' target='_blank'>privacy policy</a></span>
+    <div className={styles.slides}>
+      <div ref={ref} className={styles.landing}>
+        {textByPageNumber[0]}
+        <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']}>
+          Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
+        </Link>
+        <div className={styles.icons}>
+          <span className={styles['made-by']}><span style={{ fontSize: 15 }}>made by</span> <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className={styles.svgWrapper} dangerouslySetInnerHTML={{ __html: PolyscanSVG }} />
+            <a
+              style={{
+                fontSize: 15,
+                letterSpacing: '0px',
+                textDecoration: 'none',
+                color: 'gray',
+                fontWeight: 200,
+                whiteSpace: 'nowrap'
+              }}
+              target='_blank'
+              href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805' rel='noreferrer'
+            >
+              token on polyscan
+            </a>
           </div>
+          <span className={styles.privacy}><a href='/privacy-policy' target='_blank'>privacy policy</a></span>
         </div>
       </div>
-    </>
+    </div>
   )
 })
