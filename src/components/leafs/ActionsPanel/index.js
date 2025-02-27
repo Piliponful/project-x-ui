@@ -170,14 +170,16 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
           }}
         >
           <div onClick={logout}>Log out</div>
-          <div
-            onClick={() => {
-              window.mixpanel.track('Rewards')
-              setIsModalOpen(true)
-            }}
-          >
-            Rewards
-          </div>
+          {window.featureFlags.rewards && (
+            <div
+              onClick={() => {
+                window.mixpanel.track('Rewards')
+                setIsModalOpen(true)
+              }}
+            >
+              Rewards
+            </div>
+          )}
           <div onClick={showMyHistory}>My Questions/Answers</div>
           {Boolean(testUsers.length) && (
             <div className={styles.divider}>

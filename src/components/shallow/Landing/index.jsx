@@ -38,23 +38,25 @@ export const Landing = forwardRef(({ jwt }, ref) => {
         </Link>
         <div className={styles.icons}>
           <span className={styles['made-by']}><span style={{ fontSize: 15 }}>made by</span> <a href='mailto:piliponful@gmail.com'>piliponful</a></span>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div className={styles.svgWrapper} dangerouslySetInnerHTML={{ __html: PolyscanSVG }} />
-            <a
-              style={{
-                fontSize: 15,
-                letterSpacing: '0px',
-                textDecoration: 'none',
-                color: 'gray',
-                fontWeight: 200,
-                whiteSpace: 'nowrap'
-              }}
-              target='_blank'
-              href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805' rel='noreferrer'
-            >
-              token on polyscan
-            </a>
-          </div>
+          {window.featureFlags?.rewards && (
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className={styles.svgWrapper} dangerouslySetInnerHTML={{ __html: PolyscanSVG }} />
+              <a
+                style={{
+                  fontSize: 15,
+                  letterSpacing: '0px',
+                  textDecoration: 'none',
+                  color: 'gray',
+                  fontWeight: 200,
+                  whiteSpace: 'nowrap'
+                }}
+                target='_blank'
+                href='https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805' rel='noreferrer'
+              >
+                token on polyscan
+              </a>
+            </div>
+          )}
           <span className={styles.privacy}><a href='/privacy-policy' target='_blank'>privacy policy</a></span>
         </div>
       </div>

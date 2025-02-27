@@ -1342,7 +1342,7 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         onClick: logout,
                         children: "Log out"
                     }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                    window.featureFlags.rewards && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                         onClick: ()=>{
                             window.mixpanel.track('Rewards');
                             setIsModalOpen(true);
@@ -3918,7 +3918,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                                 })
                             ]
                         }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        window.featureFlags?.rewards && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                             style: {
                                 display: 'flex',
                                 alignItems: 'center',
