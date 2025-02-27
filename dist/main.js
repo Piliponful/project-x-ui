@@ -1420,7 +1420,7 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setIsLoginModalOpen: ()=>{},
     toggleScreen: null,
     setSkipScreen: null,
-    setIsModalOpen: null,
+    setIsModalOpen: false,
     setShowSearch: null,
     showSearch: false,
     setAnswer: ()=>{},

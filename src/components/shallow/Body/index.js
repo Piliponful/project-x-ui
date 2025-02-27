@@ -17,7 +17,7 @@ export const MainScreenSwipeContext = React.createContext({
   setIsLoginModalOpen: () => {},
   toggleScreen: null,
   setSkipScreen: null,
-  setIsModalOpen: null,
+  setIsModalOpen: false,
   setShowSearch: null,
   showSearch: false,
   setAnswer: () => {},
