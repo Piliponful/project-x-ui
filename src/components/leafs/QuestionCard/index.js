@@ -65,8 +65,6 @@ export default forwardRef(({
     })
   }
 
-  console.log('selected: ', selected)
-
   return (
     <>
       <article ref={ref} className={cn(styles.card, { [styles.selectedQuestion]: selected })}>

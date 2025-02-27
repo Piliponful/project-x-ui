@@ -102,8 +102,6 @@ export const Question = forwardRef(({
     return () => resizeObserver.disconnect()
   }, [])
 
-  console.log('selected: ', selected)
-
   return (
     <article id='question-card' ref={ref} className={cn(styles.card, { 'selected-question': selected })}>
       <div className={styles.close}><CloseIcon className={styles.back} onClick={close} /></div>

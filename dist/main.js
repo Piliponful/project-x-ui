@@ -1219,7 +1219,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: 
 var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showXLogin: showXLogin, showKYCLogin: showKYCLogin, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
-        onTriggered: ()=>console.log('on trigger') || setShowDropdown(false)
+        onTriggered: ()=>setShowDropdown(false)
     });
     const { setIsModalOpen: setIsModalOpen, setShowKYCModal: setShowKYCModal, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const content = /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
@@ -1281,7 +1281,6 @@ var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 // }}
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($13058157b3244d01$exports))).container,
                 onClick: (e)=>{
-                    console.log('test dropdown true');
                     e.stopPropagation();
                     setShowDropdown(!showDropdown);
                 },
@@ -1866,7 +1865,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             answer: answer
         });
     };
-    console.log('selected: ', selected);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
             ref: ref,
@@ -3458,7 +3456,6 @@ const $aa945d4ce4ddbaaa$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $c5L0i$react.
         }, 1000));
         return ()=>resizeObserver.disconnect();
     }, []);
-    console.log('selected: ', selected);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         id: "question-card",
         ref: ref,

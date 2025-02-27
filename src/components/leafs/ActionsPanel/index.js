@@ -65,7 +65,7 @@ export const KYCComponent = ({ userId, updateJwt, closeModal }) => {
 
 export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
-  const ref = useDetectClickOutside({ onTriggered: () => console.log('on trigger') || setShowDropdown(false) })
+  const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
 
   const content = (
@@ -128,7 +128,7 @@ export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyH
         //   }
         // }}
         className={styles.container}
-        onClick={(e) => { console.log('test dropdown true'); e.stopPropagation(); setShowDropdown(!showDropdown) }}
+        onClick={(e) => { e.stopPropagation(); setShowDropdown(!showDropdown) }}
         style={{ width: (showKYCLogin || showXLogin) ? '40%' : '100%', textAlign: 'center' }}
         // ref={node => {
         //   ref.current = node
