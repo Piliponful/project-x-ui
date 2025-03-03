@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $c5L0i$reactjsxruntime = require("react/jsx-runtime");
 var $c5L0i$react = require("react");
 var $c5L0i$lodash = require("lodash");
@@ -29,6 +29,7 @@ var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
 var $c5L0i$handlebars = require("handlebars");
 var $c5L0i$reactrouterdom = require("react-router-dom");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
+var $c5L0i$reacthelmet = require("react-helmet");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -3763,6 +3764,7 @@ const $e3031400c56218a8$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
+
 var $57c8671c6c0c78f4$exports = {};
 $57c8671c6c0c78f4$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
 
@@ -3867,7 +3869,65 @@ const $4f095db3a6856690$var$FirstText = ()=>/*#__PURE__*/ (0, $c5L0i$reactjsxrun
 const $4f095db3a6856690$var$textByPageNumber = {
     0: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$FirstText, {})
 };
-const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ jwt: jwt }, ref)=>{
+const $4f095db3a6856690$var$SeoContent = ({ keyword: title, description: description })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        style: {
+            fontSize: 33
+        },
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("header", {
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h1", {
+                    children: title
+                })
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("section", {
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("h2", {
+                        children: [
+                            "Why Use ",
+                            title,
+                            "?"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                        children: description
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("section", {
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("h2", {
+                        children: [
+                            "How to Create ",
+                            title,
+                            "?"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("ol", {
+                        children: [
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("li", {
+                                children: "Enter your question and answer choices."
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("li", {
+                                children: "Customize poll settings."
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("li", {
+                                children: "Share your poll via link or embed it on your website."
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("li", {
+                                children: "Analyze the results in real-time."
+                            })
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("footer", {
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                    children: "\xa9 2025 Poll.cc - The Best Online Polling Tool"
+                })
+            })
+        ]
+    });
+const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ jwt: jwt, isBot: isBot, description: description, title: title }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         document.querySelector('body > div > div').style['max-height'] = 'unset';
         document.querySelector('body > div > div').style['min-height'] = 'unset';
@@ -3876,87 +3936,120 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
             document.querySelector('body > div > div').style['min-height'] = '100svh';
         };
     }, []);
-    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
-        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-            ref: ref,
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
-            children: [
-                $4f095db3a6856690$var$textByPageNumber[0],
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
-                    replace: true,
-                    to: jwt ? '/' : '/app',
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['open-app-button'],
-                    children: [
-                        "Open App ",
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
-                            sx: {
-                                marginLeft: '15px',
-                                fontSize: 20
-                            }
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
+        children: [
+            title && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
+                        name: "description",
+                        content: description
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
+                        name: "keywords",
+                        content: title + ', create polls, online surveys, interactive voting'
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("title", {
+                        children: title
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("script", {
+                        type: "application/ld+json",
+                        children: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'WebPage',
+                            name: title,
+                            description: description,
+                            url: `https://poll.cc/${title.replace(/\s+/g, '-').toLowerCase()}`
                         })
-                    ]
-                }),
-                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).slides,
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    ref: ref,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).landing,
                     children: [
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['made-by'],
-                            children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                    style: {
-                                        fontSize: 15
-                                    },
-                                    children: "made by"
-                                }),
-                                " ",
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                    href: "mailto:piliponful@gmail.com",
-                                    children: "piliponful"
-                                })
-                            ]
+                        $4f095db3a6856690$var$textByPageNumber[0],
+                        isBot && title && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)($4f095db3a6856690$var$SeoContent, {
+                            keyword: title,
+                            description: description
                         }),
-                        window.featureFlags?.rewards && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                            style: {
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            },
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactrouterdom.Link), {
+                            replace: true,
+                            to: jwt ? '/' : '/app',
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['open-app-button'],
                             children: [
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).svgWrapper,
-                                    dangerouslySetInnerHTML: {
-                                        __html: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports)))
+                                "Open App ",
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialArrowForwardIos))), {
+                                    sx: {
+                                        marginLeft: '15px',
+                                        fontSize: 20
                                     }
-                                }),
-                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                    style: {
-                                        fontSize: 15,
-                                        letterSpacing: '0px',
-                                        textDecoration: 'none',
-                                        color: 'gray',
-                                        fontWeight: 200,
-                                        whiteSpace: 'nowrap'
-                                    },
-                                    target: "_blank",
-                                    href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
-                                    rel: "noreferrer",
-                                    children: "token on polyscan"
                                 })
                             ]
                         }),
-                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
-                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                                href: "/privacy-policy",
-                                target: "_blank",
-                                children: "privacy policy"
-                            })
+                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).icons,
+                            children: [
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports)))['made-by'],
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                            style: {
+                                                fontSize: 15
+                                            },
+                                            children: "made by"
+                                        }),
+                                        " ",
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                            href: "mailto:piliponful@gmail.com",
+                                            children: "piliponful"
+                                        })
+                                    ]
+                                }),
+                                window.featureFlags?.rewards && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    style: {
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).svgWrapper,
+                                            dangerouslySetInnerHTML: {
+                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($57c8671c6c0c78f4$exports)))
+                                            }
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                            style: {
+                                                fontSize: 15,
+                                                letterSpacing: '0px',
+                                                textDecoration: 'none',
+                                                color: 'gray',
+                                                fontWeight: 200,
+                                                whiteSpace: 'nowrap'
+                                            },
+                                            target: "_blank",
+                                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                                            rel: "noreferrer",
+                                            children: "token on polyscan"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($af1ad4f19d8ab63f$exports))).privacy,
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                        href: "/privacy-policy",
+                                        target: "_blank",
+                                        children: "privacy policy"
+                                    })
+                                })
+                            ]
                         })
                     ]
                 })
-            ]
-        })
+            })
+        ]
     });
 });
 

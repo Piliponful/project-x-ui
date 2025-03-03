@@ -429,6 +429,11 @@ window.mixpanel = {
   }
 }
 
+const mock = {
+  keyword: 'online poll free',
+  description: 'Discover how to create online poll free easily with Poll.cc. Engage your audience with interactive and customizable polling tools.'
+}
+
 const Authorized = () => {
   const {
     screenName,
@@ -445,7 +450,7 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing />
+      <Landing description={mock.description} title={mock.title} isBot />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
