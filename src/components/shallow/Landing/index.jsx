@@ -1,47 +1,11 @@
 import React, { forwardRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 import PolyscanSVG from 'bundle-text:./polyscan.svg'
 
 import styles from './styles.module.styl'
-
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-
-const FirstText = () => (
-  <div className={styles.text}>
-    <h1 className={styles.name}>Non-anonymous online voting</h1>
-    <h2 className={styles.subtitle}>on social and political issues.</h2>
-  </div>
-)
-
-const textByPageNumber = {
-  0: <FirstText />
-}
-
-const SeoContent = ({ keyword: title, description }) => (
-  <div style={{ fontSize: 33 }}>
-    <header>
-      <h1>{title}</h1>
-    </header>
-    <section>
-      <h2>Why Use {title}?</h2>
-      <p>{description}</p>
-    </section>
-    <section>
-      <h2>How to Create {title}?</h2>
-      <ol>
-        <li>Enter your question and answer choices.</li>
-        <li>Customize poll settings.</li>
-        <li>Share your poll via link or embed it on your website.</li>
-        <li>Analyze the results in real-time.</li>
-      </ol>
-    </section>
-    <footer>
-      <p>&copy; 2025 Poll.cc - The Best Online Polling Tool</p>
-    </footer>
-  </div>
-)
 
 export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
   useEffect(() => {
@@ -54,9 +18,13 @@ export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
     }
   }, [])
 
+  console.log('title: ', title)
+  console.log('isBot: ', isBot)
+  console.log('description: ', description)
+
   return (
     <>
-      {title
+      {(title && isBot)
         ? (
           <Helmet>
             <meta name='description' content={description} />
@@ -77,14 +45,38 @@ export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
           <Helmet encodeSpecialCharacters={false}>
             <title>poll.cc | online polls</title>
             <meta name='description' content='Online polls on social and political issues. Online voting app.' />
+            <script type='application/ld+json'>
+              {JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                name: 'poll.cc | online polls',
+                description: 'Online polls on social and political issues. Online voting app.',
+                url: 'https://poll.cc/'
+              })}
+            </script>
           </Helmet>
           )}
       <div className={styles.slides}>
         <div ref={ref} className={styles.landing}>
-          {textByPageNumber[0]}
-          {(isBot && title) && (
-            <SeoContent keyword={title} description={description} />
-          )}
+          {isBot
+            ? (
+              <section
+                className={styles.text}
+                style={{
+                  fontSize: 39,
+                  padding: '0 41px'
+                }}
+              >
+                <h1>{title}</h1>
+                <p>{description}</p>
+              </section>
+              )
+            : (
+              <div className={styles.text}>
+                <h1 className={styles.name}>Non-anonymous online voting</h1>
+                <h2 className={styles.subtitle}>on social and political issues.</h2>
+              </div>
+              )}
           <Link replace to={jwt ? '/' : '/app'} className={styles['open-app-button']}>
             Open App <ArrowForwardIosIcon sx={{ marginLeft: '15px', fontSize: 20 }} />
           </Link>

@@ -450,7 +450,7 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing description={mock.description} title={mock.title} isBot />
+      <Landing description={mock.description} title={mock.keyword} isBot={false} />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
