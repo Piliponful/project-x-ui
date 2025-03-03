@@ -3938,7 +3938,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
     }, []);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reactjsxruntime.Fragment), {
         children: [
-            title && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
+            title ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
                         name: "description",
@@ -3960,6 +3960,17 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
                             description: description,
                             url: `https://poll.cc/${title.replace(/\s+/g, '-').toLowerCase()}`
                         })
+                    })
+                ]
+            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)((0, $c5L0i$reacthelmet.Helmet), {
+                encodeSpecialCharacters: false,
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("title", {
+                        children: "poll.cc | online polls"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("meta", {
+                        name: "description",
+                        content: "Online polls on social and political issues. Online voting app."
                     })
                 ]
             }),

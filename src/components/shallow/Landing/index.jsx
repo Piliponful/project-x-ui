@@ -56,22 +56,29 @@ export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
 
   return (
     <>
-      {title && (
-        <Helmet>
-          <meta name='description' content={description} />
-          <meta name='keywords' content={title + ', create polls, online surveys, interactive voting'} />
-          <title>{title}</title>
-          <script type='application/ld+json'>
-            {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebPage',
-              name: title,
-              description,
-              url: `https://poll.cc/${title.replace(/\s+/g, '-').toLowerCase()}`
-            })}
-          </script>
-        </Helmet>
-      )}
+      {title
+        ? (
+          <Helmet>
+            <meta name='description' content={description} />
+            <meta name='keywords' content={title + ', create polls, online surveys, interactive voting'} />
+            <title>{title}</title>
+            <script type='application/ld+json'>
+              {JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                name: title,
+                description,
+                url: `https://poll.cc/${title.replace(/\s+/g, '-').toLowerCase()}`
+              })}
+            </script>
+          </Helmet>
+          )
+        : (
+          <Helmet encodeSpecialCharacters={false}>
+            <title>poll.cc | online polls</title>
+            <meta name='description' content='Online polls on social and political issues. Online voting app.' />
+          </Helmet>
+          )}
       <div className={styles.slides}>
         <div ref={ref} className={styles.landing}>
           {textByPageNumber[0]}
