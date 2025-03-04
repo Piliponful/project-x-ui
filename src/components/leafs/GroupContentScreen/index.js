@@ -6,7 +6,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import cn from 'classnames'
 import FlipMove from 'react-flip-move'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
-import 'react-tooltip/dist/react-tooltip.css'
+// import 'react-tooltip/dist/react-tooltip.css'
 import LinkIcon from '@mui/icons-material/Link'
 
 import styles from './style.module.styl'

@@ -2654,16 +2654,6 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                         children: [
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
-                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'questions'
-                                }),
-                                onClick: ()=>{
-                                    window.mixpanel.track('Select User Questions Tab');
-                                    setSelectedTab('questions');
-                                },
-                                children: "His/Her Questions"
-                            }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
                                     [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'answers'
                                 }),
                                 onClick: ()=>{
@@ -2671,6 +2661,16 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                                     window.mixpanel.track('Select User Answers Tab');
                                 },
                                 children: "His/Her Answers"
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                className: (0, ($parcel$interopDefault($c5L0i$classnames)))({
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).selected]: selectedTab === 'questions'
+                                }),
+                                onClick: ()=>{
+                                    window.mixpanel.track('Select User Questions Tab');
+                                    setSelectedTab('questions');
+                                },
+                                children: "His/Her Questions"
                             })
                         ]
                     })

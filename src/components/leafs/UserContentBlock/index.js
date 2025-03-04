@@ -89,15 +89,6 @@ export const UserHistoryTabs = forwardRef(({
             />
             <div className={styles.tabs}>
               <div
-                className={cn({ [styles.selected]: selectedTab === 'questions' })}
-                onClick={() => {
-                  window.mixpanel.track('Select User Questions Tab')
-                  setSelectedTab('questions')
-                }}
-              >
-                His/Her Questions
-              </div>
-              <div
                 className={cn({ [styles.selected]: selectedTab === 'answers' })}
                 onClick={() => {
                   setSelectedTab('answers')
@@ -105,6 +96,15 @@ export const UserHistoryTabs = forwardRef(({
                 }}
               >
                 His/Her Answers
+              </div>
+              <div
+                className={cn({ [styles.selected]: selectedTab === 'questions' })}
+                onClick={() => {
+                  window.mixpanel.track('Select User Questions Tab')
+                  setSelectedTab('questions')
+                }}
+              >
+                His/Her Questions
               </div>
             </div>
           </>
