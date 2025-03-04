@@ -5,13 +5,20 @@ import CloseIcon from '@mui/icons-material/Close'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import cn from 'classnames'
 import FlipMove from 'react-flip-move'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
+import LinkIcon from '@mui/icons-material/Link'
 
 import styles from './style.module.styl'
 
 import svg from '../UsersSearch/x-check.svg'
 import KYCIcon from '../ActionsPanel/kyc.svg'
 
-export const User = ({ user, onUserClick, children, style }) => {
+import './styles.css'
+
+export const User = ({ user, onUserClick, children, style, handleTwitterLogin }) => {
+  const isXConnected = Number.isInteger(user?.followerCount)
+
   return (
     <div style={style} className={styles.userItem} key={user?._id} onClick={() => onUserClick(user)}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -21,26 +28,44 @@ export const User = ({ user, onUserClick, children, style }) => {
             <div className={styles.column}>
               <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
                 <span>{user?.fullName || 'loading'}</span>
-                {Number.isInteger(user?.followerCount) && <span>{humanNumber(user.followerCount)} followers</span>}
-                {user?.twitterVerified && user?.twitterVerified !== 'none' && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>twitter verified</span><img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} /></div>}
+                {isXConnected && <span>{humanNumber(user.followerCount)} X followers</span>}
+                {isXConnected && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>X account connected</span><LinkIcon sx={{ height: 20, width: 20, fill: 'gray', marginLeft: '3px', marginTop: '2px' }} /></div>}
+                {user?.twitterVerified && user?.twitterVerified !== 'none' && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>connected X account verified</span><img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} /></div>}
                 {user?.verifiedKYC && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>verified by passport</span><img src={KYCIcon} style={{ height: 20, width: 20, paddingLeft: 3, border: 'none' }} /></div>}
               </FlipMove>
             </div>
           </FlipMove>
         </div>
-        {Number.isInteger(user?.followerCount) && (
-          <a
-            onClick={e => {
-              e.stopPropagation()
-              window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
-            }}
-            href={`https://twitter.com/${user?.username}`}
-            target='_blank'
-            rel='noreferrer'
-          >
-            <XIcon />
-          </a>
-        )}
+        {isXConnected
+          ? (
+            <a
+              onClick={e => {
+                e.stopPropagation()
+                window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
+              }}
+              href={`https://twitter.com/${user?.username}`}
+              target='_blank'
+              rel='noreferrer'
+              data-tooltip-id='my-tooltip-1'
+            >
+              <XIcon />
+            </a>
+            )
+          : (
+            <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={handleTwitterLogin} />
+            )}
+        <ReactTooltip
+          id='my-tooltip-2'
+          place='bottom'
+          variant='info'
+          content='Connect your X account'
+        />
+        <ReactTooltip
+          id='my-tooltip-1'
+          place='bottom'
+          variant='info'
+          content='Open connected X account'
+        />
       </div>
 
       {children}

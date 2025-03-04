@@ -23,6 +23,9 @@ var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
+var $c5L0i$reacttooltip = require("react-tooltip");
+// require("react-tooltip/dist/react-tooltip.css");
+var $c5L0i$muiiconsmaterialLink = require("@mui/icons-material/Link");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
@@ -2178,6 +2181,9 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
+
+
 var $fc6e17f49e58291a$exports = {};
 
 $parcel$export($fc6e17f49e58291a$exports, "back", () => $fc6e17f49e58291a$export$7c341cb16fc91138, (v) => $fc6e17f49e58291a$export$7c341cb16fc91138 = v);
@@ -2194,6 +2200,7 @@ $parcel$export($fc6e17f49e58291a$exports, "screenWithGroupContent", () => $fc6e1
 $parcel$export($fc6e17f49e58291a$exports, "style-c", () => $fc6e17f49e58291a$export$d8e3ffb8a71e7871, (v) => $fc6e17f49e58291a$export$d8e3ffb8a71e7871 = v);
 $parcel$export($fc6e17f49e58291a$exports, "userItem", () => $fc6e17f49e58291a$export$f6bda04bc7d10a12, (v) => $fc6e17f49e58291a$export$f6bda04bc7d10a12 = v);
 $parcel$export($fc6e17f49e58291a$exports, "usersContainer", () => $fc6e17f49e58291a$export$771ca420b1b6ed17, (v) => $fc6e17f49e58291a$export$771ca420b1b6ed17 = v);
+$parcel$export($fc6e17f49e58291a$exports, "x-icon", () => $fc6e17f49e58291a$export$43405cb8d90657d0, (v) => $fc6e17f49e58291a$export$43405cb8d90657d0 = v);
 var $fc6e17f49e58291a$export$7c341cb16fc91138;
 var $fc6e17f49e58291a$export$b07e517d22efa1ca;
 var $fc6e17f49e58291a$export$d3da3a95ea50034e;
@@ -2208,6 +2215,7 @@ var $fc6e17f49e58291a$export$de3da254965f2f43;
 var $fc6e17f49e58291a$export$d8e3ffb8a71e7871;
 var $fc6e17f49e58291a$export$f6bda04bc7d10a12;
 var $fc6e17f49e58291a$export$771ca420b1b6ed17;
+var $fc6e17f49e58291a$export$43405cb8d90657d0;
 $fc6e17f49e58291a$export$7c341cb16fc91138 = `zDJPrW_back`;
 $fc6e17f49e58291a$export$b07e517d22efa1ca = `zDJPrW_checkbox`;
 $fc6e17f49e58291a$export$d3da3a95ea50034e = `zDJPrW_checkbox__body`;
@@ -2222,6 +2230,7 @@ $fc6e17f49e58291a$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
 $fc6e17f49e58291a$export$d8e3ffb8a71e7871 = `zDJPrW_style-c`;
 $fc6e17f49e58291a$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
 $fc6e17f49e58291a$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
+$fc6e17f49e58291a$export$43405cb8d90657d0 = `zDJPrW_x-icon`;
 
 
 var $2869377cb1e5210a$exports = {};
@@ -2229,7 +2238,9 @@ $2869377cb1e5210a$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename
 
 
 
-const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style })=>{
+
+const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin })=>{
+    const isXConnected = Number.isInteger(user?.followerCount);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports))).userItem,
@@ -2269,10 +2280,33 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                                 children: user?.fullName || 'loading'
                                             }),
-                                            Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                            isXConnected && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
                                                 children: [
                                                     (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
-                                                    " followers"
+                                                    " X followers"
+                                                ]
+                                            }),
+                                            isXConnected && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                                style: {
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    fontSize: 14,
+                                                    fontWeight: 300,
+                                                    color: 'gray'
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                        children: "X account connected"
+                                                    }),
+                                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialLink))), {
+                                                        sx: {
+                                                            height: 20,
+                                                            width: 20,
+                                                            fill: 'gray',
+                                                            marginLeft: '3px',
+                                                            marginTop: '2px'
+                                                        }
+                                                    })
                                                 ]
                                             }),
                                             user?.twitterVerified && user?.twitterVerified !== 'none' && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2285,7 +2319,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                        children: "twitter verified"
+                                                        children: "connected X account verified"
                                                     }),
                                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
                                                         src: (0, (/*@__PURE__*/$parcel$interopDefault($2869377cb1e5210a$exports))),
@@ -2327,7 +2361,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                             ]
                         })
                     }),
-                    Number.isInteger(user?.followerCount) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                    isXConnected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                         onClick: (e)=>{
                             e.stopPropagation();
                             window.mixpanel.track('X Profile Click', {
@@ -2337,7 +2371,24 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                         href: `https://twitter.com/${user?.username}`,
                         target: "_blank",
                         rel: "noreferrer",
+                        "data-tooltip-id": "my-tooltip-1",
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
+                        "data-tooltip-id": "my-tooltip-2",
+                        onClick: handleTwitterLogin
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
+                        id: "my-tooltip-2",
+                        place: "bottom",
+                        variant: "info",
+                        content: "Connect your X account"
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
+                        id: "my-tooltip-1",
+                        place: "bottom",
+                        variant: "info",
+                        content: "Open connected X account"
                     })
                 ]
             }),
@@ -2515,7 +2566,7 @@ $d96dc328a9b2259c$export$16a4d76eabe7aabb = `_31v-EG_similarity`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user }, ref)=>{
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== 'answers') setSelectedTab('answers');
     }, [
@@ -2539,6 +2590,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                 })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $42498b7876d29f2b$export$1f44aaf2ec115b54), {
+                handleTwitterLogin: handleTwitterLogin,
                 style: {
                     cursor: 'auto',
                     border: 'none'

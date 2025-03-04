@@ -73,8 +73,8 @@ const mostAnsweredQuestions = [
     hide: true,
     addImageAvailable: true,
     loading: true,
-    selected: true,
-    groupMode: true
+    selected: false,
+    groupMode: false
   },
   {
     _id: '6650964de52e25cf29ecc054',
@@ -284,7 +284,7 @@ const users = new Array(8).fill(1).map((_, index) => [
     pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
     twitterVerified: true,
     verifiedKYC: true,
-    followerCount: '67',
+    followerCount: 67,
     address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
   },
   {
@@ -450,11 +450,11 @@ const Authorized = () => {
 
   return (
     <>
-      <Landing description={mock.description} title={mock.keyword} isBot={false} />
+      {/* <Landing description={mock.description} title={mock.keyword} isBot /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      {/* <UserHistoryTabs
+      <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}
         similarity={null}
@@ -479,7 +479,7 @@ const Authorized = () => {
               />
               )
         }
-      </UserHistoryTabs> */}
+      </UserHistoryTabs>
 
       {/* {!screenName && ( */}
       <>

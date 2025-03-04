@@ -893,6 +893,21 @@
   box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
 }
 
+.zDJPrW_x-icon {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  padding: 6px;
+  transition: box-shadow .2s;
+  width: 38px !important;
+  height: 38px !important;
+}
+
+.zDJPrW_x-icon:hover {
+  box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
+}
+
 .zDJPrW_column {
   flex-direction: column;
   gap: 3px;
@@ -990,6 +1005,10 @@
   font-size: 16px;
   line-height: 1.4;
   display: flex;
+}
+
+.react-tooltip {
+  background-color: #000 !important;
 }
 
 ._31v-EG_back {

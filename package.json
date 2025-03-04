@@ -2,7 +2,7 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.1.63",
+  "version": "1.1.64",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
@@ -56,6 +56,7 @@
     "react-router-dom": "^6.28.0",
     "react-spinners": "^0.13.8",
     "react-swipeable": "^6.1.0",
+    "react-tooltip": "^5.28.0",
     "react-transition-group": "^4.4.5",
     "snapsvg-cjs": "0.0.6",
     "standard": "^16.0.4"

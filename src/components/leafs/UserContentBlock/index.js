@@ -23,7 +23,7 @@ import styles from './style.module.styl'
 // }
 
 export const UserHistoryTabs = forwardRef(({
-  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user
+  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user, handleTwitterLogin
 }, ref) => {
   useEffect(() => {
     if (showDifference && selectedTab !== 'answers') {
@@ -41,6 +41,7 @@ export const UserHistoryTabs = forwardRef(({
     <div id='user-content-scroll-target' ref={ref} className={styles.screenWithGroupContent}>
       <div className={styles.backContainer}><CloseIcon className={styles.back} onClick={back} /></div>
       <User
+        handleTwitterLogin={handleTwitterLogin}
         style={{
           cursor: 'auto',
           border: 'none'
