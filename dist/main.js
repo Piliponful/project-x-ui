@@ -2376,7 +2376,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                     }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
                         "data-tooltip-id": "my-tooltip-2",
-                        onClick: handleTwitterLogin
+                        onClick: ()=>handleTwitterLogin()
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
                         id: "my-tooltip-2",

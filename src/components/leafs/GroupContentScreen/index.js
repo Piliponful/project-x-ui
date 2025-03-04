@@ -52,7 +52,7 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin })
             </a>
             )
           : (
-            <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={handleTwitterLogin} />
+            <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
             )}
         <ReactTooltip
           id='my-tooltip-2'
