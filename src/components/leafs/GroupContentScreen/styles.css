@@ -1,3 +1,7 @@
 .react-tooltip {
   background-color: black!important;
 }
+
+.react-tooltip {
+  top: 0;
+}

@@ -54,6 +54,18 @@ const groups = [
   { name: 'Anime-haters', userCount: 2243 }
 ]
 
+const usert = {
+  _id: '6',
+  userId: '6623cfe7e1d83d0600c06a99',
+  username: 'piliponful',
+  fullName: 'Maxim Pilipenko',
+  pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
+  twitterVerified: false,
+  followerCount: '67',
+  address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20',
+  difference: 87
+}
+
 const mostAnsweredQuestions = [
   {
     _id: '664e4d1daf0b967629f5caae',
@@ -74,7 +86,8 @@ const mostAnsweredQuestions = [
     addImageAvailable: true,
     loading: true,
     selected: false,
-    groupMode: false
+    groupMode: false,
+    user: usert
   },
   {
     _id: '6650964de52e25cf29ecc054',
@@ -207,14 +220,26 @@ const latest = [ // eslint-disable-line
   { name: 'Is Boruto stronger than Naruto?', currentUserAnswer: null, answersCount: { yes: 0, no: 0 } }
 ]
 
-const mostAnsweredQuestionsComponents = mostAnsweredQuestions.map(i => (
-  <QuestionCard
-    key={i.name}
-    {...i}
-    // respond={response => console.log('respond ' + response)}
-    createNewGroup={name => console.log('create new group ' + name)}
-  />
-))
+const Messages = () => {
+  const [comments, setComments] = useState([])
+
+  const mostAnsweredQuestionsComponents = mostAnsweredQuestions.map(i => {
+    return (
+      <QuestionCard
+        key={i.name}
+        {...i}
+      // respond={response => console.log('respond ' + response)}
+        createNewGroup={name => console.log('create new group ' + name)}
+        comments={comments}
+        fetchComments={() => {
+          setComments([{ text: 'Why do you support Trump?', user: usert, createdAt: 1716407581944 }, { text: 'What do you know about project 2025?', user: usert, createdAt: 1716407581944 }])
+        }}
+      />
+    )
+  })
+
+  return mostAnsweredQuestionsComponents
+}
 
 const SidebarWithGroups = () => {
   return (
@@ -265,7 +290,7 @@ const SidebarWithQuestions = () => {
       }
       <h3 style={{ fontFamily: 'IBM Plex Sans', color: '#2b2b2b', fontWeight: 300, marginTop: 0, marginBottom: 10 }}>Last Week Most Answered</h3>
       <GroupsContainer>
-        {mostAnsweredQuestionsComponents}
+        <Messages />
       </GroupsContainer>
       <div style={{ width: '100%' }}>
         <NewQuestion />
@@ -323,28 +348,20 @@ const users = new Array(8).fill(1).map((_, index) => [
 window.featureFlags = {
   rewards: false
 }
-const MainScreenWithQuestions = () => (
-  <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
-    {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
-    <QuestionCardsRow>
-      {mostAnsweredQuestionsComponents}
-    </QuestionCardsRow>
-    <div style={{ width: '100%' }}>
-      <NewQuestion />
-      <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin />
-    </div>
-  </MainScreen>
-)
 
-const usert = {
-  _id: '6',
-  userId: '6623cfe7e1d83d0600c06a99',
-  username: 'piliponful',
-  fullName: 'Maxim Pilipenko',
-  pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
-  twitterVerified: false,
-  followerCount: '67',
-  address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
+const MainScreenWithQuestions = () => {
+  return (
+    <MainScreen style={{ height: 'calc(100% - 20px)', marginTop: 10 }}>
+      {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
+      <QuestionCardsRow>
+        <Messages />
+      </QuestionCardsRow>
+      <div style={{ width: '100%' }}>
+        <NewQuestion />
+        <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin />
+      </div>
+    </MainScreen>
+  )
 }
 
 UserQuestionsHistory.prototype = {}
@@ -454,7 +471,7 @@ const Authorized = () => {
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      <UserHistoryTabs
+      {/* <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}
         similarity={null}
@@ -479,7 +496,7 @@ const Authorized = () => {
               />
               )
         }
-      </UserHistoryTabs>
+      </UserHistoryTabs> */}
 
       {/* {!screenName && ( */}
       <>
@@ -492,11 +509,11 @@ const Authorized = () => {
           toggleVerifiedByX={(toggleVerifiedByX) => console.log('toggleVerifiedByX, ', toggleVerifiedByX)}
           toggleVerifiedByKYC={(toggleVerifiedByKYC) => console.log('toggleVerifiedByKYC, ', toggleVerifiedByKYC)}
         /> */}
-        {/* <div style={{ width: 241 }}>
+        <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div>
-        <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
