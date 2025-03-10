@@ -152,10 +152,12 @@ export default forwardRef(({
                 </div>
                 <p
                   style={{
-                    marginLeft: 34,
+                    marginLeft: i.answer === 'yes' ? 34 : 0,
+                    marginRight: i.answer === 'no' ? 34 : 0,
                     background: '#8080803b',
                     padding: 8,
-                    borderTopRightRadius: 5,
+                    borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
+                    borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
                     borderBottomRightRadius: 5,
                     borderBottomLeftRadius: 5,
                     fontSize: 15
@@ -166,6 +168,13 @@ export default forwardRef(({
                 </p>
               </div>
             ))}
+            <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
+              <textarea
+                placeholder='Comment...'
+                className={styles.textarea}
+              />
+              <button className={styles.button}>Send</button>
+            </div>
           </div>
         )}
       </div>
