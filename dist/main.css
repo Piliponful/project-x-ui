@@ -296,6 +296,10 @@
   background: #59acd6;
 }
 
+.Orh0Eq_noHover.Orh0Eq_yes, .Orh0Eq_noHover.Orh0Eq_no, .Orh0Eq_noHover:hover:hover {
+  box-shadow: none !important;
+}
+
 .b4MS9q_answerButtons {
   justify-content: space-between;
   width: 100%;
@@ -338,7 +342,7 @@
   align-items: center;
   width: 100%;
   min-height: 180px;
-  padding: 15px 15px 10px;
+  padding: 15px;
   display: flex;
   position: relative;
 }
@@ -435,6 +439,10 @@
 
 .GN153G_vennDiagramIcon path {
   transition: fill .5s ease-in-out;
+}
+
+.GN153G_commentText:hover {
+  color: #4b4949 !important;
 }
 
 .mrTbNq_container {
@@ -944,6 +952,7 @@
 
 .zDJPrW_checkbox.zDJPrW_style-c {
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   padding-left: 30px;
   display: inline-block;
@@ -1008,6 +1017,7 @@
 }
 
 .react-tooltip {
+  top: 0;
   background-color: #000 !important;
 }
 
@@ -2017,6 +2027,7 @@ i.aq6KZW_scroll {
 .aq6KZW_open-app-button {
   letter-spacing: -.5px;
   box-sizing: border-box;
+  -webkit-text-decoration: unset;
   text-decoration: unset;
   color: #f1f1f1;
   cursor: pointer;

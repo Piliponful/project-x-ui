@@ -10,12 +10,15 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Title from './components/Title'
 import Stats from './components/Stats'
 import AnswerButtons from './components/AnswerButtons'
+import AnswerButton from './components/AnswerButtons/components/Button'
 import VennDiagram from './VennDiagram'
 // import JoinFullOutlinedIcon from '@mui/icons-material/JoinFullOutlined'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import styles from './style.module.styl'
+
+import 'react-tooltip/dist/react-tooltip.css'
 
 function daysSince (dateString) {
   const givenDate = new Date(dateString)
@@ -123,18 +126,29 @@ export default forwardRef(({
             className={styles.expand}
             style={{
               flexDirection: 'column',
-              alignItems: 'flex-start'
+              alignItems: 'flex-start',
+              paddingTop: 15
             }}
           >
             {comments.map(i => console.log('test: ', i.user?.difference) || (
-              <div key={i.text} className={styles.comments}>
-                <div style={{ display: 'flex', gap: 6 }}>
+              <div key={i.text} className={styles.comments} style={{ alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end' }}>
+                <div style={{ display: 'flex', gap: 6, flexDirection: i.answer === 'no' ? 'row-reverse' : 'row' }}>
                   <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
+                  <AnswerButton
+                    style={{
+                      height: 26,
+                      width: 46,
+                      fontSize: 14
+                    }}
+                    noHover
+                    answer={i.answer}
+                    respond={() => {}}
+                  />
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{i.user.username}</small>
                   <span style={{ color: 'gray' }}>•</span>
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{daysSince(i.createdAt)}d</small>
                   <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer' }}>{i.user?.difference}%</small>
+                  <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>{i.user?.difference}%</small>
                 </div>
                 <p
                   style={{
@@ -143,7 +157,8 @@ export default forwardRef(({
                     padding: 8,
                     borderTopRightRadius: 5,
                     borderBottomRightRadius: 5,
-                    borderBottomLeftRadius: 5
+                    borderBottomLeftRadius: 5,
+                    fontSize: 15
                     // borderTopLeftRadius: 1
                   }}
                 >
