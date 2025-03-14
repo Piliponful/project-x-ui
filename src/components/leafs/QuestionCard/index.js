@@ -20,17 +20,23 @@ import styles from './style.module.styl'
 
 import 'react-tooltip/dist/react-tooltip.css'
 
-function daysSince (dateString) {
-  const givenDate = new Date(dateString)
-  const currentDate = new Date()
+function timeSince (createdAt) {
+  const createdAtDate = new Date(createdAt).getTime()
+  const now = Date.now()
+  const diffInMs = now - createdAtDate
+  const diffInMinutes = Math.floor(diffInMs / (1000 * 60))
 
-  // Calculate the difference in milliseconds
-  const differenceInTime = currentDate - givenDate
+  if (diffInMinutes < 60) {
+    return `${diffInMinutes}m`
+  }
 
-  // Convert milliseconds to days
-  const differenceInDays = Math.floor(differenceInTime / (1000 * 60 * 60 * 24))
+  const diffInHours = Math.floor(diffInMinutes / 60)
+  if (diffInHours < 24) {
+    return `${diffInHours}h`
+  }
 
-  return differenceInDays
+  const diffInDays = Math.floor(diffInHours / 24)
+  return `${diffInDays}d`
 }
 
 export default forwardRef(({
@@ -58,9 +64,11 @@ export default forwardRef(({
   selected,
   groupMode,
   comments,
-  fetchComments
+  fetchComments,
+  saveComment
 }, ref) => {
   const [showComments, setShowComments] = useState(false)
+  const [text, setText] = useState('')
 
   const share = () => {
     if (navigator.share) {
@@ -100,7 +108,7 @@ export default forwardRef(({
         <div className={styles.expand}>
           <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
           <div style={{ display: 'flex', gap: 12 }}>
-            <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />
+            {me && <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />}
             {window.featureFlags?.groups && (
               <div style={{ position: 'relative', height: 24, width: 34 }}>
                 <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -146,9 +154,11 @@ export default forwardRef(({
                   />
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{i.user.username}</small>
                   <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{daysSince(i.createdAt)}d</small>
+                  <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
                   <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>{i.user?.difference}%</small>
+                  <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
+                    {i.user?.difference}%
+                  </small>
                 </div>
                 <p
                   style={{
@@ -172,8 +182,10 @@ export default forwardRef(({
               <textarea
                 placeholder='Comment...'
                 className={styles.textarea}
+                value={text}
+                onChange={e => setText(e.target.value)}
               />
-              <button className={styles.button}>Send</button>
+              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
             </div>
           </div>
         )}

@@ -445,6 +445,69 @@
   color: #4b4949 !important;
 }
 
+.GN153G_textarea {
+  box-sizing: border-box;
+  caret-color: #969696;
+  color: #2b2b2b;
+  resize: none;
+  background: #2b2b2b0f;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  height: 144px;
+  padding: 10px 15px;
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+}
+
+.GN153G_textarea::placeholder {
+  color: #2b2b2b;
+  font-size: 16px;
+}
+
+.GN153G_textarea:disabled {
+  cursor: not-allowed;
+}
+
+.GN153G_button {
+  color: #f1f1f1;
+  cursor: pointer;
+  background: #3eb5f1;
+  border: none;
+  border-radius: 29px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: box-shadow .3s ease-out;
+  display: flex;
+  position: absolute;
+  bottom: -11px;
+  right: 11px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 23.84px 8.16px #3eb5f163;
+}
+
+.GN153G_button:not(:disabled):hover {
+  box-shadow: 0 3px 9.84px -.84px #3eb5f12e;
+}
+
+.GN153G_button:disabled {
+  cursor: not-allowed;
+  background: #8d9193;
+  box-shadow: 0 0 23.84px 8.16px #8d91935c;
+}
+
+.GN153G_text {
+  color: #bebebe;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 .mrTbNq_container {
   box-sizing: border-box;
   justify-content: center;

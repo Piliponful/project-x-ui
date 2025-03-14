@@ -979,6 +979,7 @@ var $aea682282f3bff22$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 var $34a1d4be4ab80325$exports = {};
 
 $parcel$export($34a1d4be4ab80325$exports, "badge", () => $34a1d4be4ab80325$export$4aebd143f31d0c0d, (v) => $34a1d4be4ab80325$export$4aebd143f31d0c0d = v);
+$parcel$export($34a1d4be4ab80325$exports, "button", () => $34a1d4be4ab80325$export$2ba01fb71ed41cb6, (v) => $34a1d4be4ab80325$export$2ba01fb71ed41cb6 = v);
 $parcel$export($34a1d4be4ab80325$exports, "card", () => $34a1d4be4ab80325$export$aa3e815946b80764, (v) => $34a1d4be4ab80325$export$aa3e815946b80764 = v);
 $parcel$export($34a1d4be4ab80325$exports, "commentText", () => $34a1d4be4ab80325$export$6b087f52b8619213, (v) => $34a1d4be4ab80325$export$6b087f52b8619213 = v);
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
@@ -988,9 +989,12 @@ $parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$e
 $parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
 $parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
 $parcel$export($34a1d4be4ab80325$exports, "selectedQuestion", () => $34a1d4be4ab80325$export$f7f968f67303d06e, (v) => $34a1d4be4ab80325$export$f7f968f67303d06e = v);
+$parcel$export($34a1d4be4ab80325$exports, "text", () => $34a1d4be4ab80325$export$6f093cfa640b7166, (v) => $34a1d4be4ab80325$export$6f093cfa640b7166 = v);
+$parcel$export($34a1d4be4ab80325$exports, "textarea", () => $34a1d4be4ab80325$export$a3574df893ffa88d, (v) => $34a1d4be4ab80325$export$a3574df893ffa88d = v);
 $parcel$export($34a1d4be4ab80325$exports, "username", () => $34a1d4be4ab80325$export$5e1be761f603d585, (v) => $34a1d4be4ab80325$export$5e1be761f603d585 = v);
 $parcel$export($34a1d4be4ab80325$exports, "vennDiagramIcon", () => $34a1d4be4ab80325$export$21d313c8dd377057, (v) => $34a1d4be4ab80325$export$21d313c8dd377057 = v);
 var $34a1d4be4ab80325$export$4aebd143f31d0c0d;
+var $34a1d4be4ab80325$export$2ba01fb71ed41cb6;
 var $34a1d4be4ab80325$export$aa3e815946b80764;
 var $34a1d4be4ab80325$export$6b087f52b8619213;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
@@ -1000,9 +1004,12 @@ var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
 var $34a1d4be4ab80325$export$275ee2193c25f37a;
 var $34a1d4be4ab80325$export$fd824239f75849bd;
 var $34a1d4be4ab80325$export$f7f968f67303d06e;
+var $34a1d4be4ab80325$export$6f093cfa640b7166;
+var $34a1d4be4ab80325$export$a3574df893ffa88d;
 var $34a1d4be4ab80325$export$5e1be761f603d585;
 var $34a1d4be4ab80325$export$21d313c8dd377057;
 $34a1d4be4ab80325$export$4aebd143f31d0c0d = `GN153G_badge`;
+$34a1d4be4ab80325$export$2ba01fb71ed41cb6 = `GN153G_button`;
 $34a1d4be4ab80325$export$aa3e815946b80764 = `GN153G_card`;
 $34a1d4be4ab80325$export$6b087f52b8619213 = `GN153G_commentText`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
@@ -1012,6 +1019,8 @@ $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
 $34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
 $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
 $34a1d4be4ab80325$export$f7f968f67303d06e = `GN153G_selectedQuestion`;
+$34a1d4be4ab80325$export$6f093cfa640b7166 = `GN153G_text`;
+$34a1d4be4ab80325$export$a3574df893ffa88d = `GN153G_textarea`;
 $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 $34a1d4be4ab80325$export$21d313c8dd377057 = `GN153G_vennDiagramIcon`;
 
@@ -1856,17 +1865,20 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 
 
 
-function $fde06a1540536d1e$var$daysSince(dateString) {
-    const givenDate = new Date(dateString);
-    const currentDate = new Date();
-    // Calculate the difference in milliseconds
-    const differenceInTime = currentDate - givenDate;
-    // Convert milliseconds to days
-    const differenceInDays = Math.floor(differenceInTime / 86400000);
-    return differenceInDays;
+function $fde06a1540536d1e$var$timeSince(createdAt) {
+    const createdAtDate = new Date(createdAt).getTime();
+    const now = Date.now();
+    const diffInMs = now - createdAtDate;
+    const diffInMinutes = Math.floor(diffInMs / 60000);
+    if (diffInMinutes < 60) return `${diffInMinutes}m`;
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    if (diffInHours < 24) return `${diffInHours}h`;
+    const diffInDays = Math.floor(diffInHours / 24);
+    return `${diffInDays}d`;
 }
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments, saveComment: saveComment }, ref)=>{
     const [showComments, setShowComments] = (0, $c5L0i$react.useState)(false);
+    const [text, setText] = (0, $c5L0i$react.useState)('');
     const share = ()=>{
         if (navigator.share) {
             window.mixpanel.track('Share', {
@@ -2016,105 +2028,130 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             })
                         ]
                     }),
-                    showComments && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                    showComments && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
                         style: {
                             flexDirection: 'column',
                             alignItems: 'flex-start',
                             paddingTop: 15
                         },
-                        children: comments.map((i)=>console.log('test: ', i.user?.difference) || /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).comments,
+                        children: [
+                            comments.map((i)=>console.log('test: ', i.user?.difference) || /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).comments,
+                                    style: {
+                                        alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                            style: {
+                                                display: 'flex',
+                                                gap: 6,
+                                                flexDirection: i.answer === 'no' ? 'row-reverse' : 'row'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                                                    src: i.user?.pictureUrl,
+                                                    style: {
+                                                        height: 32,
+                                                        width: 'auto',
+                                                        borderRadius: '50%',
+                                                        cursor: 'pointer'
+                                                    }
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
+                                                    style: {
+                                                        height: 26,
+                                                        width: 46,
+                                                        fontSize: 14
+                                                    },
+                                                    noHover: true,
+                                                    answer: i.answer,
+                                                    respond: ()=>{}
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
+                                                    style: {
+                                                        color: 'gray',
+                                                        cursor: 'pointer'
+                                                    },
+                                                    children: i.user.username
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    style: {
+                                                        color: 'gray'
+                                                    },
+                                                    children: "\u2022"
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
+                                                    style: {
+                                                        color: 'gray',
+                                                        cursor: 'pointer'
+                                                    },
+                                                    children: $fde06a1540536d1e$var$timeSince(i.createdAt)
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    style: {
+                                                        color: 'gray'
+                                                    },
+                                                    children: "\u2022"
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("small", {
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
+                                                    "data-tooltip-id": "my-tooltip-2",
+                                                    style: {
+                                                        color: 'gray',
+                                                        cursor: 'pointer',
+                                                        position: 'relative'
+                                                    },
+                                                    children: [
+                                                        i.user?.difference,
+                                                        "%"
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
+                                            style: {
+                                                marginLeft: i.answer === 'yes' ? 34 : 0,
+                                                marginRight: i.answer === 'no' ? 34 : 0,
+                                                background: '#8080803b',
+                                                padding: 8,
+                                                borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
+                                                borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
+                                                borderBottomRightRadius: 5,
+                                                borderBottomLeftRadius: 5,
+                                                fontSize: 15
+                                            },
+                                            children: i.text
+                                        })
+                                    ]
+                                }, i.text)),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).addComment,
                                 style: {
-                                    alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end'
+                                    width: '100%',
+                                    position: 'relative'
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
-                                        style: {
-                                            display: 'flex',
-                                            gap: 6,
-                                            flexDirection: i.answer === 'no' ? 'row-reverse' : 'row'
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
-                                                src: i.user?.pictureUrl,
-                                                style: {
-                                                    height: 32,
-                                                    width: 'auto',
-                                                    borderRadius: '50%',
-                                                    cursor: 'pointer'
-                                                }
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
-                                                style: {
-                                                    height: 26,
-                                                    width: 46,
-                                                    fontSize: 14
-                                                },
-                                                noHover: true,
-                                                answer: i.answer,
-                                                respond: ()=>{}
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
-                                                style: {
-                                                    color: 'gray',
-                                                    cursor: 'pointer'
-                                                },
-                                                children: i.user.username
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                style: {
-                                                    color: 'gray'
-                                                },
-                                                children: "\u2022"
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("small", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
-                                                style: {
-                                                    color: 'gray',
-                                                    cursor: 'pointer'
-                                                },
-                                                children: [
-                                                    $fde06a1540536d1e$var$daysSince(i.createdAt),
-                                                    "d"
-                                                ]
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
-                                                style: {
-                                                    color: 'gray'
-                                                },
-                                                children: "\u2022"
-                                            }),
-                                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("small", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
-                                                "data-tooltip-id": "my-tooltip-2",
-                                                style: {
-                                                    color: 'gray',
-                                                    cursor: 'pointer',
-                                                    position: 'relative'
-                                                },
-                                                children: [
-                                                    i.user?.difference,
-                                                    "%"
-                                                ]
-                                            })
-                                        ]
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
+                                        placeholder: "Comment...",
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).textarea,
+                                        value: text,
+                                        onChange: (e)=>setText(e.target.value)
                                     }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
-                                        style: {
-                                            marginLeft: 34,
-                                            background: '#8080803b',
-                                            padding: 8,
-                                            borderTopRightRadius: 5,
-                                            borderBottomRightRadius: 5,
-                                            borderBottomLeftRadius: 5,
-                                            fontSize: 15
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        disabled: !text,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).button,
+                                        onClick: ()=>{
+                                            saveComment(text);
+                                            setText('');
                                         },
-                                        children: i.text
+                                        children: "Send"
                                     })
                                 ]
-                            }, i.text))
+                            })
+                        ]
                     })
                 ]
             }),

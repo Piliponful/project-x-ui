@@ -231,6 +231,7 @@ const Messages = () => {
       // respond={response => console.log('respond ' + response)}
         createNewGroup={name => console.log('create new group ' + name)}
         comments={comments}
+        saveComment={text => console.log('text: ', text)}
         fetchComments={() => {
           setComments([{ text: 'Why do you support Trump?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'What do you know about project 2025?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'Why do you believe Trump is guilty?', user: usert, createdAt: 1716407581944, answer: 'no' }])
         }}
