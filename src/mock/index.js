@@ -63,7 +63,7 @@ const usert = {
   twitterVerified: false,
   followerCount: '67',
   address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20',
-  difference: 87
+  // difference: 87
 }
 
 const mostAnsweredQuestions = [
@@ -79,6 +79,10 @@ const mostAnsweredQuestions = [
     answersCount: {
       yes: 10,
       no: 5
+    },
+    me: {
+      answer: 'yes',
+      pictureUrl: usert.pictureUrl
     },
     noPercentage: 33,
     shortId: 0,

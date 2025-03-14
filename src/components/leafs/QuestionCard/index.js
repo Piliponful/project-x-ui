@@ -108,7 +108,7 @@ export default forwardRef(({
         <div className={styles.expand}>
           <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
           <div style={{ display: 'flex', gap: 12 }}>
-            {me && <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />}
+            {me?.answer && <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />}
             {window.featureFlags?.groups && (
               <div style={{ position: 'relative', height: 24, width: 34 }}>
                 <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -138,7 +138,7 @@ export default forwardRef(({
               paddingTop: 15
             }}
           >
-            {comments.map(i => console.log('test: ', i.user?.difference) || (
+            {comments.map(i => (
               <div key={i.text} className={styles.comments} style={{ alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end' }}>
                 <div style={{ display: 'flex', gap: 6, flexDirection: i.answer === 'no' ? 'row-reverse' : 'row' }}>
                   <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
@@ -157,7 +157,7 @@ export default forwardRef(({
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
                   <span style={{ color: 'gray' }}>•</span>
                   <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
-                    {i.user?.difference}%
+                    {i.user?.difference ? `${i.user?.difference}%` : 'it\'s you'}
                   </small>
                 </div>
                 <p

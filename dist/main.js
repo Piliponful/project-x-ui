@@ -1977,7 +1977,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                     gap: 12
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
+                                    me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                         onClick: ()=>{
                                             fetchComments();
@@ -2036,7 +2036,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             paddingTop: 15
                         },
                         children: [
-                            comments.map((i)=>console.log('test: ', i.user?.difference) || /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            comments.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).comments,
                                     style: {
                                         alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end'
@@ -2096,7 +2096,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     },
                                                     children: "\u2022"
                                                 }),
-                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("small", {
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
                                                     "data-tooltip-id": "my-tooltip-2",
                                                     style: {
@@ -2104,10 +2104,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                         cursor: 'pointer',
                                                         position: 'relative'
                                                     },
-                                                    children: [
-                                                        i.user?.difference,
-                                                        "%"
-                                                    ]
+                                                    children: i.user?.difference ? `${i.user?.difference}%` : 'it\'s you'
                                                 })
                                             ]
                                         }),
