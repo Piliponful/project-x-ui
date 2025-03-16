@@ -63,7 +63,7 @@ export const KYCComponent = ({ userId, updateJwt, closeModal }) => {
   )
 }
 
-export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyHistory, changeUser, testUsers = [], handleTwitterLogin, createUser }, ref2) => {
+export default forwardRef(({ logout, username, showXLogin, showKYCLogin, showMyHistory, changeUser, testUsers = [], handleTwitterLogin }, ref2) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setShowDropdown(false) })
   const { setIsModalOpen, setShowKYCModal, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)

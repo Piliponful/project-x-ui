@@ -82,6 +82,7 @@ export default forwardRef(({
   }
 
   const { setIsLoginModalOpen, setAddImgModal, setSelectedMessage, setAnswer } = useContext(MainScreenSwipeContext)
+  const [isHovered, setIsHovered] = useState(groupMode)
 
   const redirectToLogin = answer => {
     // eslint-disable-next-line no-undef
@@ -105,25 +106,33 @@ export default forwardRef(({
         {!yourOwnQuestion && (!me?.answer && <AnswerButtons loading={loading} respond={respond || redirectToLogin} />)}
         <div className={styles.expand}>
           <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
-          <div style={{ display: 'flex', gap: 12 }}>
-            <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />
+          <div style={{ display: 'flex', gap: 0 }}>
+            <button className={styles.iconButton}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} /></button>
             {window.featureFlags?.groups && (
-              <div style={{ position: 'relative', height: 24, width: 34 }}>
-                <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                  <VennDiagram groupMode={groupMode} onClick={toggleGroupMode} />
+              <div
+                className={styles.iconButton}
+                style={{ position: 'relative', height: 37, width: 54 }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => !groupMode && setIsHovered(false)}
+              >
+                <div style={{ height: 'auto', width: 42, position: 'absolute', left: 'calc(50% + 7px)', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                  <VennDiagram myHover={isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
                 </div>
               </div>
             )}
-            <a href={`/questions/${shortId}`}><OpenInNewIcon className={styles.icon} onClick={onClick} /></a>
-            <ShareIcon className={styles.icon} onClick={share} />
+            <a className={styles.iconButton} style={{ marginTop: '-1.88px' }} href={`/questions/${shortId}`}><OpenInNewIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={onClick} /></a>
+            <button className={styles.iconButton}><ShareIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={share} /></button>
             {addImageAvailable && (
-              <ImageIcon
-                className={styles.icon}
-                onClick={() => {
-                  setAddImgModal(true)
-                  setSelectedMessage(parentMessageId)
-                }}
-              />
+              <button className={styles.iconButton}>
+                <ImageIcon
+                  sx={{ fill: '#121212' }}
+                  className={styles.icon}
+                  onClick={() => {
+                    setAddImgModal(true)
+                    setSelectedMessage(parentMessageId)
+                  }}
+                />
+              </button>
             )}
           </div>
         </div>

@@ -76,7 +76,7 @@ const mostAnsweredQuestions = [
     parentMessageId: null,
     createdAt: 1716407581944,
     totalAnswers: 15,
-    img: 'https://images.saatchiart.com/saatchi/984876/art/12057223/11119449-DYQYVMKO-7.jpg',
+    img: 'https://www.meisterdrucke.us/kunstwerke/1260px/F_Abderrahim_-_Donald_Trump_Portrait_painting_for_Sale_Wall_Art_Prints_Framed_Art_-_%28MeisterDrucke-1478499%29.jpg',
     answersCount: {
       yes: 10,
       no: 5
@@ -233,7 +233,8 @@ const Messages = () => {
       <QuestionCard
         key={i.name}
         {...i}
-      // respond={response => console.log('respond ' + response)}
+        loading={false}
+        respond={response => console.log('respond ' + response)}
         createNewGroup={name => console.log('create new group ' + name)}
         comments={comments}
         saveComment={text => console.log('text: ', text)}
@@ -249,7 +250,7 @@ const Messages = () => {
 
 const SidebarWithGroups = () => {
   return (
-    <Sidebar title='Groups'>
+    <Sidebar title='Groups' style={{ marginTop: 10 }}>
       {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
       <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map(i => (
@@ -350,7 +351,8 @@ const users = new Array(8).fill(1).map((_, index) => [
 ]).flat()
 
 window.featureFlags = {
-  rewards: false
+  rewards: false,
+  groups: true
 }
 
 const MainScreenWithQuestions = () => {
@@ -510,7 +512,7 @@ const Authorized = () => {
 
       {/* {!screenName && ( */}
       <>
-        <LeftMenuBar />
+        <LeftMenuBar user={usert} />
         {/* <SidebarWithGroups /> */}
         {/* <GroupContentScreen
           className='custom-groups-name'

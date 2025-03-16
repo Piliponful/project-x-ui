@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import cn from 'classnames'
 import SearchIcon from '@mui/icons-material/Search'
 import PersonIcon from '@mui/icons-material/Person'
@@ -13,16 +13,33 @@ import styles from './styles.module.styl'
 export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
 
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <div className={styles.leftbar}>
       <nav className={styles['nav-icons']}>
         <Tooltip content='Groups' placement='right'>
-          <button className={cn(styles['nav-item'], { [styles.active]: showGroups })} style={{ padding: 6 }} onClick={() => setShowGroups(state => !state)}>
-            <VennDiagram />
+          <button
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className={cn(styles['nav-item'], { [styles.active]: showGroups })}
+            style={{ padding: 6 }}
+            onClick={() => {
+              setShowGroups(state => !state)
+              setShowSearchMenu(false)
+            }}
+          >
+            <VennDiagram myHover={isHovered} />
           </button>
         </Tooltip>
         <Tooltip content='Search' placement='right'>
-          <button className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })} onClick={() => setShowSearchMenu(state => !state)}>
+          <button
+            className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })}
+            onClick={() => {
+              setShowSearchMenu(state => !state)
+              setShowGroups(false)
+            }}
+          >
             <SearchIcon />
           </button>
         </Tooltip>
@@ -31,7 +48,15 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
       <div className={cn(styles['nav-item'], styles.avatar, styles['bottom-avatar'])}>
         <Tooltip content={user?.pictureUrl ? 'Your profile' : 'Login'} placement='right'>
           {user?.pictureUrl
-            ? <img src={user?.pictureUrl} alt='User' onClick={showMyHistory} />
+            ? <img
+                src={user?.pictureUrl}
+                alt='User'
+                onClick={showMyHistory}
+                style={{
+                  borderRadius: '50%',
+                  padding: 5
+                }}
+              />
             : <PersonIcon
                 sx={{ fontSize: 32 }} onClick={() => {
                   setIsLoginModalOpen(true)

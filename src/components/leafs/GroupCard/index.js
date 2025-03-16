@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 
 import NewGroupTitle from './components/NewGroupTitle'
 import Buttons from './components/Buttons'
@@ -9,11 +9,11 @@ import Title from './components/Title'
 
 import styles from './style.module.styl'
 
-export default ({ name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }) => {
+export default forwardRef(({ name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }, ref) => {
   const [newGroupTitle, setNewGroupTitle] = useState('')
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} ref={ref}>
       <div className={styles.leftSideContainer}>
         {
           name
@@ -32,4 +32,4 @@ export default ({ name, userCount, selected, color, save, toggleSelection, combi
           )}
     </article>
   )
-}
+})
