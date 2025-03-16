@@ -116,7 +116,7 @@ export default forwardRef(({
                 onMouseLeave={() => !groupMode && setIsHovered(false)}
               >
                 <div style={{ height: 'auto', width: 42, position: 'absolute', left: 'calc(50% + 7px)', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                  <VennDiagram myHover={isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
+                  <VennDiagram myHover={groupMode || isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
                 </div>
               </div>
             )}

@@ -2042,7 +2042,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                 transform: 'translate(-50%, -50%)'
                                             },
                                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
-                                                myHover: isHovered,
+                                                myHover: groupMode || isHovered,
                                                 fill: "#121212",
                                                 groupMode: groupMode,
                                                 onClick: toggleGroupMode

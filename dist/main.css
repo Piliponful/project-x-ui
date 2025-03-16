@@ -423,8 +423,6 @@
 
 .GN153G_icon {
   cursor: pointer;
-  color: #00000063;
-  fill: #00000063;
   transition: all .2s !important;
 }
 
@@ -2388,6 +2386,67 @@ i.aq6KZW_scroll {
   to {
     transform: translateY(calc(var(--coin-to-y) * 1.5)) rotate3d(1, 1, 1, 1080deg);
   }
+}
+
+.DpDyfa_leftbar {
+  background: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100vh;
+  padding: 15px 0;
+  display: flex;
+  position: fixed;
+  left: 0;
+}
+
+.DpDyfa_avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.DpDyfa_avatar svg {
+  color: #aaa;
+  margin-left: 2px;
+}
+
+.DpDyfa_avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.DpDyfa_nav-icons {
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+}
+
+.DpDyfa_nav-item {
+  color: #aaa;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  transition: all .3s;
+  display: flex;
+}
+
+.DpDyfa_nav-item:hover {
+  background: #f1f1f1;
+}
+
+.DpDyfa_nav-item.DpDyfa_active {
+  color: #000;
 }
 
 *, :before, :after, ::backdrop {
@@ -11019,66 +11078,5 @@ img, video {
   transition-property: transform;
   transition-duration: .25s;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
-.DpDyfa_leftbar {
-  background: #fff;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 100vh;
-  padding: 15px 0;
-  display: flex;
-  position: fixed;
-  left: 0;
-}
-
-.DpDyfa_avatar {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: 15px;
-  overflow: hidden;
-}
-
-.DpDyfa_avatar svg {
-  color: #aaa;
-  margin-left: 2px;
-}
-
-.DpDyfa_avatar img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.DpDyfa_nav-icons {
-  flex-direction: column;
-  gap: 15px;
-  display: flex;
-}
-
-.DpDyfa_nav-item {
-  color: #aaa;
-  cursor: pointer;
-  background: none;
-  border: none;
-  border-radius: 12px;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  transition: all .3s;
-  display: flex;
-}
-
-.DpDyfa_nav-item:hover {
-  background: #f1f1f1;
-}
-
-.DpDyfa_nav-item.DpDyfa_active {
-  color: #000;
 }
 /*# sourceMappingURL=main.css.map */
