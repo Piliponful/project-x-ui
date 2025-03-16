@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 import FlipMove from 'react-flip-move'
 import { BrowserRouter } from 'react-router-dom'
+import { HeroUIProvider } from '@heroui/react'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -22,6 +23,7 @@ import UsersSearch from '../components/leafs/UsersSearch'
 import { SortQuestions } from '../components/leafs/SortQuestions'
 import { Question } from '../components/leafs/Question'
 import { ChatBlock } from '../components/leafs/ChatBlock'
+import { LeftMenuBar } from '../components/leafs/LeftMenuBar'
 
 import '../../styles.css'
 import './mock-styles.css'
@@ -63,7 +65,7 @@ const usert = {
   twitterVerified: false,
   followerCount: '67',
   address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20',
-  // difference: 87
+  difference: 0
 }
 
 const mostAnsweredQuestions = [
@@ -81,7 +83,7 @@ const mostAnsweredQuestions = [
       no: 5
     },
     me: {
-      answer: 'yes',
+      // answer: 'yes',
       pictureUrl: usert.pictureUrl
     },
     noPercentage: 33,
@@ -255,8 +257,6 @@ const SidebarWithGroups = () => {
           <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
-      <NewQuestion />
-      <ActionsPanel logout={() => console.log('logout')} username='piliponful' handleTwitterLogin={() => console.log('test')} />
     </Sidebar>
   )
 }
@@ -363,7 +363,7 @@ const MainScreenWithQuestions = () => {
       </QuestionCardsRow>
       <div style={{ width: '100%' }}>
         <NewQuestion />
-        <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin />
+        {/* <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin /> */}
       </div>
     </MainScreen>
   )
@@ -471,7 +471,13 @@ const Authorized = () => {
   const hasMore = offset + 10 < users.length
 
   return (
-    <>
+    <div
+      style={{
+        display: 'flex',
+        gap: 32,
+        height: '100dvh'
+      }}
+    >
       {/* <Landing description={mock.description} title={mock.keyword} isBot /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
@@ -505,6 +511,7 @@ const Authorized = () => {
 
       {/* {!screenName && ( */}
       <>
+        <LeftMenuBar />
         {/* <SidebarWithGroups /> */}
         {/* <GroupContentScreen
           className='custom-groups-name'
@@ -514,10 +521,10 @@ const Authorized = () => {
           toggleVerifiedByX={(toggleVerifiedByX) => console.log('toggleVerifiedByX, ', toggleVerifiedByX)}
           toggleVerifiedByKYC={(toggleVerifiedByKYC) => console.log('toggleVerifiedByKYC, ', toggleVerifiedByKYC)}
         /> */}
-        <div style={{ width: 241 }}>
+        {/* <div style={{ width: 241 }}>
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
-        </div>
+        </div> */}
         <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
@@ -528,7 +535,7 @@ const Authorized = () => {
         {/* <QuestionsSearch questions={mostAnsweredQuestions} total={342} search='titan' /> */}
       </>
       {/* )} */}
-    </>
+    </div>
   )
 }
 
@@ -549,7 +556,9 @@ root.render(
         v7_relativeSplatPath: true
       }}
     >
-      <Authorized />
+      <HeroUIProvider>
+        <Authorized />
+      </HeroUIProvider>
     </BrowserRouter>
     {/* <Authentication
       createUser={createUser}

@@ -11,8 +11,7 @@ var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
 var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$datefns = require("date-fns");
 var $c5L0i$muiiconsmaterialChatBubble = require("@mui/icons-material/ChatBubble");
-var $c5L0i$reacttooltip = require("react-tooltip");
-// require("react-tooltip/dist/react-tooltip.css");
+var $c5L0i$herouitooltip = require("@heroui/tooltip");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
@@ -26,6 +25,7 @@ var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
+var $c5L0i$reacttooltip = require("react-tooltip");
 var $c5L0i$muiiconsmaterialLink = require("@mui/icons-material/Link");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
@@ -34,6 +34,7 @@ var $c5L0i$handlebars = require("handlebars");
 var $c5L0i$reactrouterdom = require("react-router-dom");
 var $c5L0i$reacthelmet = require("react-helmet");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
+var $c5L0i$muiiconsmaterialPerson = require("@mui/icons-material/Person");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -1451,7 +1452,11 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setAnswer: ()=>{},
     setShowKYCModal: ()=>{},
     setSelectedMessage: ()=>{},
-    setAddImgModal: ()=>{}
+    setAddImgModal: ()=>{},
+    setShowGroups: ()=>{},
+    showGroups: false,
+    setShowSearchMenu: ()=>{},
+    showSearchMenu: false
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -1480,6 +1485,8 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [selectedMessage, setSelectedMessage] = (0, $c5L0i$react.useState)(false);
     const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)('');
     const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
+    const [showSearchMenu, setShowSearchMenu] = (0, $c5L0i$react.useState)(false);
+    const [showGroups, setShowGroups] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -1542,7 +1549,11 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                 setAnswer: setAnswer,
                 setShowKYCModal: setShowKYCModal,
                 setAddImgModal: setAddImgModal,
-                setSelectedMessage: setSelectedMessage
+                setSelectedMessage: setSelectedMessage,
+                setShowSearchMenu: setShowSearchMenu,
+                showSearchMenu: showSearchMenu,
+                setShowGroups: setShowGroups,
+                showGroups: showGroups
             },
             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 style: {
@@ -1677,11 +1688,16 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         style: $0c70feff32ca6a2b$var$customStyles,
                         shouldCloseOnOverlayClick: false,
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($941289f31472d1d3$exports))).close,
-                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
-                                    children: "Login or Sign up"
-                                })
+                                children: [
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("h2", {
+                                        children: "Login or Sign up"
+                                    }),
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialClose))), {
+                                        onClick: ()=>setIsLoginModalOpen(false)
+                                    })
+                                ]
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 style: {
@@ -1864,7 +1880,6 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 
 
 
-
 function $fde06a1540536d1e$var$timeSince(createdAt) {
     const createdAtDate = new Date(createdAt).getTime();
     const now = Date.now();
@@ -1977,7 +1992,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                     gap: 12
                                 },
                                 children: [
-                                    me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                         onClick: ()=>{
                                             fetchComments();
@@ -2096,15 +2111,17 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     },
                                                     children: "\u2022"
                                                 }),
-                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
-                                                    "data-tooltip-id": "my-tooltip-2",
-                                                    style: {
-                                                        color: 'gray',
-                                                        cursor: 'pointer',
-                                                        position: 'relative'
-                                                    },
-                                                    children: i.user?.difference ? `${i.user?.difference}%` : 'it\'s you'
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                                                    content: "Similarity to you",
+                                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
+                                                        style: {
+                                                            color: 'gray',
+                                                            cursor: 'pointer',
+                                                            position: 'relative'
+                                                        },
+                                                        children: i.user?.difference !== undefined ? `${i.user?.difference}%` : 'it\'s you'
+                                                    })
                                                 })
                                             ]
                                         }),
@@ -2124,7 +2141,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         })
                                     ]
                                 }, i.text)),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).addComment,
                                 style: {
                                     width: '100%',
@@ -2151,12 +2168,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                         ]
                     })
                 ]
-            }),
-            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
-                id: "my-tooltip-2",
-                place: "bottom",
-                variant: "info",
-                content: "Similarity to you"
             })
         ]
     });
@@ -4246,6 +4257,92 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
+
+
+
+
+
+
+var $e5b45166edf8dd54$exports = {};
+
+$parcel$export($e5b45166edf8dd54$exports, "active", () => $e5b45166edf8dd54$export$89da14300d534261, (v) => $e5b45166edf8dd54$export$89da14300d534261 = v);
+$parcel$export($e5b45166edf8dd54$exports, "avatar", () => $e5b45166edf8dd54$export$345c5736c8054f22, (v) => $e5b45166edf8dd54$export$345c5736c8054f22 = v);
+$parcel$export($e5b45166edf8dd54$exports, "leftbar", () => $e5b45166edf8dd54$export$c8f087dc1b8e16ac, (v) => $e5b45166edf8dd54$export$c8f087dc1b8e16ac = v);
+$parcel$export($e5b45166edf8dd54$exports, "nav-icons", () => $e5b45166edf8dd54$export$2eded710494fe2d7, (v) => $e5b45166edf8dd54$export$2eded710494fe2d7 = v);
+$parcel$export($e5b45166edf8dd54$exports, "nav-item", () => $e5b45166edf8dd54$export$f0e24ade441c6754, (v) => $e5b45166edf8dd54$export$f0e24ade441c6754 = v);
+var $e5b45166edf8dd54$export$89da14300d534261;
+var $e5b45166edf8dd54$export$345c5736c8054f22;
+var $e5b45166edf8dd54$export$c8f087dc1b8e16ac;
+var $e5b45166edf8dd54$export$2eded710494fe2d7;
+var $e5b45166edf8dd54$export$f0e24ade441c6754;
+$e5b45166edf8dd54$export$89da14300d534261 = `DpDyfa_active`;
+$e5b45166edf8dd54$export$345c5736c8054f22 = `DpDyfa_avatar`;
+$e5b45166edf8dd54$export$c8f087dc1b8e16ac = `DpDyfa_leftbar`;
+$e5b45166edf8dd54$export$2eded710494fe2d7 = `DpDyfa_nav-icons`;
+$e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
+
+
+const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
+    const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
+        children: [
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("nav", {
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
+                children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                        content: "Groups",
+                        placement: "right",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: showGroups
+                            }),
+                            style: {
+                                padding: 6
+                            },
+                            onClick: ()=>setShowGroups((state)=>!state),
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {})
+                        })
+                    }),
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                        content: "Search",
+                        placement: "right",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: showSearchMenu
+                            }),
+                            onClick: ()=>setShowSearchMenu((state)=>!state),
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSearch))), {})
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).avatar, (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['bottom-avatar']),
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                    content: user?.pictureUrl ? 'Your profile' : 'Login',
+                    placement: "right",
+                    children: user?.pictureUrl ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
+                        src: user?.pictureUrl,
+                        alt: "User",
+                        onClick: showMyHistory
+                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialPerson))), {
+                        sx: {
+                            fontSize: 32
+                        },
+                        onClick: ()=>{
+                            setIsLoginModalOpen(true);
+                        }
+                    })
+                })
+            })
+        ]
+    });
+};
+
+
+
 var $43d7963e56408b24$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $0c70feff32ca6a2b$export$2e2bcd8739ae039,
@@ -4270,7 +4367,8 @@ var $43d7963e56408b24$export$2e2bcd8739ae039 = {
         SortQuestions: $b355bd374f45d8d9$export$f8fcd3a81add9e17,
         UserAnswerDifferences: $4c6bd8db1d735d14$export$a6816b34ad549b0,
         Question: $aa945d4ce4ddbaaa$export$38435c7d2fecd2f,
-        ChatBlock: $e3031400c56218a8$export$125e71c614a0b114
+        ChatBlock: $e3031400c56218a8$export$125e71c614a0b114,
+        LeftMenuBar: $11e9b788af291cc8$export$750f17c514384ccf
     },
     context: {
         MainScreenSwipeContext: $0c70feff32ca6a2b$export$32c650b79baf5fee

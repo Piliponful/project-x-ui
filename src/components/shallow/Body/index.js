@@ -24,7 +24,11 @@ export const MainScreenSwipeContext = React.createContext({
   setAnswer: () => {},
   setShowKYCModal: () => {},
   setSelectedMessage: () => {},
-  setAddImgModal: () => {}
+  setAddImgModal: () => {},
+  setShowGroups: () => {},
+  showGroups: false,
+  setShowSearchMenu: () => {},
+  showSearchMenu: false
 })
 
 const customStyles = {
@@ -57,6 +61,8 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [selectedMessage, setSelectedMessage] = useState(false)
   const [imgUrl, setImgUrl] = useState('')
   const [sendEmails, setSendEmails] = useState(true)
+  const [showSearchMenu, setShowSearchMenu] = useState(false)
+  const [showGroups, setShowGroups] = useState(false)
 
   useEffect(() => {
     const handler = () => {
@@ -132,7 +138,11 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             setAnswer,
             setShowKYCModal,
             setAddImgModal,
-            setSelectedMessage
+            setSelectedMessage,
+            setShowSearchMenu,
+            showSearchMenu,
+            setShowGroups,
+            showGroups
           }}
         >
           <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
@@ -184,7 +194,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
               style={customStyles}
               shouldCloseOnOverlayClick={false}
             >
-              <div className={styles.close}><h2>Login or Sign up</h2></div>
+              <div className={styles.close}><h2>Login or Sign up</h2><CloseIcon onClick={() => setIsLoginModalOpen(false)} /></div>
               <div style={{ marginBottom: 20 }}>
                 <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
                 <p>Otherwise votes wouldn't mean a thing.</p>

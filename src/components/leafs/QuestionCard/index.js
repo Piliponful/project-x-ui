@@ -5,7 +5,7 @@ import ImageIcon from '@mui/icons-material/Image'
 import cn from 'classnames'
 import { formatDistanceToNow } from 'date-fns'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
-import { Tooltip as ReactTooltip } from 'react-tooltip'
+import { Tooltip } from '@heroui/tooltip'
 
 import Title from './components/Title'
 import Stats from './components/Stats'
@@ -17,8 +17,6 @@ import VennDiagram from './VennDiagram'
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import styles from './style.module.styl'
-
-import 'react-tooltip/dist/react-tooltip.css'
 
 function timeSince (createdAt) {
   const createdAtDate = new Date(createdAt).getTime()
@@ -108,7 +106,7 @@ export default forwardRef(({
         <div className={styles.expand}>
           <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
           <div style={{ display: 'flex', gap: 12 }}>
-            {me?.answer && <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />}
+            <ChatBubbleIcon className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} />
             {window.featureFlags?.groups && (
               <div style={{ position: 'relative', height: 24, width: 34 }}>
                 <div style={{ marginTop: 2, height: 'auto', width: 34, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -156,9 +154,11 @@ export default forwardRef(({
                   <span style={{ color: 'gray' }}>•</span>
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
                   <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} data-tooltip-id='my-tooltip-2' style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
-                    {i.user?.difference ? `${i.user?.difference}%` : 'it\'s you'}
-                  </small>
+                  <Tooltip content='Similarity to you'>
+                    <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
+                      {i.user?.difference !== undefined ? `${i.user?.difference}%` : 'it\'s you'}
+                    </small>
+                  </Tooltip>
                 </div>
                 <p
                   style={{
@@ -178,24 +178,26 @@ export default forwardRef(({
                 </p>
               </div>
             ))}
-            <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
-              <textarea
-                placeholder='Comment...'
-                className={styles.textarea}
-                value={text}
-                onChange={e => setText(e.target.value)}
-              />
-              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
-            </div>
+            {me?.answer && (
+              <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
+                <textarea
+                  placeholder='Comment...'
+                  className={styles.textarea}
+                  value={text}
+                  onChange={e => setText(e.target.value)}
+                />
+                <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
+              </div>
+            )}
           </div>
         )}
       </div>
-      <ReactTooltip
+      {/* <ReactTooltip
         id='my-tooltip-2'
         place='bottom'
         variant='info'
         content='Similarity to you'
-      />
+      /> */}
     </article>
   )
 })

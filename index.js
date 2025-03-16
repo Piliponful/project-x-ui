@@ -18,6 +18,7 @@ import { SortQuestions } from './src/components/leafs/SortQuestions'
 import { Question } from './src/components/leafs/Question'
 import { ChatBlock } from './src/components/leafs/ChatBlock'
 import { Landing } from './src/components/shallow/Landing'
+import { LeftMenuBar } from './src/components/leafs/LeftMenuBar'
 
 import './styles.css'
 
@@ -45,7 +46,8 @@ export default {
     SortQuestions,
     UserAnswerDifferences,
     Question,
-    ChatBlock
+    ChatBlock,
+    LeftMenuBar
   },
   context: {
     MainScreenSwipeContext
