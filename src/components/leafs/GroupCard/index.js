@@ -17,10 +17,10 @@ export default forwardRef(({ name, userCount, selected, color, save, toggleSelec
       <div className={styles.leftSideContainer}>
         {
           name
-            ? <Title>{name}</Title>
+            ? <Title style={{ color: '#121212', fontWeight: 500 }}>{name}</Title>
             : <NewGroupTitle onTitleInput={setNewGroupTitle} />
         }
-        <UserCount userCount={userCount} />
+        <UserCount style={{ fontSize: 15 }} userCount={userCount} />
       </div>
 
       {((color && !newGroupTitle) || (color && selected && name))

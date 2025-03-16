@@ -111,7 +111,7 @@ export default forwardRef(({
             {window.featureFlags?.groups && (
               <div
                 className={styles.iconButton}
-                style={{ position: 'relative', height: 37, width: 54 }}
+                style={{ position: 'relative', height: 37, width: 54, cursor: 'pointer' }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => !groupMode && setIsHovered(false)}
               >
