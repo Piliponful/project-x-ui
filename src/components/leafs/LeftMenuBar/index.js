@@ -12,7 +12,7 @@ import styles from './styles.module.styl'
 
 export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
-
+  console.log('showGroups: ', showGroups)
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -29,7 +29,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
               setShowSearchMenu(false)
             }}
           >
-            <VennDiagram myHover={isHovered} />
+            <VennDiagram myHover={showGroups || isHovered} groupMode={showGroups} />
           </button>
         </Tooltip>
         <Tooltip content='Search' placement='right'>

@@ -1468,7 +1468,7 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     setSelectedMessage: ()=>{},
     setAddImgModal: ()=>{},
     setShowGroups: ()=>{},
-    showGroups: false,
+    showGroups: true,
     setShowSearchMenu: ()=>{},
     showSearchMenu: false
 });
@@ -1500,7 +1500,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)('');
     const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
     const [showSearchMenu, setShowSearchMenu] = (0, $c5L0i$react.useState)(false);
-    const [showGroups, setShowGroups] = (0, $c5L0i$react.useState)(false);
+    const [showGroups, setShowGroups] = (0, $c5L0i$react.useState)(true);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -4332,6 +4332,7 @@ $e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
 
 const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
     const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    console.log('showGroups: ', showGroups);
     const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(false);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
@@ -4356,7 +4357,8 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                                 setShowSearchMenu(false);
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
-                                myHover: isHovered
+                                myHover: showGroups || isHovered,
+                                groupMode: showGroups
                             })
                         })
                     }),
