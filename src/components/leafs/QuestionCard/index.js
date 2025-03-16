@@ -109,16 +109,18 @@ export default forwardRef(({
           <div style={{ display: 'flex', gap: 0 }}>
             <button className={styles.iconButton}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} /></button>
             {window.featureFlags?.groups && (
-              <div
-                className={styles.iconButton}
-                style={{ position: 'relative', height: 37, width: 54, cursor: 'pointer' }}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => !groupMode && setIsHovered(false)}
-              >
-                <div style={{ height: 'auto', width: 42, position: 'absolute', left: 'calc(50% + 7px)', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                  <VennDiagram myHover={groupMode || isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
+              <Tooltip content='Create new group'>
+                <div
+                  className={styles.iconButton}
+                  style={{ position: 'relative', height: 37, width: 54, cursor: 'pointer' }}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => !groupMode && setIsHovered(false)}
+                >
+                  <div style={{ height: 'auto', width: 42, position: 'absolute', left: 'calc(50% + 7px)', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                    <VennDiagram myHover={groupMode || isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
+                  </div>
                 </div>
-              </div>
+              </Tooltip>
             )}
             <a className={styles.iconButton} style={{ marginTop: '-1.88px' }} href={`/questions/${shortId}`}><OpenInNewIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={onClick} /></a>
             <button className={styles.iconButton}><ShareIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={share} /></button>

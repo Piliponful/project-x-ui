@@ -29,7 +29,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
               setShowSearchMenu(false)
             }}
           >
-            <VennDiagram myHover={showGroups || isHovered} groupMode={showGroups} />
+            <VennDiagram myHover={showGroups || isHovered} groupMode={showGroups} fill='#aaa' />
           </button>
         </Tooltip>
         <Tooltip content='Search' placement='right'>

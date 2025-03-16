@@ -1040,7 +1040,7 @@ $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 $34a1d4be4ab80325$export$21d313c8dd377057 = `GN153G_vennDiagramIcon`;
 
 
-var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover })=>{
+var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover, fill: fill })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
@@ -1051,7 +1051,8 @@ var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
         style: {
             cursor: 'pointer',
             width: 28,
-            height: 'auto'
+            height: 'auto',
+            fill: fill
         },
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("defs", {
@@ -1079,7 +1080,7 @@ var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
                 "data-name": "39 Diagram Venn",
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
                     d: "m44 14a17.723 17.723 0 0 0 -12 4.2 17.762 17.762 0 0 0 -12-4.2c-23.91 0-23.971 36 0 36a17.864 17.864 0 0 0 12.028-4.16 17.756 17.756 0 0 0 11.972 4.16c24.12 0 23.881-36 0-36zm-12 28.958a17.159 17.159 0 0 1 .026-21.958c5.318 5.982 5.283 15.952-.026 21.958zm-12-26.958a15.913 15.913 0 0 1 10.569 3.6c-6.014 6.749-6.035 18.026-.037 24.785a15.821 15.821 0 0 1 -10.532 3.615c-21.254 0-21.307-32 0-32zm24 32a15.8 15.8 0 0 1 -10.5-3.593c6.026-6.749 5.982-18.031-.044-24.792a15.809 15.809 0 0 1 10.544-3.615c21.44 0 21.227 32 0 32z",
-                    fill: myHover ? 'url(#gradient-fill)' : '#121212'
+                    fill: myHover ? 'url(#gradient-fill)' : fill || '#121212'
                 })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("animate", {
@@ -2022,30 +2023,33 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             }
                                         })
                                     }),
-                                    window.featureFlags?.groups && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
-                                        style: {
-                                            position: 'relative',
-                                            height: 37,
-                                            width: 54,
-                                            cursor: 'pointer'
-                                        },
-                                        onMouseEnter: ()=>setIsHovered(true),
-                                        onMouseLeave: ()=>!groupMode && setIsHovered(false),
+                                    window.featureFlags?.groups && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                                        content: "Create new group",
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
                                             style: {
-                                                height: 'auto',
-                                                width: 42,
-                                                position: 'absolute',
-                                                left: 'calc(50% + 7px)',
-                                                top: '50%',
-                                                transform: 'translate(-50%, -50%)'
+                                                position: 'relative',
+                                                height: 37,
+                                                width: 54,
+                                                cursor: 'pointer'
                                             },
-                                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
-                                                myHover: groupMode || isHovered,
-                                                fill: "#121212",
-                                                groupMode: groupMode,
-                                                onClick: toggleGroupMode
+                                            onMouseEnter: ()=>setIsHovered(true),
+                                            onMouseLeave: ()=>!groupMode && setIsHovered(false),
+                                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                                style: {
+                                                    height: 'auto',
+                                                    width: 42,
+                                                    position: 'absolute',
+                                                    left: 'calc(50% + 7px)',
+                                                    top: '50%',
+                                                    transform: 'translate(-50%, -50%)'
+                                                },
+                                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
+                                                    myHover: groupMode || isHovered,
+                                                    fill: "#121212",
+                                                    groupMode: groupMode,
+                                                    onClick: toggleGroupMode
+                                                })
                                             })
                                         })
                                     }),
@@ -4358,7 +4362,8 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
                                 myHover: showGroups || isHovered,
-                                groupMode: showGroups
+                                groupMode: showGroups,
+                                fill: "#aaa"
                             })
                         })
                     }),
