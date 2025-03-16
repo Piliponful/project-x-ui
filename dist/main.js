@@ -363,6 +363,7 @@ $77a617c816839749$export$6f093cfa640b7166 = `tKcEXW_text`;
 var $fdb06f9430151147$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput, value: value })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($77a617c816839749$exports))).text,
         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("input", {
+            placeholder: "Group name...",
             className: (0, (/*@__PURE__*/$parcel$interopDefault($77a617c816839749$exports))).input,
             onChange: (e)=>onTitleInput(e.target.value),
             value: value
@@ -504,7 +505,8 @@ var $e56223ca18e39511$export$72bd514aa1799057;
 $e56223ca18e39511$export$72bd514aa1799057 = `WZcb5G_userCount`;
 
 
-var $660b1902094182e2$export$2e2bcd8739ae039 = ({ userCount: userCount })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+var $660b1902094182e2$export$2e2bcd8739ae039 = ({ userCount: userCount, style: style })=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $48846b284e41a4a2$export$2e2bcd8739ae039), {
+        style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e56223ca18e39511$exports))).userCount,
         children: userCount === null ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactjsxruntime.Fragment), {
             children: "select new group parts"
@@ -571,20 +573,28 @@ $3b909940669176b5$export$aa3e815946b80764 = `sslnla_card`;
 $3b909940669176b5$export$59b1d651044d302 = `sslnla_leftSideContainer`;
 
 
-var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCount, selected: selected, color: color, save: save, toggleSelection: toggleSelection, combine: combine, readyToSave: readyToSave, cancel: cancel })=>{
+var $74980d71b8ef2933$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ name: name, userCount: userCount, selected: selected, color: color, save: save, toggleSelection: toggleSelection, combine: combine, readyToSave: readyToSave, cancel: cancel }, ref)=>{
     const [newGroupTitle, setNewGroupTitle] = (0, $c5L0i$react.useState)('');
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($3b909940669176b5$exports))).card,
+        ref: ref,
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($3b909940669176b5$exports))).leftSideContainer,
                 children: [
                     name ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $57011da2278f77c7$export$2e2bcd8739ae039), {
+                        style: {
+                            color: '#121212',
+                            fontWeight: 500
+                        },
                         children: name
                     }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $fdb06f9430151147$export$2e2bcd8739ae039), {
                         onTitleInput: setNewGroupTitle
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $660b1902094182e2$export$2e2bcd8739ae039), {
+                        style: {
+                            fontSize: 15
+                        },
                         userCount: userCount
                     })
                 ]
@@ -602,7 +612,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = ({ name: name, userCount: userCou
             })
         ]
     });
-};
+});
 
 
 
@@ -987,6 +997,7 @@ $parcel$export($34a1d4be4ab80325$exports, "commentText", () => $34a1d4be4ab80325
 $parcel$export($34a1d4be4ab80325$exports, "expand", () => $34a1d4be4ab80325$export$9f77e0932fb78f72, (v) => $34a1d4be4ab80325$export$9f77e0932fb78f72 = v);
 $parcel$export($34a1d4be4ab80325$exports, "hint", () => $34a1d4be4ab80325$export$464c821cd4347539, (v) => $34a1d4be4ab80325$export$464c821cd4347539 = v);
 $parcel$export($34a1d4be4ab80325$exports, "icon", () => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27, (v) => $34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = v);
+$parcel$export($34a1d4be4ab80325$exports, "iconButton", () => $34a1d4be4ab80325$export$60bb6c1f29b8a8cc, (v) => $34a1d4be4ab80325$export$60bb6c1f29b8a8cc = v);
 $parcel$export($34a1d4be4ab80325$exports, "innerCard", () => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2, (v) => $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = v);
 $parcel$export($34a1d4be4ab80325$exports, "innerCardWithImage", () => $34a1d4be4ab80325$export$275ee2193c25f37a, (v) => $34a1d4be4ab80325$export$275ee2193c25f37a = v);
 $parcel$export($34a1d4be4ab80325$exports, "previewImg", () => $34a1d4be4ab80325$export$fd824239f75849bd, (v) => $34a1d4be4ab80325$export$fd824239f75849bd = v);
@@ -1002,6 +1013,7 @@ var $34a1d4be4ab80325$export$6b087f52b8619213;
 var $34a1d4be4ab80325$export$9f77e0932fb78f72;
 var $34a1d4be4ab80325$export$464c821cd4347539;
 var $34a1d4be4ab80325$export$1ca1ec8b29a4ce27;
+var $34a1d4be4ab80325$export$60bb6c1f29b8a8cc;
 var $34a1d4be4ab80325$export$40f3ad8fcd4c93c2;
 var $34a1d4be4ab80325$export$275ee2193c25f37a;
 var $34a1d4be4ab80325$export$fd824239f75849bd;
@@ -1017,6 +1029,7 @@ $34a1d4be4ab80325$export$6b087f52b8619213 = `GN153G_commentText`;
 $34a1d4be4ab80325$export$9f77e0932fb78f72 = `GN153G_expand`;
 $34a1d4be4ab80325$export$464c821cd4347539 = `GN153G_hint`;
 $34a1d4be4ab80325$export$1ca1ec8b29a4ce27 = `GN153G_icon`;
+$34a1d4be4ab80325$export$60bb6c1f29b8a8cc = `GN153G_iconButton`;
 $34a1d4be4ab80325$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
 $34a1d4be4ab80325$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
 $34a1d4be4ab80325$export$fd824239f75849bd = `GN153G_previewImg`;
@@ -1027,8 +1040,7 @@ $34a1d4be4ab80325$export$5e1be761f603d585 = `GN153G_username`;
 $34a1d4be4ab80325$export$21d313c8dd377057 = `GN153G_vennDiagramIcon`;
 
 
-var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode })=>{
-    const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(groupMode);
+var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover })=>{
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
@@ -1036,10 +1048,10 @@ var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).vennDiagramIcon, {
             [(0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).active]: groupMode
         }),
-        onMouseEnter: ()=>setIsHovered(true),
-        onMouseLeave: ()=>!groupMode && setIsHovered(false),
         style: {
-            cursor: 'pointer'
+            cursor: 'pointer',
+            width: 28,
+            height: 'auto'
         },
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("defs", {
@@ -1067,7 +1079,7 @@ var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
                 "data-name": "39 Diagram Venn",
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("path", {
                     d: "m44 14a17.723 17.723 0 0 0 -12 4.2 17.762 17.762 0 0 0 -12-4.2c-23.91 0-23.971 36 0 36a17.864 17.864 0 0 0 12.028-4.16 17.756 17.756 0 0 0 11.972 4.16c24.12 0 23.881-36 0-36zm-12 28.958a17.159 17.159 0 0 1 .026-21.958c5.318 5.982 5.283 15.952-.026 21.958zm-12-26.958a15.913 15.913 0 0 1 10.569 3.6c-6.014 6.749-6.035 18.026-.037 24.785a15.821 15.821 0 0 1 -10.532 3.615c-21.254 0-21.307-32 0-32zm24 32a15.8 15.8 0 0 1 -10.5-3.593c6.026-6.749 5.982-18.031-.044-24.792a15.809 15.809 0 0 1 10.544-3.615c21.44 0 21.227 32 0 32z",
-                    fill: isHovered ? 'url(#gradient-fill)' : '#00000063'
+                    fill: myHover ? 'url(#gradient-fill)' : '#121212'
                 })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("animate", {
@@ -1244,7 +1256,7 @@ const $b29d4b4923c0cd00$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: 
         })
     });
 };
-var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showXLogin: showXLogin, showKYCLogin: showKYCLogin, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin, createUser: createUser }, ref2)=>{
+var $b29d4b4923c0cd00$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ logout: logout, username: username, showXLogin: showXLogin, showKYCLogin: showKYCLogin, showMyHistory: showMyHistory, changeUser: changeUser, testUsers: testUsers = [], handleTwitterLogin: handleTwitterLogin }, ref2)=>{
     const [showDropdown, setShowDropdown] = (0, $c5L0i$react.useState)(false);
     const ref = (0, $c5L0i$reactdetectclickoutside.useDetectClickOutside)({
         onTriggered: ()=>setShowDropdown(false)
@@ -1911,6 +1923,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         }
     };
     const { setIsLoginModalOpen: setIsLoginModalOpen, setAddImgModal: setAddImgModal, setSelectedMessage: setSelectedMessage, setAnswer: setAnswer } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(groupMode);
     const redirectToLogin = (answer)=>{
         // eslint-disable-next-line no-undef
         setIsLoginModalOpen(true);
@@ -1993,55 +2006,85 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 style: {
                                     display: 'flex',
-                                    gap: 12
+                                    gap: 0
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
-                                        onClick: ()=>{
-                                            fetchComments();
-                                            setShowComments(!showComments);
-                                        }
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
+                                            sx: {
+                                                fill: '#121212'
+                                            },
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                            onClick: ()=>{
+                                                fetchComments();
+                                                setShowComments(!showComments);
+                                            }
+                                        })
                                     }),
                                     window.featureFlags?.groups && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
                                         style: {
                                             position: 'relative',
-                                            height: 24,
-                                            width: 34
+                                            height: 37,
+                                            width: 54,
+                                            cursor: 'pointer'
                                         },
+                                        onMouseEnter: ()=>setIsHovered(true),
+                                        onMouseLeave: ()=>!groupMode && setIsHovered(false),
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                                             style: {
-                                                marginTop: 2,
                                                 height: 'auto',
-                                                width: 34,
+                                                width: 42,
                                                 position: 'absolute',
-                                                left: '50%',
+                                                left: 'calc(50% + 7px)',
                                                 top: '50%',
                                                 transform: 'translate(-50%, -50%)'
                                             },
                                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
+                                                myHover: isHovered,
+                                                fill: "#121212",
                                                 groupMode: groupMode,
                                                 onClick: toggleGroupMode
                                             })
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
+                                        style: {
+                                            marginTop: '-1.88px'
+                                        },
                                         href: `/questions/${shortId}`,
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialOpenInNew))), {
+                                            sx: {
+                                                fill: '#121212'
+                                            },
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                             onClick: onClick
                                         })
                                     }),
-                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
-                                        onClick: share
+                                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialShare))), {
+                                            sx: {
+                                                fill: '#121212'
+                                            },
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                            onClick: share
+                                        })
                                     }),
-                                    addImageAvailable && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
-                                        onClick: ()=>{
-                                            setAddImgModal(true);
-                                            setSelectedMessage(parentMessageId);
-                                        }
+                                    addImageAvailable && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
+                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
+                                            sx: {
+                                                fill: '#121212'
+                                            },
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
+                                            onClick: ()=>{
+                                                setAddImgModal(true);
+                                                setSelectedMessage(parentMessageId);
+                                            }
+                                        })
                                     })
                                 ]
                             })
@@ -4289,6 +4332,7 @@ $e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
 
 const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
     const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(false);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
         children: [
@@ -4299,14 +4343,21 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                         content: "Groups",
                         placement: "right",
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            onMouseEnter: ()=>setIsHovered(true),
+                            onMouseLeave: ()=>setIsHovered(false),
                             className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
                                 [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: showGroups
                             }),
                             style: {
                                 padding: 6
                             },
-                            onClick: ()=>setShowGroups((state)=>!state),
-                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {})
+                            onClick: ()=>{
+                                setShowGroups((state)=>!state);
+                                setShowSearchMenu(false);
+                            },
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
+                                myHover: isHovered
+                            })
                         })
                     }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
@@ -4316,7 +4367,10 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
                                 [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: showSearchMenu
                             }),
-                            onClick: ()=>setShowSearchMenu((state)=>!state),
+                            onClick: ()=>{
+                                setShowSearchMenu((state)=>!state);
+                                setShowGroups(false);
+                            },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSearch))), {})
                         })
                     })
@@ -4330,7 +4384,11 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                     children: user?.pictureUrl ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
                         src: user?.pictureUrl,
                         alt: "User",
-                        onClick: showMyHistory
+                        onClick: showMyHistory,
+                        style: {
+                            borderRadius: '50%',
+                            padding: 5
+                        }
                     }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialPerson))), {
                         sx: {
                             fontSize: 32
