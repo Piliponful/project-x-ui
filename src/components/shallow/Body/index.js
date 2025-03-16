@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 import XIcon from '@mui/icons-material/X'
+import { HeroUIProvider } from '@heroui/react'
 
 import { ContainerWithoutSwipes } from './components/Container'
 import { KYCComponent } from '../../leafs/ActionsPanel'
@@ -145,151 +146,153 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             showGroups
           }}
         >
-          <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
-            <Modal
-              isOpen={isWalletModalOpen}
-              onRequestClose={() => setIsWalletModalOpen(false)}
-              style={customStyles}
-            >
-              <div onClick={() => setIsWalletModalOpen(false)} className={styles.close}><h2>Connect Wallet</h2><CloseIcon /></div>
-              <div className={styles.modalContent}>
-                <b>Do you have a wallet(metamask, trust, etc)?</b>
-                <p>
-                  In this app you can get crypto rewards for asking and answering questions.
-                  But to get them you need crypto wallet.
-                </p>
-                <p>
-                  If you don't have one, click <span className={styles.hide} onClick={hide}>hide to stop seeing this popup</span>.
-                  Later you can always find it in <b>settings &gt; rewards</b>
-                </p>
-                <button className={styles.connectButton} onClick={connectToWallet}>Connect</button>
-              </div>
-            </Modal>
-            <Modal
-              isOpen={isModalOpen}
-              onRequestClose={closeRewardsConnectWalletModal}
-              style={customStyles}
-            >
-              {
-                connected
-                  ? (
-                    <>
-                      <div onClick={() => setIsModalOpen(false)} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
-                      <div className={styles.row}><b>your address: </b><span className={styles.address}>{address}</span></div>
-                      <div className={styles.row}><b>your payout: </b><span className={styles.amount}>{payout} </span><b>ASK</b></div>
-                    </>
-                    )
-                  : (
-                    <div>
-                      <div onClick={closeRewardsConnectWalletModal} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
-                      <p>To get rewards for asking questions and answering them you need to connect crypto wallet</p>
-                      <button style={{ width: '100%', marginTop: 20 }} className={styles.connectButton} onClick={connectToWallet}>Connect</button>
-                    </div>
-                    )
-              }
-            </Modal>
-            <Modal
-              isOpen={showLoginModal}
-              onRequestClose={() => setIsLoginModalOpen(false)}
-              style={customStyles}
-              shouldCloseOnOverlayClick={false}
-            >
-              <div className={styles.close}><h2>Login or Sign up</h2><CloseIcon onClick={() => setIsLoginModalOpen(false)} /></div>
-              <div style={{ marginBottom: 20 }}>
-                <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
-                <p>Otherwise votes wouldn't mean a thing.</p>
-              </div>
-              {/* <p
-                style={{
-                  fontSize: 12,
-                  marginBottom: 5,
-                  color: 'gray'
-                }}
+          <HeroUIProvider>
+            <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
+              <Modal
+                isOpen={isWalletModalOpen}
+                onRequestClose={() => setIsWalletModalOpen(false)}
+                style={customStyles}
               >
-                If you're interested in our mission and where this project goes, join our telegram channel:{' '}
-                <a target='_blank' href='https://t.me/poll_cc' rel='noreferrer'>https://t.me/poll_cc</a>
-              </p>
-              <p
-                style={{
-                  fontSize: 12,
-                  marginBottom: 20,
-                  color: 'gray'
-                }}
+                <div onClick={() => setIsWalletModalOpen(false)} className={styles.close}><h2>Connect Wallet</h2><CloseIcon /></div>
+                <div className={styles.modalContent}>
+                  <b>Do you have a wallet(metamask, trust, etc)?</b>
+                  <p>
+                    In this app you can get crypto rewards for asking and answering questions.
+                    But to get them you need crypto wallet.
+                  </p>
+                  <p>
+                    If you don't have one, click <span className={styles.hide} onClick={hide}>hide to stop seeing this popup</span>.
+                    Later you can always find it in <b>settings &gt; rewards</b>
+                  </p>
+                  <button className={styles.connectButton} onClick={connectToWallet}>Connect</button>
+                </div>
+              </Modal>
+              <Modal
+                isOpen={isModalOpen}
+                onRequestClose={closeRewardsConnectWalletModal}
+                style={customStyles}
               >
-                *I'm not looking to scam you or sell you anything. What you see is what you get.
-              </p> */}
-              <div className={styles.modalContent} id='model-content'>
-                <GoogleLogin
-                  onSuccess={handleLoginSuccess}
-                  onFailure={handleLoginFailure}
-                  cookiePolicy='single_host_origin'
-                  prompt_parent_id='tester-tester'
-                />
-                <button
-                  className={styles.twitterSignIn}
-                  onClick={() => {
-                    setAnswer(null)
-                    handleTwitterLogin(
-                      `?sendEmails=${sendEmails}
-                      ${answer ? `&answer=${answer.answer}&parentMessageId=${answer.parentMessageId}&href=/questions/${answer.shortId}` : ''}`
-                    )
+                {
+                  connected
+                    ? (
+                      <>
+                        <div onClick={() => setIsModalOpen(false)} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
+                        <div className={styles.row}><b>your address: </b><span className={styles.address}>{address}</span></div>
+                        <div className={styles.row}><b>your payout: </b><span className={styles.amount}>{payout} </span><b>ASK</b></div>
+                      </>
+                      )
+                    : (
+                      <div>
+                        <div onClick={closeRewardsConnectWalletModal} className={styles.close}><h2>Rewards</h2><CloseIcon /></div>
+                        <p>To get rewards for asking questions and answering them you need to connect crypto wallet</p>
+                        <button style={{ width: '100%', marginTop: 20 }} className={styles.connectButton} onClick={connectToWallet}>Connect</button>
+                      </div>
+                      )
+                }
+              </Modal>
+              <Modal
+                isOpen={showLoginModal}
+                onRequestClose={() => setIsLoginModalOpen(false)}
+                style={customStyles}
+                shouldCloseOnOverlayClick={false}
+              >
+                <div className={styles.close}><h2>Login or Sign up</h2><CloseIcon onClick={() => setIsLoginModalOpen(false)} /></div>
+                <div style={{ marginBottom: 20 }}>
+                  <p style={{ marginBottom: 4 }}>To count your answer we need you to finish registration.</p>
+                  <p>Otherwise votes wouldn't mean a thing.</p>
+                </div>
+                {/* <p
+                  style={{
+                    fontSize: 12,
+                    marginBottom: 5,
+                    color: 'gray'
                   }}
                 >
-                  <XIcon />
-                  <Text style={{ flexGrow: 1 }} className={styles.username}>
-                    Sign in with X
-                  </Text>
-                </button>
+                  If you're interested in our mission and where this project goes, join our telegram channel:{' '}
+                  <a target='_blank' href='https://t.me/poll_cc' rel='noreferrer'>https://t.me/poll_cc</a>
+                </p>
+                <p
+                  style={{
+                    fontSize: 12,
+                    marginBottom: 20,
+                    color: 'gray'
+                  }}
+                >
+                  *I'm not looking to scam you or sell you anything. What you see is what you get.
+                </p> */}
+                <div className={styles.modalContent} id='model-content'>
+                  <GoogleLogin
+                    onSuccess={handleLoginSuccess}
+                    onFailure={handleLoginFailure}
+                    cookiePolicy='single_host_origin'
+                    prompt_parent_id='tester-tester'
+                  />
+                  <button
+                    className={styles.twitterSignIn}
+                    onClick={() => {
+                      setAnswer(null)
+                      handleTwitterLogin(
+                        `?sendEmails=${sendEmails}
+                        ${answer ? `&answer=${answer.answer}&parentMessageId=${answer.parentMessageId}&href=/questions/${answer.shortId}` : ''}`
+                      )
+                    }}
+                  >
+                    <XIcon />
+                    <Text style={{ flexGrow: 1 }} className={styles.username}>
+                      Sign in with X
+                    </Text>
+                  </button>
 
-                <div className={styles.checkboxes__row}>
-                  <div className={styles.checkboxes__item}>
-                    <label style={{ display: 'flex', gap: 4 }} className={`${styles.checkbox} ${styles['style-c']}`}>
-                      <input style={{ height: 13, marginTop: 4 }} checked={sendEmails} type='checkbox' onChange={(e) => setSendEmails(e.target.checked)} />
-                      <div className={styles.checkbox__checkmark} />
-                      <div className={styles.checkbox__body}>
-                        <span>We will send you one email a week about most answered polls of that week.</span>
-                      </div>
-                    </label>
+                  <div className={styles.checkboxes__row}>
+                    <div className={styles.checkboxes__item}>
+                      <label style={{ display: 'flex', gap: 4 }} className={`${styles.checkbox} ${styles['style-c']}`}>
+                        <input style={{ height: 13, marginTop: 4 }} checked={sendEmails} type='checkbox' onChange={(e) => setSendEmails(e.target.checked)} />
+                        <div className={styles.checkbox__checkmark} />
+                        <div className={styles.checkbox__body}>
+                          <span>We will send you one email a week about most answered polls of that week.</span>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Modal>
-            <Modal
-              isOpen={showKYCModal}
-              onRequestClose={() => setShowKYCModal(false)}
-              style={customStyles}
-              shouldCloseOnOverlayClick={false}
-            >
-              <div onClick={() => setShowKYCModal(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
-              <div style={{ marginBottom: 20 }}>
-                <p style={{ marginBottom: 4 }}>
-                  We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person.
-                  That way all the answers to polls become so much more valuable to you and everyone else.
-                </p>
-                <b>
-                  *Your first and last name, as well as country of origin and age will be public, if it's not clear yet
-                </b>
-              </div>
-              <KYCComponent userId={userId} updateJwt={updateJwt} closeModal={() => setShowKYCModal(false)} />
-            </Modal>
-            <Modal
-              isOpen={addImgModal}
-              onRequestClose={() => setAddImgModal(false)}
-              style={customStyles}
-              shouldCloseOnOverlayClick={false}
-            >
-              <div onClick={() => setAddImgModal(false)} className={styles.close}><h2>Add Art to the Question</h2><CloseIcon /></div>
-              <div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
-                <input className={styles.input} placeholder='Place img url here...' onChange={e => setImgUrl(e.target.value)} value={imgUrl} />
-                <button className={styles.search} onClick={() => { addImage(selectedMessage, imgUrl) }}>
-                  send
-                </button>
-              </div>
-            </Modal>
-            <ContainerWithoutSwipes>
-              {children}
-            </ContainerWithoutSwipes>
-          </div>
+              </Modal>
+              <Modal
+                isOpen={showKYCModal}
+                onRequestClose={() => setShowKYCModal(false)}
+                style={customStyles}
+                shouldCloseOnOverlayClick={false}
+              >
+                <div onClick={() => setShowKYCModal(false)} className={styles.close}><h2>Verify your Identity</h2><CloseIcon /></div>
+                <div style={{ marginBottom: 20 }}>
+                  <p style={{ marginBottom: 4 }}>
+                    We need to verify your identity, as you can understand, to ensure to the maximum possible extent, that you are a real person.
+                    That way all the answers to polls become so much more valuable to you and everyone else.
+                  </p>
+                  <b>
+                    *Your first and last name, as well as country of origin and age will be public, if it's not clear yet
+                  </b>
+                </div>
+                <KYCComponent userId={userId} updateJwt={updateJwt} closeModal={() => setShowKYCModal(false)} />
+              </Modal>
+              <Modal
+                isOpen={addImgModal}
+                onRequestClose={() => setAddImgModal(false)}
+                style={customStyles}
+                shouldCloseOnOverlayClick={false}
+              >
+                <div onClick={() => setAddImgModal(false)} className={styles.close}><h2>Add Art to the Question</h2><CloseIcon /></div>
+                <div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <input className={styles.input} placeholder='Place img url here...' onChange={e => setImgUrl(e.target.value)} value={imgUrl} />
+                  <button className={styles.search} onClick={() => { addImage(selectedMessage, imgUrl) }}>
+                    send
+                  </button>
+                </div>
+              </Modal>
+              <ContainerWithoutSwipes>
+                {children}
+              </ContainerWithoutSwipes>
+            </div>
+          </HeroUIProvider>
         </MainScreenSwipeContext.Provider>
       </GoogleOAuthProvider>
     )

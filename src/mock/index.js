@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 import FlipMove from 'react-flip-move'
 import { BrowserRouter } from 'react-router-dom'
-import { HeroUIProvider } from '@heroui/react'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -556,9 +555,7 @@ root.render(
         v7_relativeSplatPath: true
       }}
     >
-      <HeroUIProvider>
-        <Authorized />
-      </HeroUIProvider>
+      <Authorized />
     </BrowserRouter>
     {/* <Authentication
       createUser={createUser}
