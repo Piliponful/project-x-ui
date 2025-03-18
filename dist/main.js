@@ -8,7 +8,6 @@ var $c5L0i$fortawesomereactfontawesome = require("@fortawesome/react-fontawesome
 var $c5L0i$fortawesomefreesolidsvgicons = require("@fortawesome/free-solid-svg-icons");
 var $c5L0i$muiiconsmaterialOpenInNew = require("@mui/icons-material/OpenInNew");
 var $c5L0i$muiiconsmaterialShare = require("@mui/icons-material/Share");
-var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$datefns = require("date-fns");
 var $c5L0i$muiiconsmaterialChatBubble = require("@mui/icons-material/ChatBubble");
 var $c5L0i$herouitooltip = require("@heroui/tooltip");
@@ -24,6 +23,7 @@ var $c5L0i$reactdetectclickoutside = require("react-detect-click-outside");
 var $c5L0i$muiiconsmaterialSettings = require("@mui/icons-material/Settings");
 var $c5L0i$sumsubwebsdkreact = require("@sumsub/websdk-react");
 var $c5L0i$axios = require("axios");
+var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
@@ -614,7 +614,6 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ]
     });
 });
-
 
 
 
@@ -2078,19 +2077,6 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
                                             onClick: share
                                         })
-                                    }),
-                                    addImageAvailable && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
-                                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
-                                            sx: {
-                                                fill: '#121212'
-                                            },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
-                                            onClick: ()=>{
-                                                setAddImgModal(true);
-                                                setSelectedMessage(parentMessageId);
-                                            }
-                                        })
                                     })
                                 ]
                             })
@@ -2232,7 +2218,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             saveComment(text);
                                             setText('');
                                         },
-                                        children: "Send"
+                                        children: "add"
                                     })
                                 ]
                             })
@@ -2243,6 +2229,8 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ]
     });
 });
+
+
 
 
 
@@ -2269,6 +2257,7 @@ var $9b90ff53938d564a$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: 
     });
 
 
+
 var $6db7aebbd1711895$exports = {};
 
 $parcel$export($6db7aebbd1711895$exports, "button", () => $6db7aebbd1711895$export$2ba01fb71ed41cb6, (v) => $6db7aebbd1711895$export$2ba01fb71ed41cb6 = v);
@@ -2281,14 +2270,16 @@ $6db7aebbd1711895$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
 
 var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
     const [question, setQuestion] = (0, $c5L0i$react.useState)('');
+    const { setAddImgModal: setAddImgModal, setSelectedMessage: setSelectedMessage } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const onChange = (e)=>{
         const newQuestion = e.target.value;
         setQuestion(newQuestion);
     };
-    const save = (e)=>{
+    const save = async (e)=>{
         e.target.blur();
-        saveQuestion(question);
+        const { _id: _id } = await saveQuestion(question);
         setQuestion('');
+        setSelectedMessage(_id);
     };
     const disabled = !saveQuestion;
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
@@ -2299,6 +2290,26 @@ var $2d4c76ea0fc231a4$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                 disabled: disabled,
                 value: question,
                 onChange: onChange
+            }),
+            question && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                style: {
+                    position: 'absolute',
+                    right: 87,
+                    bottom: 5,
+                    transform: 'translateY(-50%)'
+                },
+                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                    content: "Add image to question",
+                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialImage))), {
+                        sx: {
+                            fill: '#121212'
+                        },
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($6db7aebbd1711895$exports))).icon,
+                        onClick: ()=>{
+                            setAddImgModal(true);
+                        }
+                    })
+                })
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                 disabled: !question || !saveQuestion,

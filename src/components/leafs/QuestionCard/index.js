@@ -1,7 +1,6 @@
 import React, { forwardRef, useContext, useState } from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ShareIcon from '@mui/icons-material/Share'
-import ImageIcon from '@mui/icons-material/Image'
 import cn from 'classnames'
 import { formatDistanceToNow } from 'date-fns'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
@@ -127,18 +126,6 @@ export default forwardRef(({
             )}
             <a className={styles.iconButton} style={{ marginTop: '-1.88px' }} href={`/questions/${shortId}`}><OpenInNewIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={onClick} /></a>
             <button className={styles.iconButton}><ShareIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={share} /></button>
-            {addImageAvailable && (
-              <button className={styles.iconButton}>
-                <ImageIcon
-                  sx={{ fill: '#121212' }}
-                  className={styles.icon}
-                  onClick={() => {
-                    setAddImgModal(true)
-                    setSelectedMessage(parentMessageId)
-                  }}
-                />
-              </button>
-            )}
           </div>
         </div>
         {(showComments && showCommentsForQuestion) && (
@@ -214,7 +201,7 @@ export default forwardRef(({
                 value={text}
                 onChange={e => setText(e.target.value)}
               />
-              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
+              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>add</button>
             </div>
           </div>
         )}

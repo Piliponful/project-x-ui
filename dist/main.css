@@ -6423,6 +6423,7 @@ img, video {
 }
 
 .ReactModal__Overlay {
+  z-index: 9999999;
   font-family: IBM Plex Sans;
   background-color: #0000004d !important;
 }

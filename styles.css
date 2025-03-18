@@ -47,6 +47,7 @@
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.3)!important;
   font-family: 'IBM Plex Sans';
+  z-index: 9999999;
 }
 
 .ReactModal__Content {
