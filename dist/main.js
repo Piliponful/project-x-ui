@@ -4396,6 +4396,7 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
     const isMobile = (0, $c5L0i$reactresponsive.useMediaQuery)({
         query: '(max-width: 925px)'
     });
+    console.log('pathname: ', location.pathname);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
         children: [
@@ -4403,7 +4404,9 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
                 children: [
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'],
+                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location.pathname === '/'
+                        }),
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
                             href: "/",
                             style: {

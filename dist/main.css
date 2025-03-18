@@ -2457,6 +2457,11 @@ i.aq6KZW_scroll {
 
 .DpDyfa_nav-item.DpDyfa_active {
   color: #000;
+  fill: #000 !important;
+}
+
+.DpDyfa_nav-item.DpDyfa_active svg {
+  fill: #000 !important;
 }
 
 @media only screen and (width <= 925px) {

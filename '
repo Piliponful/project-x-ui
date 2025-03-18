@@ -1,0 +1,17 @@
+bix borders
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Mar 18 17:22:15 2025 +0200
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 39 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   dist/main.js
+#	modified:   dist/main.js.map
+#	modified:   package.json
+#	modified:   src/components/leafs/QuestionCard/index.js
+#
