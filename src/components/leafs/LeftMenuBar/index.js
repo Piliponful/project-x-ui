@@ -11,7 +11,7 @@ import VennDiagram from '../QuestionCard/VennDiagram'
 
 import styles from './styles.module.styl'
 
-export const LeftMenuBar = ({ user, showMyHistory, onSearchClick, onGroupClick }) => {
+export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
   const [isHovered, setIsHovered] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
@@ -26,12 +26,8 @@ export const LeftMenuBar = ({ user, showMyHistory, onSearchClick, onGroupClick }
             className={cn(styles['nav-item'], { [styles.active]: showGroups })}
             style={{ padding: 6 }}
             onClick={() => {
-              if (isMobile) {
-                onGroupClick()
-              } else {
-                setShowGroups(state => !state)
-                setShowSearchMenu(false)
-              }
+              setShowGroups(state => !state)
+              setShowSearchMenu(false)
             }}
           >
             <VennDiagram myHover={showGroups || isHovered} groupMode={showGroups} fill='#aaa' />
@@ -42,12 +38,8 @@ export const LeftMenuBar = ({ user, showMyHistory, onSearchClick, onGroupClick }
             className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })}
             onClick={(e) => {
               e.stopPropagation()
-              if (isMobile) {
-                onSearchClick()
-              } else {
-                setShowSearchMenu(state => !state)
-                setShowGroups(false)
-              }
+              setShowSearchMenu(state => !state)
+              setShowGroups(false)
             }}
           >
             <SearchIcon />

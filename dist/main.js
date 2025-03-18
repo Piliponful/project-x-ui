@@ -4338,7 +4338,7 @@ $e5b45166edf8dd54$export$2eded710494fe2d7 = `DpDyfa_nav-icons`;
 $e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
 
 
-const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory, onSearchClick: onSearchClick, onGroupClick: onGroupClick })=>{
+const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
     const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(false);
     const isMobile = (0, $c5L0i$reactresponsive.useMediaQuery)({
@@ -4363,11 +4363,8 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                                 padding: 6
                             },
                             onClick: ()=>{
-                                if (isMobile) onGroupClick();
-                                else {
-                                    setShowGroups((state)=>!state);
-                                    setShowSearchMenu(false);
-                                }
+                                setShowGroups((state)=>!state);
+                                setShowSearchMenu(false);
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
                                 myHover: showGroups || isHovered,
@@ -4385,11 +4382,8 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             }),
                             onClick: (e)=>{
                                 e.stopPropagation();
-                                if (isMobile) onSearchClick();
-                                else {
-                                    setShowSearchMenu((state)=>!state);
-                                    setShowGroups(false);
-                                }
+                                setShowSearchMenu((state)=>!state);
+                                setShowGroups(false);
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSearch))), {})
                         })
