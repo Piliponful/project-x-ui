@@ -201,7 +201,7 @@ export default forwardRef(({
                 value={text}
                 onChange={e => setText(e.target.value)}
               />
-              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>add</button>
+              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>send</button>
             </div>
           </div>
         )}

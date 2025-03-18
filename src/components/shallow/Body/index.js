@@ -29,7 +29,8 @@ export const MainScreenSwipeContext = React.createContext({
   setShowGroups: () => {},
   showGroups: false,
   setShowSearchMenu: () => {},
-  showSearchMenu: false
+  showSearchMenu: false,
+  imgUrl: null
 })
 
 const customStyles = {
@@ -143,7 +144,8 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             setShowSearchMenu,
             showSearchMenu,
             setShowGroups,
-            showGroups
+            showGroups,
+            imgUrl
           }}
         >
           <HeroUIProvider>
@@ -284,7 +286,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
                 <div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
                   <input className={styles.input} placeholder='Place img url here...' onChange={e => setImgUrl(e.target.value)} value={imgUrl} />
                   <button className={styles.search} onClick={() => { addImage(selectedMessage, imgUrl) }}>
-                    send
+                    add
                   </button>
                 </div>
               </Modal>
