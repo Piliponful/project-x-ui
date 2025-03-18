@@ -28,6 +28,7 @@ var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
 var $c5L0i$muiiconsmaterialLink = require("@mui/icons-material/Link");
+var $c5L0i$muiiconsmaterialLogout = require("@mui/icons-material/Logout");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
 var $c5L0i$muiiconsmaterialSearch = require("@mui/icons-material/Search");
@@ -2429,6 +2430,7 @@ var $f6827b11255bd55d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
 
 
 
+
 var $fc6e17f49e58291a$exports = {};
 
 $parcel$export($fc6e17f49e58291a$exports, "back", () => $fc6e17f49e58291a$export$7c341cb16fc91138, (v) => $fc6e17f49e58291a$export$7c341cb16fc91138 = v);
@@ -2525,7 +2527,12 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                                 children: user?.fullName || 'loading'
                                             }),
-                                            isXConnected && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                                            isXConnected && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("small", {
+                                                style: {
+                                                    fontSize: 14,
+                                                    fontWeight: 300,
+                                                    color: 'gray'
+                                                },
                                                 children: [
                                                     (0, ($parcel$interopDefault($c5L0i$humannumber)))(user.followerCount),
                                                     " X followers"
@@ -2606,30 +2613,49 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                             ]
                         })
                     }),
-                    isXConnected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
-                        content: "Open connected X account",
-                        placement: "left",
-                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                            onClick: (e)=>{
-                                e.stopPropagation();
-                                window.mixpanel.track('X Profile Click', {
-                                    url: `https://twitter.com/${user?.username}`
-                                });
-                            },
-                            href: `https://twitter.com/${user?.username}`,
-                            target: "_blank",
-                            rel: "noreferrer",
-                            "data-tooltip-id": "my-tooltip-1",
-                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                        })
-                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
-                        content: "Connect your X account",
-                        placement: "left",
-                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
-                            "data-tooltip-id": "my-tooltip-2",
-                            onClick: ()=>handleTwitterLogin()
-                        })
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                        style: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 16,
+                            alignItems: 'center'
+                        },
+                        children: [
+                            isXConnected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                                content: "Open connected X account",
+                                placement: "left",
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                                    onClick: (e)=>{
+                                        e.stopPropagation();
+                                        window.mixpanel.track('X Profile Click', {
+                                            url: `https://twitter.com/${user?.username}`
+                                        });
+                                    },
+                                    href: `https://twitter.com/${user?.username}`,
+                                    target: "_blank",
+                                    rel: "noreferrer",
+                                    "data-tooltip-id": "my-tooltip-1",
+                                    children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                                })
+                            }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                                content: "Connect your X account",
+                                placement: "left",
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
+                                    "data-tooltip-id": "my-tooltip-2",
+                                    onClick: ()=>handleTwitterLogin()
+                                })
+                            }),
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                                content: "Logout",
+                                placement: "left",
+                                children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialLogout))), {
+                                    sx: {
+                                        cursor: 'pointer'
+                                    }
+                                })
+                            })
+                        ]
                     })
                 ]
             }),

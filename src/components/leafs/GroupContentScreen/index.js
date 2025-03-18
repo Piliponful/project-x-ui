@@ -9,6 +9,7 @@ import FlipMove from 'react-flip-move'
 // import 'react-tooltip/dist/react-tooltip.css'
 import LinkIcon from '@mui/icons-material/Link'
 import { Tooltip } from '@heroui/tooltip'
+import LogoutIcon from '@mui/icons-material/Logout'
 
 import styles from './style.module.styl'
 
@@ -29,7 +30,7 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin })
             <div className={styles.column}>
               <FlipMove typeName={null} appearAnimation='fade' enterAnimation='fade' leaveAnimation='fade'>
                 <span>{user?.fullName || 'loading'}</span>
-                {isXConnected && <span>{humanNumber(user.followerCount)} X followers</span>}
+                {isXConnected && <small style={{ fontSize: 14, fontWeight: 300, color: 'gray' }}>{humanNumber(user.followerCount)} X followers</small>}
                 {isXConnected && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>X account connected</span><LinkIcon sx={{ height: 20, width: 20, fill: 'gray', marginLeft: '3px', marginTop: '2px' }} /></div>}
                 {user?.twitterVerified && user?.twitterVerified !== 'none' && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>connected X account verified</span><img src={svg} style={{ height: 16, width: 16, paddingLeft: 3, border: 'none' }} /></div>}
                 {user?.verifiedKYC && <div style={{ display: 'flex', alignItems: 'center', fontSize: 14, fontWeight: 300, color: 'gray' }}><span>verified by passport</span><img src={KYCIcon} style={{ height: 20, width: 20, paddingLeft: 3, border: 'none' }} /></div>}
@@ -37,28 +38,31 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin })
             </div>
           </FlipMove>
         </div>
-        {isXConnected
-          ? (
-            <Tooltip content='Open connected X account' placement='left'>
-              <a
-                onClick={e => {
-                  e.stopPropagation()
-                  window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
-                }}
-                href={`https://twitter.com/${user?.username}`}
-                target='_blank'
-                rel='noreferrer'
-                data-tooltip-id='my-tooltip-1'
-              >
-                <XIcon />
-              </a>
-            </Tooltip>
-            )
-          : (
-            <Tooltip content='Connect your X account' placement='left'>
-              <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
-            </Tooltip>
-            )}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center' }}>
+          {isXConnected
+            ? (
+              <Tooltip content='Open connected X account' placement='left'>
+                <a
+                  onClick={e => {
+                    e.stopPropagation()
+                    window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
+                  }}
+                  href={`https://twitter.com/${user?.username}`}
+                  target='_blank'
+                  rel='noreferrer'
+                  data-tooltip-id='my-tooltip-1'
+                >
+                  <XIcon />
+                </a>
+              </Tooltip>
+              )
+            : (
+              <Tooltip content='Connect your X account' placement='left'>
+                <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
+              </Tooltip>
+              )}
+          <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} /></Tooltip>
+        </div>
       </div>
 
       {children}
