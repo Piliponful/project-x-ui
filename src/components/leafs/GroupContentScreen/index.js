@@ -61,7 +61,7 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin, l
                 <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
               </Tooltip>
               )}
-          {logout && <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} /></Tooltip>}
+          {logout && <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} onClick={logout} /></Tooltip>}
         </div>
       </div>
 

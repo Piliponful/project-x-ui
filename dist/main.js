@@ -2668,7 +2668,8 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialLogout))), {
                                     sx: {
                                         cursor: 'pointer'
-                                    }
+                                    },
+                                    onClick: logout
                                 })
                             })
                         ]
