@@ -181,11 +181,10 @@ export default forwardRef(({
                     marginRight: yourOwnQuestion ? 0 : (i.answer === 'no' ? 34 : 0),
                     background: 'rgb(43 43 43 / 9%)',
                     padding: 8,
-                    borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
-                    borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
+                    borderTopRightRadius: (i.answer === 'yes' || yourOwnQuestion) ? 5 : 0,
+                    borderTopLeftRadius: (i.answer === 'no' || yourOwnQuestion) ? 5 : 0,
                     borderBottomRightRadius: 5,
                     borderBottomLeftRadius: 5,
-                    borderRadius: yourOwnQuestion ? 5 : 0,
                     fontSize: 15
                   }}
                 >
