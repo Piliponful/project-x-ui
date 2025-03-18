@@ -1910,7 +1910,7 @@ function $fde06a1540536d1e$var$timeSince(createdAt) {
     const diffInDays = Math.floor(diffInHours / 24);
     return `${diffInDays}d`;
 }
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments, saveComment: saveComment }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments, saveComment: saveComment, showCommentsForQuestion: showCommentsForQuestion }, ref)=>{
     const [showComments, setShowComments] = (0, $c5L0i$react.useState)(false);
     const [text, setText] = (0, $c5L0i$react.useState)('');
     const share = ()=>{
@@ -2096,7 +2096,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             })
                         ]
                     }),
-                    showComments && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                    showComments && showCommentsForQuestion && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
                         style: {
                             flexDirection: 'column',
@@ -2107,15 +2107,16 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             comments.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).comments,
                                     style: {
-                                        alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end'
+                                        alignSelf: yourOwnQuestion ? 'center' : i.answer === 'yes' ? 'flex-start' : 'flex-end'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                             style: {
                                                 display: 'flex',
                                                 gap: 6,
-                                                flexDirection: i.answer === 'no' ? 'row-reverse' : 'row',
+                                                flexDirection: i.answer === 'no' && !yourOwnQuestion ? 'row-reverse' : 'row',
                                                 alignItems: 'center',
+                                                justifyContent: yourOwnQuestion ? 'center' : 'unset',
                                                 marginBottom: 5
                                             },
                                             children: [
@@ -2195,21 +2196,22 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         }),
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
                                             style: {
-                                                marginLeft: i.answer === 'yes' ? 34 : 0,
-                                                marginRight: i.answer === 'no' ? 34 : 0,
+                                                marginLeft: i.answer === 'yes' && !yourOwnQuestion ? 34 : 0,
+                                                marginRight: yourOwnQuestion ? 0 : i.answer === 'no' ? 34 : 0,
                                                 background: 'rgb(43 43 43 / 9%)',
                                                 padding: 8,
                                                 borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
                                                 borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
                                                 borderBottomRightRadius: 5,
                                                 borderBottomLeftRadius: 5,
+                                                borderRadius: yourOwnQuestion ? 5 : 0,
                                                 fontSize: 15
                                             },
                                             children: i.text
                                         })
                                     ]
                                 }, i.text)),
-                            (me?.answer || yourOwnQuestion) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).addComment,
                                 style: {
                                     width: '100%',
@@ -2217,7 +2219,8 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("textarea", {
-                                        placeholder: "Comment...",
+                                        disabled: !(me?.answer || yourOwnQuestion),
+                                        placeholder: me?.answer || yourOwnQuestion ? 'Comment...' : 'Answer to comment...',
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).textarea,
                                         value: text,
                                         onChange: (e)=>setText(e.target.value)

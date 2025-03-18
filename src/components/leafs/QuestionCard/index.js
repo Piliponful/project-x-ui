@@ -64,7 +64,8 @@ export default forwardRef(({
   groupMode,
   comments,
   fetchComments,
-  saveComment
+  saveComment,
+  showCommentsForQuestion
 }, ref) => {
   const [showComments, setShowComments] = useState(false)
   const [text, setText] = useState('')
@@ -140,7 +141,7 @@ export default forwardRef(({
             )}
           </div>
         </div>
-        {showComments && (
+        {(showComments && showCommentsForQuestion) && (
           <div
             className={styles.expand}
             style={{
@@ -150,13 +151,14 @@ export default forwardRef(({
             }}
           >
             {comments.map(i => (
-              <div key={i.text} className={styles.comments} style={{ alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end' }}>
+              <div key={i.text} className={styles.comments} style={{ alignSelf: yourOwnQuestion ? 'center' : (i.answer === 'yes' ? 'flex-start' : 'flex-end') }}>
                 <div
                   style={{
                     display: 'flex',
                     gap: 6,
-                    flexDirection: i.answer === 'no' ? 'row-reverse' : 'row',
+                    flexDirection: (i.answer === 'no' && !yourOwnQuestion) ? 'row-reverse' : 'row',
                     alignItems: 'center',
+                    justifyContent: yourOwnQuestion ? 'center' : 'unset',
                     marginBottom: 5
                   }}
                 >
@@ -188,14 +190,15 @@ export default forwardRef(({
                 </div>
                 <p
                   style={{
-                    marginLeft: i.answer === 'yes' ? 34 : 0,
-                    marginRight: i.answer === 'no' ? 34 : 0,
+                    marginLeft: (i.answer === 'yes' && !yourOwnQuestion) ? 34 : 0,
+                    marginRight: yourOwnQuestion ? 0 : (i.answer === 'no' ? 34 : 0),
                     background: 'rgb(43 43 43 / 9%)',
                     padding: 8,
                     borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
                     borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
                     borderBottomRightRadius: 5,
                     borderBottomLeftRadius: 5,
+                    borderRadius: yourOwnQuestion ? 5 : 0,
                     fontSize: 15
                   }}
                 >
@@ -203,17 +206,16 @@ export default forwardRef(({
                 </p>
               </div>
             ))}
-            {(me?.answer || yourOwnQuestion) && (
-              <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
-                <textarea
-                  placeholder='Comment...'
-                  className={styles.textarea}
-                  value={text}
-                  onChange={e => setText(e.target.value)}
-                />
-                <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
-              </div>
-            )}
+            <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
+              <textarea
+                disabled={!(me?.answer || yourOwnQuestion)}
+                placeholder={(me?.answer || yourOwnQuestion) ? 'Comment...' : 'Answer to comment...'}
+                className={styles.textarea}
+                value={text}
+                onChange={e => setText(e.target.value)}
+              />
+              <button disabled={!text} className={styles.button} onClick={() => { saveComment(text); setText('') }}>Send</button>
+            </div>
           </div>
         )}
       </div>
