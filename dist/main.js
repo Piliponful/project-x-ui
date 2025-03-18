@@ -1504,7 +1504,7 @@ var $0c70feff32ca6a2b$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [imgUrl, setImgUrl] = (0, $c5L0i$react.useState)('');
     const [sendEmails, setSendEmails] = (0, $c5L0i$react.useState)(true);
     const [showSearchMenu, setShowSearchMenu] = (0, $c5L0i$react.useState)(false);
-    const [showGroups, setShowGroups] = (0, $c5L0i$react.useState)(true);
+    const [showGroups, setShowGroups] = (0, $c5L0i$react.useState)(false);
     (0, $c5L0i$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
