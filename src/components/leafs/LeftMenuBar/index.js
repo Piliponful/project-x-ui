@@ -20,11 +20,11 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
   return (
     <div className={styles.leftbar}>
       <nav className={styles['nav-icons']}>
-        <button className={cn(styles['nav-item'], { [styles.active]: location?.pathname === '/' })}>
-          <a href='/' style={{ lineHeight: 1 }}>
+        <a href='/' style={{ lineHeight: 1 }}>
+          <button className={cn(styles['nav-item'], { [styles.active]: location?.pathname === '/' })}>
             <HomeIcon sx={{ fill: '#aaa' }} />
-          </a>
-        </button>
+          </button>
+        </a>
         <Tooltip content='Groups' placement='right'>
           <button
             onMouseEnter={() => setIsHovered(true)}

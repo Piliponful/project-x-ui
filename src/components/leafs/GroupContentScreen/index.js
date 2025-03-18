@@ -18,7 +18,7 @@ import KYCIcon from '../ActionsPanel/kyc.svg'
 
 import './styles.css'
 
-export const User = ({ user, onUserClick, children, style, handleTwitterLogin }) => {
+export const User = ({ user, onUserClick, children, style, handleTwitterLogin, logout }) => {
   const isXConnected = Number.isInteger(user?.followerCount)
 
   return (
@@ -61,7 +61,7 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin })
                 <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
               </Tooltip>
               )}
-          <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} /></Tooltip>
+          {logout && <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} /></Tooltip>}
         </div>
       </div>
 

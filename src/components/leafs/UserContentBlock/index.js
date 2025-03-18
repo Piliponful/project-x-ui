@@ -23,7 +23,7 @@ import styles from './style.module.styl'
 // }
 
 export const UserHistoryTabs = forwardRef(({
-  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user, handleTwitterLogin
+  selectedTab, setSelectedTab, showDifference, setShowDifference, back, children, similarity, user, handleTwitterLogin, logout
 }, ref) => {
   useEffect(() => {
     if (showDifference && selectedTab !== 'answers') {
@@ -48,6 +48,7 @@ export const UserHistoryTabs = forwardRef(({
         }}
         user={user}
         onUserClick={() => {}}
+        logout={logout}
       >
         {!_.isNull(similarity) && (
           <p

@@ -2502,7 +2502,7 @@ $2869377cb1e5210a$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename
 
 
 
-const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin })=>{
+const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin, logout: logout })=>{
     const isXConnected = Number.isInteger(user?.followerCount);
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         style: style,
@@ -2662,7 +2662,7 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                     onClick: ()=>handleTwitterLogin()
                                 })
                             }),
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                            logout && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
                                 content: "Logout",
                                 placement: "left",
                                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialLogout))), {
@@ -2849,7 +2849,7 @@ $d96dc328a9b2259c$export$16a4d76eabe7aabb = `_31v-EG_similarity`;
 $d96dc328a9b2259c$export$39f5674517ec0000 = `_31v-EG_tabs`;
 
 
-const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin }, ref)=>{
+const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin, logout: logout }, ref)=>{
     (0, $c5L0i$react.useEffect)(()=>{
         if (showDifference && selectedTab !== 'answers') setSelectedTab('answers');
     }, [
@@ -2880,6 +2880,7 @@ const $4c6bd8db1d735d14$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $c5L0i$react
                 },
                 user: user,
                 onUserClick: ()=>{},
+                logout: logout,
                 children: !(0, ($parcel$interopDefault($c5L0i$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("p", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($d96dc328a9b2259c$exports))).similarity,
                     children: [
@@ -4402,15 +4403,15 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("nav", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
-                        className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location?.pathname === '/'
-                        }),
-                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                            href: "/",
-                            style: {
-                                lineHeight: 1
-                            },
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                        href: "/",
+                        style: {
+                            lineHeight: 1
+                        },
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location?.pathname === '/'
+                            }),
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialHome))), {
                                 sx: {
                                     fill: '#aaa'
