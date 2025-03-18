@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Snap from 'snapsvg-cjs'
 import FlipMove from 'react-flip-move'
 import { BrowserRouter } from 'react-router-dom'
+import { useMediaQuery } from 'react-responsive'
 
 import Body, { MainScreenSwipeContext } from '../components/shallow/Body'
 import MainScreen from '../components/shallow/MainScreen'
@@ -470,6 +471,7 @@ const Authorized = () => {
   const [selectedTab, setSelectedTab] = useState('questions')
 
   const hasMore = offset + 10 < users.length
+  const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
 
   return (
     <div
@@ -477,8 +479,8 @@ const Authorized = () => {
         display: 'flex',
         gap: 32,
         height: '100dvh',
-        // width: '100%',
-        // padding: '0 15px'
+        width: isMobile ? '100%' : 'auto',
+        padding: isMobile ? '0 15px' : '0'
       }}
     >
       {/* <Landing description={mock.description} title={mock.keyword} isBot /> */}

@@ -5,9 +5,10 @@ import CloseIcon from '@mui/icons-material/Close'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import cn from 'classnames'
 import FlipMove from 'react-flip-move'
-import { Tooltip as ReactTooltip } from 'react-tooltip'
+// import { Tooltip as ReactTooltip } from 'react-tooltip'
 // import 'react-tooltip/dist/react-tooltip.css'
 import LinkIcon from '@mui/icons-material/Link'
+import { Tooltip } from '@heroui/tooltip'
 
 import styles from './style.module.styl'
 
@@ -38,34 +39,26 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin })
         </div>
         {isXConnected
           ? (
-            <a
-              onClick={e => {
-                e.stopPropagation()
-                window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
-              }}
-              href={`https://twitter.com/${user?.username}`}
-              target='_blank'
-              rel='noreferrer'
-              data-tooltip-id='my-tooltip-1'
-            >
-              <XIcon />
-            </a>
+            <Tooltip content='Open connected X account' placement='left'>
+              <a
+                onClick={e => {
+                  e.stopPropagation()
+                  window.mixpanel.track('X Profile Click', { url: `https://twitter.com/${user?.username}` })
+                }}
+                href={`https://twitter.com/${user?.username}`}
+                target='_blank'
+                rel='noreferrer'
+                data-tooltip-id='my-tooltip-1'
+              >
+                <XIcon />
+              </a>
+            </Tooltip>
             )
           : (
-            <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
+            <Tooltip content='Connect your X account' placement='left'>
+              <XIcon className={styles['x-icon']} data-tooltip-id='my-tooltip-2' onClick={() => handleTwitterLogin()} />
+            </Tooltip>
             )}
-        <ReactTooltip
-          id='my-tooltip-2'
-          place='bottom'
-          variant='info'
-          content='Connect your X account'
-        />
-        <ReactTooltip
-          id='my-tooltip-1'
-          place='bottom'
-          variant='info'
-          content='Open connected X account'
-        />
       </div>
 
       {children}

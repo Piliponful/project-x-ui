@@ -12,6 +12,7 @@ var $c5L0i$muiiconsmaterialImage = require("@mui/icons-material/Image");
 var $c5L0i$datefns = require("date-fns");
 var $c5L0i$muiiconsmaterialChatBubble = require("@mui/icons-material/ChatBubble");
 var $c5L0i$herouitooltip = require("@heroui/tooltip");
+var $c5L0i$reactresponsive = require("react-responsive");
 var $c5L0i$reactmodal = require("react-modal");
 var $c5L0i$muiiconsmaterialClose = require("@mui/icons-material/Close");
 var $c5L0i$reactoauthgoogle = require("@react-oauth/google");
@@ -26,7 +27,6 @@ var $c5L0i$axios = require("axios");
 var $c5L0i$humannumber = require("human-number");
 var $c5L0i$reactinfinitescrollcomponent = require("react-infinite-scroll-component");
 var $c5L0i$reactflipmove = require("react-flip-move");
-var $c5L0i$reacttooltip = require("react-tooltip");
 var $c5L0i$muiiconsmaterialLink = require("@mui/icons-material/Link");
 var $c5L0i$muiiconsmaterialArrowBack = require("@mui/icons-material/ArrowBack");
 var $c5L0i$muiiconsmaterialExpandMore = require("@mui/icons-material/ExpandMore");
@@ -36,7 +36,6 @@ var $c5L0i$reactrouterdom = require("react-router-dom");
 var $c5L0i$reacthelmet = require("react-helmet");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
 var $c5L0i$muiiconsmaterialPerson = require("@mui/icons-material/Person");
-var $c5L0i$reactresponsive = require("react-responsive");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -614,6 +613,7 @@ var $74980d71b8ef2933$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
         ]
     });
 });
+
 
 
 
@@ -1939,6 +1939,9 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
             answer: answer
         });
     };
+    const isMobile = (0, $c5L0i$reactresponsive.useMediaQuery)({
+        query: '(max-width: 925px)'
+    });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("article", {
         ref: ref,
         className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).card, {
@@ -1996,14 +1999,11 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).expand,
                         children: [
-                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("span", {
+                            /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
                                 style: {
                                     color: '#00000063'
                                 },
-                                children: [
-                                    (0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt)),
-                                    " ago"
-                                ]
+                                children: isMobile ? $fde06a1540536d1e$var$timeSince(createdAt) : `${(0, $c5L0i$datefns.formatDistanceToNow)(new Date(createdAt))} ago`
                             }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 style: {
@@ -2593,34 +2593,30 @@ const $42498b7876d29f2b$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                             ]
                         })
                     }),
-                    isXConnected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                        onClick: (e)=>{
-                            e.stopPropagation();
-                            window.mixpanel.track('X Profile Click', {
-                                url: `https://twitter.com/${user?.username}`
-                            });
-                        },
-                        href: `https://twitter.com/${user?.username}`,
-                        target: "_blank",
-                        rel: "noreferrer",
-                        "data-tooltip-id": "my-tooltip-1",
-                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
-                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
-                        "data-tooltip-id": "my-tooltip-2",
-                        onClick: ()=>handleTwitterLogin()
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
-                        id: "my-tooltip-2",
-                        place: "bottom",
-                        variant: "info",
-                        content: "Connect your X account"
-                    }),
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reacttooltip.Tooltip), {
-                        id: "my-tooltip-1",
-                        place: "bottom",
-                        variant: "info",
-                        content: "Open connected X account"
+                    isXConnected ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                        content: "Open connected X account",
+                        placement: "left",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                            onClick: (e)=>{
+                                e.stopPropagation();
+                                window.mixpanel.track('X Profile Click', {
+                                    url: `https://twitter.com/${user?.username}`
+                                });
+                            },
+                            href: `https://twitter.com/${user?.username}`,
+                            target: "_blank",
+                            rel: "noreferrer",
+                            "data-tooltip-id": "my-tooltip-1",
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {})
+                        })
+                    }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
+                        content: "Connect your X account",
+                        placement: "left",
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialX))), {
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($fc6e17f49e58291a$exports)))['x-icon'],
+                            "data-tooltip-id": "my-tooltip-2",
+                            onClick: ()=>handleTwitterLogin()
+                        })
                     })
                 ]
             }),

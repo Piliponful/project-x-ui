@@ -6,6 +6,7 @@ import cn from 'classnames'
 import { formatDistanceToNow } from 'date-fns'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
 import { Tooltip } from '@heroui/tooltip'
+import { useMediaQuery } from 'react-responsive'
 
 import Title from './components/Title'
 import Stats from './components/Stats'
@@ -93,6 +94,7 @@ export default forwardRef(({
       answer
     })
   }
+  const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
 
   return (
     <article ref={ref} className={cn(styles.card, { [styles.selectedQuestion]: selected })}>
@@ -105,7 +107,7 @@ export default forwardRef(({
         <Stats {...answersCount} he={he} me={me} createNewGroup={createNewGroup} />
         {!yourOwnQuestion && (!me?.answer && <AnswerButtons loading={loading} respond={respond || redirectToLogin} />)}
         <div className={styles.expand}>
-          <span style={{ color: '#00000063' }}>{formatDistanceToNow((new Date(createdAt)))} ago</span>
+          <span style={{ color: '#00000063' }}>{isMobile ? timeSince(createdAt) : `${formatDistanceToNow((new Date(createdAt)))} ago`}</span>
           <div style={{ display: 'flex', gap: 0 }}>
             <button className={styles.iconButton}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} /></button>
             {window.featureFlags?.groups && (
@@ -190,7 +192,6 @@ export default forwardRef(({
                     borderBottomRightRadius: 5,
                     borderBottomLeftRadius: 5,
                     fontSize: 15
-                    // borderTopLeftRadius: 1
                   }}
                 >
                   {i.text}
@@ -211,12 +212,6 @@ export default forwardRef(({
           </div>
         )}
       </div>
-      {/* <ReactTooltip
-        id='my-tooltip-2'
-        place='bottom'
-        variant='info'
-        content='Similarity to you'
-      /> */}
     </article>
   )
 })
