@@ -16,11 +16,11 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
   const [isHovered, setIsHovered] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
-  console.log('pathname: ', location.pathname)
+
   return (
     <div className={styles.leftbar}>
       <nav className={styles['nav-icons']}>
-        <button className={cn(styles['nav-item'], { [styles.active]: location.pathname === '/' })}>
+        <button className={cn(styles['nav-item'], { [styles.active]: location?.pathname === '/' })}>
           <a href='/' style={{ lineHeight: 1 }}>
             <HomeIcon sx={{ fill: '#aaa' }} />
           </a>

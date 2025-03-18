@@ -64,7 +64,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [imgUrl, setImgUrl] = useState('')
   const [sendEmails, setSendEmails] = useState(true)
   const [showSearchMenu, setShowSearchMenu] = useState(false)
-  const [showGroups, setShowGroups] = useState(false)
+  const [showGroups, setShowGroups] = useState(true)
 
   useEffect(() => {
     const handler = () => {
