@@ -109,7 +109,7 @@ export default forwardRef(({
         <div className={styles.expand}>
           <span style={{ color: '#00000063' }}>{isMobile ? timeSince(createdAt) : `${formatDistanceToNow((new Date(createdAt)))} ago`}</span>
           <div style={{ display: 'flex', gap: 0 }}>
-            <button className={styles.iconButton}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} onClick={() => { fetchComments(); setShowComments(!showComments) }} /></button>
+            <button className={styles.iconButton} onClick={() => { fetchComments(); setShowComments(!showComments) }}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} /></button>
             {window.featureFlags?.groups && (
               <Tooltip content='Create new group'>
                 <div
@@ -161,16 +161,21 @@ export default forwardRef(({
                   }}
                 >
                   <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
-                  <AnswerButton
-                    style={{
-                      height: 26,
-                      width: 46,
-                      fontSize: 14
-                    }}
-                    noHover
-                    answer={i.answer}
-                    respond={() => {}}
-                  />
+                  {yourOwnQuestion
+                    ? <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>OP</small>
+                    : (
+                      <AnswerButton
+                        style={{
+                          height: 26,
+                          width: 46,
+                          fontSize: 14
+                        }}
+                        noHover
+                        answer={i.answer}
+                        respond={() => {}}
+                      />
+                      )}
+                  <span style={{ color: 'gray' }}>•</span>
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{i.user.username}</small>
                   <span style={{ color: 'gray' }}>•</span>
                   <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
@@ -198,7 +203,7 @@ export default forwardRef(({
                 </p>
               </div>
             ))}
-            {me?.answer && (
+            {(me?.answer || yourOwnQuestion) && (
               <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
                 <textarea
                   placeholder='Comment...'

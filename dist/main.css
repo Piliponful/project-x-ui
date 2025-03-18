@@ -280,6 +280,12 @@
   display: flex;
 }
 
+@media only screen and (width <= 925px) {
+  .hWz-3G_stats {
+    margin-bottom: 34px;
+  }
+}
+
 .Orh0Eq_button {
   color: #222;
   cursor: pointer;

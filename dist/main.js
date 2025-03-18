@@ -2013,15 +2013,15 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                 children: [
                                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).iconButton,
+                                        onClick: ()=>{
+                                            fetchComments();
+                                            setShowComments(!showComments);
+                                        },
                                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialChatBubble))), {
                                             sx: {
                                                 fill: '#121212'
                                             },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon,
-                                            onClick: ()=>{
-                                                fetchComments();
-                                                setShowComments(!showComments);
-                                            }
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).icon
                                         })
                                     }),
                                     window.featureFlags?.groups && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
@@ -2127,7 +2127,14 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                         cursor: 'pointer'
                                                     }
                                                 }),
-                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
+                                                yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
+                                                    style: {
+                                                        color: 'gray',
+                                                        cursor: 'pointer'
+                                                    },
+                                                    children: "OP"
+                                                }) : /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $5e95937b5aebb876$export$2e2bcd8739ae039), {
                                                     style: {
                                                         height: 26,
                                                         width: 46,
@@ -2136,6 +2143,12 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     noHover: true,
                                                     answer: i.answer,
                                                     respond: ()=>{}
+                                                }),
+                                                /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("span", {
+                                                    style: {
+                                                        color: 'gray'
+                                                    },
+                                                    children: "\u2022"
                                                 }),
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
@@ -2195,7 +2208,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                         })
                                     ]
                                 }, i.text)),
-                            me?.answer && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            (me?.answer || yourOwnQuestion) && /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).addComment,
                                 style: {
                                     width: '100%',

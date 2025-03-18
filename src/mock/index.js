@@ -82,8 +82,9 @@ const mostAnsweredQuestions = [
       yes: 10,
       no: 5
     },
+    yourOwnQuestion: true,
     me: {
-      answer: 'yes',
+      // answer: 'yes',
       pictureUrl: usert.pictureUrl
     },
     noPercentage: 33,
@@ -240,7 +241,7 @@ const Messages = () => {
         comments={comments}
         saveComment={text => console.log('text: ', text)}
         fetchComments={() => {
-          setComments([{ text: 'Why do you support Trump?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'What do you know about project 2025?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'Why do you believe Trump is guilty?', user: usert, createdAt: 1716407581944, answer: 'no' }])
+          // setComments([{ text: 'Why do you support Trump?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'What do you know about project 2025?', user: usert, createdAt: 1716407581944, answer: 'yes' }, { text: 'Why do you believe Trump is guilty?', user: usert, createdAt: 1716407581944, answer: 'no' }])
         }}
       />
     )
