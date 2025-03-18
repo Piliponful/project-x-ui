@@ -149,7 +149,15 @@ export default forwardRef(({
           >
             {comments.map(i => (
               <div key={i.text} className={styles.comments} style={{ alignSelf: i.answer === 'yes' ? 'flex-start' : 'flex-end' }}>
-                <div style={{ display: 'flex', gap: 6, flexDirection: i.answer === 'no' ? 'row-reverse' : 'row' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: 6,
+                    flexDirection: i.answer === 'no' ? 'row-reverse' : 'row',
+                    alignItems: 'center',
+                    marginBottom: 5
+                  }}
+                >
                   <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
                   <AnswerButton
                     style={{
@@ -175,7 +183,7 @@ export default forwardRef(({
                   style={{
                     marginLeft: i.answer === 'yes' ? 34 : 0,
                     marginRight: i.answer === 'no' ? 34 : 0,
-                    background: '#8080803b',
+                    background: 'rgb(43 43 43 / 9%)',
                     padding: 8,
                     borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
                     borderTopLeftRadius: i.answer === 'no' ? 5 : 0,

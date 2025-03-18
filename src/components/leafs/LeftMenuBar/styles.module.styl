@@ -9,6 +9,7 @@
   position: fixed;
   left: 0;
   justify-content: center;
+  z-index: 99999;
 }
 
 .avatar {
@@ -56,4 +57,21 @@
 
 .nav-item.active {
   color: black;
+}
+
+@media only screen and (max-width: 925px) {
+  .leftbar {
+    height: 60px;
+    width: 100%;
+    bottom: 0;
+    flex-direction: row;
+  }
+
+  .nav-icons {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-top: 0;
+  }
 }

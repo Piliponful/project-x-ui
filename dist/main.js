@@ -36,6 +36,7 @@ var $c5L0i$reactrouterdom = require("react-router-dom");
 var $c5L0i$reacthelmet = require("react-helmet");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
 var $c5L0i$muiiconsmaterialPerson = require("@mui/icons-material/Person");
+var $c5L0i$reactresponsive = require("react-responsive");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -2112,7 +2113,9 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             style: {
                                                 display: 'flex',
                                                 gap: 6,
-                                                flexDirection: i.answer === 'no' ? 'row-reverse' : 'row'
+                                                flexDirection: i.answer === 'no' ? 'row-reverse' : 'row',
+                                                alignItems: 'center',
+                                                marginBottom: 5
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("img", {
@@ -2180,7 +2183,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             style: {
                                                 marginLeft: i.answer === 'yes' ? 34 : 0,
                                                 marginRight: i.answer === 'no' ? 34 : 0,
-                                                background: '#8080803b',
+                                                background: 'rgb(43 43 43 / 9%)',
                                                 padding: 8,
                                                 borderTopRightRadius: i.answer === 'yes' ? 5 : 0,
                                                 borderTopLeftRadius: i.answer === 'no' ? 5 : 0,
@@ -4315,6 +4318,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $e5b45166edf8dd54$exports = {};
 
 $parcel$export($e5b45166edf8dd54$exports, "active", () => $e5b45166edf8dd54$export$89da14300d534261, (v) => $e5b45166edf8dd54$export$89da14300d534261 = v);
@@ -4334,10 +4338,12 @@ $e5b45166edf8dd54$export$2eded710494fe2d7 = `DpDyfa_nav-icons`;
 $e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
 
 
-const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
+const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory, onSearchClick: onSearchClick, onGroupClick: onGroupClick })=>{
     const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
-    console.log('showGroups: ', showGroups);
     const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(false);
+    const isMobile = (0, $c5L0i$reactresponsive.useMediaQuery)({
+        query: '(max-width: 925px)'
+    });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
         children: [
@@ -4357,8 +4363,11 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                                 padding: 6
                             },
                             onClick: ()=>{
-                                setShowGroups((state)=>!state);
-                                setShowSearchMenu(false);
+                                if (isMobile) onGroupClick();
+                                else {
+                                    setShowGroups((state)=>!state);
+                                    setShowSearchMenu(false);
+                                }
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $df6ee0316f46a1c9$export$2e2bcd8739ae039), {
                                 myHover: showGroups || isHovered,
@@ -4374,9 +4383,13 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
                                 [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: showSearchMenu
                             }),
-                            onClick: ()=>{
-                                setShowSearchMenu((state)=>!state);
-                                setShowGroups(false);
+                            onClick: (e)=>{
+                                e.stopPropagation();
+                                if (isMobile) onSearchClick();
+                                else {
+                                    setShowSearchMenu((state)=>!state);
+                                    setShowGroups(false);
+                                }
                             },
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialSearch))), {})
                         })
@@ -4385,6 +4398,9 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
             }),
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("div", {
                 className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).avatar, (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['bottom-avatar']),
+                style: {
+                    marginLeft: isMobile ? 15 : 0
+                },
                 children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
                     content: user?.pictureUrl ? 'Your profile' : 'Login',
                     placement: "right",

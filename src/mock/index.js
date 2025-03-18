@@ -82,7 +82,7 @@ const mostAnsweredQuestions = [
       no: 5
     },
     me: {
-      // answer: 'yes',
+      answer: 'yes',
       pictureUrl: usert.pictureUrl
     },
     noPercentage: 33,
@@ -363,7 +363,7 @@ const MainScreenWithQuestions = () => {
         <Messages />
       </QuestionCardsRow>
       <div style={{ width: '100%' }}>
-        <NewQuestion />
+        <NewQuestion saveQuestion />
         {/* <ActionsPanel handleTwitterLogin={() => console.log('test')} username='piliponful' showXLogin={false} showKYCLogin /> */}
       </div>
     </MainScreen>
@@ -476,7 +476,9 @@ const Authorized = () => {
       style={{
         display: 'flex',
         gap: 32,
-        height: '100dvh'
+        height: '100dvh',
+        // width: '100%',
+        // padding: '0 15px'
       }}
     >
       {/* <Landing description={mock.description} title={mock.keyword} isBot /> */}
@@ -513,7 +515,7 @@ const Authorized = () => {
       {/* {!screenName && ( */}
       <>
         <LeftMenuBar user={usert} />
-        <SidebarWithGroups />
+        {/* <SidebarWithGroups /> */}
         {/* <GroupContentScreen
           className='custom-groups-name'
           hasMore={hasMore}

@@ -3,6 +3,7 @@ import cn from 'classnames'
 import SearchIcon from '@mui/icons-material/Search'
 import PersonIcon from '@mui/icons-material/Person'
 import { Tooltip } from '@heroui/tooltip'
+import { useMediaQuery } from 'react-responsive'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
@@ -10,10 +11,10 @@ import VennDiagram from '../QuestionCard/VennDiagram'
 
 import styles from './styles.module.styl'
 
-export const LeftMenuBar = ({ user, showMyHistory }) => {
+export const LeftMenuBar = ({ user, showMyHistory, onSearchClick, onGroupClick }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
-  console.log('showGroups: ', showGroups)
   const [isHovered, setIsHovered] = useState(false)
+  const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
 
   return (
     <div className={styles.leftbar}>
@@ -25,8 +26,12 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             className={cn(styles['nav-item'], { [styles.active]: showGroups })}
             style={{ padding: 6 }}
             onClick={() => {
-              setShowGroups(state => !state)
-              setShowSearchMenu(false)
+              if (isMobile) {
+                onGroupClick()
+              } else {
+                setShowGroups(state => !state)
+                setShowSearchMenu(false)
+              }
             }}
           >
             <VennDiagram myHover={showGroups || isHovered} groupMode={showGroups} fill='#aaa' />
@@ -35,9 +40,14 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
         <Tooltip content='Search' placement='right'>
           <button
             className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })}
-            onClick={() => {
-              setShowSearchMenu(state => !state)
-              setShowGroups(false)
+            onClick={(e) => {
+              e.stopPropagation()
+              if (isMobile) {
+                onSearchClick()
+              } else {
+                setShowSearchMenu(state => !state)
+                setShowGroups(false)
+              }
             }}
           >
             <SearchIcon />
@@ -45,7 +55,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
         </Tooltip>
       </nav>
 
-      <div className={cn(styles['nav-item'], styles.avatar, styles['bottom-avatar'])}>
+      <div className={cn(styles['nav-item'], styles.avatar, styles['bottom-avatar'])} style={{ marginLeft: isMobile ? 15 : 0 }}>
         <Tooltip content={user?.pictureUrl ? 'Your profile' : 'Login'} placement='right'>
           {user?.pictureUrl
             ? <img
