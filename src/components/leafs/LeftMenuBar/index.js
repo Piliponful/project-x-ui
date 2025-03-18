@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import PersonIcon from '@mui/icons-material/Person'
 import { Tooltip } from '@heroui/tooltip'
 import { useMediaQuery } from 'react-responsive'
+import HomeIcon from '@mui/icons-material/Home'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
@@ -19,6 +20,11 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
   return (
     <div className={styles.leftbar}>
       <nav className={styles['nav-icons']}>
+        <button className={styles['nav-item']}>
+          <a href='/' style={{ lineHeight: 1 }}>
+            <HomeIcon sx={{ fill: '#aaa' }} />
+          </a>
+        </button>
         <Tooltip content='Groups' placement='right'>
           <button
             onMouseEnter={() => setIsHovered(true)}

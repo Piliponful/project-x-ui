@@ -2441,7 +2441,7 @@ i.aq6KZW_scroll {
   cursor: pointer;
   background: none;
   border: none;
-  border-radius: 12px;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   width: 40px;

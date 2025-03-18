@@ -37,6 +37,7 @@ var $c5L0i$reactrouterdom = require("react-router-dom");
 var $c5L0i$reacthelmet = require("react-helmet");
 var $c5L0i$muiiconsmaterialArrowForwardIos = require("@mui/icons-material/ArrowForwardIos");
 var $c5L0i$muiiconsmaterialPerson = require("@mui/icons-material/Person");
+var $c5L0i$muiiconsmaterialHome = require("@mui/icons-material/Home");
 
 
 function $parcel$defineInteropFlag(a) {
@@ -4370,6 +4371,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $e5b45166edf8dd54$exports = {};
 
 $parcel$export($e5b45166edf8dd54$exports, "active", () => $e5b45166edf8dd54$export$89da14300d534261, (v) => $e5b45166edf8dd54$export$89da14300d534261 = v);
@@ -4401,6 +4403,20 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("nav", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
                 children: [
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'],
+                        children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
+                            href: "/",
+                            style: {
+                                lineHeight: 1
+                            },
+                            children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialHome))), {
+                                sx: {
+                                    fill: '#aaa'
+                                }
+                            })
+                        })
+                    }),
                     /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
                         content: "Groups",
                         placement: "right",
