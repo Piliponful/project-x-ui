@@ -1474,7 +1474,8 @@ const $0c70feff32ca6a2b$export$32c650b79baf5fee = /*#__PURE__*/ (0, ($parcel$int
     showGroups: false,
     setShowSearchMenu: ()=>{},
     showSearchMenu: false,
-    imgUrl: null
+    imgUrl: null,
+    screenName: null
 });
 const $0c70feff32ca6a2b$var$customStyles = {
     content: {
@@ -4394,7 +4395,7 @@ $e5b45166edf8dd54$export$f0e24ade441c6754 = `DpDyfa_nav-item`;
 
 
 const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
-    const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
+    const { setShowGroups: setShowGroups, showGroups: showGroups, setShowSearchMenu: setShowSearchMenu, showSearchMenu: showSearchMenu, setIsLoginModalOpen: setIsLoginModalOpen, screenName: screenName } = (0, $c5L0i$react.useContext)((0, $0c70feff32ca6a2b$export$32c650b79baf5fee));
     const [isHovered, setIsHovered] = (0, $c5L0i$react.useState)(false);
     const isMobile = (0, $c5L0i$reactresponsive.useMediaQuery)({
         query: '(max-width: 925px)'
@@ -4411,8 +4412,11 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             lineHeight: 1
                         },
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
+                            onClick: ()=>{
+                                if (screenName && showGroups) setShowGroups(false);
+                            },
                             className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
-                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location?.pathname === '/' || location?.pathname === '/app'
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: screenName && showGroups ? false : location?.pathname === '/' || location?.pathname === '/app'
                             }),
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialHome))), {
                                 sx: {

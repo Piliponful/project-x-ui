@@ -30,7 +30,8 @@ export const MainScreenSwipeContext = React.createContext({
   showGroups: false,
   setShowSearchMenu: () => {},
   showSearchMenu: false,
-  imgUrl: null
+  imgUrl: null,
+  screenName: null
 })
 
 const customStyles = {

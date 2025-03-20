@@ -14,7 +14,7 @@ import VennDiagram from '../QuestionCard/VennDiagram'
 import styles from './styles.module.styl'
 
 export const LeftMenuBar = ({ user, showMyHistory }) => {
-  const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen } = useContext(MainScreenSwipeContext)
+  const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen, screenName } = useContext(MainScreenSwipeContext)
   const [isHovered, setIsHovered] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
 
@@ -22,7 +22,16 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
     <div className={styles.leftbar}>
       <nav className={styles['nav-icons']}>
         <Link to={user ? '/' : '/app'} style={{ lineHeight: 1 }}>
-          <button className={cn(styles['nav-item'], { [styles.active]: location?.pathname === '/' || location?.pathname === '/app' })}>
+          <button
+            onClick={() => {
+              if (screenName && showGroups) {
+                setShowGroups(false)
+              }
+            }}
+            className={cn(styles['nav-item'], {
+              [styles.active]: (screenName && showGroups) ? false : location?.pathname === '/' || location?.pathname === '/app'
+            })}
+          >
             <HomeIcon sx={{ fill: '#aaa' }} />
           </button>
         </Link>
