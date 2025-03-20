@@ -1068,11 +1068,11 @@ var $df6ee0316f46a1c9$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
                     children: [
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("stop", {
                             offset: "0",
-                            "stop-color": "#0fdcdd"
+                            stopColor: "#0fdcdd"
                         }),
                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("stop", {
                             offset: "1",
-                            "stop-color": "#46a1e8"
+                            stopColor: "#46a1e8"
                         })
                     ]
                 })
@@ -4373,6 +4373,7 @@ const $4f095db3a6856690$export$12449a31c6671d53 = /*#__PURE__*/ (0, $c5L0i$react
 
 
 
+
 var $e5b45166edf8dd54$exports = {};
 
 $parcel$export($e5b45166edf8dd54$exports, "active", () => $e5b45166edf8dd54$export$89da14300d534261, (v) => $e5b45166edf8dd54$export$89da14300d534261 = v);
@@ -4404,14 +4405,14 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("nav", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
                 children: [
-                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("a", {
-                        href: "/",
+                    /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$reactrouterdom.Link), {
+                        to: user ? '/' : '/app',
                         style: {
                             lineHeight: 1
                         },
                         children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("button", {
                             className: (0, ($parcel$interopDefault($c5L0i$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-item'], {
-                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location?.pathname === '/'
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).active]: location?.pathname === '/' || location?.pathname === '/app'
                             }),
                             children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, ($parcel$interopDefault($c5L0i$muiiconsmaterialHome))), {
                                 sx: {

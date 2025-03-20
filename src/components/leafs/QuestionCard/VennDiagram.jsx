@@ -28,8 +28,8 @@ export default ({ onClick, groupMode, myHover, fill }) => {
           y1="32"
           y2="32"
         >
-          <stop offset="0" stop-color="#0fdcdd" />
-          <stop offset="1" stop-color="#46a1e8" />
+          <stop offset="0" stopColor="#0fdcdd" />
+          <stop offset="1" stopColor="#46a1e8" />
         </linearGradient>
       </defs>
       <g id="_39_Diagram_Venn" data-name="39 Diagram Venn">
