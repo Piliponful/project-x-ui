@@ -2464,7 +2464,7 @@ i.aq6KZW_scroll {
   fill: #000 !important;
 }
 
-@media only screen and (width <= 925px) {
+@media only screen and (width <= 945px) {
   .DpDyfa_leftbar {
     flex-direction: row;
     width: 100%;
