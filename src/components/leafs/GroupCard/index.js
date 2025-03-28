@@ -7,7 +7,7 @@ import UserCount from './components/UserCount'
 import CheckboxIcon from './components/CheckboxIcon'
 import Title from './components/Title'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default forwardRef(({ disableButtons, name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }, ref) => {
   const [newGroupTitle, setNewGroupTitle] = useState('')

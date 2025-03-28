@@ -3,7 +3,7 @@ import { useSwipeable } from 'react-swipeable'
 
 import { MainScreenSwipeContext } from '../../'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 // eslint-disable-next-line no-extend-native
 Number.prototype.mod = function (n) {

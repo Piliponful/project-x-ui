@@ -6,7 +6,7 @@ import Input from './components/Input'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default forwardRef(({ saveQuestion }, ref) => {
   const [question, setQuestion] = useState('')

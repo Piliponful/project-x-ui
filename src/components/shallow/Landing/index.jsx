@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 import PolyscanSVG from 'bundle-text:./polyscan.svg'
 
-import styles from './styles.module.styl'
+import styles from './styles.module.scss'
 
 export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
   useEffect(() => {

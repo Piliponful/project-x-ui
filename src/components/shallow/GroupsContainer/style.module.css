@@ -1,0 +1,9 @@
+.groupContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 144px);
+  width: 100%;
+  overflow: scroll;
+}
+
+/*# sourceMappingURL=style.module.css.map */

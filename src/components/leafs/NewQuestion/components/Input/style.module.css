@@ -1,0 +1,32 @@
+.textarea {
+  font-family: inherit;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  caret-color: #969696;
+  color: #bebebe;
+  border-radius: 4px;
+  resize: none;
+  background: #2b2b2b;
+  padding: 10px 15px;
+  height: 144px;
+  width: 100%;
+  font-size: 18px;
+  font-family: "IBM Plex Sans";
+}
+.textarea::placeholder {
+  color: #969696;
+  opacity: 1;
+  font-size: 18px;
+}
+.textarea:disabled {
+  cursor: not-allowed;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 300;
+  color: #bebebe;
+}
+
+/*# sourceMappingURL=style.module.css.map */

@@ -9,7 +9,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { User } from '../GroupContentScreen'
 import QuestionCard from '../QuestionCard'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 // const usert = {
 //   _id: '6',

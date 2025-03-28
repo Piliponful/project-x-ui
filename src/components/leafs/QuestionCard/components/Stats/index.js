@@ -7,7 +7,7 @@ import Number from '../../../../shared/Number'
 import Text from './components/Text'
 import Bars from './components/Bars'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 

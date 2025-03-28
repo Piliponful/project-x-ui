@@ -2,7 +2,7 @@ import React from 'react'
 
 import Text from '../../../../shared/Text'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ selectedGroups, selectedCircleParts }) => {
   const lengthToHint = {

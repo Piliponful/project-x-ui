@@ -10,7 +10,7 @@ import { ContainerWithoutSwipes } from './components/Container'
 import { KYCComponent } from '../../leafs/ActionsPanel'
 import Text from '../../shared/Text'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 import { smallMainScreenWidth } from '../../../constants'
 

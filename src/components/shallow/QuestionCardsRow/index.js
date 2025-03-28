@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import cn from 'classnames'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default forwardRef(({ style, children, id, className }, ref) => {
   return (

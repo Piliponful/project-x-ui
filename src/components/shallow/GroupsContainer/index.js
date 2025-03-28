@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ children, id, style, className }) => (
   <div style={style} id={id} className={cn(styles.groupContainer, className)}>

@@ -13,7 +13,7 @@ import Text from '../../shared/Text'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
-import styles from './styles.module.styl'
+import styles from './styles.module.scss'
 
 const calcPercent = (x, sum) => Math.round(x / sum * 100)
 

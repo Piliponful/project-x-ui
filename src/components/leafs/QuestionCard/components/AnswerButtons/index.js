@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from './components/Button'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ respond, style, loading }) => {
   return (

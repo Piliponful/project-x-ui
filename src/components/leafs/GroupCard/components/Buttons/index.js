@@ -5,7 +5,7 @@ import Button from '../../shared/components/Button'
 
 import { MainScreenSwipeContext } from '../../../../shallow/Body'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ disableButtons, select, combine }) => {
   const {

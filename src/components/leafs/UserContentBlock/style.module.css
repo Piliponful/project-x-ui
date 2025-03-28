@@ -1,0 +1,107 @@
+.back {
+  color: #3b3b3b;
+  cursor: pointer;
+  padding: 3px;
+  position: relative;
+}
+
+.backContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.screenWithGroupContent {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Sans";
+  max-width: 500px;
+  width: calc(100% - 20px);
+  gap: 8px;
+  overflow: scroll;
+  height: calc(100dvh - 20px);
+  box-sizing: border-box;
+}
+.screenWithGroupContent .button {
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  border: none;
+  background: rgba(43, 43, 43, 0.0588235294);
+  padding: 9px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #3b3b3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid #59acd6;
+  transition: color 0.1s;
+  margin-top: 8px;
+  transition: box-shadow 0.2s;
+  margin-bottom: 16px;
+}
+.screenWithGroupContent .button:hover {
+  box-shadow: 0 3px 9.84px -0.84px rgba(62, 181, 241, 0.1803921569);
+}
+.screenWithGroupContent .button svg {
+  color: #3b3b3b;
+  transition: color 0.1s;
+  margin-left: 8px;
+}
+
+.similarity {
+  padding-top: 24px;
+  padding-bottom: 9px;
+  border-top: 1px solid #b3b3b3;
+  font-size: 36px;
+  font-weight: 200;
+  color: #3b3b3b;
+  text-align: center;
+  margin: 0;
+}
+.similarity span {
+  font-weight: 400;
+}
+
+.tabs {
+  background: rgba(43, 43, 43, 0.0588235294);
+  display: flex;
+  gap: 12px;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.tabs div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #3b3b3b;
+  cursor: pointer;
+  font-family: "IBM Plex Sans";
+  transition: background-color 0.1s;
+  text-align: center;
+  padding: 5px 10px;
+}
+.tabs div.selected {
+  background-color: rgba(43, 43, 43, 0.0784313725);
+}
+
+.differentTabs {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.differentTabs2 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.module.css.map */

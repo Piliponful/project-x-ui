@@ -1,53 +1,62 @@
-$btn-color = #3d83d6
-$btn-font-color = #fff
-$white = #F7F7F7
-$black = #1F1F21
+$btn-color: #3d83d6;
+$btn-font-color: #fff;
+$white: #F7F7F7;
+$black: #1F1F21;
 
-.chat
+.chat {
   width: 500px;
-  padding: 10px 0
+  padding: 10px 0;
+}
 
-.messageBoard
-  display: flex
-  flex-flow: column wrap
-  overflow-y: scroll
-  width: 100%
-  height: calc(100dvh - 254px)
-  &::-webkit-scrollbar
-    display: none
+.messageBoard {
+  display: flex;
+  flex-flow: column wrap;
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100dvh - 254px);
 
-.message
-  background-color: $white
-  border-radius: 4px
-  margin-bottom: 20px
-  max-width: 500px
-  min-width: 300px
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.message {
+  background-color: $white;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  min-width: 300px;
   padding: 10px;
-  width: 50%
-  border: 1px solid #b3b3b3
-  display: flex
+  width: 50%;
+  border: 1px solid #b3b3b3;
+  display: flex;
+}
 
-.message:last-child
-  margin-bottom: 0
+.message:last-child {
+  margin-bottom: 0;
+}
 
-.mine
-  align-self: flex-end
+.mine {
+  align-self: flex-end;
+}
 
-.notMine
-  align-self: flex-start
+.notMine {
+  align-self: flex-start;
+}
 
-.inputGroup
-  bottom: 0
-  display: flex
-  flex-flow: row nowrap
-  font-size: 1.14em
-  margin-bottom: 10px
+.inputGroup {
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.14em;
+  margin-bottom: 10px;
   justify-content: center;
-  padding: 0 8px
-  z-index: 1
+  padding: 0 8px;
+  z-index: 1;
   position: relative;
+}
 
-.input
+.input {
   border: 0;
   outline: 0;
   flex-grow: 1;
@@ -56,12 +65,17 @@ $black = #1F1F21
   background: #2b2b2b0f;
   font-size: 16px;
   height: 144px;
-  &:focus
-    background-color: rgba(#fff, 0.75)
-  &::-webkit-input-placeholder
-   color: rgba(#212121, 0.25)
 
-.btn
+  &:focus {
+    background-color: rgba(#fff, 0.75);
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(#212121, 0.25);
+  }
+}
+
+.btn {
   color: #f1f1f1;
   cursor: pointer;
   background: #3eb5f1;
@@ -74,24 +88,28 @@ $black = #1F1F21
   font-family: IBM Plex Sans, sans-serif;
   font-size: 18px;
   font-weight: 500;
-  transition: box-shadow .3s ease-out;
+  transition: box-shadow 0.3s ease-out;
   display: flex;
   position: absolute;
   bottom: -16px;
   right: 16px;
   transform: translateY(-50%);
   box-shadow: 0 0 23.84px 8.16px #3eb5f163;
-  &:hover
-    border-bottom-color darken($btn-color, 20)
 
-.picture
-  height: 36px
+  &:hover {
+    border-bottom-color: darken($btn-color, 20%);
+  }
+}
+
+.picture {
+  height: 36px;
   border: 1px solid gray;
   border-radius: 50%;
   margin-right: 15px;
-  cursor: pointer
+  cursor: pointer;
+}
 
-.changeGroupBtn
+.changeGroupBtn {
   background: #3eb5f1;
   box-shadow: 0 3px 3.84px 2.16px #3eb5f12e;
   color: #f1f1f1;
@@ -105,18 +123,21 @@ $black = #1F1F21
   height: 40px;
   font-size: 18px;
   font-weight: 500;
-  transition: box-shadow .3s ease-out;
+  transition: box-shadow 0.3s ease-out;
   display: flex;
+}
 
-.top
+.top {
   display: flex;
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   margin-bottom: 15px;
   justify-content: space-between;
   align-items: center;
+}
 
-.currentGroup
-  display: flex
+.currentGroup {
+  display: flex;
   flex-direction: column;
   gap: 10px;
+}

@@ -1,0 +1,58 @@
+.newQuestion {
+  margin-top: 25px;
+  width: 100%;
+  position: relative;
+}
+.newQuestion textarea {
+  color: #121212;
+  font-size: 16px;
+  background: rgba(43, 43, 43, 0.0588235294);
+}
+.newQuestion textarea::placeholder {
+  color: rgba(43, 43, 43, 0.5568627451);
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 400px) {
+  .newQuestion {
+    margin-top: 14px;
+  }
+}
+@media only screen and (max-width: 945px) {
+  .newQuestion textarea {
+    height: 110px !important;
+  }
+}
+.button {
+  font-family: IBM Plex Sans, sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease-out;
+  display: flex;
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+  transform: translateY(-50%);
+  border-radius: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  height: 36px;
+  width: 72px;
+  border: 1px solid #b5b5b5;
+  background: transparent;
+  color: #121212;
+  transition: background 0.3s ease;
+}
+
+.button:not(:disabled):hover {
+  background: white;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=style.module.css.map */

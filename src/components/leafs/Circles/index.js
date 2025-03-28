@@ -4,7 +4,7 @@ import { isEqual } from 'lodash'
 
 import Hint from './components/Hint'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 import Circles from './Circles'
 import CirclesMirror from './CirclesMirror'

@@ -16,7 +16,7 @@ import VennDiagram from './VennDiagram'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 function timeSince (createdAt) {
   const createdAtDate = new Date(createdAt).getTime()

@@ -10,7 +10,7 @@ import KYCIcon from '../ActionsPanel/kyc.svg'
 
 import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 Handlebars.registerHelper('bold', function (options) {
   const targetText = options.hash.text

@@ -18,10 +18,10 @@
   border-radius: 50%;
   overflow: hidden;
   margin-top: 15px;
-  svg {
-    color: #aaa;
-    margin-left: 2px;
-  }
+}
+.avatar svg {
+  color: #aaa;
+  margin-left: 2px;
 }
 
 .avatar img {
@@ -57,10 +57,10 @@
 
 .nav-item.active {
   color: black;
-  fill: black!important;
-  svg {
-    fill: black!important;
-  }
+  fill: black !important;
+}
+.nav-item.active svg {
+  fill: black !important;
 }
 
 @media screen and (max-width: 945px) {
@@ -70,12 +70,12 @@
     bottom: 0;
     flex-direction: row;
   }
-
   .nav-icons {
     flex-direction: row;
   }
-
   .nav-item {
     margin-top: 0;
   }
 }
+
+/*# sourceMappingURL=styles.module.css.map */

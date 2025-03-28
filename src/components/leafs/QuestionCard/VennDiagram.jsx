@@ -3,7 +3,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ onClick, groupMode, myHover, fill }) => {
   return (

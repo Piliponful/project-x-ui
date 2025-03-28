@@ -11,7 +11,7 @@ import LinkIcon from '@mui/icons-material/Link'
 import { Tooltip } from '@heroui/tooltip'
 import LogoutIcon from '@mui/icons-material/Logout'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 import svg from '../UsersSearch/x-check.svg'
 import KYCIcon from '../ActionsPanel/kyc.svg'

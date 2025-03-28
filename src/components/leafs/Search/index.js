@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import SearchIcon from '@mui/icons-material/Search'
 import cn from 'classnames'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default forwardRef(({ search, buttonsOutside = false, className, style }, ref2) => {
   const [text, setText] = useState('')

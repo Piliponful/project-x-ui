@@ -11,7 +11,7 @@ import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import VennDiagram from '../QuestionCard/VennDiagram'
 
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 
 export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen, screenName } = useContext(MainScreenSwipeContext)

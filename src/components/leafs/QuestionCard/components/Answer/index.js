@@ -4,7 +4,7 @@ import { capitalize } from 'lodash'
 
 import Text from '../../../../shared/Text'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ answer, his, style }) => (
   <Text style={style} className={styles.text}>

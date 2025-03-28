@@ -12,7 +12,7 @@ import KYCIcon from './kyc.svg'
 
 import Text from '../../shared/Text'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export const KYCComponent = ({ userId, updateJwt, closeModal }) => {
   const [accessToken, setAccessToken] = useState('')

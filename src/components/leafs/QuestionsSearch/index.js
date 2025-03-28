@@ -8,7 +8,7 @@ import QuestionCardsRow from '../../shallow/QuestionCardsRow'
 
 import QuestionCard from '../QuestionCard'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 Handlebars.registerHelper('bold', function (options) {
   const targetText = options.hash.text

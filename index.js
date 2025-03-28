@@ -21,6 +21,7 @@ import { Landing } from './src/components/shallow/Landing'
 import { LeftMenuBar } from './src/components/leafs/LeftMenuBar'
 
 import './styles.css'
+import './styles.scss'
 
 export default {
   shallow: {

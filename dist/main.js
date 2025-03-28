@@ -63,11 +63,11 @@ $parcel$export(module.exports, "default", function () { return $0079a596950cb70e
 
 
 
-var $0d40b9179428fe95$exports = {};
+var $be7a050cd57809d4$exports = {};
 
-$parcel$export($0d40b9179428fe95$exports, "text", function () { return $0d40b9179428fe95$export$6f093cfa640b7166; }, function (v) { return $0d40b9179428fe95$export$6f093cfa640b7166 = v; });
-var $0d40b9179428fe95$export$6f093cfa640b7166;
-$0d40b9179428fe95$export$6f093cfa640b7166 = `Gy87eW_text`;
+$parcel$export($be7a050cd57809d4$exports, "text", function () { return $be7a050cd57809d4$export$6f093cfa640b7166; }, function (v) { return $be7a050cd57809d4$export$6f093cfa640b7166 = v; });
+var $be7a050cd57809d4$export$6f093cfa640b7166;
+$be7a050cd57809d4$export$6f093cfa640b7166 = `cpUP9G_text`;
 
 
 var $3faaf67f4ad0d2f4$export$2e2bcd8739ae039 = ({ children: children, className: className, style: style, id: id, onClick: onClick, h1: h1 = false })=>{
@@ -75,24 +75,24 @@ var $3faaf67f4ad0d2f4$export$2e2bcd8739ae039 = ({ children: children, className:
         onClick: onClick,
         id: id,
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($0d40b9179428fe95$exports))).text),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($be7a050cd57809d4$exports))).text),
         children: children
     });
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
         onClick: onClick,
         id: id,
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($0d40b9179428fe95$exports))).text),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($be7a050cd57809d4$exports))).text),
         children: children
     });
 };
 
 
-var $e1d0f59f3305884f$exports = {};
+var $0f73b88baf90fdb5$exports = {};
 
-$parcel$export($e1d0f59f3305884f$exports, "hint", function () { return $e1d0f59f3305884f$export$464c821cd4347539; }, function (v) { return $e1d0f59f3305884f$export$464c821cd4347539 = v; });
-var $e1d0f59f3305884f$export$464c821cd4347539;
-$e1d0f59f3305884f$export$464c821cd4347539 = `LwUTDG_hint`;
+$parcel$export($0f73b88baf90fdb5$exports, "hint", function () { return $0f73b88baf90fdb5$export$464c821cd4347539; }, function (v) { return $0f73b88baf90fdb5$export$464c821cd4347539 = v; });
+var $0f73b88baf90fdb5$export$464c821cd4347539;
+$0f73b88baf90fdb5$export$464c821cd4347539 = `cgk2sG_hint`;
 
 
 var $21642cccaffabc36$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups, selectedCircleParts: selectedCircleParts })=>{
@@ -101,20 +101,20 @@ var $21642cccaffabc36$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         2: '(click on area to select what goes to new group)'
     };
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($e1d0f59f3305884f$exports))).hint,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($0f73b88baf90fdb5$exports))).hint,
         children: selectedCircleParts.length === 1 ? '(click on selected area again to deselect)' : lengthToHint[selectedGroups.length]
     });
 };
 
 
-var $5d18bab88c8f4b31$exports = {};
+var $a391297389115cdc$exports = {};
 
-$parcel$export($5d18bab88c8f4b31$exports, "circles", function () { return $5d18bab88c8f4b31$export$c958aa0cc90a067; }, function (v) { return $5d18bab88c8f4b31$export$c958aa0cc90a067 = v; });
-$parcel$export($5d18bab88c8f4b31$exports, "circlesContainer", function () { return $5d18bab88c8f4b31$export$293c75fa7ed5ee8d; }, function (v) { return $5d18bab88c8f4b31$export$293c75fa7ed5ee8d = v; });
-var $5d18bab88c8f4b31$export$c958aa0cc90a067;
-var $5d18bab88c8f4b31$export$293c75fa7ed5ee8d;
-$5d18bab88c8f4b31$export$c958aa0cc90a067 = `_1m2oWq_circles`;
-$5d18bab88c8f4b31$export$293c75fa7ed5ee8d = `_1m2oWq_circlesContainer`;
+$parcel$export($a391297389115cdc$exports, "circles", function () { return $a391297389115cdc$export$c958aa0cc90a067; }, function (v) { return $a391297389115cdc$export$c958aa0cc90a067 = v; });
+$parcel$export($a391297389115cdc$exports, "circlesContainer", function () { return $a391297389115cdc$export$293c75fa7ed5ee8d; }, function (v) { return $a391297389115cdc$export$293c75fa7ed5ee8d = v; });
+var $a391297389115cdc$export$c958aa0cc90a067;
+var $a391297389115cdc$export$293c75fa7ed5ee8d;
+$a391297389115cdc$export$c958aa0cc90a067 = `dH2kZq_circles`;
+$a391297389115cdc$export$293c75fa7ed5ee8d = `dH2kZq_circlesContainer`;
 
 
 /* eslint-disable */ 
@@ -324,10 +324,10 @@ var $8bbdb784fd810985$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
         selectedGroups.length
     ]);
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($5d18bab88c8f4b31$exports))).circles,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($a391297389115cdc$exports))).circles,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($5d18bab88c8f4b31$exports))).circlesContainer,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($a391297389115cdc$exports))).circlesContainer,
                 children: selectedGroups.length === 1 ? selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $c8c8482d82ee612b$export$2e2bcd8739ae039), {}) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $b8c0008178e5493d$export$2e2bcd8739ae039), {}) : selectedGroups[0].color === '#3eb5f1' ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $05c36e78bc0c5dcd$export$2e2bcd8739ae039), {
                     style: {
                         cursor: 'pointer'
@@ -352,21 +352,21 @@ var $8bbdb784fd810985$export$2e2bcd8739ae039 = ({ selectedGroups: selectedGroups
 
 
 
-var $1de003196d05c9af$exports = {};
+var $31c9cf25f1f7f700$exports = {};
 
-$parcel$export($1de003196d05c9af$exports, "input", function () { return $1de003196d05c9af$export$b7e3ae3d7c15e42e; }, function (v) { return $1de003196d05c9af$export$b7e3ae3d7c15e42e = v; });
-$parcel$export($1de003196d05c9af$exports, "text", function () { return $1de003196d05c9af$export$6f093cfa640b7166; }, function (v) { return $1de003196d05c9af$export$6f093cfa640b7166 = v; });
-var $1de003196d05c9af$export$b7e3ae3d7c15e42e;
-var $1de003196d05c9af$export$6f093cfa640b7166;
-$1de003196d05c9af$export$b7e3ae3d7c15e42e = `tKcEXW_input`;
-$1de003196d05c9af$export$6f093cfa640b7166 = `tKcEXW_text`;
+$parcel$export($31c9cf25f1f7f700$exports, "input", function () { return $31c9cf25f1f7f700$export$b7e3ae3d7c15e42e; }, function (v) { return $31c9cf25f1f7f700$export$b7e3ae3d7c15e42e = v; });
+$parcel$export($31c9cf25f1f7f700$exports, "text", function () { return $31c9cf25f1f7f700$export$6f093cfa640b7166; }, function (v) { return $31c9cf25f1f7f700$export$6f093cfa640b7166 = v; });
+var $31c9cf25f1f7f700$export$b7e3ae3d7c15e42e;
+var $31c9cf25f1f7f700$export$6f093cfa640b7166;
+$31c9cf25f1f7f700$export$b7e3ae3d7c15e42e = `_37fBDa_input`;
+$31c9cf25f1f7f700$export$6f093cfa640b7166 = `_37fBDa_text`;
 
 
 var $95424766a65cfd34$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput, value: value })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($1de003196d05c9af$exports))).text,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($31c9cf25f1f7f700$exports))).text,
         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
             placeholder: "Group name...",
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($1de003196d05c9af$exports))).input,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($31c9cf25f1f7f700$exports))).input,
             onChange: (e)=>onTitleInput(e.target.value),
             value: value
         })
@@ -383,21 +383,21 @@ var $95424766a65cfd34$export$2e2bcd8739ae039 = ({ onTitleInput: onTitleInput, va
 
 
 
-var $dbc4a7fc377bd2a8$exports = {};
+var $fdb8b86eaab7dc12$exports = {};
 
-$parcel$export($dbc4a7fc377bd2a8$exports, "button", function () { return $dbc4a7fc377bd2a8$export$2ba01fb71ed41cb6; }, function (v) { return $dbc4a7fc377bd2a8$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($dbc4a7fc377bd2a8$exports, "loader", function () { return $dbc4a7fc377bd2a8$export$f4c5de44377d2946; }, function (v) { return $dbc4a7fc377bd2a8$export$f4c5de44377d2946 = v; });
-var $dbc4a7fc377bd2a8$export$2ba01fb71ed41cb6;
-var $dbc4a7fc377bd2a8$export$f4c5de44377d2946;
-$dbc4a7fc377bd2a8$export$2ba01fb71ed41cb6 = `tbRRgG_button`;
-$dbc4a7fc377bd2a8$export$f4c5de44377d2946 = `tbRRgG_loader`;
+$parcel$export($fdb8b86eaab7dc12$exports, "button", function () { return $fdb8b86eaab7dc12$export$2ba01fb71ed41cb6; }, function (v) { return $fdb8b86eaab7dc12$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($fdb8b86eaab7dc12$exports, "loader", function () { return $fdb8b86eaab7dc12$export$f4c5de44377d2946; }, function (v) { return $fdb8b86eaab7dc12$export$f4c5de44377d2946 = v; });
+var $fdb8b86eaab7dc12$export$2ba01fb71ed41cb6;
+var $fdb8b86eaab7dc12$export$f4c5de44377d2946;
+$fdb8b86eaab7dc12$export$2ba01fb71ed41cb6 = `_4WP3Da_button`;
+$fdb8b86eaab7dc12$export$f4c5de44377d2946 = `_4WP3Da_loader`;
 
 
 var $93940fbade29e7bb$export$2e2bcd8739ae039 = ({ children: children, className: className, onClick: onClick, disabled: disabled, loading: loading })=>{
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
         disabled: Boolean(disabled),
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($dbc4a7fc377bd2a8$exports))).button, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($dbc4a7fc377bd2a8$exports))).loader]: loading
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($fdb8b86eaab7dc12$exports))).button, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($fdb8b86eaab7dc12$exports))).loader]: loading
         }),
         onClick: onClick,
         children: loading ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$reactspinnersBeatLoader))), {
@@ -408,29 +408,29 @@ var $93940fbade29e7bb$export$2e2bcd8739ae039 = ({ children: children, className:
 
 
 
-var $49e8bb028fe0db46$exports = {};
+var $1f34391d91c81e28$exports = {};
 
-$parcel$export($49e8bb028fe0db46$exports, "button", function () { return $49e8bb028fe0db46$export$2ba01fb71ed41cb6; }, function (v) { return $49e8bb028fe0db46$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($49e8bb028fe0db46$exports, "nobold", function () { return $49e8bb028fe0db46$export$a9c364a443888bb7; }, function (v) { return $49e8bb028fe0db46$export$a9c364a443888bb7 = v; });
-$parcel$export($49e8bb028fe0db46$exports, "primary", function () { return $49e8bb028fe0db46$export$9ad721cf3b3debe0; }, function (v) { return $49e8bb028fe0db46$export$9ad721cf3b3debe0 = v; });
-$parcel$export($49e8bb028fe0db46$exports, "secondary", function () { return $49e8bb028fe0db46$export$745c6f71a1e0e6f7; }, function (v) { return $49e8bb028fe0db46$export$745c6f71a1e0e6f7 = v; });
-var $49e8bb028fe0db46$export$2ba01fb71ed41cb6;
-var $49e8bb028fe0db46$export$a9c364a443888bb7;
-var $49e8bb028fe0db46$export$9ad721cf3b3debe0;
-var $49e8bb028fe0db46$export$745c6f71a1e0e6f7;
-$49e8bb028fe0db46$export$2ba01fb71ed41cb6 = `GNms6q_button`;
-$49e8bb028fe0db46$export$a9c364a443888bb7 = `GNms6q_nobold`;
-$49e8bb028fe0db46$export$9ad721cf3b3debe0 = `GNms6q_primary`;
-$49e8bb028fe0db46$export$745c6f71a1e0e6f7 = `GNms6q_secondary`;
+$parcel$export($1f34391d91c81e28$exports, "button", function () { return $1f34391d91c81e28$export$2ba01fb71ed41cb6; }, function (v) { return $1f34391d91c81e28$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($1f34391d91c81e28$exports, "nobold", function () { return $1f34391d91c81e28$export$a9c364a443888bb7; }, function (v) { return $1f34391d91c81e28$export$a9c364a443888bb7 = v; });
+$parcel$export($1f34391d91c81e28$exports, "primary", function () { return $1f34391d91c81e28$export$9ad721cf3b3debe0; }, function (v) { return $1f34391d91c81e28$export$9ad721cf3b3debe0 = v; });
+$parcel$export($1f34391d91c81e28$exports, "secondary", function () { return $1f34391d91c81e28$export$745c6f71a1e0e6f7; }, function (v) { return $1f34391d91c81e28$export$745c6f71a1e0e6f7 = v; });
+var $1f34391d91c81e28$export$2ba01fb71ed41cb6;
+var $1f34391d91c81e28$export$a9c364a443888bb7;
+var $1f34391d91c81e28$export$9ad721cf3b3debe0;
+var $1f34391d91c81e28$export$745c6f71a1e0e6f7;
+$1f34391d91c81e28$export$2ba01fb71ed41cb6 = `DA0-4q_button`;
+$1f34391d91c81e28$export$a9c364a443888bb7 = `DA0-4q_nobold`;
+$1f34391d91c81e28$export$9ad721cf3b3debe0 = `DA0-4q_primary`;
+$1f34391d91c81e28$export$745c6f71a1e0e6f7 = `DA0-4q_secondary`;
 
 
 var $c14cd15d61961192$export$2e2bcd8739ae039 = ({ children: children, primary: primary, secondary: secondary, onClick: onClick, disabled: disabled, nobold: nobold })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $93940fbade29e7bb$export$2e2bcd8739ae039), {
         disabled: disabled,
         onClick: onClick,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($49e8bb028fe0db46$exports))).button, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($49e8bb028fe0db46$exports))).primary]: primary,
-            [(0, (/*@__PURE__*/$parcel$interopDefault($49e8bb028fe0db46$exports))).secondary]: secondary,
-            [(0, (/*@__PURE__*/$parcel$interopDefault($49e8bb028fe0db46$exports))).nobold]: nobold
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($1f34391d91c81e28$exports))).button, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($1f34391d91c81e28$exports))).primary]: primary,
+            [(0, (/*@__PURE__*/$parcel$interopDefault($1f34391d91c81e28$exports))).secondary]: secondary,
+            [(0, (/*@__PURE__*/$parcel$interopDefault($1f34391d91c81e28$exports))).nobold]: nobold
         }),
         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
             children: children
@@ -450,11 +450,11 @@ var $c14cd15d61961192$export$2e2bcd8739ae039 = ({ children: children, primary: p
 
 
 
-var $b20027ac318aaf2a$exports = {};
+var $d4088d76daf352a5$exports = {};
 
-$parcel$export($b20027ac318aaf2a$exports, "container", function () { return $b20027ac318aaf2a$export$34e0f9847d4c02dd; }, function (v) { return $b20027ac318aaf2a$export$34e0f9847d4c02dd = v; });
-var $b20027ac318aaf2a$export$34e0f9847d4c02dd;
-$b20027ac318aaf2a$export$34e0f9847d4c02dd = `mrTbNq_container`;
+$parcel$export($d4088d76daf352a5$exports, "container", function () { return $d4088d76daf352a5$export$34e0f9847d4c02dd; }, function (v) { return $d4088d76daf352a5$export$34e0f9847d4c02dd = v; });
+var $d4088d76daf352a5$export$34e0f9847d4c02dd;
+$d4088d76daf352a5$export$34e0f9847d4c02dd = `on7ZoW_container`;
 
 
 // eslint-disable-next-line no-extend-native
@@ -496,12 +496,12 @@ var $45370652b5163d21$export$2e2bcd8739ae039 = ({ children: children })=>{
     });
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("main", {
         ...handlers,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($b20027ac318aaf2a$exports))).container,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($d4088d76daf352a5$exports))).container,
         children: children
     });
 };
 const $45370652b5163d21$export$97295e60e7f371e1 = ({ children: children })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("main", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($b20027ac318aaf2a$exports))).container,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($d4088d76daf352a5$exports))).container,
         children: children
     });
 
@@ -515,31 +515,28 @@ const $45370652b5163d21$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 
 
 
-var $229990fe14e0462a$exports = {};
-$229990fe14e0462a$exports = new URL("kyc.31754f12.svg", "file:" + __filename).toString();
 
 
+var $d08dad8214e4e59f$exports = {};
 
-var $dffe65c49e282601$exports = {};
-
-$parcel$export($dffe65c49e282601$exports, "container", function () { return $dffe65c49e282601$export$34e0f9847d4c02dd; }, function (v) { return $dffe65c49e282601$export$34e0f9847d4c02dd = v; });
-$parcel$export($dffe65c49e282601$exports, "divider", function () { return $dffe65c49e282601$export$e8c9778bf415dd08; }, function (v) { return $dffe65c49e282601$export$e8c9778bf415dd08 = v; });
-$parcel$export($dffe65c49e282601$exports, "dropdown", function () { return $dffe65c49e282601$export$81207e5cc4186890; }, function (v) { return $dffe65c49e282601$export$81207e5cc4186890 = v; });
-$parcel$export($dffe65c49e282601$exports, "icon", function () { return $dffe65c49e282601$export$1ca1ec8b29a4ce27; }, function (v) { return $dffe65c49e282601$export$1ca1ec8b29a4ce27 = v; });
-$parcel$export($dffe65c49e282601$exports, "twitterSignIn", function () { return $dffe65c49e282601$export$6c489d6abe11ec5c; }, function (v) { return $dffe65c49e282601$export$6c489d6abe11ec5c = v; });
-$parcel$export($dffe65c49e282601$exports, "username", function () { return $dffe65c49e282601$export$5e1be761f603d585; }, function (v) { return $dffe65c49e282601$export$5e1be761f603d585 = v; });
-var $dffe65c49e282601$export$34e0f9847d4c02dd;
-var $dffe65c49e282601$export$e8c9778bf415dd08;
-var $dffe65c49e282601$export$81207e5cc4186890;
-var $dffe65c49e282601$export$1ca1ec8b29a4ce27;
-var $dffe65c49e282601$export$6c489d6abe11ec5c;
-var $dffe65c49e282601$export$5e1be761f603d585;
-$dffe65c49e282601$export$34e0f9847d4c02dd = `rzmFQq_container`;
-$dffe65c49e282601$export$e8c9778bf415dd08 = `rzmFQq_divider`;
-$dffe65c49e282601$export$81207e5cc4186890 = `rzmFQq_dropdown`;
-$dffe65c49e282601$export$1ca1ec8b29a4ce27 = `rzmFQq_icon`;
-$dffe65c49e282601$export$6c489d6abe11ec5c = `rzmFQq_twitterSignIn`;
-$dffe65c49e282601$export$5e1be761f603d585 = `rzmFQq_username`;
+$parcel$export($d08dad8214e4e59f$exports, "container", function () { return $d08dad8214e4e59f$export$34e0f9847d4c02dd; }, function (v) { return $d08dad8214e4e59f$export$34e0f9847d4c02dd = v; });
+$parcel$export($d08dad8214e4e59f$exports, "divider", function () { return $d08dad8214e4e59f$export$e8c9778bf415dd08; }, function (v) { return $d08dad8214e4e59f$export$e8c9778bf415dd08 = v; });
+$parcel$export($d08dad8214e4e59f$exports, "dropdown", function () { return $d08dad8214e4e59f$export$81207e5cc4186890; }, function (v) { return $d08dad8214e4e59f$export$81207e5cc4186890 = v; });
+$parcel$export($d08dad8214e4e59f$exports, "icon", function () { return $d08dad8214e4e59f$export$1ca1ec8b29a4ce27; }, function (v) { return $d08dad8214e4e59f$export$1ca1ec8b29a4ce27 = v; });
+$parcel$export($d08dad8214e4e59f$exports, "twitterSignIn", function () { return $d08dad8214e4e59f$export$6c489d6abe11ec5c; }, function (v) { return $d08dad8214e4e59f$export$6c489d6abe11ec5c = v; });
+$parcel$export($d08dad8214e4e59f$exports, "username", function () { return $d08dad8214e4e59f$export$5e1be761f603d585; }, function (v) { return $d08dad8214e4e59f$export$5e1be761f603d585 = v; });
+var $d08dad8214e4e59f$export$34e0f9847d4c02dd;
+var $d08dad8214e4e59f$export$e8c9778bf415dd08;
+var $d08dad8214e4e59f$export$81207e5cc4186890;
+var $d08dad8214e4e59f$export$1ca1ec8b29a4ce27;
+var $d08dad8214e4e59f$export$6c489d6abe11ec5c;
+var $d08dad8214e4e59f$export$5e1be761f603d585;
+$d08dad8214e4e59f$export$34e0f9847d4c02dd = `Ys9_ya_container`;
+$d08dad8214e4e59f$export$e8c9778bf415dd08 = `Ys9_ya_divider`;
+$d08dad8214e4e59f$export$81207e5cc4186890 = `Ys9_ya_dropdown`;
+$d08dad8214e4e59f$export$1ca1ec8b29a4ce27 = `Ys9_ya_icon`;
+$d08dad8214e4e59f$export$6c489d6abe11ec5c = `Ys9_ya_twitterSignIn`;
+$d08dad8214e4e59f$export$5e1be761f603d585 = `Ys9_ya_username`;
 
 
 const $e606c58af7c24cea$export$b1977eae5cbd7a49 = ({ userId: userId, updateJwt: updateJwt, closeModal: closeModal })=>{
@@ -601,7 +598,7 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
         children: [
             username ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$reactjsxruntime.Fragment), {
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).username,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).username,
                     children: [
                         "Settings (",
                         username,
@@ -609,14 +606,14 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                     ]
                 })
             }) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).twitterSignIn,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).twitterSignIn,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).username,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).username,
                     children: "Sign in"
                 })
             }),
             username && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialSettings))), {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).icon,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).icon,
                 sx: {
                     color: '#2b2b2b'
                 }
@@ -628,7 +625,7 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
             ref: (node)=>{
                 if (ref2) ref2(node);
             },
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).container,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).container,
             style: {
                 justifyContent: 'center',
                 border: 'none',
@@ -654,7 +651,7 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 //     ref2(node)
                 //   }
                 // }}
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).container,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).container,
                 onClick: (e)=>{
                     e.stopPropagation();
                     setShowDropdown(!showDropdown);
@@ -666,21 +663,21 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 children: content
             }),
             showXLogin && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).container),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).container),
                 style: {
                     width: 'calc(60% - 12px)'
                 },
                 onClick: handleTwitterLogin,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).username,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).username,
                         children: "Verify yourself with"
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialX))), {})
                 ]
             }),
             showKYCLogin && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).container),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).twitterSignIn, (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).container),
                 style: {
                     width: 'calc(60% - 12px)'
                 },
@@ -690,11 +687,11 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 },
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).username,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).username,
                         children: "Verify yourself with"
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                        src: (0, (/*@__PURE__*/$parcel$interopDefault($229990fe14e0462a$exports))),
+                        src: (0, {}),
                         style: {
                             height: 27,
                             marginBottom: 3
@@ -706,7 +703,7 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 style: {
                     display: showDropdown ? 'flex' : 'none'
                 },
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).dropdown,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).dropdown,
                 ref: (node)=>{
                     ref.current = node;
                     if (ref2) ref2(node);
@@ -728,7 +725,7 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         children: "My Questions/Answers"
                     }),
                     Boolean(testUsers.length) && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($dffe65c49e282601$exports))).divider,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($d08dad8214e4e59f$exports))).divider,
                         children: "Test Users"
                     }),
                     testUsers.map((i)=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
@@ -747,41 +744,41 @@ var $e606c58af7c24cea$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $19d94bf3bdd82ff6$exports = {};
+var $44e2cdb07e2fff35$exports = {};
 
-$parcel$export($19d94bf3bdd82ff6$exports, "address", function () { return $19d94bf3bdd82ff6$export$f7d3c097ceca6c15; }, function (v) { return $19d94bf3bdd82ff6$export$f7d3c097ceca6c15 = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "amount", function () { return $19d94bf3bdd82ff6$export$802cfe72001a1ee; }, function (v) { return $19d94bf3bdd82ff6$export$802cfe72001a1ee = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "body", function () { return $19d94bf3bdd82ff6$export$32180ef41b15b513; }, function (v) { return $19d94bf3bdd82ff6$export$32180ef41b15b513 = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "close", function () { return $19d94bf3bdd82ff6$export$8360e631d277ea4d; }, function (v) { return $19d94bf3bdd82ff6$export$8360e631d277ea4d = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "connectButton", function () { return $19d94bf3bdd82ff6$export$53a6eba4a816532e; }, function (v) { return $19d94bf3bdd82ff6$export$53a6eba4a816532e = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "hide", function () { return $19d94bf3bdd82ff6$export$fe8985bb6374093c; }, function (v) { return $19d94bf3bdd82ff6$export$fe8985bb6374093c = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "input", function () { return $19d94bf3bdd82ff6$export$b7e3ae3d7c15e42e; }, function (v) { return $19d94bf3bdd82ff6$export$b7e3ae3d7c15e42e = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "modalContent", function () { return $19d94bf3bdd82ff6$export$add244bda2f9423c; }, function (v) { return $19d94bf3bdd82ff6$export$add244bda2f9423c = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "row", function () { return $19d94bf3bdd82ff6$export$120ff0929b202a6d; }, function (v) { return $19d94bf3bdd82ff6$export$120ff0929b202a6d = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "search", function () { return $19d94bf3bdd82ff6$export$d76128d007d19019; }, function (v) { return $19d94bf3bdd82ff6$export$d76128d007d19019 = v; });
-$parcel$export($19d94bf3bdd82ff6$exports, "twitterSignIn", function () { return $19d94bf3bdd82ff6$export$6c489d6abe11ec5c; }, function (v) { return $19d94bf3bdd82ff6$export$6c489d6abe11ec5c = v; });
-var $19d94bf3bdd82ff6$export$f7d3c097ceca6c15;
-var $19d94bf3bdd82ff6$export$802cfe72001a1ee;
-var $19d94bf3bdd82ff6$export$32180ef41b15b513;
-var $19d94bf3bdd82ff6$export$8360e631d277ea4d;
-var $19d94bf3bdd82ff6$export$53a6eba4a816532e;
-var $19d94bf3bdd82ff6$export$fe8985bb6374093c;
-var $19d94bf3bdd82ff6$export$b7e3ae3d7c15e42e;
-var $19d94bf3bdd82ff6$export$add244bda2f9423c;
-var $19d94bf3bdd82ff6$export$120ff0929b202a6d;
-var $19d94bf3bdd82ff6$export$d76128d007d19019;
-var $19d94bf3bdd82ff6$export$6c489d6abe11ec5c;
-$19d94bf3bdd82ff6$export$f7d3c097ceca6c15 = `sLin6a_address`;
-$19d94bf3bdd82ff6$export$802cfe72001a1ee = `sLin6a_amount`;
-$19d94bf3bdd82ff6$export$32180ef41b15b513 = `sLin6a_body`;
-$19d94bf3bdd82ff6$export$8360e631d277ea4d = `sLin6a_close`;
-$19d94bf3bdd82ff6$export$53a6eba4a816532e = `sLin6a_connectButton`;
-$19d94bf3bdd82ff6$export$fe8985bb6374093c = `sLin6a_hide`;
-$19d94bf3bdd82ff6$export$b7e3ae3d7c15e42e = `sLin6a_input`;
-$19d94bf3bdd82ff6$export$add244bda2f9423c = `sLin6a_modalContent`;
-$19d94bf3bdd82ff6$export$120ff0929b202a6d = `sLin6a_row`;
-$19d94bf3bdd82ff6$export$d76128d007d19019 = `sLin6a_search`;
-$19d94bf3bdd82ff6$export$6c489d6abe11ec5c = `sLin6a_twitterSignIn`;
+$parcel$export($44e2cdb07e2fff35$exports, "address", function () { return $44e2cdb07e2fff35$export$f7d3c097ceca6c15; }, function (v) { return $44e2cdb07e2fff35$export$f7d3c097ceca6c15 = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "amount", function () { return $44e2cdb07e2fff35$export$802cfe72001a1ee; }, function (v) { return $44e2cdb07e2fff35$export$802cfe72001a1ee = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "body", function () { return $44e2cdb07e2fff35$export$32180ef41b15b513; }, function (v) { return $44e2cdb07e2fff35$export$32180ef41b15b513 = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "close", function () { return $44e2cdb07e2fff35$export$8360e631d277ea4d; }, function (v) { return $44e2cdb07e2fff35$export$8360e631d277ea4d = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "connectButton", function () { return $44e2cdb07e2fff35$export$53a6eba4a816532e; }, function (v) { return $44e2cdb07e2fff35$export$53a6eba4a816532e = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "hide", function () { return $44e2cdb07e2fff35$export$fe8985bb6374093c; }, function (v) { return $44e2cdb07e2fff35$export$fe8985bb6374093c = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "input", function () { return $44e2cdb07e2fff35$export$b7e3ae3d7c15e42e; }, function (v) { return $44e2cdb07e2fff35$export$b7e3ae3d7c15e42e = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "modalContent", function () { return $44e2cdb07e2fff35$export$add244bda2f9423c; }, function (v) { return $44e2cdb07e2fff35$export$add244bda2f9423c = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "row", function () { return $44e2cdb07e2fff35$export$120ff0929b202a6d; }, function (v) { return $44e2cdb07e2fff35$export$120ff0929b202a6d = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "search", function () { return $44e2cdb07e2fff35$export$d76128d007d19019; }, function (v) { return $44e2cdb07e2fff35$export$d76128d007d19019 = v; });
+$parcel$export($44e2cdb07e2fff35$exports, "twitterSignIn", function () { return $44e2cdb07e2fff35$export$6c489d6abe11ec5c; }, function (v) { return $44e2cdb07e2fff35$export$6c489d6abe11ec5c = v; });
+var $44e2cdb07e2fff35$export$f7d3c097ceca6c15;
+var $44e2cdb07e2fff35$export$802cfe72001a1ee;
+var $44e2cdb07e2fff35$export$32180ef41b15b513;
+var $44e2cdb07e2fff35$export$8360e631d277ea4d;
+var $44e2cdb07e2fff35$export$53a6eba4a816532e;
+var $44e2cdb07e2fff35$export$fe8985bb6374093c;
+var $44e2cdb07e2fff35$export$b7e3ae3d7c15e42e;
+var $44e2cdb07e2fff35$export$add244bda2f9423c;
+var $44e2cdb07e2fff35$export$120ff0929b202a6d;
+var $44e2cdb07e2fff35$export$d76128d007d19019;
+var $44e2cdb07e2fff35$export$6c489d6abe11ec5c;
+$44e2cdb07e2fff35$export$f7d3c097ceca6c15 = `MLyVHW_address`;
+$44e2cdb07e2fff35$export$802cfe72001a1ee = `MLyVHW_amount`;
+$44e2cdb07e2fff35$export$32180ef41b15b513 = `MLyVHW_body`;
+$44e2cdb07e2fff35$export$8360e631d277ea4d = `MLyVHW_close`;
+$44e2cdb07e2fff35$export$53a6eba4a816532e = `MLyVHW_connectButton`;
+$44e2cdb07e2fff35$export$fe8985bb6374093c = `MLyVHW_hide`;
+$44e2cdb07e2fff35$export$b7e3ae3d7c15e42e = `MLyVHW_input`;
+$44e2cdb07e2fff35$export$add244bda2f9423c = `MLyVHW_modalContent`;
+$44e2cdb07e2fff35$export$120ff0929b202a6d = `MLyVHW_row`;
+$44e2cdb07e2fff35$export$d76128d007d19019 = `MLyVHW_search`;
+$44e2cdb07e2fff35$export$6c489d6abe11ec5c = `MLyVHW_twitterSignIn`;
 
 
 const $2e10efe306716bc4$export$2515d253ab459c32 = 450;
@@ -914,7 +911,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                         style: {
                             height: screenName ? '100%' : 'auto'
                         },
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).body,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).body,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($a3U2C$reactmodal))), {
                                 isOpen: isWalletModalOpen,
@@ -923,7 +920,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                                         onClick: ()=>setIsWalletModalOpen(false),
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                 children: "Connect Wallet"
@@ -932,7 +929,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                         ]
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).modalContent,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).modalContent,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("b", {
                                                 children: "Do you have a wallet(metamask, trust, etc)?"
@@ -944,7 +941,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                 children: [
                                                     "If you don't have one, click ",
                                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
-                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).hide,
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).hide,
                                                         onClick: hide,
                                                         children: "hide to stop seeing this popup"
                                                     }),
@@ -955,7 +952,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                 ]
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).connectButton,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).connectButton,
                                                 onClick: connectToWallet,
                                                 children: "Connect"
                                             })
@@ -971,7 +968,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                                             onClick: ()=>setIsModalOpen(false),
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                     children: "Rewards"
@@ -980,25 +977,25 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                             ]
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).row,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).row,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("b", {
                                                     children: "your address: "
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).address,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).address,
                                                     children: address
                                                 })
                                             ]
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).row,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).row,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("b", {
                                                     children: "your payout: "
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("span", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).amount,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).amount,
                                                     children: [
                                                         payout,
                                                         " "
@@ -1014,7 +1011,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                                             onClick: closeRewardsConnectWalletModal,
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                     children: "Rewards"
@@ -1030,7 +1027,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                 width: '100%',
                                                 marginTop: 20
                                             },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).connectButton,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).connectButton,
                                             onClick: connectToWallet,
                                             children: "Connect"
                                         })
@@ -1044,7 +1041,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 shouldCloseOnOverlayClick: false,
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                 children: "Login or Sign up"
@@ -1071,7 +1068,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                         ]
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).modalContent,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).modalContent,
                                         id: "model-content",
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$reactoauthgoogle.GoogleLogin), {
@@ -1081,7 +1078,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                 prompt_parent_id: "tester-tester"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("button", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).twitterSignIn,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).twitterSignIn,
                                                 onClick: ()=>{
                                                     setAnswer(null);
                                                     handleTwitterLogin(`?sendEmails=${sendEmails}
@@ -1093,21 +1090,21 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                         style: {
                                                             flexGrow: 1
                                                         },
-                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).username,
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).username,
                                                         children: "Sign in with X"
                                                     })
                                                 ]
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).checkboxes__row,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).checkboxes__row,
                                                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).checkboxes__item,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).checkboxes__item,
                                                     children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("label", {
                                                         style: {
                                                             display: 'flex',
                                                             gap: 4
                                                         },
-                                                        className: `${(0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports)))['style-c']}`,
+                                                        className: `${(0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports)))['style-c']}`,
                                                         children: [
                                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
                                                                 style: {
@@ -1119,10 +1116,10 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                                                 onChange: (e)=>setSendEmails(e.target.checked)
                                                             }),
                                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).checkbox__checkmark
+                                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).checkbox__checkmark
                                                             }),
                                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).checkbox__body,
+                                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).checkbox__body,
                                                                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                                                     children: "We will send you one email a week about most answered polls of that week."
                                                                 })
@@ -1143,7 +1140,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                                         onClick: ()=>setShowKYCModal(false),
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                 children: "Verify your Identity"
@@ -1182,7 +1179,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                                         onClick: ()=>setAddImgModal(false),
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).close,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).close,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
                                                 children: "Add Art to the Question"
@@ -1199,13 +1196,13 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                                         },
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).input,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).input,
                                                 placeholder: "Place img url here...",
                                                 onChange: (e)=>setImgUrl(e.target.value),
                                                 value: imgUrl
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).search,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).search,
                                                 onClick: ()=>{
                                                     addImage(selectedMessage, imgUrl);
                                                 },
@@ -1228,7 +1225,7 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
         style: {
             height: screenName ? '100%' : 'auto'
         },
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($19d94bf3bdd82ff6$exports))).body,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($44e2cdb07e2fff35$exports))).body,
         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $45370652b5163d21$export$97295e60e7f371e1), {
             children: children
         })
@@ -1236,17 +1233,17 @@ var $d76f51c1c8726ad5$export$2e2bcd8739ae039 = ({ children: children, includeSwi
 };
 
 
-var $fb7ea20c6d795115$exports = {};
+var $10a5d21649ce6d17$exports = {};
 
-$parcel$export($fb7ea20c6d795115$exports, "buttons", function () { return $fb7ea20c6d795115$export$bbea856fdb3e3c5f; }, function (v) { return $fb7ea20c6d795115$export$bbea856fdb3e3c5f = v; });
-var $fb7ea20c6d795115$export$bbea856fdb3e3c5f;
-$fb7ea20c6d795115$export$bbea856fdb3e3c5f = `DHSumq_buttons`;
+$parcel$export($10a5d21649ce6d17$exports, "buttons", function () { return $10a5d21649ce6d17$export$bbea856fdb3e3c5f; }, function (v) { return $10a5d21649ce6d17$export$bbea856fdb3e3c5f = v; });
+var $10a5d21649ce6d17$export$bbea856fdb3e3c5f;
+$10a5d21649ce6d17$export$bbea856fdb3e3c5f = `_9jMaeW_buttons`;
 
 
 var $88054dfbc457b15b$export$2e2bcd8739ae039 = ({ disableButtons: disableButtons, select: select, combine: combine })=>{
     const { setIsLoginModalOpen: setIsLoginModalOpen } = (0, $a3U2C$react.useContext)((0, $d76f51c1c8726ad5$export$32c650b79baf5fee));
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($fb7ea20c6d795115$exports))).buttons,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($10a5d21649ce6d17$exports))).buttons,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $c14cd15d61961192$export$2e2bcd8739ae039), {
                 nobold: true,
@@ -1306,15 +1303,15 @@ var $88054dfbc457b15b$export$2e2bcd8739ae039 = ({ disableButtons: disableButtons
 
 
 
-var $74eeaf503649462f$exports = {};
+var $ac6e68ab048b83d1$exports = {};
 
-$parcel$export($74eeaf503649462f$exports, "buttons", function () { return $74eeaf503649462f$export$bbea856fdb3e3c5f; }, function (v) { return $74eeaf503649462f$export$bbea856fdb3e3c5f = v; });
-var $74eeaf503649462f$export$bbea856fdb3e3c5f;
-$74eeaf503649462f$export$bbea856fdb3e3c5f = `Ou9J5W_buttons`;
+$parcel$export($ac6e68ab048b83d1$exports, "buttons", function () { return $ac6e68ab048b83d1$export$bbea856fdb3e3c5f; }, function (v) { return $ac6e68ab048b83d1$export$bbea856fdb3e3c5f = v; });
+var $ac6e68ab048b83d1$export$bbea856fdb3e3c5f;
+$ac6e68ab048b83d1$export$bbea856fdb3e3c5f = `N5rOjG_buttons`;
 
 
 var $4377654e81925ec1$export$2e2bcd8739ae039 = ({ readyToSave: readyToSave, save: save, cancel: cancel })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($74eeaf503649462f$exports))).buttons,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($ac6e68ab048b83d1$exports))).buttons,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $c14cd15d61961192$export$2e2bcd8739ae039), {
                 nobold: true,
@@ -1340,16 +1337,16 @@ var $4377654e81925ec1$export$2e2bcd8739ae039 = ({ readyToSave: readyToSave, save
 var $503cd80abace9cc6$export$2e2bcd8739ae039 = ({ x: x })=>x.toLocaleString();
 
 
-var $43c96bc5a4cd1a71$exports = {};
+var $de214488df22128b$exports = {};
 
-$parcel$export($43c96bc5a4cd1a71$exports, "userCount", function () { return $43c96bc5a4cd1a71$export$72bd514aa1799057; }, function (v) { return $43c96bc5a4cd1a71$export$72bd514aa1799057 = v; });
-var $43c96bc5a4cd1a71$export$72bd514aa1799057;
-$43c96bc5a4cd1a71$export$72bd514aa1799057 = `WZcb5G_userCount`;
+$parcel$export($de214488df22128b$exports, "userCount", function () { return $de214488df22128b$export$72bd514aa1799057; }, function (v) { return $de214488df22128b$export$72bd514aa1799057 = v; });
+var $de214488df22128b$export$72bd514aa1799057;
+$de214488df22128b$export$72bd514aa1799057 = `W-vEEq_userCount`;
 
 
 var $6c8dc56c60aa6ae8$export$2e2bcd8739ae039 = ({ userCount: userCount, style: style })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($43c96bc5a4cd1a71$exports))).userCount,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($de214488df22128b$exports))).userCount,
         children: userCount === null ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$reactjsxruntime.Fragment), {
             children: "select new group parts"
         }) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $a3U2C$reactjsxruntime.Fragment), {
@@ -1367,17 +1364,17 @@ var $6c8dc56c60aa6ae8$export$2e2bcd8739ae039 = ({ userCount: userCount, style: s
 
 
 
-var $3cd19856468a5f47$exports = {};
+var $86df86061c594ba8$exports = {};
 
-$parcel$export($3cd19856468a5f47$exports, "icon", function () { return $3cd19856468a5f47$export$1ca1ec8b29a4ce27; }, function (v) { return $3cd19856468a5f47$export$1ca1ec8b29a4ce27 = v; });
-var $3cd19856468a5f47$export$1ca1ec8b29a4ce27;
-$3cd19856468a5f47$export$1ca1ec8b29a4ce27 = `wcFNia_icon`;
+$parcel$export($86df86061c594ba8$exports, "icon", function () { return $86df86061c594ba8$export$1ca1ec8b29a4ce27; }, function (v) { return $86df86061c594ba8$export$1ca1ec8b29a4ce27 = v; });
+var $86df86061c594ba8$export$1ca1ec8b29a4ce27;
+$86df86061c594ba8$export$1ca1ec8b29a4ce27 = `Qjmz_q_icon`;
 
 
 var $06913f3ec322bc41$export$2e2bcd8739ae039 = ({ color: color = '#bebebe', deselect: deselect })=>{
     const [icon, setIcon] = (0, $a3U2C$react.useState)((0, $a3U2C$fortawesomefreesolidsvgicons.faCheckCircle));
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$fortawesomereactfontawesome.FontAwesomeIcon), {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($3cd19856468a5f47$exports))).icon,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($86df86061c594ba8$exports))).icon,
         size: "2x",
         color: color,
         icon: icon,
@@ -1391,39 +1388,39 @@ var $06913f3ec322bc41$export$2e2bcd8739ae039 = ({ color: color = '#bebebe', dese
 
 
 
-var $5a8b32248a2699ce$exports = {};
+var $44ab3e4f604925eb$exports = {};
 
-$parcel$export($5a8b32248a2699ce$exports, "title", function () { return $5a8b32248a2699ce$export$fb184b623420d9be; }, function (v) { return $5a8b32248a2699ce$export$fb184b623420d9be = v; });
-var $5a8b32248a2699ce$export$fb184b623420d9be;
-$5a8b32248a2699ce$export$fb184b623420d9be = `_4XHpq_title`;
+$parcel$export($44ab3e4f604925eb$exports, "title", function () { return $44ab3e4f604925eb$export$fb184b623420d9be; }, function (v) { return $44ab3e4f604925eb$export$fb184b623420d9be = v; });
+var $44ab3e4f604925eb$export$fb184b623420d9be;
+$44ab3e4f604925eb$export$fb184b623420d9be = `C2iC6q_title`;
 
 
 var $61e5751f6ef211ae$export$2e2bcd8739ae039 = ({ children: children, style: style })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($5a8b32248a2699ce$exports))).title,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($44ab3e4f604925eb$exports))).title,
         children: children
     });
 
 
-var $026b8b0f3a0a9b25$exports = {};
+var $c34a39ab68b030df$exports = {};
 
-$parcel$export($026b8b0f3a0a9b25$exports, "card", function () { return $026b8b0f3a0a9b25$export$aa3e815946b80764; }, function (v) { return $026b8b0f3a0a9b25$export$aa3e815946b80764 = v; });
-$parcel$export($026b8b0f3a0a9b25$exports, "leftSideContainer", function () { return $026b8b0f3a0a9b25$export$59b1d651044d302; }, function (v) { return $026b8b0f3a0a9b25$export$59b1d651044d302 = v; });
-var $026b8b0f3a0a9b25$export$aa3e815946b80764;
-var $026b8b0f3a0a9b25$export$59b1d651044d302;
-$026b8b0f3a0a9b25$export$aa3e815946b80764 = `sslnla_card`;
-$026b8b0f3a0a9b25$export$59b1d651044d302 = `sslnla_leftSideContainer`;
+$parcel$export($c34a39ab68b030df$exports, "card", function () { return $c34a39ab68b030df$export$aa3e815946b80764; }, function (v) { return $c34a39ab68b030df$export$aa3e815946b80764 = v; });
+$parcel$export($c34a39ab68b030df$exports, "leftSideContainer", function () { return $c34a39ab68b030df$export$59b1d651044d302; }, function (v) { return $c34a39ab68b030df$export$59b1d651044d302 = v; });
+var $c34a39ab68b030df$export$aa3e815946b80764;
+var $c34a39ab68b030df$export$59b1d651044d302;
+$c34a39ab68b030df$export$aa3e815946b80764 = `FnrTLq_card`;
+$c34a39ab68b030df$export$59b1d651044d302 = `FnrTLq_leftSideContainer`;
 
 
 var $d390534abfbc024e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ disableButtons: disableButtons, name: name, userCount: userCount, selected: selected, color: color, save: save, toggleSelection: toggleSelection, combine: combine, readyToSave: readyToSave, cancel: cancel }, ref)=>{
     const [newGroupTitle, setNewGroupTitle] = (0, $a3U2C$react.useState)('');
     console.log('disableButtons: ', disableButtons);
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("article", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($026b8b0f3a0a9b25$exports))).card,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($c34a39ab68b030df$exports))).card,
         ref: ref,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($026b8b0f3a0a9b25$exports))).leftSideContainer,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($c34a39ab68b030df$exports))).leftSideContainer,
                 children: [
                     name ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $61e5751f6ef211ae$export$2e2bcd8739ae039), {
                         style: {
@@ -1471,18 +1468,18 @@ var $d390534abfbc024e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $adff6a8e52879ff8$exports = {};
+var $cbe853f9a020c18a$exports = {};
 
-$parcel$export($adff6a8e52879ff8$exports, "title", function () { return $adff6a8e52879ff8$export$fb184b623420d9be; }, function (v) { return $adff6a8e52879ff8$export$fb184b623420d9be = v; });
-var $adff6a8e52879ff8$export$fb184b623420d9be;
-$adff6a8e52879ff8$export$fb184b623420d9be = `WM5FBW_title`;
+$parcel$export($cbe853f9a020c18a$exports, "title", function () { return $cbe853f9a020c18a$export$fb184b623420d9be; }, function (v) { return $cbe853f9a020c18a$export$fb184b623420d9be = v; });
+var $cbe853f9a020c18a$export$fb184b623420d9be;
+$cbe853f9a020c18a$export$fb184b623420d9be = `CNVIPq_title`;
 
 
 var $5028331f39524b26$export$2e2bcd8739ae039 = ({ children: children, style: style, id: id, h1: h1 = false })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
         h1: h1,
         id: id,
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($adff6a8e52879ff8$exports))).title,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($cbe853f9a020c18a$exports))).title,
         children: children
     });
 
@@ -1496,17 +1493,17 @@ var $5028331f39524b26$export$2e2bcd8739ae039 = ({ children: children, style: sty
 
 
 
-var $16d792313f8baa97$exports = {};
+var $7c627babc9bebc87$exports = {};
 
-$parcel$export($16d792313f8baa97$exports, "text", function () { return $16d792313f8baa97$export$6f093cfa640b7166; }, function (v) { return $16d792313f8baa97$export$6f093cfa640b7166 = v; });
-var $16d792313f8baa97$export$6f093cfa640b7166;
-$16d792313f8baa97$export$6f093cfa640b7166 = `D2SXEW_text`;
+$parcel$export($7c627babc9bebc87$exports, "text", function () { return $7c627babc9bebc87$export$6f093cfa640b7166; }, function (v) { return $7c627babc9bebc87$export$6f093cfa640b7166 = v; });
+var $7c627babc9bebc87$export$6f093cfa640b7166;
+$7c627babc9bebc87$export$6f093cfa640b7166 = `hhUNra_text`;
 
 
 var $efdbd8db5bd34168$export$2e2bcd8739ae039 = ({ children: children, style: style, className: className, onClick: onClick })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
         onClick: onClick,
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($16d792313f8baa97$exports))).text),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($7c627babc9bebc87$exports))).text),
         children: children
     });
 
@@ -1514,32 +1511,32 @@ var $efdbd8db5bd34168$export$2e2bcd8739ae039 = ({ children: children, style: sty
 
 
 
-var $153486619d98f67a$exports = {};
+var $db289e57682d109b$exports = {};
 
-$parcel$export($153486619d98f67a$exports, "bar", function () { return $153486619d98f67a$export$d927737047eb3867; }, function (v) { return $153486619d98f67a$export$d927737047eb3867 = v; });
-$parcel$export($153486619d98f67a$exports, "bars", function () { return $153486619d98f67a$export$60912654947077e3; }, function (v) { return $153486619d98f67a$export$60912654947077e3 = v; });
-$parcel$export($153486619d98f67a$exports, "noBar", function () { return $153486619d98f67a$export$e2b71f7b582462e; }, function (v) { return $153486619d98f67a$export$e2b71f7b582462e = v; });
-$parcel$export($153486619d98f67a$exports, "yesBar", function () { return $153486619d98f67a$export$6a31b2d83bf3b7ff; }, function (v) { return $153486619d98f67a$export$6a31b2d83bf3b7ff = v; });
-var $153486619d98f67a$export$d927737047eb3867;
-var $153486619d98f67a$export$60912654947077e3;
-var $153486619d98f67a$export$e2b71f7b582462e;
-var $153486619d98f67a$export$6a31b2d83bf3b7ff;
-$153486619d98f67a$export$d927737047eb3867 = `pVQoxG_bar`;
-$153486619d98f67a$export$60912654947077e3 = `pVQoxG_bars`;
-$153486619d98f67a$export$e2b71f7b582462e = `pVQoxG_noBar`;
-$153486619d98f67a$export$6a31b2d83bf3b7ff = `pVQoxG_yesBar`;
+$parcel$export($db289e57682d109b$exports, "bar", function () { return $db289e57682d109b$export$d927737047eb3867; }, function (v) { return $db289e57682d109b$export$d927737047eb3867 = v; });
+$parcel$export($db289e57682d109b$exports, "bars", function () { return $db289e57682d109b$export$60912654947077e3; }, function (v) { return $db289e57682d109b$export$60912654947077e3 = v; });
+$parcel$export($db289e57682d109b$exports, "noBar", function () { return $db289e57682d109b$export$e2b71f7b582462e; }, function (v) { return $db289e57682d109b$export$e2b71f7b582462e = v; });
+$parcel$export($db289e57682d109b$exports, "yesBar", function () { return $db289e57682d109b$export$6a31b2d83bf3b7ff; }, function (v) { return $db289e57682d109b$export$6a31b2d83bf3b7ff = v; });
+var $db289e57682d109b$export$d927737047eb3867;
+var $db289e57682d109b$export$60912654947077e3;
+var $db289e57682d109b$export$e2b71f7b582462e;
+var $db289e57682d109b$export$6a31b2d83bf3b7ff;
+$db289e57682d109b$export$d927737047eb3867 = `jz4HOq_bar`;
+$db289e57682d109b$export$60912654947077e3 = `jz4HOq_bars`;
+$db289e57682d109b$export$e2b71f7b582462e = `jz4HOq_noBar`;
+$db289e57682d109b$export$6a31b2d83bf3b7ff = `jz4HOq_yesBar`;
 
 
 var $497ae48649beb625$export$2e2bcd8739ae039 = ({ yes: yes, no: no, onHover: onHover, createNewGroup: createNewGroup, style: style, className: className })=>{
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($153486619d98f67a$exports))).bars, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($db289e57682d109b$exports))).bars, className),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                 style: {
                     width: `${yes}%`
                 },
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($153486619d98f67a$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($153486619d98f67a$exports))).yesBar),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($db289e57682d109b$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($db289e57682d109b$exports))).yesBar),
                 onMouseEnter: ()=>onHover('yes'),
                 onMouseLeave: ()=>onHover(),
                 onClick: ()=>createNewGroup('yes')
@@ -1548,7 +1545,7 @@ var $497ae48649beb625$export$2e2bcd8739ae039 = ({ yes: yes, no: no, onHover: onH
                 style: {
                     width: `${no}%`
                 },
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($153486619d98f67a$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($153486619d98f67a$exports))).noBar),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($db289e57682d109b$exports))).bar, (0, (/*@__PURE__*/$parcel$interopDefault($db289e57682d109b$exports))).noBar),
                 onMouseEnter: ()=>onHover('no'),
                 onMouseLeave: ()=>onHover(),
                 onClick: ()=>createNewGroup('no')
@@ -1558,29 +1555,29 @@ var $497ae48649beb625$export$2e2bcd8739ae039 = ({ yes: yes, no: no, onHover: onH
 };
 
 
-var $789c2ad0f68d589e$exports = {};
+var $24d7a93e00e1da5d$exports = {};
 
-$parcel$export($789c2ad0f68d589e$exports, "arrowDown", function () { return $789c2ad0f68d589e$export$f61feb65ec56823b; }, function (v) { return $789c2ad0f68d589e$export$f61feb65ec56823b = v; });
-$parcel$export($789c2ad0f68d589e$exports, "img", function () { return $789c2ad0f68d589e$export$463b44d9bf3628be; }, function (v) { return $789c2ad0f68d589e$export$463b44d9bf3628be = v; });
-$parcel$export($789c2ad0f68d589e$exports, "imgWithArrow", function () { return $789c2ad0f68d589e$export$e4e79e5008270fc7; }, function (v) { return $789c2ad0f68d589e$export$e4e79e5008270fc7 = v; });
-$parcel$export($789c2ad0f68d589e$exports, "stats", function () { return $789c2ad0f68d589e$export$7804429c45dff272; }, function (v) { return $789c2ad0f68d589e$export$7804429c45dff272 = v; });
-$parcel$export($789c2ad0f68d589e$exports, "tester", function () { return $789c2ad0f68d589e$export$6b5c497e0b5239d7; }, function (v) { return $789c2ad0f68d589e$export$6b5c497e0b5239d7 = v; });
-$parcel$export($789c2ad0f68d589e$exports, "text", function () { return $789c2ad0f68d589e$export$6f093cfa640b7166; }, function (v) { return $789c2ad0f68d589e$export$6f093cfa640b7166 = v; });
-$parcel$export($789c2ad0f68d589e$exports, "textContainer", function () { return $789c2ad0f68d589e$export$2cedfd664bb3bd01; }, function (v) { return $789c2ad0f68d589e$export$2cedfd664bb3bd01 = v; });
-var $789c2ad0f68d589e$export$f61feb65ec56823b;
-var $789c2ad0f68d589e$export$463b44d9bf3628be;
-var $789c2ad0f68d589e$export$e4e79e5008270fc7;
-var $789c2ad0f68d589e$export$7804429c45dff272;
-var $789c2ad0f68d589e$export$6b5c497e0b5239d7;
-var $789c2ad0f68d589e$export$6f093cfa640b7166;
-var $789c2ad0f68d589e$export$2cedfd664bb3bd01;
-$789c2ad0f68d589e$export$f61feb65ec56823b = `hWz-3G_arrowDown`;
-$789c2ad0f68d589e$export$463b44d9bf3628be = `hWz-3G_img`;
-$789c2ad0f68d589e$export$e4e79e5008270fc7 = `hWz-3G_imgWithArrow`;
-$789c2ad0f68d589e$export$7804429c45dff272 = `hWz-3G_stats`;
-$789c2ad0f68d589e$export$6b5c497e0b5239d7 = `hWz-3G_tester`;
-$789c2ad0f68d589e$export$6f093cfa640b7166 = `hWz-3G_text`;
-$789c2ad0f68d589e$export$2cedfd664bb3bd01 = `hWz-3G_textContainer`;
+$parcel$export($24d7a93e00e1da5d$exports, "arrowDown", function () { return $24d7a93e00e1da5d$export$f61feb65ec56823b; }, function (v) { return $24d7a93e00e1da5d$export$f61feb65ec56823b = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "img", function () { return $24d7a93e00e1da5d$export$463b44d9bf3628be; }, function (v) { return $24d7a93e00e1da5d$export$463b44d9bf3628be = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "imgWithArrow", function () { return $24d7a93e00e1da5d$export$e4e79e5008270fc7; }, function (v) { return $24d7a93e00e1da5d$export$e4e79e5008270fc7 = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "stats", function () { return $24d7a93e00e1da5d$export$7804429c45dff272; }, function (v) { return $24d7a93e00e1da5d$export$7804429c45dff272 = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "tester", function () { return $24d7a93e00e1da5d$export$6b5c497e0b5239d7; }, function (v) { return $24d7a93e00e1da5d$export$6b5c497e0b5239d7 = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "text", function () { return $24d7a93e00e1da5d$export$6f093cfa640b7166; }, function (v) { return $24d7a93e00e1da5d$export$6f093cfa640b7166 = v; });
+$parcel$export($24d7a93e00e1da5d$exports, "textContainer", function () { return $24d7a93e00e1da5d$export$2cedfd664bb3bd01; }, function (v) { return $24d7a93e00e1da5d$export$2cedfd664bb3bd01 = v; });
+var $24d7a93e00e1da5d$export$f61feb65ec56823b;
+var $24d7a93e00e1da5d$export$463b44d9bf3628be;
+var $24d7a93e00e1da5d$export$e4e79e5008270fc7;
+var $24d7a93e00e1da5d$export$7804429c45dff272;
+var $24d7a93e00e1da5d$export$6b5c497e0b5239d7;
+var $24d7a93e00e1da5d$export$6f093cfa640b7166;
+var $24d7a93e00e1da5d$export$2cedfd664bb3bd01;
+$24d7a93e00e1da5d$export$f61feb65ec56823b = `rXrVna_arrowDown`;
+$24d7a93e00e1da5d$export$463b44d9bf3628be = `rXrVna_img`;
+$24d7a93e00e1da5d$export$e4e79e5008270fc7 = `rXrVna_imgWithArrow`;
+$24d7a93e00e1da5d$export$7804429c45dff272 = `rXrVna_stats`;
+$24d7a93e00e1da5d$export$6b5c497e0b5239d7 = `rXrVna_tester`;
+$24d7a93e00e1da5d$export$6f093cfa640b7166 = `rXrVna_text`;
+$24d7a93e00e1da5d$export$2cedfd664bb3bd01 = `rXrVna_textContainer`;
 
 
 const $8604c6d324487e92$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
@@ -1599,15 +1596,15 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
         } : {
             marginTop: 20
         },
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).stats, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).stats, className),
         children: [
             userReplyCount !== 0 && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $a3U2C$reactjsxruntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).textContainer,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).textContainer,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $efdbd8db5bd34168$export$2e2bcd8739ae039), {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).text,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).text,
                                 style: {
                                     width: `${yesPercentage}%`,
                                     position: 'relative',
@@ -1617,46 +1614,46 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 },
                                 children: [
                                     me?.answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).imgWithArrow,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).img,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).img,
                                                 src: me.pictureUrl,
                                                 alt: "profile picture"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).tester,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).tester,
                                                 children: "Yes"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).arrowDown
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).arrowDown
                                             })
                                         ]
                                     }),
                                     he?.answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).imgWithArrow,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).imgWithArrow,
                                         style: me?.answer ? {
                                             left: '50%'
                                         } : {},
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).img,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).img,
                                                 src: he.pictureUrl,
                                                 alt: "profile picture"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).tester,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).tester,
                                                 children: "Yes"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).arrowDown
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).arrowDown
                                             })
                                         ]
                                     })
                                 ]
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $efdbd8db5bd34168$export$2e2bcd8739ae039), {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).text,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).text,
                                 style: {
                                     width: `${noPercentage}%`,
                                     position: 'relative',
@@ -1666,39 +1663,39 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                                 },
                                 children: [
                                     me?.answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).imgWithArrow,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).imgWithArrow,
                                         style: he?.answer ? {
                                             right: '50%'
                                         } : {},
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).img,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).img,
                                                 src: me.pictureUrl,
                                                 alt: "profile picture"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).tester,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).tester,
                                                 children: "No"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).arrowDown
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).arrowDown
                                             })
                                         ]
                                     }),
                                     he?.answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).imgWithArrow,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).imgWithArrow,
                                         children: [
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).img,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).img,
                                                 src: he.pictureUrl,
                                                 alt: "profile picture"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).tester,
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).tester,
                                                 children: "No"
                                             }),
                                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).arrowDown
+                                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).arrowDown
                                             })
                                         ]
                                     })
@@ -1713,11 +1710,11 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                         createNewGroup: createNewGroup
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).textContainer,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).textContainer,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $efdbd8db5bd34168$export$2e2bcd8739ae039), {
                                 onClick: ()=>createNewGroup('yes'),
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).text,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).text,
                                 style: {
                                     cursor: 'pointer',
                                     width: `${yesPercentage}%`,
@@ -1730,7 +1727,7 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $efdbd8db5bd34168$export$2e2bcd8739ae039), {
                                 onClick: ()=>createNewGroup('no'),
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($789c2ad0f68d589e$exports))).text,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($24d7a93e00e1da5d$exports))).text,
                                 style: {
                                     cursor: 'pointer',
                                     width: `${noPercentage}%`,
@@ -1768,29 +1765,29 @@ var $8604c6d324487e92$export$2e2bcd8739ae039 = ({ yes: yes, no: no, he: he, me: 
 
 
 
-var $44e1a5ef1e6e6817$exports = {};
+var $637923ba8df4eba3$exports = {};
 
-$parcel$export($44e1a5ef1e6e6817$exports, "button", function () { return $44e1a5ef1e6e6817$export$2ba01fb71ed41cb6; }, function (v) { return $44e1a5ef1e6e6817$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($44e1a5ef1e6e6817$exports, "no", function () { return $44e1a5ef1e6e6817$export$401451a107dc42ce; }, function (v) { return $44e1a5ef1e6e6817$export$401451a107dc42ce = v; });
-$parcel$export($44e1a5ef1e6e6817$exports, "noHover", function () { return $44e1a5ef1e6e6817$export$628d97df3a6f96e7; }, function (v) { return $44e1a5ef1e6e6817$export$628d97df3a6f96e7 = v; });
-$parcel$export($44e1a5ef1e6e6817$exports, "yes", function () { return $44e1a5ef1e6e6817$export$7a668e70ea2210d9; }, function (v) { return $44e1a5ef1e6e6817$export$7a668e70ea2210d9 = v; });
-var $44e1a5ef1e6e6817$export$2ba01fb71ed41cb6;
-var $44e1a5ef1e6e6817$export$401451a107dc42ce;
-var $44e1a5ef1e6e6817$export$628d97df3a6f96e7;
-var $44e1a5ef1e6e6817$export$7a668e70ea2210d9;
-$44e1a5ef1e6e6817$export$2ba01fb71ed41cb6 = `Orh0Eq_button`;
-$44e1a5ef1e6e6817$export$401451a107dc42ce = `Orh0Eq_no`;
-$44e1a5ef1e6e6817$export$628d97df3a6f96e7 = `Orh0Eq_noHover`;
-$44e1a5ef1e6e6817$export$7a668e70ea2210d9 = `Orh0Eq_yes`;
+$parcel$export($637923ba8df4eba3$exports, "button", function () { return $637923ba8df4eba3$export$2ba01fb71ed41cb6; }, function (v) { return $637923ba8df4eba3$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($637923ba8df4eba3$exports, "no", function () { return $637923ba8df4eba3$export$401451a107dc42ce; }, function (v) { return $637923ba8df4eba3$export$401451a107dc42ce = v; });
+$parcel$export($637923ba8df4eba3$exports, "noHover", function () { return $637923ba8df4eba3$export$628d97df3a6f96e7; }, function (v) { return $637923ba8df4eba3$export$628d97df3a6f96e7 = v; });
+$parcel$export($637923ba8df4eba3$exports, "yes", function () { return $637923ba8df4eba3$export$7a668e70ea2210d9; }, function (v) { return $637923ba8df4eba3$export$7a668e70ea2210d9 = v; });
+var $637923ba8df4eba3$export$2ba01fb71ed41cb6;
+var $637923ba8df4eba3$export$401451a107dc42ce;
+var $637923ba8df4eba3$export$628d97df3a6f96e7;
+var $637923ba8df4eba3$export$7a668e70ea2210d9;
+$637923ba8df4eba3$export$2ba01fb71ed41cb6 = `lNhtDW_button`;
+$637923ba8df4eba3$export$401451a107dc42ce = `lNhtDW_no`;
+$637923ba8df4eba3$export$628d97df3a6f96e7 = `lNhtDW_noHover`;
+$637923ba8df4eba3$export$7a668e70ea2210d9 = `lNhtDW_yes`;
 
 
 var $3ad0eff00f3cd0ef$export$2e2bcd8739ae039 = ({ answer: answer, respond: respond, disabled: disabled, style: style, noHover: noHover })=>{
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
         disabled: disabled,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($44e1a5ef1e6e6817$exports))).button, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($44e1a5ef1e6e6817$exports))).yes]: answer.toLowerCase() === 'yes',
-            [(0, (/*@__PURE__*/$parcel$interopDefault($44e1a5ef1e6e6817$exports))).no]: answer.toLowerCase() === 'no',
-            [(0, (/*@__PURE__*/$parcel$interopDefault($44e1a5ef1e6e6817$exports))).noHover]: noHover
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($637923ba8df4eba3$exports))).button, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($637923ba8df4eba3$exports))).yes]: answer.toLowerCase() === 'yes',
+            [(0, (/*@__PURE__*/$parcel$interopDefault($637923ba8df4eba3$exports))).no]: answer.toLowerCase() === 'no',
+            [(0, (/*@__PURE__*/$parcel$interopDefault($637923ba8df4eba3$exports))).noHover]: noHover
         }),
         onClick: respond,
         style: style,
@@ -1801,17 +1798,17 @@ var $3ad0eff00f3cd0ef$export$2e2bcd8739ae039 = ({ answer: answer, respond: respo
 };
 
 
-var $2f3029499b1fa85d$exports = {};
+var $73ca126f07658a15$exports = {};
 
-$parcel$export($2f3029499b1fa85d$exports, "answerButtons", function () { return $2f3029499b1fa85d$export$33b0e16035b753e; }, function (v) { return $2f3029499b1fa85d$export$33b0e16035b753e = v; });
-var $2f3029499b1fa85d$export$33b0e16035b753e;
-$2f3029499b1fa85d$export$33b0e16035b753e = `b4MS9q_answerButtons`;
+$parcel$export($73ca126f07658a15$exports, "answerButtons", function () { return $73ca126f07658a15$export$33b0e16035b753e; }, function (v) { return $73ca126f07658a15$export$33b0e16035b753e = v; });
+var $73ca126f07658a15$export$33b0e16035b753e;
+$73ca126f07658a15$export$33b0e16035b753e = `bvGz5q_answerButtons`;
 
 
 var $1ad5fe3037277d9b$export$2e2bcd8739ae039 = ({ respond: respond, style: style, loading: loading })=>{
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($2f3029499b1fa85d$exports))).answerButtons,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($73ca126f07658a15$exports))).answerButtons,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $3ad0eff00f3cd0ef$export$2e2bcd8739ae039), {
                 disabled: loading || !respond,
@@ -1832,56 +1829,56 @@ var $1ad5fe3037277d9b$export$2e2bcd8739ae039 = ({ respond: respond, style: style
 /* eslint-disable react/self-closing-comp */ /* eslint-disable jsx-quotes */ 
 
 
-var $7f657c12a31491ae$exports = {};
+var $3376c45f4891715c$exports = {};
 
-$parcel$export($7f657c12a31491ae$exports, "badge", function () { return $7f657c12a31491ae$export$4aebd143f31d0c0d; }, function (v) { return $7f657c12a31491ae$export$4aebd143f31d0c0d = v; });
-$parcel$export($7f657c12a31491ae$exports, "button", function () { return $7f657c12a31491ae$export$2ba01fb71ed41cb6; }, function (v) { return $7f657c12a31491ae$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($7f657c12a31491ae$exports, "card", function () { return $7f657c12a31491ae$export$aa3e815946b80764; }, function (v) { return $7f657c12a31491ae$export$aa3e815946b80764 = v; });
-$parcel$export($7f657c12a31491ae$exports, "commentText", function () { return $7f657c12a31491ae$export$6b087f52b8619213; }, function (v) { return $7f657c12a31491ae$export$6b087f52b8619213 = v; });
-$parcel$export($7f657c12a31491ae$exports, "expand", function () { return $7f657c12a31491ae$export$9f77e0932fb78f72; }, function (v) { return $7f657c12a31491ae$export$9f77e0932fb78f72 = v; });
-$parcel$export($7f657c12a31491ae$exports, "hint", function () { return $7f657c12a31491ae$export$464c821cd4347539; }, function (v) { return $7f657c12a31491ae$export$464c821cd4347539 = v; });
-$parcel$export($7f657c12a31491ae$exports, "icon", function () { return $7f657c12a31491ae$export$1ca1ec8b29a4ce27; }, function (v) { return $7f657c12a31491ae$export$1ca1ec8b29a4ce27 = v; });
-$parcel$export($7f657c12a31491ae$exports, "iconButton", function () { return $7f657c12a31491ae$export$60bb6c1f29b8a8cc; }, function (v) { return $7f657c12a31491ae$export$60bb6c1f29b8a8cc = v; });
-$parcel$export($7f657c12a31491ae$exports, "innerCard", function () { return $7f657c12a31491ae$export$40f3ad8fcd4c93c2; }, function (v) { return $7f657c12a31491ae$export$40f3ad8fcd4c93c2 = v; });
-$parcel$export($7f657c12a31491ae$exports, "innerCardWithImage", function () { return $7f657c12a31491ae$export$275ee2193c25f37a; }, function (v) { return $7f657c12a31491ae$export$275ee2193c25f37a = v; });
-$parcel$export($7f657c12a31491ae$exports, "previewImg", function () { return $7f657c12a31491ae$export$fd824239f75849bd; }, function (v) { return $7f657c12a31491ae$export$fd824239f75849bd = v; });
-$parcel$export($7f657c12a31491ae$exports, "selectedQuestion", function () { return $7f657c12a31491ae$export$f7f968f67303d06e; }, function (v) { return $7f657c12a31491ae$export$f7f968f67303d06e = v; });
-$parcel$export($7f657c12a31491ae$exports, "text", function () { return $7f657c12a31491ae$export$6f093cfa640b7166; }, function (v) { return $7f657c12a31491ae$export$6f093cfa640b7166 = v; });
-$parcel$export($7f657c12a31491ae$exports, "textarea", function () { return $7f657c12a31491ae$export$a3574df893ffa88d; }, function (v) { return $7f657c12a31491ae$export$a3574df893ffa88d = v; });
-$parcel$export($7f657c12a31491ae$exports, "username", function () { return $7f657c12a31491ae$export$5e1be761f603d585; }, function (v) { return $7f657c12a31491ae$export$5e1be761f603d585 = v; });
-$parcel$export($7f657c12a31491ae$exports, "vennDiagramIcon", function () { return $7f657c12a31491ae$export$21d313c8dd377057; }, function (v) { return $7f657c12a31491ae$export$21d313c8dd377057 = v; });
-var $7f657c12a31491ae$export$4aebd143f31d0c0d;
-var $7f657c12a31491ae$export$2ba01fb71ed41cb6;
-var $7f657c12a31491ae$export$aa3e815946b80764;
-var $7f657c12a31491ae$export$6b087f52b8619213;
-var $7f657c12a31491ae$export$9f77e0932fb78f72;
-var $7f657c12a31491ae$export$464c821cd4347539;
-var $7f657c12a31491ae$export$1ca1ec8b29a4ce27;
-var $7f657c12a31491ae$export$60bb6c1f29b8a8cc;
-var $7f657c12a31491ae$export$40f3ad8fcd4c93c2;
-var $7f657c12a31491ae$export$275ee2193c25f37a;
-var $7f657c12a31491ae$export$fd824239f75849bd;
-var $7f657c12a31491ae$export$f7f968f67303d06e;
-var $7f657c12a31491ae$export$6f093cfa640b7166;
-var $7f657c12a31491ae$export$a3574df893ffa88d;
-var $7f657c12a31491ae$export$5e1be761f603d585;
-var $7f657c12a31491ae$export$21d313c8dd377057;
-$7f657c12a31491ae$export$4aebd143f31d0c0d = `GN153G_badge`;
-$7f657c12a31491ae$export$2ba01fb71ed41cb6 = `GN153G_button`;
-$7f657c12a31491ae$export$aa3e815946b80764 = `GN153G_card`;
-$7f657c12a31491ae$export$6b087f52b8619213 = `GN153G_commentText`;
-$7f657c12a31491ae$export$9f77e0932fb78f72 = `GN153G_expand`;
-$7f657c12a31491ae$export$464c821cd4347539 = `GN153G_hint`;
-$7f657c12a31491ae$export$1ca1ec8b29a4ce27 = `GN153G_icon`;
-$7f657c12a31491ae$export$60bb6c1f29b8a8cc = `GN153G_iconButton`;
-$7f657c12a31491ae$export$40f3ad8fcd4c93c2 = `GN153G_innerCard`;
-$7f657c12a31491ae$export$275ee2193c25f37a = `GN153G_innerCardWithImage`;
-$7f657c12a31491ae$export$fd824239f75849bd = `GN153G_previewImg`;
-$7f657c12a31491ae$export$f7f968f67303d06e = `GN153G_selectedQuestion`;
-$7f657c12a31491ae$export$6f093cfa640b7166 = `GN153G_text`;
-$7f657c12a31491ae$export$a3574df893ffa88d = `GN153G_textarea`;
-$7f657c12a31491ae$export$5e1be761f603d585 = `GN153G_username`;
-$7f657c12a31491ae$export$21d313c8dd377057 = `GN153G_vennDiagramIcon`;
+$parcel$export($3376c45f4891715c$exports, "badge", function () { return $3376c45f4891715c$export$4aebd143f31d0c0d; }, function (v) { return $3376c45f4891715c$export$4aebd143f31d0c0d = v; });
+$parcel$export($3376c45f4891715c$exports, "button", function () { return $3376c45f4891715c$export$2ba01fb71ed41cb6; }, function (v) { return $3376c45f4891715c$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($3376c45f4891715c$exports, "card", function () { return $3376c45f4891715c$export$aa3e815946b80764; }, function (v) { return $3376c45f4891715c$export$aa3e815946b80764 = v; });
+$parcel$export($3376c45f4891715c$exports, "commentText", function () { return $3376c45f4891715c$export$6b087f52b8619213; }, function (v) { return $3376c45f4891715c$export$6b087f52b8619213 = v; });
+$parcel$export($3376c45f4891715c$exports, "expand", function () { return $3376c45f4891715c$export$9f77e0932fb78f72; }, function (v) { return $3376c45f4891715c$export$9f77e0932fb78f72 = v; });
+$parcel$export($3376c45f4891715c$exports, "hint", function () { return $3376c45f4891715c$export$464c821cd4347539; }, function (v) { return $3376c45f4891715c$export$464c821cd4347539 = v; });
+$parcel$export($3376c45f4891715c$exports, "icon", function () { return $3376c45f4891715c$export$1ca1ec8b29a4ce27; }, function (v) { return $3376c45f4891715c$export$1ca1ec8b29a4ce27 = v; });
+$parcel$export($3376c45f4891715c$exports, "iconButton", function () { return $3376c45f4891715c$export$60bb6c1f29b8a8cc; }, function (v) { return $3376c45f4891715c$export$60bb6c1f29b8a8cc = v; });
+$parcel$export($3376c45f4891715c$exports, "innerCard", function () { return $3376c45f4891715c$export$40f3ad8fcd4c93c2; }, function (v) { return $3376c45f4891715c$export$40f3ad8fcd4c93c2 = v; });
+$parcel$export($3376c45f4891715c$exports, "innerCardWithImage", function () { return $3376c45f4891715c$export$275ee2193c25f37a; }, function (v) { return $3376c45f4891715c$export$275ee2193c25f37a = v; });
+$parcel$export($3376c45f4891715c$exports, "previewImg", function () { return $3376c45f4891715c$export$fd824239f75849bd; }, function (v) { return $3376c45f4891715c$export$fd824239f75849bd = v; });
+$parcel$export($3376c45f4891715c$exports, "selectedQuestion", function () { return $3376c45f4891715c$export$f7f968f67303d06e; }, function (v) { return $3376c45f4891715c$export$f7f968f67303d06e = v; });
+$parcel$export($3376c45f4891715c$exports, "text", function () { return $3376c45f4891715c$export$6f093cfa640b7166; }, function (v) { return $3376c45f4891715c$export$6f093cfa640b7166 = v; });
+$parcel$export($3376c45f4891715c$exports, "textarea", function () { return $3376c45f4891715c$export$a3574df893ffa88d; }, function (v) { return $3376c45f4891715c$export$a3574df893ffa88d = v; });
+$parcel$export($3376c45f4891715c$exports, "username", function () { return $3376c45f4891715c$export$5e1be761f603d585; }, function (v) { return $3376c45f4891715c$export$5e1be761f603d585 = v; });
+$parcel$export($3376c45f4891715c$exports, "vennDiagramIcon", function () { return $3376c45f4891715c$export$21d313c8dd377057; }, function (v) { return $3376c45f4891715c$export$21d313c8dd377057 = v; });
+var $3376c45f4891715c$export$4aebd143f31d0c0d;
+var $3376c45f4891715c$export$2ba01fb71ed41cb6;
+var $3376c45f4891715c$export$aa3e815946b80764;
+var $3376c45f4891715c$export$6b087f52b8619213;
+var $3376c45f4891715c$export$9f77e0932fb78f72;
+var $3376c45f4891715c$export$464c821cd4347539;
+var $3376c45f4891715c$export$1ca1ec8b29a4ce27;
+var $3376c45f4891715c$export$60bb6c1f29b8a8cc;
+var $3376c45f4891715c$export$40f3ad8fcd4c93c2;
+var $3376c45f4891715c$export$275ee2193c25f37a;
+var $3376c45f4891715c$export$fd824239f75849bd;
+var $3376c45f4891715c$export$f7f968f67303d06e;
+var $3376c45f4891715c$export$6f093cfa640b7166;
+var $3376c45f4891715c$export$a3574df893ffa88d;
+var $3376c45f4891715c$export$5e1be761f603d585;
+var $3376c45f4891715c$export$21d313c8dd377057;
+$3376c45f4891715c$export$4aebd143f31d0c0d = `hG2-PW_badge`;
+$3376c45f4891715c$export$2ba01fb71ed41cb6 = `hG2-PW_button`;
+$3376c45f4891715c$export$aa3e815946b80764 = `hG2-PW_card`;
+$3376c45f4891715c$export$6b087f52b8619213 = `hG2-PW_commentText`;
+$3376c45f4891715c$export$9f77e0932fb78f72 = `hG2-PW_expand`;
+$3376c45f4891715c$export$464c821cd4347539 = `hG2-PW_hint`;
+$3376c45f4891715c$export$1ca1ec8b29a4ce27 = `hG2-PW_icon`;
+$3376c45f4891715c$export$60bb6c1f29b8a8cc = `hG2-PW_iconButton`;
+$3376c45f4891715c$export$40f3ad8fcd4c93c2 = `hG2-PW_innerCard`;
+$3376c45f4891715c$export$275ee2193c25f37a = `hG2-PW_innerCardWithImage`;
+$3376c45f4891715c$export$fd824239f75849bd = `hG2-PW_previewImg`;
+$3376c45f4891715c$export$f7f968f67303d06e = `hG2-PW_selectedQuestion`;
+$3376c45f4891715c$export$6f093cfa640b7166 = `hG2-PW_text`;
+$3376c45f4891715c$export$a3574df893ffa88d = `hG2-PW_textarea`;
+$3376c45f4891715c$export$5e1be761f603d585 = `hG2-PW_username`;
+$3376c45f4891715c$export$21d313c8dd377057 = `hG2-PW_vennDiagramIcon`;
 
 
 var $92979c3fafe78436$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover, fill: fill })=>{
@@ -1889,8 +1886,8 @@ var $92979c3fafe78436$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
         onClick: onClick,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).vennDiagramIcon, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).active]: groupMode
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).vennDiagramIcon, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).active]: groupMode
         }),
         style: {
             cursor: 'pointer',
@@ -1996,24 +1993,24 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
     });
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("article", {
         ref: ref,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).card, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).selectedQuestion]: selected
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).card, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).selectedQuestion]: selected
         }),
         children: [
             selected && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).badge,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).badge,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                     children: "Selected"
                 })
             }),
             img && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).previewImg,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).previewImg,
                 src: img,
                 alt: "preview image"
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).innerCard, {
-                    [(0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).innerCardWithImage]: img
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).innerCard, {
+                    [(0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).innerCardWithImage]: img
                 }),
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $5028331f39524b26$export$2e2bcd8739ae039), {
@@ -2022,7 +2019,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         }) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                             children: [
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).username,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).username,
                                     onClick: onUserClick,
                                     children: [
                                         username,
@@ -2049,7 +2046,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         respond: respond || redirectToLogin
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).expand,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).expand,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                 style: {
@@ -2064,7 +2061,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).iconButton,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).iconButton,
                                         onClick: ()=>{
                                             fetchComments();
                                             setShowComments(!showComments);
@@ -2073,13 +2070,13 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                             sx: {
                                                 fill: '#121212'
                                             },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).icon
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).icon
                                         })
                                     }),
                                     window.featureFlags?.groups && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$herouitooltip.Tooltip), {
                                         content: "Create new group",
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).iconButton,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).iconButton,
                                             style: {
                                                 position: 'relative',
                                                 height: 37,
@@ -2107,7 +2104,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("a", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).iconButton,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).iconButton,
                                         style: {
                                             marginTop: '-1.88px'
                                         },
@@ -2116,17 +2113,17 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                             sx: {
                                                 fill: '#121212'
                                             },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).icon,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).icon,
                                             onClick: onClick
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).iconButton,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).iconButton,
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialShare))), {
                                             sx: {
                                                 fill: '#121212'
                                             },
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).icon,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).icon,
                                             onClick: share
                                         })
                                     })
@@ -2135,7 +2132,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         ]
                     }),
                     showComments && showCommentsForQuestion && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).expand,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).expand,
                         style: {
                             flexDirection: 'column',
                             alignItems: 'flex-start',
@@ -2145,7 +2142,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                             comments.map((i)=>{
                                 const isOpComment = !i.answer;
                                 return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).comments,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).comments,
                                     style: {
                                         alignSelf: isOpComment ? 'center' : i.answer === 'yes' ? 'flex-start' : 'flex-end'
                                     },
@@ -2170,7 +2167,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                     }
                                                 }),
                                                 isOpComment ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("small", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).commentText,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).commentText,
                                                     style: {
                                                         color: 'gray',
                                                         cursor: 'pointer'
@@ -2193,7 +2190,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                     children: "\u2022"
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("small", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).commentText,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).commentText,
                                                     style: {
                                                         color: 'gray',
                                                         cursor: 'pointer'
@@ -2207,7 +2204,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                     children: "\u2022"
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("small", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).commentText,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).commentText,
                                                     style: {
                                                         color: 'gray',
                                                         cursor: 'pointer'
@@ -2223,7 +2220,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$herouitooltip.Tooltip), {
                                                     content: !i.user?.difference && !user ? 'Login to see similarity to you' : 'Similarity to you',
                                                     children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("small", {
-                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).commentText,
+                                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).commentText,
                                                         style: {
                                                             color: 'gray',
                                                             cursor: 'pointer',
@@ -2252,7 +2249,7 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                 }, i.text);
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).addComment,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).addComment,
                                 style: {
                                     width: '100%',
                                     position: 'relative'
@@ -2261,13 +2258,13 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("textarea", {
                                         disabled: !(me?.answer || yourOwnQuestion),
                                         placeholder: me?.answer || yourOwnQuestion ? 'Comment...' : 'Answer to comment...',
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).textarea,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).textarea,
                                         value: text,
                                         onChange: (e)=>setText(e.target.value)
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
                                         disabled: !text,
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($7f657c12a31491ae$exports))).button,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3376c45f4891715c$exports))).button,
                                         onClick: ()=>{
                                             saveComment(text);
                                             setText('');
@@ -2292,34 +2289,34 @@ var $5fc94b7b21b51ec3$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $a5da320358e6e34c$exports = {};
+var $0096f7110eafe5f9$exports = {};
 
-$parcel$export($a5da320358e6e34c$exports, "text", function () { return $a5da320358e6e34c$export$6f093cfa640b7166; }, function (v) { return $a5da320358e6e34c$export$6f093cfa640b7166 = v; });
-$parcel$export($a5da320358e6e34c$exports, "textarea", function () { return $a5da320358e6e34c$export$a3574df893ffa88d; }, function (v) { return $a5da320358e6e34c$export$a3574df893ffa88d = v; });
-var $a5da320358e6e34c$export$6f093cfa640b7166;
-var $a5da320358e6e34c$export$a3574df893ffa88d;
-$a5da320358e6e34c$export$6f093cfa640b7166 = `OxsVWq_text`;
-$a5da320358e6e34c$export$a3574df893ffa88d = `OxsVWq_textarea`;
+$parcel$export($0096f7110eafe5f9$exports, "text", function () { return $0096f7110eafe5f9$export$6f093cfa640b7166; }, function (v) { return $0096f7110eafe5f9$export$6f093cfa640b7166 = v; });
+$parcel$export($0096f7110eafe5f9$exports, "textarea", function () { return $0096f7110eafe5f9$export$a3574df893ffa88d; }, function (v) { return $0096f7110eafe5f9$export$a3574df893ffa88d = v; });
+var $0096f7110eafe5f9$export$6f093cfa640b7166;
+var $0096f7110eafe5f9$export$a3574df893ffa88d;
+$0096f7110eafe5f9$export$6f093cfa640b7166 = `FVOu6W_text`;
+$0096f7110eafe5f9$export$a3574df893ffa88d = `FVOu6W_textarea`;
 
 
 var $881a8f08e4aa6054$export$2e2bcd8739ae039 = ({ disabled: disabled, onChange: onChange, value: value })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("textarea", {
         disabled: disabled,
         placeholder: `Type your question here ${disabled ? '(disabled if you\'re not signed in)' : ''}...`,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($a5da320358e6e34c$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($a5da320358e6e34c$exports))).text),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($0096f7110eafe5f9$exports))).textarea, (0, (/*@__PURE__*/$parcel$interopDefault($0096f7110eafe5f9$exports))).text),
         onChange: onChange,
         value: value
     });
 
 
 
-var $73ea4f864ded2f14$exports = {};
+var $83dc75768a20f7c9$exports = {};
 
-$parcel$export($73ea4f864ded2f14$exports, "button", function () { return $73ea4f864ded2f14$export$2ba01fb71ed41cb6; }, function (v) { return $73ea4f864ded2f14$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($73ea4f864ded2f14$exports, "newQuestion", function () { return $73ea4f864ded2f14$export$9ad540bb5fc131aa; }, function (v) { return $73ea4f864ded2f14$export$9ad540bb5fc131aa = v; });
-var $73ea4f864ded2f14$export$2ba01fb71ed41cb6;
-var $73ea4f864ded2f14$export$9ad540bb5fc131aa;
-$73ea4f864ded2f14$export$2ba01fb71ed41cb6 = `OGOopW_button`;
-$73ea4f864ded2f14$export$9ad540bb5fc131aa = `OGOopW_newQuestion`;
+$parcel$export($83dc75768a20f7c9$exports, "button", function () { return $83dc75768a20f7c9$export$2ba01fb71ed41cb6; }, function (v) { return $83dc75768a20f7c9$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($83dc75768a20f7c9$exports, "newQuestion", function () { return $83dc75768a20f7c9$export$9ad540bb5fc131aa; }, function (v) { return $83dc75768a20f7c9$export$9ad540bb5fc131aa = v; });
+var $83dc75768a20f7c9$export$2ba01fb71ed41cb6;
+var $83dc75768a20f7c9$export$9ad540bb5fc131aa;
+$83dc75768a20f7c9$export$2ba01fb71ed41cb6 = `grImvG_button`;
+$83dc75768a20f7c9$export$9ad540bb5fc131aa = `grImvG_newQuestion`;
 
 
 var $5cab5fb040b98b0d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ saveQuestion: saveQuestion }, ref)=>{
@@ -2338,7 +2335,7 @@ var $5cab5fb040b98b0d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
     const disabled = !saveQuestion;
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($73ea4f864ded2f14$exports))).newQuestion,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($83dc75768a20f7c9$exports))).newQuestion,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $881a8f08e4aa6054$export$2e2bcd8739ae039), {
                 disabled: disabled,
@@ -2358,7 +2355,7 @@ var $5cab5fb040b98b0d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         sx: {
                             fill: '#121212'
                         },
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($73ea4f864ded2f14$exports))).icon,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($83dc75768a20f7c9$exports))).icon,
                         onClick: ()=>{
                             setAddImgModal(true);
                         }
@@ -2367,7 +2364,7 @@ var $5cab5fb040b98b0d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
                 disabled: !question || !saveQuestion,
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($73ea4f864ded2f14$exports))).button,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($83dc75768a20f7c9$exports))).button,
                 onClick: save,
                 children: "Ask"
             })
@@ -2380,17 +2377,17 @@ var $5cab5fb040b98b0d$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $49bc56c330ba169b$exports = {};
+var $19cc85519bf0114e$exports = {};
 
-$parcel$export($49bc56c330ba169b$exports, "groupContainer", function () { return $49bc56c330ba169b$export$f36792cb9bd81925; }, function (v) { return $49bc56c330ba169b$export$f36792cb9bd81925 = v; });
-var $49bc56c330ba169b$export$f36792cb9bd81925;
-$49bc56c330ba169b$export$f36792cb9bd81925 = `E0-4eG_groupContainer`;
+$parcel$export($19cc85519bf0114e$exports, "groupContainer", function () { return $19cc85519bf0114e$export$f36792cb9bd81925; }, function (v) { return $19cc85519bf0114e$export$f36792cb9bd81925 = v; });
+var $19cc85519bf0114e$export$f36792cb9bd81925;
+$19cc85519bf0114e$export$f36792cb9bd81925 = `PHOqhG_groupContainer`;
 
 
 var $65104aed486e2493$export$2e2bcd8739ae039 = ({ children: children, id: id, style: style, className: className })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
         style: style,
         id: id,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($49bc56c330ba169b$exports))).groupContainer, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($19cc85519bf0114e$exports))).groupContainer, className),
         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
             style: {
                 width: '100%',
@@ -2407,37 +2404,37 @@ var $65104aed486e2493$export$2e2bcd8739ae039 = ({ children: children, id: id, st
 
 
 
-var $2f1a51a1604867ae$exports = {};
+var $552c5bbcb773d266$exports = {};
 
-$parcel$export($2f1a51a1604867ae$exports, "container", function () { return $2f1a51a1604867ae$export$34e0f9847d4c02dd; }, function (v) { return $2f1a51a1604867ae$export$34e0f9847d4c02dd = v; });
-var $2f1a51a1604867ae$export$34e0f9847d4c02dd;
-$2f1a51a1604867ae$export$34e0f9847d4c02dd = `iW3V3q_container`;
+$parcel$export($552c5bbcb773d266$exports, "container", function () { return $552c5bbcb773d266$export$34e0f9847d4c02dd; }, function (v) { return $552c5bbcb773d266$export$34e0f9847d4c02dd = v; });
+var $552c5bbcb773d266$export$34e0f9847d4c02dd;
+$552c5bbcb773d266$export$34e0f9847d4c02dd = `GU1x_a_container`;
 
 
 var $9619045c197bdfb0$export$2e2bcd8739ae039 = ({ children: children, className: className })=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($2f1a51a1604867ae$exports))).container, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($552c5bbcb773d266$exports))).container, className),
         children: children
     });
 
 
-var $b596154a011f1443$exports = {};
+var $2e3915628b611118$exports = {};
 
-$parcel$export($b596154a011f1443$exports, "mainScreen", function () { return $b596154a011f1443$export$e962ae2959462fd2; }, function (v) { return $b596154a011f1443$export$e962ae2959462fd2 = v; });
-$parcel$export($b596154a011f1443$exports, "mainScreenContainer", function () { return $b596154a011f1443$export$65cfe9c2ce1b1faf; }, function (v) { return $b596154a011f1443$export$65cfe9c2ce1b1faf = v; });
-var $b596154a011f1443$export$e962ae2959462fd2;
-var $b596154a011f1443$export$65cfe9c2ce1b1faf;
-$b596154a011f1443$export$e962ae2959462fd2 = `zfn2bW_mainScreen`;
-$b596154a011f1443$export$65cfe9c2ce1b1faf = `zfn2bW_mainScreenContainer`;
+$parcel$export($2e3915628b611118$exports, "mainScreen", function () { return $2e3915628b611118$export$e962ae2959462fd2; }, function (v) { return $2e3915628b611118$export$e962ae2959462fd2 = v; });
+$parcel$export($2e3915628b611118$exports, "mainScreenContainer", function () { return $2e3915628b611118$export$65cfe9c2ce1b1faf; }, function (v) { return $2e3915628b611118$export$65cfe9c2ce1b1faf = v; });
+var $2e3915628b611118$export$e962ae2959462fd2;
+var $2e3915628b611118$export$65cfe9c2ce1b1faf;
+$2e3915628b611118$export$e962ae2959462fd2 = `-yL40G_mainScreen`;
+$2e3915628b611118$export$65cfe9c2ce1b1faf = `-yL40G_mainScreenContainer`;
 
 
 var $377ffdae47705f05$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ children: children, className: className, style: style, id: id, scrollId: scrollId }, ref)=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("section", {
         id: id,
         ref: ref,
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($b596154a011f1443$exports))).mainScreen, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($2e3915628b611118$exports))).mainScreen, className),
         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $9619045c197bdfb0$export$2e2bcd8739ae039), {
             scrollId: scrollId,
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($b596154a011f1443$exports))).mainScreenContainer,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($2e3915628b611118$exports))).mainScreenContainer,
             children: children
         })
     }));
@@ -2445,20 +2442,20 @@ var $377ffdae47705f05$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $cb60db32660ce50a$exports = {};
+var $2aa614e364357cc5$exports = {};
 
-$parcel$export($cb60db32660ce50a$exports, "sidebar", function () { return $cb60db32660ce50a$export$6fbb9cd2843e91b2; }, function (v) { return $cb60db32660ce50a$export$6fbb9cd2843e91b2 = v; });
-$parcel$export($cb60db32660ce50a$exports, "title", function () { return $cb60db32660ce50a$export$fb184b623420d9be; }, function (v) { return $cb60db32660ce50a$export$fb184b623420d9be = v; });
-var $cb60db32660ce50a$export$6fbb9cd2843e91b2;
-var $cb60db32660ce50a$export$fb184b623420d9be;
-$cb60db32660ce50a$export$6fbb9cd2843e91b2 = `HFaEpW_sidebar`;
-$cb60db32660ce50a$export$fb184b623420d9be = `HFaEpW_title`;
+$parcel$export($2aa614e364357cc5$exports, "sidebar", function () { return $2aa614e364357cc5$export$6fbb9cd2843e91b2; }, function (v) { return $2aa614e364357cc5$export$6fbb9cd2843e91b2 = v; });
+$parcel$export($2aa614e364357cc5$exports, "title", function () { return $2aa614e364357cc5$export$fb184b623420d9be; }, function (v) { return $2aa614e364357cc5$export$fb184b623420d9be = v; });
+var $2aa614e364357cc5$export$6fbb9cd2843e91b2;
+var $2aa614e364357cc5$export$fb184b623420d9be;
+$2aa614e364357cc5$export$6fbb9cd2843e91b2 = `gFQYnG_sidebar`;
+$2aa614e364357cc5$export$fb184b623420d9be = `gFQYnG_title`;
 
 
 var $205a64be0ab22d12$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ children: children, style: style }, ref)=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
         ref: ref,
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($cb60db32660ce50a$exports))).sidebar,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($2aa614e364357cc5$exports))).sidebar,
         children: children
     }));
 
@@ -2466,14 +2463,14 @@ var $205a64be0ab22d12$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $470f4f663d1422ad$exports = {};
+var $9f541db8b1768924$exports = {};
 
-$parcel$export($470f4f663d1422ad$exports, "cardsRow", function () { return $470f4f663d1422ad$export$3ffd594349b5aa88; }, function (v) { return $470f4f663d1422ad$export$3ffd594349b5aa88 = v; });
-$parcel$export($470f4f663d1422ad$exports, "scrollContainer", function () { return $470f4f663d1422ad$export$fad3c8302a7540c6; }, function (v) { return $470f4f663d1422ad$export$fad3c8302a7540c6 = v; });
-var $470f4f663d1422ad$export$3ffd594349b5aa88;
-var $470f4f663d1422ad$export$fad3c8302a7540c6;
-$470f4f663d1422ad$export$3ffd594349b5aa88 = `_7kO5aG_cardsRow`;
-$470f4f663d1422ad$export$fad3c8302a7540c6 = `_7kO5aG_scrollContainer`;
+$parcel$export($9f541db8b1768924$exports, "cardsRow", function () { return $9f541db8b1768924$export$3ffd594349b5aa88; }, function (v) { return $9f541db8b1768924$export$3ffd594349b5aa88 = v; });
+$parcel$export($9f541db8b1768924$exports, "scrollContainer", function () { return $9f541db8b1768924$export$fad3c8302a7540c6; }, function (v) { return $9f541db8b1768924$export$fad3c8302a7540c6 = v; });
+var $9f541db8b1768924$export$3ffd594349b5aa88;
+var $9f541db8b1768924$export$fad3c8302a7540c6;
+$9f541db8b1768924$export$3ffd594349b5aa88 = `oXN4tG_cardsRow`;
+$9f541db8b1768924$export$fad3c8302a7540c6 = `oXN4tG_scrollContainer`;
 
 
 var $69ab011e6185c3e2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ style: style, children: children, id: id, className: className }, ref)=>{
@@ -2481,7 +2478,7 @@ var $69ab011e6185c3e2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
         style: style,
         ref: ref,
         id: id,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($470f4f663d1422ad$exports))).scrollContainer, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($9f541db8b1768924$exports))).scrollContainer, className),
         children: children
     });
 });
@@ -2499,57 +2496,54 @@ var $69ab011e6185c3e2$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $3ccbdfc078fd10e3$exports = {};
+var $891f22c414156158$exports = {};
 
-$parcel$export($3ccbdfc078fd10e3$exports, "back", function () { return $3ccbdfc078fd10e3$export$7c341cb16fc91138; }, function (v) { return $3ccbdfc078fd10e3$export$7c341cb16fc91138 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "checkbox", function () { return $3ccbdfc078fd10e3$export$b07e517d22efa1ca; }, function (v) { return $3ccbdfc078fd10e3$export$b07e517d22efa1ca = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "checkbox__body", function () { return $3ccbdfc078fd10e3$export$d3da3a95ea50034e; }, function (v) { return $3ccbdfc078fd10e3$export$d3da3a95ea50034e = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "checkbox__checkmark", function () { return $3ccbdfc078fd10e3$export$340dac494ade0321; }, function (v) { return $3ccbdfc078fd10e3$export$340dac494ade0321 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "checkboxes__item", function () { return $3ccbdfc078fd10e3$export$760569eb394a6344; }, function (v) { return $3ccbdfc078fd10e3$export$760569eb394a6344 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "checkboxes__row", function () { return $3ccbdfc078fd10e3$export$6c3b9b20e13900f2; }, function (v) { return $3ccbdfc078fd10e3$export$6c3b9b20e13900f2 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "close", function () { return $3ccbdfc078fd10e3$export$8360e631d277ea4d; }, function (v) { return $3ccbdfc078fd10e3$export$8360e631d277ea4d = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "column", function () { return $3ccbdfc078fd10e3$export$4e0c71f277ca26b3; }, function (v) { return $3ccbdfc078fd10e3$export$4e0c71f277ca26b3 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "imgFallback", function () { return $3ccbdfc078fd10e3$export$e94d20c87215d48b; }, function (v) { return $3ccbdfc078fd10e3$export$e94d20c87215d48b = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "row", function () { return $3ccbdfc078fd10e3$export$120ff0929b202a6d; }, function (v) { return $3ccbdfc078fd10e3$export$120ff0929b202a6d = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "screenWithGroupContent", function () { return $3ccbdfc078fd10e3$export$de3da254965f2f43; }, function (v) { return $3ccbdfc078fd10e3$export$de3da254965f2f43 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "style-c", function () { return $3ccbdfc078fd10e3$export$d8e3ffb8a71e7871; }, function (v) { return $3ccbdfc078fd10e3$export$d8e3ffb8a71e7871 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "userItem", function () { return $3ccbdfc078fd10e3$export$f6bda04bc7d10a12; }, function (v) { return $3ccbdfc078fd10e3$export$f6bda04bc7d10a12 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "usersContainer", function () { return $3ccbdfc078fd10e3$export$771ca420b1b6ed17; }, function (v) { return $3ccbdfc078fd10e3$export$771ca420b1b6ed17 = v; });
-$parcel$export($3ccbdfc078fd10e3$exports, "x-icon", function () { return $3ccbdfc078fd10e3$export$43405cb8d90657d0; }, function (v) { return $3ccbdfc078fd10e3$export$43405cb8d90657d0 = v; });
-var $3ccbdfc078fd10e3$export$7c341cb16fc91138;
-var $3ccbdfc078fd10e3$export$b07e517d22efa1ca;
-var $3ccbdfc078fd10e3$export$d3da3a95ea50034e;
-var $3ccbdfc078fd10e3$export$340dac494ade0321;
-var $3ccbdfc078fd10e3$export$760569eb394a6344;
-var $3ccbdfc078fd10e3$export$6c3b9b20e13900f2;
-var $3ccbdfc078fd10e3$export$8360e631d277ea4d;
-var $3ccbdfc078fd10e3$export$4e0c71f277ca26b3;
-var $3ccbdfc078fd10e3$export$e94d20c87215d48b;
-var $3ccbdfc078fd10e3$export$120ff0929b202a6d;
-var $3ccbdfc078fd10e3$export$de3da254965f2f43;
-var $3ccbdfc078fd10e3$export$d8e3ffb8a71e7871;
-var $3ccbdfc078fd10e3$export$f6bda04bc7d10a12;
-var $3ccbdfc078fd10e3$export$771ca420b1b6ed17;
-var $3ccbdfc078fd10e3$export$43405cb8d90657d0;
-$3ccbdfc078fd10e3$export$7c341cb16fc91138 = `zDJPrW_back`;
-$3ccbdfc078fd10e3$export$b07e517d22efa1ca = `zDJPrW_checkbox`;
-$3ccbdfc078fd10e3$export$d3da3a95ea50034e = `zDJPrW_checkbox__body`;
-$3ccbdfc078fd10e3$export$340dac494ade0321 = `zDJPrW_checkbox__checkmark`;
-$3ccbdfc078fd10e3$export$760569eb394a6344 = `zDJPrW_checkboxes__item`;
-$3ccbdfc078fd10e3$export$6c3b9b20e13900f2 = `zDJPrW_checkboxes__row`;
-$3ccbdfc078fd10e3$export$8360e631d277ea4d = `zDJPrW_close`;
-$3ccbdfc078fd10e3$export$4e0c71f277ca26b3 = `zDJPrW_column`;
-$3ccbdfc078fd10e3$export$e94d20c87215d48b = `zDJPrW_imgFallback`;
-$3ccbdfc078fd10e3$export$120ff0929b202a6d = `zDJPrW_row`;
-$3ccbdfc078fd10e3$export$de3da254965f2f43 = `zDJPrW_screenWithGroupContent`;
-$3ccbdfc078fd10e3$export$d8e3ffb8a71e7871 = `zDJPrW_style-c`;
-$3ccbdfc078fd10e3$export$f6bda04bc7d10a12 = `zDJPrW_userItem`;
-$3ccbdfc078fd10e3$export$771ca420b1b6ed17 = `zDJPrW_usersContainer`;
-$3ccbdfc078fd10e3$export$43405cb8d90657d0 = `zDJPrW_x-icon`;
+$parcel$export($891f22c414156158$exports, "back", function () { return $891f22c414156158$export$7c341cb16fc91138; }, function (v) { return $891f22c414156158$export$7c341cb16fc91138 = v; });
+$parcel$export($891f22c414156158$exports, "checkbox", function () { return $891f22c414156158$export$b07e517d22efa1ca; }, function (v) { return $891f22c414156158$export$b07e517d22efa1ca = v; });
+$parcel$export($891f22c414156158$exports, "checkbox__body", function () { return $891f22c414156158$export$d3da3a95ea50034e; }, function (v) { return $891f22c414156158$export$d3da3a95ea50034e = v; });
+$parcel$export($891f22c414156158$exports, "checkbox__checkmark", function () { return $891f22c414156158$export$340dac494ade0321; }, function (v) { return $891f22c414156158$export$340dac494ade0321 = v; });
+$parcel$export($891f22c414156158$exports, "checkboxes__item", function () { return $891f22c414156158$export$760569eb394a6344; }, function (v) { return $891f22c414156158$export$760569eb394a6344 = v; });
+$parcel$export($891f22c414156158$exports, "checkboxes__row", function () { return $891f22c414156158$export$6c3b9b20e13900f2; }, function (v) { return $891f22c414156158$export$6c3b9b20e13900f2 = v; });
+$parcel$export($891f22c414156158$exports, "close", function () { return $891f22c414156158$export$8360e631d277ea4d; }, function (v) { return $891f22c414156158$export$8360e631d277ea4d = v; });
+$parcel$export($891f22c414156158$exports, "column", function () { return $891f22c414156158$export$4e0c71f277ca26b3; }, function (v) { return $891f22c414156158$export$4e0c71f277ca26b3 = v; });
+$parcel$export($891f22c414156158$exports, "imgFallback", function () { return $891f22c414156158$export$e94d20c87215d48b; }, function (v) { return $891f22c414156158$export$e94d20c87215d48b = v; });
+$parcel$export($891f22c414156158$exports, "row", function () { return $891f22c414156158$export$120ff0929b202a6d; }, function (v) { return $891f22c414156158$export$120ff0929b202a6d = v; });
+$parcel$export($891f22c414156158$exports, "screenWithGroupContent", function () { return $891f22c414156158$export$de3da254965f2f43; }, function (v) { return $891f22c414156158$export$de3da254965f2f43 = v; });
+$parcel$export($891f22c414156158$exports, "style-c", function () { return $891f22c414156158$export$d8e3ffb8a71e7871; }, function (v) { return $891f22c414156158$export$d8e3ffb8a71e7871 = v; });
+$parcel$export($891f22c414156158$exports, "userItem", function () { return $891f22c414156158$export$f6bda04bc7d10a12; }, function (v) { return $891f22c414156158$export$f6bda04bc7d10a12 = v; });
+$parcel$export($891f22c414156158$exports, "usersContainer", function () { return $891f22c414156158$export$771ca420b1b6ed17; }, function (v) { return $891f22c414156158$export$771ca420b1b6ed17 = v; });
+$parcel$export($891f22c414156158$exports, "x-icon", function () { return $891f22c414156158$export$43405cb8d90657d0; }, function (v) { return $891f22c414156158$export$43405cb8d90657d0 = v; });
+var $891f22c414156158$export$7c341cb16fc91138;
+var $891f22c414156158$export$b07e517d22efa1ca;
+var $891f22c414156158$export$d3da3a95ea50034e;
+var $891f22c414156158$export$340dac494ade0321;
+var $891f22c414156158$export$760569eb394a6344;
+var $891f22c414156158$export$6c3b9b20e13900f2;
+var $891f22c414156158$export$8360e631d277ea4d;
+var $891f22c414156158$export$4e0c71f277ca26b3;
+var $891f22c414156158$export$e94d20c87215d48b;
+var $891f22c414156158$export$120ff0929b202a6d;
+var $891f22c414156158$export$de3da254965f2f43;
+var $891f22c414156158$export$d8e3ffb8a71e7871;
+var $891f22c414156158$export$f6bda04bc7d10a12;
+var $891f22c414156158$export$771ca420b1b6ed17;
+var $891f22c414156158$export$43405cb8d90657d0;
+$891f22c414156158$export$7c341cb16fc91138 = `JZcedq_back`;
+$891f22c414156158$export$b07e517d22efa1ca = `JZcedq_checkbox`;
+$891f22c414156158$export$d3da3a95ea50034e = `JZcedq_checkbox__body`;
+$891f22c414156158$export$340dac494ade0321 = `JZcedq_checkbox__checkmark`;
+$891f22c414156158$export$760569eb394a6344 = `JZcedq_checkboxes__item`;
+$891f22c414156158$export$6c3b9b20e13900f2 = `JZcedq_checkboxes__row`;
+$891f22c414156158$export$8360e631d277ea4d = `JZcedq_close`;
+$891f22c414156158$export$4e0c71f277ca26b3 = `JZcedq_column`;
+$891f22c414156158$export$e94d20c87215d48b = `JZcedq_imgFallback`;
+$891f22c414156158$export$120ff0929b202a6d = `JZcedq_row`;
+$891f22c414156158$export$de3da254965f2f43 = `JZcedq_screenWithGroupContent`;
+$891f22c414156158$export$d8e3ffb8a71e7871 = `JZcedq_style-c`;
+$891f22c414156158$export$f6bda04bc7d10a12 = `JZcedq_userItem`;
+$891f22c414156158$export$771ca420b1b6ed17 = `JZcedq_usersContainer`;
+$891f22c414156158$export$43405cb8d90657d0 = `JZcedq_x-icon`;
 
-
-var $c440c69b742609b0$exports = {};
-$c440c69b742609b0$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename).toString();
 
 
 
@@ -2558,7 +2552,7 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
     const isXConnected = Number.isInteger(user?.followerCount);
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         style: style,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).userItem,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).userItem,
         onClick: ()=>onUserClick(user),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
@@ -2568,7 +2562,7 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                 },
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).row,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).row,
                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($a3U2C$reactflipmove))), {
                             typeName: null,
                             appearAnimation: "fade",
@@ -2579,13 +2573,13 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                     src: user.pictureUrl,
                                     alt: `${user.name} profile picture`
                                 }) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).imgFallback,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).imgFallback,
                                     style: {
                                         background: '#E7E4E2'
                                     }
                                 }),
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).column,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).column,
                                     children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($a3U2C$reactflipmove))), {
                                         typeName: null,
                                         appearAnimation: "fade",
@@ -2642,7 +2636,7 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                         children: "connected X account verified"
                                                     }),
                                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($c440c69b742609b0$exports))),
+                                                        src: (0, {}),
                                                         style: {
                                                             height: 16,
                                                             width: 16,
@@ -2665,7 +2659,7 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                         children: "verified by passport"
                                                     }),
                                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($229990fe14e0462a$exports))),
+                                                        src: (0, {}),
                                                         style: {
                                                             height: 20,
                                                             width: 20,
@@ -2709,7 +2703,7 @@ const $21d72efb2ee09a08$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                 content: "Connect your X account",
                                 placement: "left",
                                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialX))), {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports)))['x-icon'],
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports)))['x-icon'],
                                     "data-tooltip-id": "my-tooltip-2",
                                     onClick: ()=>handleTwitterLogin()
                                 })
@@ -2742,12 +2736,12 @@ var $21d72efb2ee09a08$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
             },
             ...style
         },
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).screenWithGroupContent, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).screenWithGroupContent, className),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).close,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).close,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialClose))), {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).back,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).back,
                     onClick: close
                 })
             }),
@@ -2767,27 +2761,27 @@ var $21d72efb2ee09a08$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                     },
                     children: [
                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkboxes__row,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkboxes__row,
                             children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkboxes__item,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkboxes__item,
                                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("label", {
-                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports)))['style-c']}`,
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports)))['style-c']}`,
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
                                             type: "checkbox",
                                             onChange: (e)=>toggleVerifiedByX(e.target.checked)
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox__checkmark
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox__checkmark
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox__body,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox__body,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                                     children: "twitter verified"
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($c440c69b742609b0$exports))),
+                                                    src: (0, {}),
                                                     style: {
                                                         height: 16,
                                                         width: 16,
@@ -2802,27 +2796,27 @@ var $21d72efb2ee09a08$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                             })
                         }),
                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkboxes__row,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkboxes__row,
                             children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkboxes__item,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkboxes__item,
                                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("label", {
-                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports)))['style-c']}`,
+                                    className: `${(0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox} ${(0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports)))['style-c']}`,
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
                                             type: "checkbox",
                                             onChange: (e)=>toggleVerifiedByKYC(e.target.checked)
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox__checkmark
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox__checkmark
                                         }),
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).checkbox__body,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).checkbox__body,
                                             children: [
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                                     children: "verified by passport"
                                                 }),
                                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($229990fe14e0462a$exports))),
+                                                    src: (0, {}),
                                                     style: {
                                                         height: 16,
                                                         width: 16,
@@ -2850,7 +2844,7 @@ var $21d72efb2ee09a08$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 //     <b>Yay! You have seen it all</b>
                 //   </p>
                 // }
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($3ccbdfc078fd10e3$exports))).usersContainer,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($891f22c414156158$exports))).usersContainer,
                 children: users.map((user)=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)($21d72efb2ee09a08$export$1f44aaf2ec115b54, {
                         user: user,
                         onUserClick: onUserClick
@@ -2871,35 +2865,35 @@ var $21d72efb2ee09a08$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $057865952bf4f04e$exports = {};
+var $37f0d1662ade1d20$exports = {};
 
-$parcel$export($057865952bf4f04e$exports, "back", function () { return $057865952bf4f04e$export$7c341cb16fc91138; }, function (v) { return $057865952bf4f04e$export$7c341cb16fc91138 = v; });
-$parcel$export($057865952bf4f04e$exports, "backContainer", function () { return $057865952bf4f04e$export$4effee6a14a93095; }, function (v) { return $057865952bf4f04e$export$4effee6a14a93095 = v; });
-$parcel$export($057865952bf4f04e$exports, "button", function () { return $057865952bf4f04e$export$2ba01fb71ed41cb6; }, function (v) { return $057865952bf4f04e$export$2ba01fb71ed41cb6 = v; });
-$parcel$export($057865952bf4f04e$exports, "differentTabs", function () { return $057865952bf4f04e$export$b70bd1b6fa2267e5; }, function (v) { return $057865952bf4f04e$export$b70bd1b6fa2267e5 = v; });
-$parcel$export($057865952bf4f04e$exports, "differentTabs2", function () { return $057865952bf4f04e$export$11056a9a5a9dfdf9; }, function (v) { return $057865952bf4f04e$export$11056a9a5a9dfdf9 = v; });
-$parcel$export($057865952bf4f04e$exports, "screenWithGroupContent", function () { return $057865952bf4f04e$export$de3da254965f2f43; }, function (v) { return $057865952bf4f04e$export$de3da254965f2f43 = v; });
-$parcel$export($057865952bf4f04e$exports, "selected", function () { return $057865952bf4f04e$export$d90250155de6d7e7; }, function (v) { return $057865952bf4f04e$export$d90250155de6d7e7 = v; });
-$parcel$export($057865952bf4f04e$exports, "similarity", function () { return $057865952bf4f04e$export$16a4d76eabe7aabb; }, function (v) { return $057865952bf4f04e$export$16a4d76eabe7aabb = v; });
-$parcel$export($057865952bf4f04e$exports, "tabs", function () { return $057865952bf4f04e$export$39f5674517ec0000; }, function (v) { return $057865952bf4f04e$export$39f5674517ec0000 = v; });
-var $057865952bf4f04e$export$7c341cb16fc91138;
-var $057865952bf4f04e$export$4effee6a14a93095;
-var $057865952bf4f04e$export$2ba01fb71ed41cb6;
-var $057865952bf4f04e$export$b70bd1b6fa2267e5;
-var $057865952bf4f04e$export$11056a9a5a9dfdf9;
-var $057865952bf4f04e$export$de3da254965f2f43;
-var $057865952bf4f04e$export$d90250155de6d7e7;
-var $057865952bf4f04e$export$16a4d76eabe7aabb;
-var $057865952bf4f04e$export$39f5674517ec0000;
-$057865952bf4f04e$export$7c341cb16fc91138 = `_31v-EG_back`;
-$057865952bf4f04e$export$4effee6a14a93095 = `_31v-EG_backContainer`;
-$057865952bf4f04e$export$2ba01fb71ed41cb6 = `_31v-EG_button`;
-$057865952bf4f04e$export$b70bd1b6fa2267e5 = `_31v-EG_differentTabs`;
-$057865952bf4f04e$export$11056a9a5a9dfdf9 = `_31v-EG_differentTabs2`;
-$057865952bf4f04e$export$de3da254965f2f43 = `_31v-EG_screenWithGroupContent`;
-$057865952bf4f04e$export$d90250155de6d7e7 = `_31v-EG_selected`;
-$057865952bf4f04e$export$16a4d76eabe7aabb = `_31v-EG_similarity`;
-$057865952bf4f04e$export$39f5674517ec0000 = `_31v-EG_tabs`;
+$parcel$export($37f0d1662ade1d20$exports, "back", function () { return $37f0d1662ade1d20$export$7c341cb16fc91138; }, function (v) { return $37f0d1662ade1d20$export$7c341cb16fc91138 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "backContainer", function () { return $37f0d1662ade1d20$export$4effee6a14a93095; }, function (v) { return $37f0d1662ade1d20$export$4effee6a14a93095 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "button", function () { return $37f0d1662ade1d20$export$2ba01fb71ed41cb6; }, function (v) { return $37f0d1662ade1d20$export$2ba01fb71ed41cb6 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "differentTabs", function () { return $37f0d1662ade1d20$export$b70bd1b6fa2267e5; }, function (v) { return $37f0d1662ade1d20$export$b70bd1b6fa2267e5 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "differentTabs2", function () { return $37f0d1662ade1d20$export$11056a9a5a9dfdf9; }, function (v) { return $37f0d1662ade1d20$export$11056a9a5a9dfdf9 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "screenWithGroupContent", function () { return $37f0d1662ade1d20$export$de3da254965f2f43; }, function (v) { return $37f0d1662ade1d20$export$de3da254965f2f43 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "selected", function () { return $37f0d1662ade1d20$export$d90250155de6d7e7; }, function (v) { return $37f0d1662ade1d20$export$d90250155de6d7e7 = v; });
+$parcel$export($37f0d1662ade1d20$exports, "similarity", function () { return $37f0d1662ade1d20$export$16a4d76eabe7aabb; }, function (v) { return $37f0d1662ade1d20$export$16a4d76eabe7aabb = v; });
+$parcel$export($37f0d1662ade1d20$exports, "tabs", function () { return $37f0d1662ade1d20$export$39f5674517ec0000; }, function (v) { return $37f0d1662ade1d20$export$39f5674517ec0000 = v; });
+var $37f0d1662ade1d20$export$7c341cb16fc91138;
+var $37f0d1662ade1d20$export$4effee6a14a93095;
+var $37f0d1662ade1d20$export$2ba01fb71ed41cb6;
+var $37f0d1662ade1d20$export$b70bd1b6fa2267e5;
+var $37f0d1662ade1d20$export$11056a9a5a9dfdf9;
+var $37f0d1662ade1d20$export$de3da254965f2f43;
+var $37f0d1662ade1d20$export$d90250155de6d7e7;
+var $37f0d1662ade1d20$export$16a4d76eabe7aabb;
+var $37f0d1662ade1d20$export$39f5674517ec0000;
+$37f0d1662ade1d20$export$7c341cb16fc91138 = `YPwnha_back`;
+$37f0d1662ade1d20$export$4effee6a14a93095 = `YPwnha_backContainer`;
+$37f0d1662ade1d20$export$2ba01fb71ed41cb6 = `YPwnha_button`;
+$37f0d1662ade1d20$export$b70bd1b6fa2267e5 = `YPwnha_differentTabs`;
+$37f0d1662ade1d20$export$11056a9a5a9dfdf9 = `YPwnha_differentTabs2`;
+$37f0d1662ade1d20$export$de3da254965f2f43 = `YPwnha_screenWithGroupContent`;
+$37f0d1662ade1d20$export$d90250155de6d7e7 = `YPwnha_selected`;
+$37f0d1662ade1d20$export$16a4d76eabe7aabb = `YPwnha_similarity`;
+$37f0d1662ade1d20$export$39f5674517ec0000 = `YPwnha_tabs`;
 
 
 const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin, logout: logout }, ref)=>{
@@ -2916,12 +2910,12 @@ const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         id: "user-content-scroll-target",
         ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).screenWithGroupContent,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).screenWithGroupContent,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).backContainer,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).backContainer,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialClose))), {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).back,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).back,
                     onClick: back
                 })
             }),
@@ -2935,11 +2929,11 @@ const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react
                 onUserClick: ()=>{},
                 logout: logout,
                 children: !(0, ($parcel$interopDefault($a3U2C$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("p", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).similarity,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).similarity,
                     children: [
                         "Similarity to you: ",
                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("span", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).similarityMeter,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).similarityMeter,
                             children: [
                                 similarity,
                                 "%"
@@ -2950,7 +2944,7 @@ const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react
             }),
             !(0, ($parcel$interopDefault($a3U2C$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$reactjsxruntime.Fragment), {
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).button,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).button,
                     onClick: ()=>{
                         const newShowDifference = !showDifference;
                         setShowDifference(newShowDifference);
@@ -2987,11 +2981,11 @@ const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react
                         }
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).tabs,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).tabs,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                                    [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedTab === 'answers'
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedTab === 'answers'
                                 }),
                                 onClick: ()=>{
                                     setSelectedTab('answers');
@@ -3001,7 +2995,7 @@ const $9282d3fa2c14f2a4$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $a3U2C$react
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                                 className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                                    [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedTab === 'questions'
+                                    [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedTab === 'questions'
                                 }),
                                 onClick: ()=>{
                                     window.mixpanel.track('Select User Questions Tab');
@@ -3043,7 +3037,7 @@ const $9282d3fa2c14f2a4$export$6241fe9ea73c6c74 = /*#__PURE__*/ (0, $a3U2C$react
             dataLength: questions?.length || 0,
             next: fetchQuestions,
             hasMore: hasMore,
-            className: (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).usersItems,
+            className: (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).usersItems,
             children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$reactflipmove))), {
                 appearAnimation: "elevator",
                 typeName: null,
@@ -3091,11 +3085,11 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                 }
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).differentTabs),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).differentTabs),
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedTab === 'different'
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedTab === 'different'
                         }),
                         onClick: ()=>{
                             window.mixpanel.track('Select Different Tab');
@@ -3105,7 +3099,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedTab === 'same'
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedTab === 'same'
                         }),
                         onClick: ()=>{
                             window.mixpanel.track('Select Same Tab');
@@ -3115,7 +3109,7 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedTab === 'notAnswered'
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedTab === 'notAnswered'
                         }),
                         onClick: ()=>{
                             window.mixpanel.track('Select Not Answered Tab');
@@ -3126,18 +3120,18 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
                 ]
             }),
             selectedTab === 'notAnswered' ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).differentTabs2),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).tabs, (0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).differentTabs2),
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedNestedTab === 'byMe'
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedNestedTab === 'byMe'
                         }),
                         onClick: ()=>setSelectedNestedTab('byMe'),
                         children: "By Me"
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
                         className: (0, ($parcel$interopDefault($a3U2C$classnames)))({
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($057865952bf4f04e$exports))).selected]: selectedNestedTab === 'byHim'
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($37f0d1662ade1d20$exports))).selected]: selectedNestedTab === 'byHim'
                         }),
                         onClick: ()=>setSelectedNestedTab('byHim'),
                         children: "By Him/Her"
@@ -3161,29 +3155,29 @@ respond, createNewGroup: createNewGroup, onUserClick: onUserClick, answers: answ
 
 
 
-var $1d4f3034bbb5d29a$exports = {};
+var $573f3f4d4aeb06ed$exports = {};
 
-$parcel$export($1d4f3034bbb5d29a$exports, "buttonsOutside", function () { return $1d4f3034bbb5d29a$export$eb4f292bdd97cb15; }, function (v) { return $1d4f3034bbb5d29a$export$eb4f292bdd97cb15 = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "dropdownContainer", function () { return $1d4f3034bbb5d29a$export$a3681dba3470c8c4; }, function (v) { return $1d4f3034bbb5d29a$export$a3681dba3470c8c4 = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "dropdownItemsContainer", function () { return $1d4f3034bbb5d29a$export$960d6a7eb8ce632b; }, function (v) { return $1d4f3034bbb5d29a$export$960d6a7eb8ce632b = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "dropdownValue", function () { return $1d4f3034bbb5d29a$export$2ff2bc1709095d00; }, function (v) { return $1d4f3034bbb5d29a$export$2ff2bc1709095d00 = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "input", function () { return $1d4f3034bbb5d29a$export$b7e3ae3d7c15e42e; }, function (v) { return $1d4f3034bbb5d29a$export$b7e3ae3d7c15e42e = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "search", function () { return $1d4f3034bbb5d29a$export$d76128d007d19019; }, function (v) { return $1d4f3034bbb5d29a$export$d76128d007d19019 = v; });
-$parcel$export($1d4f3034bbb5d29a$exports, "text", function () { return $1d4f3034bbb5d29a$export$6f093cfa640b7166; }, function (v) { return $1d4f3034bbb5d29a$export$6f093cfa640b7166 = v; });
-var $1d4f3034bbb5d29a$export$eb4f292bdd97cb15;
-var $1d4f3034bbb5d29a$export$a3681dba3470c8c4;
-var $1d4f3034bbb5d29a$export$960d6a7eb8ce632b;
-var $1d4f3034bbb5d29a$export$2ff2bc1709095d00;
-var $1d4f3034bbb5d29a$export$b7e3ae3d7c15e42e;
-var $1d4f3034bbb5d29a$export$d76128d007d19019;
-var $1d4f3034bbb5d29a$export$6f093cfa640b7166;
-$1d4f3034bbb5d29a$export$eb4f292bdd97cb15 = `_6W1esa_buttonsOutside`;
-$1d4f3034bbb5d29a$export$a3681dba3470c8c4 = `_6W1esa_dropdownContainer`;
-$1d4f3034bbb5d29a$export$960d6a7eb8ce632b = `_6W1esa_dropdownItemsContainer`;
-$1d4f3034bbb5d29a$export$2ff2bc1709095d00 = `_6W1esa_dropdownValue`;
-$1d4f3034bbb5d29a$export$b7e3ae3d7c15e42e = `_6W1esa_input`;
-$1d4f3034bbb5d29a$export$d76128d007d19019 = `_6W1esa_search`;
-$1d4f3034bbb5d29a$export$6f093cfa640b7166 = `_6W1esa_text`;
+$parcel$export($573f3f4d4aeb06ed$exports, "buttonsOutside", function () { return $573f3f4d4aeb06ed$export$eb4f292bdd97cb15; }, function (v) { return $573f3f4d4aeb06ed$export$eb4f292bdd97cb15 = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "dropdownContainer", function () { return $573f3f4d4aeb06ed$export$a3681dba3470c8c4; }, function (v) { return $573f3f4d4aeb06ed$export$a3681dba3470c8c4 = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "dropdownItemsContainer", function () { return $573f3f4d4aeb06ed$export$960d6a7eb8ce632b; }, function (v) { return $573f3f4d4aeb06ed$export$960d6a7eb8ce632b = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "dropdownValue", function () { return $573f3f4d4aeb06ed$export$2ff2bc1709095d00; }, function (v) { return $573f3f4d4aeb06ed$export$2ff2bc1709095d00 = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "input", function () { return $573f3f4d4aeb06ed$export$b7e3ae3d7c15e42e; }, function (v) { return $573f3f4d4aeb06ed$export$b7e3ae3d7c15e42e = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "search", function () { return $573f3f4d4aeb06ed$export$d76128d007d19019; }, function (v) { return $573f3f4d4aeb06ed$export$d76128d007d19019 = v; });
+$parcel$export($573f3f4d4aeb06ed$exports, "text", function () { return $573f3f4d4aeb06ed$export$6f093cfa640b7166; }, function (v) { return $573f3f4d4aeb06ed$export$6f093cfa640b7166 = v; });
+var $573f3f4d4aeb06ed$export$eb4f292bdd97cb15;
+var $573f3f4d4aeb06ed$export$a3681dba3470c8c4;
+var $573f3f4d4aeb06ed$export$960d6a7eb8ce632b;
+var $573f3f4d4aeb06ed$export$2ff2bc1709095d00;
+var $573f3f4d4aeb06ed$export$b7e3ae3d7c15e42e;
+var $573f3f4d4aeb06ed$export$d76128d007d19019;
+var $573f3f4d4aeb06ed$export$6f093cfa640b7166;
+$573f3f4d4aeb06ed$export$eb4f292bdd97cb15 = `vYFvXG_buttonsOutside`;
+$573f3f4d4aeb06ed$export$a3681dba3470c8c4 = `vYFvXG_dropdownContainer`;
+$573f3f4d4aeb06ed$export$960d6a7eb8ce632b = `vYFvXG_dropdownItemsContainer`;
+$573f3f4d4aeb06ed$export$2ff2bc1709095d00 = `vYFvXG_dropdownValue`;
+$573f3f4d4aeb06ed$export$b7e3ae3d7c15e42e = `vYFvXG_input`;
+$573f3f4d4aeb06ed$export$d76128d007d19019 = `vYFvXG_search`;
+$573f3f4d4aeb06ed$export$6f093cfa640b7166 = `vYFvXG_text`;
 
 
 var $98465fae5e05657f$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ search: search, buttonsOutside: buttonsOutside = false, className: className, style: style }, ref2)=>{
@@ -3199,30 +3193,30 @@ var $98465fae5e05657f$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
             if (ref2) ref2(node);
         },
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).text, className, {
-            [(0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).buttonsOutside]: buttonsOutside
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).text, className, {
+            [(0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).buttonsOutside]: buttonsOutside
         }),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("input", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).input,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).input,
                 placeholder: "Search here...",
                 onChange: (e)=>setText(e.target.value),
                 value: text
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).dropdownContainer,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).dropdownContainer,
                 ref: ref,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).dropdownValue,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).dropdownValue,
                         onClick: ()=>setShowDropdown(true),
                         children: dropdownValue
                     }),
                     showDropdown && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).dropdownItemsContainer,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).dropdownItemsContainer,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).dropdownItem,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).dropdownItem,
                                 onClick: (e)=>{
                                     e.stopPropagation();
                                     e.preventDefault();
@@ -3234,7 +3228,7 @@ var $98465fae5e05657f$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                 })
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).dropdownItem,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).dropdownItem,
                                 onClick: (e)=>{
                                     e.stopPropagation();
                                     e.preventDefault();
@@ -3248,13 +3242,13 @@ var $98465fae5e05657f$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                         ]
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialExpandMore))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).expandIcon,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).expandIcon,
                         onClick: ()=>setShowDropdown(true)
                     })
                 ]
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("button", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($1d4f3034bbb5d29a$exports))).search,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($573f3f4d4aeb06ed$exports))).search,
                 onClick: ()=>search(dropdownValue, text),
                 children: [
                     "Find",
@@ -3278,20 +3272,20 @@ var $98465fae5e05657f$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $a3a44d4734de5429$exports = {};
+var $1ded834500f65e9d$exports = {};
 
-$parcel$export($a3a44d4734de5429$exports, "back", function () { return $a3a44d4734de5429$export$7c341cb16fc91138; }, function (v) { return $a3a44d4734de5429$export$7c341cb16fc91138 = v; });
-$parcel$export($a3a44d4734de5429$exports, "screenWithGroupContent", function () { return $a3a44d4734de5429$export$de3da254965f2f43; }, function (v) { return $a3a44d4734de5429$export$de3da254965f2f43 = v; });
-$parcel$export($a3a44d4734de5429$exports, "total", function () { return $a3a44d4734de5429$export$9086bb9c16b2b5b; }, function (v) { return $a3a44d4734de5429$export$9086bb9c16b2b5b = v; });
-$parcel$export($a3a44d4734de5429$exports, "totalAndBack", function () { return $a3a44d4734de5429$export$ef9502a2481467bc; }, function (v) { return $a3a44d4734de5429$export$ef9502a2481467bc = v; });
-var $a3a44d4734de5429$export$7c341cb16fc91138;
-var $a3a44d4734de5429$export$de3da254965f2f43;
-var $a3a44d4734de5429$export$9086bb9c16b2b5b;
-var $a3a44d4734de5429$export$ef9502a2481467bc;
-$a3a44d4734de5429$export$7c341cb16fc91138 = `BbEWnq_back`;
-$a3a44d4734de5429$export$de3da254965f2f43 = `BbEWnq_screenWithGroupContent`;
-$a3a44d4734de5429$export$9086bb9c16b2b5b = `BbEWnq_total`;
-$a3a44d4734de5429$export$ef9502a2481467bc = `BbEWnq_totalAndBack`;
+$parcel$export($1ded834500f65e9d$exports, "back", function () { return $1ded834500f65e9d$export$7c341cb16fc91138; }, function (v) { return $1ded834500f65e9d$export$7c341cb16fc91138 = v; });
+$parcel$export($1ded834500f65e9d$exports, "screenWithGroupContent", function () { return $1ded834500f65e9d$export$de3da254965f2f43; }, function (v) { return $1ded834500f65e9d$export$de3da254965f2f43 = v; });
+$parcel$export($1ded834500f65e9d$exports, "total", function () { return $1ded834500f65e9d$export$9086bb9c16b2b5b; }, function (v) { return $1ded834500f65e9d$export$9086bb9c16b2b5b = v; });
+$parcel$export($1ded834500f65e9d$exports, "totalAndBack", function () { return $1ded834500f65e9d$export$ef9502a2481467bc; }, function (v) { return $1ded834500f65e9d$export$ef9502a2481467bc = v; });
+var $1ded834500f65e9d$export$7c341cb16fc91138;
+var $1ded834500f65e9d$export$de3da254965f2f43;
+var $1ded834500f65e9d$export$9086bb9c16b2b5b;
+var $1ded834500f65e9d$export$ef9502a2481467bc;
+$1ded834500f65e9d$export$7c341cb16fc91138 = `-UEtmq_back`;
+$1ded834500f65e9d$export$de3da254965f2f43 = `-UEtmq_screenWithGroupContent`;
+$1ded834500f65e9d$export$9086bb9c16b2b5b = `-UEtmq_total`;
+$1ded834500f65e9d$export$ef9502a2481467bc = `-UEtmq_totalAndBack`;
 
 
 (0, ($parcel$interopDefault($a3U2C$handlebars))).registerHelper('bold', function(options) {
@@ -3305,21 +3299,21 @@ var $cbffa5f6c9e8ac6e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $69ab011e6185c3e2$export$2e2bcd8739ae039), {
         id: "questions-search-scroll-target",
         ref: ref,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($a3a44d4734de5429$exports))).screenWithGroupContent),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))(className, (0, (/*@__PURE__*/$parcel$interopDefault($1ded834500f65e9d$exports))).screenWithGroupContent),
         style: style,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($a3a44d4734de5429$exports))).totalAndBack,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($1ded834500f65e9d$exports))).totalAndBack,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($a3a44d4734de5429$exports))).total,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1ded834500f65e9d$exports))).total,
                         children: [
                             total,
                             " questions found"
                         ]
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialClose))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($a3a44d4734de5429$exports))).back,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1ded834500f65e9d$exports))).back,
                         onClick: back
                     })
                 ]
@@ -3359,32 +3353,32 @@ var $cbffa5f6c9e8ac6e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $48ce7e6fe7c36276$exports = {};
+var $583561cd6d40e352$exports = {};
 
-$parcel$export($48ce7e6fe7c36276$exports, "back", function () { return $48ce7e6fe7c36276$export$7c341cb16fc91138; }, function (v) { return $48ce7e6fe7c36276$export$7c341cb16fc91138 = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "column", function () { return $48ce7e6fe7c36276$export$4e0c71f277ca26b3; }, function (v) { return $48ce7e6fe7c36276$export$4e0c71f277ca26b3 = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "row", function () { return $48ce7e6fe7c36276$export$120ff0929b202a6d; }, function (v) { return $48ce7e6fe7c36276$export$120ff0929b202a6d = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "total", function () { return $48ce7e6fe7c36276$export$9086bb9c16b2b5b; }, function (v) { return $48ce7e6fe7c36276$export$9086bb9c16b2b5b = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "totalAndBack", function () { return $48ce7e6fe7c36276$export$ef9502a2481467bc; }, function (v) { return $48ce7e6fe7c36276$export$ef9502a2481467bc = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "userItem", function () { return $48ce7e6fe7c36276$export$f6bda04bc7d10a12; }, function (v) { return $48ce7e6fe7c36276$export$f6bda04bc7d10a12 = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "usersContainer", function () { return $48ce7e6fe7c36276$export$771ca420b1b6ed17; }, function (v) { return $48ce7e6fe7c36276$export$771ca420b1b6ed17 = v; });
-$parcel$export($48ce7e6fe7c36276$exports, "usersItems", function () { return $48ce7e6fe7c36276$export$2778a17561d67130; }, function (v) { return $48ce7e6fe7c36276$export$2778a17561d67130 = v; });
-var $48ce7e6fe7c36276$export$7c341cb16fc91138;
-var $48ce7e6fe7c36276$export$4e0c71f277ca26b3;
-var $48ce7e6fe7c36276$export$120ff0929b202a6d;
-var $48ce7e6fe7c36276$export$9086bb9c16b2b5b;
-var $48ce7e6fe7c36276$export$ef9502a2481467bc;
-var $48ce7e6fe7c36276$export$f6bda04bc7d10a12;
-var $48ce7e6fe7c36276$export$771ca420b1b6ed17;
-var $48ce7e6fe7c36276$export$2778a17561d67130;
-$48ce7e6fe7c36276$export$7c341cb16fc91138 = `_9WjUxq_back`;
-$48ce7e6fe7c36276$export$4e0c71f277ca26b3 = `_9WjUxq_column`;
-$48ce7e6fe7c36276$export$120ff0929b202a6d = `_9WjUxq_row`;
-$48ce7e6fe7c36276$export$9086bb9c16b2b5b = `_9WjUxq_total`;
-$48ce7e6fe7c36276$export$ef9502a2481467bc = `_9WjUxq_totalAndBack`;
-$48ce7e6fe7c36276$export$f6bda04bc7d10a12 = `_9WjUxq_userItem`;
-$48ce7e6fe7c36276$export$771ca420b1b6ed17 = `_9WjUxq_usersContainer`;
-$48ce7e6fe7c36276$export$2778a17561d67130 = `_9WjUxq_usersItems`;
+$parcel$export($583561cd6d40e352$exports, "back", function () { return $583561cd6d40e352$export$7c341cb16fc91138; }, function (v) { return $583561cd6d40e352$export$7c341cb16fc91138 = v; });
+$parcel$export($583561cd6d40e352$exports, "column", function () { return $583561cd6d40e352$export$4e0c71f277ca26b3; }, function (v) { return $583561cd6d40e352$export$4e0c71f277ca26b3 = v; });
+$parcel$export($583561cd6d40e352$exports, "row", function () { return $583561cd6d40e352$export$120ff0929b202a6d; }, function (v) { return $583561cd6d40e352$export$120ff0929b202a6d = v; });
+$parcel$export($583561cd6d40e352$exports, "total", function () { return $583561cd6d40e352$export$9086bb9c16b2b5b; }, function (v) { return $583561cd6d40e352$export$9086bb9c16b2b5b = v; });
+$parcel$export($583561cd6d40e352$exports, "totalAndBack", function () { return $583561cd6d40e352$export$ef9502a2481467bc; }, function (v) { return $583561cd6d40e352$export$ef9502a2481467bc = v; });
+$parcel$export($583561cd6d40e352$exports, "userItem", function () { return $583561cd6d40e352$export$f6bda04bc7d10a12; }, function (v) { return $583561cd6d40e352$export$f6bda04bc7d10a12 = v; });
+$parcel$export($583561cd6d40e352$exports, "usersContainer", function () { return $583561cd6d40e352$export$771ca420b1b6ed17; }, function (v) { return $583561cd6d40e352$export$771ca420b1b6ed17 = v; });
+$parcel$export($583561cd6d40e352$exports, "usersItems", function () { return $583561cd6d40e352$export$2778a17561d67130; }, function (v) { return $583561cd6d40e352$export$2778a17561d67130 = v; });
+var $583561cd6d40e352$export$7c341cb16fc91138;
+var $583561cd6d40e352$export$4e0c71f277ca26b3;
+var $583561cd6d40e352$export$120ff0929b202a6d;
+var $583561cd6d40e352$export$9086bb9c16b2b5b;
+var $583561cd6d40e352$export$ef9502a2481467bc;
+var $583561cd6d40e352$export$f6bda04bc7d10a12;
+var $583561cd6d40e352$export$771ca420b1b6ed17;
+var $583561cd6d40e352$export$2778a17561d67130;
+$583561cd6d40e352$export$7c341cb16fc91138 = `ZxHO7q_back`;
+$583561cd6d40e352$export$4e0c71f277ca26b3 = `ZxHO7q_column`;
+$583561cd6d40e352$export$120ff0929b202a6d = `ZxHO7q_row`;
+$583561cd6d40e352$export$9086bb9c16b2b5b = `ZxHO7q_total`;
+$583561cd6d40e352$export$ef9502a2481467bc = `ZxHO7q_totalAndBack`;
+$583561cd6d40e352$export$f6bda04bc7d10a12 = `ZxHO7q_userItem`;
+$583561cd6d40e352$export$771ca420b1b6ed17 = `ZxHO7q_usersContainer`;
+$583561cd6d40e352$export$2778a17561d67130 = `ZxHO7q_usersItems`;
 
 
 (0, ($parcel$interopDefault($a3U2C$handlebars))).registerHelper('bold', function(options) {
@@ -3399,20 +3393,20 @@ var $c72c751e836f4f45$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
         style: style,
         id: "users-search-scroll-target",
         ref: ref,
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).usersContainer,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).usersContainer,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).totalAndBack,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).totalAndBack,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).total,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).total,
                         children: [
                             total,
                             " users found"
                         ]
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialClose))), {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).back,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).back,
                         onClick: back
                     })
                 ]
@@ -3428,25 +3422,25 @@ var $c72c751e836f4f45$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                 //     <b>Yay! You have seen it all</b>
                 //   </p>
                 // }
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).usersItems,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).usersItems,
                 children: users.map((user)=>{
                     let htmlOutput;
                     if (search) htmlOutput = template({
                         text: user.username
                     });
                     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).userItem,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).userItem,
                         onClick: ()=>onUserClick(user),
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).row,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).row,
                                 children: [
                                     user.pictureUrl && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
                                         src: user.pictureUrl,
                                         alt: `${user.name} profile picture`
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($48ce7e6fe7c36276$exports))).column,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($583561cd6d40e352$exports))).column,
                                         children: [
                                             htmlOutput ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                                 dangerouslySetInnerHTML: {
@@ -3474,7 +3468,7 @@ var $c72c751e836f4f45$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                         children: "twitter verified"
                                                     }),
                                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($c440c69b742609b0$exports))),
+                                                        src: (0, {}),
                                                         style: {
                                                             height: 16,
                                                             width: 16,
@@ -3497,7 +3491,7 @@ var $c72c751e836f4f45$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
                                                         children: "verified by passport"
                                                     }),
                                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($229990fe14e0462a$exports))),
+                                                        src: (0, {}),
                                                         style: {
                                                             height: 20,
                                                             width: 20,
@@ -3538,26 +3532,26 @@ var $c72c751e836f4f45$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $a3U2C$react.fo
 
 
 
-var $46e6ea55c260a251$exports = {};
+var $ec1ad06292e66347$exports = {};
 
-$parcel$export($46e6ea55c260a251$exports, "dropdownContainer", function () { return $46e6ea55c260a251$export$a3681dba3470c8c4; }, function (v) { return $46e6ea55c260a251$export$a3681dba3470c8c4 = v; });
-$parcel$export($46e6ea55c260a251$exports, "dropdownItemsContainer", function () { return $46e6ea55c260a251$export$960d6a7eb8ce632b; }, function (v) { return $46e6ea55c260a251$export$960d6a7eb8ce632b = v; });
-$parcel$export($46e6ea55c260a251$exports, "dropdownValue", function () { return $46e6ea55c260a251$export$2ff2bc1709095d00; }, function (v) { return $46e6ea55c260a251$export$2ff2bc1709095d00 = v; });
-$parcel$export($46e6ea55c260a251$exports, "dropdownWithLabel", function () { return $46e6ea55c260a251$export$4c1173217024b6d6; }, function (v) { return $46e6ea55c260a251$export$4c1173217024b6d6 = v; });
-$parcel$export($46e6ea55c260a251$exports, "search", function () { return $46e6ea55c260a251$export$d76128d007d19019; }, function (v) { return $46e6ea55c260a251$export$d76128d007d19019 = v; });
-$parcel$export($46e6ea55c260a251$exports, "text", function () { return $46e6ea55c260a251$export$6f093cfa640b7166; }, function (v) { return $46e6ea55c260a251$export$6f093cfa640b7166 = v; });
-var $46e6ea55c260a251$export$a3681dba3470c8c4;
-var $46e6ea55c260a251$export$960d6a7eb8ce632b;
-var $46e6ea55c260a251$export$2ff2bc1709095d00;
-var $46e6ea55c260a251$export$4c1173217024b6d6;
-var $46e6ea55c260a251$export$d76128d007d19019;
-var $46e6ea55c260a251$export$6f093cfa640b7166;
-$46e6ea55c260a251$export$a3681dba3470c8c4 = `ue_oWq_dropdownContainer`;
-$46e6ea55c260a251$export$960d6a7eb8ce632b = `ue_oWq_dropdownItemsContainer`;
-$46e6ea55c260a251$export$2ff2bc1709095d00 = `ue_oWq_dropdownValue`;
-$46e6ea55c260a251$export$4c1173217024b6d6 = `ue_oWq_dropdownWithLabel`;
-$46e6ea55c260a251$export$d76128d007d19019 = `ue_oWq_search`;
-$46e6ea55c260a251$export$6f093cfa640b7166 = `ue_oWq_text`;
+$parcel$export($ec1ad06292e66347$exports, "dropdownContainer", function () { return $ec1ad06292e66347$export$a3681dba3470c8c4; }, function (v) { return $ec1ad06292e66347$export$a3681dba3470c8c4 = v; });
+$parcel$export($ec1ad06292e66347$exports, "dropdownItemsContainer", function () { return $ec1ad06292e66347$export$960d6a7eb8ce632b; }, function (v) { return $ec1ad06292e66347$export$960d6a7eb8ce632b = v; });
+$parcel$export($ec1ad06292e66347$exports, "dropdownValue", function () { return $ec1ad06292e66347$export$2ff2bc1709095d00; }, function (v) { return $ec1ad06292e66347$export$2ff2bc1709095d00 = v; });
+$parcel$export($ec1ad06292e66347$exports, "dropdownWithLabel", function () { return $ec1ad06292e66347$export$4c1173217024b6d6; }, function (v) { return $ec1ad06292e66347$export$4c1173217024b6d6 = v; });
+$parcel$export($ec1ad06292e66347$exports, "search", function () { return $ec1ad06292e66347$export$d76128d007d19019; }, function (v) { return $ec1ad06292e66347$export$d76128d007d19019 = v; });
+$parcel$export($ec1ad06292e66347$exports, "text", function () { return $ec1ad06292e66347$export$6f093cfa640b7166; }, function (v) { return $ec1ad06292e66347$export$6f093cfa640b7166 = v; });
+var $ec1ad06292e66347$export$a3681dba3470c8c4;
+var $ec1ad06292e66347$export$960d6a7eb8ce632b;
+var $ec1ad06292e66347$export$2ff2bc1709095d00;
+var $ec1ad06292e66347$export$4c1173217024b6d6;
+var $ec1ad06292e66347$export$d76128d007d19019;
+var $ec1ad06292e66347$export$6f093cfa640b7166;
+$ec1ad06292e66347$export$a3681dba3470c8c4 = `WH9VhW_dropdownContainer`;
+$ec1ad06292e66347$export$960d6a7eb8ce632b = `WH9VhW_dropdownItemsContainer`;
+$ec1ad06292e66347$export$2ff2bc1709095d00 = `WH9VhW_dropdownValue`;
+$ec1ad06292e66347$export$4c1173217024b6d6 = `WH9VhW_dropdownWithLabel`;
+$ec1ad06292e66347$export$d76128d007d19019 = `WH9VhW_search`;
+$ec1ad06292e66347$export$6f093cfa640b7166 = `WH9VhW_text`;
 
 
 const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ sort: sort = 'Most Answered', duration: duration = 'Week', setSort: setSort, setDuration: setDuration, className: className, style: style }, ref3)=>{
@@ -3586,10 +3580,10 @@ const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
         ref: ref3,
         style: style,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).text, className),
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).text, className),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownWithLabel,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownWithLabel,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $61e5751f6ef211ae$export$2e2bcd8739ae039), {
                         style: {
@@ -3599,47 +3593,47 @@ const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react
                         children: "Showing"
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownContainer,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownContainer,
                         ref: ref,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownValue,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownValue,
                                 onClick: ()=>setShowSortDropdown(true),
                                 children: sort
                             }),
                             showSortDropdown && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItemsContainer,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItemsContainer,
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setSortAndClose('Most Answered'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Most Answered"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setSortAndClose('Latest'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Latest"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setSortAndClose('Most Controversial'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Most Controversial"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setSortAndClose('Most Unanimous'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Most Unanimous"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setSortAndClose('Most Followed Authors'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Most Followed Authors"
@@ -3655,7 +3649,7 @@ const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react
                 ]
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownWithLabel,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownWithLabel,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $61e5751f6ef211ae$export$2e2bcd8739ae039), {
                         style: {
@@ -3668,47 +3662,47 @@ const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react
                         ]
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownContainer,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownContainer,
                         ref: ref2,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownValue,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownValue,
                                 onClick: ()=>setShowDurationDropdown(true),
                                 children: duration
                             }),
                             showDurationDropdown && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItemsContainer,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItemsContainer,
                                 children: [
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setDurationAndClose('Day'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Day"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setDurationAndClose('Week'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Week"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setDurationAndClose('Month'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Month"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setDurationAndClose('Year'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "Year"
                                         })
                                     }),
                                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($46e6ea55c260a251$exports))).dropdownItem,
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($ec1ad06292e66347$exports))).dropdownItem,
                                         onClick: ()=>setDurationAndClose('All Time'),
                                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             children: "All time"
@@ -3740,53 +3734,53 @@ const $5cb6ccce4ae0dc89$export$f8fcd3a81add9e17 = /*#__PURE__*/ (0, $a3U2C$react
 
 
 
-var $c19f81d26323a210$exports = {};
+var $6840313bf222f620$exports = {};
 
-$parcel$export($c19f81d26323a210$exports, "arrowDown", function () { return $c19f81d26323a210$export$f61feb65ec56823b; }, function (v) { return $c19f81d26323a210$export$f61feb65ec56823b = v; });
-$parcel$export($c19f81d26323a210$exports, "bars", function () { return $c19f81d26323a210$export$60912654947077e3; }, function (v) { return $c19f81d26323a210$export$60912654947077e3 = v; });
-$parcel$export($c19f81d26323a210$exports, "barsMinWidth", function () { return $c19f81d26323a210$export$2e07f93cbaeb0394; }, function (v) { return $c19f81d26323a210$export$2e07f93cbaeb0394 = v; });
-$parcel$export($c19f81d26323a210$exports, "card", function () { return $c19f81d26323a210$export$aa3e815946b80764; }, function (v) { return $c19f81d26323a210$export$aa3e815946b80764 = v; });
-$parcel$export($c19f81d26323a210$exports, "close", function () { return $c19f81d26323a210$export$8360e631d277ea4d; }, function (v) { return $c19f81d26323a210$export$8360e631d277ea4d = v; });
-$parcel$export($c19f81d26323a210$exports, "hint", function () { return $c19f81d26323a210$export$464c821cd4347539; }, function (v) { return $c19f81d26323a210$export$464c821cd4347539 = v; });
-$parcel$export($c19f81d26323a210$exports, "img", function () { return $c19f81d26323a210$export$463b44d9bf3628be; }, function (v) { return $c19f81d26323a210$export$463b44d9bf3628be = v; });
-$parcel$export($c19f81d26323a210$exports, "imgWithArrow", function () { return $c19f81d26323a210$export$e4e79e5008270fc7; }, function (v) { return $c19f81d26323a210$export$e4e79e5008270fc7 = v; });
-$parcel$export($c19f81d26323a210$exports, "questionText", function () { return $c19f81d26323a210$export$500776a67ad9cd26; }, function (v) { return $c19f81d26323a210$export$500776a67ad9cd26 = v; });
-$parcel$export($c19f81d26323a210$exports, "respondButton", function () { return $c19f81d26323a210$export$6ea0e660ad045afa; }, function (v) { return $c19f81d26323a210$export$6ea0e660ad045afa = v; });
-$parcel$export($c19f81d26323a210$exports, "stats", function () { return $c19f81d26323a210$export$7804429c45dff272; }, function (v) { return $c19f81d26323a210$export$7804429c45dff272 = v; });
-$parcel$export($c19f81d26323a210$exports, "text", function () { return $c19f81d26323a210$export$6f093cfa640b7166; }, function (v) { return $c19f81d26323a210$export$6f093cfa640b7166 = v; });
-$parcel$export($c19f81d26323a210$exports, "textContainer", function () { return $c19f81d26323a210$export$2cedfd664bb3bd01; }, function (v) { return $c19f81d26323a210$export$2cedfd664bb3bd01 = v; });
-$parcel$export($c19f81d26323a210$exports, "username", function () { return $c19f81d26323a210$export$5e1be761f603d585; }, function (v) { return $c19f81d26323a210$export$5e1be761f603d585 = v; });
-$parcel$export($c19f81d26323a210$exports, "usernameActual", function () { return $c19f81d26323a210$export$9a369e4b55725081; }, function (v) { return $c19f81d26323a210$export$9a369e4b55725081 = v; });
-var $c19f81d26323a210$export$f61feb65ec56823b;
-var $c19f81d26323a210$export$60912654947077e3;
-var $c19f81d26323a210$export$2e07f93cbaeb0394;
-var $c19f81d26323a210$export$aa3e815946b80764;
-var $c19f81d26323a210$export$8360e631d277ea4d;
-var $c19f81d26323a210$export$464c821cd4347539;
-var $c19f81d26323a210$export$463b44d9bf3628be;
-var $c19f81d26323a210$export$e4e79e5008270fc7;
-var $c19f81d26323a210$export$500776a67ad9cd26;
-var $c19f81d26323a210$export$6ea0e660ad045afa;
-var $c19f81d26323a210$export$7804429c45dff272;
-var $c19f81d26323a210$export$6f093cfa640b7166;
-var $c19f81d26323a210$export$2cedfd664bb3bd01;
-var $c19f81d26323a210$export$5e1be761f603d585;
-var $c19f81d26323a210$export$9a369e4b55725081;
-$c19f81d26323a210$export$f61feb65ec56823b = `WWPmHq_arrowDown`;
-$c19f81d26323a210$export$60912654947077e3 = `WWPmHq_bars`;
-$c19f81d26323a210$export$2e07f93cbaeb0394 = `WWPmHq_barsMinWidth`;
-$c19f81d26323a210$export$aa3e815946b80764 = `WWPmHq_card`;
-$c19f81d26323a210$export$8360e631d277ea4d = `WWPmHq_close`;
-$c19f81d26323a210$export$464c821cd4347539 = `WWPmHq_hint`;
-$c19f81d26323a210$export$463b44d9bf3628be = `WWPmHq_img`;
-$c19f81d26323a210$export$e4e79e5008270fc7 = `WWPmHq_imgWithArrow`;
-$c19f81d26323a210$export$500776a67ad9cd26 = `WWPmHq_questionText`;
-$c19f81d26323a210$export$6ea0e660ad045afa = `WWPmHq_respondButton`;
-$c19f81d26323a210$export$7804429c45dff272 = `WWPmHq_stats`;
-$c19f81d26323a210$export$6f093cfa640b7166 = `WWPmHq_text`;
-$c19f81d26323a210$export$2cedfd664bb3bd01 = `WWPmHq_textContainer`;
-$c19f81d26323a210$export$5e1be761f603d585 = `WWPmHq_username`;
-$c19f81d26323a210$export$9a369e4b55725081 = `WWPmHq_usernameActual`;
+$parcel$export($6840313bf222f620$exports, "arrowDown", function () { return $6840313bf222f620$export$f61feb65ec56823b; }, function (v) { return $6840313bf222f620$export$f61feb65ec56823b = v; });
+$parcel$export($6840313bf222f620$exports, "bars", function () { return $6840313bf222f620$export$60912654947077e3; }, function (v) { return $6840313bf222f620$export$60912654947077e3 = v; });
+$parcel$export($6840313bf222f620$exports, "barsMinWidth", function () { return $6840313bf222f620$export$2e07f93cbaeb0394; }, function (v) { return $6840313bf222f620$export$2e07f93cbaeb0394 = v; });
+$parcel$export($6840313bf222f620$exports, "card", function () { return $6840313bf222f620$export$aa3e815946b80764; }, function (v) { return $6840313bf222f620$export$aa3e815946b80764 = v; });
+$parcel$export($6840313bf222f620$exports, "close", function () { return $6840313bf222f620$export$8360e631d277ea4d; }, function (v) { return $6840313bf222f620$export$8360e631d277ea4d = v; });
+$parcel$export($6840313bf222f620$exports, "hint", function () { return $6840313bf222f620$export$464c821cd4347539; }, function (v) { return $6840313bf222f620$export$464c821cd4347539 = v; });
+$parcel$export($6840313bf222f620$exports, "img", function () { return $6840313bf222f620$export$463b44d9bf3628be; }, function (v) { return $6840313bf222f620$export$463b44d9bf3628be = v; });
+$parcel$export($6840313bf222f620$exports, "imgWithArrow", function () { return $6840313bf222f620$export$e4e79e5008270fc7; }, function (v) { return $6840313bf222f620$export$e4e79e5008270fc7 = v; });
+$parcel$export($6840313bf222f620$exports, "questionText", function () { return $6840313bf222f620$export$500776a67ad9cd26; }, function (v) { return $6840313bf222f620$export$500776a67ad9cd26 = v; });
+$parcel$export($6840313bf222f620$exports, "respondButton", function () { return $6840313bf222f620$export$6ea0e660ad045afa; }, function (v) { return $6840313bf222f620$export$6ea0e660ad045afa = v; });
+$parcel$export($6840313bf222f620$exports, "stats", function () { return $6840313bf222f620$export$7804429c45dff272; }, function (v) { return $6840313bf222f620$export$7804429c45dff272 = v; });
+$parcel$export($6840313bf222f620$exports, "text", function () { return $6840313bf222f620$export$6f093cfa640b7166; }, function (v) { return $6840313bf222f620$export$6f093cfa640b7166 = v; });
+$parcel$export($6840313bf222f620$exports, "textContainer", function () { return $6840313bf222f620$export$2cedfd664bb3bd01; }, function (v) { return $6840313bf222f620$export$2cedfd664bb3bd01 = v; });
+$parcel$export($6840313bf222f620$exports, "username", function () { return $6840313bf222f620$export$5e1be761f603d585; }, function (v) { return $6840313bf222f620$export$5e1be761f603d585 = v; });
+$parcel$export($6840313bf222f620$exports, "usernameActual", function () { return $6840313bf222f620$export$9a369e4b55725081; }, function (v) { return $6840313bf222f620$export$9a369e4b55725081 = v; });
+var $6840313bf222f620$export$f61feb65ec56823b;
+var $6840313bf222f620$export$60912654947077e3;
+var $6840313bf222f620$export$2e07f93cbaeb0394;
+var $6840313bf222f620$export$aa3e815946b80764;
+var $6840313bf222f620$export$8360e631d277ea4d;
+var $6840313bf222f620$export$464c821cd4347539;
+var $6840313bf222f620$export$463b44d9bf3628be;
+var $6840313bf222f620$export$e4e79e5008270fc7;
+var $6840313bf222f620$export$500776a67ad9cd26;
+var $6840313bf222f620$export$6ea0e660ad045afa;
+var $6840313bf222f620$export$7804429c45dff272;
+var $6840313bf222f620$export$6f093cfa640b7166;
+var $6840313bf222f620$export$2cedfd664bb3bd01;
+var $6840313bf222f620$export$5e1be761f603d585;
+var $6840313bf222f620$export$9a369e4b55725081;
+$6840313bf222f620$export$f61feb65ec56823b = `_4qkH1G_arrowDown`;
+$6840313bf222f620$export$60912654947077e3 = `_4qkH1G_bars`;
+$6840313bf222f620$export$2e07f93cbaeb0394 = `_4qkH1G_barsMinWidth`;
+$6840313bf222f620$export$aa3e815946b80764 = `_4qkH1G_card`;
+$6840313bf222f620$export$8360e631d277ea4d = `_4qkH1G_close`;
+$6840313bf222f620$export$464c821cd4347539 = `_4qkH1G_hint`;
+$6840313bf222f620$export$463b44d9bf3628be = `_4qkH1G_img`;
+$6840313bf222f620$export$e4e79e5008270fc7 = `_4qkH1G_imgWithArrow`;
+$6840313bf222f620$export$500776a67ad9cd26 = `_4qkH1G_questionText`;
+$6840313bf222f620$export$6ea0e660ad045afa = `_4qkH1G_respondButton`;
+$6840313bf222f620$export$7804429c45dff272 = `_4qkH1G_stats`;
+$6840313bf222f620$export$6f093cfa640b7166 = `_4qkH1G_text`;
+$6840313bf222f620$export$2cedfd664bb3bd01 = `_4qkH1G_textContainer`;
+$6840313bf222f620$export$5e1be761f603d585 = `_4qkH1G_username`;
+$6840313bf222f620$export$9a369e4b55725081 = `_4qkH1G_usernameActual`;
 
 
 const $eb2843dbfbee7bb8$var$calcPercent = (x, sum)=>Math.round(x / sum * 100);
@@ -3850,14 +3844,14 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("article", {
         id: "question-card",
         ref: ref,
-        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).card, {
+        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).card, {
             'selected-question': selected
         }),
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).close,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).close,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialClose))), {
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).back,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).back,
                     onClick: close
                 })
             }),
@@ -3877,12 +3871,12 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
                         children: name
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).username,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).username,
                         children: [
                             ' ',
                             "by ",
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).usernameActual,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).usernameActual,
                                 onClick: onUserClick,
                                 children: username
                             }),
@@ -3931,14 +3925,14 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
                         respond: respond || redirectToLogin
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).stats,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).stats,
                         children: userReplyCount !== 0 && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $a3U2C$reactjsxruntime.Fragment), {
                             children: [
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).textContainer,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).textContainer,
                                     children: [
                                         yesPercentage !== 0 && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).text,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).text,
                                             style: {
                                                 width: `${yesPercentage}%`,
                                                 position: 'relative',
@@ -3960,22 +3954,22 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
                                                     ]
                                                 }),
                                                 answer?.toLowerCase() === 'yes' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).imgWithArrow,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).img,
+                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).img,
                                                             src: userPictureUrl,
                                                             alt: "profile picture"
                                                         }),
                                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).arrowDown
+                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).arrowDown
                                                         })
                                                     ]
                                                 })
                                             ]
                                         }),
                                         noPercentage !== 0 && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $3faaf67f4ad0d2f4$export$2e2bcd8739ae039), {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).text,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).text,
                                             style: {
                                                 width: `${noPercentage}%`,
                                                 position: 'relative',
@@ -3997,15 +3991,15 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
                                                     ]
                                                 }),
                                                 answer?.toLowerCase() === 'no' && /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).imgWithArrow,
+                                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).imgWithArrow,
                                                     children: [
                                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
-                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).img,
+                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).img,
                                                             src: userPictureUrl,
                                                             alt: "profile picture"
                                                         }),
                                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).arrowDown
+                                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).arrowDown
                                                         })
                                                     ]
                                                 })
@@ -4014,8 +4008,8 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
                                     ]
                                 }),
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $497ae48649beb625$export$2e2bcd8739ae039), {
-                                    className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).bars, {
-                                        [(0, (/*@__PURE__*/$parcel$interopDefault($c19f81d26323a210$exports))).barsMinWidth]: yesPercentage !== 0 && noPercentage !== 0
+                                    className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).bars, {
+                                        [(0, (/*@__PURE__*/$parcel$interopDefault($6840313bf222f620$exports))).barsMinWidth]: yesPercentage !== 0 && noPercentage !== 0
                                     }),
                                     yes: yesPercentage,
                                     no: noPercentage,
@@ -4035,44 +4029,44 @@ const $eb2843dbfbee7bb8$export$38435c7d2fecd2f = /*#__PURE__*/ (0, $a3U2C$react.
 
 
 
-var $2999b2e305c9193a$exports = {};
+var $1498383f1f5424d2$exports = {};
 
-$parcel$export($2999b2e305c9193a$exports, "btn", function () { return $2999b2e305c9193a$export$534219b709288da9; }, function (v) { return $2999b2e305c9193a$export$534219b709288da9 = v; });
-$parcel$export($2999b2e305c9193a$exports, "changeGroupBtn", function () { return $2999b2e305c9193a$export$e05a52e99661808; }, function (v) { return $2999b2e305c9193a$export$e05a52e99661808 = v; });
-$parcel$export($2999b2e305c9193a$exports, "chat", function () { return $2999b2e305c9193a$export$530dccc8e24f4e99; }, function (v) { return $2999b2e305c9193a$export$530dccc8e24f4e99 = v; });
-$parcel$export($2999b2e305c9193a$exports, "currentGroup", function () { return $2999b2e305c9193a$export$d066cbb5a8cab704; }, function (v) { return $2999b2e305c9193a$export$d066cbb5a8cab704 = v; });
-$parcel$export($2999b2e305c9193a$exports, "input", function () { return $2999b2e305c9193a$export$b7e3ae3d7c15e42e; }, function (v) { return $2999b2e305c9193a$export$b7e3ae3d7c15e42e = v; });
-$parcel$export($2999b2e305c9193a$exports, "inputGroup", function () { return $2999b2e305c9193a$export$995e14ef61d916e6; }, function (v) { return $2999b2e305c9193a$export$995e14ef61d916e6 = v; });
-$parcel$export($2999b2e305c9193a$exports, "message", function () { return $2999b2e305c9193a$export$a8ecead220dd38a6; }, function (v) { return $2999b2e305c9193a$export$a8ecead220dd38a6 = v; });
-$parcel$export($2999b2e305c9193a$exports, "messageBoard", function () { return $2999b2e305c9193a$export$af8c1666bc2bbdc3; }, function (v) { return $2999b2e305c9193a$export$af8c1666bc2bbdc3 = v; });
-$parcel$export($2999b2e305c9193a$exports, "mine", function () { return $2999b2e305c9193a$export$25c810edd2c6953a; }, function (v) { return $2999b2e305c9193a$export$25c810edd2c6953a = v; });
-$parcel$export($2999b2e305c9193a$exports, "notMine", function () { return $2999b2e305c9193a$export$16cf7ecddabb39f4; }, function (v) { return $2999b2e305c9193a$export$16cf7ecddabb39f4 = v; });
-$parcel$export($2999b2e305c9193a$exports, "picture", function () { return $2999b2e305c9193a$export$1188214e9d38144e; }, function (v) { return $2999b2e305c9193a$export$1188214e9d38144e = v; });
-$parcel$export($2999b2e305c9193a$exports, "top", function () { return $2999b2e305c9193a$export$1e95b668f3b82d; }, function (v) { return $2999b2e305c9193a$export$1e95b668f3b82d = v; });
-var $2999b2e305c9193a$export$534219b709288da9;
-var $2999b2e305c9193a$export$e05a52e99661808;
-var $2999b2e305c9193a$export$530dccc8e24f4e99;
-var $2999b2e305c9193a$export$d066cbb5a8cab704;
-var $2999b2e305c9193a$export$b7e3ae3d7c15e42e;
-var $2999b2e305c9193a$export$995e14ef61d916e6;
-var $2999b2e305c9193a$export$a8ecead220dd38a6;
-var $2999b2e305c9193a$export$af8c1666bc2bbdc3;
-var $2999b2e305c9193a$export$25c810edd2c6953a;
-var $2999b2e305c9193a$export$16cf7ecddabb39f4;
-var $2999b2e305c9193a$export$1188214e9d38144e;
-var $2999b2e305c9193a$export$1e95b668f3b82d;
-$2999b2e305c9193a$export$534219b709288da9 = `SmrJ8W_btn`;
-$2999b2e305c9193a$export$e05a52e99661808 = `SmrJ8W_changeGroupBtn`;
-$2999b2e305c9193a$export$530dccc8e24f4e99 = `SmrJ8W_chat`;
-$2999b2e305c9193a$export$d066cbb5a8cab704 = `SmrJ8W_currentGroup`;
-$2999b2e305c9193a$export$b7e3ae3d7c15e42e = `SmrJ8W_input`;
-$2999b2e305c9193a$export$995e14ef61d916e6 = `SmrJ8W_inputGroup`;
-$2999b2e305c9193a$export$a8ecead220dd38a6 = `SmrJ8W_message`;
-$2999b2e305c9193a$export$af8c1666bc2bbdc3 = `SmrJ8W_messageBoard`;
-$2999b2e305c9193a$export$25c810edd2c6953a = `SmrJ8W_mine`;
-$2999b2e305c9193a$export$16cf7ecddabb39f4 = `SmrJ8W_notMine`;
-$2999b2e305c9193a$export$1188214e9d38144e = `SmrJ8W_picture`;
-$2999b2e305c9193a$export$1e95b668f3b82d = `SmrJ8W_top`;
+$parcel$export($1498383f1f5424d2$exports, "btn", function () { return $1498383f1f5424d2$export$534219b709288da9; }, function (v) { return $1498383f1f5424d2$export$534219b709288da9 = v; });
+$parcel$export($1498383f1f5424d2$exports, "changeGroupBtn", function () { return $1498383f1f5424d2$export$e05a52e99661808; }, function (v) { return $1498383f1f5424d2$export$e05a52e99661808 = v; });
+$parcel$export($1498383f1f5424d2$exports, "chat", function () { return $1498383f1f5424d2$export$530dccc8e24f4e99; }, function (v) { return $1498383f1f5424d2$export$530dccc8e24f4e99 = v; });
+$parcel$export($1498383f1f5424d2$exports, "currentGroup", function () { return $1498383f1f5424d2$export$d066cbb5a8cab704; }, function (v) { return $1498383f1f5424d2$export$d066cbb5a8cab704 = v; });
+$parcel$export($1498383f1f5424d2$exports, "input", function () { return $1498383f1f5424d2$export$b7e3ae3d7c15e42e; }, function (v) { return $1498383f1f5424d2$export$b7e3ae3d7c15e42e = v; });
+$parcel$export($1498383f1f5424d2$exports, "inputGroup", function () { return $1498383f1f5424d2$export$995e14ef61d916e6; }, function (v) { return $1498383f1f5424d2$export$995e14ef61d916e6 = v; });
+$parcel$export($1498383f1f5424d2$exports, "message", function () { return $1498383f1f5424d2$export$a8ecead220dd38a6; }, function (v) { return $1498383f1f5424d2$export$a8ecead220dd38a6 = v; });
+$parcel$export($1498383f1f5424d2$exports, "messageBoard", function () { return $1498383f1f5424d2$export$af8c1666bc2bbdc3; }, function (v) { return $1498383f1f5424d2$export$af8c1666bc2bbdc3 = v; });
+$parcel$export($1498383f1f5424d2$exports, "mine", function () { return $1498383f1f5424d2$export$25c810edd2c6953a; }, function (v) { return $1498383f1f5424d2$export$25c810edd2c6953a = v; });
+$parcel$export($1498383f1f5424d2$exports, "notMine", function () { return $1498383f1f5424d2$export$16cf7ecddabb39f4; }, function (v) { return $1498383f1f5424d2$export$16cf7ecddabb39f4 = v; });
+$parcel$export($1498383f1f5424d2$exports, "picture", function () { return $1498383f1f5424d2$export$1188214e9d38144e; }, function (v) { return $1498383f1f5424d2$export$1188214e9d38144e = v; });
+$parcel$export($1498383f1f5424d2$exports, "top", function () { return $1498383f1f5424d2$export$1e95b668f3b82d; }, function (v) { return $1498383f1f5424d2$export$1e95b668f3b82d = v; });
+var $1498383f1f5424d2$export$534219b709288da9;
+var $1498383f1f5424d2$export$e05a52e99661808;
+var $1498383f1f5424d2$export$530dccc8e24f4e99;
+var $1498383f1f5424d2$export$d066cbb5a8cab704;
+var $1498383f1f5424d2$export$b7e3ae3d7c15e42e;
+var $1498383f1f5424d2$export$995e14ef61d916e6;
+var $1498383f1f5424d2$export$a8ecead220dd38a6;
+var $1498383f1f5424d2$export$af8c1666bc2bbdc3;
+var $1498383f1f5424d2$export$25c810edd2c6953a;
+var $1498383f1f5424d2$export$16cf7ecddabb39f4;
+var $1498383f1f5424d2$export$1188214e9d38144e;
+var $1498383f1f5424d2$export$1e95b668f3b82d;
+$1498383f1f5424d2$export$534219b709288da9 = `yon3wa_btn`;
+$1498383f1f5424d2$export$e05a52e99661808 = `yon3wa_changeGroupBtn`;
+$1498383f1f5424d2$export$530dccc8e24f4e99 = `yon3wa_chat`;
+$1498383f1f5424d2$export$d066cbb5a8cab704 = `yon3wa_currentGroup`;
+$1498383f1f5424d2$export$b7e3ae3d7c15e42e = `yon3wa_input`;
+$1498383f1f5424d2$export$995e14ef61d916e6 = `yon3wa_inputGroup`;
+$1498383f1f5424d2$export$a8ecead220dd38a6 = `yon3wa_message`;
+$1498383f1f5424d2$export$af8c1666bc2bbdc3 = `yon3wa_messageBoard`;
+$1498383f1f5424d2$export$25c810edd2c6953a = `yon3wa_mine`;
+$1498383f1f5424d2$export$16cf7ecddabb39f4 = `yon3wa_notMine`;
+$1498383f1f5424d2$export$1188214e9d38144e = `yon3wa_picture`;
+$1498383f1f5424d2$export$1e95b668f3b82d = `yon3wa_top`;
 
 
 const $36961d44900f066b$var$defaultGroup = {
@@ -4083,13 +4077,13 @@ const $36961d44900f066b$var$defaultGroup = {
 const $36961d44900f066b$export$125e71c614a0b114 = ({ messages: messages, sendMessage: sendMessage, onUserClick: onUserClick, currentGroup: currentGroup = $36961d44900f066b$var$defaultGroup, changeGroup: changeGroup })=>{
     const [value, setValue] = (0, $a3U2C$react.useState)('');
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).chat,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).chat,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).top,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).top,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).currentGroup,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).currentGroup,
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("b", {
                                 children: currentGroup.name
@@ -4105,23 +4099,23 @@ const $36961d44900f066b$export$125e71c614a0b114 = ({ messages: messages, sendMes
                         ]
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).changeGroupBtn,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).changeGroupBtn,
                         onClick: changeGroup,
                         children: "change group"
                     })
                 ]
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).messageBoard,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).messageBoard,
                 children: messages.map((msg, index)=>/*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).message, {
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).mine]: msg.mine,
-                            [(0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).notMine]: !msg.mine
+                        className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).message, {
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).mine]: msg.mine,
+                            [(0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).notMine]: !msg.mine
                         }),
                         children: [
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("img", {
                                 onClick: ()=>onUserClick(msg.username),
-                                className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).picture,
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).picture,
                                 src: msg.pictureUrl
                             }),
                             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
@@ -4131,15 +4125,15 @@ const $36961d44900f066b$export$125e71c614a0b114 = ({ messages: messages, sendMes
                     }, index))
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).inputGroup,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).inputGroup,
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("textarea", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).input,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).input,
                         value: value,
                         onChange: ({ target: { value: value } })=>setValue(value)
                     }),
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                        className: (0, (/*@__PURE__*/$parcel$interopDefault($2999b2e305c9193a$exports))).btn,
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($1498383f1f5424d2$exports))).btn,
                         onClick: sendMessage,
                         children: "Send"
                     })
@@ -4159,87 +4153,87 @@ var $3442d7fdb951b5ed$exports = {};
 $3442d7fdb951b5ed$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
 
 
-var $ac03a0bac396d9ab$exports = {};
+var $2089f9fb34111e2b$exports = {};
 
-$parcel$export($ac03a0bac396d9ab$exports, "additional-text", function () { return $ac03a0bac396d9ab$export$202e93cb7fe09fc8; }, function (v) { return $ac03a0bac396d9ab$export$202e93cb7fe09fc8 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "coin", function () { return $ac03a0bac396d9ab$export$3c9d1e4131afeeb8; }, function (v) { return $ac03a0bac396d9ab$export$3c9d1e4131afeeb8 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "coin--animated", function () { return $ac03a0bac396d9ab$export$9fb4f45ed9e347e0; }, function (v) { return $ac03a0bac396d9ab$export$9fb4f45ed9e347e0 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "coin-x-axis", function () { return $ac03a0bac396d9ab$export$a729607373715201; }, function (v) { return $ac03a0bac396d9ab$export$a729607373715201 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "coin-y-axis-and-flip", function () { return $ac03a0bac396d9ab$export$4079574a46612420; }, function (v) { return $ac03a0bac396d9ab$export$4079574a46612420 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "icon", function () { return $ac03a0bac396d9ab$export$1ca1ec8b29a4ce27; }, function (v) { return $ac03a0bac396d9ab$export$1ca1ec8b29a4ce27 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "icons", function () { return $ac03a0bac396d9ab$export$df03f54e09e486fa; }, function (v) { return $ac03a0bac396d9ab$export$df03f54e09e486fa = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "landing", function () { return $ac03a0bac396d9ab$export$a9ae88069d8ac14e; }, function (v) { return $ac03a0bac396d9ab$export$a9ae88069d8ac14e = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "landing-button", function () { return $ac03a0bac396d9ab$export$f282e5191b337f50; }, function (v) { return $ac03a0bac396d9ab$export$f282e5191b337f50 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "made-by", function () { return $ac03a0bac396d9ab$export$101a475b15c86041; }, function (v) { return $ac03a0bac396d9ab$export$101a475b15c86041 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "mobile-second-text", function () { return $ac03a0bac396d9ab$export$9b4a162e4d9f672; }, function (v) { return $ac03a0bac396d9ab$export$9b4a162e4d9f672 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "name", function () { return $ac03a0bac396d9ab$export$a8ff84c12d48cfa6; }, function (v) { return $ac03a0bac396d9ab$export$a8ff84c12d48cfa6 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "open-app-button", function () { return $ac03a0bac396d9ab$export$ae608c4430a9e9fc; }, function (v) { return $ac03a0bac396d9ab$export$ae608c4430a9e9fc = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "privacy", function () { return $ac03a0bac396d9ab$export$116a08ee153e3bde; }, function (v) { return $ac03a0bac396d9ab$export$116a08ee153e3bde = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "scroll", function () { return $ac03a0bac396d9ab$export$209876d7b1ac8f3; }, function (v) { return $ac03a0bac396d9ab$export$209876d7b1ac8f3 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "scrollIcon", function () { return $ac03a0bac396d9ab$export$efb197c1da01f76f; }, function (v) { return $ac03a0bac396d9ab$export$efb197c1da01f76f = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "scrollText", function () { return $ac03a0bac396d9ab$export$b21f6e6a6b9fbbc5; }, function (v) { return $ac03a0bac396d9ab$export$b21f6e6a6b9fbbc5 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "scrollWheel", function () { return $ac03a0bac396d9ab$export$594daf8f7b4e7e32; }, function (v) { return $ac03a0bac396d9ab$export$594daf8f7b4e7e32 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "search-modal", function () { return $ac03a0bac396d9ab$export$2fd0fffb18ebb0c0; }, function (v) { return $ac03a0bac396d9ab$export$2fd0fffb18ebb0c0 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "second-text-container", function () { return $ac03a0bac396d9ab$export$891c99f874761757; }, function (v) { return $ac03a0bac396d9ab$export$891c99f874761757 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "slides", function () { return $ac03a0bac396d9ab$export$59de61ccd1a8a2d9; }, function (v) { return $ac03a0bac396d9ab$export$59de61ccd1a8a2d9 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "smaller", function () { return $ac03a0bac396d9ab$export$3f732695c1493aec; }, function (v) { return $ac03a0bac396d9ab$export$3f732695c1493aec = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "subtitle", function () { return $ac03a0bac396d9ab$export$c96745152eb2740f; }, function (v) { return $ac03a0bac396d9ab$export$c96745152eb2740f = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "svgWrapper", function () { return $ac03a0bac396d9ab$export$e5459a6f92d1eda8; }, function (v) { return $ac03a0bac396d9ab$export$e5459a6f92d1eda8 = v; });
-$parcel$export($ac03a0bac396d9ab$exports, "text", function () { return $ac03a0bac396d9ab$export$6f093cfa640b7166; }, function (v) { return $ac03a0bac396d9ab$export$6f093cfa640b7166 = v; });
-var $ac03a0bac396d9ab$export$202e93cb7fe09fc8;
-var $ac03a0bac396d9ab$export$3c9d1e4131afeeb8;
-var $ac03a0bac396d9ab$export$9fb4f45ed9e347e0;
-var $ac03a0bac396d9ab$export$a729607373715201;
-var $ac03a0bac396d9ab$export$4079574a46612420;
-var $ac03a0bac396d9ab$export$1ca1ec8b29a4ce27;
-var $ac03a0bac396d9ab$export$df03f54e09e486fa;
-var $ac03a0bac396d9ab$export$a9ae88069d8ac14e;
-var $ac03a0bac396d9ab$export$f282e5191b337f50;
-var $ac03a0bac396d9ab$export$101a475b15c86041;
-var $ac03a0bac396d9ab$export$9b4a162e4d9f672;
-var $ac03a0bac396d9ab$export$a8ff84c12d48cfa6;
-var $ac03a0bac396d9ab$export$ae608c4430a9e9fc;
-var $ac03a0bac396d9ab$export$116a08ee153e3bde;
-var $ac03a0bac396d9ab$export$209876d7b1ac8f3;
-var $ac03a0bac396d9ab$export$efb197c1da01f76f;
-var $ac03a0bac396d9ab$export$b21f6e6a6b9fbbc5;
-var $ac03a0bac396d9ab$export$594daf8f7b4e7e32;
-var $ac03a0bac396d9ab$export$2fd0fffb18ebb0c0;
-var $ac03a0bac396d9ab$export$891c99f874761757;
-var $ac03a0bac396d9ab$export$59de61ccd1a8a2d9;
-var $ac03a0bac396d9ab$export$3f732695c1493aec;
-var $ac03a0bac396d9ab$export$c96745152eb2740f;
-var $ac03a0bac396d9ab$export$e5459a6f92d1eda8;
-var $ac03a0bac396d9ab$export$6f093cfa640b7166;
-$ac03a0bac396d9ab$export$202e93cb7fe09fc8 = `aq6KZW_additional-text`;
-$ac03a0bac396d9ab$export$3c9d1e4131afeeb8 = `aq6KZW_coin`;
-$ac03a0bac396d9ab$export$9fb4f45ed9e347e0 = `aq6KZW_coin--animated`;
-$ac03a0bac396d9ab$export$a729607373715201 = `aq6KZW_coin-x-axis`;
-$ac03a0bac396d9ab$export$a729607373715201;
-$ac03a0bac396d9ab$export$4079574a46612420 = `aq6KZW_coin-y-axis-and-flip`;
-$ac03a0bac396d9ab$export$4079574a46612420;
-$ac03a0bac396d9ab$export$1ca1ec8b29a4ce27 = `aq6KZW_icon`;
-$ac03a0bac396d9ab$export$df03f54e09e486fa = `aq6KZW_icons`;
-$ac03a0bac396d9ab$export$a9ae88069d8ac14e = `aq6KZW_landing`;
-$ac03a0bac396d9ab$export$f282e5191b337f50 = `aq6KZW_landing-button`;
-$ac03a0bac396d9ab$export$101a475b15c86041 = `aq6KZW_made-by`;
-$ac03a0bac396d9ab$export$9b4a162e4d9f672 = `aq6KZW_mobile-second-text`;
-$ac03a0bac396d9ab$export$a8ff84c12d48cfa6 = `aq6KZW_name`;
-$ac03a0bac396d9ab$export$ae608c4430a9e9fc = `aq6KZW_open-app-button`;
-$ac03a0bac396d9ab$export$116a08ee153e3bde = `aq6KZW_privacy`;
-$ac03a0bac396d9ab$export$209876d7b1ac8f3 = `aq6KZW_scroll`;
-$ac03a0bac396d9ab$export$efb197c1da01f76f = `aq6KZW_scrollIcon`;
-$ac03a0bac396d9ab$export$b21f6e6a6b9fbbc5 = `aq6KZW_scrollText`;
-$ac03a0bac396d9ab$export$b21f6e6a6b9fbbc5;
-$ac03a0bac396d9ab$export$594daf8f7b4e7e32 = `aq6KZW_scrollWheel`;
-$ac03a0bac396d9ab$export$594daf8f7b4e7e32;
-$ac03a0bac396d9ab$export$2fd0fffb18ebb0c0 = `aq6KZW_search-modal`;
-$ac03a0bac396d9ab$export$891c99f874761757 = `aq6KZW_second-text-container`;
-$ac03a0bac396d9ab$export$59de61ccd1a8a2d9 = `aq6KZW_slides`;
-$ac03a0bac396d9ab$export$3f732695c1493aec = `aq6KZW_smaller`;
-$ac03a0bac396d9ab$export$c96745152eb2740f = `aq6KZW_subtitle`;
-$ac03a0bac396d9ab$export$e5459a6f92d1eda8 = `aq6KZW_svgWrapper`;
-$ac03a0bac396d9ab$export$6f093cfa640b7166 = `aq6KZW_text`;
+$parcel$export($2089f9fb34111e2b$exports, "additional-text", function () { return $2089f9fb34111e2b$export$202e93cb7fe09fc8; }, function (v) { return $2089f9fb34111e2b$export$202e93cb7fe09fc8 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "coin", function () { return $2089f9fb34111e2b$export$3c9d1e4131afeeb8; }, function (v) { return $2089f9fb34111e2b$export$3c9d1e4131afeeb8 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "coin--animated", function () { return $2089f9fb34111e2b$export$9fb4f45ed9e347e0; }, function (v) { return $2089f9fb34111e2b$export$9fb4f45ed9e347e0 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "coin-x-axis", function () { return $2089f9fb34111e2b$export$a729607373715201; }, function (v) { return $2089f9fb34111e2b$export$a729607373715201 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "coin-y-axis-and-flip", function () { return $2089f9fb34111e2b$export$4079574a46612420; }, function (v) { return $2089f9fb34111e2b$export$4079574a46612420 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "icon", function () { return $2089f9fb34111e2b$export$1ca1ec8b29a4ce27; }, function (v) { return $2089f9fb34111e2b$export$1ca1ec8b29a4ce27 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "icons", function () { return $2089f9fb34111e2b$export$df03f54e09e486fa; }, function (v) { return $2089f9fb34111e2b$export$df03f54e09e486fa = v; });
+$parcel$export($2089f9fb34111e2b$exports, "landing", function () { return $2089f9fb34111e2b$export$a9ae88069d8ac14e; }, function (v) { return $2089f9fb34111e2b$export$a9ae88069d8ac14e = v; });
+$parcel$export($2089f9fb34111e2b$exports, "landing-button", function () { return $2089f9fb34111e2b$export$f282e5191b337f50; }, function (v) { return $2089f9fb34111e2b$export$f282e5191b337f50 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "made-by", function () { return $2089f9fb34111e2b$export$101a475b15c86041; }, function (v) { return $2089f9fb34111e2b$export$101a475b15c86041 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "mobile-second-text", function () { return $2089f9fb34111e2b$export$9b4a162e4d9f672; }, function (v) { return $2089f9fb34111e2b$export$9b4a162e4d9f672 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "name", function () { return $2089f9fb34111e2b$export$a8ff84c12d48cfa6; }, function (v) { return $2089f9fb34111e2b$export$a8ff84c12d48cfa6 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "open-app-button", function () { return $2089f9fb34111e2b$export$ae608c4430a9e9fc; }, function (v) { return $2089f9fb34111e2b$export$ae608c4430a9e9fc = v; });
+$parcel$export($2089f9fb34111e2b$exports, "privacy", function () { return $2089f9fb34111e2b$export$116a08ee153e3bde; }, function (v) { return $2089f9fb34111e2b$export$116a08ee153e3bde = v; });
+$parcel$export($2089f9fb34111e2b$exports, "scroll", function () { return $2089f9fb34111e2b$export$209876d7b1ac8f3; }, function (v) { return $2089f9fb34111e2b$export$209876d7b1ac8f3 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "scrollIcon", function () { return $2089f9fb34111e2b$export$efb197c1da01f76f; }, function (v) { return $2089f9fb34111e2b$export$efb197c1da01f76f = v; });
+$parcel$export($2089f9fb34111e2b$exports, "scrollText", function () { return $2089f9fb34111e2b$export$b21f6e6a6b9fbbc5; }, function (v) { return $2089f9fb34111e2b$export$b21f6e6a6b9fbbc5 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "scrollWheel", function () { return $2089f9fb34111e2b$export$594daf8f7b4e7e32; }, function (v) { return $2089f9fb34111e2b$export$594daf8f7b4e7e32 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "search-modal", function () { return $2089f9fb34111e2b$export$2fd0fffb18ebb0c0; }, function (v) { return $2089f9fb34111e2b$export$2fd0fffb18ebb0c0 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "second-text-container", function () { return $2089f9fb34111e2b$export$891c99f874761757; }, function (v) { return $2089f9fb34111e2b$export$891c99f874761757 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "slides", function () { return $2089f9fb34111e2b$export$59de61ccd1a8a2d9; }, function (v) { return $2089f9fb34111e2b$export$59de61ccd1a8a2d9 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "smaller", function () { return $2089f9fb34111e2b$export$3f732695c1493aec; }, function (v) { return $2089f9fb34111e2b$export$3f732695c1493aec = v; });
+$parcel$export($2089f9fb34111e2b$exports, "subtitle", function () { return $2089f9fb34111e2b$export$c96745152eb2740f; }, function (v) { return $2089f9fb34111e2b$export$c96745152eb2740f = v; });
+$parcel$export($2089f9fb34111e2b$exports, "svgWrapper", function () { return $2089f9fb34111e2b$export$e5459a6f92d1eda8; }, function (v) { return $2089f9fb34111e2b$export$e5459a6f92d1eda8 = v; });
+$parcel$export($2089f9fb34111e2b$exports, "text", function () { return $2089f9fb34111e2b$export$6f093cfa640b7166; }, function (v) { return $2089f9fb34111e2b$export$6f093cfa640b7166 = v; });
+var $2089f9fb34111e2b$export$202e93cb7fe09fc8;
+var $2089f9fb34111e2b$export$3c9d1e4131afeeb8;
+var $2089f9fb34111e2b$export$9fb4f45ed9e347e0;
+var $2089f9fb34111e2b$export$a729607373715201;
+var $2089f9fb34111e2b$export$4079574a46612420;
+var $2089f9fb34111e2b$export$1ca1ec8b29a4ce27;
+var $2089f9fb34111e2b$export$df03f54e09e486fa;
+var $2089f9fb34111e2b$export$a9ae88069d8ac14e;
+var $2089f9fb34111e2b$export$f282e5191b337f50;
+var $2089f9fb34111e2b$export$101a475b15c86041;
+var $2089f9fb34111e2b$export$9b4a162e4d9f672;
+var $2089f9fb34111e2b$export$a8ff84c12d48cfa6;
+var $2089f9fb34111e2b$export$ae608c4430a9e9fc;
+var $2089f9fb34111e2b$export$116a08ee153e3bde;
+var $2089f9fb34111e2b$export$209876d7b1ac8f3;
+var $2089f9fb34111e2b$export$efb197c1da01f76f;
+var $2089f9fb34111e2b$export$b21f6e6a6b9fbbc5;
+var $2089f9fb34111e2b$export$594daf8f7b4e7e32;
+var $2089f9fb34111e2b$export$2fd0fffb18ebb0c0;
+var $2089f9fb34111e2b$export$891c99f874761757;
+var $2089f9fb34111e2b$export$59de61ccd1a8a2d9;
+var $2089f9fb34111e2b$export$3f732695c1493aec;
+var $2089f9fb34111e2b$export$c96745152eb2740f;
+var $2089f9fb34111e2b$export$e5459a6f92d1eda8;
+var $2089f9fb34111e2b$export$6f093cfa640b7166;
+$2089f9fb34111e2b$export$202e93cb7fe09fc8 = `m38itG_additional-text`;
+$2089f9fb34111e2b$export$3c9d1e4131afeeb8 = `m38itG_coin`;
+$2089f9fb34111e2b$export$9fb4f45ed9e347e0 = `m38itG_coin--animated`;
+$2089f9fb34111e2b$export$a729607373715201 = `m38itG_coin-x-axis`;
+$2089f9fb34111e2b$export$a729607373715201;
+$2089f9fb34111e2b$export$4079574a46612420 = `m38itG_coin-y-axis-and-flip`;
+$2089f9fb34111e2b$export$4079574a46612420;
+$2089f9fb34111e2b$export$1ca1ec8b29a4ce27 = `m38itG_icon`;
+$2089f9fb34111e2b$export$df03f54e09e486fa = `m38itG_icons`;
+$2089f9fb34111e2b$export$a9ae88069d8ac14e = `m38itG_landing`;
+$2089f9fb34111e2b$export$f282e5191b337f50 = `m38itG_landing-button`;
+$2089f9fb34111e2b$export$101a475b15c86041 = `m38itG_made-by`;
+$2089f9fb34111e2b$export$9b4a162e4d9f672 = `m38itG_mobile-second-text`;
+$2089f9fb34111e2b$export$a8ff84c12d48cfa6 = `m38itG_name`;
+$2089f9fb34111e2b$export$ae608c4430a9e9fc = `m38itG_open-app-button`;
+$2089f9fb34111e2b$export$116a08ee153e3bde = `m38itG_privacy`;
+$2089f9fb34111e2b$export$209876d7b1ac8f3 = `m38itG_scroll`;
+$2089f9fb34111e2b$export$efb197c1da01f76f = `m38itG_scrollIcon`;
+$2089f9fb34111e2b$export$b21f6e6a6b9fbbc5 = `m38itG_scrollText`;
+$2089f9fb34111e2b$export$b21f6e6a6b9fbbc5;
+$2089f9fb34111e2b$export$594daf8f7b4e7e32 = `m38itG_scrollWheel`;
+$2089f9fb34111e2b$export$594daf8f7b4e7e32;
+$2089f9fb34111e2b$export$2fd0fffb18ebb0c0 = `m38itG_search-modal`;
+$2089f9fb34111e2b$export$891c99f874761757 = `m38itG_second-text-container`;
+$2089f9fb34111e2b$export$59de61ccd1a8a2d9 = `m38itG_slides`;
+$2089f9fb34111e2b$export$3f732695c1493aec = `m38itG_smaller`;
+$2089f9fb34111e2b$export$c96745152eb2740f = `m38itG_subtitle`;
+$2089f9fb34111e2b$export$e5459a6f92d1eda8 = `m38itG_svgWrapper`;
+$2089f9fb34111e2b$export$6f093cfa640b7166 = `m38itG_text`;
 
 
 const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react.forwardRef)(({ jwt: jwt, isBot: isBot, description: description, title: title }, ref)=>{
@@ -4303,13 +4297,13 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                 ]
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).slides,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).slides,
                 children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
                     ref: ref,
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).landing,
+                    className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).landing,
                     children: [
                         isBot ? /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("section", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).text,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).text,
                             style: {
                                 fontSize: 39,
                                 padding: '0 41px'
@@ -4323,14 +4317,14 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                                 })
                             ]
                         }) : /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).text,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).text,
                             children: [
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h1", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).name,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).name,
                                     children: "Non-anonymous online voting"
                                 }),
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("h2", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).subtitle,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).subtitle,
                                     children: "on social and political issues."
                                 })
                             ]
@@ -4338,7 +4332,7 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)((0, $a3U2C$reactrouterdom.Link), {
                             replace: true,
                             to: jwt ? '/' : '/app',
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports)))['open-app-button'],
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports)))['open-app-button'],
                             children: [
                                 "Open App ",
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialArrowForwardIos))), {
@@ -4350,10 +4344,10 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                             ]
                         }),
                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).icons,
+                            className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).icons,
                             children: [
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports)))['made-by'],
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports)))['made-by'],
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
                                             style: {
@@ -4376,7 +4370,7 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).svgWrapper,
+                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).svgWrapper,
                                             dangerouslySetInnerHTML: {
                                                 __html: (0, (/*@__PURE__*/$parcel$interopDefault($3442d7fdb951b5ed$exports)))
                                             }
@@ -4398,7 +4392,7 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
                                     ]
                                 }),
                                 /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($ac03a0bac396d9ab$exports))).privacy,
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($2089f9fb34111e2b$exports))).privacy,
                                     children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("a", {
                                         href: "/privacy-policy",
                                         target: "_blank",
@@ -4426,23 +4420,23 @@ const $4fae5be371e65393$export$12449a31c6671d53 = /*#__PURE__*/ (0, $a3U2C$react
 
 
 
-var $e3d1c68516b954df$exports = {};
+var $dbb7a113fa107b93$exports = {};
 
-$parcel$export($e3d1c68516b954df$exports, "active", function () { return $e3d1c68516b954df$export$89da14300d534261; }, function (v) { return $e3d1c68516b954df$export$89da14300d534261 = v; });
-$parcel$export($e3d1c68516b954df$exports, "avatar", function () { return $e3d1c68516b954df$export$345c5736c8054f22; }, function (v) { return $e3d1c68516b954df$export$345c5736c8054f22 = v; });
-$parcel$export($e3d1c68516b954df$exports, "leftbar", function () { return $e3d1c68516b954df$export$c8f087dc1b8e16ac; }, function (v) { return $e3d1c68516b954df$export$c8f087dc1b8e16ac = v; });
-$parcel$export($e3d1c68516b954df$exports, "nav-icons", function () { return $e3d1c68516b954df$export$2eded710494fe2d7; }, function (v) { return $e3d1c68516b954df$export$2eded710494fe2d7 = v; });
-$parcel$export($e3d1c68516b954df$exports, "nav-item", function () { return $e3d1c68516b954df$export$f0e24ade441c6754; }, function (v) { return $e3d1c68516b954df$export$f0e24ade441c6754 = v; });
-var $e3d1c68516b954df$export$89da14300d534261;
-var $e3d1c68516b954df$export$345c5736c8054f22;
-var $e3d1c68516b954df$export$c8f087dc1b8e16ac;
-var $e3d1c68516b954df$export$2eded710494fe2d7;
-var $e3d1c68516b954df$export$f0e24ade441c6754;
-$e3d1c68516b954df$export$89da14300d534261 = `gwYCOG_active`;
-$e3d1c68516b954df$export$345c5736c8054f22 = `gwYCOG_avatar`;
-$e3d1c68516b954df$export$c8f087dc1b8e16ac = `gwYCOG_leftbar`;
-$e3d1c68516b954df$export$2eded710494fe2d7 = `gwYCOG_nav-icons`;
-$e3d1c68516b954df$export$f0e24ade441c6754 = `gwYCOG_nav-item`;
+$parcel$export($dbb7a113fa107b93$exports, "active", function () { return $dbb7a113fa107b93$export$89da14300d534261; }, function (v) { return $dbb7a113fa107b93$export$89da14300d534261 = v; });
+$parcel$export($dbb7a113fa107b93$exports, "avatar", function () { return $dbb7a113fa107b93$export$345c5736c8054f22; }, function (v) { return $dbb7a113fa107b93$export$345c5736c8054f22 = v; });
+$parcel$export($dbb7a113fa107b93$exports, "leftbar", function () { return $dbb7a113fa107b93$export$c8f087dc1b8e16ac; }, function (v) { return $dbb7a113fa107b93$export$c8f087dc1b8e16ac = v; });
+$parcel$export($dbb7a113fa107b93$exports, "nav-icons", function () { return $dbb7a113fa107b93$export$2eded710494fe2d7; }, function (v) { return $dbb7a113fa107b93$export$2eded710494fe2d7 = v; });
+$parcel$export($dbb7a113fa107b93$exports, "nav-item", function () { return $dbb7a113fa107b93$export$f0e24ade441c6754; }, function (v) { return $dbb7a113fa107b93$export$f0e24ade441c6754 = v; });
+var $dbb7a113fa107b93$export$89da14300d534261;
+var $dbb7a113fa107b93$export$345c5736c8054f22;
+var $dbb7a113fa107b93$export$c8f087dc1b8e16ac;
+var $dbb7a113fa107b93$export$2eded710494fe2d7;
+var $dbb7a113fa107b93$export$f0e24ade441c6754;
+$dbb7a113fa107b93$export$89da14300d534261 = `_0kX8DG_active`;
+$dbb7a113fa107b93$export$345c5736c8054f22 = `_0kX8DG_avatar`;
+$dbb7a113fa107b93$export$c8f087dc1b8e16ac = `_0kX8DG_leftbar`;
+$dbb7a113fa107b93$export$2eded710494fe2d7 = `_0kX8DG_nav-icons`;
+$dbb7a113fa107b93$export$f0e24ade441c6754 = `_0kX8DG_nav-item`;
 
 
 const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: showMyHistory })=>{
@@ -4452,10 +4446,10 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
         query: '(max-width: 925px)'
     });
     return /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("div", {
-        className: (0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports))).leftbar,
+        className: (0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports))).leftbar,
         children: [
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsxs)("nav", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['nav-icons'],
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['nav-icons'],
                 children: [
                     /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, $a3U2C$reactrouterdom.Link), {
                         to: user ? '/' : '/app',
@@ -4466,8 +4460,8 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             onClick: ()=>{
                                 if (screenName && showGroups) setShowGroups(false);
                             },
-                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['nav-item'], {
-                                [(0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports))).active]: screenName && showGroups ? false : location?.pathname === '/' || location?.pathname === '/app'
+                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports))).active]: screenName && showGroups ? false : location?.pathname === '/' || location?.pathname === '/app'
                             }),
                             children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)((0, ($parcel$interopDefault($a3U2C$muiiconsmaterialHome))), {
                                 sx: {
@@ -4482,8 +4476,8 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
                             onMouseEnter: ()=>setIsHovered(true),
                             onMouseLeave: ()=>setIsHovered(false),
-                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['nav-item'], {
-                                [(0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports))).active]: showGroups
+                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports))).active]: showGroups
                             }),
                             style: {
                                 padding: 6
@@ -4503,8 +4497,8 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                         content: "Search",
                         placement: "right",
                         children: /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("button", {
-                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['nav-item'], {
-                                [(0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports))).active]: showSearchMenu
+                            className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['nav-item'], {
+                                [(0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports))).active]: showSearchMenu
                             }),
                             onClick: (e)=>{
                                 e.stopPropagation();
@@ -4517,7 +4511,7 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                 ]
             }),
             /*#__PURE__*/ (0, $a3U2C$reactjsxruntime.jsx)("div", {
-                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['nav-item'], (0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports))).avatar, (0, (/*@__PURE__*/$parcel$interopDefault($e3d1c68516b954df$exports)))['bottom-avatar']),
+                className: (0, ($parcel$interopDefault($a3U2C$classnames)))((0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['nav-item'], (0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports))).avatar, (0, (/*@__PURE__*/$parcel$interopDefault($dbb7a113fa107b93$exports)))['bottom-avatar']),
                 style: {
                     marginLeft: isMobile ? 15 : 0
                 },
@@ -4545,6 +4539,7 @@ const $4dd58b24b9ea8ec0$export$750f17c514384ccf = ({ user: user, showMyHistory: 
         ]
     });
 };
+
 
 
 

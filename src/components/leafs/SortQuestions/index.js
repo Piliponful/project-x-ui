@@ -5,7 +5,7 @@ import cn from 'classnames'
 
 import Title from '../GroupCard/components/Title'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export const SortQuestions = forwardRef(({ sort = 'Most Answered', duration = 'Week', setSort, setDuration, className, style }, ref3) => {
   const [showSortDropdown, setShowSortDropdown] = useState(false)

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '../../shared/components/Button'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ readyToSave, save, cancel }) => (
   <div className={styles.buttons}>

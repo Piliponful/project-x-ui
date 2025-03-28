@@ -1,0 +1,23 @@
+.input {
+  margin-right: 5px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  caret-color: #121212;
+  color: #121212;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: 400;
+  background: rgba(43, 43, 43, 0.0588235294);
+  padding: 10px 0 10px 15px;
+  height: 36px;
+  width: 100%;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #bebebe;
+}
+
+/*# sourceMappingURL=style.module.css.map */

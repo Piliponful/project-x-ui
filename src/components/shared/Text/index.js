@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ children, className, style, id, onClick, h1 = false }) => {
   if (h1) {

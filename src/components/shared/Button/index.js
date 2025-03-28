@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import BeatLoader from 'react-spinners/BeatLoader'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ children, className, onClick, disabled, loading }) => {
   return (

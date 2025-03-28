@@ -3,7 +3,7 @@ import React from 'react'
 import Text from '../../../../shared/Text'
 import Number from '../../../../shared/Number'
 
-import styles from './style.module.styl'
+import styles from './style.module.scss'
 
 export default ({ userCount, style }) => (
   <Text style={style} className={styles.userCount}>
