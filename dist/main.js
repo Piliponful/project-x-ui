@@ -4449,6 +4449,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
     const isMobile = (0, $ej8CT$reactresponsive.useMediaQuery)({
         query: "(max-width: 925px)"
     });
+    const navigate = (0, $ej8CT$reactrouterdom.useNavigate)();
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($2c5e116eee7a3268$exports))).leftbar,
         children: [
@@ -4506,6 +4507,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             }),
                             onClick: (e)=>{
                                 e.stopPropagation();
+                                navigate("/");
                                 setShowSearchMenu((state)=>!state);
                                 setShowGroups(false);
                             },

@@ -5,7 +5,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import { Tooltip } from '@heroui/tooltip'
 import { useMediaQuery } from 'react-responsive'
 import HomeIcon from '@mui/icons-material/Home'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { MainScreenSwipeContext } from '../../shallow/Body'
 
@@ -17,6 +17,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen, screenName } = useContext(MainScreenSwipeContext)
   const [isHovered, setIsHovered] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
+  const navigate = useNavigate()
 
   return (
     <div
@@ -56,6 +57,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })}
             onClick={(e) => {
               e.stopPropagation()
+              navigate('/')
               setShowSearchMenu(state => !state)
               setShowGroups(false)
             }}
