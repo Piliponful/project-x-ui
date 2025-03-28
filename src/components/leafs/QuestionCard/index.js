@@ -64,7 +64,8 @@ export default forwardRef(({
   comments,
   fetchComments,
   saveComment,
-  showCommentsForQuestion
+  showCommentsForQuestion,
+  user
 }, ref) => {
   const [showComments, setShowComments] = useState(false)
   const [text, setText] = useState('')
@@ -137,61 +138,70 @@ export default forwardRef(({
               paddingTop: 15
             }}
           >
-            {comments.map(i => (
-              <div key={i.text} className={styles.comments} style={{ alignSelf: yourOwnQuestion ? 'center' : (i.answer === 'yes' ? 'flex-start' : 'flex-end') }}>
+            {comments.map(i => {
+              const isOpComment = !i.answer
+              return (
                 <div
-                  style={{
-                    display: 'flex',
-                    gap: 6,
-                    flexDirection: (i.answer === 'no' && !yourOwnQuestion) ? 'row-reverse' : 'row',
-                    alignItems: 'center',
-                    justifyContent: yourOwnQuestion ? 'center' : 'unset',
-                    marginBottom: 5
-                  }}
+                  key={i.text}
+                  className={styles.comments}
+                  style={{ alignSelf: isOpComment ? 'center' : (i.answer === 'yes' ? 'flex-start' : 'flex-end') }}
                 >
-                  <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
-                  {yourOwnQuestion
-                    ? <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>OP</small>
-                    : (
-                      <AnswerButton
-                        style={{
-                          height: 26,
-                          width: 46,
-                          fontSize: 14
-                        }}
-                        noHover
-                        answer={i.answer}
-                        respond={() => {}}
-                      />
-                      )}
-                  <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{i.user.username}</small>
-                  <span style={{ color: 'gray' }}>•</span>
-                  <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
-                  <span style={{ color: 'gray' }}>•</span>
-                  <Tooltip content='Similarity to you'>
-                    <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
-                      {i.user?.difference !== undefined ? `${i.user?.difference}%` : 'it\'s you'}
-                    </small>
-                  </Tooltip>
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: 6,
+                      flexDirection: (i.answer === 'no' && !isOpComment) ? 'row-reverse' : 'row',
+                      alignItems: 'center',
+                      justifyContent: isOpComment ? 'center' : 'unset',
+                      marginBottom: 5
+                    }}
+                  >
+                    <img src={i.user?.pictureUrl} style={{ height: 32, width: 'auto', borderRadius: '50%', cursor: 'pointer' }} />
+                    {isOpComment
+                      ? <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>OP</small>
+                      : (
+                        <AnswerButton
+                          style={{
+                            height: 26,
+                            width: 46,
+                            fontSize: 14
+                          }}
+                          noHover
+                          answer={i.answer}
+                          respond={() => {}}
+                        />
+                        )}
+                    <span style={{ color: 'gray' }}>•</span>
+                    <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{i.user.username}</small>
+                    <span style={{ color: 'gray' }}>•</span>
+                    <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer' }}>{timeSince(i.createdAt)}</small>
+                    <span style={{ color: 'gray' }}>•</span>
+                    <Tooltip content={!i.user?.difference && !user ? 'Login to see similarity to you' : 'Similarity to you'}>
+                      <small className={styles.commentText} style={{ color: 'gray', cursor: 'pointer', position: 'relative' }}>
+                        {i.user?.difference !== undefined
+                          ? `${i.user?.difference}%`
+                          : user ? 'it\'s you' : '?%'}
+                      </small>
+                    </Tooltip>
+                  </div>
+                  <p
+                    style={{
+                      marginLeft: (i.answer === 'yes' && !isOpComment) ? 34 : 0,
+                      marginRight: isOpComment ? 0 : (i.answer === 'no' ? 34 : 0),
+                      background: 'rgb(43 43 43 / 9%)',
+                      padding: 8,
+                      borderTopRightRadius: (i.answer === 'yes' || isOpComment) ? 5 : 0,
+                      borderTopLeftRadius: (i.answer === 'no' || isOpComment) ? 5 : 0,
+                      borderBottomRightRadius: 5,
+                      borderBottomLeftRadius: 5,
+                      fontSize: 15
+                    }}
+                  >
+                    {i.text}
+                  </p>
                 </div>
-                <p
-                  style={{
-                    marginLeft: (i.answer === 'yes' && !yourOwnQuestion) ? 34 : 0,
-                    marginRight: yourOwnQuestion ? 0 : (i.answer === 'no' ? 34 : 0),
-                    background: 'rgb(43 43 43 / 9%)',
-                    padding: 8,
-                    borderTopRightRadius: (i.answer === 'yes' || yourOwnQuestion) ? 5 : 0,
-                    borderTopLeftRadius: (i.answer === 'no' || yourOwnQuestion) ? 5 : 0,
-                    borderBottomRightRadius: 5,
-                    borderBottomLeftRadius: 5,
-                    fontSize: 15
-                  }}
-                >
-                  {i.text}
-                </p>
-              </div>
-            ))}
+              )
+            })}
             <div className={styles.addComment} style={{ width: '100%', position: 'relative' }}>
               <textarea
                 disabled={!(me?.answer || yourOwnQuestion)}

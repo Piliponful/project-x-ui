@@ -19,7 +19,21 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 925px)' })
 
   return (
-    <div className={styles.leftbar}>
+    <div
+      className={styles.leftbar} style={isMobile
+        ? {
+            height: '60px',
+            width: '100%',
+            bottom: 0,
+            flexDirection: 'row'
+          }
+        : {
+            flexDirection: 'column',
+            width: 60,
+            height: '100vh',
+            left: 0
+          }}
+    >
       <nav className={styles['nav-icons']}>
         <Link to={user ? '/' : '/app'} style={{ lineHeight: 1 }}>
           <button

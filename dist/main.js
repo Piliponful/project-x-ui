@@ -1961,7 +1961,7 @@ function $fde06a1540536d1e$var$timeSince(createdAt) {
     const diffInDays = Math.floor(diffInHours / 24);
     return `${diffInDays}d`;
 }
-var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments, saveComment: saveComment, showCommentsForQuestion: showCommentsForQuestion }, ref)=>{
+var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.forwardRef)(({ toggleGroupMode: toggleGroupMode, yourOwnQuestion: yourOwnQuestion, shortId: shortId, onUserClick: onUserClick, img: img, createdAt: createdAt, username: username, name: name, answersCount: answersCount, he: he, me: me, respond: respond, createNewGroup: createNewGroup, htmlName: htmlName, onClick: onClick, handleTwitterLogin: handleTwitterLogin, parentMessageId: parentMessageId, createUser: createUser, trackConversion: trackConversion, addImageAvailable: addImageAvailable, loading: loading, selected: selected, groupMode: groupMode, comments: comments, fetchComments: fetchComments, saveComment: saveComment, showCommentsForQuestion: showCommentsForQuestion, user: user }, ref)=>{
     const [showComments, setShowComments] = (0, $c5L0i$react.useState)(false);
     const [text, setText] = (0, $c5L0i$react.useState)('');
     const share = ()=>{
@@ -2142,19 +2142,21 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                             paddingTop: 15
                         },
                         children: [
-                            comments.map((i)=>/*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
+                            comments.map((i)=>{
+                                const isOpComment = !i.answer;
+                                return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).comments,
                                     style: {
-                                        alignSelf: yourOwnQuestion ? 'center' : i.answer === 'yes' ? 'flex-start' : 'flex-end'
+                                        alignSelf: isOpComment ? 'center' : i.answer === 'yes' ? 'flex-start' : 'flex-end'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                             style: {
                                                 display: 'flex',
                                                 gap: 6,
-                                                flexDirection: i.answer === 'no' && !yourOwnQuestion ? 'row-reverse' : 'row',
+                                                flexDirection: i.answer === 'no' && !isOpComment ? 'row-reverse' : 'row',
                                                 alignItems: 'center',
-                                                justifyContent: yourOwnQuestion ? 'center' : 'unset',
+                                                justifyContent: isOpComment ? 'center' : 'unset',
                                                 marginBottom: 5
                                             },
                                             children: [
@@ -2167,7 +2169,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                         cursor: 'pointer'
                                                     }
                                                 }),
-                                                yourOwnQuestion ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
+                                                isOpComment ? /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
                                                     className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
                                                     style: {
                                                         color: 'gray',
@@ -2219,7 +2221,7 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                     children: "\u2022"
                                                 }),
                                                 /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)((0, $c5L0i$herouitooltip.Tooltip), {
-                                                    content: "Similarity to you",
+                                                    content: !i.user?.difference && !user ? 'Login to see similarity to you' : 'Similarity to you',
                                                     children: /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("small", {
                                                         className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).commentText,
                                                         style: {
@@ -2227,19 +2229,19 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                                             cursor: 'pointer',
                                                             position: 'relative'
                                                         },
-                                                        children: i.user?.difference !== undefined ? `${i.user?.difference}%` : 'it\'s you'
+                                                        children: i.user?.difference !== undefined ? `${i.user?.difference}%` : user ? 'it\'s you' : '?%'
                                                     })
                                                 })
                                             ]
                                         }),
                                         /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsx)("p", {
                                             style: {
-                                                marginLeft: i.answer === 'yes' && !yourOwnQuestion ? 34 : 0,
-                                                marginRight: yourOwnQuestion ? 0 : i.answer === 'no' ? 34 : 0,
+                                                marginLeft: i.answer === 'yes' && !isOpComment ? 34 : 0,
+                                                marginRight: isOpComment ? 0 : i.answer === 'no' ? 34 : 0,
                                                 background: 'rgb(43 43 43 / 9%)',
                                                 padding: 8,
-                                                borderTopRightRadius: i.answer === 'yes' || yourOwnQuestion ? 5 : 0,
-                                                borderTopLeftRadius: i.answer === 'no' || yourOwnQuestion ? 5 : 0,
+                                                borderTopRightRadius: i.answer === 'yes' || isOpComment ? 5 : 0,
+                                                borderTopLeftRadius: i.answer === 'no' || isOpComment ? 5 : 0,
                                                 borderBottomRightRadius: 5,
                                                 borderBottomLeftRadius: 5,
                                                 fontSize: 15
@@ -2247,7 +2249,8 @@ var $fde06a1540536d1e$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $c5L0i$react.fo
                                             children: i.text
                                         })
                                     ]
-                                }, i.text)),
+                                }, i.text);
+                            }),
                             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
                                 className: (0, (/*@__PURE__*/$parcel$interopDefault($34a1d4be4ab80325$exports))).addComment,
                                 style: {
@@ -4450,6 +4453,17 @@ const $11e9b788af291cc8$export$750f17c514384ccf = ({ user: user, showMyHistory: 
     });
     return /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports))).leftbar,
+        style: isMobile ? {
+            height: '60px',
+            width: '100%',
+            bottom: 0,
+            flexDirection: 'row'
+        } : {
+            flexDirection: 'column',
+            width: 60,
+            height: '100vh',
+            left: 0
+        },
         children: [
             /*#__PURE__*/ (0, $c5L0i$reactjsxruntime.jsxs)("nav", {
                 className: (0, (/*@__PURE__*/$parcel$interopDefault($e5b45166edf8dd54$exports)))['nav-icons'],
