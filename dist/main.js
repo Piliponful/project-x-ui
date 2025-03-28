@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $ej8CT$reactjsxruntime = require("react/jsx-runtime");
 var $ej8CT$react = require("react");
 var $ej8CT$lodash = require("lodash");
@@ -818,7 +818,8 @@ const $dc2bc6bb05cca233$var$customStyles = {
         flexDirection: "column"
     }
 };
-const $dc2bc6bb05cca233$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com"; // Replace with your actual Client ID
+const $dc2bc6bb05cca233$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com" // Replace with your actual Client ID
+;
 (0, ($parcel$interopDefault($ej8CT$reactmodal))).setAppElement("#app");
 var $dc2bc6bb05cca233$export$2e2bcd8739ae039 = ({ children: children, includeSwipes: includeSwipes, address: address, payout: payout, userId: userId, connectToWallet: connectToWalletR, addImage: addImage, updateJwt: updateJwt, hide: hideR, connected: connected, handleTwitterLogin: handleTwitterLogin, isWalletModalOpenInitial: isWalletModalOpenInitial = true, createUser: createUser, showKYC: showKYC })=>{
     const [screenName, toggleScreen] = (0, $ej8CT$react.useState)("uninitialized");

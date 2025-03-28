@@ -28,7 +28,6 @@ import { LeftMenuBar } from '../components/leafs/LeftMenuBar'
 import '../../styles.css'
 import './mock-styles.css'
 
-import 'react-phone-number-input/style.css'
 import { Landing } from '../components/shallow/Landing'
 
 window.Snap = Snap
