@@ -45,6 +45,9 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             className={cn(styles['nav-item'], { [styles.active]: showGroups })}
             style={{ padding: 6 }}
             onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/')
+              }
               setShowGroups(state => !state)
               setShowSearchMenu(false)
             }}
@@ -57,7 +60,9 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             className={cn(styles['nav-item'], { [styles.active]: showSearchMenu })}
             onClick={(e) => {
               e.stopPropagation()
-              navigate('/')
+              if (location.pathname !== '/') {
+                navigate('/')
+              }
               setShowSearchMenu(state => !state)
               setShowGroups(false)
             }}

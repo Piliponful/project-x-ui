@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
@@ -66,6 +66,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
   const [sendEmails, setSendEmails] = useState(true)
   const [showSearchMenu, setShowSearchMenu] = useState(false)
   const [showGroups, setShowGroups] = useState(false)
+  const ref = useRef(null)
 
   useEffect(() => {
     const handler = () => {
@@ -146,7 +147,8 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
             showSearchMenu,
             setShowGroups,
             showGroups,
-            imgUrl
+            imgUrl,
+            ref
           }}
         >
           <HeroUIProvider>

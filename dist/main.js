@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $ej8CT$reactjsxruntime = require("react/jsx-runtime");
 var $ej8CT$react = require("react");
 var $ej8CT$lodash = require("lodash");
@@ -836,6 +836,7 @@ var $dc2bc6bb05cca233$export$2e2bcd8739ae039 = ({ children: children, includeSwi
     const [sendEmails, setSendEmails] = (0, $ej8CT$react.useState)(true);
     const [showSearchMenu, setShowSearchMenu] = (0, $ej8CT$react.useState)(false);
     const [showGroups, setShowGroups] = (0, $ej8CT$react.useState)(false);
+    const ref = (0, $ej8CT$react.useRef)(null);
     (0, $ej8CT$react.useEffect)(()=>{
         const handler = ()=>{
             const { innerWidth: width } = window;
@@ -903,7 +904,8 @@ var $dc2bc6bb05cca233$export$2e2bcd8739ae039 = ({ children: children, includeSwi
                 showSearchMenu: showSearchMenu,
                 setShowGroups: setShowGroups,
                 showGroups: showGroups,
-                imgUrl: imgUrl
+                imgUrl: imgUrl,
+                ref: ref
             },
             children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)((0, $ej8CT$herouireact.HeroUIProvider), {
                 children: [
@@ -4488,6 +4490,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                                 padding: 6
                             },
                             onClick: ()=>{
+                                if (location.pathname !== "/") navigate("/");
                                 setShowGroups((state)=>!state);
                                 setShowSearchMenu(false);
                             },
@@ -4507,7 +4510,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             }),
                             onClick: (e)=>{
                                 e.stopPropagation();
-                                navigate("/");
+                                if (location.pathname !== "/") navigate("/");
                                 setShowSearchMenu((state)=>!state);
                                 setShowGroups(false);
                             },
