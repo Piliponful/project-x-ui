@@ -67,3 +67,7 @@
 article {
   min-height: unset!important;
 } */
+
+svg:focus {
+  outline: none!important;
+}

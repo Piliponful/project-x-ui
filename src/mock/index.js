@@ -518,7 +518,9 @@ const Authorized = () => {
 
       {/* {!screenName && ( */}
       <>
-        {/* <LeftMenuBar user={usert} /> */}
+        <LeftMenuBar
+          // user={usert}
+        />
         <SidebarWithGroups />
         {/* <GroupContentScreen
           className='custom-groups-name'

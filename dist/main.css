@@ -6443,6 +6443,10 @@ img, video {
   font-size: 178px;
 }
 
+svg:focus {
+  outline: none !important;
+}
+
 .file\:cursor-pointer::file-selector-button {
   cursor: pointer;
 }
