@@ -11,7 +11,7 @@ import { MainScreenSwipeContext } from '../../shallow/Body'
 
 import VennDiagram from '../QuestionCard/VennDiagram'
 
-import styles from './styles.module.styl'
+import styles from './styles.module.css'
 
 export const LeftMenuBar = ({ user, showMyHistory }) => {
   const { setShowGroups, showGroups, setShowSearchMenu, showSearchMenu, setIsLoginModalOpen, screenName } = useContext(MainScreenSwipeContext)
@@ -20,19 +20,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
 
   return (
     <div
-      className={styles.leftbar} style={isMobile
-        ? {
-            height: '60px',
-            width: '100%',
-            bottom: 0,
-            flexDirection: 'row'
-          }
-        : {
-            flexDirection: 'column',
-            width: 60,
-            height: '100vh',
-            left: 0
-          }}
+      className={styles.leftbar}
     >
       <nav className={styles['nav-icons']}>
         <Link to={user ? '/' : '/app'} style={{ lineHeight: 1 }}>
