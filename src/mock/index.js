@@ -257,7 +257,7 @@ const SidebarWithGroups = () => {
       {groupCombination ? <Circles selectedGroups={selectedForCombinationGroups} selectedCircleParts={selectedCircleParts} handleCompositionTypeChange={console.log} /> : null}
       <GroupsContainer>
         {(groupCombination ? [...selectedForCombinationGroups, groupCombinationResult] : groups).map(i => (
-          <GroupCard key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
+          <GroupCard disableButtons key={i.name || 'new'} {...i} toggleSelection={() => console.log('toogle selection')} />
         ))}
       </GroupsContainer>
     </Sidebar>
@@ -518,8 +518,8 @@ const Authorized = () => {
 
       {/* {!screenName && ( */}
       <>
-        <LeftMenuBar user={usert} />
-        {/* <SidebarWithGroups /> */}
+        {/* <LeftMenuBar user={usert} /> */}
+        <SidebarWithGroups />
         {/* <GroupContentScreen
           className='custom-groups-name'
           hasMore={hasMore}
@@ -532,7 +532,7 @@ const Authorized = () => {
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div> */}
-        <MainScreenWithQuestions />
+        {/* <MainScreenWithQuestions /> */}
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}

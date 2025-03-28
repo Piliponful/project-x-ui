@@ -9,9 +9,9 @@ import Title from './components/Title'
 
 import styles from './style.module.styl'
 
-export default forwardRef(({ name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }, ref) => {
+export default forwardRef(({ disableButtons, name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }, ref) => {
   const [newGroupTitle, setNewGroupTitle] = useState('')
-
+  console.log('disableButtons: ', disableButtons)
   return (
     <article className={styles.card} ref={ref}>
       <div className={styles.leftSideContainer}>
@@ -27,7 +27,7 @@ export default forwardRef(({ name, userCount, selected, color, save, toggleSelec
         ? <CheckboxIcon color={color} deselect={toggleSelection} />
         : (
             name
-              ? <Buttons select={toggleSelection} combine={combine} />
+              ? <Buttons disableButtons={disableButtons} select={toggleSelection} combine={combine} />
               : <NewGroupButtons save={() => save(newGroupTitle)} cancel={cancel} readyToSave={color ? readyToSave : newGroupTitle} />
           )}
     </article>

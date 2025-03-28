@@ -120,6 +120,233 @@
   height: 36px;
 }
 
+.mrTbNq_container {
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  display: flex;
+}
+
+@media only screen and (width <= 968px) {
+  .mrTbNq_container {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.rzmFQq_container {
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #2b2b2b0f;
+  border-radius: 4px;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  padding: 30px 20px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.rzmFQq_dropdown {
+  box-sizing: border-box;
+  color: #2b2b2b;
+  background: #eae9e7;
+  border: 1px solid #b3b3b342;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  padding: 21px 18px;
+  font-family: IBM Plex Sans;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
+.rzmFQq_dropdown > div, .rzmFQq_icon {
+  cursor: pointer;
+}
+
+.rzmFQq_username {
+  color: #2b2b2b;
+  margin-right: 5px;
+}
+
+.rzmFQq_twitterSignIn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.rzmFQq_twitterSignIn svg {
+  color: #2b2b2b;
+}
+
+.rzmFQq_divider {
+  color: #2b2b2b;
+  cursor: initial;
+  border-top: 1px solid #25252524;
+  justify-content: center;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+}
+
+@media only screen and (width <= 945px) {
+  .rzmFQq_container {
+    margin-top: 6px;
+    padding: 25px 20px;
+  }
+}
+
+.sLin6a_body {
+  background: #fff;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  display: flex;
+}
+
+.sLin6a_close {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
+.sLin6a_close h2 {
+  margin: 0 0 14px;
+}
+
+.sLin6a_close svg {
+  cursor: pointer;
+}
+
+.sLin6a_address {
+  text-overflow: ellipsis;
+  max-width: 390px;
+  display: block;
+  overflow: hidden;
+}
+
+.sLin6a_row {
+  gap: 8px;
+  display: flex;
+}
+
+.sLin6a_row b {
+  white-space: nowrap;
+}
+
+.sLin6a_amount {
+  text-overflow: ellipsis;
+  max-width: 180px;
+  display: block;
+  overflow: hidden;
+}
+
+.sLin6a_hide {
+  color: #00f;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sLin6a_modalContent {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.sLin6a_connectButton {
+  cursor: pointer;
+  color: #3b3b3b;
+  background: none;
+  border: 1px solid #59acd6;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  padding: 9px 16px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  transition: color .1s;
+  display: flex;
+}
+
+.sLin6a_twitterSignIn {
+  color: #3c4043;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  align-items: center;
+  height: 40px;
+  padding: 0 12px;
+  font-family: Google Sans, arial, sans-serif;
+  font-size: 14px;
+  transition: all .2s;
+  display: flex;
+}
+
+.sLin6a_twitterSignIn:hover {
+  background: #4285f40a;
+  border-color: #d2e3fc;
+}
+
+.sLin6a_twitterSignIn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sLin6a_twitterSignIn > div {
+  font-family: Google Sans, arial, sans-serif;
+}
+
+.sLin6a_search {
+  cursor: pointer;
+  color: #3b3b3b;
+  background: none;
+  border: 1px solid #59acd6;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 9px 16px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  transition: color .1s;
+  display: flex;
+}
+
+.sLin6a_search svg {
+  color: #3b3b3b;
+  margin-left: 8px;
+  transition: color .1s;
+}
+
+.sLin6a_input {
+  box-sizing: border-box;
+  caret-color: #3b3b3b;
+  color: #3b3b3b;
+  background: #2b2b2b0f;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 80%;
+  padding: 10px 0 10px 15px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+}
+
 .Ou9J5W_buttons {
   flex-direction: column;
   display: flex;
@@ -550,233 +777,6 @@
   color: #bebebe;
   font-size: 18px;
   font-weight: 300;
-}
-
-.mrTbNq_container {
-  box-sizing: border-box;
-  justify-content: center;
-  gap: 48px;
-  width: 100%;
-  display: flex;
-}
-
-@media only screen and (width <= 968px) {
-  .mrTbNq_container {
-    justify-content: center;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.rzmFQq_container {
-  box-sizing: border-box;
-  cursor: pointer;
-  background: #2b2b2b0f;
-  border-radius: 4px;
-  flex-shrink: 0;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 35px;
-  margin-top: 10px;
-  padding: 30px 20px;
-  text-decoration: none;
-  display: flex;
-  position: relative;
-}
-
-.rzmFQq_dropdown {
-  box-sizing: border-box;
-  color: #2b2b2b;
-  background: #eae9e7;
-  border: 1px solid #b3b3b342;
-  border-radius: 4px;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
-  padding: 21px 18px;
-  font-family: IBM Plex Sans;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-}
-
-.rzmFQq_dropdown > div, .rzmFQq_icon {
-  cursor: pointer;
-}
-
-.rzmFQq_username {
-  color: #2b2b2b;
-  margin-right: 5px;
-}
-
-.rzmFQq_twitterSignIn {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.rzmFQq_twitterSignIn svg {
-  color: #2b2b2b;
-}
-
-.rzmFQq_divider {
-  color: #2b2b2b;
-  cursor: initial;
-  border-top: 1px solid #25252524;
-  justify-content: center;
-  padding-top: 12px;
-  font-size: 18px;
-  font-weight: 500;
-  display: flex;
-}
-
-@media only screen and (width <= 945px) {
-  .rzmFQq_container {
-    margin-top: 6px;
-    padding: 25px 20px;
-  }
-}
-
-.sLin6a_body {
-  background: #fff;
-  justify-content: center;
-  width: 100vw;
-  min-height: 100dvh;
-  max-height: 100dvh;
-  display: flex;
-}
-
-.sLin6a_close {
-  justify-content: space-between;
-  width: 100%;
-  display: flex;
-}
-
-.sLin6a_close h2 {
-  margin: 0 0 14px;
-}
-
-.sLin6a_close svg {
-  cursor: pointer;
-}
-
-.sLin6a_address {
-  text-overflow: ellipsis;
-  max-width: 390px;
-  display: block;
-  overflow: hidden;
-}
-
-.sLin6a_row {
-  gap: 8px;
-  display: flex;
-}
-
-.sLin6a_row b {
-  white-space: nowrap;
-}
-
-.sLin6a_amount {
-  text-overflow: ellipsis;
-  max-width: 180px;
-  display: block;
-  overflow: hidden;
-}
-
-.sLin6a_hide {
-  color: #00f;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.sLin6a_modalContent {
-  flex-direction: column;
-  gap: 12px;
-  display: flex;
-}
-
-.sLin6a_connectButton {
-  cursor: pointer;
-  color: #3b3b3b;
-  background: none;
-  border: 1px solid #59acd6;
-  border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
-  padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 16px;
-  line-height: 1;
-  transition: color .1s;
-  display: flex;
-}
-
-.sLin6a_twitterSignIn {
-  color: #3c4043;
-  cursor: pointer;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  align-items: center;
-  height: 40px;
-  padding: 0 12px;
-  font-family: Google Sans, arial, sans-serif;
-  font-size: 14px;
-  transition: all .2s;
-  display: flex;
-}
-
-.sLin6a_twitterSignIn:hover {
-  background: #4285f40a;
-  border-color: #d2e3fc;
-}
-
-.sLin6a_twitterSignIn svg {
-  width: 18px;
-  height: 18px;
-}
-
-.sLin6a_twitterSignIn > div {
-  font-family: Google Sans, arial, sans-serif;
-}
-
-.sLin6a_search {
-  cursor: pointer;
-  color: #3b3b3b;
-  background: none;
-  border: 1px solid #59acd6;
-  border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 16px;
-  transition: color .1s;
-  display: flex;
-}
-
-.sLin6a_search svg {
-  color: #3b3b3b;
-  margin-left: 8px;
-  transition: color .1s;
-}
-
-.sLin6a_input {
-  box-sizing: border-box;
-  caret-color: #3b3b3b;
-  color: #3b3b3b;
-  background: #2b2b2b0f;
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  width: 80%;
-  padding: 10px 0 10px 15px;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 16px;
 }
 
 .OxsVWq_textarea {

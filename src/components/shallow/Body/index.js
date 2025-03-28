@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import CloseIcon from '@mui/icons-material/Close'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 import XIcon from '@mui/icons-material/X'
-import { HeroUIProvider } from '@heroui/react'
+import { HeroUIProvider, ToastProvider } from '@heroui/react'
 
 import { ContainerWithoutSwipes } from './components/Container'
 import { KYCComponent } from '../../leafs/ActionsPanel'
@@ -150,6 +150,7 @@ export default ({ children, includeSwipes, address, payout, userId, connectToWal
           }}
         >
           <HeroUIProvider>
+            <ToastProvider />
             <div style={{ height: screenName ? '100%' : 'auto' }} className={styles.body}>
               <Modal
                 isOpen={isWalletModalOpen}
