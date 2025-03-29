@@ -19,6 +19,7 @@ import { Question } from './src/components/leafs/Question'
 import { ChatBlock } from './src/components/leafs/ChatBlock'
 import { Landing } from './src/components/shallow/Landing'
 import { LeftMenuBar } from './src/components/leafs/LeftMenuBar'
+import VennDiagram from './src/components/leafs/QuestionCard/VennDiagram'
 
 import './styles.css'
 import './styles.scss'
@@ -48,7 +49,8 @@ export default {
     UserAnswerDifferences,
     Question,
     ChatBlock,
-    LeftMenuBar
+    LeftMenuBar,
+    VennDiagram
   },
   context: {
     MainScreenSwipeContext

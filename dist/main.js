@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $ej8CT$reactjsxruntime = require("react/jsx-runtime");
 var $ej8CT$react = require("react");
 var $ej8CT$lodash = require("lodash");
@@ -1417,7 +1417,6 @@ $4117b8fb6d482621$export$59b1d651044d302 = `eH6oKa_leftSideContainer`;
 
 var $bb473358400637b0$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.forwardRef)(({ disableButtons: disableButtons, name: name, userCount: userCount, selected: selected, color: color, save: save, toggleSelection: toggleSelection, combine: combine, readyToSave: readyToSave, cancel: cancel }, ref)=>{
     const [newGroupTitle, setNewGroupTitle] = (0, $ej8CT$react.useState)("");
-    console.log("disableButtons: ", disableButtons);
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("article", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($4117b8fb6d482621$exports))).card,
         ref: ref,
@@ -1884,7 +1883,7 @@ $df2d8bc1ba7bf54d$export$5e1be761f603d585 = `wLf4MW_username`;
 $df2d8bc1ba7bf54d$export$21d313c8dd377057 = `wLf4MW_vennDiagramIcon`;
 
 
-var $2d58bef5b89e680e$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover, fill: fill })=>{
+var $2d58bef5b89e680e$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: groupMode, myHover: myHover, fill: fill, style: style })=>{
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 64 64",
@@ -1896,7 +1895,8 @@ var $2d58bef5b89e680e$export$2e2bcd8739ae039 = ({ onClick: onClick, groupMode: g
             cursor: "pointer",
             width: 28,
             height: "auto",
-            fill: fill
+            fill: fill,
+            ...style
         },
         children: [
             /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("defs", {
@@ -4552,6 +4552,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
 
 
 
+
 var $f65af04dce098364$export$2e2bcd8739ae039 = {
     shallow: {
         Body: $dc2bc6bb05cca233$export$2e2bcd8739ae039,
@@ -4577,7 +4578,8 @@ var $f65af04dce098364$export$2e2bcd8739ae039 = {
         UserAnswerDifferences: $ce9e9d8a0ac00354$export$a6816b34ad549b0,
         Question: $098837977bfcd70d$export$38435c7d2fecd2f,
         ChatBlock: $3b6481aeb3d94781$export$125e71c614a0b114,
-        LeftMenuBar: $190faa6448d3114c$export$750f17c514384ccf
+        LeftMenuBar: $190faa6448d3114c$export$750f17c514384ccf,
+        VennDiagram: $2d58bef5b89e680e$export$2e2bcd8739ae039
     },
     context: {
         MainScreenSwipeContext: $dc2bc6bb05cca233$export$32c650b79baf5fee

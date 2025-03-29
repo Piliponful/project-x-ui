@@ -11,7 +11,7 @@ import styles from './style.module.scss'
 
 export default forwardRef(({ disableButtons, name, userCount, selected, color, save, toggleSelection, combine, readyToSave, cancel }, ref) => {
   const [newGroupTitle, setNewGroupTitle] = useState('')
-  console.log('disableButtons: ', disableButtons)
+
   return (
     <article className={styles.card} ref={ref}>
       <div className={styles.leftSideContainer}>

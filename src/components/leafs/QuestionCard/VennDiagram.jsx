@@ -5,7 +5,7 @@ import cn from 'classnames'
 
 import styles from './style.module.scss'
 
-export default ({ onClick, groupMode, myHover, fill }) => {
+export default ({ onClick, groupMode, myHover, fill, style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,8 @@ export default ({ onClick, groupMode, myHover, fill }) => {
         cursor: 'pointer',
         width: 28,
         height: 'auto',
-        fill
+        fill,
+        ...style
       }}
     >
       <defs>
