@@ -1,4 +1,4 @@
-// require("./main.css");
+require("./main.css");
 var $ej8CT$reactjsxruntime = require("react/jsx-runtime");
 var $ej8CT$react = require("react");
 var $ej8CT$lodash = require("lodash");
@@ -512,8 +512,8 @@ const $a35b2776be1cf248$export$97295e60e7f371e1 = ({ children: children })=>/*#_
 
 
 
-var $eece2f7484a813c1$exports = {};
-$eece2f7484a813c1$exports = new URL("kyc.31754f12.svg", "file:" + __filename).toString();
+var $ce34f8eeeb61dd73$exports = {};
+$ce34f8eeeb61dd73$exports = new URL("kyc.31754f12.svg", "file:" + __filename).toString();
 
 
 
@@ -691,7 +691,7 @@ var $2f1a7af5ffd4a24b$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                         children: "Verify yourself with"
                     }),
                     /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                        src: (0, (/*@__PURE__*/$parcel$interopDefault($eece2f7484a813c1$exports))),
+                        src: (0, (/*@__PURE__*/$parcel$interopDefault($ce34f8eeeb61dd73$exports))),
                         style: {
                             height: 27,
                             marginBottom: 3
@@ -2548,8 +2548,8 @@ $d5b7354d400d93d3$export$771ca420b1b6ed17 = `dqFlAW_usersContainer`;
 $d5b7354d400d93d3$export$43405cb8d90657d0 = `dqFlAW_x-icon`;
 
 
-var $7245bff0fab92cea$exports = {};
-$7245bff0fab92cea$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename).toString();
+var $85d3077abd1af750$exports = {};
+$85d3077abd1af750$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename).toString();
 
 
 
@@ -2642,7 +2642,7 @@ const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                         children: "connected X account verified"
                                                     }),
                                                     /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($7245bff0fab92cea$exports))),
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($85d3077abd1af750$exports))),
                                                         style: {
                                                             height: 16,
                                                             width: 16,
@@ -2665,7 +2665,7 @@ const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                                         children: "verified by passport"
                                                     }),
                                                     /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($eece2f7484a813c1$exports))),
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($ce34f8eeeb61dd73$exports))),
                                                         style: {
                                                             height: 20,
                                                             width: 20,
@@ -2787,7 +2787,7 @@ var $5b79cef2b514f9cb$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                                     children: "twitter verified"
                                                 }),
                                                 /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($7245bff0fab92cea$exports))),
+                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($85d3077abd1af750$exports))),
                                                     style: {
                                                         height: 16,
                                                         width: 16,
@@ -2822,7 +2822,7 @@ var $5b79cef2b514f9cb$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                                     children: "verified by passport"
                                                 }),
                                                 /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($eece2f7484a813c1$exports))),
+                                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($ce34f8eeeb61dd73$exports))),
                                                     style: {
                                                         height: 16,
                                                         width: 16,
@@ -3474,7 +3474,7 @@ var $bd942b430f1fa126$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                                         children: "twitter verified"
                                                     }),
                                                     /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($7245bff0fab92cea$exports))),
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($85d3077abd1af750$exports))),
                                                         style: {
                                                             height: 16,
                                                             width: 16,
@@ -3497,7 +3497,7 @@ var $bd942b430f1fa126$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                                         children: "verified by passport"
                                                     }),
                                                     /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($eece2f7484a813c1$exports))),
+                                                        src: (0, (/*@__PURE__*/$parcel$interopDefault($ce34f8eeeb61dd73$exports))),
                                                         style: {
                                                             height: 20,
                                                             width: 20,
@@ -4155,8 +4155,8 @@ const $3b6481aeb3d94781$export$125e71c614a0b114 = ({ messages: messages, sendMes
 
 
 
-var $65d1981d4518d75b$exports = {};
-$65d1981d4518d75b$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
+var $57428859b88ac53d$exports = {};
+$57428859b88ac53d$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252 252\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<mask id=\"mask0_4864_1939\" style=\"mask-type: luminance\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"252\" height=\"252\">\r\n<path d=\"M125.999 251.394C195.253 251.394 251.393 195.253 251.393 126C251.393 56.7468 195.253 0.606079 125.999 0.606079C56.7462 0.606079 0.605469 56.7468 0.605469 126C0.605469 195.253 56.7462 251.394 125.999 251.394Z\" fill=\"white\"></path>\r\n</mask>\r\n<g mask=\"url('#mask0_4864_1939')\">\r\n<path d=\"M263.267 -11.2672H-11.2676V263.267H263.267V-11.2672Z\" fill=\"url('#paint0_linear_4864_1939')\"></path>\r\n</g>\r\n<path d=\"M162.264 153.059L197.741 132.574C199.62 131.489 200.782 129.471 200.782 127.301V86.3354C200.782 84.1696 199.615 82.1472 197.741 81.0618L162.264 60.5767C160.385 59.4912 158.056 59.4964 156.177 60.5767L120.7 81.0618C118.821 82.1472 117.659 84.1696 117.659 86.3354V159.546L92.781 173.908L67.9029 159.546V130.818L92.781 116.456L109.191 125.928V106.657L95.8222 98.9408C94.9006 98.4084 93.8459 98.1268 92.7758 98.1268C91.7058 98.1268 90.651 98.4084 89.7346 98.9408L54.2581 119.426C52.379 120.511 51.2168 122.529 51.2168 124.7V165.665C51.2168 167.83 52.3842 169.853 54.2581 170.938L89.7346 191.423C91.6085 192.504 93.9432 192.504 95.8222 191.423L131.299 170.943C133.178 169.858 134.34 167.836 134.34 165.67V92.4589L134.791 92.2029L159.218 78.0973L184.096 92.4589V121.187L159.218 135.549L142.834 126.087V145.359L156.177 153.064C158.056 154.145 160.385 154.145 162.264 153.064V153.059Z\" fill=\"white\"></path>\r\n<defs>\r\n<linearGradient id=\"paint0_linear_4864_1939\" x1=\"-61.4385\" y1=\"11.2966\" x2=\"221.974\" y2=\"184.732\" gradientUnits=\"userSpaceOnUse\">\r\n<stop stop-color=\"#A229C5\"></stop>\r\n<stop offset=\"1\" stop-color=\"#7B3FE4\"></stop>\r\n</linearGradient>\r\n</defs>\r\n</svg>\r\n";
 
 
 var $772986cf73e5b79d$exports = {};
@@ -4378,7 +4378,7 @@ const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react
                                         /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).svgWrapper,
                                             dangerouslySetInnerHTML: {
-                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($65d1981d4518d75b$exports)))
+                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($57428859b88ac53d$exports)))
                                             }
                                         }),
                                         /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
