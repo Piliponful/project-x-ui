@@ -520,7 +520,7 @@ const Authorized = () => {
         <LeftMenuBar
           user={usert}
         />
-        {/* <SidebarWithGroups /> */}
+        <SidebarWithGroups />
         {/* <GroupContentScreen
           className='custom-groups-name'
           hasMore={hasMore}
@@ -533,7 +533,7 @@ const Authorized = () => {
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div> */}
-        <MainScreenWithQuestions />
+        {/* <MainScreenWithQuestions /> */}
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
