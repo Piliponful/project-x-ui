@@ -46,7 +46,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             style={{ padding: 6 }}
             onClick={() => {
               if (location.pathname !== '/') {
-                navigate('/')
+                navigate(user ? '/' : '/app')
               }
               setShowGroups(state => !state)
               setShowSearchMenu(false)
@@ -61,7 +61,7 @@ export const LeftMenuBar = ({ user, showMyHistory }) => {
             onClick={(e) => {
               e.stopPropagation()
               if (location.pathname !== '/') {
-                navigate('/')
+                navigate(user ? '/' : '/app')
               }
               setShowSearchMenu(state => !state)
               setShowGroups(false)

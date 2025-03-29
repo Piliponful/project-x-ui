@@ -1,4 +1,4 @@
-require("./main.css");
+// require("./main.css");
 var $ej8CT$reactjsxruntime = require("react/jsx-runtime");
 var $ej8CT$react = require("react");
 var $ej8CT$lodash = require("lodash");
@@ -4490,7 +4490,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                                 padding: 6
                             },
                             onClick: ()=>{
-                                if (location.pathname !== "/") navigate("/");
+                                if (location.pathname !== "/") navigate(user ? "/" : "/app");
                                 setShowGroups((state)=>!state);
                                 setShowSearchMenu(false);
                             },
@@ -4510,7 +4510,7 @@ const $190faa6448d3114c$export$750f17c514384ccf = ({ user: user, showMyHistory: 
                             }),
                             onClick: (e)=>{
                                 e.stopPropagation();
-                                if (location.pathname !== "/") navigate("/");
+                                if (location.pathname !== "/") navigate(user ? "/" : "/app");
                                 setShowSearchMenu((state)=>!state);
                                 setShowGroups(false);
                             },

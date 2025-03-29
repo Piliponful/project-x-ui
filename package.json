@@ -2,12 +2,12 @@
   "name": "project-x-ui",
   "source": "./index.js",
   "main": "dist/main.js",
-  "version": "1.1.136",
+  "version": "1.1.137",
   "description": "",
   "author": "Maksim Pylypenko/piliponful",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel serve index.html --target app --port 8082",
+    "dev": "parcel serve index.html --public-url /assets --port 8082",
     "build": "parcel build",
     "lint": "standard src/*"
   },
