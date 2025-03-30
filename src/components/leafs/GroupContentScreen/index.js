@@ -20,6 +20,8 @@ import './styles.css'
 
 export const User = ({ user, onUserClick, children, style, handleTwitterLogin, logout, myHistory }) => {
   const isXConnected = Number.isInteger(user?.followerCount)
+  console.log('isXConnected: ', isXConnected)
+  console.log('myHistory: ', myHistory)
 
   return (
     <div style={style} className={styles.userItem} key={user?._id} onClick={() => onUserClick(user)}>

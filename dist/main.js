@@ -2556,6 +2556,8 @@ $85d3077abd1af750$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename
 
 const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin, logout: logout, myHistory: myHistory })=>{
     const isXConnected = Number.isInteger(user?.followerCount);
+    console.log("isXConnected: ", isXConnected);
+    console.log("myHistory: ", myHistory);
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d5b7354d400d93d3$exports))).userItem,
