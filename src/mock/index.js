@@ -480,11 +480,16 @@ const Authorized = () => {
         display: 'flex',
         gap: 32,
         height: '100dvh',
-        width: isMobile ? '100%' : 'auto',
+        // width: isMobile ? '100%' : 'auto',
+        width: '100%',
         padding: isMobile ? '0 15px' : '0'
       }}
     >
-      {/* <Landing description={mock.description} title={mock.keyword} isBot /> */}
+      <Landing
+        // description={mock.description}
+        // title={mock.keyword}
+        // isBot={false}
+      />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -517,10 +522,10 @@ const Authorized = () => {
 
       {/* {!screenName && ( */}
       <>
-        <LeftMenuBar
+        {/* <LeftMenuBar
           user={usert}
-        />
-        <SidebarWithGroups />
+        /> */}
+        {/* <SidebarWithGroups /> */}
         {/* <GroupContentScreen
           className='custom-groups-name'
           hasMore={hasMore}

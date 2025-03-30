@@ -13,3 +13,8 @@ article {
 }
 
 /*# sourceMappingURL=mock-styles.css.map */
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

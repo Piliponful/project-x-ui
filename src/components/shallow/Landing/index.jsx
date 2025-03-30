@@ -8,19 +8,15 @@ import PolyscanSVG from 'bundle-text:./polyscan.svg'
 import styles from './styles.module.scss'
 
 export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
-  useEffect(() => {
-    document.querySelector('body > div > div').style['max-height'] = 'unset'
-    document.querySelector('body > div > div').style['min-height'] = 'unset'
+  // useEffect(() => {
+  //   document.querySelector('body > div > div').style['max-height'] = 'unset'
+  //   document.querySelector('body > div > div').style['min-height'] = 'unset'
 
-    return () => {
-      document.querySelector('body > div > div').style['max-height'] = '100svh'
-      document.querySelector('body > div > div').style['min-height'] = '100svh'
-    }
-  }, [])
-
-  console.log('title: ', title)
-  console.log('isBot: ', isBot)
-  console.log('description: ', description)
+  //   return () => {
+  //     document.querySelector('body > div > div').style['max-height'] = '100svh'
+  //     document.querySelector('body > div > div').style['min-height'] = '100svh'
+  //   }
+  // }, [])
 
   return (
     <>

@@ -2554,7 +2554,7 @@ $85d3077abd1af750$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename
 
 
 
-const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin, logout: logout })=>{
+const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin, logout: logout, myHistory: myHistory })=>{
     const isXConnected = Number.isInteger(user?.followerCount);
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
         style: style,
@@ -2705,7 +2705,7 @@ const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                     "data-tooltip-id": "my-tooltip-1",
                                     children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, ($parcel$interopDefault($ej8CT$muiiconsmaterialX))), {})
                                 })
-                            }) : /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
+                            }) : myHistory ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
                                 content: "Connect your X account",
                                 placement: "left",
                                 children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, ($parcel$interopDefault($ej8CT$muiiconsmaterialX))), {
@@ -2713,7 +2713,7 @@ const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                     "data-tooltip-id": "my-tooltip-2",
                                     onClick: ()=>handleTwitterLogin()
                                 })
-                            }),
+                            }) : null,
                             logout && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
                                 content: "Logout",
                                 placement: "left",
@@ -2902,7 +2902,7 @@ $87d5f40b1e731b0f$export$16a4d76eabe7aabb = `eGpACq_similarity`;
 $87d5f40b1e731b0f$export$39f5674517ec0000 = `eGpACq_tabs`;
 
 
-const $ce9e9d8a0ac00354$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $ej8CT$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin, logout: logout }, ref)=>{
+const $ce9e9d8a0ac00354$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $ej8CT$react.forwardRef)(({ selectedTab: selectedTab, setSelectedTab: setSelectedTab, showDifference: showDifference, setShowDifference: setShowDifference, back: back, children: children, similarity: similarity, user: user, handleTwitterLogin: handleTwitterLogin, logout: logout, myHistory: myHistory }, ref)=>{
     (0, $ej8CT$react.useEffect)(()=>{
         if (showDifference && selectedTab !== "answers") setSelectedTab("answers");
     }, [
@@ -2934,6 +2934,7 @@ const $ce9e9d8a0ac00354$export$522e89d0fa1200f4 = /*#__PURE__*/ (0, $ej8CT$react
                 user: user,
                 onUserClick: ()=>{},
                 logout: logout,
+                myHistory: myHistory,
                 children: !(0, ($parcel$interopDefault($ej8CT$lodash))).isNull(similarity) && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("p", {
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($87d5f40b1e731b0f$exports))).similarity,
                     children: [
@@ -4243,17 +4244,14 @@ $772986cf73e5b79d$export$6f093cfa640b7166 = `YjWlYa_text`;
 
 
 const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react.forwardRef)(({ jwt: jwt, isBot: isBot, description: description, title: title }, ref)=>{
-    (0, $ej8CT$react.useEffect)(()=>{
-        document.querySelector("body > div > div").style["max-height"] = "unset";
-        document.querySelector("body > div > div").style["min-height"] = "unset";
-        return ()=>{
-            document.querySelector("body > div > div").style["max-height"] = "100svh";
-            document.querySelector("body > div > div").style["min-height"] = "100svh";
-        };
-    }, []);
-    console.log("title: ", title);
-    console.log("isBot: ", isBot);
-    console.log("description: ", description);
+    // useEffect(() => {
+    //   document.querySelector('body > div > div').style['max-height'] = 'unset'
+    //   document.querySelector('body > div > div').style['min-height'] = 'unset'
+    //   return () => {
+    //     document.querySelector('body > div > div').style['max-height'] = '100svh'
+    //     document.querySelector('body > div > div').style['min-height'] = '100svh'
+    //   }
+    // }, [])
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)((0, $ej8CT$reactjsxruntime.Fragment), {
         children: [
             title && isBot ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)((0, $ej8CT$reacthelmet.Helmet), {
