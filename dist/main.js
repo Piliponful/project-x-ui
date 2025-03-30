@@ -2554,10 +2554,12 @@ $85d3077abd1af750$exports = new URL("x-check.fcf77d4b.svg", "file:" + __filename
 
 
 
+
 const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: onUserClick, children: children, style: style, handleTwitterLogin: handleTwitterLogin, logout: logout, myHistory: myHistory })=>{
     const isXConnected = Number.isInteger(user?.followerCount);
     console.log("isXConnected: ", isXConnected);
     console.log("myHistory: ", myHistory);
+    const { setShowKYCModal: setShowKYCModal } = (0, $ej8CT$react.useContext)((0, $dc2bc6bb05cca233$export$32c650b79baf5fee));
     return /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
         style: style,
         className: (0, (/*@__PURE__*/$parcel$interopDefault($d5b7354d400d93d3$exports))).userItem,
@@ -2716,6 +2718,19 @@ const $5b79cef2b514f9cb$export$1f44aaf2ec115b54 = ({ user: user, onUserClick: on
                                     onClick: ()=>handleTwitterLogin()
                                 })
                             }) : null,
+                            !user?.verifiedKYC && myHistory && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
+                                content: "Verify yourself with passport",
+                                placement: "left",
+                                children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
+                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($d5b7354d400d93d3$exports)))["x-icon"],
+                                    src: (0, (/*@__PURE__*/$parcel$interopDefault($ce34f8eeeb61dd73$exports))),
+                                    style: {
+                                        height: 28,
+                                        width: 28
+                                    },
+                                    onClick: ()=>setShowKYCModal(true)
+                                })
+                            }),
                             logout && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
                                 content: "Logout",
                                 placement: "left",

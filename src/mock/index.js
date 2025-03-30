@@ -315,7 +315,7 @@ const users = new Array(8).fill(1).map((_, index) => [
     fullName: 'Maxim Pilipenko',
     pictureUrl: 'https://pbs.twimg.com/profile_images/1673460497402789888/dVWWnErn_400x400.jpg',
     twitterVerified: true,
-    verifiedKYC: true,
+    verifiedKYC: false,
     followerCount: 67,
     address: '0xf8EB7B8C3ffd1d414Bee2205FeE1C99D64435e20'
   },
@@ -480,26 +480,28 @@ const Authorized = () => {
         display: 'flex',
         gap: 32,
         height: '100dvh',
-        // width: isMobile ? '100%' : 'auto',
-        width: '100%',
+        width: isMobile ? '100%' : '500px', // UserHistoryTabs
+        // width: isMobile ? '100%' : 'auto', // Home
+        // width: '100%', // landing
         padding: isMobile ? '0 15px' : '0'
       }}
     >
-      <Landing
-        // description={mock.description}
-        // title={mock.keyword}
-        // isBot={false}
-      />
+      {/* <Landing
+        description={mock.description}
+        title={mock.keyword}
+        isBot={false}
+      /> */}
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      {/* <UserHistoryTabs
+      <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}
         similarity={null}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
         user={users[0]}
+        myHistory
       >
         {
           selectedTab === 'questions'
@@ -518,7 +520,7 @@ const Authorized = () => {
               />
               )
         }
-      </UserHistoryTabs> */}
+      </UserHistoryTabs>
 
       {/* {!screenName && ( */}
       <>

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useContext } from 'react'
 import XIcon from '@mui/icons-material/X'
 import humanNumber from 'human-number'
 import CloseIcon from '@mui/icons-material/Close'
@@ -16,12 +16,16 @@ import styles from './style.module.scss'
 import svg from '../UsersSearch/x-check.svg'
 import KYCIcon from '../ActionsPanel/kyc.svg'
 
+import { MainScreenSwipeContext } from '../../shallow/Body'
+
 import './styles.css'
 
 export const User = ({ user, onUserClick, children, style, handleTwitterLogin, logout, myHistory }) => {
   const isXConnected = Number.isInteger(user?.followerCount)
   console.log('isXConnected: ', isXConnected)
   console.log('myHistory: ', myHistory)
+
+  const { setShowKYCModal } = useContext(MainScreenSwipeContext)
 
   return (
     <div style={style} className={styles.userItem} key={user?._id} onClick={() => onUserClick(user)}>
@@ -65,6 +69,11 @@ export const User = ({ user, onUserClick, children, style, handleTwitterLogin, l
                 </Tooltip>
                 )
               : null}
+          {!user?.verifiedKYC && myHistory && (
+            <Tooltip content='Verify yourself with passport' placement='left'>
+              <img className={styles['x-icon']} src={KYCIcon} style={{ height: 28, width: 28 }} onClick={() => setShowKYCModal(true)} />
+            </Tooltip>
+          )}
           {logout && <Tooltip content='Logout' placement='left'><LogoutIcon sx={{ cursor: 'pointer' }} onClick={logout} /></Tooltip>}
         </div>
       </div>
