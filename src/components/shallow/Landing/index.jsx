@@ -7,6 +7,8 @@ import PolyscanSVG from 'bundle-text:./polyscan.svg'
 
 import styles from './styles.module.scss'
 
+import img from './bg.jpg'
+
 export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
   // useEffect(() => {
   //   document.querySelector('body > div > div').style['max-height'] = 'unset'
@@ -54,6 +56,7 @@ export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
           )}
       <div className={styles.slides}>
         <div ref={ref} className={styles.landing}>
+          <img src={img} />
           {isBot
             ? (
               <section

@@ -815,7 +815,8 @@ const $dc2bc6bb05cca233$var$customStyles = {
         marginRight: "-50%",
         transform: "translate(-50%, -50%)",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        width: 500
     }
 };
 const $dc2bc6bb05cca233$var$clientId = "693824624560-f3596tslik0htj03c2p4cqnevievv8ej.apps.googleusercontent.com" // Replace with your actual Client ID
@@ -2077,7 +2078,7 @@ var $526fe0560e42c3bb$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                         })
                                     }),
                                     window.featureFlags?.groups && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $ej8CT$herouitooltip.Tooltip), {
-                                        content: "Create new group",
+                                        content: user ? "Create new group" : "Login to create new group",
                                         children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
                                             className: (0, (/*@__PURE__*/$parcel$interopDefault($df2d8bc1ba7bf54d$exports))).iconButton,
                                             style: {
@@ -2098,10 +2099,10 @@ var $526fe0560e42c3bb$export$2e2bcd8739ae039 = /*#__PURE__*/ (0, $ej8CT$react.fo
                                                     transform: "translate(-50%, -50%)"
                                                 },
                                                 children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, $2d58bef5b89e680e$export$2e2bcd8739ae039), {
-                                                    myHover: groupMode || isHovered,
+                                                    myHover: user ? groupMode || isHovered : false,
                                                     fill: "#121212",
                                                     groupMode: groupMode,
-                                                    onClick: toggleGroupMode
+                                                    onClick: user ? toggleGroupMode : ()=>{}
                                                 })
                                             })
                                         })
@@ -4260,6 +4261,10 @@ $772986cf73e5b79d$export$e5459a6f92d1eda8 = `YjWlYa_svgWrapper`;
 $772986cf73e5b79d$export$6f093cfa640b7166 = `YjWlYa_text`;
 
 
+var $af47164ab5dd6135$exports = {};
+$af47164ab5dd6135$exports = new URL("bg.72fa4e69.jpg", "file:" + __filename).toString();
+
+
 const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react.forwardRef)(({ jwt: jwt, isBot: isBot, description: description, title: title }, ref)=>{
     // useEffect(() => {
     //   document.querySelector('body > div > div').style['max-height'] = 'unset'
@@ -4323,6 +4328,9 @@ const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react
                     ref: ref,
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).landing,
                     children: [
+                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
+                            src: (0, (/*@__PURE__*/$parcel$interopDefault($af47164ab5dd6135$exports)))
+                        }),
                         isBot ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("section", {
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
                             style: {

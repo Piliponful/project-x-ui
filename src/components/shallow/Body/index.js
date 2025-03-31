@@ -43,7 +43,8 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    width: 500
   }
 }
 

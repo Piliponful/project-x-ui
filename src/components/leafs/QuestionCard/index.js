@@ -112,7 +112,7 @@ export default forwardRef(({
           <div style={{ display: 'flex', gap: 0 }}>
             <button className={styles.iconButton} onClick={() => { fetchComments(); setShowComments(!showComments) }}><ChatBubbleIcon sx={{ fill: '#121212' }} className={styles.icon} /></button>
             {window.featureFlags?.groups && (
-              <Tooltip content='Create new group'>
+              <Tooltip content={user ? 'Create new group' : 'Login to create new group'}>
                 <div
                   className={styles.iconButton}
                   style={{ position: 'relative', height: 37, width: 54, cursor: 'pointer' }}
@@ -120,7 +120,7 @@ export default forwardRef(({
                   onMouseLeave={() => !groupMode && setIsHovered(false)}
                 >
                   <div style={{ height: 'auto', width: 42, position: 'absolute', left: 'calc(50% + 7px)', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <VennDiagram myHover={groupMode || isHovered} fill='#121212' groupMode={groupMode} onClick={toggleGroupMode} />
+                    <VennDiagram myHover={user ? (groupMode || isHovered) : false} fill='#121212' groupMode={groupMode} onClick={user ? toggleGroupMode : () => {}} />
                   </div>
                 </div>
               </Tooltip>

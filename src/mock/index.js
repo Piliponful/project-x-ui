@@ -93,7 +93,7 @@ const mostAnsweredQuestions = [
     loading: true,
     selected: false,
     groupMode: false,
-    user: usert
+    // user: usert
   },
   {
     _id: '6650964de52e25cf29ecc054',
@@ -480,8 +480,8 @@ const Authorized = () => {
         display: 'flex',
         gap: 32,
         height: '100dvh',
-        width: isMobile ? '100%' : '500px', // UserHistoryTabs
-        // width: isMobile ? '100%' : 'auto', // Home
+        // width: isMobile ? '100%' : '500px', // UserHistoryTabs
+        width: isMobile ? '100%' : 'auto', // MainScreenWithQuestions
         // width: '100%', // landing
         padding: isMobile ? '0 15px' : '0'
       }}
@@ -494,7 +494,7 @@ const Authorized = () => {
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
-      <UserHistoryTabs
+      {/* <UserHistoryTabs
         answers={{ different: mostAnsweredQuestions.slice(0, 1), same: mostAnsweredQuestions.slice(1, 2) }}
         back={() => console.log('back')}
         similarity={null}
@@ -520,7 +520,7 @@ const Authorized = () => {
               />
               )
         }
-      </UserHistoryTabs>
+      </UserHistoryTabs> */}
 
       {/* {!screenName && ( */}
       <>
@@ -540,7 +540,7 @@ const Authorized = () => {
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div> */}
-        {/* <MainScreenWithQuestions /> */}
+        <MainScreenWithQuestions />
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}
