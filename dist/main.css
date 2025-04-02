@@ -2061,6 +2061,7 @@ h1, h2 {
   white-space: nowrap;
   font-weight: 200;
   line-height: 15px;
+  font-family: IBM Plex Sans !important;
 }
 
 .YjWlYa_privacy a {
@@ -2076,6 +2077,11 @@ h1, h2 {
   font-size: 14px;
   font-weight: 200;
   line-height: 14px;
+  font-family: IBM Plex Sans !important;
+}
+
+.YjWlYa_made-by span {
+  margin-right: 2px;
 }
 
 .YjWlYa_made-by a {
