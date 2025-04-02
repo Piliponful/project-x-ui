@@ -1987,68 +1987,12 @@
   display: flex;
 }
 
-.YjWlYa_landing-button {
-  cursor: pointer;
-  color: #3b3b3b;
-  text-align: center;
-  background: none;
-  border: none;
-  width: 100%;
-  font-family: IBM Plex Sans, sans-serif;
-  position: absolute;
-  bottom: 8px;
-}
-
-.YjWlYa_slides {
-  background: linear-gradient(to right, #fff, #ece9e6);
-  width: 100%;
-}
-
-.YjWlYa_mobile-second-text {
-  display: none;
-}
-
 .YjWlYa_landing {
-  color: #3b3b3b;
   text-align: center;
-  letter-spacing: -3.51667px;
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100vh;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 110px;
+  font-family: Playfair Display, sans-serif;
   font-weight: 500;
-  display: flex;
   position: relative;
-}
-
-@supports (height: 100svh) {
-  .YjWlYa_landing {
-    height: 100svh;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .YjWlYa_landing .YjWlYa_name {
-    font-size: 42px !important;
-  }
-
-  .YjWlYa_landing .YjWlYa_subtitle {
-    font-size: 22px !important;
-  }
-
-  .YjWlYa_landing .YjWlYa_open-app-button {
-    margin-top: 30px;
-    padding: 12px 16px;
-    font-size: 18px;
-  }
-
-  .YjWlYa_landing .YjWlYa_open-app-button svg {
-    font-size: 16px;
-  }
 }
 
 .YjWlYa_svgWrapper {
@@ -2063,66 +2007,22 @@
 }
 
 .YjWlYa_landing .YjWlYa_name {
-  color: #232323;
-  font-size: 60px;
+  color: #fff;
+  white-space: nowrap;
+  font-family: Playfair Display, sans-serif;
+  font-size: 50px;
 }
 
 h1, h2 {
   margin: 0;
 }
 
-.YjWlYa_landing .YjWlYa_additional-text {
-  color: #616161;
-  font-size: 30px;
-}
-
 .YjWlYa_landing .YjWlYa_subtitle {
-  color: #616161;
+  color: #fff;
+  white-space: nowrap;
+  font-family: Playfair Display, sans-serif;
   font-size: 40px;
   font-weight: 300;
-}
-
-.YjWlYa_landing .YjWlYa_smaller {
-  letter-spacing: -1.5px;
-  margin-top: 10px;
-  font-size: .3em;
-  font-weight: 200;
-}
-
-.YjWlYa_scrollIcon {
-  border: 1px solid #bfbfbf;
-  border-radius: 30px;
-  justify-content: center;
-  width: 15.4px;
-  height: 27px;
-  display: flex;
-  position: absolute;
-  bottom: 39px;
-}
-
-.YjWlYa_scrollIcon:after {
-  content: "Scroll Down";
-  color: #bfbfbf;
-  letter-spacing: 1px;
-  text-align: center;
-  width: 100px;
-  margin-top: 10px;
-  font-family: Source Sans Pro, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  animation: 2s infinite YjWlYa_scrollText;
-  display: block;
-  position: absolute;
-  bottom: 0;
-}
-
-i.YjWlYa_scroll {
-  background: #bfbfbf;
-  border-radius: 40px;
-  width: 2px;
-  height: 5px;
-  animation: 2s infinite YjWlYa_scrollWheel;
-  display: block;
 }
 
 @keyframes YjWlYa_scrollWheel {
@@ -2156,15 +2056,16 @@ i.YjWlYa_scroll {
   text-decoration: unset;
   color: #f1f1f1;
   cursor: pointer;
-  background: #3eb5f1;
+  background: #000;
   border: none;
   border-radius: 29px;
   outline: none;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  width: 160px;
+  margin: 32px auto 0;
   padding: 12px 18px;
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: Playfair Display, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 130%;
@@ -2194,6 +2095,7 @@ i.YjWlYa_scroll {
 .YjWlYa_made-by {
   letter-spacing: 0;
   white-space: nowrap;
+  color: gray;
   font-size: 14px;
   font-weight: 200;
   line-height: 14px;
@@ -2211,83 +2113,41 @@ i.YjWlYa_scroll {
   justify-content: center;
   align-items: center;
   gap: 22px;
-  margin-top: 90px;
   font-size: 15px;
   display: flex;
-}
-
-@media only screen and (max-width: 1148px) {
-  .YjWlYa_landing {
-    font-size: 90px;
-  }
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 @media only screen and (max-width: 843px) {
-  .YjWlYa_landing {
-    font-size: 70px;
-  }
-
   .YjWlYa_landing .YjWlYa_text {
-    flex-direction: column;
-    gap: 16px;
-    display: flex;
-  }
-}
-
-@media only screen and (max-width: 606px) {
-  .YjWlYa_landing {
-    letter-spacing: -1.5px;
-    font-size: 50px;
+    gap: 4px;
   }
 
-  .YjWlYa_landing .YjWlYa_text {
-    flex-direction: column;
-    gap: 16px;
-    display: flex;
-  }
-
-  .YjWlYa_scrollIcon {
-    left: 45px;
-  }
-
-  .YjWlYa_mobile-second-text {
-    display: block;
-  }
-
-  .YjWlYa_mobile-second-text p {
-    font-size: .6em;
-  }
-
-  .YjWlYa_mobile-second-text p:last-child {
-    font-size: .4em;
-  }
-
-  .YjWlYa_second-text-container {
-    display: none;
+  .YjWlYa_landing .YjWlYa_name {
+    font-size: 42px;
   }
 
   .YjWlYa_landing .YjWlYa_subtitle {
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 33px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .YjWlYa_landing .YjWlYa_text {
+    gap: 4px;
   }
 
-  .YjWlYa_landing .YjWlYa_additional-text {
-    margin-top: 14px;
+  .YjWlYa_landing .YjWlYa_name {
+    white-space: wrap;
+    margin-bottom: 14px;
+    font-size: 37px;
   }
 
-  .YjWlYa_landing .YjWlYa_scrollIcon {
-    border: 1px solid #bfbfbf;
-    width: 17px;
-    height: 29px;
-  }
-
-  .YjWlYa_landing .YjWlYa_scrollIcon:after {
-    font-size: 14px;
-  }
-
-  i.YjWlYa_scroll {
-    width: 2px;
-    height: 5px;
+  .YjWlYa_landing .YjWlYa_subtitle {
+    white-space: wrap;
+    font-size: 23px;
   }
 }
 
@@ -2304,96 +2164,22 @@ i.YjWlYa_scroll {
   position: relative;
 }
 
-.YjWlYa_coin {
-  top: var(--coin-from-x, 24px);
-  left: var(--coin-from-y, 24px);
-  z-index: 100;
-  opacity: 0;
-  position: absolute;
-}
-
-.YjWlYa_coin:after {
-  content: "$";
-  color: #edc46b;
-  opacity: 0;
-  background: #e3a217;
-  border: 2px solid #edc46b;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 12px;
-  height: 12px;
-  font-size: 10px;
-  display: flex;
-}
-
-.YjWlYa_coin--animated, .YjWlYa_coin--animated:after {
-  animation-delay: var(--coin-delay, 0s);
-  animation-duration: var(--coin-duration, 1.5s);
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-fill-mode: both;
-}
-
-.YjWlYa_coin--animated {
-  animation-name: YjWlYa_coin-x-axis;
-  animation-timing-function: ease-in;
-}
-
-.YjWlYa_coin--animated:after {
-  animation-name: YjWlYa_coin-y-axis-and-flip;
-  animation-timing-function: ease-out;
-}
-
-@keyframes YjWlYa_coin-x-axis {
-  30% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  to {
-    left: calc(var(--coin-to-x) * 1.5);
-  }
-}
-
-@keyframes YjWlYa_coin-y-axis-and-flip {
-  30% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(calc(var(--coin-to-y) * 1.5)) rotate3d(1, 1, 1, 1080deg);
-  }
-}
-
-@supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  .YjWlYa_search-modal {
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    background: #f4f3fd3b !important;
-  }
-}
-
-.YjWlYa_landing:before {
-  content: "";
-  filter: blur(10px);
-  z-index: -1;
-  background-image: url("bg.72fa4e69.jpg");
+.YjWlYa_bg {
+  filter: brightness(60%);
+  background-image: url("bg-dark.7e564ff1.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
-  top: 0;
-  left: 0;
+}
+
+.YjWlYa_content {
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .canA9G_leftbar {

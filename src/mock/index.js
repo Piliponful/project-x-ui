@@ -482,8 +482,7 @@ const Authorized = () => {
         height: '100dvh',
         // width: isMobile ? '100%' : '500px', // UserHistoryTabs
         // width: isMobile ? '100%' : 'auto', // MainScreenWithQuestions
-        width: '100%', // landing
-        padding: isMobile ? '0 15px' : '0'
+        width: '100%' // landing
       }}
     >
       <Landing

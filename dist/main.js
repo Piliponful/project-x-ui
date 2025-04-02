@@ -4180,82 +4180,45 @@ $57428859b88ac53d$exports = "<svg width=\"252\" height=\"252\" viewBox=\"0 0 252
 
 var $772986cf73e5b79d$exports = {};
 
-$parcel$export($772986cf73e5b79d$exports, "additional-text", function () { return $772986cf73e5b79d$export$202e93cb7fe09fc8; }, function (v) { return $772986cf73e5b79d$export$202e93cb7fe09fc8 = v; });
-$parcel$export($772986cf73e5b79d$exports, "coin", function () { return $772986cf73e5b79d$export$3c9d1e4131afeeb8; }, function (v) { return $772986cf73e5b79d$export$3c9d1e4131afeeb8 = v; });
-$parcel$export($772986cf73e5b79d$exports, "coin--animated", function () { return $772986cf73e5b79d$export$9fb4f45ed9e347e0; }, function (v) { return $772986cf73e5b79d$export$9fb4f45ed9e347e0 = v; });
-$parcel$export($772986cf73e5b79d$exports, "coin-x-axis", function () { return $772986cf73e5b79d$export$a729607373715201; }, function (v) { return $772986cf73e5b79d$export$a729607373715201 = v; });
-$parcel$export($772986cf73e5b79d$exports, "coin-y-axis-and-flip", function () { return $772986cf73e5b79d$export$4079574a46612420; }, function (v) { return $772986cf73e5b79d$export$4079574a46612420 = v; });
+$parcel$export($772986cf73e5b79d$exports, "bg", function () { return $772986cf73e5b79d$export$136fd86de524d3c2; }, function (v) { return $772986cf73e5b79d$export$136fd86de524d3c2 = v; });
+$parcel$export($772986cf73e5b79d$exports, "content", function () { return $772986cf73e5b79d$export$a7db06668cad9adb; }, function (v) { return $772986cf73e5b79d$export$a7db06668cad9adb = v; });
 $parcel$export($772986cf73e5b79d$exports, "icon", function () { return $772986cf73e5b79d$export$1ca1ec8b29a4ce27; }, function (v) { return $772986cf73e5b79d$export$1ca1ec8b29a4ce27 = v; });
 $parcel$export($772986cf73e5b79d$exports, "icons", function () { return $772986cf73e5b79d$export$df03f54e09e486fa; }, function (v) { return $772986cf73e5b79d$export$df03f54e09e486fa = v; });
 $parcel$export($772986cf73e5b79d$exports, "landing", function () { return $772986cf73e5b79d$export$a9ae88069d8ac14e; }, function (v) { return $772986cf73e5b79d$export$a9ae88069d8ac14e = v; });
-$parcel$export($772986cf73e5b79d$exports, "landing-button", function () { return $772986cf73e5b79d$export$f282e5191b337f50; }, function (v) { return $772986cf73e5b79d$export$f282e5191b337f50 = v; });
 $parcel$export($772986cf73e5b79d$exports, "made-by", function () { return $772986cf73e5b79d$export$101a475b15c86041; }, function (v) { return $772986cf73e5b79d$export$101a475b15c86041 = v; });
-$parcel$export($772986cf73e5b79d$exports, "mobile-second-text", function () { return $772986cf73e5b79d$export$9b4a162e4d9f672; }, function (v) { return $772986cf73e5b79d$export$9b4a162e4d9f672 = v; });
 $parcel$export($772986cf73e5b79d$exports, "name", function () { return $772986cf73e5b79d$export$a8ff84c12d48cfa6; }, function (v) { return $772986cf73e5b79d$export$a8ff84c12d48cfa6 = v; });
 $parcel$export($772986cf73e5b79d$exports, "open-app-button", function () { return $772986cf73e5b79d$export$ae608c4430a9e9fc; }, function (v) { return $772986cf73e5b79d$export$ae608c4430a9e9fc = v; });
 $parcel$export($772986cf73e5b79d$exports, "privacy", function () { return $772986cf73e5b79d$export$116a08ee153e3bde; }, function (v) { return $772986cf73e5b79d$export$116a08ee153e3bde = v; });
-$parcel$export($772986cf73e5b79d$exports, "scroll", function () { return $772986cf73e5b79d$export$209876d7b1ac8f3; }, function (v) { return $772986cf73e5b79d$export$209876d7b1ac8f3 = v; });
-$parcel$export($772986cf73e5b79d$exports, "scrollIcon", function () { return $772986cf73e5b79d$export$efb197c1da01f76f; }, function (v) { return $772986cf73e5b79d$export$efb197c1da01f76f = v; });
 $parcel$export($772986cf73e5b79d$exports, "scrollText", function () { return $772986cf73e5b79d$export$b21f6e6a6b9fbbc5; }, function (v) { return $772986cf73e5b79d$export$b21f6e6a6b9fbbc5 = v; });
 $parcel$export($772986cf73e5b79d$exports, "scrollWheel", function () { return $772986cf73e5b79d$export$594daf8f7b4e7e32; }, function (v) { return $772986cf73e5b79d$export$594daf8f7b4e7e32 = v; });
-$parcel$export($772986cf73e5b79d$exports, "search-modal", function () { return $772986cf73e5b79d$export$2fd0fffb18ebb0c0; }, function (v) { return $772986cf73e5b79d$export$2fd0fffb18ebb0c0 = v; });
-$parcel$export($772986cf73e5b79d$exports, "second-text-container", function () { return $772986cf73e5b79d$export$891c99f874761757; }, function (v) { return $772986cf73e5b79d$export$891c99f874761757 = v; });
-$parcel$export($772986cf73e5b79d$exports, "slides", function () { return $772986cf73e5b79d$export$59de61ccd1a8a2d9; }, function (v) { return $772986cf73e5b79d$export$59de61ccd1a8a2d9 = v; });
-$parcel$export($772986cf73e5b79d$exports, "smaller", function () { return $772986cf73e5b79d$export$3f732695c1493aec; }, function (v) { return $772986cf73e5b79d$export$3f732695c1493aec = v; });
 $parcel$export($772986cf73e5b79d$exports, "subtitle", function () { return $772986cf73e5b79d$export$c96745152eb2740f; }, function (v) { return $772986cf73e5b79d$export$c96745152eb2740f = v; });
 $parcel$export($772986cf73e5b79d$exports, "svgWrapper", function () { return $772986cf73e5b79d$export$e5459a6f92d1eda8; }, function (v) { return $772986cf73e5b79d$export$e5459a6f92d1eda8 = v; });
 $parcel$export($772986cf73e5b79d$exports, "text", function () { return $772986cf73e5b79d$export$6f093cfa640b7166; }, function (v) { return $772986cf73e5b79d$export$6f093cfa640b7166 = v; });
-var $772986cf73e5b79d$export$202e93cb7fe09fc8;
-var $772986cf73e5b79d$export$3c9d1e4131afeeb8;
-var $772986cf73e5b79d$export$9fb4f45ed9e347e0;
-var $772986cf73e5b79d$export$a729607373715201;
-var $772986cf73e5b79d$export$4079574a46612420;
+var $772986cf73e5b79d$export$136fd86de524d3c2;
+var $772986cf73e5b79d$export$a7db06668cad9adb;
 var $772986cf73e5b79d$export$1ca1ec8b29a4ce27;
 var $772986cf73e5b79d$export$df03f54e09e486fa;
 var $772986cf73e5b79d$export$a9ae88069d8ac14e;
-var $772986cf73e5b79d$export$f282e5191b337f50;
 var $772986cf73e5b79d$export$101a475b15c86041;
-var $772986cf73e5b79d$export$9b4a162e4d9f672;
 var $772986cf73e5b79d$export$a8ff84c12d48cfa6;
 var $772986cf73e5b79d$export$ae608c4430a9e9fc;
 var $772986cf73e5b79d$export$116a08ee153e3bde;
-var $772986cf73e5b79d$export$209876d7b1ac8f3;
-var $772986cf73e5b79d$export$efb197c1da01f76f;
 var $772986cf73e5b79d$export$b21f6e6a6b9fbbc5;
 var $772986cf73e5b79d$export$594daf8f7b4e7e32;
-var $772986cf73e5b79d$export$2fd0fffb18ebb0c0;
-var $772986cf73e5b79d$export$891c99f874761757;
-var $772986cf73e5b79d$export$59de61ccd1a8a2d9;
-var $772986cf73e5b79d$export$3f732695c1493aec;
 var $772986cf73e5b79d$export$c96745152eb2740f;
 var $772986cf73e5b79d$export$e5459a6f92d1eda8;
 var $772986cf73e5b79d$export$6f093cfa640b7166;
-$772986cf73e5b79d$export$202e93cb7fe09fc8 = `YjWlYa_additional-text`;
-$772986cf73e5b79d$export$3c9d1e4131afeeb8 = `YjWlYa_coin`;
-$772986cf73e5b79d$export$9fb4f45ed9e347e0 = `YjWlYa_coin--animated`;
-$772986cf73e5b79d$export$a729607373715201 = `YjWlYa_coin-x-axis`;
-$772986cf73e5b79d$export$a729607373715201;
-$772986cf73e5b79d$export$4079574a46612420 = `YjWlYa_coin-y-axis-and-flip`;
-$772986cf73e5b79d$export$4079574a46612420;
+$772986cf73e5b79d$export$136fd86de524d3c2 = `YjWlYa_bg`;
+$772986cf73e5b79d$export$a7db06668cad9adb = `YjWlYa_content`;
 $772986cf73e5b79d$export$1ca1ec8b29a4ce27 = `YjWlYa_icon`;
 $772986cf73e5b79d$export$df03f54e09e486fa = `YjWlYa_icons`;
 $772986cf73e5b79d$export$a9ae88069d8ac14e = `YjWlYa_landing`;
-$772986cf73e5b79d$export$f282e5191b337f50 = `YjWlYa_landing-button`;
 $772986cf73e5b79d$export$101a475b15c86041 = `YjWlYa_made-by`;
-$772986cf73e5b79d$export$9b4a162e4d9f672 = `YjWlYa_mobile-second-text`;
 $772986cf73e5b79d$export$a8ff84c12d48cfa6 = `YjWlYa_name`;
 $772986cf73e5b79d$export$ae608c4430a9e9fc = `YjWlYa_open-app-button`;
 $772986cf73e5b79d$export$116a08ee153e3bde = `YjWlYa_privacy`;
-$772986cf73e5b79d$export$209876d7b1ac8f3 = `YjWlYa_scroll`;
-$772986cf73e5b79d$export$efb197c1da01f76f = `YjWlYa_scrollIcon`;
 $772986cf73e5b79d$export$b21f6e6a6b9fbbc5 = `YjWlYa_scrollText`;
-$772986cf73e5b79d$export$b21f6e6a6b9fbbc5;
 $772986cf73e5b79d$export$594daf8f7b4e7e32 = `YjWlYa_scrollWheel`;
-$772986cf73e5b79d$export$594daf8f7b4e7e32;
-$772986cf73e5b79d$export$2fd0fffb18ebb0c0 = `YjWlYa_search-modal`;
-$772986cf73e5b79d$export$891c99f874761757 = `YjWlYa_second-text-container`;
-$772986cf73e5b79d$export$59de61ccd1a8a2d9 = `YjWlYa_slides`;
-$772986cf73e5b79d$export$3f732695c1493aec = `YjWlYa_smaller`;
 $772986cf73e5b79d$export$c96745152eb2740f = `YjWlYa_subtitle`;
 $772986cf73e5b79d$export$e5459a6f92d1eda8 = `YjWlYa_svgWrapper`;
 $772986cf73e5b79d$export$6f093cfa640b7166 = `YjWlYa_text`;
@@ -4322,113 +4285,118 @@ const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react
                     })
                 ]
             }),
-            /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
-                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).slides,
-                children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
-                    ref: ref,
-                    className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).landing,
-                    children: [
-                        isBot ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("section", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
-                            style: {
-                                fontSize: 39,
-                                padding: "0 41px"
-                            },
-                            children: [
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h1", {
-                                    children: title
-                                }),
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("p", {
-                                    children: description
-                                })
-                            ]
-                        }) : /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
-                            children: [
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h1", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).name,
-                                    children: "Non-anonymous online voting"
-                                }),
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h2", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).subtitle,
-                                    children: "on social and political issues."
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)((0, $ej8CT$reactrouterdom.Link), {
-                            replace: true,
-                            to: jwt ? "/" : "/app",
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports)))["open-app-button"],
-                            children: [
-                                "Open App ",
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, ($parcel$interopDefault($ej8CT$muiiconsmaterialArrowForwardIos))), {
-                                    sx: {
-                                        marginLeft: "15px",
-                                        fontSize: 20
-                                    }
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
-                            className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).icons,
-                            children: [
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports)))["made-by"],
-                                    children: [
-                                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("span", {
-                                            style: {
-                                                fontSize: 15
-                                            },
-                                            children: "made by"
-                                        }),
-                                        " ",
-                                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
-                                            href: "mailto:piliponful@gmail.com",
-                                            children: "piliponful"
-                                        })
-                                    ]
-                                }),
-                                window.featureFlags?.rewards && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
-                                    style: {
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center"
-                                    },
-                                    children: [
-                                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
-                                            className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).svgWrapper,
-                                            dangerouslySetInnerHTML: {
-                                                __html: (0, (/*@__PURE__*/$parcel$interopDefault($57428859b88ac53d$exports)))
-                                            }
-                                        }),
-                                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
-                                            style: {
-                                                fontSize: 15,
-                                                letterSpacing: "0px",
-                                                textDecoration: "none",
-                                                color: "gray",
-                                                fontWeight: 200,
-                                                whiteSpace: "nowrap"
-                                            },
-                                            target: "_blank",
-                                            href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
-                                            rel: "noreferrer",
-                                            children: "token on polyscan"
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("span", {
-                                    className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).privacy,
-                                    children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
-                                        href: "/privacy-policy",
-                                        target: "_blank",
-                                        children: "privacy policy"
+            /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
+                ref: ref,
+                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).landing,
+                children: [
+                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).bg
+                    }),
+                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).content,
+                        children: [
+                            isBot ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("section", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
+                                style: {
+                                    fontSize: 39,
+                                    padding: "0 41px"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h1", {
+                                        children: title
+                                    }),
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("p", {
+                                        children: description
                                     })
+                                ]
+                            }) : /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
+                                children: [
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h1", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).name,
+                                        children: "Non-anonymous online voting"
+                                    }),
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("h2", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).subtitle,
+                                        children: "on social and political issues."
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)((0, $ej8CT$reactrouterdom.Link), {
+                                replace: true,
+                                to: jwt ? "/" : "/app",
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports)))["open-app-button"],
+                                children: [
+                                    "Open App ",
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)((0, ($parcel$interopDefault($ej8CT$muiiconsmaterialArrowForwardIos))), {
+                                        sx: {
+                                            marginLeft: "15px",
+                                            fontSize: 20
+                                        }
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
+                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).icons,
+                        children: [
+                            /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("span", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports)))["made-by"],
+                                children: [
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("span", {
+                                        style: {
+                                            fontSize: 15
+                                        },
+                                        children: "made by"
+                                    }),
+                                    " ",
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
+                                        href: "mailto:piliponful@gmail.com",
+                                        children: "piliponful"
+                                    })
+                                ]
+                            }),
+                            window.featureFlags?.rewards && /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("div", {
+                                style: {
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("div", {
+                                        className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).svgWrapper,
+                                        dangerouslySetInnerHTML: {
+                                            __html: (0, (/*@__PURE__*/$parcel$interopDefault($57428859b88ac53d$exports)))
+                                        }
+                                    }),
+                                    /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
+                                        style: {
+                                            fontSize: 15,
+                                            letterSpacing: "0px",
+                                            textDecoration: "none",
+                                            color: "gray",
+                                            fontWeight: 200,
+                                            whiteSpace: "nowrap"
+                                        },
+                                        target: "_blank",
+                                        href: "https://polygonscan.com/token/0x080376D131E2036feF1D321490cF178A3bEEA805",
+                                        rel: "noreferrer",
+                                        children: "token on polyscan"
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("span", {
+                                className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).privacy,
+                                children: /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("a", {
+                                    href: "/privacy-policy",
+                                    target: "_blank",
+                                    children: "privacy policy"
                                 })
-                            ]
-                        })
-                    ]
-                })
+                            })
+                        ]
+                    })
+                ]
             })
         ]
     });
