@@ -481,16 +481,16 @@ const Authorized = () => {
         gap: 32,
         height: '100dvh',
         // width: isMobile ? '100%' : '500px', // UserHistoryTabs
-        width: isMobile ? '100%' : 'auto', // MainScreenWithQuestions
-        // width: '100%', // landing
+        // width: isMobile ? '100%' : 'auto', // MainScreenWithQuestions
+        width: '100%', // landing
         padding: isMobile ? '0 15px' : '0'
       }}
     >
-      {/* <Landing
+      <Landing
         description={mock.description}
         title={mock.keyword}
         isBot={false}
-      /> */}
+      />
       {/* {screenName === 'groups' && <SidebarWithGroups />} */}
       {/* {screenName === 'groupContent' && <GroupContentScreen show users={users} />} */}
       {/* <SidebarWithQuestions /> */}
@@ -540,7 +540,7 @@ const Authorized = () => {
           <Search buttonsOutside search={() => console.log('search')} />
           <SortQuestions getMessages={() => console.log('get questions with sort and duration')} />
         </div> */}
-        <MainScreenWithQuestions />
+        {/* <MainScreenWithQuestions /> */}
         {/* <ChatBlock messages={messages} /> */}
         {/* <div style={{ marginRight: 241 }}> */}
         {/* <MainScreenWithUserQuestions selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> */}

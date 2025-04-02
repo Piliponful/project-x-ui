@@ -4328,9 +4328,6 @@ const $2d698786ec22a21a$export$12449a31c6671d53 = /*#__PURE__*/ (0, $ej8CT$react
                     ref: ref,
                     className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).landing,
                     children: [
-                        /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsx)("img", {
-                            src: (0, (/*@__PURE__*/$parcel$interopDefault($af47164ab5dd6135$exports)))
-                        }),
                         isBot ? /*#__PURE__*/ (0, $ej8CT$reactjsxruntime.jsxs)("section", {
                             className: (0, (/*@__PURE__*/$parcel$interopDefault($772986cf73e5b79d$exports))).text,
                             style: {

@@ -56,7 +56,7 @@ export const Landing = forwardRef(({ jwt, isBot, description, title }, ref) => {
           )}
       <div className={styles.slides}>
         <div ref={ref} className={styles.landing}>
-          <img src={img} />
+          {/* <img src={img} /> */}
           {isBot
             ? (
               <section
