@@ -2123,14 +2123,18 @@ h1, h2 {
   }
 
   .YjWlYa_landing .YjWlYa_name {
-    white-space: wrap;
+    white-space: normal;
     margin-bottom: 14px;
     font-size: 37px;
   }
 
   .YjWlYa_landing .YjWlYa_subtitle {
-    white-space: wrap;
+    white-space: normal;
     font-size: 23px;
+  }
+
+  .YjWlYa_icons {
+    display: none;
   }
 }
 

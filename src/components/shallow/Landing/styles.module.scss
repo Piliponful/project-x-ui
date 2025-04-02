@@ -155,13 +155,17 @@ h1, h2 {
 
   .landing .name {
     font-size: 37px;
-    white-space: wrap;
+    white-space: normal;
     margin-bottom: 14px;
   }
 
   .landing .subtitle {
     font-size: 23px;
-    white-space: wrap;
+    white-space: normal;
+  }
+
+  .icons {
+    display: none;
   }
 }
 
