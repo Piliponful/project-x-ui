@@ -1,5 +1,4 @@
 .kxZqba_text {
-  font-family: IBM Plex Sans, sans-serif;
   line-height: 1;
 }
 
@@ -149,7 +148,6 @@
   gap: 18px;
   width: 100%;
   padding: 21px 18px;
-  font-family: IBM Plex Sans;
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -260,7 +258,6 @@
   align-items: center;
   margin-top: 8px;
   padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   line-height: 1;
   transition: color .1s;
@@ -307,7 +304,6 @@
   align-items: center;
   width: 20%;
   padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   transition: color .1s;
   display: flex;
@@ -329,7 +325,6 @@
   outline: none;
   width: 80%;
   padding: 10px 0 10px 15px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
 }
 
@@ -683,7 +678,6 @@
   color: #3b3b3b;
   text-align: left;
   width: 100%;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -729,7 +723,7 @@
   width: 100%;
   height: 144px;
   padding: 10px 15px;
-  font-family: IBM Plex Sans;
+  font-family: inherit;
   font-size: 16px;
 }
 
@@ -753,7 +747,6 @@
   align-items: center;
   width: 72px;
   height: 36px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   font-weight: 400;
   transition: background .3s;
@@ -791,7 +784,7 @@
   width: 100%;
   height: 144px;
   padding: 10px 15px;
-  font-family: IBM Plex Sans;
+  font-family: inherit;
   font-size: 18px;
 }
 
@@ -851,7 +844,6 @@
   align-items: center;
   width: 72px;
   height: 36px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   font-weight: 400;
   transition: background .3s;
@@ -944,7 +936,6 @@
   max-width: 500px;
   height: calc(100dvh - 20px);
   margin-top: 10px;
-  font-family: IBM Plex Sans;
   display: flex;
   overflow: scroll;
 }
@@ -974,7 +965,6 @@
   flex-direction: column;
   gap: 24px;
   padding: 15px;
-  font-family: IBM Plex Sans;
   display: flex;
 }
 
@@ -1161,7 +1151,6 @@
   margin-top: 8px;
   margin-bottom: 16px;
   padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   line-height: 1;
   transition: box-shadow .2s;
@@ -1212,7 +1201,6 @@
   width: 100%;
   min-height: 40px;
   padding: 5px 10px;
-  font-family: IBM Plex Sans;
   transition: background-color .1s;
   display: flex;
 }
@@ -1257,7 +1245,6 @@
   align-items: center;
   margin-top: 8px;
   padding: 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 16px;
   line-height: 1;
   transition: color .1s;
@@ -1312,7 +1299,6 @@
   border: 1px solid #59acd6;
   border-radius: 4px;
   padding: 9px 40px 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   line-height: 1;
   transition: color .1s;
 }
@@ -1328,7 +1314,6 @@
   width: 100%;
   margin-top: -3px;
   padding: 0 4px;
-  font-family: IBM Plex Sans, sans-serif;
   transition: color .1s;
   display: flex;
   position: absolute;
@@ -1469,7 +1454,6 @@
   width: calc(100% - 20px);
   max-width: 500px;
   height: calc(100dvh - 20px);
-  font-family: IBM Plex Sans;
   display: flex;
   overflow: scroll;
 }
@@ -1503,7 +1487,6 @@
   max-width: 500px;
   height: calc(100dvh - 20px);
   margin-top: 10px;
-  font-family: IBM Plex Sans;
   display: flex;
   overflow: scroll;
 }
@@ -1521,7 +1504,6 @@
   justify-content: space-between;
   gap: 12px;
   padding: 15px;
-  font-family: IBM Plex Sans;
   display: flex;
 }
 
@@ -1614,7 +1596,6 @@
   border: none;
   border-radius: 4px;
   padding: 9px 40px 9px 16px;
-  font-family: IBM Plex Sans, sans-serif;
   line-height: 1;
   transition: color .1s;
 }
@@ -1630,7 +1611,6 @@
   width: 100%;
   margin-top: -3px;
   padding: 0 4px;
-  font-family: IBM Plex Sans, sans-serif;
   transition: color .1s;
   display: flex;
   position: absolute;
@@ -1731,7 +1711,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  font-family: IBM Plex Sans;
   font-size: 16px;
   line-height: 1;
   transition: color .2s;
@@ -1789,7 +1768,6 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  font-family: IBM Plex Sans;
   font-size: 18px;
   display: flex;
 }
@@ -1930,7 +1908,6 @@
   justify-content: center;
   align-items: center;
   padding: 12px 18px;
-  font-family: IBM Plex Sans, sans-serif;
   font-size: 18px;
   font-weight: 500;
   transition: box-shadow .3s ease-out;
